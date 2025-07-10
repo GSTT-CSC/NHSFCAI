@@ -2,7 +2,7 @@
 ---
 
 // Colors
-$primary: #e5261f;
+$primary: #005EB8;
 $primary-dark: #a01b16;
 $secondary: #f88379;
 $black: #2f2f41;
@@ -17,8 +17,8 @@ $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: "Playfair Display", serif, -apple-system;
+$font-family-base: 'Work Sans', Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: 'Work Sans', Helvetica, Arial, sans-serif, -apple-system;
 
 // Footer
 $footer-background-color: $primary;
@@ -115,4 +115,16 @@ body {
     font-size: 16px;
     line-height: 1.3;
   }
+}
+
+// Reverse header banner color scheme for .intro section (homepage banner)
+.intro {
+  background-color: $primary; // NHS Blue
+  color: $white;
+
+  h1, h2, h3, h4, h5, h6, p, a {
+    color: $white;
+  }
+
+
 }

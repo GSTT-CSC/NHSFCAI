@@ -1,12 +1,11 @@
 ---
-title: Team
-layout: teams
-description: Team
-permalink: "/faculty/"
-intro_image_absolute: true
-intro_image_hide_on_mobile: false
+layout: 
+title: Meet the Faculty
+permalink: /faculty/
+description: Faculty of the NHS Fellowship in Clinical AI
 ---
 
-# Meet The Team
+The CSC team has expertise covering all aspects of developing AI for digital health. We are variously clinical
+scientists, medical physicists, AI engineers, software developers and clinicians. 
 
-Our team of qualified accountants and financial consultants can help your business at any stage of it's growth.
+{% include faculty.html %}

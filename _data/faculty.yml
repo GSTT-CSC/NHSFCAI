@@ -1,29 +1,25 @@
-
-  team:
-    text: "Click on the photos to find out more about each member of the team."
+en: &DEFAULT_EN
+  faculty:
+    text: "Click on the photos to find out more about each member of the faculty."
     section: team
 
-    # NOTE:
-    # If adding or renaming a team member here, remember to update _data/social_links_team.yml
-    # with their social profiles using the slugified name (e.g. Clark Kent--> clark-kent)
+team:
+  - name: "Haris Shuaib"
+    role: "Director"
+    team-member-page: /faculty/haris.html
+    image: images/faculty/Haris.png
 
-      - name: "Haris Shuaib"
-        role: "Director"
-        team-member-page: /team_member/haris.html
-        image: images/faculty/Haris.png
+  - name: "Alexander Deng"
+    role: "Programme Lead"
+    team-member-page: /faculty/alex.html
+    image: images/faculty/Alex.jpg
 
-      - name: "Alexander Deng"
-        role: "Programme Lead"
-        team-member-page: /team_member/alex.html
-        image: images/faculty/Alex.jpg
+  - name: "Beatrix Fletcher"
+    role: "Programme Manager"
+    team-member-page: /faculty/beatrix.html
+    image: images/faculty/Beatrix1.jpg
 
-      - name: "Beatrix Fletcher"
-        role: "Programme Manager"
-        team-member-page: /team_member/beatrix.html
-        image: images/faculty/Beatrix1.jpg
-            
-      - name: "Zainab Qazi"
-        role: "Programme Support Officer"
-        team-member-page: /team_member/zainab.html
-        image: images/faculty/Zainab.png
-
+  - name: "Zainab Qazi"
+    role: "Programme Support Officer"
+    team-member-page: /faculty/zainab.html
+    image: images/faculty/Zainab.png
