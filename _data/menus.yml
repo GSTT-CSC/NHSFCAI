@@ -1,16 +1,19 @@
 main:
-  - name: "Services"
-    url: "/services/"
+  - name: "Apply"
+    url: "/apply/"
     weight: 2
-  - name: "Team"
-    url: "/team/"
+  - name: "Fellows & Alumni"
+    url: "/fellows/"
     weight: 3
-  - name: "About"
-    url: "/about/"
+  - name: "Information"
+    url: "/information/"
     weight: 4
+  - name: "Faculty"
+    url: "/faculty/"
+    weight: 5
   - name: "Contact"
     url: "/contact/"
-    weight: 5
+    weight: 6
 
 footer:
   - name: "Home"
