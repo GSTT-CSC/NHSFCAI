@@ -1,0 +1,17 @@
+haris-shuaib:
+  - url: https://www.linkedin.com/in/haris-shuaib/
+    icon: fab fa-linkedin-in
+
+alexander-deng:
+  - url: https://scholar.google.co.uk/citations?hl=en&user=GvXrMCIAAAAJ&view_op=list_works&sortby=pubdate
+    icon: fas fa-book
+  - url: https://www.linkedin.com/in/alexandertdeng
+    icon: fab fa-linkedin-in
+
+beatrix-fletcher:
+  - url: https://www.linkedin.com/in/beatrix-fletcher-4a4653143/
+    icon: fab fa-linkedin-in
+
+zainab-qazi:
+  - url: https://www.linkedin.com/in/zainab-q-a881a1179/
+    icon: fab fa-linkedin-in

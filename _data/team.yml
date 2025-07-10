@@ -1,0 +1,121 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+
+  team:
+    text: "Click on the photos to find out more about each member of the team."
+    section: team
+
+    # NOTE:
+    # If adding or renaming a team member here, remember to update _data/social_links_team.yml
+    # with their social profiles using the slugified name (e.g. Clark Kent--> clark-kent)
+
+    people:
+      - name: "Dika Vilic"
+        role: "Head of Clinical Scientific Computing"
+        team-member-page: /team_member/dika.html
+        subgroup: "CSC core"        
+        image: assets/img/team/Dika.jpg
+
+      - name: "Anil Mistry"
+        role: "AI Safety Lead"
+        team-member-page: /team_member/anil.html
+        subgroup: "CSC core"
+        image: assets/img/team/Anil.jpg
+
+      - name: "Elise Pather"
+        role: "Senior Clinical Scientist in AI"
+        team-member-page: /team_member/elise.html
+        image: assets/img/team/elise.jpg
+
+        subgroup: "CSC core"
+      - name: "Agathe Zecevic"
+        role: "Senior Data Scientist & NLP Lead"
+        team-member-page: /team_member/agathe.html
+        image: assets/img/team/Agathe.jpg
+        subgroup: "CSC core"
+
+      - name: "Mike Woodward"
+        role: "Senior Clinical Scientist in AI & Development Lead"
+        team-member-page: /team_member/mike.html
+        image: assets/img/team/Mike.jpg
+        subgroup: "CSC core"        
+
+      - name: "Haris Shuaib"
+        role: "Director"
+        team-member-page: /team_member/haris.html
+        subgroup: "NHS Fellowship in Clinical AI Faculty"
+        image: assets/img/team/Haris.png
+
+      - name: "Alexander Deng"
+        role: "Programme Lead"
+        team-member-page: /team_member/alex.html
+        image: assets/img/team/Alex.jpg
+        subgroup: "NHS Fellowship in Clinical AI Faculty"
+
+      - name: "Beatrix Fletcher"
+        role: "Programme Manager"
+        team-member-page: /team_member/beatrix.html
+        image: assets/img/team/Beatrix1.jpg
+        subgroup: "NHS Fellowship in Clinical AI Faculty"        
+            
+      - name: "Zainab Qazi"
+        role: "Programme Support Officer"
+        team-member-page: /team_member/zainab.html
+        image: assets/img/team/Zainab.png
+        subgroup: "NHS Fellowship in Clinical AI Faculty"        
+
+      - name: "Eleanor Stylianides"
+        role: "Trainee Clinical Scientist"
+        team-member-page: /team_member/eleanor.html
+        image: assets/img/team/Eleanor.jpg
+        subgroup: "Trainees & Fellows"
+
+      - name: "Keri Anderson"
+        role: "Trainee Clinical Scientist"
+        team-member-page: /team_member/keri.html
+        image: assets/img/team/KeriA.jpg
+        subgroup: "Trainees & Fellows"
+
+      - name: "David De Mola"
+        role: "Trainee Clinical Scientist"
+        team-member-page: /team_member/david.html
+        image: assets/img/team/daviddm.jpg
+        subgroup: "Trainees & Fellows"
+
+      - name: "Kathan Sonar"
+        role: "Trainee Clinical Scientist"
+        team-member-page: /team_member/kathan.html
+        image: assets/img/team/KathanS.jpg
+        subgroup: "Trainees & Fellows"
+
+      - name: "Aoife Fox"
+        role: "Clinical AI Fellow"
+        team-member-page: /team_member/aoife.html
+        image: assets/img/team/aoife.jpeg
+        subgroup: "Trainees & Fellows"
+
+      - name: "Alexis Zecevic"
+        role: "Visiting Intern – Data Science"
+        team-member-page: /team_member/alexis.html
+        image: assets/img/team/Alexis.png
+        subgroup: "Trainees & Fellows"
+
+            
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
