@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-{% include nav.html %}
-{% include subnav-education.html %}
 
 {% if page.background == "grey" or page.background == "gray" %}
 <script>
@@ -17,7 +15,7 @@ document.getElementById("page-top").className="bg-light";
 {% assign socials = site.data.social_links_fellows[url_name] %}
 {% comment %}
       Construct the image path using the slug
-      e.g., /assets/img/fellow/forename-surname.jpg
+      e.g., /images/fellow/forename-surname.jpg
 {% endcomment %}
 {% assign image_path = "/assets/img/fellow/" | append: url_name | append: ".jpg" %}
 

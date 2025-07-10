@@ -57,7 +57,7 @@
     {% for person in site.data.fellowship_fellows.en.team.people %}
       {% assign url_name = person.name | slugify %}
       {% assign page_url = "/fellow/" | append: url_name | append: ".html" %}
-      {% assign image_path = "/assets/img/fellow/" | append: url_name | append: ".jpg" %}
+      {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
       {% assign socials = site.data.social_links_fellows[url_name] %}
 
       <div class="col-md-6 col-lg-4 pb-4 text-center text-lg-left team-member"

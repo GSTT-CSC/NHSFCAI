@@ -8,12 +8,15 @@ main:
   - name: "Information"
     url: "/information/"
     weight: 4
+  - name: "Publications"
+    url: "/publications/"
+    weight: 5
   - name: "Faculty"
     url: "/faculty/"
-    weight: 5
+    weight: 6
   - name: "Contact"
     url: "/contact/"
-    weight: 6
+    weight: 7
 
 footer:
   - name: "Home"
