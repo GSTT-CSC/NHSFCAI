@@ -7,8 +7,8 @@ logo:
   mobile_height: "32px"
   mobile_width: "90px"
   desktop: "/images/logo/fcai_logo.png"
-  desktop_height: "128px"
-  desktop_width: "360px"
+  desktop_height: "256px"
+  desktop_width: "720px"
 
 home: 
   limit_services: 6

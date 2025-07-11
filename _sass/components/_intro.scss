@@ -1,4 +1,8 @@
+// Reverse header banner color scheme for .intro section (homepage banner)
 .intro {
+  background-color: $primary; // NHS Blue
+  color: $white;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -6,11 +10,11 @@
   padding-bottom: 60px;
   overflow: hidden;
   @include media-breakpoint-up(md) {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   h1 {
-    color: $black;
+    color: $white;
     font-size: 42px;
     font-weight: bold;
     line-height: 1.2;
@@ -27,14 +31,14 @@
     font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 30px;
-    color: $black;
+    color: $white;
     font-family: $font-family-base;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: light;
     line-height: 1.5;
-    color: $steel;
+    color: $white;
     @include media-breakpoint-up(md) {
       width: 80%;
     }
