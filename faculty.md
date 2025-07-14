@@ -16,12 +16,28 @@ Each faculty member's clinical background guides the continued development of th
         {% assign image_path = "/images/faculty/" | append: url_name | append: ".jpg" %}
         {% assign socials = site.data.social_links_faculty[url_name] %}
 
-        <div class="col-md-6 col-lg-4 text-center text-lg-left team-member"
+        <div class="col-md-6 col-lg-3 text-center text-lg-left team-member"
              data-role="{{ person.role }}"
              data-background="{{ person.background }}">
-          <a href="{{ page_url }}">
-            <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path | default: '/images/faculty/default.jpg' }}" alt="{{ person.name }}">
-          </a>
+          <div style="position: relative; display: inline-block;">
+            <a href="{{ page_url }}">
+              <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path | default: '/images/faculty/default.jpg' }}" alt="{{ person.name }}">
+            </a>
+            {% if socials.size > 0 %}
+              <div class="social-button-cluster">
+                {% if socials[0] %}
+                  <a href="{{ socials[0].url }}">
+                    <i class="{{ socials[0].icon }}"></i>
+                  </a>
+                {% endif %}
+                {% if socials[1] %}
+                  <a href="{{ socials[1].url }}">
+                    <i class="{{ socials[1].icon }}"></i>
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
 
           <h4>{{ person.name }}</h4>
           <p class="text-muted">{{ person.role }}</p>
@@ -29,20 +45,31 @@ Each faculty member's clinical background guides the continued development of th
           <p class="text-muted">{{ person.background }}</p>
           {% endif %}
 
-          {% if socials %}
-          <ul class="list-inline social-buttons">
-            {% for network in socials %}
-            <li class="list-inline-item text-center">
-              <a href="{{ network.url }}">
-                <i class="{{ network.icon }}"></i>
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
         </div>
       {% endif %}
     {% endfor %}
 
   </div>
 </div>
+</div>
+<style>
+.social-button-cluster {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 0;
+}
+
+.social-button-cluster a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+}
+</style>

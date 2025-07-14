@@ -69,10 +69,11 @@ title: Fellows & Alumni
       {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
       {% assign socials = site.data.social_links_fellows[url_name] %}
 
-      <div class="col-md-6 col-lg-4 text-center text-lg-left team-member"
+      <div class="col-md-6 col-lg-3 text-center text-lg-left team-member"
            data-cohort="{{ person.cohort }}"
            data-region="{{ person.region }}"
-           data-profession="{{ person.profession }}">
+           data-profession="{{ person.profession }}"
+           style="position: relative;">
 
         <a href="{{ page_url }}">
           <img class="mx-auto p-1" style="width: 250px; border-radius: 50%;" src="{{ image_path }}" alt="">
@@ -81,18 +82,20 @@ title: Fellows & Alumni
         <h4>{{ person.name }}</h4>
         <p class="text-muted">{{ person.role }}</p>
 
-        {% if socials %}
-        <ul class="list-inline social-buttons">
-          {% for network in socials %}
-          <li class="list-inline-item text-center">
-            <a href="{{ network.url }}">
-              <i class="{{ network.icon }}"></i>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
+        {% if socials.size > 0 %}
+          <div class="social-button-cluster">
+            {% if socials[0] %}
+              <a href="{{ socials[0].url }}">
+                <i class="{{ socials[0].icon }}"></i>
+              </a>
+            {% endif %}
+            {% if socials[1] %}
+              <a href="{{ socials[1].url }}">
+                <i class="{{ socials[1].icon }}"></i>
+              </a>
+            {% endif %}
+          </div>
         {% endif %}
-
       </div>
     {% endfor %}
 
@@ -156,3 +159,25 @@ function initializeFilters() {
 
 initializeFilters();
 </script>
+
+<style>
+.social-button-cluster {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 0;
+}
+
+.social-button-cluster a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+}
+</style>
