@@ -1,5 +1,5 @@
 ---
-layout:
+layout: page
 permalink: /publications/
 title: Fellows' Publications
 display_title: NHS Fellowship in Clinical AI<br>Fellows' Publications

@@ -7,8 +7,8 @@ logo:
   mobile_height: "32px"
   mobile_width: "90px"
   desktop: "/images/logo/fcai_logo.png"
-  desktop_height: "256px"
-  desktop_width: "720px"
+  desktop_height: "32px"
+  desktop_width: "90px"
 
 home: 
   limit_services: 6
@@ -19,6 +19,9 @@ collections:
     sort_by: weight
   team:
     output: true
+  fellow:
+    output: true
+
 
 defaults:
   - scope:

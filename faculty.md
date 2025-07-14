@@ -1,5 +1,5 @@
 ---
-layout: 
+layout: faculty
 title: Meet the Faculty
 permalink: /faculty/
 description: Faculty of the NHS Fellowship in Clinical AI

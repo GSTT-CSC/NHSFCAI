@@ -9,4 +9,4 @@ intro_image_hide_on_mobile: true
 
 # NHS Fellowship in Clinical AI
 
-Equipping healthcare leaders to adopt clinical Artificial Intelligence
+Equipping healthcare leaders to adopt clinical AI

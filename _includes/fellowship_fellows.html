@@ -56,7 +56,7 @@
 
     {% for person in site.data.fellowship_fellows.en.team.people %}
       {% assign url_name = person.name | slugify %}
-      {% assign page_url = "/fellow/" | append: url_name | append: ".html" %}
+      {% assign page_url = "/fellow/" | append: url_name %}
       {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
       {% assign socials = site.data.social_links_fellows[url_name] %}
 
@@ -103,6 +103,20 @@ function initializeFilters() {
     return;
   }
 
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Set filters based on URL parameters
+  const cohortParam = getQueryParam('cohort');
+  const regionParam = getQueryParam('region');
+  const professionParam = getQueryParam('profession');
+
+  if (cohortParam) cohortFilter.value = cohortParam;
+  if (regionParam) regionFilter.value = regionParam;
+  if (professionParam) professionFilter.value = professionParam;
+
   function filterMembers() {
     const cohort = cohortFilter.value;
     const region = regionFilter.value;
@@ -115,14 +129,22 @@ function initializeFilters() {
 
       member.style.display = (matchCohort && matchRegion && matchProfession) ? '' : 'none';
     });
+
+    // Update URL parameters
+    const params = new URLSearchParams();
+    if (cohort) params.set('cohort', cohort);
+    if (region) params.set('region', region);
+    if (profession) params.set('profession', profession);
+    const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
+    window.history.replaceState({}, '', newUrl);
   }
 
   cohortFilter.addEventListener('change', filterMembers);
   regionFilter.addEventListener('change', filterMembers);
   professionFilter.addEventListener('change', filterMembers);
+
+  filterMembers(); // Run once on page load
 }
-</script>
-<script>
-// Initialize filters when the page loads
+
 initializeFilters();
 </script>

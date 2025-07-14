@@ -1,5 +1,5 @@
 ---
-layout:
+layout: page
 permalink: /information/
 title: NHS Fellowship in Clinical AI Further Information
 display_title: NHS Fellowship in Clinical AI<br>Further Information

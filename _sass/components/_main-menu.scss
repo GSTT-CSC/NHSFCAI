@@ -18,6 +18,7 @@
         color: $primary;
         &:hover {
           text-decoration: underline;
+          background-color: lighten($primary, 50%);
         }
       }
       &.active {
