@@ -5,11 +5,11 @@ main:
   - name: "Fellows & Alumni"
     url: "/fellows/"
     weight: 3
-  - name: "Information"
-    url: "/information/"
-    weight: 4
   - name: "Publications"
     url: "/publications/"
+    weight: 4
+  - name: "Information"
+    url: "/information/"
     weight: 5
   - name: "Faculty"
     url: "/faculty/"

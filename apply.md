@@ -2,14 +2,14 @@
 layout: page
 permalink: /apply/
 title: NHS Fellowship in Clinical AI Cohort 5 Applications (2026-27)
-display_title: Cohort 5 Applications (2026-27)
 ---
-<i>Last updated: 22 May 2025</i><br>
-Applications are currently <b>closed</b>.
+_Last updated: 22 May 2025_
+<br>
+Applications are currently **closed**.
 Applications for Cohort 5 will open in November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
-Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf), [a suggested list of clinical AI resources](/resources.html#People/) and the [background to the fellowship](/fellowship_info.html).
+Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf), [a suggested list of clinical AI resources](/resources.html#People/) and the [background to the fellowship](/fellowship_info.html).<br>
 
-<h3 style>Key Dates and application process</h3>
+### Key Dates and application process
 * 08 Nov 2024: Applications open- *[Application Form](https://forms.office.com/e/WZDF73wwa8)* is live, *[Approval In Principle Form](https://forms.office.com/e/aeTa9pRyR4)* is live
 * 13 Nov 2024: Webinar and Q&A (recording below)
 * 18 Dec 2024: *Application Form* and *Approval In Principle Form* deadline at 23:45 GMT
@@ -32,10 +32,9 @@ Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3
 </details>
 <details>
 <summary><b>Application process for international applicants</b></summary>
-    The NHS Fellowship in Clinical AI and the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/">GSTT International Clinical Fellowship</a> are offered jointly in an exclusive dual fellowship programme in London, UK.  
-    <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.
+    The NHS Fellowship in Clinical AI and the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/">GSTT International Clinical Fellowship</a> are offered jointly in an exclusive dual fellowship programme in London, UK.<br>
+    <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
     <br>
-<br>
 <ol>
       <li>Applicant reviews the dual fellowship <a href="/assets/docs/FCAI_C4_Sponsor_info_v1.2.pdf">information sheet</a> and confirms meeting the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements">entry requirements of the clinical programme</a>.</li>
       <li>Applicant confirms their application with their Sponsor.</li>
@@ -45,15 +44,16 @@ Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3
       <li>Successful applicants are matched to an AI project and join the fellowship in Cohort 4.</li>
     </ol>
 </details>
-<br>
+  
 
-<h3 style>Applicant Webinar </h3> 
+### Applicant Webinar 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I3BwaGeKHpg" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
 
 The webinar covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited follow-up questions from applicants.
 
-<h3 style>Frequently Asked Questions</h3> 
-<i>Last updated: 22 May 2025</i><br>
+### Frequently Asked Questions
+_Last updated: 22 May 2025_
+<br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details>
 

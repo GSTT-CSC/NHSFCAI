@@ -21,7 +21,8 @@ collections:
     output: true
   fellow:
     output: true
-
+  faculty:
+    output: true
 
 defaults:
   - scope:

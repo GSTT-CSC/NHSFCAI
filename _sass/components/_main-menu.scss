@@ -23,12 +23,11 @@
       }
       &.active {
         > a {
-          font-weight: bold;
+          font-weight: normal;
           text-decoration: none;
-          &:hover {
-            text-decoration: none;
-            transition: all 225ms ease-in 0s;
-          }
+          color: $white;
+          background-color: $primary;
+          border-radius: 4px;
         }
       }
     }

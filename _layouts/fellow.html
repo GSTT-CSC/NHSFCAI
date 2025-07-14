@@ -3,12 +3,6 @@ layout: default
 bodyClass: "page-basic"
 ---
 
-{% if page.background == "grey" or page.background == "gray" %}
-<script>
-document.getElementById("page-top").className="bg-light";
-</script>
-{% endif %}
-
 {% comment %}
   Convert team member's name into a slug to match keys in _data/social_links_fellows.yml
 {% endcomment %}
