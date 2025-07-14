@@ -3,7 +3,8 @@ layout: page
 title: Faculty
 permalink: /faculty/
 ---
-
+We created this fellowship in response to the shortage of expert healthcare leaders to adopt clinical AI tools.
+Each faculty member's clinical background guides the continued development of this programme year by year.
 <h5>Click on each faculty member to find out more</h5>
 <div class="container">
   <div class="row pt-3">
@@ -19,7 +20,7 @@ permalink: /faculty/
              data-role="{{ person.role }}"
              data-background="{{ person.background }}">
           <a href="{{ page_url }}">
-            <img class="mx-auto p-1" style="width: 250px; border-radius: 50%;" src="{{ image_path | default: '/images/faculty/default.jpg' }}" alt="{{ person.name }}">
+            <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path | default: '/images/faculty/default.jpg' }}" alt="{{ person.name }}">
           </a>
 
           <h4>{{ person.name }}</h4>
