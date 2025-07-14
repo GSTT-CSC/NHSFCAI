@@ -21,7 +21,20 @@ Explore the fellowship-related publications of our fellows below.
   {% for resource in site.data.fellowship_publications %}
   <tr>
     <td>{% if resource.link %}<a href="{{ resource.link }}">{{ resource.title }}</a>{% else %} {{ resource.title }}{% endif %}</td>
-    <td>{{ resource.fellow }}</td>
+    <td>
+      {% assign fragments = resource.fellow | split: '</a>' %}
+      {% for fragment in fragments %}
+        {% assign html = fragment | append: '</a>' %}
+        {% assign name = html | split: '>' | last | split: '<' | first %}
+        {% assign slug = name | slugify %}
+        <div style="margin-bottom: 8px;">
+          <a href="/fellow/{{ slug }}/">
+            <img src="/images/fellow/{{ slug }}.jpg" alt="{{ name }}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%; display: block; margin-bottom: 4px;">
+          </a>
+          {{ html }}
+        </div>
+      {% endfor %}
+    </td>
   </tr>
 {% endfor %}
   </tbody>
