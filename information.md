@@ -16,10 +16,10 @@ As a lasting legacy of the fellowship, fellows become part of a uniquely network
 This unique programme is featured as an exemplar in upskilling clinicians for AI transformation in both the *[NHS Long Term Workforce Plan (2023)](https://www.england.nhs.uk/wp-content/uploads/2023/06/nhs-long-term-workforce-plan-v1.2.pdf#page=74)* and the NHS Transformation Directorate report, *[Developing Healthcare Workers' Confidence in AI (2022)](https://digital-transformation.hee.nhs.uk/binaries/content/assets/digital-transformation/dart-ed/developingconfidenceinai-oct2022.pdf#page=68)*. 
 The fellowship builds directly from the recommendation of the *[Topol Review (2019)](https://topol.hee.nhs.uk/wp-content/uploads/HEE-Topol-Review-2019.pdf#page=8)* to create posts for clinicians with dedicated time to implement AI technologies.
 
-The fellowship is delivered by the Clinical Scientific Computing team of Guy's and St Thomas' NHS Foundation Trust.
+The fellowship is delivered by the [Clinical Scientific Computing team](https://gstt-csc.github.io) of Guy's and St Thomas' NHS Foundation Trust.
 
 <h3 style>Fellowship Faculty</h3>
-See the faculty [here](/team.html#nhs-fellowship-in-clinical-ai-faculty), and contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
+See the faculty [here](/faculty), and contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
 
 <h3 style>Curriculum</h3>
 The bespoke curriculum of the fellowship was designed by the faculty, and aligns to educational frameworks from the [Faculty of Clinical Informatics](https://fci.org.uk/menu2/professional-competencies/core-competency-framework.html) and  Health Education England.
@@ -122,7 +122,7 @@ The list below is indicative and may vary between cohorts.
 * The fellowship and its fellows were [profiled in the *The Doctor* magazine (2024)](/assets/docs/BMA_TheDoctor_Nov2024.pdf#page=16) of the British Medical Association
 * The fellowship was showcased as an opportunity to acquire 'skills to implement and adopt AI safely and effectively' in [NHS OneLondon's *Framework for the safe, efficient and effective
 implementation, use and maintenance of AI in health and care in London* (2025)](assets/docs/ONELondonFramework2025.pdf#page=41)
-* Insights from the scaling-up of this programme from a local to national scope was [published](assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf) by our Programme Manger [Beatrix Fletcher](/team_member/beatrix.html) 
+* Insights from the scaling-up of this programme from a local to national scope was [published](assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf) by our Programme Manger [Beatrix Fletcher](/faculty/beatrix-fletcher) 
 
 <h3 style>Acknowledgements</h3>
 The educational materials of this fellowship have been co-developed with partners including:

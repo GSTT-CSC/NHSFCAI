@@ -1,13 +1,13 @@
 ---
 layout: page
 permalink: /apply/
-title: NHS Fellowship in Clinical AI Cohort 5 Applications (2026-27)
+title: Cohort 5 Applications (2026-27)
 ---
 _Last updated: 22 May 2025_
 <br>
 Applications are currently **closed**.
 Applications for Cohort 5 will open in November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
-Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf), [a suggested list of clinical AI resources](/resources.html#People/) and the [background to the fellowship](/fellowship_info.html).<br>
+Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf) and the [background to the fellowship](/information).<br>
 
 ### Key Dates and application process
 * 08 Nov 2024: Applications open- *[Application Form](https://forms.office.com/e/WZDF73wwa8)* is live, *[Approval In Principle Form](https://forms.office.com/e/aeTa9pRyR4)* is live
@@ -261,7 +261,7 @@ Individual situations will be considered on a case-by-case basis at the discreti
 
 <strong>What certification do fellows receive at the end of the fellowship year? </strong>
 
-<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. 
+<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers.
 </p>
 
 </details>

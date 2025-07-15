@@ -159,25 +159,3 @@ function initializeFilters() {
 
 initializeFilters();
 </script>
-
-<style>
-.social-button-cluster {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 0;
-}
-
-.social-button-cluster a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 50%;
-  background-color: #666;
-  color: #fff;
-  text-align: center;
-  font-size: 17px;
-}
-</style>

@@ -12,14 +12,13 @@ Explore the fellowship-related publications of our fellows below.
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">Publication</th>
       <th scope="col">Fellow</th>
+      <th scope="col">Publication</th>
     </tr>
   </thead>
   <tbody>
   {% for resource in site.data.fellowship_publications %}
   <tr>
-    <td>{% if resource.link %}<a href="{{ resource.link }}">{{ resource.title }}</a>{% else %} {{ resource.title }}{% endif %}</td>
     <td>
       {% assign fragments = resource.fellow | split: '</a>' %}
       {% for fragment in fragments %}
@@ -34,6 +33,7 @@ Explore the fellowship-related publications of our fellows below.
         </div>
       {% endfor %}
     </td>
+    <td>{% if resource.link %}<a href="{{ resource.link }}">{{ resource.title }}</a>{% else %} {{ resource.title }}{% endif %}</td>
   </tr>
 {% endfor %}
   </tbody>
