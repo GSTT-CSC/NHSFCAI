@@ -16,6 +16,7 @@ As a lasting legacy of the fellowship, fellows become part of a uniquely network
 This unique programme is featured as an exemplar in upskilling clinicians for AI transformation in both the *[NHS Long Term Workforce Plan (2023)](https://www.england.nhs.uk/wp-content/uploads/2023/06/nhs-long-term-workforce-plan-v1.2.pdf#page=74)* and the NHS Transformation Directorate report, *[Developing Healthcare Workers' Confidence in AI (2022)](https://digital-transformation.hee.nhs.uk/binaries/content/assets/digital-transformation/dart-ed/developingconfidenceinai-oct2022.pdf#page=68)*. 
 The fellowship builds directly from the recommendation of the *[Topol Review (2019)](https://topol.hee.nhs.uk/wp-content/uploads/HEE-Topol-Review-2019.pdf#page=8)* to create posts for clinicians with dedicated time to implement AI technologies.
 
+The fellowship is delivered by the Clinical Scientific Computing team of Guy's and St Thomas' NHS Foundation Trust.
 
 <h3 style>Fellowship Faculty</h3>
 See the faculty [here](/team.html#nhs-fellowship-in-clinical-ai-faculty), and contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
@@ -147,4 +148,4 @@ The fellowship gratefully acknowledges the support of:
 
 >"The launch of the Fellowship in Clinical AI is an unprecedented step towards integrating experiential learning into postgraduate training pathways, and we hope to learn from and scale opportunities like this to help prepare the future clinical AI specialist workforce" <br/>Dr Hatim Abdulhussein (2022), [National Clinical Lead for AI and Digital Workforce](https://digital-transformation.hee.nhs.uk/building-a-digital-workforce/dart-ed), NHS England
 
->"The NHS Fellowship in Clinical AI has been the most valuable professional development activity of my career to date." <br/>[Dr Rishi Ramessur](/fellow/rishi-ramessur.html) (2024), NHS Fellow in Clinical AI, Cohort 2
+>"The NHS Fellowship in Clinical AI has been the most valuable professional development activity of my career to date." <br/>[Dr Rishi Ramessur](/fellow/rishi-ramessur) (2024), NHS Fellow in Clinical AI, Cohort 2

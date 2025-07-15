@@ -1,29 +1,29 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "Real-World AI Projects",
+    "description": "Hands-on experience on NHS clinical AI projects under expert supervision",
     "image": {
-      "url": "images/features/noun_branding_1885335.svg",
-      "width": 80,
-      "height": 80
+      "url": "images/features/noun-hand-7896364.svg",
+      "height": 100,
+      "width": 100
     }
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Cutting-Edge Curriculum",
+    "description": "Bespoke workshops from UK and international experts in clinical AI",
     "image": {
-      "url": "images/features/noun_The Process_1885341.svg",
-      "width": 80,
-      "height": 80
+      "url": "images/features/noun-book-and-lightbulb-7963226.svg",
+      "height": 100,
+      "width": 100
     }
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Network of Expertise",
+    "description": "Join an enduring and active community of clinical AI leaders",
     "image": {
-      "url": "images/features/noun_3d modeling_1885342.svg",
-      "width": 80,
-      "height": 80
+      "url": "images/features/noun-networking-7857539.svg",
+      "height": 100,
+      "width": 100
     }
   }
 ]

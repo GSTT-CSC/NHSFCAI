@@ -22,16 +22,6 @@ collections:
     output: true
 
 defaults:
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
