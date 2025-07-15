@@ -135,3 +135,11 @@ body {
 .social-buttons a:hover {
   background-color: darken($primary, 10%);
 }
+
+.content-wrapper {
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}

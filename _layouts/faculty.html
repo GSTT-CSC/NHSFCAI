@@ -3,6 +3,28 @@ layout: default
 bodyClass: "page-basic"
 ---
 
+<style>
+.social-button-cluster {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0;
+}
+
+.social-button-cluster a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  background-color: #666;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+}
+</style>
+
 {% comment %}
   Convert team member's name into a slug to match keys in _data/social_links_faculty.yml
 {% endcomment %}
@@ -17,23 +39,20 @@ bodyClass: "page-basic"
 <div class="container" id="pagecontainer">
   <div class="row">
     <div class="col-12 col-lg-4 text-center">
-      <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src={{ image_path }} alt="">
-      <h4 class="pt-2 text-center">{{ page.team-member-name }}</h4>
-      <p class="text-center text-muted">{{ page.job-role }}</p>
-      {% comment %}
-        If the person has entries in _data/social_links_faculty.yml, render them here
-      {% endcomment %}
-      {% if socials %}
-      <ul class="list-inline social-buttons">
-        {% for network in socials %}
-        <li class="list-inline-item text-center">
+      <div style="position: relative; display: inline-block;">
+        <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src={{ image_path }} alt="">
+        {% if socials %}
+        <div class="social-button-cluster">
+          {% for network in socials %}
           <a href="{{ network.url }}">
             <i class="{{ network.icon }}"></i>
           </a>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <h4 class="pt-2 text-center">{{ page.team-member-name }}</h4>
+      <p class="text-center text-muted">{{ page.job-role }}</p>
     </div>
 
     <div class="col-12 col-lg-8">

@@ -51,12 +51,12 @@ Each faculty member's clinical background guides the continued development of th
 
   </div>
 </div>
-</div>
+
 <style>
 .social-button-cluster {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   display: flex;
   gap: 0;
 }

@@ -10,13 +10,10 @@ logo:
   desktop_height: "32px"
   desktop_width: "90px"
 
-home: 
+home:
   limit_services: 6
 
 collections:
-  services:
-    output: true
-    sort_by: weight
   team:
     output: true
   fellow:
