@@ -9,7 +9,7 @@
     }
   },
   {
-    "title": "Cutting-Edge Curriculum",
+    "title": "Cutting-Edge <a href=\"/assets/docs/FCAI_Curriculum_v3.2.pdf\" target=\"_blank\" rel=\"noopener\">Curriculum</a>",
     "description": "Bespoke workshops from UK and international experts in clinical AI",
     "image": {
       "url": "images/features/noun-book-and-lightbulb-7963226.svg",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Network of Expertise",
-    "description": "An active and enduring community of clinical AI leaders",
+    "description": "An active and enduring community of <a href=\"/fellows\" target=\"_blank\" rel=\"noopener\">clinical AI leaders</a>",
     "image": {
       "url": "images/features/noun-networking-7857539.svg",
       "height": 100,
