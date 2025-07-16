@@ -22,7 +22,7 @@ The fellowship is delivered by the [Clinical Scientific Computing team](https://
 See the faculty [here](/faculty), and contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
 
 <h3 style>Curriculum</h3>
-The bespoke curriculum of the fellowship was designed by the faculty, and aligns to educational frameworks from the [Faculty of Clinical Informatics](https://fci.org.uk/menu2/professional-competencies/core-competency-framework.html) and  Health Education England.
+The bespoke curriculum of the fellowship was designed by the faculty, and aligns to educational frameworks from Health Education England.
 
 [Read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf)
 
