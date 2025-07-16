@@ -21,35 +21,40 @@ bodyClass: "page-home"
   </div>
 </div>
 
-
-
-
-
-{% if site.data.features %}
 <div class="strip strip-grey">
   <div class="container pt-3 pb-6 pt-md-4 pb-md-10">
     <div class="row justify-content-center">
-      <p class="home-subtext h5 mb-4">
+      <div class="col-12">
+        <p class="home-subtext h5 mb-4">
+          The <i>NHS Fellowship in Clinical AI</i> is a 12-month programme integrated part-time alongside clinical work. Fellows are recruited competitively from a diverse clinical workforce across the NHS, and internationally.
+          <br><br>
+          Our fellows are smart and energetic healthcare leaders who gain experience deploying and evaluating AI in clinical workflows under expert supervision in multidisciplinary NHS teams.
+        </p>
+      </div>
 
-    The <i>NHS Fellowship in Clinical AI</i> is a 12-month programme integrated part-time alongside clinical work. Fellows are recruited competitively from a diverse clinical workforce across the NHS, and internationally.
-
-    Our fellows are smart and energetic healthcare leaders who gain experience deploying and evaluating AI in clinical workflows under expert supervision in multidisciplinary NHS teams.
-</p>
-<br />
-
-      {% for feature in site.data.features %}
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="feature">
-          {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
-          {% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
-          <div class="feature-content">{{ feature.description }}</div>
+          <div class="feature-image"><img alt="Real-World AI Projects logo" src="/images/features/noun-hand-7896364.svg" width="100" height="100" /></div>
+          <h2 class="feature-title">Real-World AI Projects</h2>
+          <div class="feature-content">Hands-on experience on NHS clinical AI projects under expert supervision</div>
         </div>
       </div>
-      {% endfor %}
 
+      <div class="col-12 col-md-6 col-lg-4 mb-2">
+        <div class="feature">
+          <div class="feature-image"><img alt="Cutting-Edge Curriculum logo" src="/images/features/noun-book-and-lightbulb-7963226.svg" width="100" height="100" /></div>
+          <h2 class="feature-title"><a href="/assets/docs/FCAI_Curriculum_v3.2.pdf" target="_blank" rel="noopener">Cutting-Edge Curriculum</a></h2>
+          <div class="feature-content">Bespoke workshops from UK and international experts in clinical AI</div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-2">
+        <div class="feature">
+          <div class="feature-image"><img alt="Network of Expertise logo" src="/images/features/noun-networking-7857539.svg" width="100" height="100" /></div>
+          <h2 class="feature-title"><a href="/fellows" target="_blank" rel="noopener">Network of Expertise</a></h2>
+          <div class="feature-content">An active and enduring community of clinical AI leaders</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-{% endif %}
