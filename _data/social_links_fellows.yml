@@ -315,16 +315,10 @@ alaa-alaqeel:
     icon: fab fa-linkedin-in
 
 connor-huggins:
-  - url: https://scholar.google.com/
-    icon: fas fa-book
-
 
 christian-okonkwor:
 
-
 oluwaseun-ologunja:
-
-
 
 pradeep-ravichandran:
   - url: https://orcid.org/0000-0002-8879-1032
@@ -377,15 +371,15 @@ frances-conti-ramsden:
     icon: fab fa-linkedin-in
 
 caroline-kilduff:
-  - url: https://scholar.google.com/
-    icon: fas fa-book
   - url: https://www.researchgate.net/profile/Caroline-Kilduff-2
+    icon: fas fa-book
+  - url: https://www.linkedin.com/in/caroline-kilduff-704355290/
     icon: fab fa-linkedin-in
 
 thomas-nash:
 
 josie-carmichael:
-  - url: hhttps://www.researchgate.net/profile/Josie-Carmichael
+  - url: https://www.researchgate.net/profile/Josie-Carmichael
     icon: fas fa-book
   - url: https://www.linkedin.com/in/josie-carmichael-55b096208/
     icon: fab fa-linkedin-in
