@@ -7,7 +7,7 @@ _Last updated: 22 May 2025_
 <br>
 Applications are currently **closed**.
 Applications for Cohort 5 will open in November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
-Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf) and the [background to the fellowship](/information).<br>
+Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf) and the [about the fellowship](/about).<br>
 
 ### Key Dates and application process
 * 08 Nov 2024: Applications open- *[Application Form](https://forms.office.com/e/WZDF73wwa8)* is live, *[Approval In Principle Form](https://forms.office.com/e/aeTa9pRyR4)* is live

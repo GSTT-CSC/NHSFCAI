@@ -8,8 +8,8 @@ main:
   - name: "Publications"
     url: "/publications/"
     weight: 4
-  - name: "Information"
-    url: "/information/"
+  - name: "About"
+    url: "/about/"
     weight: 5
   - name: "Faculty"
     url: "/faculty/"

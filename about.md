@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /information/
-title: Further Information
+permalink: /about/
+title: About the fellowship
 
 ---
 <h3 style>Background</h3>
