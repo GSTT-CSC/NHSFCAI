@@ -6,7 +6,7 @@ job-role: Fellow in Clinical AI, Cohort 3
 ### Fellowship Bio
 I am an ST3 Public Health Registrar with an analytical background working across Local Authority, NHS and the UK Health Security Agency. I have an interest in analytics and AI, and the potential they have to improve population health and reduce health inequalities.
 ### Fellowship Project
-##### _Supporting a Global AI Community of Practice through Evaluation Clinics_
+##### _[Supporting a Global AI Community of Practice through Evaluation Clinics](/assets/docs/posters/FCAI C3 Grad Poster NatalieDavison.pdf)_
 ##### University Hospitals Birmingham NHS Foundation Trust
 
 The University of Birmingham supported a global community of practice by launching evaluation clinics to provide expertise to research teams who were undertaking evaluations of AI technologies, which included using Large Language Models (LLMs). Each evaluation clinic session was designed to provide tailored guidance and support from academics, to enhance the quality of the evidence base and strengthen the evaluation methodologies being used in AI research.  My role involved: Designing a survey to gather appetite from teams for an evaluation clinic; Undertaking initial scoping meetings with each selected team to gather more information on the project and identify where support should be focused; Attending, engaging and supporting in evaluation clinics; Upon completion of the clinics, mapping knowledge and identifying gaps. Progress to date: Five out of eight evaluation clinics have been performed, with the need to understand and establish a robust evaluation method the most common obstacle cited from teams.  

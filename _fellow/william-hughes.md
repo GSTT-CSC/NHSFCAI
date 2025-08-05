@@ -1,6 +1,6 @@
 ---
 layout: fellow
-team-member-name: Will Hughes
+team-member-name: William Hughes
 job-role: Fellow in Clinical AI, Cohort 3
 ---
 ### Fellowship Bio
