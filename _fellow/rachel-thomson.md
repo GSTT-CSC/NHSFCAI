@@ -6,7 +6,7 @@ job-role: Fellow in Clinical AI, Cohort 3
 ### Fellowship Bio
 I am a final year public health registrar working in Scotland, currently based between Public Health Scotland, NHS Ayrshire & Arran, and the University of Glasgow. My interests include policy evaluation, policy modelling, health inequalities, and environmental sustainability.
 ### Fellowship Project
-##### _Evaluating environmental sustainability in deployment of AI-enabled clinical pathways in radiology_
+##### _[Evaluating environmental sustainability in deployment of AI-enabled clinical pathways in radiology](/assets/docs/posters/FCAI C3 Grad Poster RachelThomson.pdf)_
 ##### NHS Greater Glasgow and Clyde
 
 This project was based with the Digital Health Validation Lab in Glasgow, and focused on the assessment of environmental sustainability outcomes (like carbon emissions or energy use) alongside clinical outcomes in evaluations of AI technologies in healthcare. This is important because AI interventions typically have higher energy and data demands than more traditional digital interventions, and concerns have been raised that this is not currently being sufficiently taken into account when deploying AI in clinical pathways. 
