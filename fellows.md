@@ -42,6 +42,7 @@ title: Fellows & Alumni
     <option value="Emergency Medicine">Emergency Medicine</option>
     <option value="General Practice">General Practice</option>
     <option value="Healthcare Science">Healthcare Science</option>
+    <option value="Medicine">Medicine</option>
     <option value="Obstetrics & Gynaecology">Obstetrics & Gynaecology</option>
     <option value="Ophthalmology">Ophthalmology</option>
     <option value="Optometry">Optometry</option>
@@ -50,7 +51,6 @@ title: Fellows & Alumni
     <option value="Pharmacy">Pharmacy</option>
     <option value="Physiotherapy">Physiotherapy</option>
     <option value="Public Health">Public Health</option>
-    <option value="Medicine">Medicine</option>
     <option value="Radiology">Radiology</option>
     <option value="Surgery">Surgery</option>
     <!-- Add more cohort options if needed -->
