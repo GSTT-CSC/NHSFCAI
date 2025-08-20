@@ -1,6 +1,6 @@
 ---
 layout: fellow
-team-member-name: Mareddud Harris
+team-member-name: Maredudd Harris
 job-role: Fellow in Clinical AI, Cohort 2
 
 ---
