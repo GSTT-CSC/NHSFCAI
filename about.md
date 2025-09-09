@@ -124,6 +124,7 @@ The list below is indicative and may vary between cohorts.
 implementation, use and maintenance of AI in health and care in London* (2025)](/assets/docs/ONELondonFramework2025.pdf#page=41)
 * Insights from the scaling-up of this programme from a local to national scope was [published](/assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf) by our Programme Manger [Beatrix Fletcher](/faculty/beatrix-fletcher) 
 * [Health Education and Improvement Wales](https://heiw.nhs.wales) published [*Artificial Intelligence Education and Skills within NHS Wales Landscape review* (2025)](/assets/docs/HEIW_AI_Landscape_Review.pdf#page=18), in which they endorsed the fellowship as a programme to meet the education and skills ambitions of the [Welsh AI Commission for Health and Social Care](https://www.gov.wales/ai-commission-health-and-social-care)
+* A systematic summary of the benefits realised by this fellowship for the NHS was [published in August 2025](/assets/docs/FCAI_Benefits_Realisation_August2025v1.pdf) by the faculty
 
 
 
