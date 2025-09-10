@@ -36,7 +36,7 @@ Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3
     <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
     <br>
 <ol>
-      <li>Applicant reviews the dual fellowship <a href="/assets/docs/FCAI_C4_Sponsor_info_v1.2.pdf">information sheet</a> and confirms meeting the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements">entry requirements of the clinical programme</a>.</li>
+      <li>Applicant reviews the dual fellowship <a href="/assets/docs/FCAI_C5_International_Flyer.pdf">information sheet</a> and confirms meeting the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements">entry requirements of the clinical programme</a>.</li>
       <li>Applicant confirms their application with their Sponsor.</li>
       <li>Applicant submits <a href="https://forms.office.com/e/6xuc0A1qAj"><em>International Application Form</em></a>.</li>
       <li>Applicants are shortlisted.</li>
