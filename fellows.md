@@ -23,6 +23,8 @@ title: Fellows & Alumni
     <option value="East of England">East of England</option>
     <option value="London">London</option>
     <option value="Midlands">Midlands</option>
+    <option value="North East and Yorkshire- North East & North Cumbria">North East and Yorkshire- North East & North Cumbria</option>
+    <option value="North East and Yorkshire- Yorkshire & Humber">North East and Yorkshire- Yorkshire & Humber</option>
     <option value="North West">North West</option>
     <option value="Scotland">Scotland</option>
     <option value="South East- Kent, Surrey, Sussex">South East- Kent, Surrey, Sussex</option>
