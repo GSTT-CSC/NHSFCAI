@@ -40,7 +40,7 @@ en: &DEFAULT_EN
         - name: "William Roach"
           role: "Higher Specialist Scientist Trainee in Microbiology"
           cohort: "4"
-          region:
+          region: "North East and Yorkshire- North East & North Cumbria"
           profession: "Healthcare Science"
         - name: "Katherine Wykes"
           role: "Specialty Trainee Doctor in Anaesthetics and Intensive Care Medicine"
