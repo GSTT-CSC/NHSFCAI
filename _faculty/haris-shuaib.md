@@ -5,4 +5,5 @@ job-role: Director
 ---
 
 ### Bio
-Haris Shuaib is the Director of the NHS Fellowship in Clinical AI and the CEO of Newton's Tree. He is the former head of GSTT Clinical Scientific Computing which he led it from its creation in 2021 until 2024.
+Haris founded the NHS Fellowship in Clinical AI and continues to act as a key strategic advisor to the fellowship. He is the former head of [GSTT Clinical Scientific Computing](https://gstt-csc.github.io) which he led it from its creation in 2021 until 2024. 
+Harisis the CEO of [Newton's Tree](https://www.newtonstree.ai). 
