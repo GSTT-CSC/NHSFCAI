@@ -1,7 +1,7 @@
 ---
 layout: faculty
 team-member-name: Alexander Deng
-job-role: Programme Lead
+job-role: Director
 ---
 
 ### Bio

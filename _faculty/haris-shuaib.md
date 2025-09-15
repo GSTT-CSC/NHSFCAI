@@ -1,7 +1,7 @@
 ---
 layout: faculty
 team-member-name: Haris Shuaib
-job-role: Director
+job-role: Founder & Strategic Advisor
 ---
 
 ### Bio
