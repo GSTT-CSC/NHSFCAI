@@ -1,11 +1,9 @@
 en:
   team:
     people:
-      - name: "Haris Shuaib"
-        role: "Director"
-        background: "Consultant Medical Physicist"
+
       - name: "Alexander Deng"
-        role: "Programme Lead"
+        role: "Director"
         background: "Consultant Clinical Geneticist"
       - name: "Beatrix Fletcher"
         role: "Programme Manager"
@@ -13,3 +11,6 @@ en:
       - name: "Zainab Qazi"
         role: "Programme Support Officer"
         background: "Dentist"
+      - name: "Haris Shuaib"
+        role: "Founder & Strategic Advisor"
+        background: "Consultant Medical Physicist"
