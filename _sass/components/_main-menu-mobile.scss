@@ -61,6 +61,17 @@
           opacity: 0.8;
         }
       }
+      ul {
+        font-size: 20px;
+        margin-top: 5px;
+        padding-left: 0;
+        li a {
+          color: rgba(255,255,255,0.85);
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
     }
   }
 }
