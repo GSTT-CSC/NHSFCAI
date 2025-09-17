@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /Sites/
+permalink: /sites/
 title: NHS AI Project Host Trusts
 
 ---
