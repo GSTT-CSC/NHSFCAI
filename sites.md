@@ -1,11 +1,11 @@
 ---
 layout: page
 permalink: /sites/
-title: NHS AI Project Host Trusts
+title: NHS AI Project Host Sites
 
 ---
+Our fellows are hosted in clinical AI projects and teams across the NHS. The list below is indicative and may vary between cohorts.
 
-The list below is indicative and may vary between cohorts.
 <details open>
 <summary>
 <b>England</b>
