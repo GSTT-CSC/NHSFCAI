@@ -1,13 +1,13 @@
 main:
   - name: "Apply"
     url: "/apply/"
-    weight: q
+    weight: 1
   - name: "Fellows"
     url: "/fellows/"
     children:
       - name: "Fellows' Publications"
         url: "/publications/"
-    weight: w
+    weight: 2
   - name: "About"
     url: "/about/"
     children:
