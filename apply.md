@@ -1,50 +1,29 @@
 ---
 layout: page
 permalink: /apply/
-title: Cohort 5 Applications (2026-27)
+title: Cohort 5 NHS Applications (2026-27)
 ---
 _Last updated: 22 May 2025_
 <br>
-Applications are currently **closed**.
+**Applications are currently closed**.
 Applications for Cohort 5 will open in November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
-Prospective applicants can [read the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf) and the [about the fellowship](/about).<br>
+
 
 ### Key Dates and application process
-* 08 Nov 2024: Applications open- *[Application Form](https://forms.office.com/e/WZDF73wwa8)* is live, *[Approval In Principle Form](https://forms.office.com/e/aeTa9pRyR4)* is live
+* 08 Nov 2024: Applications open- *[Application Form](https://forms.office.com/e/WZDF73wwa8)* is live, *[Approval In Principle Form](https://forms.office.com/e/aeTa9pRyR4)* * is live
 * 13 Nov 2024: Webinar and Q&A (recording below)
-* 18 Dec 2024: *Application Form* and *Approval In Principle Form* deadline at 23:45 GMT
-* 15 Jan 2025: Shortlisting outcomes communicated
+* 18 Dec 2024: *Application Form* <u>and</u> *Approval In Principle Form* * deadline at 23:45 GMT
+* 15 Jan 2025: Shortlisting outcomes communicated- remote interviews offered
 * 22-29 Jan 2025: Remote interviews
 * Feb 2025: Outcomes of interviews, project matching
 * Aug 2025: Fellowship cohort 4 begins
 
-<details>
-<summary><b>Application process for NHS applicants</b></summary>
-    <ol>
-      <li>Applicant reviews eligibility and person specification in the <a href="/assets/docs/FCAI_C4_Role_Description_v2.1.pdf">role description document</a>.</li>
-      <li>Applicant submits <a href="https://forms.office.com/e/WZDF73wwa8"><em>Application Form</em></a>.</li>
-      <li>Applicant's Approver submits <a href="https://forms.office.com/e/aeTa9pRyR4"><em>Approval In Principle Form</em></a>. An Approver is a responsible person with decision-making power over the applicant's training/employment pattern. Applications will not be shortlisted for interview without this evidence.</li>
-      <li>Applicants are shortlisted.</li>
-      <li>Shortlisted applicants are offered a remote interview.</li>
-      <li>Successful applicants are matched to an AI project and join the fellowship in Cohort 4.</li>
-    </ol>
+*An Approver is a responsible person with decision-making power over the applicant's training/employment pattern. Applications <b>will not be shortlisted</b> for interview without an Approval in Principle form.
 
-</details>
-<details>
-<summary><b>Application process for international applicants</b></summary>
-    The NHS Fellowship in Clinical AI and the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/">GSTT International Clinical Fellowship</a> are offered jointly in an exclusive dual fellowship programme in London, UK.<br>
-    <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
-    <br>
-<ol>
-      <li>Applicant reviews the dual fellowship <a href="/assets/docs/FCAI_C5_International_Flyer.pdf">information sheet</a> and confirms meeting the <a href="https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements">entry requirements of the clinical programme</a>.</li>
-      <li>Applicant confirms their application with their Sponsor.</li>
-      <li>Applicant submits <a href="https://forms.office.com/e/6xuc0A1qAj"><em>International Application Form</em></a>.</li>
-      <li>Applicants are shortlisted.</li>
-      <li>Shortlisted applicants are offered a remote interview.</li>
-      <li>Successful applicants are matched to an AI project and join the fellowship in Cohort 4.</li>
-    </ol>
-</details>
-  
+### Resources for applicants:
+* [Fellowship curriculum](/curriculum)
+* [Cohort 4 role description](/assets/docs/FCAI_C4_Role_Description_v2.1.pdf)
+* [About the fellowship](/about)
 
 ### Applicant Webinar 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I3BwaGeKHpg" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
