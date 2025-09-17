@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: flex-start;
     > li {
+      position: relative;
       list-style: none;
       font-size: 1.3rem;
       > a {
@@ -20,6 +21,43 @@
           text-decoration: underline;
           background-color: lighten($primary, 50%);
         }
+      }
+
+      // Submenu styles
+      > ul.submenu {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        border-radius: 4px;
+        top: 100%;
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        min-width: 180px;
+        z-index: 1000;
+
+        > li {
+          font-size: 1.2rem;
+          > a {
+            display: block;
+            padding: 8px 12px;
+            color: $primary;
+            text-decoration: none;
+            &:hover {
+              background-color: lighten($primary, 45%);
+              text-decoration: underline;
+            }
+          }
+          &.active > a {
+            background-color: $primary;
+            color: $white;
+            border-radius: 0;
+          }
+        }
+      }
+      // Show submenu on hover
+      &:hover > ul.submenu {
+        display: block;
       }
       &.active {
         > a {
