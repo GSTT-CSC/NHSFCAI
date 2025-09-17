@@ -3,8 +3,10 @@ layout: page
 title: Faculty
 permalink: /faculty/
 ---
-We created this fellowship in response to the shortage of expert healthcare leaders to adopt clinical AI tools.
-Each faculty member's clinical background guides the continued development of this programme year by year.
+We created this fellowship to address the shortage of expert healthcare leaders to adopt clinical AI tools.
+Each faculty member's clinical background guides the continued development of this programme.
+Contact the faculty [here](mailto:gstt.aifellowship@nhs.net)
+
 <h5>Click on each faculty member to find out more</h5>
 <div class="container">
   <div class="row pt-3">
