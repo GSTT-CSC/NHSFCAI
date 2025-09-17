@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /supervisors
+permalink: /supervisors/
 title: Become a Supervisor
 ---
 The NHS Fellowship in Clinical AI provides practical experience to its fellows through placements in real-world deployments of AI tools in NHS host sites.
