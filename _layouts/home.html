@@ -13,12 +13,31 @@ bodyClass: "page-home"
         {% endif %}
       </div>
       {% if page.intro_image %}
+
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
+        <div class="intro-gallery">
+          <img src="images/homepage_gallery/homepage_image_cohort1.jpg" alt="Slide 1 16:9 ratio" class="gallery-slide active" />
+          <img src="images/homepage_gallery/homepage_image_cohort2.jpg" alt="Slide 2 16:9 ratio" class="gallery-slide" />
+          <img src="images/homepage_gallery/homepage_image_cohort3.jpg" alt="Slide 3 16:9 ratio" class="gallery-slide" />
+        </div>
       </div>
       {% endif %}
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelectorAll('.gallery-slide');
+      let currentIndex = 0;
+
+      function showNextSlide() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+      }
+
+      setInterval(showNextSlide, 10000); // Change every 10 seconds
+    });
+  </script>
 </div>
 
 <div class="strip strip-grey">
