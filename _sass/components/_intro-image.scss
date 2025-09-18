@@ -18,3 +18,25 @@
     display: block;
   }
 }
+
+.intro-gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.gallery-slide.active {
+  display: block;
+  position: relative;
+  opacity: 1;
+}
