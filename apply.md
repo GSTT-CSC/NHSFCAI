@@ -55,6 +55,10 @@ The eligible career stages have been agreed by consensus with our sponsor organi
 <p>No. Medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to CCT in its own right for the duration of the post.
 </p>
 
+<strong>Is a doctor/dentist eligible if they will be out of programme during the fellowship dates, but will still hold a valid National Training Number for a specialty training programme leading to CCT in its own right for the duration of the post?</strong>
+
+<p>Yes. The status of being in or out of programme does not affect eligibility, only the allocation of a valid National Training Number.
+</p>
 
 <strong>Do I have to know how coding, programming, or AI to be eligible? </strong>
 
