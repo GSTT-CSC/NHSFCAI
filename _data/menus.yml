@@ -1,21 +1,24 @@
 main:
   - name: "Apply"
-    url: "/apply/"
     children:
+      - name: "NHS"
+        url: "/apply/"
       - name: "International"
         url: "/international/"
       - name: "Supervisors"
         url: "/supervisors/"
     weight: 2
   - name: "Fellows"
-    url: "/fellows/"
     children:
+      - name: "Fellows & Alumni"
+        url: "/fellows/"
       - name: "Publications"
         url: "/publications/"
     weight: 3
   - name: "About"
-    url: "/about/"
     children:
+      - name: "Background"
+        url: "/about/"
       - name: "Curriculum"
         url: "/curriculum/"
       - name: "NHS Sites"
