@@ -10,7 +10,9 @@ Applications for Cohort 5 will open in November 2025. The information on this pa
 
 
 ### Key Dates and application process
-* 08 Nov 2024: Applications open- *[Application Form](https://forms.office.com/e/WZDF73wwa8)* is live, *[Approval In Principle Form](https://forms.office.com/e/aeTa9pRyR4)* * is live
+* 08 Nov 2024: Applications open
+<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an NHS applicant](https://forms.office.com/e/WZDF73wwa8) <b>and</b>
+<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply for Approval in Princple](https://forms.office.com/e/aeTa9pRyR4)
 * 13 Nov 2024: Webinar and Q&A (recording below)
 * 18 Dec 2024: *Application Form* <u>and</u> *Approval In Principle Form* * deadline at 23:45 GMT
 * 15 Jan 2025: Shortlisting outcomes communicated- remote interviews offered

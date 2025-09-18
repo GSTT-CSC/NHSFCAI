@@ -13,7 +13,8 @@ The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowshi
 
 
 ### Key Dates and application process
-* 08 Nov 2024: Applications open- *[International Application Form](https://forms.office.com/e/6xuc0A1qAj)* is live
+* 08 Nov 2024: Applications open
+<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an International Applicant](https://forms.office.com/e/6xuc0A1qAj)
 * 13 Nov 2024: Webinar and Q&A (recording below)
 * Jan 2025: *International Application Form* deadline
 * 15 Jan 2025: Shortlisting outcomes communicated
