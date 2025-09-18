@@ -71,6 +71,17 @@
           border-radius: 4px;
         }
       }
+
+      // Highlight parent when a child submenu item is active (CSS :has)
+      &:has(> ul > li.active) > a,
+      &:has(> ul.submenu > li.active) > a {
+        font-weight: normal;
+        text-decoration: none;
+        color: $white;
+        background-color: $primary;
+        border-radius: 4px;
+      }
+
     }
   }
 }
