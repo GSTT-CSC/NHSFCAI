@@ -29,7 +29,11 @@ main:
         url: "/partners/"
     weight: 1
   - name: "Sponsors"
-    url: "/sponsors/"
+    children:
+      - name: "NHS"
+        url: "/nhs-sponsor/"
+      - name: "International"
+        url: "/international-sponsor/"
     weight: 4
   - name: "Faculty"
     url: "/faculty/"
