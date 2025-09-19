@@ -1,13 +1,13 @@
 ---
 layout: page
 permalink: /apply/
-title: Cohort 5 NHS Applications (2026-27)
+title: Apply for Cohort 5 (2026-27) <br>NHS Applicants
 ---
 _Last updated: 22 May 2025_
 <br>
 **Applications are currently closed**.
 Applications for Cohort 5 will open in November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
-
+This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
 ### Key Dates and application process
 * 08 Nov 2024: Applications open
@@ -43,7 +43,7 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 <strong>Why is my NHS region, workforce group, or region/workforce group combination not eligible? </strong>
 
 <p>Workforce and geographical eligibility are not decided by the faculty of this fellowship. 
-This is decided at a regional level by regional funding bodies, and this is not a uniform process across the UK. 
+This is decided at a regional level by regional funding bodies, and this is not a uniform process across the UK.
 If you wished to apply this cohort but were ineligible, please email the fellowship faculty (gstt.aifellowship@nhs.net) so that we can identify priority areas for recruitment in future cohorts.
 </p>
 

@@ -1,6 +1,6 @@
 ---
 title: Contact
 layout: contact
-description: Contact
+description: Contact Us
 ---
 
