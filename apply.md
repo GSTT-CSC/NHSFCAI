@@ -312,12 +312,12 @@ It is possible to be matched to a BSH-badged project through this route, dependi
 
 <strong>I am an international or non-NHS applicant. Am I eligible if I have a sponsor who will directly fund a post for me?</strong>
 
-<p>Potentially yes. Read the details in the section above titled 'Application process of international applicants'.
+<p>Yes. Read the details in the section above titled 'Application process of international applicants'.
 </p>
 
 <strong>I am an NHS applicant. Am I eligible if I have a sponsor who will directly fund a post for me?</strong>
 
-<p>Potentially yes. Your sponsor should contact the faculty (gstt.aifellowship@nhs.net) to discuss potential arrangements as early as possible.
+<p>Yes. Your sponsor should visit www.nhsfellowship.ai/nhs-sponsor/ contact the faculty (gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
 </p>
 
 <strong>Can the faculty help me to identify a suitable sponsor?</strong>
