@@ -87,17 +87,16 @@ It is strongly recommended that skills/knowledge/background are listed as Desira
 
 <details>
 <summary>Recruitment</summary>
+<strong>Do supervisors participate in the recruitment of fellows?</strong>
+
+<p>Yes. Supervisors are asked to participate in interview panels for the recruitment of fellows to their regions.
+</p>
 
 <strong>How does project matching happen?</strong>
 
 <p>Applicants will rank the projects they are eligible to be matched to. 
 The highest scoring applicant from the interview stage in each regional project pool will be matched to their highest ranked project. 
 The next highest scoring applicant is matched to their highest ranked project remaining, etc. until all posts are filled.
-</p>
-
-<strong>Do supervisors participate in the recruitment of fellows?</strong>
-
-<p>Yes. Supervisors are asked to participate in interview panels for the recruitment of fellows to their regions.
 </p>
 
 <strong>Do all proposed projects receive a fellow?</strong>
@@ -111,7 +110,7 @@ The next highest scoring applicant is matched to their highest ranked project re
 Link pending to Cohort 5 Person Specification.
 </p>
 
-<strong>What are 'directly allocated' fellows and project?</strong>
+<strong>What are 'directly allocated' fellows and projects?</strong>
 
 <p>Directly allocated fellows are NHS applicants who have their own source of funding (instead of competing for posts in the regional pools).
 Directly allocated fellows interview for posts and are held to the same standard of appointability as other candidates.
