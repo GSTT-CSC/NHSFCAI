@@ -1,0 +1,41 @@
+- name: MHRA
+  url: https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency
+  logo: /images/logo/MHRA_logo.png
+- name: NICE
+  url: https://www.nice.org.uk
+  logo: /images/logo/NICE_logo.png
+- name: KCL
+  url: https://www.kcl.ac.uk
+  logo: /images/logo/KCL_logo.png
+
+- name: CERSI-AI
+  url: https://www.cersi-ai.org
+  logo: /images/logo/CERSI_logo.png
+- name: OxCAIR
+  url: https://www.linkedin.com/company/oxford-clinical-artificial-intelligence-research-oxcair/posts/?feedView=all
+  logo: /images/logo/OXCAIR_logo.jpeg
+- name: Public Digital
+  url: https://public.digital
+  logo: /images/logo/publicdigital_logo.jpeg
+- name: Google Deepmind
+  url: https://deepmind.google
+  logo: /images/logo/GoogleDeepmind_logo.png
+- name: Microsoft AI
+  url: https://microsoft.ai/health
+  logo: /images/logo/MicrosoftAI_logo.jpg
+
+- name: Skin Analytics
+  url: https://skin-analytics.com
+  logo: /images/logo/SkinAnalytics_logo.png
+- name: Aidoc
+  url: https://www.aidoc.com/eu/
+  logo: /images/logo/Aidoc_logo.jpeg
+- name: Hardian Health
+  url: https://www.hardianhealth.com
+  logo: /images/logo/HardianHealth_logo.png
+- name: Newton's Tree
+  url: https://www.newtonstree.ai
+  logo: /images/logo/NewtonsTree_logo.png
+- name: Scripps Research
+  url: https://www.scripps.edu
+  logo: /images/logo/Scripps_logo.png
