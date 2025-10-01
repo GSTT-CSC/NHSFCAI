@@ -1,0 +1,21 @@
+<div class="logo-wall">
+  {% for item in include.items %}
+    <a href="{{ item.url }}" target="_blank" rel="noopener">
+      <img src="{{ item.logo }}" alt="{{ item.name }}">
+    </a>
+  {% endfor %}
+</div>
+
+<style>
+.logo-wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+.logo-wall img {
+  height: 100px;   /* keeps logos uniform height */
+  object-fit: contain;
+}
+</style>

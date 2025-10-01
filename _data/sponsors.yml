@@ -1,0 +1,22 @@
+- name: NHS England
+  url: https://www.hee.nhs.uk
+  logo: /images/logo/NHSE_logo.png
+- name: NHS Education Scotland
+  url: https://www.nes.scot.nhs.uk
+  logo: /images/logo/NES_logo.jpg
+- name: Health Education and Improvement Wales
+  url: https://heiw.nhs.wales
+  logo: /images/logo/HEIW_logo.png
+- name: British Society for Haematology
+  url: https://b-s-h.org.uk
+  logo: /images/logo/BSH_logo.png
+- name: GSTT Clinical Scientific Computing
+  url: https://gstt-csc.github.io
+  logo: /images/logo/CSC_logo.svg
+
+- name: AI Centre for Value Based Healthcare
+  url: https://www.aicentre.co.uk
+  logo: /images/logo/AI4VBH_logo.png
+- name: NHS Digital Academy
+  url: https://digital-transformation.hee.nhs.uk/digital-academy
+  logo: /images/logo/NHS_DA_logo.jpg
