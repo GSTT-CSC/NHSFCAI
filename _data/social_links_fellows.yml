@@ -21,8 +21,8 @@ jack-ross:
     icon: fab fa-linkedin-in
 
 adam-mayers:
-  - url: https://github.com/adam-mayers
-    icon: fab fa-github
+  - url: https://orcid.org/0009-0008-1948-657X
+    icon: fas fa-book
   - url: https://www.linkedin.com/in/adam-mayers-225311272/
     icon: fab fa-linkedin-in
 
