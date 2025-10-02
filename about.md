@@ -21,11 +21,13 @@ The fellowship is delivered by the [Clinical Scientific Computing team](https://
 
 
 <h3 style>Testimonials</h3>
->"This is a flagship programme, and NHS London Workforce Training and Education are privileged to be involved. The level of care, expertise, and diligence of the organisation is exemplary. The benefits being realised are concrete and important for the NHS, as we move from analogue to digital." <br/>[Dr Richard Bogle](https://www.linkedin.com/in/richard-bogle-624a9617/) (2025), London Postgraduate System Dean, NHS England
 
->"The NHS Fellowship in Clinical AI has been the most valuable professional development activity of my career to date." <br/>[Dr Rishi Ramessur](/fellow/rishi-ramessur) (2024), NHS Fellow in Clinical AI, Cohort 2
-
->"I’m so proud of what you’re doing. I look forward to following your career paths because you’re going to light it up. You’re going to be the change agents for medicine, and we sure need it." <br/>[Professor Eric Topol](https://www.scripps.edu/science-and-medicine/translational-institute/about/people/eric-topol/) (2022), Founder and Director of the Scripps Research Translational Institute, Leader of The [Topol Review](https://topol.hee.nhs.uk/)
-
->"The launch of the Fellowship in Clinical AI is an unprecedented step towards integrating experiential learning into postgraduate training pathways, and we hope to learn from and scale opportunities like this to help prepare the future clinical AI specialist workforce" <br/>[Dr Hatim Abdulhussein](https://www.linkedin.com/in/drhatz) (2022), [National Clinical Lead for AI and Digital Workforce](https://digital-transformation.hee.nhs.uk/building-a-digital-workforce/dart-ed), NHS England
-
+{% for t in site.data.testimonials %}
+<div style="display: flex; align-items: center; margin-bottom: 2rem;">
+  <img class="mx-auto p-1" style="width: 150px; border-radius: 50%; flex-shrink: 0; margin-right: 1rem;" src="{{ t.image }}" alt="{{ t.name }} headshot">
+  <p>
+    <em>{{ t.text }}</em><br/><br/>
+    <a href="{{ t.link }}">{{ t.name }}</a> ({{ t.year }}), {{ t.role }}
+  </p>
+</div>
+{% endfor %}
