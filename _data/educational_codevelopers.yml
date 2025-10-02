@@ -16,7 +16,9 @@
 - name: OxCAIR
   url: https://www.linkedin.com/company/oxford-clinical-artificial-intelligence-research-oxcair/posts/?feedView=all
   logo: /images/logo/OXCAIR_logo.jpeg
-
+- name: DHVL
+  url: https://www.gla.ac.uk/colleges/mvls/livinglab/our-projects/digital-health-validation-lab/
+  logo: /images/logo/DHVL_logo.png
 - name: BMJ
   url: https://bmjgroup.com
   logo: /images/logo/BMJ_logo.png
