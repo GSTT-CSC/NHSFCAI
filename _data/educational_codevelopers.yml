@@ -7,16 +7,24 @@
 - name: KCL
   url: https://www.kcl.ac.uk
   logo: /images/logo/KCL_logo.png
-
+- name: ICL
+  url: https://www.imperial.ac.uk
+  logo: /images/logo/Imperial_logo.png
 - name: CERSI-AI
   url: https://www.cersi-ai.org
   logo: /images/logo/CERSI_logo.png
 - name: OxCAIR
   url: https://www.linkedin.com/company/oxford-clinical-artificial-intelligence-research-oxcair/posts/?feedView=all
   logo: /images/logo/OXCAIR_logo.jpeg
+
+- name: BMJ
+  url: https://bmjgroup.com
+  logo: /images/logo/BMJ_logo.png
 - name: Public Digital
   url: https://public.digital
   logo: /images/logo/publicdigital_logo.jpeg
+
+
 - name: Google Deepmind
   url: https://deepmind.google
   logo: /images/logo/GoogleDeepmind_logo.png
@@ -39,3 +47,6 @@
 - name: Scripps Research
   url: https://www.scripps.edu
   logo: /images/logo/Scripps_logo.png
+- name: MHV
+  url: https://www.meridianhealthventures.com
+  logo: /images/logo/MHV_logo.png
