@@ -16,7 +16,9 @@
 - name: GSTT Clinical Scientific Computing
   url: https://gstt-csc.github.io
   logo: /images/logo/CSC_logo.svg
-
+- name: GSTT
+  url: https://www.guysandstthomas.nhs.uk
+  logo: /images/logo/gstt-logo-trans.png
 - name: AI Centre for Value Based Healthcare
   url: https://www.aicentre.co.uk
   logo: /images/logo/AI4VBH_logo.png
