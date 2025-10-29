@@ -3,10 +3,10 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (2026-27) <br>NHS Applicants
 ---
-_Last updated: 22 May 2025_
+_Last updated: 29 Oct 2025_
 <br>
 **Applications are currently closed**.
-Applications for Cohort 5 will open in November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
+Applications for Cohort 5 will open on 10 November 2025. The information on this page is kept from the previous cycle to serve as a guide for prospective applicants.<br>
 This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
 ### Key Dates and application process
