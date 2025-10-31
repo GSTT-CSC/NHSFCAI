@@ -34,7 +34,7 @@ The webinar covered the features and curriculum of the fellowship, addressed fre
 A new webinar for Cohort 5 applications will be advertised here during the recruitment cycle.
 
 ### Frequently Asked Questions
-_Last updated: 22 May 2025_
+_Last updated: 31 October 2025_
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details>
@@ -61,7 +61,7 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 <strong>What is the format of the interview?  </strong>
 
 <p>Interviews are conducted remotely.
-The interview is a structured series of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship per the role description document (see above: "Application Process", Step 1). 
+The interview is a structured series of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship per the role description document. 
 The interview panel consists of fellowship faculty, AI supervisors, and regional education leads. 
 </p>
 
@@ -74,7 +74,7 @@ Consider how to show evidence of meeting these criteria with real-world examples
 
 <strong>When will the interviews happen?  </strong>
 
-<p>The interviews are planned for 22-29 January 2025. 
+<p>The interviews are planned for 20-29 January 2026. 
 Applicants proceeding to interview will be sent a link to book their interview slot. 
 </p>
 
@@ -120,10 +120,10 @@ The experience from any project will involve significant amounts of transferable
 
 <summary>Working pattern</summary>
 
-<strong>Can I do the fellowship at a lower time commitment than 0.4FTE?</strong>
+<strong>Can I do the fellowship at a lower time commitment than 0.4FTE (2 days a week)?</strong>
 <p>No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
 The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
-
+International applicants are able to do this placement at a higher time commitment than 0.4FTE, your preference is asked for during your application.
 </p>
 <strong>Can I compress the fellowship into a shorter and more intensive placement?</strong>
 
@@ -151,7 +151,7 @@ Individual situations will be considered on a case-by-case basis at the discreti
 
 <strong>What certification do fellows receive at the end of the fellowship year? </strong>
 
-<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers.
+<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for DCB 0129 and DCB 0160.
 </p>
 
 </details>
