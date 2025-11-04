@@ -10,10 +10,10 @@ We are currently accepting project proposals for August 2026- August 2027 to hos
 * Sep 2025: Project proposal submissions open for prospective supervisors 
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Complete project proposal template](/assets/docs/FCAI_C5_Project_Template.docx)
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Email to faculty](mailto:gstt.aifellowship@nhs.net)
-* Dec 2025: Deadline for project proposals
+* 24 Nov 2025: Deadline for project proposals
 * Jan 2026: Remote interviews- prospective supervisors are invited to regional interview panels
-* Feb 2025: Outcomes of interviews, project matching
-* Aug 2025: Fellowship cohort 5 begins
+* Feb 2026: Outcomes of interviews, project matching
+* Aug 2026: Fellowship cohort 5 begins
 
 
 ### Supervisor Webinar 

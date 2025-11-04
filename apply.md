@@ -297,6 +297,10 @@ The experience from any project will involve significant amounts of transferable
 <summary>Working pattern, pay, expenses</summary>
 
 **Can I do the fellowship at a lower time commitment than 0.4FTE?**
+<strong>Can I do the fellowship at a lower time commitment than 0.4FTE (2 days a week)?</strong>
+<p>No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
+The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
+If your Approver cannot confirm that this time can be released, your application is not eligible and will not be shortlisted.
 
 
 No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
@@ -362,6 +366,8 @@ No. The offer for a fellowship post must be accepted for that cohort’s recruit
 
 
 Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers.
+<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for DCB 0129 and DCB 0160.
+</p>
 
 </details>
 

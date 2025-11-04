@@ -3,24 +3,24 @@ layout: page
 permalink: /international/
 title: Apply for Cohort 5 (2026-27) <br>International Applicants
 ---
-_Last updated: 22 May 2025_
+_Last updated: 31 October 2025_
 <br>
-**Applications are currently closed**.
-The information on this page is kept from the previous cycle to serve as a guide for prospective applicants. This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
+**Applications for Cohort 5 are open**.
+This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
 <br><br>
 The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are offered jointly in an exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship
 <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
 
 
 ### Key Dates and application process
-* 08 Nov 2024: Applications open
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an International Applicant](https://forms.office.com/e/6xuc0A1qAj)
-* 13 Nov 2024: Webinar and Q&A (recording below)
-* Jan 2025: *International Application Form* deadline
-* 15 Jan 2025: Shortlisting outcomes communicated
-* 22-29 Jan 2025: Remote interviews
-* Feb 2025: Outcomes of interviews, project matching
-* Aug 2025: Fellowship cohort 4 begins
+* 31 Oct 2025: Applications open
+<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an International Applicant](https://forms.office.com/e/mx5mikXjH2)
+* 24 Nov 2025: Webinar and Q&A
+* 11 Jan 2026: *International Application Form* deadline
+* 13 Jan 2026: Shortlisting outcomes communicated
+* 20-29 Jan 2026: Remote interviews
+* Feb 2026: Outcomes of interviews, project matching
+* Aug 2026: Fellowship cohort 4 begins
 
 ### Resources for applicants:
 * [Fellowship curriculum](/curriculum)
@@ -31,9 +31,10 @@ The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowshi
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I3BwaGeKHpg" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
 
 The webinar covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited follow-up questions from applicants.
+A new webinar for Cohort 5 applications will be advertised here during the recruitment cycle.
 
 ### Frequently Asked Questions
-_Last updated: 22 May 2025_
+_Last updated: 31 October 2025_
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details>
@@ -60,7 +61,7 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 <strong>What is the format of the interview?  </strong>
 
 <p>Interviews are conducted remotely.
-The interview is a structured series of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship per the role description document (see above: "Application Process", Step 1). 
+The interview is a structured series of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship per the role description document. 
 The interview panel consists of fellowship faculty, AI supervisors, and regional education leads. 
 </p>
 
@@ -73,7 +74,7 @@ Consider how to show evidence of meeting these criteria with real-world examples
 
 <strong>When will the interviews happen?  </strong>
 
-<p>The interviews are planned for 22-29 January 2025. 
+<p>The interviews are planned for 20-29 January 2026. 
 Applicants proceeding to interview will be sent a link to book their interview slot. 
 </p>
 
@@ -119,10 +120,10 @@ The experience from any project will involve significant amounts of transferable
 
 <summary>Working pattern</summary>
 
-<strong>Can I do the fellowship at a lower time commitment than 0.4FTE?</strong>
+<strong>Can I do the fellowship at a lower time commitment than 0.4FTE (2 days a week)?</strong>
 <p>No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
 The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
-
+International applicants are able to do this placement at a higher time commitment than 0.4FTE, your preference is asked for during your application.
 </p>
 <strong>Can I compress the fellowship into a shorter and more intensive placement?</strong>
 
@@ -150,7 +151,7 @@ Individual situations will be considered on a case-by-case basis at the discreti
 
 <strong>What certification do fellows receive at the end of the fellowship year? </strong>
 
-<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers.
+<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for DCB 0129 and DCB 0160.
 </p>
 
 </details>
