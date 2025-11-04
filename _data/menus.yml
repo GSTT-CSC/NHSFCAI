@@ -3,8 +3,6 @@ main:
     children:
       - name: "Background"
         url: "/about/"
-      - name: "Curriculum"
-        url: "/curriculum/"
       - name: "NHS Sites"
         url: "/sites/"
       - name: "Literature"
@@ -43,11 +41,13 @@ main:
         url: "/resources/"
     weight: 4
   - name: "Faculty"
-    url: "/faculty/"
+    children:
+      - name: "Faculty Members"
+        url: "/faculty/"
+      - name: "Contact Us"
+        url: "/contact/"
     weight: 5
-  - name: "Contact"
-    url: "/contact/"
-    weight: 7
+
 
 footer:
   - name: "Home"
