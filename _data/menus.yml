@@ -1,4 +1,17 @@
 main:
+  - name: "About"
+    children:
+      - name: "Background"
+        url: "/about/"
+      - name: "Curriculum"
+        url: "/curriculum/"
+      - name: "NHS Sites"
+        url: "/sites/"
+      - name: "Literature"
+        url: "/literature/"
+      - name: "Partners"
+        url: "/partners/"
+    weight: 1
   - name: "Apply"
     children:
       - name: "NHS"
@@ -15,32 +28,26 @@ main:
       - name: "Publications"
         url: "/publications/"
     weight: 3
-  - name: "About"
-    children:
-      - name: "Background"
-        url: "/about/"
-      - name: "Curriculum"
-        url: "/curriculum/"
-      - name: "NHS Sites"
-        url: "/sites/"
-      - name: "Literature"
-        url: "/literature/"
-      - name: "Partners"
-        url: "/partners/"
-    weight: 1
   - name: "Sponsors"
     children:
       - name: "NHS"
         url: "/nhs-sponsor/"
       - name: "International"
         url: "/international-sponsor/"
+    weight: 6
+  - name: "Education"
+    children:
+      - name: "Curriculum"
+        url: "/curriculum/"
+      - name: "Resources"
+        url: "/resources/"
     weight: 4
   - name: "Faculty"
     url: "/faculty/"
     weight: 5
   - name: "Contact"
     url: "/contact/"
-    weight: 6
+    weight: 7
 
 footer:
   - name: "Home"

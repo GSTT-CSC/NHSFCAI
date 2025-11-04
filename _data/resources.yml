@@ -1,0 +1,53 @@
+- name: NHS AI and Digital Regulations Service for health and social care
+  description: |
+    Developed by NICE, the MHRA, the CQC, and the HRA for both adopters of AI in healthcare and developers.
+  link: https://www.digitalregulations.innovation.nhs.uk/
+
+- name: AI and Digital Healthcare Technologies Capability framework, NHS Digital AI and Robotics Technology in Education
+  description: |
+    A framework outlining the skills and capabilities to ensure our health and care professionals can work in a digitally enhanced environment.
+  link: https://digital-transformation.hee.nhs.uk/building-a-digital-workforce/dart-ed/horizon-scanning/ai-and-digital-healthcare-technologies
+
+- name: AI Learning Hub, NHS Digital Academy
+  description: |
+    NHS Digital Academy's collection of curated learning resources, mapped to an AI capability framework.
+  link: https://learninghub.nhs.uk/catalogue/ai/about#catalogue-details
+
+- name: AI Knowledge Repository, NHS Digital
+  description: |
+    Resources to enable the responsible adoption of AI in the NHS including articles and case studies.
+  link: https://digital.nhs.uk/services/ai-knowledge-repository
+
+- name: Clinical AI interest group, The Alan Turing Institute
+  description: |
+    The Clinical AI interest group seeks to bring together health professionals from diverse healthcare fields and data scientists who have a shared interest in clinical AI and to foster this network through
+    interactive events on up-to-date developments in the field and cultivate innovative research projects.
+  link: https://www.turing.ac.uk/research/interest-groups/clinical-ai
+
+- name: AI Ambassador Network
+  description: |
+    A forum for healthcare professionals and those interested in AI in healthcare to learn about and share practical applications of AI. Led by Dom Cushnan, Deputy Director for AI, Joint Policy Unit, NHS England and DHSC and supported by NHS Horizons.
+  link: https://forms.office.com/pages/responsepage.aspx?id=slTDN7CF9UeyIge0jXdO491Gk4bh9fZMiT0QfImyruxUOU9PRFFNTkZLT0pCQUM4RktVOUoyMVAzSi4u&route=shorturl
+
+- name: KCL Innovation Scholars AI modules
+  description: |
+    These three e-learning modules are aimed at those interested in evidence-based medicine, extracting knowledge from large-scale data and applying AI to improve patient care.
+  link: https://innovationscholars.er.kcl.ac.uk/training/pillar-three-ai/
+
+- name: AI in Healthcare, Royal College of Surgeons in Ireland
+  description: |
+    Online, self-paced short course on AI in Healthcare
+  link: https://www.rcsi.com/online/find-a-course/cpd/a/i/ai-in-healthcare
+
+- name: Incubator for AI & Digital Healthcare
+  description: |
+    An initiative that brings together patients, regulators, health professionals, policymakers, and industry leaders to share knowledge, tackle challenges, and develop solutions for better patient outcomes and accelerated innovation. Hosts webinars themed on safety, effectiveness, and equitability.
+  link: https://www.digitalhealthincubator.ai/webinars
+
+- name: Revolutionizing Healthcare, Van Der Schaar Machine Learning lab
+  description: |
+    A series of engagement sessions for clinicians and medical students, aiming to share ideas and discuss topics that will define the future
+    of machine learning in healthcare.
+  link: https://www.vanderschaar-lab.com/engagement-sessions/revolutionizing-healthcare/
+
+
