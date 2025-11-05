@@ -31,6 +31,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 ### Resources for applicants:
 * [Fellowship curriculum](/curriculum)
+* [Links to other educational resources](/resources)
 
 ### Applicant Webinar 
 
