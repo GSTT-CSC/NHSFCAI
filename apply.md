@@ -30,10 +30,6 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * Aug 2026: Fellowship Cohort 5 begins
 
 
-### Resources for applicants:
-* [Fellowship curriculum](/curriculum)
-* [Links to other educational resources](/resources)
-
 ### Applicant Webinar 
 
 [Sign up to the applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) 24 Nov 2025, 12:00-13:00 GMT
@@ -160,6 +156,11 @@ ability to rapidly learn new skills and solve technical problems
 * Experience in digital transformation, clinical informatics (DICOM, HL7, etc)
 * Experience in programming, mathematics, statistical analysis
 </details>
+
+
+### Resources for applicants:
+* [Fellowship curriculum](/curriculum)
+* [Links to other educational resources](/resources)
 
 ### Frequently Asked Questions
 _Last updated: 04 Nov 2025_
