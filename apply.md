@@ -11,9 +11,10 @@ _Last updated: 04 Nov 2025_
 We invite applications for Cohort 5 of the NHS Fellowship in Clinical AI. We seek
 energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship at 2 days a week for 12 months, alongside their work or training.
 They are matched to clinical AI projects [in the NHS](/sites) to learn the safe
-deployment and evaluation of AI in clinical workflows under the supervision of a clinical AI supervisor as part of a multidisciplinary team. They are
+deployment and evaluation of AI in clinical workflows under the supervision of a clinical AI supervisor as part of a multidisciplinary team. 
+<br><br>Fellows are
 supported to present and [publish their work](/publications), which may include clinical trials
-and quality improvement projects in the deployment of AI. Fellows gain skills and knowledge relevant to the life cycle of healthcare AI from a programme of
+and quality improvement projects in the deployment of AI. They gain skills and knowledge relevant to the life cycle of healthcare AI from a programme of
 teaching aligned with the [clinical AI curriculum](/curriculum), including bespoke live
 [masterclass workshops](/partners) in centres of AI excellence across the NHS. The fellowship and its alumnni form an active and enduring [expert network of clinical AI leaders](/fellows). 
 
