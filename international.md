@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /international/
-title: Apply for Cohort 5 (2026-27) <br>International Applicants
+title: Apply for Cohort 5 (Aug 2026 -Aug 2027) <br>International Applicants
 ---
 _Last updated: 31 October 2025_
 <br>
