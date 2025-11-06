@@ -7,7 +7,31 @@ title: Fellows' Publications
 Fellows have opportunities to publish academically during NHS Fellowship in Clinical AI, particularly relating to their AI project.
 Explore the fellowship-related publications of our fellows below, newest first
 
-
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #d8dde0;
+    padding: 6px 10px;
+    text-align: left !important;
+    vertical-align: top;
+  }
+  th {
+    background-color: #005eb8; /* NHS blue */
+    color: white;
+  }
+  tr:nth-child(even) td {
+    background-color: #e8f1f8; /* slightly darker pale NHS blue */
+  }
+  tr:nth-child(odd) td {
+    background-color: #ffffff;
+  }
+  tr:hover td {
+    background-color: #d4e2f0; /* hover highlight */
+  }
+</style>
 <!-- Fellows' Publications -->
 <table class="table table-hover">
   <thead>
