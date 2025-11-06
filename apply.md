@@ -16,7 +16,7 @@ deployment and evaluation of AI in clinical workflows under a clinical AI superv
 supported to present and [publish their work](/publications), which may include clinical trials
 and quality improvement projects in the deployment of AI. They gain skills and knowledge relevant to the life cycle of healthcare AI from a programme of
 teaching aligned with the [clinical AI curriculum](/curriculum), including bespoke live
-[masterclass workshops](/partners) in centres of AI excellence across the NHS. The fellowship and its alumnni form an active and enduring [expert network of clinical AI leaders](/fellows). 
+[masterclass workshops](/partners) in centres of AI excellence across the NHS. Our fellows and alumni form an active and enduring [expert network of clinical AI leaders](/fellows). 
 
 ### Key Dates and How To Apply
 * 10 Nov 2025: Recruitment opens
