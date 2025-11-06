@@ -124,7 +124,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 * Entry is non-competitive, but the applicant must meet Essential criteria of the Person Specification at interview
 * Successful applicants are attached to AI projects in one of the following ways:
 * * An AI project from a [host site](/sites) that the fellow can feasibly commute to (despite entry being non-competitive, project matching is still competitive and based on interview score), or
-* * A pre-allocated AI project specifically aligning to the needs of the fellow (e.g. work that is already part of their PhD). [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying if this is required.
+* * A pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work that is already part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case. 
 
 
 </details>
