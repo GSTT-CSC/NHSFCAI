@@ -125,7 +125,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 * The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The course fee is the same for either route at £7500.
 * * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 15 Dec 2025. Interview is contingent on receipt of sponsor funding confirmation.
 * * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards)
-* * Self-funded: this is declared in the application form (no email to faculty necessary). Self-funded applicants receive a secure payment link to confirm their post after a successful interview. Project matching is contingent on receipt of the funds for the course fee.
+* * Self-funded: this is declared in the application form (no email to faculty necessary). Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.
 
 **Interview**
 
