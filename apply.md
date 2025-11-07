@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 04 Nov 2025_
+_Last updated: 07 Nov 2025_
 <br>
 **Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -23,7 +23,9 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an NHS applicant](https://forms.office.com/e/Z2ph0MAF4L) <b>and</b>
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Obtain *Approval in Principle*](https://forms.office.com/e/V61XZwYe2h) from a responsible person with decision-making power over training/employment pattern. Applications <b>will not be shortlisted</b> for interview without this.
 * 24 Nov 2025: [Applicant webinar with Q&A](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3)
-* 15 Dec 2025: Application **and** Approval In Principle deadline, 23:45 GMT
+* 15 Dec 2025 23:45 GMT: 
+<br>Application **and** Approval In Principle deadline (all applications)
+<br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
 * 13 Jan 2026: Shortlisting outcomes and remote interviews offered
 * 20-27 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
 * Feb 2026: Outcomes of interviews and matching of fellows to AI projects
@@ -67,11 +69,11 @@ There are 3 entry routes to this fellowship for NHS clinicians.
 All 3 routes use the same application form. 
 Applicants are entered into appropriate national and regional applicant pools automatically based on application details.
 
-| Entry Route              | Description                                                                                  | Competition                                                                                      | Eligibility                                                                                                                                                                                                 |
-|--------------------------|----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nationally-funded posts  | Applicants can be from anywhere in the NHS                                                   | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
-| Regionally-funded posts  | Applicants must be from a specific region of the NHS                                         | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                               |
-| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) (this includes self-funding) | Non-competitive entry: must meet the Essential crtieria of the Person Specification at interview | Any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                                  |
+| Entry Route              | Description                                                                             | Competition                                                                                      | Eligibility                                                                                                                                                                                                 |
+|--------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nationally-funded posts  | Applicants can be from anywhere in the NHS                                              | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
+| Regionally-funded posts  | Applicants must be from a specific region of the NHS                                    | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                               |
+| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post | Non-competitive entry: must meet the Essential crtieria of the Person Specification at interview | Any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                                  |
 
 
 
@@ -80,7 +82,7 @@ Applicants are entered into appropriate national and regional applicant pools au
 
 | Sponsor                                        | Eligibility                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Additional requirements                                                                                                                                     | # National Posts | Interview date |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------|
-| [T-Pro](https://info.tpro.io)                           | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Other registered clinician with a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC <br><br> Priority for applicants without options for regionally-funded posts | Able to travel for at least 4 site visits in UK and Ireland (Dublin) during fellowship year                                                                 | 2                | 26-27 Jan 2026 |
+| [T-Pro](https://info.tpro.io)                           | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Other registered clinician with a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC <br><br> Priority for applicants without options for regionally-funded posts | Able to travel for 4 funded site vists to T-Pro base in Dublin (Ireland) during fellowship year, and other site visits within UK                            | 2                | 26-27 Jan 2026 |
 | [British Society for Haematology](https://b-s-h.org.uk) | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Other registered clinician with a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                             | [Membership of the BSH](https://b-s-h.org.uk/membership/membership-faqs)<br><br>Must have feasible commute to the BSH-badged AI project they are matched to | 2                | TBC            |
 
 AI project matching for nationally-funded posts differs from regionally-funded posts. See FAQ sections below.<br>
@@ -117,18 +119,24 @@ Interview dates are indicative and may change during the application cycle.</p>
 <details markdown="1">
 <summary>Directly allocated posts</summary>
 
-* <u>Entry requirements<u>
-* * This entry route is open to any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC
-* The applicant must confirm a [Sponsor for their post](/nhs-sponsor)
-* * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards) 
-* * Applicants may self-fund their post directly
-* Entry is non-competitive, but the applicant must meet Essential criteria of the Person Specification at interview
-* Indicative interview dates are: 20, 21, 28 Jan 2026 (TBC according to applicant volume)
-* Successful applicants are attached to AI projects in one of the following ways:
-* * A competitively matched AI project from a [host site](/sites) that the fellow can feasibly commute to (despite entry being non-competitive, this project matching is competitive with other applicants from regional pools, and is based on interview score), or
-* * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work that is already part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case. 
-* * Self-funding applicants will be issued a secure payment link to confirm their post after a successful interview. Project matching is contingent on receipt of funds.
+**Entry requirements**
 
+* This entry route is open to any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC
+* The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The fees are the same for either route:
+* * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 15 Dec 2025. Interview is contingent on receipt of sponsor funding confirmation.
+* * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards)
+* * Self-funded: this is declared in the application form (no email to faculty necessary). Self-funded applicants receive a secure payment link to confirm their post after a successful interview. Project matching is contingent on receipt of funds.
+
+**Interview**
+
+* The applicant must meet Essential criteria of the Person Specification (see section below) at interview
+* Indicative interview dates are: 20, 21, 28 Jan 2026 (TBC according to applicant volume)
+
+**Project matching**
+
+* Successful applicants are matched to AI projects in one of the following ways:
+  * A competitively matched AI project from an existing host site (see Clinical AI Project List section below) that the fellow can feasibly commute to. This project matching is competitive (even though programme entry itself is non-competitive) with other applicants from regional pools, and is based on interview score.
+  * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work underway as part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
 
 </details>
 
@@ -166,7 +174,6 @@ ability to rapidly learn new skills and solve technical problems
 * [Links to other educational resources](/resources)
 
 ### Frequently Asked Questions
-_Last updated: 04 Nov 2025_
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details markdown="1">
@@ -284,7 +291,8 @@ Where necessary, fellows will hold an honorary contract or Letter of Access with
 
 **What should I do if I only want to do a specific project in the fellowship?**
 
-To be matched to a specific project, an applicant should go through the normal application process. 
+For a directly allocated post, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
+<br><br>To be matched to a specific project in a nationally or regionally-funded post, an applicant should go through the normal application process. 
 There will be an opportunity to rank projects by preference. 
 The applicant should rank only projects they would want to do on the fellowship year. 
 If the applicant scores highly enough in the interview stage, they will be matched to such a project. 
