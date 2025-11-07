@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /international/
-title: Apply for Cohort 5 (Aug 2026 -Aug 2027) <br>International Applicants
+title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>International Applicants
 ---
 _Last updated: 31 October 2025_
 <br>
@@ -20,7 +20,7 @@ The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowshi
 * 13 Jan 2026: Shortlisting outcomes communicated
 * 20-29 Jan 2026: Remote interviews
 * Feb 2026: Outcomes of interviews, project matching
-* Aug 2026: Fellowship cohort 4 begins
+* Aug 2026: Fellowship cohort 5 begins
 
 
 ### Applicant Webinar 
@@ -66,141 +66,126 @@ ability to rapidly learn new skills and solve technical problems
 _Last updated: 31 October 2025_
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
-<details>
+<details markdown="1">
 
 <summary>Eligibility</summary>
 
-<strong>Do I have to know how coding, programming, or AI to be eligible? </strong>
+**Do I have to know how coding, programming, or AI to be eligible?**
 
-<p>No. Prior experience of coding, programming, or AI is not an essential criterion of the Person Specification. Previous fellows have been recruited without such experience. 
-</p>
+No. Prior experience of coding, programming, or AI is not an essential criterion of the Person Specification. Previous fellows have been recruited without such experience. 
 
 </details>
 
-<details>
+<details markdown="1">
 
 <summary>Recruitment and interview</summary>
 
-<strong>How competitive is recruitment? </strong>
+**How competitive is recruitment?**
 
-<p>Recruitment for sponsored applicants is not competitive. If an applicant meets the Essential criteria of the Person Specification at interview, they can join the programme.
-</p>
+Recruitment for sponsored applicants is not competitive. If an applicant meets the Essential criteria of the Person Specification at interview, they can join the programme.
 
 
-<strong>What is the format of the interview?  </strong>
+**What is the format of the interview?**
 
-<p>Interviews are conducted remotely.
-The interview is a structured series of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship per the role description document. 
+Interviews are conducted remotely.
+The interview consists of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship based on the Person Specification. 
 The interview panel consists of fellowship faculty, AI supervisors, and regional education leads. 
-</p>
 
-<strong>How should I prepare for the interview?</strong>
+**How should I prepare for the interview?**
 
-<p>
 Interviewees are assessed according to the Essential and Desirable criteria of the role description document.
 Consider how to show evidence of meeting these criteria with real-world examples, particularly through participation in digital transformation projects in healthcare.
-</p>
 
-<strong>When will the interviews happen?  </strong>
+**When will the interviews happen?**
 
-<p>The interviews are planned for 20-29 January 2026. 
+The interviews are planned for 20-29 January 2026. 
 Applicants proceeding to interview will be sent a link to book their interview slot. 
-</p>
 
 
 </details>
 
 
-<details>
+<details markdown="1">
 
 <summary>Projects and matching</summary>
 
-<strong>Do I need to have an idea for a clinical AI project when I apply to this fellowship? </strong>
+**Do I need to have an idea for a clinical AI project when I apply to this fellowship?**
 
-<p>No. Projects and hosting teams in the NHS are proposed to the faculty by AI supervisors. 
+No. Projects and hosting teams in the NHS are proposed to the faculty by AI supervisors. 
 Successful applicants are matched to these projects competitively following the interview stage. 
-</p>
-<strong>How does project matching happen? </strong>
 
-<p>Applicants will rank the projects they are eligible to be matched to. 
+**How does project matching happen?**
+
+Applicants will rank the projects they are eligible to be matched to. 
 The highest scoring applicant from the interview stage in each regional pool will be matched to their highest ranked project. 
 International applicants are entered in the 'London' regional pool unless otherwise specified.
 The next highest scoring applicant is matched to their highest ranked project remaining, etc. until all posts are filled. 
-</p>
 
-<strong>What should I do if I only want to do a specific project in the fellowship? </strong>
+**What should I do if I only want to do a specific project in the fellowship?**
 
-<p>To be matched to a specific project, an applicant should go through the normal application process. 
+To be matched to a specific project, an applicant should go through the normal application process. 
 There will be an opportunity to rank projects by preference. 
 The applicant should rank only projects they would want to do on the fellowship year. 
 If the applicant scores highly enough in the interview stage, they will be matched to such a project. 
 Otherwise, if there are no projects remaining that the applicant has ranked when it comes to the matching step, they will not have a post on the fellowship. 
-</p>
-<strong>What if there are no projects that directly align with my clinical specialty or background?</strong>
 
-<p>Many fellows work on projects outside their usual specialty area on this fellowship. 
+**What if there are no projects that directly align with my clinical specialty or background?**
+
+Many fellows work on projects outside their usual specialty area on this fellowship. 
 Clinical AI is still a growing field and clinical specialties are not equally represented in the available projects. 
 The experience from any project will involve significant amounts of transferable knowledge and skills which will equip you to adopt clinical AI in your own career. 
-</p>
+
 </details>
 
 
-<details>
+<details markdown="1">
 
-<summary>Working pattern</summary>
+<summary>Working pattern, leave, and deferred entry</summary>
 
-<strong>Can I do the fellowship at a lower time commitment than 0.4FTE (2 days a week)?</strong>
-<p>No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
+**Can I do the fellowship at a lower time commitment than 0.4FTE (2 days a week)?**
+No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
 The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
 International applicants are able to do this placement at a higher time commitment than 0.4FTE, your preference is asked for during your application.
-</p>
-<strong>Can I compress the fellowship into a shorter and more intensive placement?</strong>
 
-<p>No. For the same reasons as above.</p>
+**Can I compress the fellowship into a shorter and more intensive placement?**
 
+No. For the same reasons as above.
 
-<summary>Leave and deferred entry</summary>
-
-<strong>What if I go on sick leave, parental leave, or any other extended leave during the fellowship year? </strong>
-<p>This fellowship is a time-bound opportunity that runs for 12 months between the dates specified. 
+**What if I go on sick leave, parental leave, or any other extended leave during the fellowship year?**
+This fellowship is a time-bound opportunity that runs for 12 months between the dates specified. 
 The educational activities and project placements hosted by AI supervisors are structured to deliver the learning objectives of the fellowship curriculum within this period. Project supervisors propose projects related to cohort dates and are not required to provide supervision beyond these dates.
 In general, interrupted time on the fellowship year cannot be added on beyond the end of the fellowship year. 
-Individual situations will be considered on a case-by-case basis at the discretion of the faculty. </p>
+Individual situations will be considered on a case-by-case basis at the discretion of the faculty. 
 
-<strong>Can I defer entry to the fellowship to a future cohort if I apply in this cohort? </strong>
-<p>No. The offer for a fellowship post must be accepted for that cohort’s recruitment cycle. An applicant would newly apply for the following year.
-</p>
+**Can I defer entry to the fellowship to a future cohort if I apply in this cohort?**
+No. The offer for a fellowship post must be accepted for that cohort’s recruitment cycle. An applicant would newly apply for the following year.
 
 
 </details>
 
-<details>
+<details markdown="1">
 
 <summary>Certification</summary>
 
-<strong>What certification do fellows receive at the end of the fellowship year? </strong>
+**What certification do fellows receive at the end of the fellowship year?**
 
-<p>Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for DCB 0129 and DCB 0160.
-</p>
+Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for DCB 0129 and DCB 0160.
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Sponsorship</summary>
 
-<strong>Can the faculty help me to identify a suitable sponsor?</strong>
+**Can the faculty help me to identify a suitable sponsor?**
 
-<p>No. Due to the high volume of applicants, the faculty is unable to help with such requests.
-</p>
+No. Due to the high volume of applicants, the faculty is unable to help with such requests.
 
-<strong>Can you accommodate a bespoke arrangement through sponsorship?</strong>
+**Can you accommodate a bespoke arrangement through sponsorship?**
 
-<p>Potentially yes. Please contact the faculty directly (gstt.aifellowship@nhs.net) if you require a bespoke arrangement through sponsorship. 
+Potentially yes. Please [contact the faculty](mailto:gstt.aifellowship@nhs.net) if you require a bespoke arrangement through sponsorship. 
 Note that last minute requests for bespoke arrangements are difficult to accommodate due to logistics.
-</p>
 
-<strong>I represent the sponsor for a prospective applicant, how do I proceed?</strong>
+**I represent the sponsor for a prospective applicant, how do I proceed?**
 
-<p>For information, please sisit the 'For Sponsors' page on this website. Contact the faculty (gstt.aifellowship@nhs.net) to discuss potential arrangements as early as possible.
-</p>
+Please read [the international sponsor document](/international-sponsor). [Contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss potential arrangements as early as possible.
 </details>
