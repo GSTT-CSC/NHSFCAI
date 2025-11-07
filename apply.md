@@ -117,8 +117,9 @@ Interview dates are indicative and may change during the application cycle.</p>
 <details markdown="1">
 <summary>Directly allocated posts</summary>
 
-* This entry route is open to any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC
-* The applicant must identify a [Sponsor for their post](/nhs-sponsor)
+* <u>Entry requirements<u>
+* * This entry route is open to any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC
+* The applicant must confirm a [Sponsor for their post](/nhs-sponsor)
 * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards) 
 * * Applicants may self-fund their post directly
 * Entry is non-competitive, but the applicant must meet Essential criteria of the Person Specification at interview
@@ -126,6 +127,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 * Successful applicants are attached to AI projects in one of the following ways:
 * * A competitively matched AI project from a [host site](/sites) that the fellow can feasibly commute to (despite entry being non-competitive, this project matching is competitive with other applicants from regional pools, and is based on interview score), or
 * * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work that is already part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case. 
+* * Self-funding applicants will be issued a secure payment link to confirm their post after a successful interview. Project matching is contingent on receipt of funds.
 
 
 </details>
