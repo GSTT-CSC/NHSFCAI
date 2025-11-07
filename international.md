@@ -12,26 +12,55 @@ The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowshi
 <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
 
 
-### Key Dates and application process
+### Key Dates and How to Apply
 * 31 Oct 2025: Applications open
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an International Applicant](https://forms.office.com/e/mx5mikXjH2)
-* 24 Nov 2025: Webinar and Q&A
+* 24 Nov 2025: [Applicant webinar with Q&A](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3)
 * 11 Jan 2026: *International Application Form* deadline
 * 13 Jan 2026: Shortlisting outcomes communicated
 * 20-29 Jan 2026: Remote interviews
 * Feb 2026: Outcomes of interviews, project matching
 * Aug 2026: Fellowship cohort 4 begins
 
-### Resources for applicants:
-* [Fellowship curriculum](/curriculum)
-* [Cohort 4 role description](/assets/docs/FCAI_C4_Role_Description_v2.1.pdf)
-* [About the fellowship](/about)
 
 ### Applicant Webinar 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I3BwaGeKHpg" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
 
-The webinar covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited follow-up questions from applicants.
-A new webinar for Cohort 5 applications will be advertised here during the recruitment cycle.
+[Sign up to the applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) 24 Nov 2025, 12:00-13:00 GMT
+<br>This applicant webinar will cover the features and curriculum of the fellowship, address frequently asked questions, and invite Q&A from applicants.
+
+
+### Clinical AI Project List
+
+AI project proposals will be released to applicants during the recruitment cycle.
+Project proposal lists are illustrative and not final. Projects may be added, removed, or modified without
+notice. A final list will be provided to applicants upon reaching the stage of ranking their project
+preferences.
+
+### Person Specification
+<details markdown="1">
+<summary>Essential criteria</summary>
+
+* Communicates effectively with key stakeholders in clinical AI including: hospital
+management, patients, clinicians, regulatory bodies, and software developers
+* Works energetically as a vital member of an agile multidisciplinary team including data
+scientists, medical physicists, IT, health economists, and clinicians
+* Has advanced ICT proficiency (e.g. using advanced functions in Office applications), and the
+ability to rapidly learn new skills and solve technical problems
+</details>
+
+<details markdown="1">
+<summary>Desirable criteria</summary>
+
+* Experience in quality improvement projects, clinical trials
+* Experience in digital transformation, clinical informatics (DICOM, HL7, etc)
+* Experience in programming, mathematics, statistical analysis
+</details>
+
+
+### Resources for applicants:
+* [Fellowship curriculum](/curriculum)
+* [Links to other educational resources](/resources)
+
 
 ### Frequently Asked Questions
 _Last updated: 31 October 2025_
@@ -54,7 +83,7 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 
 <strong>How competitive is recruitment? </strong>
 
-<p>Recruitment for sponsored applicants is not competitive. If an applicant is found to be 'appointable' (meeting the Essential criteria of the role description), they can join the programme.
+<p>Recruitment for sponsored applicants is not competitive. If an applicant meets the Essential criteria of the Person Specification at interview, they can join the programme.
 </p>
 
 
