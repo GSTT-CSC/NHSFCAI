@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 07 Nov 2025_
+_Last updated: 10 Nov 2025_
 <br>
 **Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -69,11 +69,11 @@ There are 3 entry routes to this fellowship for NHS clinicians.
 All 3 routes use the same application form. 
 Applicants are entered into appropriate national and regional applicant pools automatically based on application details.
 
-| Entry Route              | Description                                                                             | Competition                                                                                      | Eligibility                                                                                                                                                                                                 |
-|--------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Entry Route              | Description                                                                             | Competition                                                                                      | Eligibility                                                                                                                                                                                                |
+|--------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nationally-funded posts  | Applicants can be from anywhere in the NHS                                              | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
-| Regionally-funded posts  | Applicants must be from a specific region of the NHS                                    | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                               |
-| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post | Non-competitive entry: must meet the Essential crtieria of the Person Specification at interview | Any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                                  |
+| Regionally-funded posts  | Applicants must be from a specific region of the NHS                                    | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                              |
+| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post | Non-competitive entry: must meet the Essential crtieria of the Person Specification at interview | Any clinician providing NHS services                                                                                  |
 
 
 
@@ -121,7 +121,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 
 **Entry requirements**
 
-* This entry route is open to any clinician providing NHS services from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC
+* This entry route is open to any clinician providing NHS services (typically from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC- please [email the faculty](mailto:gstt.aifellowship@nhs.net) regarding other workforce groups)
 * The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The course fee is the same for either route at £7500.
 * * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 15 Dec 2025. Interview is contingent on receipt of sponsor funding confirmation.
 * * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards)
