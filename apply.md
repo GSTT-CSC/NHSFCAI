@@ -308,7 +308,35 @@ The experience from any project will involve significant amounts of transferable
 
 
 <details markdown="1">
-<summary>Working pattern, pay, expenses</summary>
+<summary>Pay and expenses</summary>
+
+**Is the fellowship free?**
+
+Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4FTE salary is reimbursed to the fellow's Employer.
+Self-funding for directly allocated posts have costs described [here](/nhs-sponsor).
+
+**Does the fellowship pay my salary directly?**
+
+No. The fellowship is not your Employer. 
+<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
+<br>In directly allocated posts, your salary arrangements are at the discretion of your Sponsor.
+
+**Is there travel/subsistence expenses to support attendance at in-person workshops?**
+
+Yes. This is paid up front and then reclaimed from your Employer or Sponsor.
+
+
+**What happens if I move to a new employer (e.g. rotating through training) during the fellowship?**
+
+Where salary is reimbursed, this is transferred to your new employer where relevant.
+
+</details>
+<details markdown="1">
+<summary>Working pattern</summary>
+**What's the specific time commitment?**
+
+0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week. This fellowship is intended to integrate alongside clinical work or
+training. Partial remote working and flexible hours may be possible depending on project following conversations with supervisors.
 
 **Can I do the fellowship at a lower time commitment than 0.4FTE?**
 
@@ -330,25 +358,6 @@ No. Fellows typically agree with their Training Programme Director to enter Less
 The time spent on the fellowship is then added on to extend the expected duration of training.
 The educational content of the fellowship is not expected to align sufficiently with current medical/dental curricula to count towards competencies.
 
-**Is the fellowship free?**
-
-Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff.
-Self-funding for directly allocated posts have costs described [here](/nhs-sponsor).
-
-**Does the fellowship pay my salary directly?**
-
-
-No. The fellowship is not your Employer. 
-<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
-<br>In directly allocated posts, your salary arrangements are at the discretion of your Sponsor.
-
-**Is there travel/subsistence expenses to support attendance at in-person workshops?**
-
-Yes. This is paid up front and then reclaimed from your Employer or Sponsor.
-
-**What happens if I move to a new employer (e.g. rotating through training) during the fellowship?**
-
-Where salary is reimbursed, this is transferred to your new employer where relevant.
 
 </details>
 <details markdown="1">
