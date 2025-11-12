@@ -223,8 +223,8 @@ No. Current fellows and alumni are not eligible.
 <details markdown="1">
 <summary>Recruitment and interview</summary>
 
-**How competitive is recruitment?**
 
+**How competitive is recruitment?**
 
 In Cohort 4, there were 235 eligible applicants for 32 competitively allocated posts. The global competition ratio for posts was therefore roughly 7.3:1.
 Regional competition ratios differed from this figure.
@@ -249,6 +249,10 @@ The interview panel consists of fellowship faculty, AI supervisors, and regional
 
 Interviewees are assessed according to the Essential and Desirable criteria of Person Specification.
 Consider how to show evidence of meeting these criteria with real-world examples, particularly through participation in digital transformation projects in healthcare.
+
+**Can the faculty review my CV or provide any specific further advice on my application?**
+
+No. Due to the high volume of applicants, the faculty cannot help with such requests.
 
 </details>
 <details markdown="1">
@@ -303,6 +307,7 @@ Otherwise, if there are no projects remaining that the applicant has ranked when
 Many fellows work on projects outside their usual specialty area on this fellowship. 
 Clinical AI is still a growing field and clinical specialties are not equally represented in the available projects due to different levels of digital maturity.
 The experience from any project will involve significant amounts of transferable knowledge and skills which will equip you to adopt clinical AI in your own career. 
+
 
 </details>
 
