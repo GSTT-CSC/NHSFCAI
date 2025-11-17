@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 10 Nov 2025_
+_Last updated: 17 Nov 2025_
 <br>
 **Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -482,7 +482,7 @@ Yes, this is the route for directly allocated posts. Your Sponsor should read th
 **Can I sponsor myself?**
 
 
-Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
+Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.
 
 
 **Can the faculty help me to identify a suitable sponsor?**
