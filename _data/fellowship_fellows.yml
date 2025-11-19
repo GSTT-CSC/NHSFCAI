@@ -371,7 +371,7 @@ en: &DEFAULT_EN
 
 
         - name: "Karol Basta"
-          role: "Specialty Trainee Doctor in Public Health"
+          role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "3"
           region: "London"
           profession: "Public Health"
@@ -386,14 +386,14 @@ en: &DEFAULT_EN
 
 
         - name: "Joshua Khan"
-          role: "Specialty Trainee Doctor in Public Health"
+          role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "3"
           region: "South West"
           profession: "Public Health"
 
 
         - name: "Rachel Thomson"
-          role: "Specialty Trainee Doctor in Public Health"
+          role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "3"
           region: "Scotland"
           profession: "Public Health"
