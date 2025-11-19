@@ -194,7 +194,7 @@ For later career stages, the programme impact is less likely to be additive due 
 
 
 
-**Is a doctor/dentist eligible if they are: a core trainee (e.g. including Internal Medicine Training), post-CCT, will CCT during the fellowship (Aug 2026 - Aug 2027), not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2026 - Aug 2027), post-CCT,  not in training, or not allocated a confirmed NTN at the time of application?**
 
 These applicants are eligible only for directly allocated posts. For nationally and regionally-funded posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
 
