@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 17 Nov 2025_
+_Last updated: 20 Nov 2025_
 <br>
 **Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -35,7 +35,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 ### Applicant Webinar 
 
 [Sign up to the applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) 24 Nov 2025, 12:00-13:00 GMT
-<br>This applicant webinar will cover the features and curriculum of the fellowship, address frequently asked questions, and invite Q&A from applicants.
+<br>This applicant webinar will cover the features and curriculum of the fellowship, address frequently asked questions, and invite Q&A from applicants. It will be uploaded here after the event.
 
 
 ### Eligibility
@@ -214,7 +214,6 @@ Applicants who believe they are borderline eligible should [contact the faculty]
 
 **Can I do this fellowship more than once?**
 
-
 No. Current fellows and alumni are not eligible. 
 
 </details>
@@ -238,6 +237,10 @@ In the shortlisting stage, eligible applicants are scored according to responses
 The highest scoring applicants from the shortlisting stage are then invited to a remote interview. 
 The scores from interview are used to competitively match successful applicants to their choice of project. 
 
+**If I am unsuccessful in recruitment for a nationally or regionally-funded post, can I change my mind and go for a directly allocated post?**
+
+No. An applicant must apply for a directly allocated post from the start, because AI project placements and matching depend on confirmed numbers of incoming fellows.
+
 **What is the format of the interview?**
 
 Interviews are conducted remotely.
@@ -253,6 +256,7 @@ Consider how to show evidence of meeting these criteria with real-world examples
 **Can the faculty review my CV or provide any specific further advice on my application?**
 
 No. Due to the high volume of applicants, the faculty cannot help with such requests.
+
 
 </details>
 <details markdown="1">
