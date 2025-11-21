@@ -4,21 +4,25 @@
 - name: NICE
   url: https://www.nice.org.uk
   logo: /images/logo/NICE_logo.png
-- name: KCL
-  url: https://www.kcl.ac.uk
-  logo: /images/logo/KCL_logo.png
-- name: ICL
-  url: https://www.imperial.ac.uk
-  logo: /images/logo/Imperial_logo.png
+
 - name: CERSI-AI
   url: https://www.cersi-ai.org
   logo: /images/logo/CERSI_logo.png
+- name: KHP
+  url: https://www.kingshealthpartners.org
+  logo: /images/logo/KHP.png
+
+
 - name: OxCAIR
   url: https://www.linkedin.com/company/oxford-clinical-artificial-intelligence-research-oxcair/posts/?feedView=all
   logo: /images/logo/OXCAIR_logo.jpeg
 - name: DHVL
   url: https://www.gla.ac.uk/colleges/mvls/livinglab/our-projects/digital-health-validation-lab/
   logo: /images/logo/DHVL_logo.png
+
+- name: Health Impact Lab
+  url: https://healthimpactlab.co.uk
+  logo: /images/logo/Health_Impact_Lab.png
 - name: BMJ
   url: https://bmjgroup.com
   logo: /images/logo/BMJ_logo.png
