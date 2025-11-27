@@ -22,7 +22,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * 10 Nov 2025: Recruitment opens
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an NHS applicant](https://forms.office.com/e/Z2ph0MAF4L) <b>and</b>
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Obtain *Approval in Principle*](https://forms.office.com/e/V61XZwYe2h) from a responsible person with decision-making power over training/employment pattern from August 2026 - August 2027. Applicants <b>will not be interviewed</b> without this.
-* 24 Nov 2025: [Applicant webinar with Q&A](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3)
+* 24 Nov 2025: [Applicant webinar with Q&A](https://www.youtube.com/embed/SsONx1jAGxE)
 * 15 Dec 2025 23:45 GMT: 
 <br>Application **and** Approval In Principle deadline (all applications)
 <br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
@@ -34,8 +34,10 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 ### Applicant Webinar 
 
-[Sign up to the applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) 24 Nov 2025, 12:00-13:00 GMT
-<br>This applicant webinar will cover the features and curriculum of the fellowship, address frequently asked questions, and invite Q&A from applicants. It will be uploaded here after the event.
+This applicant webinar covered the features and curriculum of the fellowship, address frequently asked questions, and invited question from applicants.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SsONx1jAGxE" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+
 
 
 ### Eligibility
