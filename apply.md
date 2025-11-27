@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 20 Nov 2025_
+_Last updated: 27 Nov 2025_
 <br>
 **Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -135,7 +135,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 **Project matching**
 
 * Successful applicants are matched to AI projects in one of the following ways:
-  * A competitively matched AI project from an existing host site (see Clinical AI Project List section below) that the fellow can feasibly commute to. This project matching is competitive (even though programme entry itself is non-competitive) with other applicants from regional pools, and is based on interview score.
+  * A competitively matched AI project from an existing host site (see Clinical AI Project List section below) in the applicant's NHS region. This project matching is competitive (even though programme entry itself is non-competitive) with other applicants from regional pools, and is based on interview score.
   * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work underway as part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
 
 </details>
