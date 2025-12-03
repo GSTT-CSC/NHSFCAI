@@ -488,7 +488,7 @@ Yes, this is the route for directly allocated posts. Your Sponsor should read th
 **Can I sponsor myself?**
 
 
-Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.
+Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
 
 
 **Can the faculty help me to identify a suitable sponsor?**
