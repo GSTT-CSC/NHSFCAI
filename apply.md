@@ -382,6 +382,12 @@ The educational activities and project placements hosted by AI supervisors are s
 In general, interrupted time on the fellowship year cannot be added on beyond the end of the fellowship year. 
 Individual situations will be considered on a case-by-case basis at the discretion of the faculty. 
 
+**Can I begin the fellowship later in the year than the listed start date?**
+
+No. This fellowship is a time-bound opportunity that runs for 12 months between the dates specified. 
+The educational activities and project placements hosted by AI supervisors are structured to deliver the learning objectives of the fellowship curriculum within this period.
+If you have exceptional circumstances relating to this issue, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
+
 **Can I defer entry to the fellowship to a future cohort if I apply in this cohort?**
 
 No. The offer for a fellowship post must be accepted for that cohort’s recruitment cycle. An applicant would newly apply for the following year.
@@ -424,7 +430,7 @@ The next highest scoring applicant is matched to their highest ranked T-Pro-badg
 
 </details>
 <details markdown="1">
-<summary>British Society for Haematology Fellows in Clinical AI</summary>
+<summary>BSH Fellows in Clinical AI</summary>
 
 **What is a BSH Fellow in Clinical AI?**
 
