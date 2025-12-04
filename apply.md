@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 27 Nov 2025_
+_Last updated: 04 Dec 2025_
 <br>
 **Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -84,8 +84,8 @@ Applicants are entered into appropriate national and regional applicant pools au
 
 | Sponsor                                        | Eligibility                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Additional requirements                                                                                                                                     | # National Posts | Interview date |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------|
-| [T-Pro](https://info.tpro.io)                           | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Hold a substantive post at band 7, band 8a, or band 8b with an NHS Employer <i>and</i> valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC <br><br> Priority for applicants without options for regionally-funded posts | Able to travel for 4 funded site vists to T-Pro base in Dublin (Ireland) during fellowship year, and other site visits within UK                            | 2                | 26-27 Jan 2026 |
-| [British Society for Haematology](https://b-s-h.org.uk) | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Hold a substantive post at band 7, band 8a, or band 8b with an NHS Employer <i>and</i> valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                                                         | [Membership of the BSH](https://b-s-h.org.uk/membership/membership-faqs)<br><br>Must have feasible commute to the BSH-badged AI project they are matched to | 2                | TBC            |
+| [T-Pro](https://info.tpro.io)                           | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Hold a substantive post at band 7, band 8a, or band 8b with an NHS Employer <i>and</i> valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC <br><br> Priority for applicants without options for regionally-funded posts | Able to travel for 4 funded site vists to T-Pro base in Dublin (Ireland) during fellowship year, and other site visits within UK                            | 2                | 21 Jan 2026    |
+| [British Society for Haematology](https://b-s-h.org.uk) | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><br>Hold a substantive post at band 7, band 8a, or band 8b with an NHS Employer <i>and</i> valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                                                         | [Membership of the BSH](https://b-s-h.org.uk/membership/membership-faqs)<br><br>Must have feasible commute to the BSH-badged AI project they are matched to | 2                | 20 Jan 2026    |
 
 AI project matching for nationally-funded posts differs from regionally-funded posts. See FAQ sections below.<br>
 The number of posts listed is illustrative and not final.<br>
@@ -99,7 +99,7 @@ Interview dates are indicative and may change during the application cycle.
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|------------------|----------------|
 | [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/)                                             | ✅<sup>*</sup>                                        |                                                       |                                                       | 2                | 21 Jan 2026    |
 | [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/)                                                               | ✅                                                    | ✅                                                     | ✅                                                   | 4                | 26 Jan 2026    |
-| [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/)                                                           | TBC                                                  | TBC                                                   |                                                       | TBC              | TBC            |
+| [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/)                                                           | ✅                                                  |                                                    |                                                       | 2                | 22 Jan 2026    |
 | [North East & Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): North East & North Cumbria |                                                      |                                                       |                                                       | 0                | N/A            |
 | [North East & Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire & Humber         | ✅                                                    |                                                       |                                                       | 2                | 20 Jan 2026    |
 | [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/)                                                       | ✅                                                    | ✅                                                     |                                                       | 4                | 23 Jan 2026    |
@@ -112,7 +112,7 @@ Interview dates are indicative and may change during the application cycle.
 
 <br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
 <br><sup>‡</sup> Must hold a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
-<br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship
+<br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only)
 
 <p>The number of posts listed is illustrative and not final.<br>
 Interview dates are indicative and may change during the application cycle.</p>
@@ -132,7 +132,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 **Interview**
 
 * The applicant must meet Essential criteria of the Person Specification (see section below) at interview
-* Indicative interview dates are: 20, 21, 28 Jan 2026 (TBC according to applicant volume)
+* Indicative interview dates are: 28 Jan 2026 (TBC according to applicant volume)
 
 **Project matching**
 
