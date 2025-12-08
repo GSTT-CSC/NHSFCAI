@@ -128,6 +128,12 @@ en: &DEFAULT_EN
           region: "North West"
           profession: "Surgery"
 
+        - name: "Enas bin Araik"
+          role: "Consultant in Geriatric Medicine"
+          cohort: "4"
+          region: "International"
+          profession: "Medicine"
+
         - name: "Nomathamsanqa Tshuma"
           role: "Specialty Trainee Doctor in Haematology"
           cohort: "4"
