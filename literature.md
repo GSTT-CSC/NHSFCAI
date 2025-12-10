@@ -9,7 +9,7 @@ Find below the supporting literature which describes the benefits and outputs of
 
 * A systematic summary of the benefits realised by this fellowship for the NHS was [published in August 2025](/assets/docs/FCAI_Benefits_Realisation_August2025v1.pdf) by the faculty
 * [Health Education and Improvement Wales](https://heiw.nhs.wales) published [*Artificial Intelligence Education and Skills within NHS Wales Landscape review* (2025)](/assets/docs/HEIW_AI_Landscape_Review.pdf#page=18), in which they endorsed the fellowship as a programme to meet the education and skills ambitions of the [Welsh AI Commission for Health and Social Care](https://www.gov.wales/ai-commission-health-and-social-care)
-* Insights from the scaling-up of this programme from a local to national scope was [published](/assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf) by our Programme Manger [Beatrix Fletcher](/faculty/beatrix-fletcher) 
+* Insights from the scaling-up of this programme from a local to national scope was [published](/assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf) by our Programme Manager [Beatrix Fletcher](https://www.linkedin.com/in/beatrix-fletcher-4a4653143/) 
 * The fellowship was showcased as an opportunity to acquire 'skills to implement and adopt AI safely and effectively' in [NHS OneLondon's *Framework for the safe, efficient and effective
 implementation, use and maintenance of AI in health and care in London* (2025)](/assets/docs/ONELondonFramework2025.pdf#page=41)
 * The fellowship and its fellows were [profiled in the *The Doctor* magazine (2024)](/assets/docs/BMA_TheDoctor_Nov2024.pdf#page=16) of the British Medical Association
