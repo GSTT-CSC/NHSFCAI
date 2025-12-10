@@ -271,7 +271,7 @@ Yes. The deadline is the same as listed in the Key Dates above.
 
 **What happens if I cannot get the appropriate person to submit my *Approval In Principle Form*?**
 
-You will not be shortlisted for interview. This is because we can only make offers to applicants who have evidence of being able to take up the post. 
+You will not be interviewed, and therefore cannot join the programme. This is because we can only make offers to applicants who have evidence of being able to take up the post. 
 The submission portal closes automatically and late submissions are not accepted. It is the applicant's responsibility to ensure this has happened.
 
 </details>
