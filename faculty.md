@@ -3,9 +3,9 @@ layout: page
 title: Faculty
 permalink: /faculty/
 ---
-We created this fellowship to address the shortage of expert healthcare leaders to adopt clinical AI tools.
-Each faculty member's clinical background guides the continued development of this programme.
-Contact the faculty [here](mailto:gstt.aifellowship@nhs.net)
+We created this fellowship to address the workforce gap of expert healthcare leaders to adopt clinical AI tools.
+The faculty is based in the [Clinical Scientific Computing department](https://gstt-csc.github.io) of Guy's and St Thomas's NHS Foundation Trust.
+Contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
 
 <h5>Click on each faculty member to find out more</h5>
 <div class="container">
