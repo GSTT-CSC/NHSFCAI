@@ -3,9 +3,9 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 04 Dec 2025_
+_Last updated: 17 Dec 2025_
 <br>
-**Applications for Cohort 5 are open from 10 Nov 2025 - 15 Dec 2025**.
+**Applications for Cohort 5 closed on 15 Dec 2025. <br>This page serves as a reference for current and future applicants.**
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
 We invite applications for Cohort 5 of the NHS Fellowship in Clinical AI. We seek
@@ -28,7 +28,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 <br>Application **and** Approval In Principle deadline (all applications)
 <br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
 * 13 Jan 2026: Shortlisting outcomes and remote interviews offered
-* 20-27 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
+* 20-29 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
 * Feb 2026: Outcomes of interviews and matching of fellows to AI projects
 * Aug 2026: Fellowship Cohort 5 begins
 
@@ -99,7 +99,7 @@ Interview dates are indicative and may change during the application cycle.
 | NHS Region                                                                                                                                                             | Eligibility:<br>Specialty Trainee Doctor<sup>†</sup> | Eligibility:<br>Specialty Trainee Dentist<sup>†</sup> | Eligibility:<br>Other Registered Clinician<sup>‡</sup> | # Regional Posts | Interview date |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|------------------|----------------|
 | [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/)                                             | ✅<sup>*</sup>                                        |                                                       |                                                       | 2                | 21 Jan 2026    |
-| [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/)                                                               | ✅                                                    | ✅                                                     | ✅                                                   | 4                | 26 Jan 2026    |
+| [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/)                                                               | ✅                                                    | ✅                                                     | ✅                                                   | 5                | 26 Jan 2026    |
 | [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/)                                                           | ✅                                                  |                                                    |                                                       | 2                | 22 Jan 2026    |
 | [North East & Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): North East & North Cumbria |                                                      |                                                       |                                                       | 0                | N/A            |
 | [North East & Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire & Humber         | ✅                                                    |                                                       |                                                       | 2                | 20 Jan 2026    |
@@ -133,7 +133,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 **Interview**
 
 * The applicant must meet Essential criteria of the Person Specification (see section below) at interview
-* Indicative interview dates are: 28 Jan 2026 (TBC according to applicant volume)
+* Indicative interview dates are: 28-29 Jan 2026 (TBC according to applicant volume)
 
 **Project matching**
 
