@@ -36,6 +36,21 @@ bodyClass: "page-basic"
 
     <div class="col-12 col-lg-8">
       {{ content }}
+
+      {% comment %}
+        Fellowship Publications: show any publications where the `fellow` field contains this fellow's name.
+      {% endcomment %}
+      {% assign fellow_pubs = site.data.fellowship_publications | where_exp: "pub", "pub.fellow contains page.team-member-name" %}
+
+      {% if fellow_pubs and fellow_pubs.size > 0 %}
+      <hr>
+      <h3>Fellowship Publications</h3>
+      <ul>
+        {% for pub in fellow_pubs %}
+          <li><a href="{{ pub.link }}">{{ pub.title | strip_html }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
   </div>
 </div>
