@@ -47,7 +47,7 @@ bodyClass: "page-basic"
       <h3>Fellowship Publications</h3>
       <ul>
         {% for pub in fellow_pubs %}
-          <li><a href="{{ pub.link }}">{{ pub.title | strip_html }}</a></li>
+          <li><a href="{{ pub.link }}">{{ pub.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' }}</a></li>
         {% endfor %}
       </ul>
       {% endif %}
