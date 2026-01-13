@@ -3,7 +3,7 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 17 Dec 2025_
+_Last updated: 13 Jan 2026_
 <br>
 **Applications for Cohort 5 closed on 15 Dec 2025. <br>This page serves as a reference for current and future applicants.**
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -27,7 +27,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * 15 Dec 2025 23:45 GMT: 
 <br>Application **and** Approval In Principle deadline (all applications)
 <br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
-* 13 Jan 2026: Shortlisting outcomes and remote interviews offered
+* <b>13-14</b> Jan 2026: Shortlisting outcomes and remote interviews offered
 * 20-29 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
 * Feb 2026: Outcomes of interviews and matching of fellows to AI projects
 * Aug 2026: Fellowship Cohort 5 begins
