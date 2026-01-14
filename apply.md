@@ -3,8 +3,11 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 13 Jan 2026_
+_Last updated: 13 Jan 2026_ 
 <br>
+ <b>SHORTLISTING DECISIONS WILL BE COMMUNICATED BY CLOSE PLAY ON 14 JAN 2026</b>
+
+
 **Applications for Cohort 5 closed on 15 Dec 2025. <br>This page serves as a reference for current and future applicants.**
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
