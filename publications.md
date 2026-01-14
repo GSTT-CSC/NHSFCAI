@@ -44,6 +44,7 @@ Explore the fellowship-related publications of our fellows below, newest first
   {% for resource in site.data.fellowship_publications %}
   <tr>
     <td>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
       {% assign fragments = resource.fellow | split: '</a>' %}
       {% for fragment in fragments %}
         {% assign html = fragment | append: '</a>' %}
@@ -56,6 +57,7 @@ Explore the fellowship-related publications of our fellows below, newest first
           {{ html }}
         </div>
       {% endfor %}
+      </div>
     </td>
     <td>{% if resource.link %}<a href="{{ resource.link }}">{{ resource.title }}</a>{% else %} {{ resource.title }}{% endif %}</td>
   </tr>
