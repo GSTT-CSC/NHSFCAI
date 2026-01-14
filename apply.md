@@ -3,10 +3,8 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 13 Jan 2026_ 
+_Last updated: 14 Jan 2026_ 
 <br>
- <b>SHORTLISTING DECISIONS WILL BE COMMUNICATED BY CLOSE PLAY ON 14 JAN 2026</b>
-
 
 **Applications for Cohort 5 closed on 15 Dec 2025. <br>This page serves as a reference for current and future applicants.**
 <br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -185,6 +183,11 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 <details markdown="1">
 <summary>Eligibility</summary>
 
+**Do I have to know coding, programming, or AI to be eligible?**
+
+No. Prior experience of coding, programming, or AI is not part of the essential criteria of the Person Specification. Previous fellows have been recruited without such experience. 
+
+
 **For regionally-funded posts, why is my NHS region, workforce group, or region/workforce group combination not eligible?**
 
 Regional eligibility is set at the discretion of regional funding bodies (not the faculty), and this is not a uniform process across the NHS.
@@ -208,9 +211,6 @@ These applicants are eligible only for directly allocated posts. For nationally 
 
 No. The status of being in or out of programme does not affect eligibility, only the allocation of a valid National Training Number.
 
-**Do I have to know coding, programming, or AI to be eligible?**
-
-No. Prior experience of coding, programming, or AI is not an Essential criterion of the Person Specification. Previous fellows have been recruited without such experience. 
 
 
 **Can I apply if I almost meet the eligibility criteria?**
@@ -263,6 +263,9 @@ Consider how to show evidence of meeting these criteria with real-world examples
 
 No. Due to the high volume of applicants, the faculty cannot help with such requests.
 
+**Can I apply for the fellowship after the deadline?**
+
+No. Recruitment is coordinated nationally in an annual cycle according to the timelines above.
 
 </details>
 <details markdown="1">
