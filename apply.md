@@ -28,7 +28,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * 15 Dec 2025 23:45 GMT: 
 <br>Application **and** Approval In Principle deadline (all applications)
 <br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
-* <b>13-14</b> Jan 2026: Shortlisting outcomes and remote interviews offered
+* 13-14 Jan 2026: Shortlisting outcomes and remote interviews offered
 * 20-29 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
 * Feb 2026: Outcomes of interviews and matching of fellows to AI projects
 * Aug 2026: Fellowship Cohort 5 begins
@@ -279,6 +279,10 @@ Yes. The deadline is the same as listed in the Key Dates above.
 
 You will not be interviewed, and therefore cannot join the programme. This is because we can only make offers to applicants who have evidence of being able to take up the post. 
 The submission portal closes automatically and late submissions are not accepted. It is the applicant's responsibility to ensure this has happened.
+
+**Can a different person to the named Approver I listed in my application form submit my *Approval In Principle Form*?**
+
+No. Approval in principle must come from the named Approver listed in the applicant's application form. 
 
 </details>
 
