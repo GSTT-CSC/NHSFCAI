@@ -40,14 +40,29 @@ bodyClass: "page-basic"
       {% comment %}
         Fellowship Publications: show any publications where the `fellow` field contains this fellow's name.
       {% endcomment %}
-      {% assign fellow_pubs = site.data.fellowship_publications | where_exp: "pub", "pub.fellow contains page.team-member-name" %}
+      {% assign fellow_publications = site.data.fellowship_publications | where_exp: "item", "item.fellow contains page.team-member-name" %}
 
-      {% if fellow_pubs and fellow_pubs.size > 0 %}
+      {% if fellow_publications and fellow_publications.size > 0 %}
       <hr>
       <h3>Fellowship Publications</h3>
       <ul>
-        {% for pub in fellow_pubs %}
-          <li><a href="{{ pub.link }}">{{ pub.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' }}</a></li>
+        {% for item in fellow_publications %}
+          <li><a href="{{ item.link }}">{{ item.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% comment %}
+        Fellowship Media: show any media where the `fellow` field contains this fellow's name.
+      {% endcomment %}
+      {% assign fellow_media = site.data.media | where_exp: "item", "item.fellow contains page.team-member-name" %}
+
+      {% if fellow_media and fellow_media.size > 0 %}
+      <hr>
+      <h3>Fellowship Media</h3>
+      <ul>
+        {% for item in fellow_media %}
+          <li><a href="{{ item.link }}">{{ item.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' }}</a></li>
         {% endfor %}
       </ul>
       {% endif %}

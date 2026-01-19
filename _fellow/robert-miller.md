@@ -46,6 +46,3 @@ fellowship to develop a hand x-ray segmentation
 model and continue work on autonomous hand
 function analysis, which is aligned to my clinical sub-
 specialist area of interest.
-
-### Links
-[Topol Fellowship profile](https://topol.hee.nhs.uk/digital-fellowships/fellows/robert-miller/)

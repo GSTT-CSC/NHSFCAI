@@ -25,6 +25,8 @@ main:
         url: "/fellows/"
       - name: "Publications"
         url: "/publications/"
+      - name: "Media"
+        url: "/media/"
     weight: 3
   - name: "Sponsors"
     children:
