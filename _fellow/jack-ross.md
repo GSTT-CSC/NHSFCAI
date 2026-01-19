@@ -45,6 +45,3 @@ with experts from industry and regulators. I want to
 use AI to improve patient outcomes throughout
 my career, and to build on this fellowship with the
 network of clinical AI fellow alumni.
-
-### Links
-[Topol Fellowship profile](https://topol.hee.nhs.uk/digital-fellowships/fellows/jack-ross/)

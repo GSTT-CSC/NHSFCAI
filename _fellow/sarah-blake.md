@@ -38,8 +38,3 @@ AI software used in healthcare. This is
 likely to be useful as a consultant where I
 will have more responsibility and be better
 able to improve systems in a hospital trust.
-
-### Links
-[Interview: Intelligent Health](https://web.archive.org/web/20231129023252/https://blog.intelligenthealth.ai/an-interview-with-sarah-blake)<br>
-[Article: DigitalHealth.London](https://web.archive.org/web/20231206103856/https://digitalhealth.london/letting-ai-take-the-strain) <br>
-[Panel discussion video: DigitalHealth.London](https://www.youtube.com/watch?v=mZHGT_i0P4Y)

@@ -44,7 +44,3 @@ I gained valuable insight into the technical
 challenges in implementing AI in healthcare
 and managing expectations from different
 stakeholders.
-
-### Links
-[Interview: Healthcare Digital](https://healthcare-digital.com/technology-and-ai/ai-software-to-improve-hospital-patient-turnaround-times)<br>
-[Panel discussion video: Health Education England](https://www.youtube.com/watch?v=Rh_Q0tzl8wc)
