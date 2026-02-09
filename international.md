@@ -3,9 +3,10 @@ layout: page
 permalink: /international/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>International Applicants
 ---
-_Last updated: 31 October 2025_
+_Last updated: 09 Feb 2026_ 
 <br>
-**Applications for Cohort 5 are open**.
+
+**Applications for Cohort 5 closed on 11 Jan 2026. <br>This page serves as a reference for current and future applicants.**
 This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
 <br><br>
 The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are offered jointly in an exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship
