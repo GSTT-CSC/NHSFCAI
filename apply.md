@@ -7,7 +7,7 @@ _Last updated: 09 Feb 2026_
 <br>
 
 **Applications for Cohort 5 closed on 15 Dec 2025. <br>This page serves as a reference for current and future applicants. <BR>Cohort 6 applications are expected to open in Oct/Nov 2026.**
-<br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
+<br><br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
 We invite applications for Cohort 5 of the NHS Fellowship in Clinical AI. We seek
 energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship at 2 days per week for 12 months, alongside their work or training. 
