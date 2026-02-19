@@ -13,11 +13,7 @@ academic and policy experience by taking innovative approaches to transform heal
 As a
 Fellow in Clinical AI, he has been involved in developing clinical decision support systems to effectively triage breast cancer cases using various machine learning approaches. 
 
-
-### Fellowship Project
-#### _[Developing an AI based clinical decision support system for streamlining breast cancer multidisciplinary meetings through evidence integration](/assets/docs/posters/FCAI C1 Grad Poster MustafaKhanbhai.pdf)_
-#### Guy's and St Thomas' NHS Foundation Trust
-
+<!-- FELLOWSHIP_PROJECT -->
 The project’s goals were to develop a process map
 for breast cancer care pathway at GSTT; integrate
 breast cancer MDT data into Deontics with

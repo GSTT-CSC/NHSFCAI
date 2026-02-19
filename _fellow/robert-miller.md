@@ -14,10 +14,7 @@ to this work will persist as a Topol fellow, allowing him
 to further advance the application of machine learning
 in hand surgery.
 
-
-### Fellowship Project
-##### _[Development & deployment of artificial intelligence radiology platforms](/assets/docs/posters/FCAI C1 Grad Poster RobertMiller.pdf)_
-##### King's College Hospitals NHS Foundation Trust
+<!-- FELLOWSHIP_PROJECT -->
 The project goals were to understand the theory,
 development, implementation, and evaluation of
 autonomous imaging AI in clinical radiology. This

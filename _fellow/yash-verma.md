@@ -8,11 +8,7 @@ job-role: Fellow in Clinical AI, Cohort 2
 ### Fellowship Bio
 Plastic Surgery Registrar based in Cambridge. Passion for digital and clinical innovation, especially within the field of surgery. Hoping to deliver a smarter and more equitable healthcare across the NHS. 
 
-
-### Fellowship Project
-##### _[Optimising theatre efficiency for routine elective procedures](/assets/docs/posters/FCAI C2 Grad Poster YashVerma_EastOfEngland.pdf)_
-##### Cambridge University Hospitals NHS Foundation Trust
-
+<!-- FELLOWSHIP_PROJECT -->
 Project goals are to improve theatre efficiency for by routine predictable high volume elective procedures such as hip and knee replacements. Operating theatres are one of the most expensive resources in a hospital setting. Current practices in theatre use and scheduling are highly inefficient and outdated. Machine learning models can be employed to accurately predict the length of an operation individualised to the patient, surgeon, location, day and time to schedule cases more efficiently. 
 
 ### Fellowship Testimonial

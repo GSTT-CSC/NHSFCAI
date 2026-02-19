@@ -11,11 +11,7 @@ first cohort of Clinical AI Fellows. He has an interest
 in leveraging data to aid clinical decision making and
 risk stratification in emergency care.
 
-
-### Fellowship Project
-#### _[Novel predictive algorithm development for high-cost early mental health care](/assets/docs/posters/FCAI C1 Grad Poster JamesLai.pdf)_
-#### South London and Maudsley NHS Foundation Trust
-
+<!-- FELLOWSHIP_PROJECT -->
 The goal of the project was to develop a predictive
 model for high intensity users in mental health care,
 based on the first three months of data extracted from

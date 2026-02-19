@@ -14,10 +14,7 @@ a PhD from the University of Liverpool
 in 2020. She is the Women in Cardiology
 Representative for the BJCA.
 
-
-### Fellowship Project
-#### _[Artificial intelligence in chest X-ray interpretation](/assets/docs/posters/FCAI C1 Grad Poster SarahBlake.pdf)_
-#### East Kent Hospitals NHS Foundation Trust
+<!-- FELLOWSHIP_PROJECT -->
 The goal of the project was to validate, deploy
 and monitor a deep learning algorithm which generates automated reports for CXR and categorises the scan as
 normal vs abnormal.
