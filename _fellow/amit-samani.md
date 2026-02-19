@@ -19,10 +19,7 @@ and he is committed to continuously
 learning and broadening his horizons
 in his consultant career.
 
-
-### Fellowship Project
-#### _[Technical evaluation of an AI solution for prostate cancer detection](/assets/docs/posters/FCAI C1 Grad Poster AmitSamani.pdf)_
-#### Guy's and St Thomas' NHS Foundation Trust
+<!-- FELLOWSHIP_PROJECT -->
 The goal of the project was to evaluate
 the real-world performance of a
 Siemens AI product designed to detect

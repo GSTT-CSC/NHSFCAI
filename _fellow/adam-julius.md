@@ -13,11 +13,7 @@ tackled VR-assisted regional anaesthesia projects
 and delivered digital professional development
 during COVID-19. 
 
-
-### Fellowship Project
-##### _[High-dimensional modelling of the focally injured human brain](/assets/docs/posters/FCAI C1 Grad Poster AdamJulius.pdf)_
-##### University College Hospitals London NHS Foundation Trust
-
+<!-- FELLOWSHIP_PROJECT -->
 Adam has been working on various projects in
 Professor Nachev’s group, honing his AI and ML
 skills. His primary contribution this year has

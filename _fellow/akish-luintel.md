@@ -18,8 +18,7 @@ in infectious diseases.
 
 
 ### Fellowship Project
-##### _[Targeting penicillin allergy delabelling services using structured and unstructured data](/assets/docs/posters/FCAI C1 Grad Poster AkishLuintel.pdf)_
-##### King's College Hospitals NHS Foundation Trust
+<!-- FELLOWSHIP_PROJECT -->
 6% of the UK population has a label of penicillin
 allergy, but fewer than 5% of patients with
 documented penicillin allergy have positive allergy

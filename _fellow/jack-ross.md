@@ -15,10 +15,7 @@ to patient care. However, he also recognizes the
 importance of ensuring its safety and effectiveness,
 as with any medical intervention.
 
-
-### Fellowship Project
-#### _[Radiomic evaluation of non-small cell lung cancer](/assets/docs/posters/FCAI C1 Grad Poster JackRoss.pdf)_
-#### Imperial College Healthcare NHS Foundation Trust
+<!-- FELLOWSHIP_PROJECT -->
 The main aim of the project is to train and test
 radiomic and machine learning models for analyzing
 CT-PET scans of patients with non-small cell lung

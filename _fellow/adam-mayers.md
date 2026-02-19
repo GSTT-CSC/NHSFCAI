@@ -10,11 +10,7 @@ Registrar at Guy’s and St Thomas’ Hospitals, with subspecialty interest
 in oncological imaging and previous
 experience in computer science.
 
-
-### Fellowship Project
-#### _[Automated extractionof dementia related volumetric assessments from radiology reports](/assets/docs/posters/FCAI C1 Grad Poster AdamMayers.pdf)_
-#### South London and Maudsley NHS Foundation Trust
-
+<!-- FELLOWSHIP_PROJECT -->
 The aim for the project was to develop a
 natural language processing algorithm
 that could perform automated extraction

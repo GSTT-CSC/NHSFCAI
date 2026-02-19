@@ -25,125 +25,257 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "London"
           profession: "Optometry"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Helena Langford"
           role: "Pharmacist in Clinical Informatics"
           cohort: "4"
           region: "South West"
           profession: "Pharmacy"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Royce Rajan"
           role: "Pharmacist in Clinical Informatics"
           cohort: "4"
           region: "London"
           profession: "Pharmacy"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "William Roach"
           role: "Higher Specialist Scientist Trainee in Microbiology"
           cohort: "4"
           region: "North East and Yorkshire- North East & North Cumbria"
           profession: "Healthcare Science"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Katharine Wykes"
           role: "Specialty Trainee Doctor in Anaesthetics and Intensive Care Medicine"
           cohort: "4"
           region: "South East- Thames Valley"
           profession: "Anaesthetics & Intensive Care"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Matthew Lowry"
           role: "Specialty Trainee Doctor in Cardiology and General Internal Medicine"
           cohort: "4"
           region: "South West"
           profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Jonathan Smith"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "4"
           region: "South East- Wessex"
           profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Karishma Chandarana"
           role: "Specialty Trainee Doctor in Cardiothoracic Surgery"
           cohort: "4"
           region: "Midlands"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Girija Agarwal"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "4"
           region: "London"
           profession: "Radiology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Shin Kitaoka"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "4"
           region: "East of England"
           profession: "Radiology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Michael Kwakye"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "4"
           region: "South East- Kent, Surrey, Sussex"
           profession: "Radiology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Connor Huggins"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "4"
           region: "Midlands"
           profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Christian Okonkwor"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "4"
           region: "Midlands"
           profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Joseph Ologunja"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "4"
           region: "Midlands"
           profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Pradeep Ravichandran"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "4"
           region: "London"
           profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Rashi Yadav"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "4"
           region: "North West"
           profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Aditya Borakati"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "4"
           region: "London"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Gerard McCabe"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "4"
           region: "Scotland"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Hesham Mohamed"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "4"
           region: "North West"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Enas bin Araik"
           role: "Consultant in Geriatric Medicine"
           cohort: "4"
           region: "International"
           profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Nomathamsanqa Tshuma"
           role: "Specialty Trainee Doctor in Haematology"
           cohort: "4"
           region: "London"
           profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Adrian Cheang"
           role: "Specialty Trainee Doctor in Histopathology"
           cohort: "4"
           region: "South East- Wessex"
           profession: "Pathology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
 
         - name: "Frances Conti-Ramsden"
@@ -151,197 +283,368 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "London"
           profession: "Obstetrics & Gynaecology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Caroline Kilduff"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "4"
           region: "London"
           profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Thomas Nash"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "4"
           region: "London"
           profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Christian Grimes"
           role: "Specialty Trainee Doctor in Otolaryngology"
           cohort: "4"
           region: "South West"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Daniel Simpson"
           role: "Specialty Trainee Doctor in Paediatrics"
           cohort: "4"
           region: "South West"
           profession: "Paediatrics"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "Varthani Kirupanandan"
           role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "4"
           region: "London"
           profession: "Public Health"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Christopher Morrison"
           role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "4"
           region: "Scotland"
           profession: "Public Health"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "David Green"
           role: "Specialty Trainee Doctor in Renal Medicine"
           cohort: "4"
           region: "South East- Kent, Surrey, Sussex"
           profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 
         - name: "John Hartemink"
           role: "Specialty Trainee Doctor in Renal and General Internal Medicine"
           cohort: "4"
           region: "North West"
           profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Rory Ormiston"
           role: "Specialty Trainee Doctor in Trauma & Orthopaedic Surgery"
           cohort: "4"
           region: "South East- Wessex"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Zain Kasmani"
           role: "Specialty Trainee Doctor in Urology"
           cohort: "4"
           region: "South East- Thames Valley"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
         - name: "Henry Bergman"
           role: "Specialty Trainee Doctor in Vascular Surgery"
           cohort: "4"
           region: "East of England"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
+
         - name: "Iblal Rakha"
           role: "Lead Pharmacist in Clinical Trials Informatics"
           cohort: "3"
           region: "South East- Thames Valley"
           profession: "Pharmacy"
+          project_title: "Deployment of Prostate Intelligence at OUH"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20IblalRakha.pdf"
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
 
         - name: "Christopher Efford"
           role: "Physiotherapist in Musculoskeletal Therapy"
           cohort: "3"
           region: "South West"
           profession: "Physiotherapy"
+          project_title: "Deployment of BRAVE AI: A Machine Learning Risk Stratification for the prediction of unplanned hospital admission"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20ChristopherEfford.pdf"
+          placement: "NHSE South West Region"
+          lat: "51.015025"
+          lng: "-3.068936"
 
         - name: "Charlie Winward"
           role: "Consultant Physiotherapist in Neurorehabilitation"
           cohort: "3"
           region: "South East- Thames Valley"
           profession: "Physiotherapy"
+          project_title: "Deployment of Chest X-ray AI"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20CharlieWinward.pdf"
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
 
         - name: "Robert Crichton"
           role: "Specialty Trainee Doctor in Anaesthetics and Intensive Care Medicine"
           cohort: "3"
           region: "Midlands"
           profession: "Anaesthetics & Intensive Care"
+          project_title: "Artificial Intelligence-Enhanced Coronary CT Angiography in Stable Chest Pain: A Multi-modal Service Evaluation of Identification of High-Risk Patients with Non-Obstructive Coronary Heart Disease"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20RobertCrichton.pdf"
+          placement: "The Royal Wolverhampton NHS Trust"
+          lat: "52.5997"
+          lng: "-2.0989"
 
         - name: "Vadir Baktash"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "3"
           region: "South East- Wessex"
           profession: "Medicine"
+          project_title: "Oesophageal cancer MDT tool: Creating an in-house model, using research developed tool, to predict outcomes in the Oesophageal Cancer MDT"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20VadirBaktash.pdf"
+          placement: "University Hospital Southampton NHS Foundation Trust"
+          lat: "50.9333"
+          lng: "-1.4272"
 
         - name: "Helen Livesey"
           role: "Specialty Trainee Doctor in Clinical Genetics"
           cohort: "3"
           region: "Wales"
           profession: "Medicine"
+          project_title: "Evaluating clinician perception, image features and association with predictive risk factors during AI-assisted polyp detection and characterization in bowel cancer screening colonoscopy"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20HelenLivesey.pdf"
+          placement: "Cardiff and Vale University Health Board"
+          lat: "51.50646"
+          lng: "-3.18920"
 
         - name: "Katherine Mackay"
           role: "Specialty Trainee Doctor in Clinical Oncology"
           cohort: "3"
           region: "London"
           profession: "Radiology"
+          project_title: "Evaluating auto-contouring systems in radiotherapy planning pathways"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20KatherineMackay.pdf"
+          placement: "The Royal Marsden NHS Foundation Trust"
+          lat: "51.4896"
+          lng: "-0.1708"
 
         - name: "Rory Maclean"
           role: "Specialty Trainee Doctor in Clinical Pharmacology and General Internal Medicine"
           cohort: "3"
           region: "London"
           profession: "Medicine"
+          project_title: "AI in Lung Nodule Diagnosis: A Simulation-Based Clinical Pathway Analysis"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20RoryMaclean.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
 
         - name: "John Chen"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
           region: "East of England"
           profession: "Radiology"
+          project_title: "Real-world clinical evaluation of commercially-available artificial intelligence tools in radiology"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JohnChen.pdf"
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
 
         - name: "Jozef Kamp"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
           region: "London"
           profession: "Radiology"
+          project_title: "MIDI: A Clinical AI Project to Transform Radiology Workflows"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JozefKamp.pdf"
+          placement: "King’s College Hospital NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
 
         - name: "Jesus Perdomo Lampignano"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
           region: "Scotland"
           profession: "Radiology"
+          project_title: "AIVAL & FAMOS – Monitoring platforms for AI applications"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JesusPerdomoLampignano.pdf"
+          placement: "NHS Greater Glasgow and Clyde"
+          lat: "55.86224"
+          lng: "-4.34070"
 
-        - name: "Dilan Şanli"
+        - name: "Dilan Sanli"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
           region: "South East- Wessex"
           profession: "Radiology"
+          project_title: "BRAIN AI, Real world performance evaluation of a machine learning model"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20DilanSanli.pdf"
+          placement: "University Hospital Southampton NHS Foundation Trust"
+          lat: "50.9333"
+          lng: "-1.4272"
 
         - name: "James Vaz"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
           region: "South East- Thames Valley"
           profession: "Radiology"
+          project_title: "Deploying and Evaluating AI for Fracture Detection in the NHS: A Multimodal Real-World Approach"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JamesVaz.pdf"
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
 
         - name: "Conn McGrath"
           role: "Specialty Trainee Doctor in Dermatology"
           cohort: "3"
           region: "London"
           profession: "Medicine"
+          project_title: "AI-based software evaluation in digital pathology diagnostics"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20ConnMcGrath.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
 
         - name: "Aoife Fox"
           role: "Specialty Trainee Doctor in Emergency Medicine and Paediatric Emergency Medicine"
           cohort: "3"
           region: "London"
           profession: "Emergency Medicine"
-
+          project_title: "ScaphX: AI-Assisted Scaphoid Fracture Detection on Wrist X-ray"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20AoifeFox.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
 
         - name: "Bharadwaj Chada"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "3"
           region: "London"
           profession: "General Practice"
-
+          project_title: "Development and Validation of a Predictive Model for High-Intensity Mental Health Service Use using Electronic Health Record (EHR) Data"
+          project_link: "/assets/docs/posters/FCAI C3 Grad Poster BharadwajChada.pdf"
+          placement: "South London and Maudsley NHS Foundation Trust"
+          lat: "51.4691"
+          lng: "-0.0881"
 
         - name: "William Hughes"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "3"
           region: "South East- Kent, Surrey, Sussex"
           profession: "General Practice"
-
+          project_title: "Service Evaluation of AI-enabled CT Head diagnostic assistance device"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20WilliamHughes.pdf"
+          placement: "University Hospitals Sussex NHS Foundation Trust"
+          lat: "50.8191"
+          lng: "-0.1164"
 
         - name: "Anna Fairclough"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "3"
           region: "South East- Wessex"
           profession: "Surgery"
-
+          project_title: "Donor Assessment & Identification Tool ‘DONAIT’: Optimising the Eye Donation Pathway with AI Augmented Screening"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20AnnaFairclough.pdf"
+          placement: "University Hospital Southampton NHS Foundation Trust"
+          lat: "50.9333"
+          lng: "-1.4272"
 
         - name: "Akriti Nanda"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "3"
           region: "London"
           profession: "Surgery"
-
+          project_title: "Clinical Deployment of Artificial Intelligence Autosegmentation (Limbus AI) in a Radiotherapy Imaging Workflow"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20AkritiNanda.pdf"
+          placement: "University College London Hospitals NHS Foundation Trust"
+          lat: "51.5252"
+          lng: "-0.1363"
 
         - name: "Timothy Ebsworth"
           role: "Specialty Trainee Doctor in Haematology"
           cohort: "3"
-          region: "Wessex"
+          region: "South East- Thames Valley"
           profession: "Medicine"
-
+          project_title: "Benchmarking AI-Augmented Fibrosis Grading: an International, Multicentre Evaluation of a Real-World Cohort of 1,000 Bone Marrow Trephines"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20TimothyEbsworth.pdf"
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
 
         - name: "Juan Tan"
           role: "Specialty Trainee Doctor in Haematology"
           cohort: "3"
-          region: "East of England"
+          region: "London"
           profession: "Medicine"
-
+          project_title: "Deployment of AI-driven application to fast classify blood cells towards automated reporting of blood films"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JuanTan.pdf"
+          placement: "Barts Health NHS Trust"
+          lat: "51.5185"
+          lng: "-0.0589"
 
         - name: "Alistair Heath"
           role: "Specialty Trainee Doctor in Histopathology"
@@ -349,33 +652,44 @@ en: &DEFAULT_EN
           cohort: "3"
           region: "Wales"
           profession: "Pathology"
-
+          project_title: "Applying an image recognition neural network to digital images of histology and its application as a triage tool for prioritising routine specimen reporting"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20AlistairHeath.pdf"
+          placement: "Betsi Cadwaladr University Health Board"
+          lat: "53.20976"
+          lng: "-4.15970"
 
         - name: "Michael Mackay"
           role: "Specialty Trainee Doctor in Neurology"
           cohort: "3"
           region: "East of England"
           profession: "Medicine"
-
-
+          project_title: "In basket ART: Using generative AI to draft responses to patient messages"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20MichaelMackay.pdf"
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
 
         - name: "Sunil Mamtora"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "3"
           region: "South West"
           profession: "Ophthalmology"
-
-
-
-
-
+          project_title: "An artificial intelligence algorithm predicting readiness for discharge in intensive care patients"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20SunilMamtora.pdf"
+          placement: "University Hospitals Bristol NHS Foundation Trust"
+          lat: "51.4592"
+          lng: "-2.5969"
 
         - name: "Karol Basta"
           role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "3"
           region: "London"
           profession: "Public Health"
-
+          project_title: "Deployment and Evaluation of a Commercial AI Tool to Aid Radiological Diagnosis of Pulmonary Embolism"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20KarolBasta.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
 
         - name: "Natalie Davison"
           role: "Specialty Trainee in Public Health"
@@ -383,170 +697,353 @@ en: &DEFAULT_EN
           cohort: "3"
           region: "Midlands"
           profession: "Public Health"
-
+          project_title: "Supporting a Global AI Community of Practice through Evaluation Clinics"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20NatalieDavison.pdf"
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
 
         - name: "Joshua Khan"
           role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "3"
           region: "South West"
           profession: "Public Health"
-
+          project_title: "A regional approach to facilitating local digital clinical safety for an AI based risk stratification tool"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JoshuaKhan.pdf"
+          placement: "NHSE South West Region"
+          lat: "51.015025"
+          lng: "-3.068936"
 
         - name: "Rachel Thomson"
           role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "3"
           region: "Scotland"
           profession: "Public Health"
-
-
+          project_title: "Evaluating environmental sustainability in deployment of AI-enabled clinical pathways in radiology"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20RachelThomson.pdf"
+          placement: "NHS Greater Glasgow and Clyde"
+          lat: "55.86224"
+          lng: "-4.34070"
 
         - name: "Thomas Evans"
           role: "Specialty Trainee Dentist in Special Care Dentistry"
           cohort: "3"
           region: "Midlands"
           profession: "Dentistry"
-
+          project_title: "AI Readiness in the NHS"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20ThomasEvans.pdf"
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
 
         - name: "Robert Dunk"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
           region: "London"
           profession: "Radiology"
+          project_title: "ScaphX: AI-Assisted Scaphoid Fracture Detection"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20RobertDunk.pdf"
+          placement: "Guy's and St Thomas's NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
         - name: "Maredudd Harris"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
           region: "South West"
           profession: "Radiology"
+          project_title: "Local evaluation of an AI augmented surgical waiting list prioritisation tool"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20MareduddHarris.pdf"
+          placement: "University Hospitals Bristol NHS Foundation Trust"
+          lat: "51.4592"
+          lng: "-2.5969"
+
         - name: "Paulette Kumi"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
           region: "South East- Kent, Surrey, Sussex"
           profession: "Radiology"
+          project_title: "Evaluation of AI-based radiological triage tool for prioritisation of CT angiography in suspected large vessel occlusion (LVO)"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20PauletteKumi.pdf"
+          placement: "University Hospitals Sussex NHS Foundation Trust"
+          lat: "50.8191"
+          lng: "-0.1164"
+
         - name: "Ruchir Shah"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
           region: "South East- Thames Valley"
           profession: "Radiology"
+          project_title: "Evaluating the impact of AI on clinician interpretation of inpatient and emergency department chest X-rays"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20RuchirShah.pdf"
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
+
         - name: "Sonam Vadera"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
           region: "Midlands"
           profession: "Radiology"
+          project_title: "Local validation of a commercial AI system for autonomous reporting of chest radiographs: a large-centre UK retrospective analysis"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20SonamVadera.pdf"
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
+
         - name: "William Pritchard"
           role: "Specialty Trainee Doctor in Emergency Medicine"
           cohort: "2"
           region: "East of England"
           profession: "Emergency Medicine"
+          project_title: "Using an Auto-Machine Learning Framework for Clinical Prediction"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20WilliamPritchard.pdf"
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
+
         - name: "Annabelle Painter"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "2"
           region: "London"
           profession: "General Practice"
+          project_title:
+          project_link:
+          placement:
+          lat:
+          lng:
+
         - name: "Ashiv Patel"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "2"
           region: "London"
           profession: "General Practice"
+          project_title: "Predicting thoracic aortic aneurysm progression with AI to plan surveillance and elective surgery"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20AshivPatel.pdf"
+          placement: "Imperial College Healthcare NHS Trust"
+          lat: "51.5174"
+          lng: "-0.1740"
+
         - name: "Andrew Soltan"
           role: "Specialty Trainee Doctor in Medical Oncology"
           cohort: "2"
           region: "South East- Thames Valley"
           profession: "Medicine"
+          project_title:
+          project_link:
+          placement:
+          lat:
+          lng:
+
         - name: "Nikunj Davda"
           role: "Specialty Trainee Doctor in Neurology"
           cohort: "2"
           region: "London"
           profession: "Medicine"
+          project_title: "MIDI (MR Imaging abnormality deep learning identification) Feasibility Study"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20NikunjDavda.pdf"
+          placement: "King’s College Hospital NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
+
         - name: "Rishi Ramessur"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "2"
           region: "London"
           profession: "Ophthalmology"
+          project_title: "Leveraging Natural Language Processing and Large Language Models in the Hospital Outpatient Setting"
+          project_link: "/assets/docs/posters/FCAI C2 Grad Poster RishiRamessur_AudienceAward.pdf"
+          placement: "Moorfields Eye Hospital NHS Foundation Trust"
+          lat: "51.5273"
+          lng: "-0.0890"
+
         - name: "Taha Soomro"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "2"
           region: "London"
           profession: "Ophthalmology"
+          project_title: "Shadow deployment AI-powered Geographic Atrophy quantification model"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20TahaSoomro.pdf"
+          placement: "Moorfields Eye Hospital NHS Foundation Trust"
+          lat: "51.5273"
+          lng: "-0.0890"
+
         - name: "Qasim Malik"
           role: "Specialty Trainee Doctor in Paediatrics"
           cohort: "2"
           region: "Midlands"
           profession: "Paediatrics"
+          project_title: "Medical Algorithmic Audit of skin cancer detection tool"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20QasimMalik.pdf"
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
+
         - name: "Caolan Roberson"
           role: "Specialty Trainee Doctor in Paediatrics"
           cohort: "2"
           region: "South West"
           profession: "Paediatrics"
+          project_title: "Safe Machine Assisted Real Time Transfers (SMARTT) Critical care pathways"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20CaolanRoberson.pdf"
+          placement: "University Hospitals Bristol NHS Foundation Trust"
+          lat: "51.4592"
+          lng: "-2.5969"
+
         - name: "Hamish Robertson"
           role: "Specialty Trainee Doctor in Paediatrics"
           cohort: "2"
           region: "London"
           profession: "Paediatrics"
+          project_title: "CytoSPACE – beyond the blood count"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20HamishRobertson.pdf"
+          placement: "University College Hospitals London NHS Foundation Trust"
+          lat: "51.5252"
+          lng: "-0.1363"
+
         - name: "Yash Verma"
           role: "Specialty Trainee Doctor in Plastic Surgery"
           cohort: "2"
           region: "East of England"
           profession: "Surgery"
+          project_title: "Optimising theatre efficiency for routine elective procedures"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20YashVerma.pdf"
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
+
         - name: "Luis Ribeiro"
           role: "Specialty Trainee Doctor in Urology"
           cohort: "2"
           region: "London"
           profession: "Surgery"
+          project_title: "Implementation of artificial intelligence based autosegmentation to aid the contouring of clinical target volumes and organs at risk for patients undergoing pelvic radiotherapy"
+          project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20LuisRibeiro.pdf"
+          placement: "Guy's and St Thomas's NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
         - name: "Adam Julius"
           role: "Specialty Trainee Doctor in Anaesthetics"
           cohort: "1"
           region: "London"
           profession: "Anaesthetics & Intensive Care"
+          project_title: "High-dimensional modelling of the focally injured human brain"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20AdamJulius.pdf"
+          placement: "University College Hospitals London NHS Foundation Trust"
+          lat: "51.5252"
+          lng: "-0.1363"
+
         - name: "Sarah Blake"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "1"
           region: "South East- Kent, Surrey, Sussex"
           profession: "Medicine"
+          project_title: "Artificial intelligence in chest X-ray interpretation"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20SarahBlake.pdf"
+          placement: "East Kent Hospitals NHS Foundation Trust"
+          lat: "51.1396"
+          lng: "0.9152"
+
         - name: "Kavitha Vimalesvaran"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "1"
           region: "London"
           profession: "Medicine"
+          project_title: "Assess the clinical effectiveness in prioritising CT heads using AI (ACCEPT-AI)"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20KavithaVimalesvaran.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
         - name: "Jack Ross"
           role: "Specialty Trainee Doctor in Clinical Pharmacology and General Internal Medicine"
           cohort: "1"
           region: "London"
           profession: "Medicine"
+          project_title: "Radiomic evaluation of non-small cell lung cancer"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20JackRoss.pdf"
+          placement: "Imperial College Healthcare NHS Foundation Trust"
+          lat: "51.5174"
+          lng: "-0.1740"
+
         - name: "Adam Mayers"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "1"
           region: "London"
           profession: "Radiology"
+          project_title: "Automated extraction of dementia related volumetric assessments from radiology reports"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20AdamMayers.pdf"
+          placement: "South London and Maudsley NHS Foundation Trust"
+          lat: "51.4691"
+          lng: "-0.0881"
+
         - name: "James Lai"
           role: "Specialty Trainee Doctor in Emergency Medicine"
           cohort: "1"
           region: "London"
           profession: "Emergency Medicine"
+          project_title: "Novel predictive algorithm development for high-cost early mental health care"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20JamesLai.pdf"
+          placement: "South London and Maudsley NHS Foundation Trust"
+          lat: "51.4691"
+          lng: "-0.0881"
+
         - name: "Mustafa Khanbhai"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "1"
           region: "London"
           profession: "Surgery"
+          project_title: "Developing an AI based clinical decision support system for streamlining breast cancer multidisciplinary meetings through evidence integration"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20MustafaKhanbhai.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
         - name: "Akish Luintel"
           role: "Specialty Trainee Doctor in Infectious Disease and General Internal Medicine"
           cohort: "1"
           region: "London"
           profession: "Medicine"
+          project_title: "Targeting penicillin allergy delabelling services using structured and unstructured data"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20AkishLuintel.pdf"
+          placement: "King’s College Hospitals NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
+
         - name: "Amit Samani"
           role: "Specialty Trainee Doctor in Medical Oncology"
           cohort: "1"
           region: "London"
           profession: "Medicine"
+          project_title: "Technical evaluation of an AI solution for prostate cancer detection"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20AmitSamani.pdf"
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
         - name: "Robert Miller"
           role: "Specialty Trainee Doctor in Plastic Surgery"
           cohort: "1"
           region: "London"
           profession: "Surgery"
+          project_title: "Development & deployment of artificial intelligence radiology platforms"
+          project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20RobertMiller.pdf"
+          placement: "King’s College Hospitals NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
+
         - name: "Salah Hammouche"
           role: "Specialty Trainee Doctor in Trauma & Orthopaedic Surgery"
           cohort: "1"
           region: "London"
           profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
 en-US:
   <<: *DEFAULT_EN
 en-CA:

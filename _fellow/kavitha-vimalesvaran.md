@@ -14,10 +14,7 @@ She works at the interface between data science and
 clinical medicine in the UKRI’s first cohort of AI in
 Healthcare Doctoral Training Programme.
 
-
-### Fellowship Project
-#### _[Assess the clinical effectiveness in prioritising CT heads using AI (ACCEPT-AI)](/assets/docs/posters/FCAI C1 Grad Poster KavithaVimalesvaran.pdf)_
-#### Guy's and St Thomas' NHS Foundation Trust
+<!-- FELLOWSHIP_PROJECT -->
 The primary goal of this national, multi-centre
 randomised clinical trial is to evaluate the impact of
 qER (an AI-based software for non-contrast head CTs)

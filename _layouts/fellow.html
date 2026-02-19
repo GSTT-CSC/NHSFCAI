@@ -14,6 +14,18 @@ bodyClass: "page-basic"
 {% endcomment %}
 {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
 
+{% comment %}
+  Pull structured fellow metadata from _data/fellowship_fellows.yml using a stable key.
+  We use the slugified name (url_name) to match a `slug` field if present;
+  otherwise we fall back to matching `name`.
+{% endcomment %}
+{% assign fellows_data_root = site.data.fellowship_fellows.en | default: site.data.fellowship_fellows %}
+{% assign fellows_people = fellows_data_root.team.people | default: fellows_data_root.team | default: fellows_data_root.people %}
+
+{% assign fellow_profile = fellows_people | where: "slug", url_name | first %}
+{% unless fellow_profile %}
+  {% assign fellow_profile = fellows_people | where: "name", page.team-member-name | first %}
+{% endunless %}
 
 <div class="container" id="pagecontainer">
   <div class="row">
@@ -31,11 +43,80 @@ bodyClass: "page-basic"
         {% endif %}
       </div>
       <h4 class="pt-2 text-center">{{ page.team-member-name }}</h4>
-      <p class="text-center text-muted">{{ page.job-role }}</p>
+      {%- assign _target_slug = page.team-member-name | default: page.title | slugify -%}
+{%- assign _people = site.data.fellowship_fellows.en.team.people -%}
+{%- assign _person = nil -%}
+
+{%- for p in _people -%}
+  {%- assign _p_slug = p.name | slugify -%}
+  {%- if _p_slug == _target_slug -%}
+    {%- assign _person = p -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if _person and _person.role -%}
+  <p class="text-center text-muted">{{ _person.role }}</p>
+{%- endif -%}
+
+{%- if _person and _person.cohort -%}
+  <p class="text-center text-muted">NHS Fellow in Clinical AI, Cohort {{ _person.cohort }}</p>
+{%- else -%}
+  <p class="text-center text-muted">NHS Fellow in Clinical AI</p>
+{%- endif -%}
     </div>
 
     <div class="col-12 col-lg-8">
-      {{ content }}
+      {% comment %}
+        Insert Fellowship Project at a specific point in the markdown content if the page contains the marker:
+        <!-- FELLOWSHIP_PROJECT -->
+        If the marker is absent, render the project block above the content (previous behaviour).
+      {% endcomment %}
+
+      {% assign has_project = false %}
+      {% if fellow_profile and (fellow_profile.project_title or fellow_profile.project_link or fellow_profile.placement) %}
+        {% assign has_project = true %}
+      {% endif %}
+
+      {% assign content_parts = content | split: "<!-- FELLOWSHIP_PROJECT -->" %}
+
+      {% if content_parts.size > 1 %}
+        {{ content_parts[0] }}
+        {% if has_project %}
+        <div class="mb-4">
+          <h3>Fellowship Project</h3>
+          {% if fellow_profile.project_title %}
+            {% if fellow_profile.project_link and fellow_profile.project_link != "" %}
+              <p class="mb-1"><a href="{{ fellow_profile.project_link }}"><strong>{{ fellow_profile.project_title }}</strong></a></p>
+            {% else %}
+              <p class="mb-1"><strong>{{ fellow_profile.project_title }}</strong></p>
+            {% endif %}
+          {% endif %}
+          {% if fellow_profile.placement and fellow_profile.placement != "" %}
+            <p class="text-muted mb-0">{{ fellow_profile.placement }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+        {{ content_parts[1] }}
+      {% else %}
+        {% if has_project %}
+        <div class="mb-4">
+          <h3>Fellowship Project</h3>
+          {% if fellow_profile.project_title %}
+            {% if fellow_profile.project_link and fellow_profile.project_link != "" %}
+              <p class="mb-1"><a href="{{ fellow_profile.project_link }}"><strong>{{ fellow_profile.project_title }}</strong></a></p>
+            {% else %}
+              <p class="mb-1"><strong>{{ fellow_profile.project_title }}</strong></p>
+            {% endif %}
+          {% endif %}
+          {% if fellow_profile.placement and fellow_profile.placement != "" %}
+            <p class="text-muted mb-0">{{ fellow_profile.placement }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {{ content }}
+      {% endif %}
 
       {% comment %}
         Fellowship Publications: show any publications where the `fellow` field contains this fellow's name.
@@ -55,7 +136,7 @@ bodyClass: "page-basic"
       {% comment %}
         Fellowship Media: show any media where the `fellow` field contains this fellow's name.
       {% endcomment %}
-      {% assign fellow_media = site.data.media | where_exp: "item", "item.fellow contains page.team-member-name" %}
+      {% assign fellow_media = site.data.fellowship_media | where_exp: "item", "item.fellow contains page.team-member-name" %}
 
       {% if fellow_media and fellow_media.size > 0 %}
       <hr>

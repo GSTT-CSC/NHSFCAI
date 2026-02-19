@@ -8,11 +8,7 @@ job-role: Fellow in Clinical AI, Cohort 2
 ### Fellowship Bio
 I am a radiology registrar in the Severn Deanery, specialising in interventional radiology. I have a keen interest in change management and the application of healthcare data to enhance practice and patient care. 
 
-
-### Fellowship Project
-##### _[Guiding Anti-thrombotic Therapies in Coronary Syndrome Patients through high bleeding risk identification](/assets/docs/posters/FCAI C2 Grad Poster MarededdHarris_SouthWest.pdf)_
-##### University Hospitals Bristol NHS Foundation Trust
-
+<!-- FELLOWSHIP_PROJECT -->
 The project, funded by the British Heart Foundation and undertaken with Dr John Scott, aimed to develop a clinician-facing tool to identify patients at high risk of bleeding. This was to be achieved through predictive modeling using hospital-coded data. In my role, I provided clinical expertise related to clinical coding. Specifically, I interpreted the codes assigned to various conditions and audited clinical notes to ensure the accuracy of this coding. During the project, I enhanced my coding skills, which allowed me to make increasing contributions as the project progressed. While the available data was of mixed quality, limiting the accuracy of individual bleeding risk predictions, we made progress in attempting to build an automated scoring tool for this purpose which did not require machine learning. Further work is needed to refine this tool and improve data quality for better prediction accuracy. 
 
 ### Fellowship Testimonial
