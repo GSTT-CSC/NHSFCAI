@@ -89,8 +89,8 @@ en: &DEFAULT_EN
           project_link:
           supervisor:
           placement: "NHS Primary Care Digital Laboratory"
-          lat:
-          lng:
+          lat: "51.015025"
+          lng: "-3.068936"
 
         - name: "Jonathan Smith"
           role: "Specialty Trainee Doctor in Cardiology"
