@@ -90,9 +90,14 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
 <script>
     // Set to Zoom 8 with the center dragged down so Liverpool is near the top
-    var map = L.map('map').setView([52.1, -1.6], 8);
+    var map = L.map('map', {
+        maxZoom: 14,
+        minZoom: 5
+    }).setView([52.1, -1.6], 8);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap'
+        attribution: '&copy; OpenStreetMap',
+        maxZoom: 14,
+        minZoom: 5
     }).addTo(map);
 
     var faceLayer = L.layerGroup().addTo(map);
@@ -178,23 +183,52 @@ var snapResolution = 2.8 / Math.pow(2, snapZoom - 6);
                         var testY = 0;
 
                         if (index > 0) {
-                            // --- PERFECT HONEYCOMB MATH ---
-                            // Calculates which "Ring" (1, 2, 3) the index belongs to
+                            // --- TRUE HEX LATTICE SPIRAL (ordered honeycomb) ---
+                            // Maps each index to axial hex coords (q,r) on a triangular lattice,
+                            // then converts to pixel offsets so circles are perfectly "kissing".
+
+                            // Find which ring R this index belongs to (R = 1,2,3...)
                             var R = Math.ceil((-3 + Math.sqrt(9 + 12 * index)) / 6);
-                            var itemsInRing = 6 * R;
-                            // Position of this specific face within its ring
-                            var posInRing = index - (3 * (R - 1) * R) - 1;
-                            
-                            // Offsets every other ring slightly so they interlock like puzzle pieces
-                            var angleOffset = (R % 2 === 0) ? (Math.PI / itemsInRing) : 0;
-                            var angle = (posInRing / itemsInRing) * Math.PI * 2 + angleOffset;
-                            
-                            var radius = R * D * overlapFactor;
-                            
-                            testX = radius * Math.cos(angle);
-                            testY = radius * Math.sin(angle);
+                            // 0-based position within that ring
+                            var posInRing = index - (3 * (R - 1) * R) - 1; // 0 .. 6R-1
+                            var side = Math.floor(posInRing / R);         // 0 .. 5
+                            var step = posInRing % R;                     // 0 .. R-1
+
+                            // Start of each ring at the TOP (12 o’clock) so the cluster reads as a
+                            // clean, symmetric honeycomb rather than a tilted spoke.
+                            // In this axial system, (q,r) = (R,-R) converts to a purely vertical-up pixel offset.
+                            var q = R;
+                            var r = -R;
+
+                            // Axial directions to walk around the ring
+                            var dirs = [
+                                { dq: 0,  dr: 1 },   // down-right
+                                { dq: -1, dr: 1 },   // down-left
+                                { dq: -1, dr: 0 },   // left
+                                { dq: 0,  dr: -1 },  // up-left
+                                { dq: 1,  dr: -1 },  // up-right
+                                { dq: 1,  dr: 0 }    // right
+                            ];
+
+                            // Advance to the correct side
+                            for (var s = 0; s < side; s++) {
+                                q += dirs[s].dq * R;
+                                r += dirs[s].dr * R;
+                            }
+                            // Then advance within the side
+                            q += dirs[side].dq * step;
+                            r += dirs[side].dr * step;
+
+                            // Convert axial coords to pixel offsets on a triangular lattice rotated so
+                            // the first point of each ring is 60° from vertical.
+                            // Basis vectors (in pixels):
+                            //   e_q = (D*sqrt(3)/2, -D/2)
+                            //   e_r = (D*sqrt(3)/2,  D/2)
+                            var sqrt3over2 = Math.sqrt(3) / 2;
+                            testX = (q + r) * D * sqrt3over2 * overlapFactor;
+                            testY = (-q + r) * (D / 2) * overlapFactor;
                         }
-                        
+
                         // Convert the calculated pixel back to GPS coordinates
                         var targetPixel = L.point(originPixel.x + testX, originPixel.y + testY);
                         var newLatLng = map.unproject(targetPixel, effectiveZoom);
@@ -227,10 +261,13 @@ var snapResolution = 2.8 / Math.pow(2, snapZoom - 6);
                                 Cohort ${f.cohort}
                             </a><br>
                             <span class="role-text">${f.role}</span><br>
+                            <span style="color: gray; font-size: 0.85em;">${f.placement}</span><br>
+                            ${f.project_title ? `
                             <a href="${f.project_link}" target="_blank" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
-                                ${f.project_title || "View Project Poster"}
+                                ${f.project_title}
                             </a><br>
-                            <span style="color: gray; font-size: 0.85em;">${f.placement}</span><hr style="margin:8px 0;">
+                            ` : ''}
+                            <hr style="margin:8px 0;">
                         </div>
                     `;
 
