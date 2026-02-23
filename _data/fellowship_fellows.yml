@@ -335,7 +335,7 @@ en: &DEFAULT_EN
         - name: "Daniel Simpson"
           role: "Specialty Trainee Doctor in Paediatrics"
           cohort: "4"
-          region: "South West"
+          region: "London"
           profession: "Paediatrics"
           project_title:
           project_link:
