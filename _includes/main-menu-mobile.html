@@ -1,19 +1,33 @@
-<div id="main-menu-mobile" class="main-menu-mobile">
-  {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
-  <ul>
+<div id="main-menu-mobile" class="main-menu-mobile" style="max-height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch;">
+  {% assign mainmenu = site.data.menus.main | sort: 'weight' %}
+  <ul class="main-menu-mobile__list">
     {% for item in mainmenu %}
-    <li class="{% if item.url == page.url %}active{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-      {% if item.children %}
-      <ul>
-        {% for child in item.children %}
-        <li class="{% if child.url == page.url %}active{% endif %}">
-          <a href="{{ child.url | relative_url }}">{{ child.name }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+      {% assign child_matches = item.children | where: "url", page.url %}
+      {% assign has_active_child = child_matches.size %}
+      {% assign is_active = false %}
+      {% if item.url == page.url or has_active_child > 0 %}
+        {% assign is_active = true %}
       {% endif %}
-    </li>
+
+      <li class="main-menu-mobile__item {% if is_active %}active{% endif %} {% if item.children %}has-children{% endif %}">
+        {% if item.children %}
+          <details class="main-menu-mobile__section" {% if is_active %}open{% endif %}>
+            <summary class="main-menu-mobile__summary" role="button" aria-label="Toggle {{ item.name }} submenu">
+              <span class="main-menu-mobile__summary-text">{{ item.name }}</span>
+              <span class="main-menu-mobile__chevron" aria-hidden="true"></span>
+            </summary>
+            <ul class="main-menu-mobile__sublist">
+              {% for child in item.children %}
+                <li class="main-menu-mobile__subitem {% if child.url == page.url %}active{% endif %}">
+                  <a class="main-menu-mobile__sublink" href="{{ child.url | relative_url }}">{{ child.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+          <a class="main-menu-mobile__link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 </div>
