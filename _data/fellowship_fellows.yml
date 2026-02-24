@@ -275,7 +275,7 @@ en: &DEFAULT_EN
         - name: "Adrian Cheang"
           role: "Specialty Trainee Doctor in Histopathology"
           cohort: "4"
-          region: "South East- Wessex"
+          region: "Wessex"
           profession: "Pathology"
           project_title:
           project_link:
