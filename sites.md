@@ -84,9 +84,17 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
+    // Lock the map view to the UK
+    var ukBounds = L.latLngBounds(
+        [49.8, -8.2],  // South-West (Cornwall / Isles of Scilly)
+        [60.9, 2.2]    // North-East (Shetland-ish)
+    );
+
     var map = L.map('map', {
         maxZoom: 14,
-        minZoom: 5
+        minZoom: 5,
+        maxBounds: ukBounds,
+        maxBoundsViscosity: 1.0 // fully rigid; prevents panning outside bounds
     }).setView([52.1, -1.6], 8);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -94,6 +102,9 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
         maxZoom: 14,
         minZoom: 5
     }).addTo(map);
+
+    // Extra safeguard for trackpads/kinetic dragging
+    map.setMaxBounds(ukBounds);
 
     var faceLayer = L.layerGroup().addTo(map);
 

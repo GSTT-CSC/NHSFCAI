@@ -21,19 +21,17 @@ title: Fellows & Alumni
   <select id="region-filter">
     <option value="">All</option>
     <option value="East of England">East of England</option>
+    <option value="Kent, Surrey, Sussex">Kent, Surrey, Sussex</option>
     <option value="London">London</option>
     <option value="Midlands">Midlands</option>
-    <option value="North East and Yorkshire- North East & North Cumbria">North East and Yorkshire- North East & North Cumbria</option>
-    <option value="North East and Yorkshire- Yorkshire & Humber">North East and Yorkshire- Yorkshire & Humber</option>
+    <option value="North East & North Cumbria">North East & North Cumbria</option>
     <option value="North West">North West</option>
     <option value="Scotland">Scotland</option>
-    <option value="South East- Kent, Surrey, Sussex">South East- Kent, Surrey, Sussex</option>
-    <option value="South East- Thames Valley">South East- Thames Valley</option>
-    <option value="South East- Wessex">South East- Wessex</option>
     <option value="South West">South West</option>
+    <option value="Thames Valley">Thames Valley</option>
     <option value="Wales">Wales</option>
-    <option value="International">International</option>
-    <!-- Add more region options if needed -->
+    <option value="Wessex">Wessex</option>
+    <option value="Yorkshire & Humber">Yorkshire & Humber</option>
   </select>
   <br>
     <label for="profession-filter">Profession:</label>
