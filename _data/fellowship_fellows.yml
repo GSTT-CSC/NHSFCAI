@@ -59,7 +59,7 @@ en: &DEFAULT_EN
         - name: "William Roach"
           role: "Higher Specialist Scientist Trainee in Microbiology"
           cohort: "4"
-          region: "North East and Yorkshire- North East & North Cumbria"
+          region: "North East & North Cumbria"
           profession: "Healthcare Science"
           project_title:
           project_link:
@@ -71,7 +71,7 @@ en: &DEFAULT_EN
         - name: "Katharine Wykes"
           role: "Specialty Trainee Doctor in Anaesthetics and Intensive Care Medicine"
           cohort: "4"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Anaesthetics & Intensive Care"
           project_title:
           project_link:
@@ -95,7 +95,7 @@ en: &DEFAULT_EN
         - name: "Jonathan Smith"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "4"
-          region: "South East- Wessex"
+          region: "Wessex"
           profession: "Medicine"
           project_title:
           project_link:
@@ -143,7 +143,7 @@ en: &DEFAULT_EN
         - name: "Michael Kwakye"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "4"
-          region: "South East- Kent, Surrey, Sussex"
+          region: "Kent, Surrey, Sussex"
           profession: "Radiology"
           project_title:
           project_link:
@@ -371,7 +371,7 @@ en: &DEFAULT_EN
         - name: "David Green"
           role: "Specialty Trainee Doctor in Renal Medicine"
           cohort: "4"
-          region: "South East- Kent, Surrey, Sussex"
+          region: "Kent, Surrey, Sussex"
           profession: "Medicine"
           project_title:
           project_link:
@@ -395,7 +395,7 @@ en: &DEFAULT_EN
         - name: "Rory Ormiston"
           role: "Specialty Trainee Doctor in Trauma & Orthopaedic Surgery"
           cohort: "4"
-          region: "South East- Wessex"
+          region: "Wessex"
           profession: "Surgery"
           project_title:
           project_link:
@@ -407,7 +407,7 @@ en: &DEFAULT_EN
         - name: "Zain Kasmani"
           role: "Specialty Trainee Doctor in Urology"
           cohort: "4"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Surgery"
           project_title:
           project_link:
@@ -431,7 +431,7 @@ en: &DEFAULT_EN
         - name: "Iblal Rakha"
           role: "Lead Pharmacist in Clinical Trials Informatics"
           cohort: "3"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Pharmacy"
           project_title: "Deployment of Prostate Intelligence at OUH"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20IblalRakha.pdf"
@@ -453,7 +453,7 @@ en: &DEFAULT_EN
         - name: "Charlie Winward"
           role: "Consultant Physiotherapist in Neurorehabilitation"
           cohort: "3"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Physiotherapy"
           project_title: "Deployment of Chest X-ray AI"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20CharlieWinward.pdf"
@@ -475,7 +475,7 @@ en: &DEFAULT_EN
         - name: "Vadir Baktash"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "3"
-          region: "South East- Wessex"
+          region: "Wessex"
           profession: "Medicine"
           project_title: "Oesophageal cancer MDT tool: Creating an in-house model, using research developed tool, to predict outcomes in the Oesophageal Cancer MDT"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20VadirBaktash.pdf"
@@ -552,7 +552,7 @@ en: &DEFAULT_EN
         - name: "Dilan Sanli"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
-          region: "South East- Wessex"
+          region: "Wessex"
           profession: "Radiology"
           project_title: "BRAIN AI, Real world performance evaluation of a machine learning model"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20DilanSanli.pdf"
@@ -563,7 +563,7 @@ en: &DEFAULT_EN
         - name: "James Vaz"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "3"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Radiology"
           project_title: "Deploying and Evaluating AI for Fracture Detection in the NHS: A Multimodal Real-World Approach"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20JamesVaz.pdf"
@@ -607,7 +607,7 @@ en: &DEFAULT_EN
         - name: "William Hughes"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "3"
-          region: "South East- Kent, Surrey, Sussex"
+          region: "Kent, Surrey, Sussex"
           profession: "General Practice"
           project_title: "Service Evaluation of AI-enabled CT Head diagnostic assistance device"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20WilliamHughes.pdf"
@@ -618,7 +618,7 @@ en: &DEFAULT_EN
         - name: "Anna Fairclough"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "3"
-          region: "South East- Wessex"
+          region: "Wessex"
           profession: "Surgery"
           project_title: "Donor Assessment & Identification Tool ‘DONAIT’: Optimising the Eye Donation Pathway with AI Augmented Screening"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20AnnaFairclough.pdf"
@@ -640,7 +640,7 @@ en: &DEFAULT_EN
         - name: "Timothy Ebsworth"
           role: "Specialty Trainee Doctor in Haematology"
           cohort: "3"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Medicine"
           project_title: "Benchmarking AI-Augmented Fibrosis Grading: an International, Multicentre Evaluation of a Real-World Cohort of 1,000 Bone Marrow Trephines"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20TimothyEbsworth.pdf"
@@ -774,7 +774,7 @@ en: &DEFAULT_EN
         - name: "Paulette Kumi"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
-          region: "South East- Kent, Surrey, Sussex"
+          region: "Kent, Surrey, Sussex"
           profession: "Radiology"
           project_title: "Evaluation of AI-based radiological triage tool for prioritisation of CT angiography in suspected large vessel occlusion (LVO)"
           project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20PauletteKumi.pdf"
@@ -785,7 +785,7 @@ en: &DEFAULT_EN
         - name: "Ruchir Shah"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Radiology"
           project_title: "Evaluating the impact of AI on clinician interpretation of inpatient and emergency department chest X-rays"
           project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20RuchirShah.pdf"
@@ -840,7 +840,7 @@ en: &DEFAULT_EN
         - name: "Andrew Soltan"
           role: "Specialty Trainee Doctor in Medical Oncology"
           cohort: "2"
-          region: "South East- Thames Valley"
+          region: "Thames Valley"
           profession: "Medicine"
           project_title:
           project_link:
@@ -950,7 +950,7 @@ en: &DEFAULT_EN
         - name: "Sarah Blake"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "1"
-          region: "South East- Kent, Surrey, Sussex"
+          region: "Kent, Surrey, Sussex"
           profession: "Medicine"
           project_title: "Artificial intelligence in chest X-ray interpretation"
           project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20SarahBlake.pdf"
