@@ -108,6 +108,24 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
     var faceLayer = L.layerGroup().addTo(map);
 
+    // --- Image preloading to make pin photos appear faster ---
+    // Leaflet divIcons use <img> tags; preloading warms the browser cache so renders feel instant.
+    var imageCache = new Map();
+    var DEFAULT_AVATAR = '/images/default-avatar.jpg';
+
+    function preloadImage(src) {
+        if (!src) return;
+        if (imageCache.has(src)) return;
+        var im = new Image();
+        im.decoding = 'async';
+        // Start fetching as soon as we ask for it; cache will be reused by <img> tags.
+        im.src = src;
+        imageCache.set(src, im);
+    }
+
+    // Ensure the fallback avatar is ready.
+    preloadImage(DEFAULT_AVATAR);
+
     function slugify(text) {
         if (!text) return "";
         return text.toString().toLowerCase()
@@ -157,6 +175,9 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
             var selC = cohortSelect.value;
             var selR = regionSelect.value;
             var selP = professionSelect.value;
+
+            // Prioritise the first few visible images after each render.
+            var renderImagePriorityCount = 0;
 
             var locationGroups = {};
             fellowsData.forEach(function(f) {
@@ -241,16 +262,21 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
                     var url_name = slugify(f.name);
                     var img = "/images/fellow/" + url_name + ".jpg";
+
+                    // Warm the cache (helps especially on first load and after filter changes)
+                    preloadImage(img);
+
                     var p_url = "/fellow/" + url_name;
                     var c_url = "https://www.nhsfellowship.ai/fellows/?cohort=" + f.cohort;
 
                     var faceIcon = L.divIcon({
                         className: 'custom-face-icon',
-                        html: `<img src="${img}" class="map-pin-face" style="width:${currentD}px; height:${currentD}px;" title="${f.name}" onerror="this.src='/images/default-avatar.jpg'">`,
+                        html: `<img src="${img}" class="map-pin-face" style="width:${currentD}px; height:${currentD}px;" title="${f.name}" decoding="async" fetchpriority="${renderImagePriorityCount < 12 ? 'high' : 'auto'}" onerror="this.src='${DEFAULT_AVATAR}'">`,
                         iconSize: [currentD, currentD],
                         iconAnchor: [currentD / 2, currentD / 2],
                         popupAnchor: [0, -currentD / 2]
                     });
+                    renderImagePriorityCount++;
 
                     var popupHTML = `
                         <div class="popup-content">
