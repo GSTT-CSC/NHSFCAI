@@ -167,20 +167,30 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
                 if (selR !== 'all' && f.region !== selR) return;
                 if (selP !== 'all' && f.profession !== selP) return;
 
+                // Group by snapped grid so pins aggregate at low zooms...
                 var snapLat = Math.round(lat / snapResolution) * snapResolution;
                 var snapLng = Math.round(lng / snapResolution) * snapResolution;
-                
                 var key = snapLat.toFixed(4) + "," + snapLng.toFixed(4);
-                if (!locationGroups[key]) locationGroups[key] = [];
-                locationGroups[key].push({ fellow: f, originalLat: lat, originalLng: lng });
+
+                // ...but track the true centroid from original coordinates to avoid centre "jumping"
+                if (!locationGroups[key]) {
+                    locationGroups[key] = { items: [], sumLat: 0, sumLng: 0 };
+                }
+                locationGroups[key].items.push({ fellow: f, originalLat: lat, originalLng: lng });
+                locationGroups[key].sumLat += lat;
+                locationGroups[key].sumLng += lng;
             });
 
             for (var coords in locationGroups) {
-                var group = locationGroups[coords];
-                var latLng = coords.split(',').map(parseFloat);
-                
+                var groupObj = locationGroups[coords];
+                var group = groupObj.items;
+
+                // True centroid (stable) for rendering; avoids snapped-grid centre hops
+                var centerLat = groupObj.sumLat / group.length;
+                var centerLng = groupObj.sumLng / group.length;
+
                 // Project center point at the anchor zoom
-                var originPixel = map.project(L.latLng(latLng[0], latLng[1]), effectiveZoom);
+                var originPixel = map.project(L.latLng(centerLat, centerLng), effectiveZoom);
 
                 group.forEach(function(item, index) {
                     var f = item.fellow;
@@ -224,6 +234,7 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
                         finalLat = newLatLng.lat;
                         finalLng = newLatLng.lng;
                     } else {
+                        // Single marker: always render at true location
                         finalLat = item.originalLat;
                         finalLng = item.originalLng;
                     }
