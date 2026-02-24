@@ -33,20 +33,16 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
         z-index: 1;
     }
     
-    /* 70px FACE PIN STYLING */
+    /* MODIFIED FACE PIN STYLING */
+    /* Fixed 70px dimensions removed so JS can handle dynamic scaling */
     .map-pin-face {
-        width: 70px !important;
-        height: 70px !important;
-        max-width: 70px !important;
-        max-height: 70px !important;
-        min-width: 70px !important;
-        min-height: 70px !important;
-        border-radius: 50% !important;
-        object-fit: cover !important;
-        border: 3px solid #005EB8 !important; 
-        background-color: white !important;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.4) !important;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #005EB8; 
+        background-color: white;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.4);
         transition: transform 0.2s;
+        display: block;
     }
 
     .map-pin-face:hover {
@@ -86,14 +82,13 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    // Set to Zoom 8 with the center dragged down so Liverpool is near the top
     var map = L.map('map', {
         maxZoom: 14,
         minZoom: 5
     }).setView([52.1, -1.6], 8);
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap',
         maxZoom: 14,
@@ -132,15 +127,21 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
             var zoom = map.getZoom();
             
-            // THE ZOOM LOCKS
-            // Math.max(10, ...) ensures that when zoomed out (e.g., zoom 6-9), the pins 
-            // deliberately collapse and overlap heavily, keeping the cluster firmly in London.
-            // As soon as you zoom in to 10 or closer, it perfectly preserves the kissing honeycomb.
-            var effectiveZoom = Math.max(9, Math.min(zoom, 14));
-            
-            // This locks the snapping grid so it never groups wider than it does at zoom 8
-var snapZoom = Math.max(9, zoom);
-var snapResolution = 2.8 / Math.pow(2, snapZoom - 6);
+            // 1. CALCULATE SCALE
+            // If zoom is less than 9, scale it down proportionally. Otherwise, scale is 1.
+            var scale = 1;
+            if (zoom < 9) {
+                scale = Math.pow(2, zoom - 9);
+            }
+
+            // 2. ADJUST DIMENSIONS
+            var baseD = 70; // Original face size in pixels
+            var currentD = baseD * scale; // Dynamic face size
+            var overlapFactor = 1; 
+
+            // Use Zoom 9 as the Anchor for geographic spread calculation
+            var effectiveZoom = Math.max(9, zoom); 
+            var snapResolution = 2.8 / Math.pow(2, effectiveZoom - 6);
 
             var selC = cohortSelect.value;
             var selR = regionSelect.value;
@@ -163,15 +164,11 @@ var snapResolution = 2.8 / Math.pow(2, snapZoom - 6);
                 locationGroups[key].push({ fellow: f, originalLat: lat, originalLng: lng });
             });
 
-            // 70px face size. 
-            // ensuring absolutely zero gaps and a beautiful stacked effect.
-            var D = 70; 
-            var overlapFactor = 1; 
-
             for (var coords in locationGroups) {
                 var group = locationGroups[coords];
                 var latLng = coords.split(',').map(parseFloat);
                 
+                // Project center point at the anchor zoom
                 var originPixel = map.project(L.latLng(latLng[0], latLng[1]), effectiveZoom);
 
                 group.forEach(function(item, index) {
@@ -183,53 +180,34 @@ var snapResolution = 2.8 / Math.pow(2, snapZoom - 6);
                         var testY = 0;
 
                         if (index > 0) {
-                            // --- TRUE HEX LATTICE SPIRAL (ordered honeycomb) ---
-                            // Maps each index to axial hex coords (q,r) on a triangular lattice,
-                            // then converts to pixel offsets so circles are perfectly "kissing".
-
-                            // Find which ring R this index belongs to (R = 1,2,3...)
+                            // --- TRUE HEX LATTICE SPIRAL ---
                             var R = Math.ceil((-3 + Math.sqrt(9 + 12 * index)) / 6);
-                            // 0-based position within that ring
-                            var posInRing = index - (3 * (R - 1) * R) - 1; // 0 .. 6R-1
-                            var side = Math.floor(posInRing / R);         // 0 .. 5
-                            var step = posInRing % R;                     // 0 .. R-1
+                            var posInRing = index - (3 * (R - 1) * R) - 1; 
+                            var side = Math.floor(posInRing / R);         
+                            var step = posInRing % R;                     
 
-                            // Start of each ring at the TOP (12 o’clock) so the cluster reads as a
-                            // clean, symmetric honeycomb rather than a tilted spoke.
-                            // In this axial system, (q,r) = (R,-R) converts to a purely vertical-up pixel offset.
                             var q = R;
                             var r = -R;
 
-                            // Axial directions to walk around the ring
                             var dirs = [
-                                { dq: 0,  dr: 1 },   // down-right
-                                { dq: -1, dr: 1 },   // down-left
-                                { dq: -1, dr: 0 },   // left
-                                { dq: 0,  dr: -1 },  // up-left
-                                { dq: 1,  dr: -1 },  // up-right
-                                { dq: 1,  dr: 0 }    // right
+                                { dq: 0,  dr: 1 }, { dq: -1, dr: 1 }, { dq: -1, dr: 0 },
+                                { dq: 0,  dr: -1 }, { dq: 1,  dr: -1 }, { dq: 1,  dr: 0 }
                             ];
 
-                            // Advance to the correct side
                             for (var s = 0; s < side; s++) {
                                 q += dirs[s].dq * R;
                                 r += dirs[s].dr * R;
                             }
-                            // Then advance within the side
                             q += dirs[side].dq * step;
                             r += dirs[side].dr * step;
 
-                            // Convert axial coords to pixel offsets on a triangular lattice rotated so
-                            // the first point of each ring is 60° from vertical.
-                            // Basis vectors (in pixels):
-                            //   e_q = (D*sqrt(3)/2, -D/2)
-                            //   e_r = (D*sqrt(3)/2,  D/2)
                             var sqrt3over2 = Math.sqrt(3) / 2;
-                            testX = (q + r) * D * sqrt3over2 * overlapFactor;
-                            testY = (-q + r) * (D / 2) * overlapFactor;
+                            // Use baseD here so the geographic spread is anchored to zoom 9 proportions
+                            testX = (q + r) * baseD * sqrt3over2 * overlapFactor;
+                            testY = (-q + r) * (baseD / 2) * overlapFactor;
                         }
 
-                        // Convert the calculated pixel back to GPS coordinates
+                        // UNPROJECT using the Anchor Zoom to get the locked GPS coord
                         var targetPixel = L.point(originPixel.x + testX, originPixel.y + testY);
                         var newLatLng = map.unproject(targetPixel, effectiveZoom);
                         finalLat = newLatLng.lat;
@@ -246,10 +224,10 @@ var snapResolution = 2.8 / Math.pow(2, snapZoom - 6);
 
                     var faceIcon = L.divIcon({
                         className: 'custom-face-icon',
-                        html: `<img src="${img}" class="map-pin-face" title="${f.name}" onerror="this.src='/images/default-avatar.jpg'">`,
-                        iconSize: [70, 70],
-                        iconAnchor: [35, 35],
-                        popupAnchor: [0, -35]
+                        html: `<img src="${img}" class="map-pin-face" style="width:${currentD}px; height:${currentD}px;" title="${f.name}" onerror="this.src='/images/default-avatar.jpg'">`,
+                        iconSize: [currentD, currentD],
+                        iconAnchor: [currentD / 2, currentD / 2],
+                        popupAnchor: [0, -currentD / 2]
                     });
 
                     var popupHTML = `
