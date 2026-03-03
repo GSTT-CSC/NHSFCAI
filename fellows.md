@@ -76,7 +76,20 @@ title: Fellows & Alumni
            style="position: relative;">
 
         <a href="{{ page_url }}">
-          <img class="mx-auto p-1" style="width: 250px; border-radius: 50%;" src="{{ image_path }}" alt="">
+          <img
+            class="mx-auto p-1"
+            style="width: 250px; border-radius: 50%;"
+            src="{{ image_path }}"
+            alt="{{ person.name }}"
+            width="250"
+            height="250"
+            decoding="async"
+            {% if forloop.index <= 4 %}
+              loading="eager" fetchpriority="high"
+            {% else %}
+              loading="lazy" fetchpriority="low"
+            {% endif %}
+          />
         </a>
 
         <h4>{{ person.name }}</h4>
