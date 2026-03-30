@@ -136,7 +136,7 @@ bodyClass: "page-basic"
       {% comment %}
         Fellowship Media: show any media where the `fellow` field contains this fellow's name.
       {% endcomment %}
-      {% assign fellow_media = site.data.fellowship_media | where_exp: "item", "item.fellow contains page.team-member-name" %}
+      {% assign fellow_media = site.data.media | where_exp: "item", "item.fellow contains page.team-member-name" %}
 
       {% if fellow_media and fellow_media.size > 0 %}
       <hr>
