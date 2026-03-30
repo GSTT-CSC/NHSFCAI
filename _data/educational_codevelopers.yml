@@ -11,7 +11,12 @@
 - name: KHP
   url: https://www.kingshealthpartners.org
   logo: /images/logo/KHP.png
-
+- name: BMJ
+  url: https://bmjgroup.com
+  logo: /images/logo/BMJ_logo.png
+- name: Public Digital
+  url: https://public.digital
+  logo: /images/logo/publicdigital_logo.jpeg
 - name: OxCAIR
   url: https://www.linkedin.com/company/oxford-clinical-artificial-intelligence-research-oxcair/posts/?feedView=all
   logo: /images/logo/OXCAIR_logo.png
@@ -29,12 +34,8 @@
 - name: Health Impact Lab
   url: https://healthimpactlab.co.uk
   logo: /images/logo/Health_Impact_Lab.png
-- name: BMJ
-  url: https://bmjgroup.com
-  logo: /images/logo/BMJ_logo.png
-- name: Public Digital
-  url: https://public.digital
-  logo: /images/logo/publicdigital_logo.jpeg
+
+
 
 
 - name: Google Deepmind
@@ -49,7 +50,7 @@
   logo: /images/logo/SkinAnalytics_logo.png
 - name: Aidoc
   url: https://www.aidoc.com/eu/
-  logo: /images/logo/Aidoc_logo.jpeg
+  logo: /images/logo/aidoc_logo.png
 - name: Hardian Health
   url: https://www.hardianhealth.com
   logo: /images/logo/HardianHealth_logo.png
@@ -62,3 +63,7 @@
 - name: MHV
   url: https://www.meridianhealthventures.com
   logo: /images/logo/MHV_logo.png
+
+- name: Browne Jacobson
+  url: https://www.brownejacobson.com/sectors/health
+  logo: /images/logo/BrowneJacobson_logo.png
