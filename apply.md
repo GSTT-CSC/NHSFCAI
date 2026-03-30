@@ -167,9 +167,8 @@ ability to rapidly learn new skills and solve technical problems
 <details markdown="1">
 <summary>Desirable criteria</summary>
 
-* Experience in quality improvement projects, clinical trials
-* Experience in digital transformation, clinical informatics (DICOM, HL7, etc)
-* Experience in programming, mathematics, statistical analysis
+* Experience in quality improvement projects, clinical trials, digital transformation
+* Experience in programming, statistical analysis, clinical informatics (DICOM, HL7 etc.)
 </details>
 
 
