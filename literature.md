@@ -7,6 +7,7 @@ title: Supporting Literature
 
 Find below the supporting literature which describes the benefits and outputs of the programme, newest first:
 
+* Deng et al. described the mandate for clinical AI education in primary care, highlighting the flagship role of the fellowship in the clinical AI education lanscape of the UK in a [comment in *The Lancet Primary Care* (2026)](https://doi.org/10.1016/j.lanprc.2026.100146)
 * A systematic summary of the benefits realised by this fellowship for the NHS was [published in August 2025](/assets/docs/FCAI_Benefits_Realisation_August2025v1.pdf) by the faculty
 * [Health Education and Improvement Wales](https://heiw.nhs.wales) published [*Artificial Intelligence Education and Skills within NHS Wales Landscape review* (2025)](/assets/docs/HEIW_AI_Landscape_Review.pdf#page=18), in which they endorsed the fellowship as a programme to meet the education and skills ambitions of the [Welsh AI Commission for Health and Social Care](https://www.gov.wales/ai-commission-health-and-social-care)
 * Insights from the scaling-up of this programme from a local to national scope was [published](/assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf) by our Programme Manager [Beatrix Fletcher](https://www.linkedin.com/in/beatrix-fletcher-4a4653143/) 
