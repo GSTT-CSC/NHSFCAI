@@ -144,11 +144,24 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
         var regionSelect = document.getElementById('region-filter');
         var professionSelect = document.getElementById('profession-filter');
 
-        var cohorts = [...new Set(fellowsData.map(i => i.cohort))].filter(Boolean).sort();
+        var cohorts = [...new Set(fellowsData.map(i => i.cohort))].filter(Boolean);
         var regions = [...new Set(fellowsData.map(i => i.region))].filter(Boolean).sort();
         var professions = [...new Set(fellowsData.map(i => i.profession))].filter(Boolean).sort();
 
-        cohorts.forEach(c => cohortSelect.add(new Option("Cohort " + c, c)));
+        var cohortLabels = {
+          "5": "Cohort 5 (2026-27)",
+          "4": "Cohort 4 (2025-26)",
+          "3": "Cohort 3 (2024-25)",
+          "2": "Cohort 2 (2023-24)",
+          "1": "Cohort 1 (2022-23)"
+        };
+
+        [5, 4, 3, 2, 1].forEach(v => {
+            var key = String(v);
+            if (cohorts.includes(key)) {
+                cohortSelect.add(new Option(cohortLabels[key], key));
+            }
+        });
         regions.forEach(r => regionSelect.add(new Option(r, r)));
         professions.forEach(p => professionSelect.add(new Option(p, p)));
 

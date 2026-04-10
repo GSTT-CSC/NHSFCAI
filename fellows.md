@@ -117,6 +117,13 @@ function initializeFilters() {
     const cohorts = new Set();
     const regions = new Set();
     const professions = new Set();
+    const cohortLabels = {
+      "5": "Cohort 5 (2026-27)",
+      "4": "Cohort 4 (2025-26)",
+      "3": "Cohort 3 (2024-25)",
+      "2": "Cohort 2 (2023-24)",
+      "1": "Cohort 1 (2022-23)"
+    };
 
     members.forEach(member => {
       if (member.dataset.cohort) cohorts.add(member.dataset.cohort);
@@ -124,11 +131,14 @@ function initializeFilters() {
       if (member.dataset.profession) professions.add(member.dataset.profession);
     });
 
-    [...cohorts].sort().forEach(value => {
-      const option = document.createElement('option');
-      option.value = value;
-      option.textContent = value;
-      cohortFilter.appendChild(option);
+    [5, 4, 3, 2, 1].forEach(v => {
+      const key = String(v);
+      if (cohorts.has(key)) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = cohortLabels[key];
+        cohortFilter.appendChild(option);
+      }
     });
 
     [...regions].sort().forEach(value => {
