@@ -19,7 +19,657 @@ en: &DEFAULT_EN
     team:
       text:
       section: team
+
+
+en: &DEFAULT_EN
+
+    team:
+      text:
+      section: team
       people:
+
+
+
+        - name: "Ellyse Kilarski"
+          role: "Lead Research Nurse"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Nursing & Midwifery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Tayside"
+          lat: "56.4620"
+          lng: "-2.9730"
+
+
+
+        - name: "Sejal Mistry"
+          role: "Specialist Optometrist and Digital Clinical Services Delivery Lead"
+          cohort: "5"
+          region: "London"
+          profession: "Optometry"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Moorfields Eye Hospital NHS Foundation Trust"
+          lat: "51.5273"
+          lng: "-0.0890"
+
+        - name: "Peter Arthure"
+          role: "Lead Digital Pharmacist"
+          cohort: "5"
+          region: "South West"
+          profession: "Pharmacy"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
+
+        - name: "Kiran Sharma"
+          role: "Higher Specialist Pharmacist in Clinical Informatics"
+          cohort: "5"
+          region: "London"
+          profession: "Pharmacy"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "King’s College Hospital NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
+
+        - name: "Deen Somally"
+          role: "Pharmacist"
+          cohort: "5"
+          region: "London"
+          profession: "Pharmacy"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "South London and Maudsley NHS Foundation Trust"
+          lat: "51.4691"
+          lng: "-0.0881"
+
+        - name: "Darren Tilley"
+          role: "Physician Associate"
+          cohort: "5"
+          region: "Kent Surrey Sussex"
+          profession: "Physician Associate"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospitals Sussex NHS Foundation Trust"
+          lat: "50.8191"
+          lng: "-0.1164"
+
+        - name: "Richard Vail"
+          role: "Principal Clinical Informatician"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Physiotherapy"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Greater Glasgow and Clyde"
+          lat: "55.86224"
+          lng: "-4.34070"
+
+        - name: "Shu Xiaoyi"
+          role: "AHP Physical Health Lead"
+          cohort: "5"
+          region: "London"
+          profession: "Physiotherapy"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University College London Hospitals NHS Foundation Trust"
+          lat: "51.5252"
+          lng: "-0.1363"
+
+
+        - name: "William Hamblyn"
+          role: "Clinical Scientist in Radiotherapy Physics"
+          cohort: "5"
+          region: "East of England"
+          profession: "Healthcare Science"
+          project_title:
+          project_link:
+          supervisor:
+          placement:
+          lat:
+          lng:
+
+        - name: "Michael Harland"
+          role: "Chief Cardiac Physiologist"
+          cohort: "5"
+          region: "London"
+          profession: "Healthcare Science"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Barts Health NHS Trust"
+          lat: "51.5185"
+          lng: "-0.0589"
+
+        - name: "Benjamin Johns"
+          role: "Clinical Scientist"
+          cohort: "5"
+          region: "South West"
+          profession: "Healthcare Science"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHSE South West Region"
+          lat: "51.015025"
+          lng: "-3.068936"
+
+
+        - name: "Daveena Meeks"
+          role: "Specialty Trainee Doctor in Anaesthetics"
+          cohort: "5"
+          region: "London"
+          profession: "Anaesthetics & Intensive Care"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "King’s College Hospital NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
+
+        - name: "Janan Sakathevan"
+          role: "Specialty Trainee Doctor in Anaesthetics"
+          cohort: "5"
+          region: "Kent Surrey Sussex"
+          profession: "Anaesthetics & Intensive Care"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "East Kent Hospitals NHS Foundation Trust"
+          lat: "51.1396"
+          lng: "0.9152"
+
+        - name: "Yen Ming Lin"
+          role: "Specialty Trainee Dentist in Orthodontics"
+          cohort: "5"
+          region: "North West"
+          profession: "Dentistry"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "The Christie NHS Foundation Trust"
+          lat: "53.4213"
+          lng: "-2.2299"
+
+        - name: "Syme Bhopal"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "Kent Surrey Sussex"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "East Kent Hospitals NHS Foundation Trust"
+          lat: "51.1396"
+          lng: "0.9152"
+
+        - name: "Mahmoud Elbahnasawi"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "Yorkshire & Humber"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Leeds Teaching Hospitals NHS Trust"
+          lat: "53.8025431"
+          lng: "-1.5528919"
+
+        - name: "Ali Fadhil"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "Midlands"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospitals of Leicester NHS Trust"
+          lat: "52.6290"
+          lng: "-1.1396"
+
+        - name: "Andre Ferreira"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "South West"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Royal Cornwall Hospitals NHS Trust"
+          lat: "50.2592"
+          lng: "-5.0780"
+
+        - name: "Azhar Janmohamed"
+          role: "General Practitioner"
+          cohort: "5"
+          region: "London"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Imperial College Healthcare NHS Trust"
+          lat: "51.5174"
+          lng: "-0.1740"
+
+        - name: "Elizabeth Le"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "North West"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "The Christie NHS Foundation Trust"
+          lat: "53.4213"
+          lng: "-2.2299"
+
+        - name: "Ibrahim Marwa"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "North West"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Alder Hey Children's NHS Foundation Trust"
+          lat: "53.4198"
+          lng: "-2.8996"
+
+        - name: "Thomas Moreno-Stokoe"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "Midlands"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
+
+        - name: "Thomas Pearson"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "London"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
+        - name: "Georgina Phillips"
+          role: "Specialty Trainee Doctor in General Practice"
+          cohort: "5"
+          region: "London"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Imperial College Healthcare NHS Trust"
+          lat: "51.5174"
+          lng: "-0.1740"
+
+        - name: "Aswin Thampy"
+          role: "General Practitioner"
+          cohort: "5"
+          region: "North West"
+          profession: "General Practice"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "The Christie NHS Foundation Trust"
+          lat: "53.4213"
+          lng: "-2.2299"
+
+        - name: "Jacob Brubert"
+          role: "Specialty Trainee Doctor in Cardiology and General Internal Medicine"
+          cohort: "5"
+          region: "East of England"
+          profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
+
+        - name: "Lewis Hughes"
+          role: "Specialty Trainee Doctor in Clinical Pharmacology & Therapeutics and General Internal Medicine"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Greater Glasgow and Clyde"
+          lat: "55.86224"
+          lng: "-4.34070"
+
+        - name: "Gerald Sng Gui Ren"
+          role: "Consultant Endocrinologist"
+          cohort: "5"
+          region: "London"
+          profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
+        - name: "Jack Stanley"
+          role: "Specialty Trainee Doctor in Infectious Disease and Medical Microbiology"
+          cohort: "5"
+          region: "South West"
+          profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHSE South West Region"
+          lat: "51.015025"
+          lng: "-3.068936"
+
+        - name: "Vijay Shyam-Sundar"
+          role: "Specialty Trainee Doctor in Cardiology"
+          cohort: "5"
+          region: "London"
+          profession: "Medicine"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "King’s College Hospital NHS Foundation Trust"
+          lat: "51.4673"
+          lng: "-0.0934"
+
+        - name: "Akanimoh Osutuk"
+          role: "Specialty Trainee Doctor in Paediatrics"
+          cohort: "5"
+          region: "London"
+          profession: "Paediatrics"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "The Royal Marsden NHS Foundation Trust"
+          lat: "51.4896"
+          lng: "-0.1708"
+
+        - name: "Sharon Davidesko"
+          role: "Fellow in Complex Gynaecology"
+          cohort: "5"
+          region: "Obstetrics & Gynaecology"
+          profession:
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Guy’s and St Thomas’ NHS Foundation Trust"
+          lat: "51.4988"
+          lng: "-0.1186"
+
+        - name: "Elaine Leung"
+          role: "Consultant Gynaecologist"
+          cohort: "5"
+          region: "Midlands"
+          profession: "Obstetrics & Gynaecology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
+
+        - name: "Tolga Guven"
+          role: "Specialty Trainee Doctor in Ophthalmology"
+          cohort: "5"
+          region: "Wessex"
+          profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospital Southampton NHS Foundation Trust"
+          lat: "50.9333"
+          lng: "-1.4272"
+
+        - name: "James Hazelwood"
+          role: "Specialty Trainee Doctor in Ophthalmology"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Lothian"
+          lat: "55.945842"
+          lng: "-3.201389"
+
+        - name: "Conor Malone"
+          role: "Specialty Trainee Doctor in Ophthalmology"
+          cohort: "5"
+          region: "Thames Valley"
+          profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
+
+        - name: "Jameel Mushtaq"
+          role: "Specialty Trainee Doctor in Ophthalmology"
+          cohort: "5"
+          region: "London"
+          profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Moorfields Eye Hospital NHS Foundation Trust"
+          lat: "51.5273"
+          lng: "-0.0890"
+
+        - name: "Tajwar Nasir"
+          role: "Specialty Trainee Doctor in Ophthalmology"
+          cohort: "5"
+          region: "Thames Valley"
+          profession: "Ophthalmology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
+
+        - name: "Mubby Husain"
+          role: "Consultant Virologist"
+          cohort: "5"
+          region: "East of England"
+          profession: "Pathology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "East Suffolk and North Essex NHS Foundation Trust"
+          lat: "51.9098567"
+          lng: "0.8988999"
+
+        - name: "Mohammed Nimir"
+          role: "Specialty Trainee Doctor in Histopathology"
+          cohort: "5"
+          region: "Midlands"
+          profession: "Pathology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Nottingham University Hospitals NHS Trust"
+          lat: "52.9902946"
+          lng: "-1.1569294"
+
+        - name: "Michael Louis"
+          role: "Specialty Trainee Doctor in Psychiatry"
+          cohort: "5"
+          region: "London"
+          profession: "Psychiatry"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Barts Health NHS Trust"
+          lat: "51.5185"
+          lng: "-0.0589"
+
+        - name: "George Altman"
+          role: "Specialty Trainee Doctor in Public Health Medicine"
+          cohort: "5"
+          region: "North West"
+          profession: "Public Health"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "The Christie NHS Foundation Trust"
+          lat: "53.4213"
+          lng: "-2.2299"
+
+        - name: "Paula del Rey Puech"
+          role: "Specialty Trainee in Public Health Medicine"
+          cohort: "5"
+          region: "London"
+          profession: "Public Health"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "South London and Maudsley NHS Foundation Trust"
+          lat: "51.4691"
+          lng: "-0.0881"
+
+        - name: "Miriam Abraham"
+          role: "Specialty Trainee Doctor in Clinical Oncology"
+          cohort: "5"
+          region: "Wessex"
+          profession: "Radiology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospital Southampton NHS Foundation Trust"
+          lat: "50.9333"
+          lng: "-1.4272"
+
+        - name: "Ashar Asif"
+          role: "Specialty Trainee Doctor in Clinical Radiology"
+          cohort: "5"
+          region: "Thames Valley"
+          profession: "Radiology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Oxford University Hospitals NHS Foundation Trust"
+          lat: "51.7635"
+          lng: "-1.2193"
+
+        - name: "Lorraine Ochieng"
+          role: "Specialty Trainee Doctor in Clinical Radiology"
+          cohort: "5"
+          region: "Yorkshire & Humber"
+          profession: "Radiology"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Leeds Teaching Hospitals NHS Trust"
+          lat: "53.8025431"
+          lng: "-1.5528919"
+
+        - name: "Matthew Newman"
+          role: "Specialty Trainee Doctor in Paediatric Surgery"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Greater Glasgow and Clyde"
+          lat: "55.86224"
+          lng: "-4.34070"
+
+        - name: "Geeth Silva"
+          role: "Specialty Trainee Doctor in Trauma & Orthopaedic Surgery"
+          cohort: "5"
+          region: "East of England"
+          profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
+
+        - name: "George Nita"
+          role: "Specialty Trainee Doctor in General Surgery"
+          cohort: "5"
+          region: "North West"
+          profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Alder Hey Children's NHS Foundation Trust"
+          lat: "53.4198"
+          lng: "-2.8996"
+
+        - name: "Shayan Shahidi"
+          role: "Specialty Trainee Doctor in Otolaryngology"
+          cohort: "5"
+          region: "Wessex"
+          profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "University Hospital Southampton NHS Foundation Trust"
+          lat: "50.9333"
+          lng: "-1.4272"
+
+        - name: "Emma Iddles"
+          role: "Specialty Trainee Doctor in Paediatric Surgery"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Tayside"
+          lat: "56.4620"
+          lng: "-2.9730"
+
+        - name: "Arthur McPhee"
+          role: "Consultant Urologist"
+          cohort: "5"
+          region: "Scotland"
+          profession: "Surgery"
+          project_title:
+          project_link:
+          supervisor:
+          placement: "NHS Greater Glasgow and Clyde"
+          lat: "55.86224"
+          lng: "-4.34070"
+
+        - name: "Parsa Hemmati"
+          role: "Clinical Digital Fellow"
+          cohort: "5"
+          region: "East of England"
+          profession:
+          project_title:
+          project_link:
+          supervisor:
+          placement: "Cambridge University Hospitals NHS Foundation Trust"
+          lat: "52.1750"
+          lng: "0.1413"
+
         - name: "Josie Carmichael"
           role: "Optometrist"
           cohort: "4"
@@ -143,7 +793,7 @@ en: &DEFAULT_EN
         - name: "Michael Kwakye"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "4"
-          region: "Kent, Surrey, Sussex"
+          region: "Kent Surrey Sussex"
           profession: "Radiology"
           project_title:
           project_link:
@@ -371,7 +1021,7 @@ en: &DEFAULT_EN
         - name: "David Green"
           role: "Specialty Trainee Doctor in Renal Medicine"
           cohort: "4"
-          region: "Kent, Surrey, Sussex"
+          region: "Kent Surrey Sussex"
           profession: "Medicine"
           project_title:
           project_link:
@@ -471,6 +1121,17 @@ en: &DEFAULT_EN
           placement: "The Royal Wolverhampton NHS Trust"
           lat: "52.5997"
           lng: "-2.0989"
+
+        - name: "Thomas Evans"
+          role: "Specialty Trainee Dentist in Special Care Dentistry"
+          cohort: "3"
+          region: "Midlands"
+          profession: "Dentistry"
+          project_title: "AI Readiness in the NHS"
+          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20ThomasEvans.pdf"
+          placement: "University Hospitals Birmingham NHS Foundation Trust"
+          lat: "52.4521"
+          lng: "-1.9405"
 
         - name: "Vadir Baktash"
           role: "Specialty Trainee Doctor in Cardiology"
@@ -607,7 +1268,7 @@ en: &DEFAULT_EN
         - name: "William Hughes"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "3"
-          region: "Kent, Surrey, Sussex"
+          region: "Kent Surrey Sussex"
           profession: "General Practice"
           project_title: "Service Evaluation of AI-enabled CT Head diagnostic assistance device"
           project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20WilliamHughes.pdf"
@@ -738,16 +1399,6 @@ en: &DEFAULT_EN
           lat: "55.86224"
           lng: "-4.34070"
 
-        - name: "Thomas Evans"
-          role: "Specialty Trainee Dentist in Special Care Dentistry"
-          cohort: "3"
-          region: "Midlands"
-          profession: "Dentistry"
-          project_title: "AI Readiness in the NHS"
-          project_link: "/assets/docs/posters/FCAI%20C3%20Grad%20Poster%20ThomasEvans.pdf"
-          placement: "University Hospitals Birmingham NHS Foundation Trust"
-          lat: "52.4521"
-          lng: "-1.9405"
 
         - name: "Robert Dunk"
           role: "Specialty Trainee Doctor in Clinical Radiology"
@@ -774,7 +1425,7 @@ en: &DEFAULT_EN
         - name: "Paulette Kumi"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "2"
-          region: "Kent, Surrey, Sussex"
+          region: "Kent Surrey Sussex"
           profession: "Radiology"
           project_title: "Evaluation of AI-based radiological triage tool for prioritisation of CT angiography in suspected large vessel occlusion (LVO)"
           project_link: "/assets/docs/posters/FCAI%20C2%20Grad%20Poster%20PauletteKumi.pdf"
@@ -950,7 +1601,7 @@ en: &DEFAULT_EN
         - name: "Sarah Blake"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "1"
-          region: "Kent, Surrey, Sussex"
+          region: "Kent Surrey Sussex"
           profession: "Medicine"
           project_title: "Artificial intelligence in chest X-ray interpretation"
           project_link: "/assets/docs/posters/FCAI%20C1%20Grad%20Poster%20SarahBlake.pdf"
@@ -970,7 +1621,7 @@ en: &DEFAULT_EN
           lng: "-0.1186"
 
         - name: "Jack Ross"
-          role: "Specialty Trainee Doctor in Clinical Pharmacology and General Internal Medicine"
+          role: "Specialty Trainee Doctor in Clinical Pharmacology & Therapeutics and General Internal Medicine"
           cohort: "1"
           region: "London"
           profession: "Medicine"

@@ -9,6 +9,7 @@ title: Fellows & Alumni
   <label for="cohort-filter">Cohort:</label>
   <select id="cohort-filter">
     <option value="">All</option>
+    <option value="5">5 (2026-27)</option>
     <option value="4">4 (2025-26)</option>
     <option value="3">3 (2024-25)</option>
     <option value="2">2 (2023-24)</option>
@@ -21,7 +22,7 @@ title: Fellows & Alumni
   <select id="region-filter">
     <option value="">All</option>
     <option value="East of England">East of England</option>
-    <option value="Kent, Surrey, Sussex">Kent, Surrey, Sussex</option>
+    <option value="Kent Surrey Sussex">Kent Surrey Sussex</option>
     <option value="London">London</option>
     <option value="Midlands">Midlands</option>
     <option value="North East & North Cumbria">North East & North Cumbria</option>
@@ -34,7 +35,8 @@ title: Fellows & Alumni
     <option value="Yorkshire & Humber">Yorkshire & Humber</option>
   </select>
   <br>
-    <label for="profession-filter">Profession:</label>
+
+  <label for="profession-filter">Profession:</label>
   <select id="profession-filter">
     <option value="">All</option>
     <option value="Anaesthetics & Intensive Care">Anaesthetics & Intensive Care</option>
@@ -43,13 +45,16 @@ title: Fellows & Alumni
     <option value="General Practice">General Practice</option>
     <option value="Healthcare Science">Healthcare Science</option>
     <option value="Medicine">Medicine</option>
+    <option value="Nursing & Midwifery">Nursing & Midwifery</option>
     <option value="Obstetrics & Gynaecology">Obstetrics & Gynaecology</option>
     <option value="Ophthalmology">Ophthalmology</option>
     <option value="Optometry">Optometry</option>
     <option value="Paediatrics">Paediatrics</option>
     <option value="Pathology">Pathology</option>
     <option value="Pharmacy">Pharmacy</option>
+    <option value="Physician Associate">Physician Associate</option>
     <option value="Physiotherapy">Physiotherapy</option>
+    <option value="Psychiatry">Psychiatry</option>
     <option value="Public Health">Public Health</option>
     <option value="Radiology">Radiology</option>
     <option value="Surgery">Surgery</option>
@@ -80,6 +85,7 @@ title: Fellows & Alumni
             class="mx-auto p-1"
             style="width: 250px; border-radius: 50%;"
             src="{{ image_path }}"
+            onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
             alt="{{ person.name }}"
             width="250"
             height="250"
@@ -95,18 +101,15 @@ title: Fellows & Alumni
         <h4>{{ person.name }}</h4>
         <p class="text-muted">{{ person.role }}</p>
 
-        {% if socials.size > 0 %}
+        {% if socials and socials.size > 0 %}
           <div class="social-button-cluster">
-            {% if socials[0] %}
-              <a href="{{ socials[0].url }}">
-                <i class="{{ socials[0].icon }}"></i>
-              </a>
-            {% endif %}
-            {% if socials[1] %}
-              <a href="{{ socials[1].url }}">
-                <i class="{{ socials[1].icon }}"></i>
-              </a>
-            {% endif %}
+            {% for social in socials limit:3 %}
+              {% if social %}
+                <a href="{{ social.url }}">
+                  <i class="{{ social.icon }}"></i>
+                </a>
+              {% endif %}
+            {% endfor %}
           </div>
         {% endif %}
       </div>
@@ -114,7 +117,6 @@ title: Fellows & Alumni
 
   </div>
 </div>
-<!-- End Team -->
 
 <script>
 function initializeFilters() {
@@ -132,7 +134,6 @@ function initializeFilters() {
     return urlParams.get(name);
   }
 
-  // Set filters based on URL parameters
   const cohortParam = getQueryParam('cohort');
   const regionParam = getQueryParam('region');
   const professionParam = getQueryParam('profession');
@@ -154,11 +155,11 @@ function initializeFilters() {
       member.style.display = (matchCohort && matchRegion && matchProfession) ? '' : 'none';
     });
 
-    // Update URL parameters
     const params = new URLSearchParams();
     if (cohort) params.set('cohort', cohort);
     if (region) params.set('region', region);
     if (profession) params.set('profession', profession);
+
     const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
     window.history.replaceState({}, '', newUrl);
   }
@@ -167,7 +168,7 @@ function initializeFilters() {
   regionFilter.addEventListener('change', filterMembers);
   professionFilter.addEventListener('change', filterMembers);
 
-  filterMembers(); // Run once on page load
+  filterMembers();
 }
 
 initializeFilters();
