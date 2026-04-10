@@ -359,7 +359,7 @@ en: &DEFAULT_EN
           lng: "-4.34070"
 
         - name: "Gerald Sng Gui Ren"
-          role: "Consultant Endocrinologist"
+          role: "Consultant Endocrinologist (Singapore)"
           cohort: "5"
           region: "London"
           profession: "Medicine"
@@ -899,7 +899,7 @@ en: &DEFAULT_EN
           lng: "-2.8996"
 
         - name: "Enas bin Araik"
-          role: "Consultant in Geriatric Medicine"
+          role: "Consultant in Geriatric Medicine (Saudi Arabia)"
           cohort: "4"
           region: "London"
           profession: "Medicine"
