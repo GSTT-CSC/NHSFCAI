@@ -111,7 +111,7 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
     // --- Image preloading to make pin photos appear faster ---
     // Leaflet divIcons use <img> tags; preloading warms the browser cache so renders feel instant.
     var imageCache = new Map();
-    var DEFAULT_AVATAR = '/images/default-avatar.jpg';
+    var DEFAULT_AVATAR = '/images/fellow/placeholderfellow.jpg';
 
     function preloadImage(src) {
         if (!src) return;
@@ -271,7 +271,7 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
                     var faceIcon = L.divIcon({
                         className: 'custom-face-icon',
-                        html: `<img src="${img}" class="map-pin-face" style="width:${currentD}px; height:${currentD}px;" title="${f.name}" decoding="async" fetchpriority="${renderImagePriorityCount < 12 ? 'high' : 'auto'}" onerror="this.src='${DEFAULT_AVATAR}'">`,
+                        html: `<img src="${img}" class="map-pin-face" style="width:${currentD}px; height:${currentD}px;" title="${f.name}" decoding="async" fetchpriority="${renderImagePriorityCount < 12 ? 'high' : 'auto'}" onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg'">`,
                         iconSize: [currentD, currentD],
                         iconAnchor: [currentD / 2, currentD / 2],
                         popupAnchor: [0, -currentD / 2]
