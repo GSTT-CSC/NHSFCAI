@@ -15,16 +15,17 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
         border-radius: 8px;
         margin-bottom: 15px;
         display: flex;
-        gap: 15px;
+        gap: 20px;
         align-items: center;
         flex-wrap: wrap;
         border: 1px solid #d8dde0;
         font-family: Arial, sans-serif;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .filter-group { display: flex; flex-direction: column; }
     .filter-group label { font-size: 0.85em; font-weight: bold; margin-bottom: 5px; }
-    .filter-group select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; min-width: 150px; }
+    .filter-group select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; min-width: 160px; background-color: white; }
 
     #map {
         height: 800px;
