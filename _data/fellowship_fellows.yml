@@ -409,8 +409,8 @@ en: &DEFAULT_EN
         - name: "Sharon Davidesko"
           role: "Fellow in Complex Gynaecology"
           cohort: "5"
-          region: "Obstetrics & Gynaecology"
-          profession:
+          region: "London"
+          profession: "Obstetrics & Gynaecology"
           project_title:
           project_link:
           supervisor:
