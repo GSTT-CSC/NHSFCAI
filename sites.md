@@ -238,9 +238,10 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
                         if (index > 0) {
                             // --- TRUE HEX LATTICE SPIRAL ---
                             var R = Math.ceil((-3 + Math.sqrt(9 + 12 * index)) / 6);
-                            var posInRing = index - (3 * (R - 1) * R) - 1; 
-                            var side = Math.floor(posInRing / R);         
-                            var step = posInRing % R;                     
+                            var ringSize = 6 * R;
+                            var posInRing = (index - (3 * (R - 1) * R) - 1 + Math.round(ringSize * 9 / 12)) % ringSize;
+                            var side = Math.floor(posInRing / R);
+                            var step = posInRing % R;
 
                             var q = R;
                             var r = -R;
