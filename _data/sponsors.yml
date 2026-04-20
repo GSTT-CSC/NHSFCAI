@@ -1,9 +1,9 @@
 - name: NHS England
   url: https://www.hee.nhs.uk
   logo: /images/logo/NHSE_logo.png
-- name: NHS Education Scotland
-  url: https://www.nes.scot.nhs.uk
-  logo: /images/logo/NES_logo.jpg
+- name: Public Services Delivery Scotland
+  url: https://publicservicesdelivery.scot
+  logo: /images/logo/PSD_logo.png
 - name: Health Education and Improvement Wales
   url: https://heiw.nhs.wales
   logo: /images/logo/HEIW_logo.png
