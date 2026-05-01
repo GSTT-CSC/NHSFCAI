@@ -63,5 +63,5 @@ Find below the supporting literature which describes the benefits and outputs of
 </table>
 <!-- Supporting Literature -->
 
-<i> Last updated: April 2026 2025 </i>
+<i> Last updated: April 2026</i>
 <br>To suggest an addition, please [contact the faculty](mailto:gstt.aifellowship@nhs.net)
