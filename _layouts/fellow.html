@@ -87,7 +87,7 @@ bodyClass: "page-basic"
           <h3>Fellowship Project</h3>
           {% if fellow_profile.project_title %}
             {% if fellow_profile.project_link and fellow_profile.project_link != "" %}
-              <p class="mb-1"><a href="{{ fellow_profile.project_link }}"><strong>{{ fellow_profile.project_title }}</strong></a></p>
+              <p class="mb-1"><a href="{{ fellow_profile.project_link }}#zoom=page-width" target="_blank" rel="noopener"><strong>{{ fellow_profile.project_title }}</strong></a></p>
             {% else %}
               <p class="mb-1"><strong>{{ fellow_profile.project_title }}</strong></p>
             {% endif %}
@@ -104,7 +104,7 @@ bodyClass: "page-basic"
           <h3>Fellowship Project</h3>
           {% if fellow_profile.project_title %}
             {% if fellow_profile.project_link and fellow_profile.project_link != "" %}
-              <p class="mb-1"><a href="{{ fellow_profile.project_link }}"><strong>{{ fellow_profile.project_title }}</strong></a></p>
+              <p class="mb-1"><a href="{{ fellow_profile.project_link }}#zoom=page-width" target="_blank" rel="noopener"><strong>{{ fellow_profile.project_title }}</strong></a></p>
             {% else %}
               <p class="mb-1"><strong>{{ fellow_profile.project_title }}</strong></p>
             {% endif %}
