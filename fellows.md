@@ -165,9 +165,17 @@ function initializeFilters() {
   const regionParam = getQueryParam('region');
   const professionParam = getQueryParam('profession');
 
-  if (cohortParam) cohortFilter.value = cohortParam;
-  if (regionParam) regionFilter.value = regionParam;
-  if (professionParam) professionFilter.value = professionParam;
+  function applyQueryFilters() {
+    if (cohortParam && Array.from(cohortFilter.options).some(option => option.value === cohortParam)) {
+      cohortFilter.value = cohortParam;
+    }
+    if (regionParam && Array.from(regionFilter.options).some(option => option.value === regionParam)) {
+      regionFilter.value = regionParam;
+    }
+    if (professionParam && Array.from(professionFilter.options).some(option => option.value === professionParam)) {
+      professionFilter.value = professionParam;
+    }
+  }
 
   function filterMembers() {
     const cohort = cohortFilter.value;
@@ -196,7 +204,7 @@ function initializeFilters() {
   professionFilter.addEventListener('change', filterMembers);
 
   populateFilters();
-
+  applyQueryFilters();
   filterMembers();
 }
 
