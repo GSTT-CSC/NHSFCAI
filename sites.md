@@ -109,7 +109,7 @@ Project Site: Our fellows are hosted in clinical AI projects and teams across th
 <script>
     // Restrict the map to a useful UK frame so users cannot pan into empty space
     var ukBounds = L.latLngBounds(
-        [50.2, -6.2],
+        [50.066, -5.713],
         [58.5, 1.35]
     );
 
@@ -121,8 +121,8 @@ Project Site: Our fellows are hosted in clinical AI projects and teams across th
     });
 
     var initialBounds = L.latLngBounds(
-        [50.478482648434, -3.7463378137301504],
-        [53.846045579076794, 1.3073731237698505]
+        [50.6040, -3.6000],
+        [53.9590, 1.3000]
     );
 
 
