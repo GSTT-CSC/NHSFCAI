@@ -4,7 +4,7 @@ permalink: /sites/
 title: NHS AI Project Host Sites
 
 ---
-Our fellows are hosted in clinical AI projects and teams across the NHS.
+Project Site: Our fellows are hosted in clinical AI projects and teams across the NHS.
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
@@ -28,7 +28,7 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
     .filter-group select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; min-width: 160px; background-color: white; }
 
     #map {
-        height: 800px;
+        height: 1000px;
         width: 100%;
         border-radius: 8px;
         z-index: 1;
@@ -39,11 +39,13 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
     .map-pin-face {
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid #005EB8; 
+        border: 3px solid #005EB8;
         background-color: white;
         box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-        transition: transform 0.2s;
+        will-change: transform;
         display: block;
+        box-sizing: border-box;
+        transform-origin: center center;
     }
 
     .map-pin-face:hover {
@@ -51,6 +53,26 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
         z-index: 9999 !important;
     }
 
+
+    .overflow-popup-list {
+        max-height: 300px;
+        overflow-y: auto;
+        text-align: left;
+        margin-top: 8px;
+        padding-right: 8px;
+    }
+
+    .overflow-popup-list .fellow-row {
+        padding: 6px 0;
+        border-top: 1px solid #e0e0e0;
+        line-height: 1.3;
+    }
+
+    .overflow-popup-list .fellow-row:first-child {
+        border-top: none;
+    }
+
+    
     .custom-face-icon { background: none !important; border: none !important; }
     .popup-content { text-align: center; font-family: Arial, sans-serif; max-width: 240px; }
     
@@ -85,27 +107,32 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    // Lock the map view to the UK
+    // Restrict the map to a useful UK frame so users cannot pan into empty space
     var ukBounds = L.latLngBounds(
-        [49.8, -8.2],  // South-West (Cornwall / Isles of Scilly)
-        [60.9, 2.2]    // North-East (Shetland-ish)
+        [50.2, -6.2],
+        [58.5, 1.35]
     );
 
     var map = L.map('map', {
         maxZoom: 14,
-        minZoom: 5,
+        minZoom: 7,
         maxBounds: ukBounds,
-        maxBoundsViscosity: 1.0 // fully rigid; prevents panning outside bounds
-    }).setView([52.1, -1.6], 8);
+        maxBoundsViscosity: 1.0
+    });
+
+    var initialBounds = L.latLngBounds(
+        [50.478482648434, -3.7463378137301504],
+        [53.846045579076794, 1.3073731237698505]
+    );
+
+
+    map.fitBounds(initialBounds);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap',
         maxZoom: 14,
-        minZoom: 5
+        minZoom: 7
     }).addTo(map);
-
-    // Extra safeguard for trackpads/kinetic dragging
-    map.setMaxBounds(ukBounds);
 
     var faceLayer = L.layerGroup().addTo(map);
 
@@ -113,6 +140,7 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
     // Leaflet divIcons use <img> tags; preloading warms the browser cache so renders feel instant.
     var imageCache = new Map();
     var DEFAULT_AVATAR = '/images/fellow/placeholderfellow.jpg';
+    var MAX_PRELOADS_PER_RENDER = 24;
 
     function preloadImage(src) {
         if (!src) return;
@@ -137,6 +165,11 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
             .replace(/-+$/, '');
     }
 
+    function cohortLink(cohort) {
+        var cohortValue = String(cohort || '').trim().replace(/^Cohort\s*/i, '').split(/\s+/)[0];
+        return "/fellows/?cohort=" + encodeURIComponent(cohortValue);
+    }
+
     var fellowsData = {{ site.data.fellowship_fellows.en.team.people | jsonify | default: '[]' }};
 
     if (fellowsData && Array.isArray(fellowsData)) {
@@ -147,6 +180,55 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
         var cohorts = [...new Set(fellowsData.map(i => i.cohort))].filter(Boolean);
         var regions = [...new Set(fellowsData.map(i => i.region))].filter(Boolean).sort();
         var professions = [...new Set(fellowsData.map(i => i.profession))].filter(Boolean).sort();
+
+        var TOTAL_SLOTS = 19;
+        var BADGE_SLOT = 14;
+
+        function overflowBadgeDataUrl(count) {
+            var svg = `
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" fill="#005EB8"/>
+                    <text x="50" y="55" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="700">+${count}</text>
+                </svg>
+            `;
+            return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        }
+
+        function hexOffset(index, baseD, overlapFactor) {
+            var x = 0;
+            var y = 0;
+
+            if (index > 0) {
+                // --- TRUE HEX LATTICE SPIRAL ---
+                var R = Math.ceil((-3 + Math.sqrt(9 + 12 * index)) / 6);
+                var ringSize = 6 * R;
+                var posInRing = (index - (3 * (R - 1) * R) - 1 + Math.round(ringSize * 9 / 12)) % ringSize;
+                var side = Math.floor(posInRing / R);
+                var step = posInRing % R;
+
+                var q = R;
+                var r = -R;
+
+                var dirs = [
+                    { dq: 0,  dr: 1 }, { dq: -1, dr: 1 }, { dq: -1, dr: 0 },
+                    { dq: 0,  dr: -1 }, { dq: 1,  dr: -1 }, { dq: 1,  dr: 0 }
+                ];
+
+                for (var s = 0; s < side; s++) {
+                    q += dirs[s].dq * R;
+                    r += dirs[s].dr * R;
+                }
+                q += dirs[side].dq * step;
+                r += dirs[side].dr * step;
+
+                var sqrt3over2 = Math.sqrt(3) / 2;
+                // Use baseD here so the geographic spread is anchored to zoom 9 proportions
+                x = (q + r) * baseD * sqrt3over2 * overlapFactor;
+                y = (-q + r) * (baseD / 2) * overlapFactor;
+            }
+
+            return { x: x, y: y };
+        }
 
         var cohortLabels = {
           "5": "Cohort 5 (2026-27)",
@@ -190,8 +272,9 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
             var selR = regionSelect.value;
             var selP = professionSelect.value;
 
-            // Prioritise the first few visible images after each render.
+            // Prioritise and preload only the first few visible images after each render.
             var renderImagePriorityCount = 0;
+            var renderPreloadCount = 0;
 
             var locationGroups = {};
             fellowsData.forEach(function(f) {
@@ -227,45 +310,25 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
                 // Project center point at the anchor zoom
                 var originPixel = map.project(L.latLng(centerLat, centerLng), effectiveZoom);
 
-                group.forEach(function(item, index) {
+                var hasOverflow = group.length > TOTAL_SLOTS;
+                group.forEach(function(item, idx) { item.slot = idx; });
+                var displayGroup = hasOverflow
+                    ? group.slice(0, TOTAL_SLOTS)
+                    : group;
+                var overflowFellows = hasOverflow
+                    ? group.slice(TOTAL_SLOTS)
+                    : [];
+
+                displayGroup.forEach(function(item) {
                     var f = item.fellow;
                     var finalLat, finalLng;
+                    var slot = item.slot;
 
                     if (group.length > 1) {
-                        var testX = 0;
-                        var testY = 0;
-
-                        if (index > 0) {
-                            // --- TRUE HEX LATTICE SPIRAL ---
-                            var R = Math.ceil((-3 + Math.sqrt(9 + 12 * index)) / 6);
-                            var ringSize = 6 * R;
-                            var posInRing = (index - (3 * (R - 1) * R) - 1 + Math.round(ringSize * 9 / 12)) % ringSize;
-                            var side = Math.floor(posInRing / R);
-                            var step = posInRing % R;
-
-                            var q = R;
-                            var r = -R;
-
-                            var dirs = [
-                                { dq: 0,  dr: 1 }, { dq: -1, dr: 1 }, { dq: -1, dr: 0 },
-                                { dq: 0,  dr: -1 }, { dq: 1,  dr: -1 }, { dq: 1,  dr: 0 }
-                            ];
-
-                            for (var s = 0; s < side; s++) {
-                                q += dirs[s].dq * R;
-                                r += dirs[s].dr * R;
-                            }
-                            q += dirs[side].dq * step;
-                            r += dirs[side].dr * step;
-
-                            var sqrt3over2 = Math.sqrt(3) / 2;
-                            // Use baseD here so the geographic spread is anchored to zoom 9 proportions
-                            testX = (q + r) * baseD * sqrt3over2 * overlapFactor;
-                            testY = (-q + r) * (baseD / 2) * overlapFactor;
-                        }
+                        var off = hexOffset(slot, baseD, overlapFactor);
 
                         // UNPROJECT using the Anchor Zoom to get the locked GPS coord
-                        var targetPixel = L.point(originPixel.x + testX, originPixel.y + testY);
+                        var targetPixel = L.point(originPixel.x + off.x, originPixel.y + off.y);
                         var newLatLng = map.unproject(targetPixel, effectiveZoom);
                         finalLat = newLatLng.lat;
                         finalLng = newLatLng.lng;
@@ -278,11 +341,14 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
                     var url_name = slugify(f.name);
                     var img = "/images/fellow/" + url_name + ".jpg";
 
-                    // Warm the cache (helps especially on first load and after filter changes)
-                    preloadImage(img);
+                    // Warm the cache for the first visible pins without preloading every image on every render.
+                    if (renderPreloadCount < MAX_PRELOADS_PER_RENDER) {
+                        preloadImage(img);
+                        renderPreloadCount++;
+                    }
 
                     var p_url = "/fellow/" + url_name;
-                    var c_url = "https://www.nhsfellowship.ai/fellows/?cohort=" + f.cohort;
+                    var c_url = cohortLink(f.cohort);
 
                     var faceIcon = L.divIcon({
                         className: 'custom-face-icon',
@@ -295,16 +361,16 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
                     var popupHTML = `
                         <div class="popup-content">
-                            <a href="${p_url}" style="text-decoration: none; color: #005EB8; font-size: 1.1em;">
+                            <a href="${p_url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-size: 1.1em;">
                                 <strong>${f.name}</strong>
                             </a><br>
-                            <a href="${c_url}" target="_blank" style="text-decoration: none; color: #005EB8; font-size: 0.85em; font-weight: bold;">
+                            <a href="${c_url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-size: 0.85em; font-weight: bold;">
                                 Cohort ${f.cohort}
                             </a><br>
                             <span class="role-text">${f.role}</span><br>
-                            <span style="color: gray; font-size: 0.85em;">${f.placement}</span><br>
+                            <span style="color: gray; font-size: 0.85em;">Project Site: ${f.placement}</span><br>
                             ${f.project_title ? `
-                            <a href="${f.project_link}" target="_blank" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
+                            <a href="${f.project_link && f.project_link.toLowerCase().includes('.pdf') ? f.project_link + '#zoom=page-width' : f.project_link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
                                 ${f.project_title}
                             </a><br>
                             ` : ''}
@@ -314,9 +380,61 @@ Our fellows are hosted in clinical AI projects and teams across the NHS.
 
                     L.marker([finalLat, finalLng], { icon: faceIcon }).bindPopup(popupHTML).addTo(faceLayer);
                 });
+
+                if (hasOverflow) {
+                    var badgeSlot = BADGE_SLOT;
+                    var badgeOff = hexOffset(badgeSlot, baseD, overlapFactor);
+                    var badgePixel = L.point(originPixel.x + badgeOff.x, originPixel.y + badgeOff.y);
+                    var badgeLatLng = map.unproject(badgePixel, effectiveZoom);
+                    var overflowCount = overflowFellows.length;
+
+                    var badgeIcon = L.divIcon({
+                        className: 'custom-face-icon',
+                        html: `<img src="${overflowBadgeDataUrl(overflowCount)}" class="map-pin-face" style="width:${currentD}px; height:${currentD}px;" title="${overflowCount} more fellows">`,
+                        iconSize: [currentD, currentD],
+                        iconAnchor: [currentD / 2, currentD / 2],
+                        popupAnchor: [0, -currentD / 2]
+                    });
+
+                    var overflowRows = overflowFellows.map(function(item) {
+                        var f = item.fellow;
+                        var url_name = slugify(f.name);
+                        var p_url = "/fellow/" + url_name;
+                        var c_url = cohortLink(f.cohort);
+                        return `
+                            <div class="fellow-row">
+                                <a href="${p_url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold;">
+                                    ${f.name}
+                                </a><br>
+                                <a href="${c_url}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-size: 0.85em; font-weight: bold;">
+                                    Cohort ${f.cohort}
+                                </a><br>
+                                <span class="role-text">${f.role}</span>
+                                <span style="color: gray; font-size: 0.85em;">Project Site: ${f.placement}</span>
+                                ${f.project_title ? `
+                                <br><a href="${f.project_link && f.project_link.toLowerCase().includes('.pdf') ? f.project_link + '#zoom=page-width' : f.project_link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
+                                    ${f.project_title}
+                                </a>
+                                ` : ''}
+                            </div>
+                        `;
+                    }).join('');
+
+                    var overflowPopupHTML = `
+                        <div class="popup-content">
+                            <strong>${overflowCount} more fellows at this location</strong>
+                            <div class="overflow-popup-list">
+                                ${overflowRows}
+                            </div>
+                        </div>
+                    `;
+
+                    L.marker([badgeLatLng.lat, badgeLatLng.lng], { icon: badgeIcon }).bindPopup(overflowPopupHTML, { maxHeight: null }).addTo(faceLayer);
+                }
             }
         }
 
+        
         map.on('zoomend', renderMap);
         cohortSelect.addEventListener('change', renderMap);
         regionSelect.addEventListener('change', renderMap);
