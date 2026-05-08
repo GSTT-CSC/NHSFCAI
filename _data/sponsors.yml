@@ -7,15 +7,20 @@
 - name: Health Education and Improvement Wales
   url: https://heiw.nhs.wales
   logo: /images/logo/HEIW_logo.png
+- name:  Singapore Ministry of Health
+  url: https://www.moh.gov.sg
+  logo: /images/logo/sg_moh_logo.png
+- name:  Saudi Ministry of Education
+  url: https://www.moe.gov.sa/en
+  logo: /images/logo/SaudiMOE_logo.png
+
 - name: British Society for Haematology
   url: https://b-s-h.org.uk
   logo: /images/logo/BSH_logo.png
 - name: T-Pro
   url: https://info.tpro.io
   logo: /images/logo/TPRO_logo.png
-- name:  Saudi Ministry of Education
-  url: https://www.moe.gov.sa/en
-  logo: /images/logo/SaudiMOE_logo.png
+
 - name: GSTT Clinical Scientific Computing
   url: https://gstt-csc.github.io
   logo: /images/logo/CSC_logo.svg
