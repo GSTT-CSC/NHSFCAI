@@ -181,6 +181,40 @@ Project Site: Our fellows are hosted in clinical AI projects and teams across th
         var regions = [...new Set(fellowsData.map(i => i.region))].filter(Boolean).sort();
         var professions = [...new Set(fellowsData.map(i => i.profession))].filter(Boolean).sort();
 
+        function getCurrentPriorityCohort() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth(); // January is 0, September is 8
+
+            // Fellowship map priority rolls over each September.
+            // Sep 2025-Aug 2026 starts at Cohort 3, Sep 2026-Aug 2027 at Cohort 4, and so on.
+            return (month >= 8 ? year : year - 1) - 2022;
+        }
+
+        function cohortSortValue(cohort) {
+            var n = parseInt(cohort, 10);
+            return isNaN(n) ? Number.POSITIVE_INFINITY : n;
+        }
+
+        function compareFellowsByCohortPriority(a, b) {
+            var priorityCohort = getCurrentPriorityCohort();
+            var cohortA = cohortSortValue(a.fellow.cohort);
+            var cohortB = cohortSortValue(b.fellow.cohort);
+
+            function rank(cohort) {
+                if (cohort <= priorityCohort) {
+                    return priorityCohort - cohort;
+                }
+                return priorityCohort + cohort;
+            }
+
+            var rankA = rank(cohortA);
+            var rankB = rank(cohortB);
+
+            if (rankA !== rankB) return rankA - rankB;
+            return String(a.fellow.name || '').localeCompare(String(b.fellow.name || ''));
+        }
+
         var TOTAL_SLOTS = 19;
         var BADGE_SLOT = 14;
 
@@ -310,13 +344,14 @@ Project Site: Our fellows are hosted in clinical AI projects and teams across th
                 // Project center point at the anchor zoom
                 var originPixel = map.project(L.latLng(centerLat, centerLng), effectiveZoom);
 
-                var hasOverflow = group.length > TOTAL_SLOTS;
-                group.forEach(function(item, idx) { item.slot = idx; });
+                var sortedGroup = group.slice().sort(compareFellowsByCohortPriority);
+                var hasOverflow = sortedGroup.length > TOTAL_SLOTS;
+                sortedGroup.forEach(function(item, idx) { item.slot = idx; });
                 var displayGroup = hasOverflow
-                    ? group.slice(0, TOTAL_SLOTS)
-                    : group;
+                    ? sortedGroup.slice(0, TOTAL_SLOTS)
+                    : sortedGroup;
                 var overflowFellows = hasOverflow
-                    ? group.slice(TOTAL_SLOTS)
+                    ? sortedGroup.slice(TOTAL_SLOTS)
                     : [];
 
                 displayGroup.forEach(function(item) {
