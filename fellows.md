@@ -89,7 +89,7 @@ title: Fellows & Alumni
           <div class="social-button-cluster">
             {% for social in socials limit:3 %}
               {% if social %}
-                <a href="{{ social.url }}">
+                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
                   <i class="{{ social.icon }}"></i>
                 </a>
               {% endif %}
