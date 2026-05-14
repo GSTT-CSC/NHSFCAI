@@ -6,7 +6,13 @@ title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 _Last updated: 30 Mar 2026_ 
 <br>
 
-**Applications for Cohort 5 closed on 15 Dec 2025. <br>This page serves as a reference for current and future applicants. <BR>Cohort 6 applications are expected to open in Oct 2026.**
+<div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
+  <p style="margin: 0; font-weight: 700; color: #212b32;">
+    Applications for Cohort 5 closed on 15 Dec 2025.<br>
+    This page serves as a reference for current and future applicants.<br>
+    Cohort 6 applications are expected to open in Oct 2026.
+  </p>
+</div>
 <br><br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
 We invite applications for Cohort 5 of the NHS Fellowship in Clinical AI. We seek
