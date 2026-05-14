@@ -22,8 +22,20 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 ### Key Dates and How To Apply
 * 10 Nov 2025: Recruitment opens
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an NHS applicant](https://forms.office.com/e/Z2ph0MAF4L) <b>and</b>
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Obtain *Approval in Principle*](https://forms.office.com/e/V61XZwYe2h) from a responsible person with decision-making power over training/employment pattern from August 2026 - August 2027. Applicants <b>will not be interviewed</b> without this.
+
+<div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+  <a href="https://forms.office.com/e/Z2ph0MAF4L" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+    Apply as an NHS applicant
+  </a>
+  <span style="flex-basis: 100%;"><b>and</b></span>
+  <a href="https://forms.office.com/e/V61XZwYe2h" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+    Obtain Approval in Principle
+  </a>
+</div>
+
+Obtain *Approval in Principle* from a responsible person with decision-making power over training/employment pattern from August 2026 - August 2027. Applicants <b>will not be interviewed</b> without this.
 * 24 Nov 2025: [Applicant webinar with Q&A](https://www.youtube.com/embed/SsONx1jAGxE)
 * 15 Dec 2025 23:45 GMT: 
 <br>Application **and** Approval In Principle deadline (all applications)

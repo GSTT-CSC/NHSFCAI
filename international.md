@@ -16,7 +16,12 @@ The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowshi
 
 ### Key Dates and How to Apply
 * 31 Oct 2025: Applications open
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Apply as an International Applicant](https://forms.office.com/e/mx5mikXjH2)
+<div style="margin: 0.5rem 0 1rem 0;">
+  <a href="https://forms.office.com/e/mx5mikXjH2" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+    Apply as an International Applicant
+  </a>
+</div>
 * 24 Nov 2025: [Applicant webinar with Q&A](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3)
 * 11 Jan 2026: *International Application Form* deadline
 * 13 Jan 2026: Shortlisting outcomes communicated
