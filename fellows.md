@@ -48,7 +48,7 @@ title: Fellows & Alumni
 </div>
 
 <!-- Team -->
-<h5>Click on each fellow to find out more</h5>
+<h5>Click on each fellow to find out more. You can also explore their [AI project placements](/sites).</h5>
 <div class="container">
   <div class="row pt-3">
 
