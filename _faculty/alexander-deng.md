@@ -11,4 +11,4 @@ Alexander is the Director of the [NHS Genomic AI Network](https://genomicainetwo
 
 
 ### Team Role
-Alexander is the Director for the [NHS Fellowship in Clinical AI](/fellowship.html), and author of the accompanying [curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf). This unique programme equips NHS healthcare leaders with the expertise to deploy and evaluate AI in clinical workflows. Alexander was awarded a [Topol Digital Fellowship](https://topol.hee.nhs.uk/digital-fellowships/fellows/alexander-deng/) to deliver this educational programme across the NHS.
+Alexander is the Director for the [NHS Fellowship in Clinical AI](/fellowship.html), and author of the accompanying [curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf). This unique programme equips NHS healthcare leaders with the expertise to deploy and evaluate AI in clinical workflows. Alexander was awarded a [Topol Digital Fellowship](https://web.archive.org/web/20250910182334/https://topol.hee.nhs.uk/digital-fellowships/fellows/alexander-deng/) to deliver this educational programme across the NHS.
