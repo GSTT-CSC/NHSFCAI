@@ -4,7 +4,7 @@ permalink: /sites/
 title: NHS AI Project Host Sites
 
 ---
-Project Site: Our [fellows](/fellows) are hosted in clinical AI projects and teams across the NHS. Click on each fellow to find out more.
+Our [fellows](/fellows) are hosted in clinical AI project placements in teams across the NHS. Click on each fellow to find out more.
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
