@@ -117,7 +117,7 @@ en: &DEFAULT_EN
           lng: "-4.34070"
 
         - name: "Shu Xiaoyi"
-          role: "AHP Physical Health Lead"
+          role: "Specialist Neurophysiotherapist"
           cohort: "5"
           region: "London"
           profession: "Physiotherapy"
