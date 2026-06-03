@@ -1,0 +1,890 @@
+---
+layout: default
+title: CONSORT-AI Checklist
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONSORT-AI Checklist</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+<style>
+  :root {
+    --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --amber: #f59e0b; --amber-bg: #fffbeb; --amber-border: #fde68a;
+    --red: #ef4444; --red-bg: #fef2f2; --red-border: #fecaca;
+    --gray: #6b7280; --gray-bg: #f9fafb; --gray-border: #e5e7eb;
+    --purple: #7c3aed; --purple-bg: #f5f3ff;
+    --blue: #3b82f6; --blue-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  .subtitle { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .subtitle a { color: var(--blue); text-decoration: none; }
+
+  .dashboard { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .stat { flex: 1; min-width: 120px; text-align: center; padding: 0.75rem; border-radius: 0.5rem; background: var(--gray-bg); }
+  .stat .num { font-size: 1.75rem; font-weight: 700; }
+  .stat .label { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat.green { background: var(--green-bg); } .stat.green .num { color: var(--green); }
+  .stat.amber { background: var(--amber-bg); } .stat.amber .num { color: var(--amber); }
+  .stat.red { background: var(--red-bg); } .stat.red .num { color: var(--red); }
+  .score-sheet-label { width: 100%; font-size: 0.72rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+
+  .section { margin-bottom: 1.5rem; }
+  .section-header { font-size: 1.1rem; font-weight: 600; padding: 0.5rem 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+  .section-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 999px; font-weight: 600; color: #fff; }
+
+  .item { background: #fff; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.5rem; border-left: 4px solid var(--gray-border); transition: border-color 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .item.green { border-left-color: var(--green); }
+  .item.amber { border-left-color: var(--amber); }
+  .item.red { border-left-color: var(--red); }
+  .item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .item-main { flex: 1; min-width: 0; }
+  .item-controls { flex: 0 0 220px; display: flex; flex-direction: column; gap: 0.45rem; }
+  .item-id { font-weight: 700; font-size: 0.85rem; color: var(--gray); white-space: nowrap; min-width: 2.5rem; }
+  .item-text { width: 100%; }
+
+  /* CONSORT 2010 block */
+  .consort-block { color: var(--blue); font-size: 0.9rem; margin-top: 0.35rem; padding: 0.5rem 0.75rem; background: var(--blue-bg); border-radius: 0.375rem; }
+  .consort-block .consort-label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.15rem; }
+  .consort-block .consort-body { font-weight: 600; color: #1e293b; }
+
+  .item-text .consort { font-weight: 600; margin-bottom: 0.25rem; }
+
+  /* CONSORT 2010 explanation */
+  .consort-explanation { font-size: 0.85rem; color: #475569; margin-top: 0.35rem; }
+  .consort-explanation .explanation-text { margin-top: 0.25rem; line-height: 1.5; padding: 0.5rem 0.75rem; background: var(--blue-bg); border-radius: 0.375rem; }
+
+  /* AI extension block */
+  .ai-ext { color: var(--purple); font-size: 0.9rem; margin-top: 0.35rem; padding: 0.5rem 0.75rem; background: var(--purple-bg); border-radius: 0.375rem; }
+  .ai-ext .ai-label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.15rem; }
+  .ai-ext .ai-body { font-weight: 600; }
+  .ai-explanation { font-size: 0.85rem; color: #475569; margin-top: 0.35rem; }
+  .ai-explanation .explanation-text { margin-top: 0.25rem; line-height: 1.5; padding: 0.5rem 0.75rem; background: var(--purple-bg); border-radius: 0.375rem; }
+
+  .item-type { font-size: 0.65rem; padding: 1px 6px; border-radius: 999px; font-weight: 600; margin-left: 0.25rem; vertical-align: middle; }
+  .item-type.extension { background: #ddd6fe; color: #5b21b6; }
+  .item-type.elaboration { background: #e0e7ff; color: #3730a3; }
+
+  .rag-buttons { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+  .rag-btn { border: 2px solid var(--gray-border); background: #fff; border-radius: 0.375rem; padding: 0.25rem 0.6rem; font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.15s; color: var(--gray); }
+  .rag-btn:hover { transform: scale(1.05); }
+  .rag-btn.pass { border-color: var(--green-border); }
+  .rag-btn.pass.active { background: var(--green); color: #fff; border-color: var(--green); }
+  .rag-btn.fail { border-color: var(--red-border); }
+  .rag-btn.fail.active { background: var(--red); color: #fff; border-color: var(--red); }
+  .rag-btn.na { border-color: var(--amber-border); }
+  .rag-btn.na.active { background: var(--amber); color: #fff; border-color: var(--amber); }
+
+  .item-notes { width: 100%; }
+  .item-notes textarea { width: 100%; border: 1px solid var(--gray-border); border-radius: 0.375rem; padding: 0.5rem; font-size: 0.8rem; resize: vertical; min-height: 4.25rem; font-family: inherit; }
+
+  .toolbar { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; padding: 0.75rem; background: #fff; border: 1px solid var(--gray-border); border-radius: 0.75rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .toolbar-group { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; width: 100%; padding-bottom: 0.5rem; }
+  .toolbar-group:not(:last-child) { border-bottom: 1px solid var(--gray-border); margin-bottom: 0.5rem; }
+  .toolbar-label { font-size: 0.7rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.1rem; }
+  .btn { padding: 0.4rem 0.75rem; border-radius: 0.45rem; border: 1px solid var(--gray-border); background: #fff; font-size: 0.8rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+  .btn:hover { background: #f1f5f9; }
+  .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .btn-primary:hover { background: #2563eb; }
+
+  .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
+  .attribution a { color: var(--blue); }
+
+  .paper-title-field { margin-bottom: 1.5rem; }
+  .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
+  .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
+  .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+
+  .legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
+
+  /* Collapsible sections */
+  .section-header { cursor: pointer; user-select: none; }
+  .section-header .chevron { transition: transform 0.2s; display: inline-block; font-size: 0.8rem; color: var(--gray); }
+  .section-header .chevron.open { transform: rotate(90deg); }
+  .section-items { overflow: hidden; transition: max-height 0.3s ease; }
+  .section-items.collapsed { max-height: 0 !important; }
+
+  @media (max-width: 640px) {
+    .item-header { flex-direction: column; }
+    .item-main, .item-controls { width: 100%; flex: 1 1 auto; }
+    .rag-buttons { align-self: flex-start; }
+    .dashboard { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>CONSORT-AI Checklist</h1>
+  <p class="subtitle">Interactive reporting checklist for clinical trials involving artificial intelligence and machine learning.</p>
+
+  <div class="paper-title-field">
+    <label for="paper-title">Paper being assessed (optional)</label>
+    <input type="text" id="paper-title" placeholder="E.g. paper title, authors, DOI..." oninput="savePaperTitle(this.value)">
+  </div>
+
+  <div class="toolbar" aria-label="Checklist toolbar">
+    <div class="toolbar-group">
+      <span class="toolbar-label">Generate Reports</span>
+      <button class="btn" onclick="exportPDF()">Download PDF</button>
+      <button class="btn" onclick="exportCSV()">Download CSV</button>
+    </div>
+    <div class="toolbar-group">
+      <span class="toolbar-label">Save progress</span>
+      <button class="btn" onclick="exportSaveFile()">Export save file</button>
+      <button class="btn" onclick="triggerSaveFileImport()">Import save file</button>
+      <input type="file" id="save-file-input" accept="application/json,.json" style="display:none" onchange="importSaveFile(event)">
+    </div>
+    <div class="toolbar-group">
+      <span class="toolbar-label">Checklist controls</span>
+      <button class="btn" onclick="expandAll()">Expand all</button>
+      <button class="btn" onclick="collapseAll()">Collapse all</button>
+      <button class="btn" onclick="resetAll()">Reset all</button>
+    </div>
+  </div>
+
+  <div id="checklist"></div>
+
+
+  <div class="dashboard" id="dashboard">
+    <div class="score-sheet-label">CONSORT 2010 core items only</div>
+    <div class="stat" id="stat-consort-total"><div class="num" id="score-consort-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat green"><div class="num" id="score-consort-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-consort-fail">0</div><div class="label">Not Reported</div></div>
+    <div class="stat amber"><div class="num" id="score-consort-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-consort-unrated">0</div><div class="label">Unrated</div></div>
+
+    <div class="score-sheet-label">CONSORT-AI extension only</div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Reported</div></div>
+    <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-ai-unrated">0</div><div class="label">Unrated</div></div>
+
+    <div class="score-sheet-label">Combined</div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
+    <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-combined-unrated">0</div><div class="label">Unrated</div></div>
+  </div>
+
+  <div class="attribution">
+    <strong>About This Tool: The CONSORT-AI Checklist</strong><br><br>
+    <strong>What is it for?</strong><br>
+    This tool is a web-based checklist implementing the CONSORT-AI (Consolidated Standards of Reporting Trials–Artificial Intelligence) extension.
+    Its primary purpose is to serve as a reporting completeness checklist for clinical trials evaluating interventions that involve artificial intelligence or machine learning. Developed by an international multi-stakeholder group, CONSORT-AI introduces 14 AI-specific items (11 extensions and 3 elaborations) that are used alongside the standard CONSORT 2010 core items. By using this checklist, reviewers can systematically evaluate whether a trial report transparently describes critical AI-specific elements.
+    <br><br>
+    This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
+    <br><br>
+    <strong>Sources and attribution</strong><br>
+    Checklist items are derived from CONSORT 2010 and CONSORT-AI. Explanatory summaries have been independently rewritten for educational and review purposes. <br><br>
+    1. Liu, X., Cruz Rivera, S., Moher, D. et al. Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: the CONSORT-AI extension. <em>Nat Med</em> 26, 1364–1374 (2020). <a href="https://doi.org/10.1038/s41591-020-1034-x" target="_blank">doi:10.1038/s41591-020-1034-x</a>. Published under CC BY 4.0.<br>
+    2. Moher, D., Hopewell, S., Schulz, K.F. et al. CONSORT 2010 Explanation and Elaboration: updated guidelines for reporting parallel group randomised trials. <em>BMJ</em> 340, c869 (2010). <a href="https://doi.org/10.1136/bmj.c869" target="_blank">doi:10.1136/bmj.c869</a>. Correction: <a href="https://doi.org/10.1136/bmj.d6131" target="_blank">BMJ 343, d6131 (2011)</a>.<br>
+    This checklist is not endorsed by the original authors.
+  </div>
+</div>
+
+<script>
+const DATA = [
+  { section: "Title and Abstract", items: [
+    { id: "1a", itemKind: "consort", consort: "Identification as a randomised trial in the title",
+      consortExpl: "Readers, indexers and database searches should be able to recognise immediately that the study is a randomised trial. The title should explicitly use the word 'randomised' so the report is correctly indexed and easily found, rather than relying on vague wording such as a comparison, evaluation or study.",
+      ai: null },
+    { id: "1b", itemKind: "consort", consort: "Structured summary of trial design, methods, results, and conclusions",
+      consortExpl: "The abstract should provide a structured overview of the trial design, methods, results and conclusions. It should include trial design, eligibility criteria and setting, interventions, objective or hypothesis, clearly defined primary outcome, allocation method, blinding status, numbers randomised and analysed, primary result with precision, important harms, trial registration and funding. The abstract should accurately reflect the full report, should not include claims absent from the paper, and should not omit important harms. See also <a href=\"https://doi.org/10.1371/journal.pmed.0050020.t001\" target=\"_blank\">CONSORT for abstracts</a>",
+      ai: null },
+    { id: "1a/b-i", aiId: "CONSORT-AI 1a,b(i)", itemKind: "ai", consort: null,
+      consortExpl: null,
+      aiType: "Elaboration",
+      ai: "Indicate that the intervention involves artificial intelligence/machine learning in the title and/or abstract and specify the type of model.",
+      explanation: "Indicating in the title and/or abstract of the trial report that the intervention involves a form of AI is encouraged, as it immediately identifies the intervention as an AI/ML intervention and also serves to facilitate indexing and searching of the trial report. The title should be understandable by a wide audience; therefore, a broader umbrella term such as 'artificial intelligence' or 'machine learning' is encouraged. More-precise terms should be used in the abstract, rather than the title, unless they are broadly recognised as being a form of AI/ML. Specific terminology relating to the model type and architecture should be detailed in the abstract." },
+    { id: "1a/b-ii", aiId: "CONSORT-AI 1a,b(ii)", itemKind: "ai", consort: null,
+      consortExpl: null,
+      aiType: "Elaboration",
+      ai: "State the intended use of the AI intervention within the trial in the title and/or abstract.",
+      explanation: "Describe the intended use of the AI intervention in the trial report title and/or abstract. This should describe the purpose of the AI intervention and the disease context. Some AI interventions may have multiple intended uses, or the intended use may evolve over time. Therefore, documenting this allows readers to understand the intended use of the algorithm at the time of the trial." },
+  ]},
+  { section: "Introduction", items: [
+    { id: "2a", itemKind: "ai", consort: "Scientific background and explanation of rationale",
+      consortExpl: "The introduction should explain the clinical or scientific problem being addressed and why the trial was needed. It should summarise relevant prior evidence, ideally including a systematic review of previous similar trials or a statement that no such trials exist. It should report evidence of the benefits and harms of the active interventions, and suggest a plausible explanation for how the interventions might work if this is not obvious.",
+      aiType: "Extension",
+      ai: "Explain the intended use of the AI intervention in the context of the clinical pathway, including its purpose and its intended users (for example, healthcare professionals, patients, public).",
+      explanation: "In order to clarify how the AI intervention is intended to fit into a clinical pathway, a detailed description of its role should be included in the background of the trial report. AI interventions may be designed to interact with different users, including healthcare professionals, patients and the public, and their roles can be wide-ranging (for example, the same AI intervention could theoretically be replacing, augmenting or adjudicating components of clinical decision-making). Clarifying the intended use of the AI intervention and its intended user helps readers understand the purpose for which the AI intervention was evaluated in the trial." },
+    { id: "2b", itemKind: "consort", consort: "Specific objectives or hypotheses",
+      consortExpl: "The manuscript should state the trial's specific objectives or hypotheses. Objectives are the questions the trial was designed to answer; hypotheses are usually more specific, pre-specified questions that can be tested statistically. These should make clear what question the trial was designed to answer, usually in relation to the primary outcome.",
+      ai: null },
+  ]},
+  { section: "Methods — Trial Design", items: [
+    { id: "3a", consort: "Description of trial design (such as parallel, factorial) including allocation ratio",
+      consortExpl: "The report should clearly state the trial design, such as parallel group, crossover, factorial, cluster, multi-arm or other design, and the allocation ratio, such as 1:1 or 2:1. It should state the conceptual framework, such as superiority, non-inferiority or equivalence, and the unit of randomisation, for example patient, GP practice or lesion. For drug trials, the trial phase may also be relevant. If the design is less common, the report should explain the choice and give enough detail for readers to understand how the comparisons and analyses work.",
+      ai: null },
+    { id: "3b", consort: "Important changes to methods after trial commencement (such as eligibility criteria), with reasons",
+      consortExpl: "Any important changes to trial methods after the study began, and the reasons for them, should be reported. Examples include changes to eligibility criteria, treatment regimens, allocation ratio, follow-up duration, recruitment sites, planned analyses, sample size, number of treatment arms, or dropping a centre with poor data quality. The report should state whether changes were made without breaking blinding on accumulating outcome data, or whether an independent data monitoring committee recommended changes after reviewing unblinded data. Formal adaptive design changes should be described clearly enough for readers to assess their effect on validity and interpretation.",
+      ai: null },
+  ]},
+  { section: "Methods — Participants", items: [
+    { id: "4a-i", consort: "Eligibility criteria for participants",
+      consortExpl: "Eligibility criteria for participants should be clearly described, including both inclusion and exclusion criteria where relevant. Typical criteria may relate to the nature and stage of disease, exclusion of people thought particularly vulnerable to harm, and legal or ethical requirements such as informed consent. The report should also make clear how participants were recruited, for example by referral, clinic screening, registry invitation, advertisement or self-selection, because this affects generalisability.",
+      aiType: "Elaboration",
+      ai: "State the inclusion and exclusion criteria at the level of participants.",
+      explanation: "The inclusion and exclusion criteria should be defined at the participant level as per usual practice in non-AI interventional trial reports. This is distinct from the inclusion and exclusion criteria made at the input-data level, which is addressed in item 4a (ii)." },
+    { id: "4a-ii", consort: "Eligibility criteria for participants",
+      consortExpl: null,
+      aiType: "Extension",
+      ai: "State the inclusion and exclusion criteria at the level of the input data.",
+      explanation: "'Input data' refers to the data required by the AI intervention to serve its purpose (for example, for a breast-cancer diagnostic system, the input data could be the unprocessed or vendor-specific post-processing mammography scan; for an early-warning system, the input data could be physiological measurements or laboratory results from the electronic health record). The trial report should pre-specify if there were minimum requirements for the input data (such as image resolution, quality metrics or data format) that determined pre-randomization eligibility. It should specify when, how and by whom this was assessed. For example, if a participant met the eligibility criteria for lying flat for a CT scan as per item 4a (i), but the scan quality was compromised to such a level that it was deemed unfit for use by the AI system, this should be reported as an exclusion criterion at the input-data level. Note that where input data are acquired after randomization, any exclusion is considered to be from the analysis, not from enrollment (CONSORT item 13b)." },
+    { id: "4b", consort: "Settings and locations where the data were collected",
+      consortExpl: "The report should specify where and in what settings the data were collected. Include the number and type of settings, such as primary care, secondary care, tertiary care, community, hospital clinic or inpatient unit, and the geographical location, including country, city if relevant, and immediate environment. It should be clear whether the trial was single-centre or multicentre, and the care providers involved should be described where relevant. Report contextual factors that could influence applicability or results, such as organisation, experience, resources, baseline risk, social, economic or cultural setting, climate, transport problems, or delays in administering interventions.",
+      aiType: "Extension",
+      ai: "Describe how the AI intervention was integrated into the trial setting, including any onsite or offsite requirements.",
+      explanation: "There are limitations to the generalisability of AI algorithms, one of which is when they are used outside of their development environment. AI systems are dependent on their operational environment, and the report should provide details of the hardware and software requirements to allow technical integration of the AI intervention at each study site. For example, it should be stated if the AI intervention required vendor-specific devices, if there was specialised computing hardware at each site, or if the site had to support cloud integration, particularly if this was vendor specific. If any changes to the algorithm were required at each study site as part of the implementation procedure (such as fine-tuning the algorithm on local data), then this process should also be clearly described." },
+  ]},
+  { section: "Methods — Interventions", items: [
+    { id: "5-i", consort: "The interventions for each group with sufficient details to allow replication, including how and when they were actually administered",
+      consortExpl: "Each intervention, including controls and usual care, should be described in enough detail to allow replication. For a drug intervention, relevant details include drug name, dose, route, timing, duration, withholding rules, titration regimen and conditions for restarting treatment. For non-drug interventions, relevant details may include equipment, procedure timing, location of administration, standardisation procedures, provider expertise and training. If usual care is the control, state what usual care consisted of. If a group received a combination of interventions, describe each component, the order in which components were introduced or withdrawn, and any triggers for doing so.",
+      aiType: "Extension",
+      ai: "State which version of the AI algorithm was used.",
+      explanation: "Similar to other forms of software as a medical device, AI systems are likely to undergo multiple iterations and updates during their lifespan. It is therefore important to specify which version of the AI system was used in the clinical trial, whether this is the same as the version evaluated in previous studies that have been used to justify the study rationale, and whether the version changed during the conduct of the trial. If applicable, the report should describe what has changed between the relevant versions and the rationales for the changes. Where available, the report should include a regulatory marking reference, such as a unique device identifier, that requires a new identifier for updated versions of the device." },
+    { id: "5-ii", consort: "Interventions for each group",
+      consortExpl: null,
+      aiType: "Extension",
+      ai: "Describe how the input data were acquired and selected for the AI intervention.",
+      explanation: "The measured performance of any AI system may be critically dependent on the nature and quality of the input data. A description of the input-data handling, including acquisition, selection and pre-processing before analysis by the AI system, should be provided. Completeness and transparency of this description is integral to the replicability of the intervention beyond the clinical trial in real-world settings. It also helps readers identify whether input-data-handling procedures were standardised across trial sites." },
+    { id: "5-iii", consort: "Interventions for each group",
+      consortExpl: null,
+      aiType: "Extension",
+      ai: "Describe how poor-quality or unavailable input data were assessed and handled.",
+      explanation: "'Input data' refers to the data required by the AI intervention to serve its purpose. The performance of AI systems may be compromised as a result of poor quality or missing input data (for example, excessive movement artefact on an electrocardiogram). The trial report should report the amount of missing data, as well as how this was identified and handled. The report should also specify if there was a minimum standard required for the input data and, where this standard was not achieved, how this was handled (including the impact on, or any changes to, the participant care pathway). Poor quality or unavailable data can also affect non-AI interventions. It is therefore important that this information is reported equally in the control intervention, where relevant. If this minimum quality standard was different from the inclusion criteria for input data used to assess eligibility pre-randomisation, this should be stated." },
+    { id: "5-iv", consort: "Interventions for each group",
+      consortExpl: null,
+      aiType: "Extension",
+      ai: "Specify whether there was human–AI interaction in the handling of the input data, and what level of expertise was required of users.",
+      explanation: "A description of the human–AI interface and the requirements for successful interaction when input data are handled should be provided — for example, clinician-led selection of regions of interest from a histology slide that is then interpreted by an AI diagnostic system, or an endoscopist's selection of colonoscopy video clips as input data for an algorithm designed to detect polyps. A description of any user training provided and instructions for how users should handle the input data provides transparency and replicability of trial procedures. Poor clarity on the human–AI interface may lead to lack of a standard approach and may carry ethical implications, particularly in the event of harm. For example, it may become unclear whether an error case occurred due to human deviation from the instructed procedure, or if it was an error made by the AI system." },
+    { id: "5-v", consort: "Interventions for each group",
+      consortExpl: null,
+      aiType: "Extension",
+      ai: "Specify the output of the AI intervention.",
+      explanation: "The output of the AI intervention should be clearly specified in the trial report. For example, an AI system may output a diagnostic classification or probability, a recommended action, an alarm alerting to an event, an instigated action in a closed-loop system (such as titration of drug infusions) or another output. The nature of the AI intervention's output has direct implications on its usability and how it may lead to downstream actions and outcomes." },
+    { id: "5-vi", consort: "Interventions for each group",
+      consortExpl: null,
+      aiType: "Extension",
+      ai: "Explain how the AI intervention’s outputs contributed to decision-making or other elements of clinical practice.",
+      explanation: "Since health outcomes may also critically depend on how humans interact with the AI intervention, the report should explain how the outputs of the AI system were used to contribute to decision-making or other elements of clinical practice. This should include adequate description of downstream interventions that can affect outcomes. Any effects of human–AI interaction on the outputs should be described in detail, including the level of expertise required to understand the outputs and any training and/or instructions provided for this purpose. For example, a skin cancer detection system that produced a percentage likelihood as its output should be accompanied by an explanation of how this output was interpreted and acted upon by the user, specifying both the intended pathways (e.g. skin lesion excision if the diagnosis is positive) and the thresholds for entry to these pathways (e.g. excision if the probability is >80%). The information produced by comparator interventions should be similarly described. Any discrepancy in how decision-making occurred versus how it was intended to occur (as specified in the trial protocol) should be reported." },
+  ]},
+  { section: "Methods — Outcomes", items: [
+    { id: "6a", consort: "Completely defined pre-specified primary and secondary outcome measures, including how and when they were assessed",
+      consortExpl: "All primary and secondary outcomes should be clearly defined, including what was measured, how it was measured, who assessed it, how many assessors there were where relevant, and when it was assessed. The primary outcome and primary time point should be explicitly identified. Multiple primary outcomes should generally be avoided unless justified, because they complicate interpretation. Outcomes should be defined sufficiently for others to use the same outcomes. Validated or standardised measurement tools should be named where used, and the provenance and properties of scales should be reported where relevant.",
+      ai: null },
+    { id: "6b", consort: "Any changes to trial outcomes after the trial commenced, with reasons",
+      consortExpl: "Any changes to trial outcomes after the trial began should be reported and explained. This includes changes to the outcome itself, the measurement method, the timing of assessment, or whether an outcome was treated as primary or secondary. Changes may occur because of external evidence, lower than expected recruitment or event rates, or other circumstances. Changes based on unblinded accumulating data are especially problematic unless they were part of a pre-specified adaptive design and should be clearly identified and justified.",
+      ai: null },
+  ]},
+  { section: "Methods — Sample Size", items: [
+    { id: "7a", consort: "How sample size was determined",
+      consortExpl: "The report should explain how the sample size was decided, including any formal calculation. Where applicable, state the primary outcome used, the expected outcome in each group or expected control-group risk, the clinically important target difference, alpha level, power or beta level, standard deviation for continuous outcomes, allowance for attrition or non-compliance, and the resulting target sample size per group. If the actual sample size differed from the intended sample size, explain why. Post hoc power calculations based on trial results are not useful; precision is better conveyed by confidence intervals.",
+      ai: null },
+    { id: "7b", consort: "When applicable, explanation of any interim analyses and stopping guidelines",
+      consortExpl: "If interim analyses or stopping rules were used, the report should describe when analyses occurred, how many interim looks took place, what triggered them, who reviewed them, what statistical methods or stopping boundaries were used, and whether they were planned before the trial began, before a data monitoring committee saw allocation data, or later. The report should describe any correction for repeated looks at accumulating data and whether the rule was used formally or as an aid to decision-making.",
+      ai: null },
+  ]},
+  { section: "Methods — Randomisation", items: [
+    { id: "8a", consort: "Method used to generate the random allocation sequence",
+      consortExpl: "The method used to generate the random allocation sequence should be described in detail in the main article, not only in supplementary material. Random allocation means that each participant has a known probability of receiving each intervention and the assignment is determined by an unpredictable chance process. Adequate methods include a random-number table or computerised random-number generator. Deterministic methods such as alternation, date of birth, hospital number or record number do not meet this definition and should not be described as random or quasi-random. If minimisation was used, it should be explicitly identified.",
+      ai: null },
+    { id: "8b", consort: "Type of randomisation; details of any restriction (such as blocking and block size)",
+      consortExpl: "Details of the randomisation type and any restrictions should be provided. State whether simple, blocked, stratified, minimised or another method was used. If no restriction was used, state that simple randomisation was done. For blocked randomisation, report how blocks were generated, block size or sizes, whether block size was fixed or randomly varied, and whether trialists became aware of block sizes. For stratification, report the factors used, such as centre, sex or disease stage, the cut-off values within strata, and the restriction method. For minimisation, report the variables incorporated and whether a random element was used.",
+      ai: null },
+    { id: "9", consort: "Mechanism used to implement the random allocation sequence (such as sequentially numbered containers), describing any steps taken to conceal the sequence until interventions were assigned",
+      consortExpl: "The allocation concealment mechanism should be described, including how the random sequence was implemented and kept hidden until assignment. Eligibility decisions and informed consent should occur before the next assignment is known. Examples include central randomisation, pharmacy-controlled allocation, numbered identical containers, or sequentially numbered opaque sealed envelopes. Allocation concealment prevents selection bias before assignment and should not be confused with blinding after assignment. If envelopes are used, report that they were sequentially numbered, opaque, sealed, opened in sequence, and opened only after participant details were written on the envelope.",
+      ai: null },
+    { id: "10", consort: "Who generated the random allocation sequence, who enrolled participants, and who assigned participants to interventions",
+      consortExpl: "The report should specify who generated the allocation sequence, who prepared or controlled the concealment mechanism, who enrolled participants, and who assigned interventions. The process has three steps: sequence generation, allocation concealment, and implementation. Ideally, people involved in generating or concealing the sequence should be separate from those enrolling participants or assigning the intervention. The report should state where the allocation list was stored if relevant, because a person with access to the list could subvert assignment even when the sequence itself was random.",
+      ai: null },
+  ]},
+  { section: "Methods — Blinding", items: [
+    { id: "11a", consort: "If done, who was blinded after assignment to interventions (for example, participants, care providers, those assessing outcomes) and how",
+      consortExpl: "State who was blinded after assignment to interventions and describe how blinding was maintained. Explicitly name the relevant groups, such as participants, healthcare providers, data collectors, outcome assessors or adjudicators, and data analysts. Avoid relying only on ambiguous labels such as single blind, double blind or triple blind. Blinding may be especially important for subjective outcomes, but even where it is not possible, the report should state who was and was not blinded and report any known unblinding.",
+      ai: null },
+    { id: "11b", consort: "If relevant, description of the similarity of interventions",
+      consortExpl: "If blinding depended on similarity between interventions, describe that similarity. Relevant features may include appearance, taste, smell, size, packaging, placebo composition, method of administration, procedure timing, attention given, or other features that could reveal assignment. Report any known compromises in blinding, such as necessary unblinding during the trial. Do not rely on end-of-trial guessing tests as the main evidence of blinding success.",
+      ai: null },
+  ]},
+  { section: "Methods — Statistical Methods", items: [
+    { id: "12a", consort: "Statistical methods used to compare groups for primary and secondary outcomes",
+      consortExpl: "The statistical methods used for each primary and secondary outcome should be described with enough detail to assess and reproduce the analysis. Include the model or test used, treatment effect measure, confidence interval approach, planned covariates, and handling of repeated or clustered observations where relevant. Actual P values are preferable to imprecise threshold reports such as P<0.05. Analyses should not treat multiple observations from the same participant, such as measurements from different body parts, as independent unless an appropriate statistical method accounts for this.",
+      ai: null },
+    { id: "12b", consort: "Methods for additional analyses, such as subgroup analyses and adjusted analyses",
+      consortExpl: "Describe any additional analyses, such as subgroup, adjusted, sensitivity or exploratory analyses, and specify whether they were pre-specified. For subgroup analyses, state the subgroup variables and whether interaction tests were used; a subgroup effect should not be inferred from one significant and one non-significant P value in separate subgroup analyses. For adjusted analyses, state the covariates, rationale, how continuous variables were handled, and whether the analysis was planned or suggested by the data. Adjustment should not be chosen merely because baseline differences are statistically significant.",
+      ai: null },
+  ]},
+  { section: "Results — Participant Flow", items: [
+    { id: "13a", consort: "For each group, the numbers of participants who were randomised, received intended treatment, and were analysed for the primary outcome",
+      consortExpl: "The report should show, for each group, how many participants were randomised, allocated, received the intended intervention, did not receive the intended intervention, completed follow-up and were analysed for the primary outcome. A participant flow diagram is strongly recommended, especially where exclusions, non-receipt of intervention or losses to follow-up occurred. If available, also report the number assessed for eligibility and the numbers excluded before randomisation with reasons. The flow information should distinguish attrition, such as loss to follow-up, from investigator-determined exclusions, such as ineligibility, withdrawal from treatment or poor adherence.",
+      ai: null },
+    { id: "13b", consort: "For each group, losses and exclusions after randomisation, together with reasons",
+      consortExpl: "Report all losses and exclusions after randomisation for each group, with reasons. Distinguish loss to follow-up, discontinuation of intervention, protocol deviations, ineligibility discovered after randomisation, missing outcome data and exclusions from analysis. The phrase protocol deviation is not sufficient on its own; the report should give the nature of the deviation and the exact reason for any exclusion after randomisation.",
+      ai: null },
+  ]},
+  { section: "Results — Recruitment", items: [
+    { id: "14a", consort: "Dates defining the periods of recruitment and follow-up",
+      consortExpl: "The report should specify the dates defining recruitment and follow-up, placing the study in historical context because routine care and concurrent therapies change over time. Where follow-up varies between participants, report enough information to understand the follow-up period, such as the final follow-up date and the minimum, maximum and median follow-up. Recruitment rate may also be useful, especially for other investigators planning similar trials.",
+      ai: null },
+    { id: "14b", consort: "Why the trial ended or was stopped",
+      consortExpl: "The report should state why the trial ended or was stopped. Make clear whether it ended as planned, reached a sample size or event target, stopped early for benefit, harm or futility, or ended because of external factors such as recruitment problems, funding, supply issues or new evidence. If stopped early, state whether stopping was independent of results or data-driven, who made the decision, whether a data monitoring committee was involved, the role of the funder, and whether interim results were available to the funder.",
+      ai: null },
+  ]},
+  { section: "Results — Baseline Data & Numbers Analyzed", items: [
+    { id: "15", consort: "A table showing baseline demographic and clinical characteristics for each group",
+      consortExpl: "Present baseline demographic and clinical characteristics for each group, usually in a table. Include variables important to prognosis or interpretation. For continuous variables, report average values with variability, such as mean and standard deviation, or median and centile range for asymmetrical distributions. Standard errors and confidence intervals are not appropriate for describing baseline variability. Ordered categories, such as disease stage, should usually be reported as numbers and percentages for each category rather than treated as continuous variables. Avoid treating baseline significance tests as evidence of randomisation quality; any baseline differences after proper randomisation are due to chance.",
+      ai: null },
+    { id: "16", consort: "For each group, number of participants (denominator) included in each analysis and whether the analysis was by original assigned groups",
+      consortExpl: "For each analysis, report the number of participants per group and whether analysis was by original assignment. Denominators should be clear for each outcome, especially for binary outcomes and where missing data, non-adherence, per-protocol analysis or modified intention-to-treat analysis affects who was included. Do not rely only on labels such as intention-to-treat, modified intention-to-treat or per protocol; state exactly who was included and excluded. Describe how missing outcomes were handled, including any imputation method. Last observation carried forward is simple but can introduce bias and should not be used without justification.",
+      ai: null },
+  ]},
+  { section: "Results — Outcomes & Estimation", items: [
+    { id: "17a", consort: "For each primary and secondary outcome, results for each group, and the estimated effect size and its precision (such as 95% confidence interval)",
+      consortExpl: "For each primary and secondary outcome, report results for each group and the estimated effect size with its precision, such as a 95% confidence interval. Use appropriate group summaries, such as counts and denominators for binary outcomes, means and standard deviations for continuous outcomes, or hazard ratios for time-to-event outcomes. The confidence interval should be for the between-group treatment effect, not only separate confidence intervals for each group. Results should not be reported solely as P values. Report all planned primary and secondary outcomes, not only statistically significant or interesting ones. Where interim analyses occurred, interpretation should focus on final results at trial closure rather than interim findings.",
+      ai: null },
+    { id: "17b", consort: "For binary outcomes, presentation of both absolute and relative effect sizes is recommended",
+      consortExpl: "For binary outcomes, present both absolute and relative effect sizes, with confidence intervals. Examples include risk difference alongside risk ratio or odds ratio. Relative effects alone can exaggerate practical importance, especially where baseline risk is low or the outcome is rare; absolute effects alone may be less generalisable because they depend on baseline risk.",
+      ai: null },
+  ]},
+  { section: "Results — Ancillary Analyses & Harms", items: [
+    { id: "18", consort: "Results of any other analyses performed, including subgroup analyses and adjusted analyses, distinguishing pre-specified from exploratory",
+      consortExpl: "Report the results of any additional analyses, including subgroup and adjusted analyses, and distinguish planned analyses from exploratory ones. For subgroup analyses, state which subgroups were examined, why they were chosen, whether they were pre-specified, how many were pre-specified, and whether formal interaction tests were used. Where possible, report the estimated difference in intervention effect between subgroups with a confidence interval, not just P values. For adjusted analyses, state whether the adjustment and variables were planned, and report both unadjusted and adjusted analyses where done.",
+      ai: null },
+    { id: "19", consort: "All important harms or unintended effects in each group (for specific guidance see CONSORT for harms)",
+      consortExpl: "All important harms or unintended effects should be reported for each group. Define adverse events where relevant, explain how harms were collected and attributed, and use standardised criteria where appropriate. Report the absolute risk of each adverse event by group, using suitable metrics for recurrent events where needed, and include severe adverse events, withdrawals or discontinuations due to harms, and whether events were judged related to the intervention. The discussion should balance benefits and harms.",
+      aiType: "Extension",
+      ai: "Describe results of any analysis of performance errors and how errors were identified, where applicable. If no such analysis was planned or done, justify why not.",
+      explanation: "Reporting performance errors and failure case analysis is especially important for AI interventions. AI systems can make errors that may be hard to foresee but that, if allowed to be deployed at scale, could have catastrophic consequences. Therefore, reporting cases of error and defining risk-mitigation strategies are important for informing when, and for which populations, the intervention can be safely implemented. The results of any performance-error analysis should be reported and the implications of the results should be discussed." },
+  ]},
+  { section: "Discussion", items: [
+    { id: "20", consort: "Trial limitations, addressing sources of potential bias, imprecision, and, if relevant, multiplicity of analyses",
+      consortExpl: "Discuss the study's limitations, including sources of potential bias, imprecision and multiplicity of analyses. Consider limitations arising from design, conduct, measurement, missing data, analysis choices and the precision of effect estimates. Discuss limitations in measurement validity where relevant, such as use of a scale in a population for which it was not validated or assessors not being trained. Distinguish statistical significance from clinical importance, and do not interpret a non-significant result as showing equivalence unless the trial was designed and analysed to test equivalence or non-inferiority.",
+      ai: null },
+    { id: "21", consort: "Generalisability (external validity, applicability) of the trial findings",
+      consortExpl: "Discuss how generalisable the trial findings are to other settings, populations and versions of the intervention. Consider participant eligibility, recruitment, age, sex, disease severity, comorbidities, setting, care level, comparator, intervention delivery, dose, timing, route, concomitant therapies, outcomes, related outcomes not assessed, follow-up duration, baseline risk and control-group risk. Consider the proportion of eligible people who refused or were not enrolled, and patient or clinician preferences where relevant. Measures such as number needed to treat for benefit or harm can help assess applicability to patients with different baseline risks.",
+      ai: null },
+    { id: "22", consort: "Interpretation consistent with results, balancing benefits and harms, and considering other relevant evidence",
+      consortExpl: "Interpret the results in light of the trial data and other relevant evidence, balancing benefits and harms. Avoid conclusions that go beyond the results. Compare findings with previous trials and, where possible, an up-to-date systematic review of similar trials. The discussion should be as systematic as possible and based on a comprehensive search, rather than selecting only studies that support the current trial's findings.",
+      ai: null },
+  ]},
+  { section: "Other Information", items: [
+    { id: "23", consort: "Registration number and name of trial registry",
+      consortExpl: "The trial registration number and registry name should be provided. Registration supports transparency, helps detect selective reporting, and reduces the risk of covert duplicate publication. If the trial was not registered, the report should explicitly state this and explain why.",
+      ai: null },
+    { id: "24", consort: "Where the full trial protocol can be accessed, if available",
+      consortExpl: "State where the full trial protocol can be accessed, if available. This means the protocol for the complete trial, not merely a protocol for a specific procedure within the trial. Access to the protocol allows readers to compare planned and reported methods, outcomes and analyses, and to identify unreported or changed elements. Possible access routes include a journal supplement, a published protocol paper, a registry entry, an institutional website or another stable public location.",
+      ai: null },
+    { id: "25", consort: "Sources of funding and other support (such as supply of drugs), role of funders",
+      consortExpl: "List all sources of funding and other support, such as supply or preparation of drugs, devices, software or equipment, and describe the role of funders. State whether funders influenced study design, conduct, data collection, analysis, interpretation, manuscript preparation, manuscript review, the decision to submit for publication, or logistical support. If the funder had no such involvement, state this explicitly.",
+      aiType: "Extension",
+      ai: "State whether and how the AI intervention and/or its code can be accessed, including any restrictions to access or re-use.",
+      explanation: "The trial report should make it clear whether and how the AI intervention and/or its code can be accessed or re-used. This should include details about the licence and any restrictions to access." },
+  ]},
+];
+
+let state = {};
+let paperTitle = '';
+let sectionOpen = {}; // track which sections are open
+let detailsExpanded = true; // explanations open by default
+function getRowsForSection(sec) {
+  const rows = [];
+  sec.items.forEach(item => {
+    if (item.consort && item.consortExpl) {
+      const consortDisplayId = item.consortId || item.id.replace(/-[ivx]+$/i, '');
+      rows.push({
+        source: item,
+        stateId: `consort-${item.id}`,
+        displayId: consortDisplayId,
+        shortId: consortDisplayId,
+        itemKind: 'consort',
+        consort: item.consort,
+        consortExpl: item.consortExpl,
+        ai: null,
+        aiType: null,
+        explanation: null
+      });
+    }
+    if (item.ai) {
+      rows.push({
+        source: item,
+        stateId: `ai-${item.id}`,
+        displayId: item.aiId || `CONSORT-AI ${item.id}`,
+        shortId: item.id,
+        itemKind: 'ai',
+        consort: null,
+        consortExpl: null,
+        ai: item.ai,
+        aiType: item.aiType,
+        explanation: item.explanation
+      });
+    }
+  });
+  return rows;
+}
+
+function getAllRows(kind) {
+  const rows = [];
+  DATA.forEach(sec => {
+    getRowsForSection(sec).forEach(row => {
+      if (!kind || row.itemKind === kind) rows.push({ ...row, section: sec.section });
+    });
+  });
+  return rows;
+}
+
+const totalItems = getAllRows(null).length;
+const consortItems = getAllRows('consort').length;
+const aiItems = getAllRows('ai').length;
+
+function loadState() {
+  try { const saved = localStorage.getItem('consort-ai-state-v3'); if (saved) state = JSON.parse(saved); } catch(e) {}
+  try { paperTitle = localStorage.getItem('consort-ai-paper-title') || ''; } catch(e) {}
+  try { const so = localStorage.getItem('consort-ai-sections'); if (so) sectionOpen = JSON.parse(so); } catch(e) {}
+}
+function saveState() {
+  try { localStorage.setItem('consort-ai-state-v3', JSON.stringify(state)); } catch(e) {}
+}
+function savePaperTitle(val) {
+  paperTitle = val;
+  try { localStorage.setItem('consort-ai-paper-title', val); } catch(e) {}
+}
+function saveSections() {
+  try { localStorage.setItem('consort-ai-sections', JSON.stringify(sectionOpen)); } catch(e) {}
+}
+function toggleSection(secName) {
+  sectionOpen[secName] = !sectionOpen[secName];
+  saveSections();
+  const items = document.getElementById('sec-items-' + secName.replace(/[^a-zA-Z0-9]/g,''));
+  const chevron = document.getElementById('sec-chev-' + secName.replace(/[^a-zA-Z0-9]/g,''));
+  if (sectionOpen[secName]) {
+    items.classList.remove('collapsed');
+    chevron.classList.add('open');
+  } else {
+    items.classList.add('collapsed');
+    chevron.classList.remove('open');
+  }
+}
+
+function render() {
+  const el = document.getElementById('checklist');
+  el.innerHTML = '';
+  DATA.forEach(sec => {
+    const rows = getRowsForSection(sec);
+    const div = document.createElement('div');
+    div.className = 'section';
+    const secRatings = rows.map(row => (state[row.stateId] || {}).rating || null);
+    const secPass = secRatings.filter(r => r === 'pass').length;
+    const secFail = secRatings.filter(r => r === 'fail').length;
+    const secNa = secRatings.filter(r => r === 'na').length;
+    const secNone = secRatings.filter(r => !r).length;
+    let badgeColor = '#d1d5db';
+    if (secNone === 0 && secFail === 0) badgeColor = 'var(--green)';
+    else if (secFail > 0) badgeColor = 'var(--red)';
+    else if (secPass > 0 || secNa > 0) badgeColor = 'var(--amber)';
+
+    const secKey = sec.section.replace(/[^a-zA-Z0-9]/g,'');
+    const isOpen = !!sectionOpen[sec.section];
+    div.innerHTML = `<div class="section-header" onclick="toggleSection('${sec.section}')"><span class="chevron ${isOpen?'open':''}" id="sec-chev-${secKey}">&#9654;</span><span>${sec.section}</span><span class="section-badge" style="background:${badgeColor}">${secPass + secNa}/${rows.length}</span></div>`;
+    const itemsContainer = document.createElement('div');
+    itemsContainer.className = 'section-items' + (isOpen ? '' : ' collapsed');
+    itemsContainer.id = 'sec-items-' + secKey;
+    rows.forEach(item => {
+      const s = state[item.stateId] || {};
+      const cls = s.rating === 'pass' ? 'green' : s.rating === 'fail' ? 'red' : s.rating === 'na' ? 'amber' : '';
+      const itemDiv = document.createElement('div');
+      itemDiv.className = `item ${cls}`;
+
+      // CONSORT 2010 block
+      let consortHeaderBlock = '';
+      if (item.itemKind === 'consort') {
+        consortHeaderBlock = `
+          <div class="consort-block">
+            <span class="consort-label">CONSORT 2010</span>
+            <span class="consort-body">${item.consort}</span>
+          </div>`;
+      }
+      // CONSORT 2010 explanation
+      let consortBlock = '';
+      if (item.consortExpl) {
+        consortBlock = `
+          <div class="consort-explanation">
+            <div class="explanation-text">${item.consortExpl}</div>
+          </div>`;
+      }
+
+      // AI extension block
+      let aiBlock = '';
+      if (item.ai) {
+        const typeBadge = item.aiType === 'Extension'
+          ? '<span class="item-type extension">Extension</span>'
+          : '<span class="item-type elaboration">Elaboration</span>';
+        aiBlock = `
+          <div class="ai-ext">
+            <span class="ai-label">CONSORT-AI ${typeBadge}</span>
+            <span class="ai-body">${item.ai}</span>
+          </div>`;
+        if (item.explanation) {
+          aiBlock += `
+          <div class="ai-explanation">
+            <div class="explanation-text">${item.explanation}</div>
+          </div>`;
+        }
+      }
+
+      itemDiv.innerHTML = `
+        <div class="item-header">
+          <span class="item-id">${item.shortId || item.displayId}</span>
+          <div class="item-main">
+            <div class="item-text">
+              ${consortHeaderBlock}
+              ${consortBlock}
+              ${aiBlock}
+            </div>
+          </div>
+          <div class="item-controls">
+            <div class="rag-buttons">
+              <button class="rag-btn pass ${s.rating === 'pass' ? 'active' : ''}" onclick="rate('${item.stateId}','pass')">Reported</button>
+              <button class="rag-btn fail ${s.rating === 'fail' ? 'active' : ''}" onclick="rate('${item.stateId}','fail')">Not Reported</button>
+              <button class="rag-btn na ${s.rating === 'na' ? 'active' : ''}" onclick="rate('${item.stateId}','na')">N/A</button>
+            </div>
+            <div class="item-notes">
+              <textarea id="note-${item.stateId}" placeholder="Page ref / notes..." oninput="note('${item.stateId}', this.value)">${s.notes || ''}</textarea>
+            </div>
+          </div>
+        </div>`;
+      itemsContainer.appendChild(itemDiv);
+    });
+    div.appendChild(itemsContainer);
+    el.appendChild(div);
+  });
+  updateDashboard();
+}
+
+function rate(id, rating) {
+  const scrollY = window.scrollY;
+  if (!state[id]) state[id] = {};
+  state[id].rating = state[id].rating === rating ? null : rating;
+  saveState();
+  render();
+  requestAnimationFrame(() => window.scrollTo(0, scrollY));
+}
+
+function note(id, text) {
+  if (!state[id]) state[id] = {};
+  state[id].notes = text;
+  saveState();
+}
+
+
+function countItems(kind) {
+  const rows = getAllRows(kind);
+  let pass = 0, fail = 0, na = 0;
+  rows.forEach(row => {
+    const r = (state[row.stateId] || {}).rating;
+    if (r === 'pass') pass++; else if (r === 'fail') fail++; else if (r === 'na') na++;
+  });
+  const total = rows.length;
+  const unrated = total - pass - fail - na;
+  const applicable = total - na;
+  const pct = applicable > 0 ? Math.round((pass / applicable) * 100) : 0;
+  return { pass, fail, na, unrated, total, pct };
+}
+
+function setScore(prefix, counts) {
+  document.getElementById(`score-${prefix}-total`).textContent = counts.pct + '%';
+  document.getElementById(`score-${prefix}-pass`).textContent = counts.pass;
+  document.getElementById(`score-${prefix}-fail`).textContent = counts.fail;
+  document.getElementById(`score-${prefix}-na`).textContent = counts.na;
+  document.getElementById(`score-${prefix}-unrated`).textContent = counts.unrated;
+}
+
+function updateDashboard() {
+  const consort = countItems('consort');
+  const ai = countItems('ai');
+  const combined = countItems(null);
+
+  setScore('consort', consort);
+  setScore('ai', ai);
+  setScore('combined', combined);
+}
+
+function expandAll() {
+  detailsExpanded = true;
+  DATA.forEach(sec => { sectionOpen[sec.section] = true; });
+  saveSections();
+  document.querySelectorAll('.section-items').forEach(el => el.classList.remove('collapsed'));
+  document.querySelectorAll('.chevron').forEach(el => el.classList.add('open'));
+  document.querySelectorAll('details').forEach(d => d.open = true);
+}
+function collapseAll() {
+  detailsExpanded = false;
+  DATA.forEach(sec => { sectionOpen[sec.section] = false; });
+  saveSections();
+  document.querySelectorAll('.section-items').forEach(el => el.classList.add('collapsed'));
+  document.querySelectorAll('.chevron').forEach(el => el.classList.remove('open'));
+  document.querySelectorAll('details').forEach(d => d.open = false);
+}
+
+function resetAll() {
+  if (!confirm('Reset all ratings and notes?')) return;
+  state = {};
+  saveState(); render();
+}
+
+function getExportTimestamp() {
+  const now = new Date();
+  const datePart = now.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  }).replace(/ /g, ' ');
+  const timePart = now.toLocaleTimeString('en-GB', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+  return `${datePart} ${timePart}`;
+}
+
+
+function formatRatingLabel(rating) {
+  if (rating === 'pass') return 'Reported';
+  if (rating === 'fail') return 'Not Reported';
+  if (rating === 'na') return 'N/A';
+  return 'Unrated';
+}
+
+
+function formatScoreSummary(label, counts) {
+  return `${label}: ${counts.pct}% Completed; ${counts.pass} Reported, ${counts.fail} Not Reported, ${counts.na} N/A, ${counts.unrated} Unrated`;
+}
+
+// Shared export model
+function getExportSourceUrl() {
+  return window.location.href;
+}
+
+function getExportMetadata() {
+  return {
+    paper: document.getElementById('paper-title').value.trim() || 'Not specified',
+    generated: getExportTimestamp(),
+    url: getExportSourceUrl()
+  };
+}
+
+function getExportRows() {
+  return getAllRows(null).map(row => {
+    const s = state[row.stateId] || {};
+    const source = row.itemKind === 'consort'
+      ? 'CONSORT 2010'
+      : 'CONSORT-AI';
+    const statement = row.itemKind === 'consort' ? row.consort : row.ai;
+    return {
+      section: row.section,
+      item: row.shortId || row.displayId,
+      source,
+      statement: statement || '',
+      rating: formatRatingLabel(s.rating),
+      notes: s.notes || ''
+    };
+  });
+}
+
+function escapeCSV(value) {
+  return String(value || '').replace(/"/g, '""');
+}
+
+function getSaveFileData() {
+  return {
+    schemaVersion: 1,
+    app: 'consort-ai-checklist',
+    savedAt: getExportTimestamp(),
+    sourceUrl: getExportSourceUrl(),
+    paperTitle: document.getElementById('paper-title').value,
+    state,
+    sectionOpen
+  };
+}
+
+function getSafeFilenamePart(value) {
+  return String(value || '')
+    .trim()
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80) || 'consort-ai-checklist';
+}
+
+
+function getFilenameTimestamp() {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  return `${yyyy}${mm}${dd}-${hh}${min}`;
+}
+
+// Helper to generate export file names in a consistent pattern
+function getExportFilename(basePaperTitle, extension) {
+  const paperPart = String(basePaperTitle || '').trim();
+  const paperSegment = paperPart ? `-${getSafeFilenamePart(paperPart)}` : '';
+  return `consort-ai-checklist${paperSegment}-${getFilenameTimestamp()}.${extension}`;
+}
+
+function exportSaveFile() {
+  const data = getSaveFileData();
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getExportFilename(data.paperTitle, 'review.json');
+  a.click();
+}
+
+function triggerSaveFileImport() {
+  const input = document.getElementById('save-file-input');
+  input.value = '';
+  input.click();
+}
+
+function isPlainObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function importSaveFile(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!isPlainObject(data) || data.app !== 'consort-ai-checklist' || !isPlainObject(data.state)) {
+        alert('This does not look like a valid CONSORT-AI checklist save file.');
+        return;
+      }
+
+      if (data.schemaVersion !== 1) {
+        alert('This save file uses an unsupported version.');
+        return;
+      }
+
+      state = data.state;
+      paperTitle = typeof data.paperTitle === 'string' ? data.paperTitle : '';
+      sectionOpen = isPlainObject(data.sectionOpen) ? data.sectionOpen : {};
+      document.getElementById('paper-title').value = paperTitle;
+      saveState();
+      savePaperTitle(paperTitle);
+      saveSections();
+      render();
+      alert('Save file imported. You can continue where you left off.');
+    } catch (err) {
+      alert('Could not import this save file. Please check that it is a valid JSON save file.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function exportCSV() {
+  const metadata = getExportMetadata();
+  const exportRows = getExportRows();
+  let csv = metadata.paper ? `"Paper:","${escapeCSV(metadata.paper)}"\n` : '';
+  csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
+  csv += 'Section,Item,Source,Statement,Rating,Notes\n';
+  exportRows.forEach(row => {
+    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.source)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
+  });
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getExportFilename(document.getElementById('paper-title').value, 'csv');
+  a.click();
+}
+
+function exportPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'landscape' });
+  doc.setFontSize(16);
+  doc.text('CONSORT-AI Checklist Report', 14, 15);
+  doc.setFontSize(9);
+  const metadata = getExportMetadata();
+  let yPos = 21;
+  if (metadata.paper) {
+    doc.setFontSize(10);
+    doc.text(`Paper: ${metadata.paper}`, 14, yPos);
+    yPos += 6;
+    doc.setFontSize(9);
+  }
+  doc.text(`Generated from ${metadata.url} on ${metadata.generated}`, 14, yPos);
+  yPos += 6;
+
+  const consort = countItems('consort');
+  const ai = countItems('ai');
+  const combined = countItems(null);
+  doc.text(formatScoreSummary('CONSORT 2010 core items only', consort), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('CONSORT-AI extension only', ai), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('Combined', combined), 14, yPos);
+  yPos += 6;
+
+  // Updated PDF export table format
+  const rows = getExportRows().map(row => [
+    row.section,
+    row.item,
+    row.source,
+    row.statement,
+    row.rating,
+    row.notes
+  ]);
+
+  doc.autoTable({
+    startY: yPos,
+    head: [['Section', 'Item', 'Source', 'Statement', 'Rating', 'Notes']],
+    body: rows,
+    styles: { fontSize: 7, cellPadding: 1.6, overflow: 'linebreak', valign: 'top' },
+    headStyles: { fillColor: [59,130,246] },
+    columnStyles: {
+      0: { cellWidth: 36 },
+      1: { cellWidth: 24 },
+      2: { cellWidth: 28 },
+      3: { cellWidth: 124 },
+      4: { cellWidth: 24 },
+      5: { cellWidth: 56 }
+    },
+    didParseCell: function(data) {
+      if (data.column.index === 4 && data.section === 'body') {
+        const v = data.cell.raw;
+        if (v === 'Reported') { data.cell.styles.textColor = [34,197,94]; data.cell.styles.fontStyle = 'bold'; }
+        else if (v === 'Not Reported') { data.cell.styles.textColor = [239,68,68]; data.cell.styles.fontStyle = 'bold'; }
+        else if (v === 'N/A') { data.cell.styles.textColor = [245,158,11]; data.cell.styles.fontStyle = 'bold'; }
+      }
+    }
+  });
+
+  doc.setFontSize(6.5);
+  const y = doc.internal.pageSize.height - 8;
+  doc.text('Checklist items derived from CONSORT 2010 and CONSORT-AI. Explanatory summaries independently rewritten. CONSORT-AI: Liu X et al., Nat Med 2020;26:1364-1374, CC BY 4.0. CONSORT 2010 E&E: Moher D et al., BMJ 2010;340:c869.', 14, y);
+  doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
+}
+
+loadState();
+document.getElementById('paper-title').value = paperTitle;
+render();
+</script>
+</body>
+</html>
