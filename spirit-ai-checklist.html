@@ -127,7 +127,7 @@ title: SPIRIT-AI Checklist
   <p class="subtitle">Interactive checklist for clinical trial protocols of interventions involving artificial intelligence and machine learning.</p>
 
   <div class="paper-title-field">
-    <label for="paper-title">Clinical trial protocol with AI intervention being assessed (optional)</label>
+    <label for="paper-title">Document being assessed (optional)</label>
     <input type="text" id="paper-title" placeholder="..." oninput="savePaperTitle(this.value)">
   </div>
 
@@ -706,7 +706,7 @@ function getExportSourceUrl() {
 
 function getExportMetadata() {
   return {
-    paper: document.getElementById('paper-title').value.trim() || 'Not specified',
+    document: document.getElementById('paper-title').value.trim() || 'Not specified',
     generated: getExportTimestamp(),
     url: getExportSourceUrl()
   };
@@ -853,7 +853,7 @@ function exportPDF() {
   let yPos = 21;
   if (metadata.paper) {
     doc.setFontSize(10);
-    doc.text(`Paper: ${metadata.paper}`, 14, yPos);
+    doc.text(`Document: ${metadata.paper}`, 14, yPos);
     yPos += 6;
     doc.setFontSize(9);
   }
