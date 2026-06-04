@@ -156,21 +156,21 @@ title: CONSORT-AI Checklist
 
   <div class="dashboard" id="dashboard">
     <div class="score-sheet-label">CONSORT 2010 core items only</div>
-    <div class="stat" id="stat-consort-total"><div class="num" id="score-consort-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat" id="stat-consort-total"><div class="num" id="score-consort-total">0%</div><div class="label">Items rated %</div></div>
     <div class="stat green"><div class="num" id="score-consort-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-consort-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-consort-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-consort-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">CONSORT-AI extension only</div>
-    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items rated %</div></div>
     <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-ai-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">Combined</div>
-    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items rated %</div></div>
     <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
@@ -496,7 +496,7 @@ function render() {
 
     const secKey = sec.section.replace(/[^a-zA-Z0-9]/g,'');
     const isOpen = !!sectionOpen[sec.section];
-    div.innerHTML = `<div class="section-header" onclick="toggleSection('${sec.section}')"><span class="chevron ${isOpen?'open':''}" id="sec-chev-${secKey}">&#9654;</span><span>${sec.section}</span><span class="section-badge" style="background:${badgeColor}">${secPass + secNa}/${rows.length}</span></div>`;
+    div.innerHTML = `<div class="section-header" onclick="toggleSection('${sec.section}')"><span class="chevron ${isOpen?'open':''}" id="sec-chev-${secKey}">&#9654;</span><span>${sec.section}</span><span class="section-badge" style="background:${badgeColor}">${secPass + secFail + secNa}/${rows.length} rated</span></div>`;
     const itemsContainer = document.createElement('div');
     itemsContainer.className = 'section-items' + (isOpen ? '' : ' collapsed');
     itemsContainer.id = 'sec-items-' + secKey;
@@ -596,10 +596,10 @@ function countItems(kind) {
     if (r === 'pass') pass++; else if (r === 'fail') fail++; else if (r === 'na') na++;
   });
   const total = rows.length;
-  const unrated = total - pass - fail - na;
-  const applicable = total - na;
-  const pct = applicable > 0 ? Math.round((pass / applicable) * 100) : 0;
-  return { pass, fail, na, unrated, total, pct };
+  const rated = pass + fail + na;
+  const unrated = total - rated;
+  const pct = total > 0 ? Math.round((rated / total) * 100) : 0;
+  return { pass, fail, na, rated, unrated, total, pct };
 }
 
 function setScore(prefix, counts) {
@@ -668,7 +668,8 @@ function formatRatingLabel(rating) {
 
 
 function formatScoreSummary(label, counts) {
-  return `${label}: ${counts.pct}% Completed; ${counts.pass} Reported, ${counts.fail} Not Reported, ${counts.na} N/A, ${counts.unrated} Unrated`;
+  const prefix = label ? `${label}: ` : '';
+  return `${prefix}${counts.pct}% (${counts.rated} of ${counts.total}) items rated; ${counts.pass} Reported, ${counts.fail} Not Reported, ${counts.na} N/A, ${counts.unrated} Unrated`;
 }
 
 // Shared export model
@@ -801,9 +802,15 @@ function importSaveFile(event) {
 function exportCSV() {
   const metadata = getExportMetadata();
   const exportRows = getExportRows();
+  const consort = countItems('consort');
+  const ai = countItems('ai');
+  const combined = countItems(null);
   let csv = metadata.paper ? `"Paper:","${escapeCSV(metadata.paper)}"\n` : '';
   csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
-  csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n`;
+  csv += `"CONSORT 2010 core items only:","${escapeCSV(formatScoreSummary('', consort))}"\n`;
+  csv += `"CONSORT-AI extension only:","${escapeCSV(formatScoreSummary('', ai))}"\n`;
+  csv += `"Combined:","${escapeCSV(formatScoreSummary('', combined))}"\n\n`;
   csv += 'Section,Item,Source,Statement,Rating,Notes\n';
   exportRows.forEach(row => {
     csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.source)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
