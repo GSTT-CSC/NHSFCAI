@@ -156,23 +156,23 @@ title: SPIRIT-AI Checklist
 
   <div class="dashboard" id="dashboard">
     <div class="score-sheet-label">SPIRIT 2013 core items only</div>
-    <div class="stat" id="stat-spirit-total"><div class="num" id="score-spirit-total">0%</div><div class="label">Completed</div></div>
-    <div class="stat green"><div class="num" id="score-spirit-pass">0</div><div class="label">Addressed</div></div>
-    <div class="stat red"><div class="num" id="score-spirit-fail">0</div><div class="label">Not Addressed</div></div>
+    <div class="stat" id="stat-spirit-total"><div class="num" id="score-spirit-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat green"><div class="num" id="score-spirit-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-spirit-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-spirit-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-spirit-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">SPIRIT-AI extension only</div>
-    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Completed</div></div>
-    <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Addressed</div></div>
-    <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Addressed</div></div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-ai-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">Combined</div>
-    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Completed</div></div>
-    <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Addressed</div></div>
-    <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Addressed</div></div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-combined-unrated">0</div><div class="label">Unrated</div></div>
   </div>
@@ -578,8 +578,8 @@ function render() {
           </div>
           <div class="item-controls">
             <div class="rag-buttons">
-              <button class="rag-btn pass ${s.rating === 'pass' ? 'active' : ''}" onclick="rate('${item.stateId}','pass')">Addressed</button>
-              <button class="rag-btn fail ${s.rating === 'fail' ? 'active' : ''}" onclick="rate('${item.stateId}','fail')">Not Addressed</button>
+              <button class="rag-btn pass ${s.rating === 'pass' ? 'active' : ''}" onclick="rate('${item.stateId}','pass')">Reported</button>
+              <button class="rag-btn fail ${s.rating === 'fail' ? 'active' : ''}" onclick="rate('${item.stateId}','fail')">Not Reported</button>
               <button class="rag-btn na ${s.rating === 'na' ? 'active' : ''}" onclick="rate('${item.stateId}','na')">N/A</button>
             </div>
             <div class="item-notes">
@@ -614,15 +614,20 @@ function note(id, text) {
 function countItems(kind) {
   const rows = getAllRows(kind);
   let pass = 0, fail = 0, na = 0;
+
   rows.forEach(row => {
     const r = (state[row.stateId] || {}).rating;
-    if (r === 'pass') pass++; else if (r === 'fail') fail++; else if (r === 'na') na++;
+    if (r === 'pass') pass++;
+    else if (r === 'fail') fail++;
+    else if (r === 'na') na++;
   });
+
   const total = rows.length;
-  const unrated = total - pass - fail - na;
-  const applicable = total - na;
-  const pct = applicable > 0 ? Math.round((pass / applicable) * 100) : 0;
-  return { pass, fail, na, unrated, total, pct };
+  const rated = pass + fail + na;
+  const unrated = total - rated;
+  const pct = total > 0 ? Math.round((rated / total) * 100) : 0;
+
+  return { pass, fail, na, rated, unrated, total, pct };
 }
 
 function setScore(prefix, counts) {
@@ -683,15 +688,15 @@ function getExportTimestamp() {
 
 
 function formatRatingLabel(rating) {
-  if (rating === 'pass') return 'Addressed';
-  if (rating === 'fail') return 'Not Addressed';
+  if (rating === 'pass') return 'Reported';
+  if (rating === 'fail') return 'Not Reported';
   if (rating === 'na') return 'N/A';
   return 'Unrated';
 }
 
 
 function formatScoreSummary(label, counts) {
-  return `${label}: ${counts.pct}% Completed; ${counts.pass} Addressed, ${counts.fail} Not Addressed, ${counts.na} N/A, ${counts.unrated} Unrated`;
+  return `${label}: ${counts.pct}% (${counts.rated} of ${counts.total}) items rated; ${counts.pass} Reported, ${counts.fail} Not Reported, ${counts.na} N/A, ${counts.unrated} Unrated`;
 }
 
 // Shared export model
