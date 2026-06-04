@@ -706,7 +706,7 @@ function getExportSourceUrl() {
 
 function getExportMetadata() {
   return {
-    document: document.getElementById('paper-title').value.trim() || 'Not specified',
+    paper: document.getElementById('paper-title').value.trim() || 'Not specified',
     generated: getExportTimestamp(),
     url: getExportSourceUrl()
   };
@@ -829,7 +829,7 @@ function importSaveFile(event) {
 function exportCSV() {
   const metadata = getExportMetadata();
   const exportRows = getExportRows();
-  let csv = metadata.paper ? `"Paper:","${escapeCSV(metadata.paper)}"\n` : '';
+  let csv = metadata.paper ? `"Document:","${escapeCSV(metadata.paper)}"\n` : '';
   csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
   csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
   csv += 'Section,Item,Source,Statement,Rating,Notes\n';
