@@ -1,0 +1,913 @@
+---
+layout: default
+title: SPIRIT-AI Checklist
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPIRIT-AI Checklist</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+<style>
+  :root {
+    --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --amber: #f59e0b; --amber-bg: #fffbeb; --amber-border: #fde68a;
+    --red: #ef4444; --red-bg: #fef2f2; --red-border: #fecaca;
+    --gray: #6b7280; --gray-bg: #f9fafb; --gray-border: #e5e7eb;
+    --purple: #7c3aed; --purple-bg: #f5f3ff;
+    --blue: #3b82f6; --blue-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  .subtitle { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .subtitle a { color: var(--blue); text-decoration: none; }
+
+  .dashboard { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .stat { flex: 1; min-width: 120px; text-align: center; padding: 0.75rem; border-radius: 0.5rem; background: var(--gray-bg); }
+  .stat .num { font-size: 1.75rem; font-weight: 700; }
+  .stat .label { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat.green { background: var(--green-bg); } .stat.green .num { color: var(--green); }
+  .stat.amber { background: var(--amber-bg); } .stat.amber .num { color: var(--amber); }
+  .stat.red { background: var(--red-bg); } .stat.red .num { color: var(--red); }
+  .score-sheet-label { width: 100%; font-size: 0.72rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+
+  .section { margin-bottom: 1.5rem; }
+  .section-header { font-size: 1.1rem; font-weight: 600; padding: 0.5rem 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+  .section-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 999px; font-weight: 600; color: #fff; }
+
+  .item { background: #fff; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.5rem; border-left: 4px solid var(--gray-border); transition: border-color 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .item.green { border-left-color: var(--green); }
+  .item.amber { border-left-color: var(--amber); }
+  .item.red { border-left-color: var(--red); }
+  .item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .item-main { flex: 1; min-width: 0; }
+  .item-controls { flex: 0 0 220px; display: flex; flex-direction: column; gap: 0.45rem; }
+  .item-id { font-weight: 700; font-size: 0.85rem; color: var(--gray); white-space: nowrap; min-width: 2.5rem; }
+  .item-text { width: 100%; }
+
+  /* SPIRIT 2013 block */
+  .spirit-block { color: var(--blue); font-size: 0.9rem; margin-top: 0.35rem; padding: 0.5rem 0.75rem; background: var(--blue-bg); border-radius: 0.375rem; }
+  .spirit-block .spirit-label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.15rem; }
+  .spirit-block .spirit-body { font-weight: 600; color: #1e293b; }
+
+  .item-text .spirit { font-weight: 600; margin-bottom: 0.25rem; }
+
+  /* SPIRIT 2013 explanation */
+  .spirit-explanation { font-size: 0.85rem; color: #475569; margin-top: 0.35rem; }
+  .spirit-explanation .explanation-text { margin-top: 0.25rem; line-height: 1.5; padding: 0.5rem 0.75rem; background: var(--blue-bg); border-radius: 0.375rem; }
+
+  /* AI extension block */
+  .ai-ext { color: var(--purple); font-size: 0.9rem; margin-top: 0.35rem; padding: 0.5rem 0.75rem; background: var(--purple-bg); border-radius: 0.375rem; }
+  .ai-ext .ai-label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.15rem; }
+  .ai-ext .ai-body { font-weight: 600; }
+  .ai-explanation { font-size: 0.85rem; color: #475569; margin-top: 0.35rem; }
+  .ai-explanation .explanation-text { margin-top: 0.25rem; line-height: 1.5; padding: 0.5rem 0.75rem; background: var(--purple-bg); border-radius: 0.375rem; }
+
+  .item-type { font-size: 0.65rem; padding: 1px 6px; border-radius: 999px; font-weight: 600; margin-left: 0.25rem; vertical-align: middle; }
+  .item-type.extension { background: #ddd6fe; color: #5b21b6; }
+  .item-type.elaboration { background: #e0e7ff; color: #3730a3; }
+
+  .rag-buttons { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+  .rag-btn { border: 2px solid var(--gray-border); background: #fff; border-radius: 0.375rem; padding: 0.25rem 0.6rem; font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.15s; color: var(--gray); }
+  .rag-btn:hover { transform: scale(1.05); }
+  .rag-btn.pass { border-color: var(--green-border); }
+  .rag-btn.pass.active { background: var(--green); color: #fff; border-color: var(--green); }
+  .rag-btn.fail { border-color: var(--red-border); }
+  .rag-btn.fail.active { background: var(--red); color: #fff; border-color: var(--red); }
+  .rag-btn.na { border-color: var(--amber-border); }
+  .rag-btn.na.active { background: var(--amber); color: #fff; border-color: var(--amber); }
+
+  .item-notes { width: 100%; }
+  .item-notes textarea { width: 100%; border: 1px solid var(--gray-border); border-radius: 0.375rem; padding: 0.5rem; font-size: 0.8rem; resize: vertical; min-height: 4.25rem; font-family: inherit; }
+
+  .toolbar { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; padding: 0.75rem; background: #fff; border: 1px solid var(--gray-border); border-radius: 0.75rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .toolbar-group { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; width: 100%; padding-bottom: 0.5rem; }
+  .toolbar-group:not(:last-child) { border-bottom: 1px solid var(--gray-border); margin-bottom: 0.5rem; }
+  .toolbar-label { font-size: 0.7rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.1rem; }
+  .btn { padding: 0.4rem 0.75rem; border-radius: 0.45rem; border: 1px solid var(--gray-border); background: #fff; font-size: 0.8rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+  .btn:hover { background: #f1f5f9; }
+  .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .btn-primary:hover { background: #2563eb; }
+
+  .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
+  .attribution a { color: var(--blue); }
+
+  .paper-title-field { margin-bottom: 1.5rem; }
+  .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
+  .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
+  .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+
+  .legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
+
+  /* Collapsible sections */
+  .section-header { cursor: pointer; user-select: none; }
+  .section-header .chevron { transition: transform 0.2s; display: inline-block; font-size: 0.8rem; color: var(--gray); }
+  .section-header .chevron.open { transform: rotate(90deg); }
+  .section-items { overflow: hidden; transition: max-height 0.3s ease; }
+  .section-items.collapsed { max-height: 0 !important; }
+
+  @media (max-width: 640px) {
+    .item-header { flex-direction: column; }
+    .item-main, .item-controls { width: 100%; flex: 1 1 auto; }
+    .rag-buttons { align-self: flex-start; }
+    .dashboard { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>SPIRIT-AI Checklist</h1>
+  <p class="subtitle">Interactive checklist for clinical trial protocols of interventions involving artificial intelligence and machine learning.</p>
+
+  <div class="paper-title-field">
+    <label for="paper-title">Clinical trial protocol with AI intervention being assessed (optional)</label>
+    <input type="text" id="paper-title" placeholder="..." oninput="savePaperTitle(this.value)">
+  </div>
+
+  <div class="toolbar" aria-label="Checklist toolbar">
+    <div class="toolbar-group">
+      <span class="toolbar-label">Generate Reports</span>
+      <button class="btn" onclick="exportPDF()">Download PDF</button>
+      <button class="btn" onclick="exportCSV()">Download CSV</button>
+    </div>
+    <div class="toolbar-group">
+      <span class="toolbar-label">Save progress</span>
+      <button class="btn" onclick="exportSaveFile()">Export save file</button>
+      <button class="btn" onclick="triggerSaveFileImport()">Import save file</button>
+      <input type="file" id="save-file-input" accept="application/json,.json" style="display:none" onchange="importSaveFile(event)">
+    </div>
+    <div class="toolbar-group">
+      <span class="toolbar-label">Checklist controls</span>
+      <button class="btn" onclick="expandAll()">Expand all</button>
+      <button class="btn" onclick="collapseAll()">Collapse all</button>
+      <button class="btn" onclick="resetAll()">Reset all</button>
+    </div>
+  </div>
+
+  <div id="checklist"></div>
+
+
+  <div class="dashboard" id="dashboard">
+    <div class="score-sheet-label">SPIRIT 2013 core items only</div>
+    <div class="stat" id="stat-spirit-total"><div class="num" id="score-spirit-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat green"><div class="num" id="score-spirit-pass">0</div><div class="label">Addressed</div></div>
+    <div class="stat red"><div class="num" id="score-spirit-fail">0</div><div class="label">Not Addressed</div></div>
+    <div class="stat amber"><div class="num" id="score-spirit-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-spirit-unrated">0</div><div class="label">Unrated</div></div>
+
+    <div class="score-sheet-label">SPIRIT-AI extension only</div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Addressed</div></div>
+    <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Addressed</div></div>
+    <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-ai-unrated">0</div><div class="label">Unrated</div></div>
+
+    <div class="score-sheet-label">Combined</div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Completed</div></div>
+    <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Addressed</div></div>
+    <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Addressed</div></div>
+    <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-combined-unrated">0</div><div class="label">Unrated</div></div>
+  </div>
+
+  <div class="attribution">
+    <strong>About This Tool: The SPIRIT-AI Checklist</strong><br><br>
+    <strong>What is it for?</strong><br>
+    This tool is a web-based checklist implementing the SPIRIT-AI (Standard Protocol Items: Recommendations for Interventional Trials–Artificial Intelligence) extension.
+    Its primary purpose is to serve as a completeness checklist for clinical trial protocols of interventions that involve artificial intelligence or machine learning. Developed by an international multi-stakeholder group, SPIRIT-AI introduces 15 AI-specific items (12 extensions and 3 elaborations) that are addressed alongside the core SPIRIT 2013 protocol items. By using this checklist, investigators, editors and reviewers can systematically evaluate whether a trial protocol transparently describes critical AI-specific elements.
+    <br><br>
+    This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
+    <br><br>
+    <strong>Sources and attribution</strong><br>
+    Checklist items are derived from SPIRIT 2013 and SPIRIT-AI. Explanatory summaries have been independently rewritten for educational and review purposes. <br><br>
+    1. Cruz Rivera, S., Liu, X., Chan, A.W., Denniston, A.K., Calvert, M.J., et al. Guidelines for clinical trial protocols for interventions involving artificial intelligence: the SPIRIT-AI extension. <em>Nat Med</em> 26, 1351–1363 (2020). <a href="https://doi.org/10.1038/s41591-020-1037-7" target="_blank">doi:10.1038/s41591-020-1037-7</a> (also published as <em>BMJ</em> 2020;370:m3210, <a href="https://doi.org/10.1136/bmj.m3210" target="_blank">doi:10.1136/bmj.m3210</a>). Published under CC BY 4.0.<br>
+    2. Chan, A.W., Tetzlaff, J.M., Gøtzsche, P.C. et al. SPIRIT 2013 explanation and elaboration: guidance for protocols of clinical trials. <em>BMJ</em> 346, e7586 (2013). <a href="https://doi.org/10.1136/bmj.e7586" target="_blank">doi:10.1136/bmj.e7586</a>.<br>
+    This checklist is not endorsed by the original authors.
+  </div>
+</div>
+
+<script>
+const DATA = [
+  { section: "Administrative Information", items: [
+    { id: "1", itemKind: "spirit", spirit: "Descriptive title identifying the study design, population, interventions, and, if applicable, trial acronym",
+      spiritExpl: "The title should describe the study design, population and interventions and, where used, the trial acronym. A clear, informative title allows readers and database indexers to immediately understand what the trial is about and improves retrieval of the protocol in bibliographic databases, registries and other online resources. It can be helpful for the title to also indicate the method of intervention allocation (e.g. 'randomised'), the trial framework (e.g. superiority, non-inferiority), and, where relevant, the study phase (e.g. phase II).",
+      ai: null },
+    { id: "1-i", aiId: "SPIRIT-AI 1(i)", itemKind: "ai", spirit: null, spiritExpl: null,
+      aiType: "Elaboration",
+      ai: "Indicate that the intervention involves artificial intelligence/machine learning and specify the type of model.",
+      explanation: "Indicating in the protocol title and/or abstract that the intervention involves a form of AI is encouraged, as it immediately identifies the intervention as an artificial intelligence/machine learning intervention, and also serves to facilitate indexing and searching of the trial protocol in bibliographic databases, registries, and other online resources. The title should be understandable by a wide audience; therefore, a broader umbrella term such as “artificial intelligence” or “machine learning” is encouraged. More precise terms should be used in the abstract, rather than the title, unless broadly recognised as being a form of artificial intelligence/machine learning. Specific terminology relating to the model type and architecture should be detailed in the abstract." },
+    { id: "1-ii", aiId: "SPIRIT-AI 1(ii)", itemKind: "ai", spirit: null, spiritExpl: null,
+      aiType: "Elaboration",
+      ai: "State the intended use of the AI intervention.",
+      explanation: "The intended use of the AI intervention should be made clear in the protocol’s title and/or abstract. This should describe the purpose of the AI intervention and the disease context. Some AI interventions may have multiple intended uses, or the intended use may evolve over time. Therefore, documenting this allows readers to understand the intended use of the algorithm at the time of the trial." },
+    { id: "2a", itemKind: "spirit", spirit: "Trial identifier and registry name. If not yet registered, name of intended registry",
+      spiritExpl: "The protocol should give the trial identifier and the name of the registry or, if not yet registered, the name of the intended registry. Prospective registration promotes transparency, helps prevent selective reporting and duplicate publication, and allows the planned trial to be identified by others. Trial identifiers should be displayed prominently (e.g. on the cover page); registration should occur before the first participant is recruited; and where a trial is registered in more than one registry, each identifier should be listed.",
+      ai: null },
+    { id: "2b", itemKind: "spirit", spirit: "All items from the World Health Organization Trial Registration Data Set",
+      spiritExpl: "The protocol should include all items from the <a href=\"https://www.who.int/tools/clinical-trials-registry-platform/network/who-data-set\" target=\"_blank\" rel=\"noopener\">WHO Trial Registration Data Set</a>, which is the internationally agreed minimum set of information needed to describe a trial at the point of registration.",
+      ai: null },
+    { id: "3", itemKind: "spirit", spirit: "Date and version identifier",
+      spiritExpl: "The protocol should carry a date and a version identifier. Because protocols are frequently amended, clear version control allows readers, reviewers, ethics committees and regulators to know which version they are reading and to track changes over time. Each version should also explicitly list the changes made relative to the previous version, distinguishing substantive amendments from minor administrative corrections.",
+      ai: null },
+    { id: "4", itemKind: "spirit", spirit: "Sources and types of financial, material, and other support",
+      spiritExpl: "The sources and types of financial, material and other support for the trial should be described. Transparency about funding helps readers assess potential influences on the design, conduct and reporting of the trial and identify possible competing interests. Specify both financial and non-financial support (e.g. equipment, drugs, services), the type and time period of each, and any vested interest of the funder. Fuller disclosure (monetary amounts, the funding mechanism such as a fixed sum versus payment per recruited participant, and the specific recipient) helps identify competing interests. If the trial is not yet funded, list and later update the proposed sources of support.",
+      ai: null },
+    { id: "5a", itemKind: "spirit", spirit: "Names, affiliations, and roles of protocol contributors",
+      spiritExpl: "The names, affiliations and roles of the individuals who contributed to the protocol should be listed, so that readers can identify who is responsible for the trial's design and conduct.",
+      ai: null },
+    { id: "5b", itemKind: "spirit", spirit: "Name and contact information for the trial sponsor",
+      spiritExpl: "The name and contact information for the trial sponsor should be provided. The sponsor is the entity that takes responsibility for the initiation, management and financing of the trial.",
+      ai: null },
+    { id: "5c", itemKind: "spirit", spirit: "Role of study sponsor and funders, if any, in study design; collection, management, analysis, and interpretation of data; writing of the report; and the decision to submit the report for publication, including whether they will have ultimate authority over any of these activities",
+      spiritExpl: "The protocol should describe the role of the sponsor and funders, if any, in the study design; the collection, management, analysis and interpretation of data; the writing of the report; and the decision to submit for publication, including whether they will have ultimate authority over any of these activities. This helps readers judge the independence of the research from those who fund or sponsor it.",
+      ai: null },
+    { id: "5d", itemKind: "spirit", spirit: "Composition, roles, and responsibilities of the coordinating centre, steering committee, endpoint adjudication committee, data management team, and other individuals or groups overseeing the trial, if applicable",
+      spiritExpl: "The composition, roles and responsibilities of the coordinating centre, steering committee, endpoint adjudication committee, data management team and any other individuals or groups overseeing the trial should be described, where applicable (the data monitoring committee is addressed in item 21a).",
+      ai: null },
+  ]},
+  { section: "Introduction", items: [
+    { id: "6a", itemKind: "spirit", spirit: "Description of research question and justification for undertaking the trial, including summary of relevant studies (published and unpublished) examining benefits and harms for each intervention",
+      spiritExpl: "The background should describe the research question and justify the need for the trial, summarising relevant studies (published and unpublished) that examine the benefits and harms of each intervention. An up-to-date systematic review of relevant studies is strongly recommended to place the trial in the context of existing evidence and to avoid unnecessary duplication of research.",
+      ai: null },
+    { id: "6a-i", aiId: "SPIRIT-AI 6a(i)", itemKind: "ai", spirit: null, spiritExpl: null,
+      aiType: "Extension",
+      ai: "Explain the intended use of the AI intervention in the context of the clinical pathway, including its purpose and its intended users (for example, healthcare professionals, patients, public).",
+      explanation: "In order to understand how the AI intervention will fit into a clinical pathway, a detailed description of its role should be included in the protocol background. AI interventions may be designed to interact with different users including healthcare professionals, patients, and the public, and their roles can be wide-ranging (for example, the same AI intervention could theoretically be replacing, augmenting or adjudicating components of clinical decision-making). Clarifying the intended use of the AI intervention and its intended user helps readers understand the purpose for which the AI intervention will be evaluated in the trial." },
+    { id: "6a-ii", aiId: "SPIRIT-AI 6a(ii)", itemKind: "ai", spirit: null, spiritExpl: null,
+      aiType: "Extension",
+      ai: "Describe any pre-existing evidence for the AI intervention.",
+      explanation: "Authors should describe in the protocol any pre-existing published (with supporting references) or unpublished evidence relating to validation of the AI intervention, or lack thereof. Consideration should be given to whether the evidence was for a similar use, setting and target population as the planned trial. This may include previous development of the AI model, internal and external validations, and any modifications made before the trial." },
+    { id: "6b", itemKind: "spirit", spirit: "Explanation for choice of comparators",
+      spiritExpl: "The protocol should explain the choice of comparator(s). The control intervention has important implications for trial ethics, recruitment, results and interpretation, so its appropriateness should be justified — for example, an inappropriately low dose of an active comparator would overestimate the relative efficacy of the study intervention. Conversely, an inappropriately high comparator dose would underestimate it. Use of a placebo control requires careful consideration of existing effective treatments, the potential risks to participants, and assay sensitivity.",
+      ai: null },
+    { id: "7", itemKind: "spirit", spirit: "Specific objectives or hypotheses",
+      spiritExpl: "The specific objectives or hypotheses should be stated. Objectives define the trial's purpose and scope and are closely tied to the trial design and analysis methods. Objectives are usually phrased neutrally, while a hypothesis states the predicted effect of the interventions on the outcomes. For multi-arm trials, the objectives should clarify how all treatment groups will be compared (e.g. A versus B; A versus C).",
+      ai: null },
+    { id: "8", itemKind: "spirit", spirit: "Description of trial design including type of trial (such as parallel group, crossover, factorial, single group), allocation ratio, and framework (such as superiority, equivalence, non-inferiority, exploratory)",
+      spiritExpl: "The protocol should describe the trial design, including the type of trial (such as parallel group, crossover, factorial or single group), the allocation ratio (such as 1:1 or 2:1), and the framework (such as superiority, equivalence, non-inferiority or exploratory). Specifying the design is important because of its close relation to the objectives and its influence on the methods, conduct, analysis and interpretation of the trial. Unequal allocation may be used for reasons such as cost savings, learning curves, or ethics. If an adaptive design is used (modifying aspects of the study using accumulating data — e.g. stopping early, altering the allocation ratio, re-estimating the sample size, or changing eligibility criteria), the prespecified decision rules should be documented in the protocol.",
+      ai: null },
+  ]},
+  { section: "Methods — Participants, Interventions, and Outcomes", items: [
+    { id: "9", itemKind: "ai", spirit: "Description of study settings (such as community clinic, academic hospital) and list of countries where data will be collected. Reference to where list of study sites can be obtained",
+      spiritExpl: "The protocol should describe the study settings, such as community clinic or academic hospital, and list the countries where data will be collected, with reference to where the list of study sites can be obtained. The setting affects the applicability of the results, the type of regulatory and ethics oversight, and the healthcare and research infrastructure available. At a minimum, report the countries involved, the type of setting (e.g. urban versus rural), and the likely number of study sites.",
+      aiType: "Extension",
+      ai: "Describe the onsite and offsite requirements needed to integrate the AI intervention into the trial setting.",
+      explanation: "There are limitations to the generalisability of AI algorithms, one of which is when they are used outside of their development environment. AI systems are dependent on their operational environment, and the protocol should provide details of the hardware and software requirements to allow technical integration of the AI intervention at each study site. For example, it should be stated if the AI intervention requires vendor-specific devices, if there is a need for specialised computing hardware at each site, or if the sites must support cloud integration, particularly if this is vendor-specific. If any changes to the algorithm are required at each study site as part of the implementation procedure (such as fine-tuning the algorithm on local data), then this process should also be clearly described." },
+    { id: "10-i", itemKind: "ai", spirit: "Inclusion and exclusion criteria for participants. If applicable, eligibility criteria for study centres and individuals who will perform the interventions (such as surgeons, psychotherapists)",
+      spiritExpl: "The inclusion and exclusion criteria for participants should be clearly defined, and where applicable the eligibility criteria for study centres and the individuals who will deliver the interventions (such as surgeons or psychotherapists). Clear eligibility criteria define the study population, support consistent application throughout the trial, and affect recruitment and generalisability. Eligibility criteria may relate to demographics, the type or severity of the condition, comorbidities, prior or current treatment, diagnostic procedures, or pregnancy. Criteria that restrict the population to a narrow subset warrant explicit justification, since they affect generalisability.",
+      aiType: "Elaboration",
+      ai: "State the inclusion and exclusion criteria at the level of participants.",
+      explanation: "The inclusion and exclusion criteria should be defined at the participant level as per usual practice in protocols of non-AI interventional trials. This is distinct from the inclusion and exclusion criteria made at the input data level, which is addressed in item 10 (ii)." },
+    { id: "10-ii", itemKind: "ai", spirit: "Eligibility criteria for participants",
+      spiritExpl: null,
+      aiType: "Extension",
+      ai: "State the inclusion and exclusion criteria at the level of the input data.",
+      explanation: "Input data refer to the data required by the AI intervention to serve its purpose (for example, for a breast cancer diagnostic system, the input data could be the unprocessed or vendor-specific post-processing mammography scan on which a diagnosis is being made; for an early warning system, the input data could be physiological measurements or laboratory results from the electronic health record). The trial protocol should pre-specify if there are minimum requirements for the input data (such as image resolution, quality metrics, or data format), which would determine pre-randomisation eligibility. It should specify when, how, and by whom this will be assessed. For example, if a participant met the eligibility criteria for lying flat for a CT scan as per item 10 (i), but the scan quality was compromised (for any given reason) to such a level that it is no longer fit for use by the AI system, this should be considered as an exclusion criterion at the input data level. Note that where input data are acquired after randomisation (addressed by SPIRIT-20c), any exclusion is considered to be from the analysis, not from enrolment (fig 1)." },
+    { id: "11a-i", itemKind: "ai", spirit: "Interventions for each group with sufficient detail to allow replication, including how and when they will be administered",
+      spiritExpl: "Each intervention should be described in sufficient detail to allow replication, including how and when interventions will be administered. For drug interventions this includes the dose, route, timing and duration; for non-drug interventions it may include the equipment, procedures, provider expertise and standardisation procedures. Where usual care is the control, its content should be described. For drugs, biologics or placebos, include the generic name, manufacturer, constituent components, route and dosing schedule (including any titration or run-in). State whether the same or different individuals will deliver the intervention across study groups, since otherwise the effect of the intervention cannot be separated from that of the person delivering it.",
+      aiType: "Extension",
+      ai: "State which version of the AI algorithm will be used.",
+      explanation: "Similar to other forms of software as a medical device, AI systems are likely to undergo multiple iterations and updates in their lifespan. The protocol should state which version of the AI system will be used in the clinical trial, and whether this is the same version that had been used in previous studies to justify the study rationale. If applicable, the protocol should describe what has changed between the relevant versions and the rationale for the changes. Where available, the protocol should include a regulatory marking reference, such as a unique device identifier (UDI) which requires a new identifier for updated versions of the device." },
+    { id: "11a-ii", itemKind: "ai", spirit: "Interventions for each group", spiritExpl: null,
+      aiType: "Extension",
+      ai: "Specify the procedure for acquiring and selecting the input data for the AI intervention.",
+      explanation: "The measured performance of any AI system may be critically dependent on the nature and quality of the input data. The procedure for how input data will be handled—including data acquisition, selection, and pre-processing before analysis by the AI system—should be provided. Completeness and transparency of this process is integral to feasibility assessment and to future replication of the intervention beyond the clinical trial. It will also help to identify whether input data handling procedures will be standardised across trial sites." },
+    { id: "11a-iii", itemKind: "ai", spirit: "Interventions for each group", spiritExpl: null,
+      aiType: "Extension",
+      ai: "Specify the procedure for assessing and handling poor quality or unavailable input data.",
+      explanation: "As with 10 (ii), input data refer to the data required by the AI intervention to serve its purpose. As noted in item SPIRIT-AI 10 (ii), the performance of AI systems may be compromised as a result of poor quality or missing input data (for example, excessive movement artefact on an electrocardiogram). The study protocol should specify if and how poor quality or unavailable input data will be identified and handled. The protocol should also specify a minimum standard required for the input data, and the procedure for when the minimum standard is not met (including the impact on, or any changes to, the participant care pathway). Poor quality or unavailable data can also affect non-AI interventions. For example, suboptimal quality of a scan could impact a radiologist’s ability to interpret it and make a diagnosis. It is therefore important that this information is reported equally for the control intervention, where relevant. If this minimum quality standard is different from the inclusion criteria for input data used to assess eligibility pre-randomisation, this should be stated." },
+    { id: "11a-iv", itemKind: "ai", spirit: "Interventions for each group", spiritExpl: null,
+      aiType: "Extension",
+      ai: "Specify whether there is human–AI interaction in the handling of the input data, and what level of expertise is required for users.",
+      explanation: "A description of the human-AI interface and the requirements for successful interaction when handling input data should be described. Examples include clinician-led selection of regions of interest from a histology slide which is then interpreted by an AI diagnostic system, or endoscopist selection of a colonoscopy video clip as input data for an algorithm designed to detect polyps. A description of any planned user training and instructions for how users will handle the input data provides transparency and replicability of trial procedures. Poor clarity on the human-AI interface may lead to a lack of a standard approach and carry ethical implications, particularly in the event of harm. For example, it may become unclear whether an error case occurred due to human deviation from the instructed procedure or if it was an error made by the AI system." },
+    { id: "11a-v", itemKind: "ai", spirit: "Interventions for each group", spiritExpl: null,
+      aiType: "Extension",
+      ai: "Specify the output of the AI intervention.",
+      explanation: "The output of the AI intervention should be clearly defined in the protocol. For example, an AI system may output a diagnostic classification or probability, a recommended action, an alarm alerting to an event, an instigated action in a closed loop system (such as titration of drug infusions), or other. The nature of the AI intervention’s output has direct implications on its usability and how it may lead to downstream actions and outcomes." },
+    { id: "11a-vi", itemKind: "ai", spirit: "Interventions for each group", spiritExpl: null,
+      aiType: "Extension",
+      ai: "Explain the procedure for how the AI intervention’s outputs will contribute to decision-making or other elements of clinical practice.",
+      explanation: "Since health outcomes may also critically depend on how humans interact with the AI intervention, the trial protocol should explain how the outputs of the AI system are used to contribute to decision-making or other elements of clinical practice. This should include adequate description of downstream interventions which can impact outcomes. As with SPIRIT-AI 11a (iv), any elements of human-AI interaction on the outputs should be described in detail. Including the level of expertise required to understand the outputs and any training/instructions provided for this purpose. For example, a skin cancer detection system that produces a percentage likelihood as output should be accompanied by an explanation of how this output should be interpreted and acted on by the user, specifying both the intended pathways (such as skin lesion excision if the diagnosis is positive) and the thresholds for entry to these pathways (such as skin lesion excision if the diagnosis is positive and the probability is >80%). The information produced by comparator interventions should be similarly described, alongside an explanation of how such information was used to arrive at clinical decisions for patient management, where relevant." },
+    { id: "11b", itemKind: "spirit", spirit: "Criteria for discontinuing or modifying allocated interventions for a given trial participant (such as drug dose change in response to harms, participant request, or improving/worsening disease)",
+      spiritExpl: "The criteria for discontinuing or modifying the allocated interventions for a given participant should be stated, such as a drug dose change in response to harms, a participant request, or improving or worsening disease. Pre-specifying these criteria supports consistent and unbiased management of participants. Even when the assigned intervention is modified or discontinued, participants should where possible be retained in the trial for continued outcome data collection to prevent missing data.",
+      ai: null },
+    { id: "11c", itemKind: "spirit", spirit: "Strategies to improve adherence to intervention protocols, and any procedures for monitoring adherence (such as drug tablet return, laboratory tests)",
+      spiritExpl: "Strategies to improve adherence to the intervention protocols, and any procedures for monitoring adherence (such as drug tablet return or laboratory tests), should be described. Good adherence and its measurement help ensure the trial can detect the true effect of the interventions. Adherence data can inform the statistical analysis and interpretation; where possible, choose monitoring and improvement strategies that are feasible in routine clinical practice so that trial adherence reflects real-world use.",
+      ai: null },
+    { id: "11d", itemKind: "spirit", spirit: "Relevant concomitant care and interventions that are permitted or prohibited during the trial",
+      spiritExpl: "Any relevant concomitant care and interventions that are permitted or prohibited during the trial should be specified, because co-interventions can influence outcomes and the interpretation of the trial. The list of permitted concomitant care should explicitly include any allowed rescue interventions, as well as anything prohibited.",
+      ai: null },
+    { id: "12", itemKind: "spirit", spirit: "Primary, secondary, and other outcomes, including the specific measurement variable (such as systolic blood pressure), analysis metric (such as change from baseline, final value, time to event), method of aggregation (such as median, proportion), and time point for each outcome. Explanation of the clinical relevance of chosen efficacy and harm outcomes is strongly recommended",
+      spiritExpl: "Primary, secondary and other outcomes should be defined, including the specific measurement variable, the analysis metric, the method of aggregation and the time point for each outcome. Explanation of the clinical relevance of the chosen efficacy and harm outcomes is strongly recommended. Clearly defined outcomes reduce the risk of selective reporting and allow others to use the same outcomes. Keep the number of primary outcomes as small as possible to avoid multiplicity and selective reporting. Favour outcomes that are valid, reproducible, relevant to patients and responsive to change, and check whether a relevant core outcome set (e.g. <a href=\"https://www.comet-initiative.org/\" target=\"_blank\" rel=\"noopener\">COMET</a>) exists and can be adopted.",
+      ai: null },
+    { id: "13", itemKind: "spirit", spirit: "Time schedule of enrolment, interventions (including any run-ins and washouts), assessments, and visits for participants. A schematic diagram is highly recommended",
+      spiritExpl: "A time schedule of enrolment, interventions (including any run-ins and washouts), assessments and visits for participants should be provided. A schematic diagram is highly recommended, as it gives readers and study personnel a clear overview of what happens to participants and when. The recommended schematic should run from eligibility screening through to study close-out, show the periods during which interventions are administered, and list the procedures and assessments at each visit (with reference to the relevant data collection forms).",
+      ai: null },
+    { id: "14", itemKind: "spirit", spirit: "Estimated number of participants needed to achieve study objectives and how it was determined, including clinical and statistical assumptions supporting any sample size calculations",
+      spiritExpl: "The estimated number of participants needed to achieve the study objectives should be stated, along with how it was determined, including the clinical and statistical assumptions supporting any sample size calculation (such as the expected outcome in each group, the target difference, the significance level and the power). Provide a rationale or reference for the assumed outcome values, and report the calculated size both assuming no loss and after any inflation for anticipated missing data. Crossover, cluster and non-inferiority/equivalence designs require additional inputs (e.g. the standard deviation of within-person changes, the intracluster correlation coefficient, or the non-inferiority margin). If the size is not derived statistically, state this with a rationale, and consider reporting the power available for other important outcomes such as harms or subgroups.",
+      ai: null },
+    { id: "15", itemKind: "spirit", spirit: "Strategies for achieving adequate participant enrolment to reach target sample size",
+      spiritExpl: "Strategies for achieving adequate participant enrolment to reach the target sample size should be described. Inadequate recruitment is a common reason trials fail, so planning and reporting recruitment strategies is important. Describe where, by whom, when and how participants will be recruited, the expected recruitment rate and the duration of the recruitment period, plans to monitor recruitment during the trial, any financial or non-financial incentives offered, and any site-specific strategies in multicentre trials.",
+      ai: null },
+  ]},
+  { section: "Methods — Assignment of Interventions", items: [
+    { id: "16a", itemKind: "spirit", spirit: "Method of generating the allocation sequence (such as computer-generated random numbers), and list of any factors for stratification. To reduce predictability of a random sequence, details of any planned restriction (such as blocking) should be provided in a separate document that is unavailable to those who enrol participants or assign interventions",
+      spiritExpl: "The method of generating the allocation sequence should be described, such as a computer-generated random-number sequence, along with any factors used for stratification. To reduce predictability, details of any planned restriction such as blocking should be provided in a separate document that is unavailable to those who enrol participants or assign interventions. Specify the type of randomisation (simple versus restricted; fixed versus adaptive such as minimisation) and the reasons, and for stratification list the factors together with their categories and cut-off boundaries. The separate document should describe the restriction details (e.g. how blocks are generated, the block size, and whether it is fixed or randomly varied). If non-random allocation is planned, state the specific method and rationale.",
+      ai: null },
+    { id: "16b", itemKind: "spirit", spirit: "Mechanism of implementing the allocation sequence (such as central telephone; sequentially numbered, opaque, sealed envelopes), describing any steps to conceal the sequence until interventions are assigned",
+      spiritExpl: "The mechanism for implementing the allocation sequence should be described, such as central telephone randomisation or sequentially numbered, opaque, sealed envelopes, including any steps taken to conceal the sequence until interventions are assigned. Allocation concealment prevents selection bias before assignment and is distinct from blinding after assignment.",
+      ai: null },
+    { id: "16c", itemKind: "spirit", spirit: "Who will generate the allocation sequence, who will enrol participants, and who will assign participants to interventions",
+      spiritExpl: "The protocol should state who will generate the allocation sequence, who will enrol participants, and who will assign participants to interventions. Ideally these roles are separated so that those enrolling or assigning participants cannot foresee or influence the allocation. State how and where the allocation list will be stored and the mechanisms that prevent those enrolling or assigning participants from gaining access to it.",
+      ai: null },
+    { id: "17a", itemKind: "spirit", spirit: "Who will be blinded after assignment to interventions (such as trial participants, care providers, outcome assessors, data analysts), and how",
+      spiritExpl: "The protocol should state who will be blinded after assignment to interventions — such as trial participants, care providers, outcome assessors or data analysts — and how blinding will be achieved. Blinding helps protect against bias, particularly for subjective outcomes. State explicitly who will be blinded rather than relying on terms such as 'single blind' or 'double blind'. Describe the comparability of the blinded interventions (e.g. matched appearance or flavour), the timing of final unblinding (e.g. after the analysis dataset is locked), and any strategies to reduce unblinding (e.g. pre-trial testing). Avoid a single fixed code for group assignment, as unblinding one participant would unblind all; if the success of blinding will be formally tested, describe the method.",
+      ai: null },
+    { id: "17b", itemKind: "spirit", spirit: "If blinded, circumstances under which unblinding is permissible, and procedure for revealing a participant’s allocated intervention during the trial",
+      spiritExpl: "If blinding is used, the protocol should describe the circumstances under which unblinding is permissible and the procedure for revealing a participant's allocated intervention during the trial, for example in the event of a medical emergency. For minor, reversible harms, stopping and then cautiously reintroducing the assigned intervention can sometimes avoid the need for unblinding.",
+      ai: null },
+  ]},
+  { section: "Methods — Data Collection, Management, and Analysis", items: [
+    { id: "18a", itemKind: "spirit", spirit: "Plans for assessment and collection of outcome, baseline, and other trial data, including any related processes to promote data quality (such as duplicate measurements, training of assessors) and a description of study instruments (such as questionnaires, laboratory tests) along with their reliability and validity, if known. Reference to where data collection forms can be found, if not in the protocol",
+      spiritExpl: "Plans for assessing and collecting outcome, baseline and other trial data should be described, including processes to promote data quality (such as duplicate measurements and training of assessors) and a description of study instruments along with their reliability and validity where known. Reference should be made to where data-collection forms can be found if they are not in the protocol. Data collection methods should be identical across study groups unless precluded by the intervention. Note that modified versions of validated instruments may no longer be considered validated, and that responses can vary with who collects the data and how questions are framed. Describe any pilot testing and assessment of the reliability and validity of the collection forms.",
+      ai: null },
+    { id: "18b", itemKind: "spirit", spirit: "Plans to promote participant retention and complete follow-up, including list of any outcome data to be collected for participants who discontinue or deviate from intervention protocols",
+      spiritExpl: "Plans to promote participant retention and complete follow-up should be described, including a list of any outcome data to be collected from participants who discontinue or deviate from the intervention protocols. Good retention reduces missing data and the associated complexities in analysis and interpretation. Distinguish non-retention (off-study) from non-adherence, and record the reasons for each (e.g. discontinuation due to harms versus lack of efficacy; consent withdrawn versus lost to follow-up). A participant who withdraws from one outcome assessment may agree to continue others if given the option; non-adherence should not automatically end data collection.",
+      ai: null },
+    { id: "19", itemKind: "spirit", spirit: "Plans for data entry, coding, security, and storage, including any related processes to promote data quality (such as double data entry; range checks for data values). Reference to where details of data management procedures can be found, if not in the protocol",
+      spiritExpl: "Plans for data entry, coding, security and storage should be described, including processes to promote data quality such as double data entry and range checks for data values. Reference should be made to where details of the data-management procedures can be found if they are not in the protocol. Indicate whether data entry is local or central (local enables quicker correction; central aids blinding and standardisation), define standardised coding practices for non-numeric data, and consider source-document verification of a random subset. Document the data storage timeframe both during and after the trial.",
+      ai: null },
+    { id: "20a", itemKind: "spirit", spirit: "Statistical methods for analysing primary and secondary outcomes. Reference to where other details of the statistical analysis plan can be found, if not in the protocol",
+      spiritExpl: "The statistical methods for analysing the primary and secondary outcomes should be described clearly enough to allow execution, replication and critical appraisal, with reference to where other details of the statistical analysis plan can be found if not in the protocol. Pre-specifying the main analysis reduces the risk of selective reporting. Indicate the effect measure (e.g. relative risk), the significance level and the planned use of confidence intervals. Address multiplicity: for trials with more than two groups, specify which comparisons will be made and which is the main comparison of interest. Descriptive rather than formal analysis may be preferable for rare outcomes such as adverse events. Any statistical analysis plan should be dated, with amendments and authors noted.",
+      ai: null },
+    { id: "20b", itemKind: "spirit", spirit: "Methods for any additional analyses (such as subgroup and adjusted analyses)",
+      spiritExpl: "Methods for any additional analyses, such as subgroup and adjusted analyses, should be described. Pre-planned subgroup analyses should specify the baseline variables, the subgroup definitions, the statistical method and the hypothesised direction of effect, because post hoc analyses carry a high risk of spurious findings. Subgroup definitions should include cut-off boundaries for continuous or ordinal variables. For adjusted analyses, prespecify the adjustment variables and how continuous variables will be handled, identify which is the main analysis where both adjusted and unadjusted are planned, and avoid adjusting for variables measured after randomisation.",
+      ai: null },
+    { id: "20c", itemKind: "spirit", spirit: "Definition of analysis population relating to protocol non-adherence (such as as-randomised analysis), and any statistical methods to handle missing data (such as multiple imputation)",
+      spiritExpl: "The protocol should define the analysis population relating to protocol non-adherence (such as an as-randomised, intention-to-treat analysis), and any statistical methods to handle missing data (such as multiple imputation). How missing data are handled can substantially affect the results and their interpretation. Avoid ambiguous labels such as 'modified intention to treat' or 'per protocol' unless they are fully defined, and note that the analysis population may differ by outcome (e.g. harms analysed only in those who received the intervention). Specify which variables will be used in any imputation, recognising that imputation relies on untestable assumptions.",
+      ai: null },
+  ]},
+  { section: "Methods — Monitoring", items: [
+    { id: "21a", itemKind: "spirit", spirit: "Composition of data monitoring committee (DMC); summary of its role and reporting structure; statement of whether it is independent from the sponsor and competing interests; and reference to where further details about its charter can be found, if not in the protocol. Alternatively, an explanation of why a DMC is not needed",
+      spiritExpl: "The composition of any data monitoring committee (DMC) should be described, along with a summary of its role and reporting structure, a statement of whether it is independent from the sponsor and free of competing interests, and reference to where further details of its charter can be found. If a DMC is not needed, an explanation should be given. Name the chair and members of the DMC (or, if not yet known, the intended size and characteristics), describe its planned method of functioning, and note that members are usually required to declare competing interests.",
+      ai: null },
+    { id: "21b", itemKind: "spirit", spirit: "Description of any interim analyses and stopping guidelines, including who will have access to these interim results and make the final decision to terminate the trial",
+      spiritExpl: "Any interim analyses and stopping guidelines should be described, including who will have access to the interim results and who will make the final decision to terminate the trial. Pre-specifying these protects the integrity and validity of the trial. State the statistical method, who will perform each interim analysis, and when. Prespecified interim analyses may also support adaptations (sample size re-estimation, changing the allocation ratio, or changing eligibility); specify whether those who view interim data will remain blinded and how trial integrity will be protected. Note that stopping criteria for harm often differ from those for benefit, and that stopping for futility is distinct.",
+      ai: null },
+    { id: "22", itemKind: "ai", spirit: "Plans for collecting, assessing, reporting, and managing solicited and spontaneously reported adverse events and other unintended effects of trial interventions or trial conduct",
+      spiritExpl: "Plans for collecting, assessing, reporting and managing solicited and spontaneously reported adverse events and other unintended effects of the trial interventions or trial conduct should be described, including how harms will be defined, collected and attributed. Distinguish anticipated from unanticipated and solicited from unsolicited events. Specify the overall surveillance timeframe and the frequency of harms collection, the instruments used (with their validity and reliability if known), and note that structured rather than open-ended questions increase the number of events reported.",
+      aiType: "Extension",
+      ai: "Specify any plans to identify and analyse performance errors. If there are no plans for this, justify why not.",
+      explanation: "Reporting performance errors and failure case analysis is especially important for AI interventions. AI systems can make errors which may be hard to foresee but which, if allowed to be deployed at scale, could have catastrophic consequences. Therefore, identifying cases of error and defining risk mitigation strategies are important for informing when the intervention can be safely implemented and for which populations. The protocol should specify whether there are any plans to analyse performance errors. If there are no plans for this, a justification should be included in the protocol." },
+    { id: "23", itemKind: "spirit", spirit: "Frequency and procedures for auditing trial conduct, if any, and whether the process will be independent from investigators and the sponsor",
+      spiritExpl: "The frequency and procedures for auditing trial conduct, if any, should be described, including whether the auditing process will be independent from the investigators and the sponsor. Auditing helps ensure the trial is conducted according to the protocol and applicable standards. Specify which processes will be audited (e.g. enrolment, consent, eligibility, allocation, adherence, harms reporting, data quality), whether a risk-based approach will target sites with the highest enrolment, withdrawals or atypical adverse-event rates, and verification of compliance with <a href=\"https://ichgcp.net/\" target=\"_blank\" rel=\"noopener\">ICH Good Clinical Practice (GCP)</a> and regulatory guidelines, along with the personnel involved and their independence.",
+      ai: null },
+  ]},
+  { section: "Ethics and Dissemination", items: [
+    { id: "24", itemKind: "spirit", spirit: "Plans for seeking research ethics committee/institutional review board (REC/IRB) approval",
+      spiritExpl: "The protocol should describe the plans for seeking research ethics committee or institutional review board (REC/IRB) approval. Independent ethical review is a fundamental safeguard for the rights, safety and wellbeing of trial participants.",
+      ai: null },
+    { id: "25", itemKind: "spirit", spirit: "Plans for communicating important protocol modifications (such as changes to eligibility criteria, outcomes, analyses) to relevant parties (such as investigators, REC/IRBs, trial participants, trial registries, journals, regulators)",
+      spiritExpl: "Plans for communicating important protocol modifications, such as changes to eligibility criteria, outcomes or analyses, to relevant parties — such as investigators, ethics committees, trial participants, registries, journals and regulators — should be described. Transparent handling of amendments supports the integrity of the trial. Describe who is responsible for deciding to amend the protocol, and define what will be treated as a 'substantive' amendment (one affecting participant safety or the scientific validity, scope or ethical rigour of the trial). Substantive amendments should be reviewed by an independent party such as the REC/IRB.",
+      ai: null },
+    { id: "26a", itemKind: "spirit", spirit: "Who will obtain informed consent or assent from potential trial participants or authorised surrogates, and how",
+      spiritExpl: "The protocol should state who will obtain informed consent or assent from potential trial participants or authorised surrogates, and how this will be done. Valid informed consent is central to the ethical conduct of a trial. Describe the status, experience and training of those who will obtain consent. Where participants may lack decisional capacity, state who will assess capacity, whether a formal instrument will be used, and how agreement will be secured if capacity returns. Describe assent procedures for minors and any circumstances (e.g. cluster randomised trials) where consent will be modified or waived.",
+      ai: null },
+    { id: "26b", itemKind: "spirit", spirit: "Additional consent provisions for collection and use of participant data and biological specimens in ancillary studies, if applicable",
+      spiritExpl: "Any additional consent provisions for the collection and use of participant data and biological specimens in ancillary studies should be described, if applicable, so that participants understand how their data and samples may be used beyond the main trial. Describe any tiered consent options (e.g. use in specified protocols, future unrelated research, submission to a biorepository, and agreement to be re-contacted), and state whether withdrawal is possible, what withdrawal means in practice (e.g. specimens already used cannot be withdrawn), and what information derived from specimens will be returned to participants, if any.",
+      ai: null },
+    { id: "27", itemKind: "spirit", spirit: "How personal information about potential and enrolled participants will be collected, shared, and maintained in order to protect confidentiality before, during, and after the trial",
+      spiritExpl: "The protocol should describe how personal information about potential and enrolled participants will be collected, shared and maintained in order to protect confidentiality before, during and after the trial. Describe the specific safeguards: replacing identifying information with a code, storing the code and data separately using encryption and password protection, limiting access to the minimum number of individuals, and securing data during transmission to sponsors or coinvestigators (e.g. via a virtual private network).",
+      ai: null },
+    { id: "28", itemKind: "spirit", spirit: "Financial and other competing interests for principal investigators for the overall trial and each study site",
+      spiritExpl: "Financial and other competing interests for the principal investigators for the overall trial and at each study site should be declared, so that readers can assess potential influences on the design, conduct and reporting of the trial. Competing interests include financial ties (salary or grants, ownership of stock or options, honorariums, paid consultancy or advisory-board service, and patents) and non-financial interests (academic commitments, personal or professional relationships, and political, religious or advocacy affiliations). Disclosure should be updated regularly and does not in itself imply wrongdoing.",
+      ai: null },
+    { id: "29", itemKind: "ai", spirit: "Statement of who will have access to the final trial dataset, and disclosure of contractual agreements that limit such access for investigators",
+      spiritExpl: "The protocol should state who will have access to the final trial dataset, and disclose any contractual agreements that limit such access for investigators. Transparency about data access supports the credibility and independence of the trial.",
+      aiType: "Extension",
+      ai: "State whether and how the AI intervention and/or its code can be accessed, including any restrictions to access or re-use.",
+      explanation: "The protocol should make clear whether and how the AI intervention and/or its code can be accessed or re-used. This should include details regarding the license and any restrictions to access." },
+    { id: "30", itemKind: "spirit", spirit: "Provisions, if any, for ancillary and post-trial care, and for compensation to those who suffer harm from trial participation",
+      spiritExpl: "Any provisions for ancillary and post-trial care, and for compensation to those who suffer harm from trial participation, should be described. These provisions are an important part of protecting and supporting participants. Distinguish care provided during the trial from post-trial provisions: identify any interventions, benefits or care the sponsor will continue to provide to participants and host communities after the trial, and outline any compensation for trial-related harms.",
+      ai: null },
+    { id: "31a", itemKind: "spirit", spirit: "Plans for investigators and sponsor to communicate trial results to participants, healthcare professionals, the public, and other relevant groups (such as via publication, reporting in results databases, or other data sharing arrangements), including any publication restrictions",
+      spiritExpl: "Plans for the investigators and sponsor to communicate trial results to participants, healthcare professionals, the public and other relevant groups should be described — for example via publication, reporting in results databases or other data-sharing arrangements — including any publication restrictions. Include an explicit statement that results will be disseminated regardless of the direction or magnitude of effect, the process and timeframe for approving and submitting reports, and disclosure of any restrictions on the investigators' right to publish — even where these are held in a separate publication agreement.",
+      ai: null },
+    { id: "31b", itemKind: "spirit", spirit: "Authorship eligibility guidelines and any intended use of professional writers",
+      spiritExpl: "The authorship eligibility guidelines and any intended use of professional writers should be described, supporting transparency about who is responsible for the trial report. Define authorship using recognised criteria (e.g. ICMJE) to avoid both ghost and guest authorship; where protocol authors are not named on later publications, acknowledge their contribution. The employment and funding source of any professional medical writers should be acknowledged in both the protocol and trial reports.",
+      ai: null },
+    { id: "31c", itemKind: "spirit", spirit: "Plans, if any, for granting public access to the full protocol, participant-level dataset, and statistical code",
+      spiritExpl: "Any plans for granting public access to the full protocol, the participant-level dataset and the statistical code should be described. Sharing these supports reproducibility and the wider use of trial data. The protocol should state whether the full protocol, the full study (clinical study) report, the anonymised participant-level dataset and the statistical code will be made publicly available, and if so the timeframe, conditions and avenues for access (e.g. journals, a trial website, or registries).",
+      ai: null },
+  ]},
+  { section: "Appendices", items: [
+    { id: "32", itemKind: "spirit", spirit: "Model consent form and other related documentation given to participants and authorised surrogates",
+      spiritExpl: "The model consent form and other related documentation given to participants and authorised surrogates should be provided, allowing reviewers to assess how information is presented to potential participants. Consent materials should normally cover, at a minimum, the trial's purpose, potential benefits and risks, the right to refuse or withdraw at any time, the researcher's affiliation and competing interests, and sources of trial funding. Ensure the reading level suits the population, provide separate documents where needed (e.g. parental permission and child assent), and note any rare deferred-consent exceptions (e.g. unconscious patients in emergencies).",
+      ai: null },
+    { id: "33", itemKind: "spirit", spirit: "Plans for collection, laboratory evaluation, and storage of biological specimens for genetic or molecular analysis in the current trial and for future use in ancillary studies, if applicable",
+      spiritExpl: "Plans for the collection, laboratory evaluation and storage of biological specimens for genetic or molecular analysis in the current trial, and for future use in ancillary studies, should be described, if applicable. Specify the location of the repositories, whether stored samples and associated data will be de-identified or coded to protect confidentiality, and whether the repository is overseen by a research ethics committee/IRB.",
+      ai: null },
+  ]},
+];
+
+let state = {};
+let paperTitle = '';
+let sectionOpen = {}; // track which sections are open
+let detailsExpanded = true; // explanations open by default
+function getRowsForSection(sec) {
+  const rows = [];
+  sec.items.forEach(item => {
+    if (item.spirit && item.spiritExpl) {
+      const spiritDisplayId = item.spiritId || item.id.replace(/-[ivx]+$/i, '');
+      rows.push({
+        source: item,
+        stateId: `spirit-${item.id}`,
+        displayId: spiritDisplayId,
+        shortId: spiritDisplayId,
+        itemKind: 'spirit',
+        spirit: item.spirit,
+        spiritExpl: item.spiritExpl,
+        ai: null,
+        aiType: null,
+        explanation: null
+      });
+    }
+    if (item.ai) {
+      rows.push({
+        source: item,
+        stateId: `ai-${item.id}`,
+        displayId: item.aiId || `SPIRIT-AI ${item.id}`,
+        shortId: item.id,
+        itemKind: 'ai',
+        spirit: null,
+        spiritExpl: null,
+        ai: item.ai,
+        aiType: item.aiType,
+        explanation: item.explanation
+      });
+    }
+  });
+  return rows;
+}
+
+function getAllRows(kind) {
+  const rows = [];
+  DATA.forEach(sec => {
+    getRowsForSection(sec).forEach(row => {
+      if (!kind || row.itemKind === kind) rows.push({ ...row, section: sec.section });
+    });
+  });
+  return rows;
+}
+
+const totalItems = getAllRows(null).length;
+const spiritItems = getAllRows('spirit').length;
+const aiItems = getAllRows('ai').length;
+
+function loadState() {
+  try { const saved = localStorage.getItem('spirit-ai-state-v3'); if (saved) state = JSON.parse(saved); } catch(e) {}
+  try { paperTitle = localStorage.getItem('spirit-ai-paper-title') || ''; } catch(e) {}
+  try { const so = localStorage.getItem('spirit-ai-sections'); if (so) sectionOpen = JSON.parse(so); } catch(e) {}
+}
+function saveState() {
+  try { localStorage.setItem('spirit-ai-state-v3', JSON.stringify(state)); } catch(e) {}
+}
+function savePaperTitle(val) {
+  paperTitle = val;
+  try { localStorage.setItem('spirit-ai-paper-title', val); } catch(e) {}
+}
+function saveSections() {
+  try { localStorage.setItem('spirit-ai-sections', JSON.stringify(sectionOpen)); } catch(e) {}
+}
+function toggleSection(secName) {
+  sectionOpen[secName] = !sectionOpen[secName];
+  saveSections();
+  const items = document.getElementById('sec-items-' + secName.replace(/[^a-zA-Z0-9]/g,''));
+  const chevron = document.getElementById('sec-chev-' + secName.replace(/[^a-zA-Z0-9]/g,''));
+  if (sectionOpen[secName]) {
+    items.classList.remove('collapsed');
+    chevron.classList.add('open');
+  } else {
+    items.classList.add('collapsed');
+    chevron.classList.remove('open');
+  }
+}
+
+function render() {
+  const el = document.getElementById('checklist');
+  el.innerHTML = '';
+  DATA.forEach(sec => {
+    const rows = getRowsForSection(sec);
+    const div = document.createElement('div');
+    div.className = 'section';
+    const secRatings = rows.map(row => (state[row.stateId] || {}).rating || null);
+    const secPass = secRatings.filter(r => r === 'pass').length;
+    const secFail = secRatings.filter(r => r === 'fail').length;
+    const secNa = secRatings.filter(r => r === 'na').length;
+    const secNone = secRatings.filter(r => !r).length;
+    let badgeColor = '#d1d5db';
+    if (secNone === 0 && secFail === 0) badgeColor = 'var(--green)';
+    else if (secFail > 0) badgeColor = 'var(--red)';
+    else if (secPass > 0 || secNa > 0) badgeColor = 'var(--amber)';
+
+    const secKey = sec.section.replace(/[^a-zA-Z0-9]/g,'');
+    const isOpen = !!sectionOpen[sec.section];
+    div.innerHTML = `<div class="section-header" onclick="toggleSection('${sec.section}')"><span class="chevron ${isOpen?'open':''}" id="sec-chev-${secKey}">&#9654;</span><span>${sec.section}</span><span class="section-badge" style="background:${badgeColor}">${secPass + secNa}/${rows.length}</span></div>`;
+    const itemsContainer = document.createElement('div');
+    itemsContainer.className = 'section-items' + (isOpen ? '' : ' collapsed');
+    itemsContainer.id = 'sec-items-' + secKey;
+    rows.forEach(item => {
+      const s = state[item.stateId] || {};
+      const cls = s.rating === 'pass' ? 'green' : s.rating === 'fail' ? 'red' : s.rating === 'na' ? 'amber' : '';
+      const itemDiv = document.createElement('div');
+      itemDiv.className = `item ${cls}`;
+
+      // SPIRIT 2013 block
+      let spiritHeaderBlock = '';
+      if (item.itemKind === 'spirit') {
+        spiritHeaderBlock = `
+          <div class="spirit-block">
+            <span class="spirit-label">SPIRIT 2013</span>
+            <span class="spirit-body">${item.spirit}</span>
+          </div>`;
+      }
+      // SPIRIT 2013 explanation
+      let spiritBlock = '';
+      if (item.spiritExpl) {
+        spiritBlock = `
+          <div class="spirit-explanation">
+            <div class="explanation-text">${item.spiritExpl}</div>
+          </div>`;
+      }
+
+      // AI extension block
+      let aiBlock = '';
+      if (item.ai) {
+        const typeBadge = item.aiType === 'Extension'
+          ? '<span class="item-type extension">Extension</span>'
+          : '<span class="item-type elaboration">Elaboration</span>';
+        aiBlock = `
+          <div class="ai-ext">
+            <span class="ai-label">SPIRIT-AI ${typeBadge}</span>
+            <span class="ai-body">${item.ai}</span>
+          </div>`;
+        if (item.explanation) {
+          aiBlock += `
+          <div class="ai-explanation">
+            <div class="explanation-text">${item.explanation}</div>
+          </div>`;
+        }
+      }
+
+      itemDiv.innerHTML = `
+        <div class="item-header">
+          <span class="item-id">${item.shortId || item.displayId}</span>
+          <div class="item-main">
+            <div class="item-text">
+              ${spiritHeaderBlock}
+              ${spiritBlock}
+              ${aiBlock}
+            </div>
+          </div>
+          <div class="item-controls">
+            <div class="rag-buttons">
+              <button class="rag-btn pass ${s.rating === 'pass' ? 'active' : ''}" onclick="rate('${item.stateId}','pass')">Addressed</button>
+              <button class="rag-btn fail ${s.rating === 'fail' ? 'active' : ''}" onclick="rate('${item.stateId}','fail')">Not Addressed</button>
+              <button class="rag-btn na ${s.rating === 'na' ? 'active' : ''}" onclick="rate('${item.stateId}','na')">N/A</button>
+            </div>
+            <div class="item-notes">
+              <textarea id="note-${item.stateId}" placeholder="Page ref / notes..." oninput="note('${item.stateId}', this.value)">${s.notes || ''}</textarea>
+            </div>
+          </div>
+        </div>`;
+      itemsContainer.appendChild(itemDiv);
+    });
+    div.appendChild(itemsContainer);
+    el.appendChild(div);
+  });
+  updateDashboard();
+}
+
+function rate(id, rating) {
+  const scrollY = window.scrollY;
+  if (!state[id]) state[id] = {};
+  state[id].rating = state[id].rating === rating ? null : rating;
+  saveState();
+  render();
+  requestAnimationFrame(() => window.scrollTo(0, scrollY));
+}
+
+function note(id, text) {
+  if (!state[id]) state[id] = {};
+  state[id].notes = text;
+  saveState();
+}
+
+
+function countItems(kind) {
+  const rows = getAllRows(kind);
+  let pass = 0, fail = 0, na = 0;
+  rows.forEach(row => {
+    const r = (state[row.stateId] || {}).rating;
+    if (r === 'pass') pass++; else if (r === 'fail') fail++; else if (r === 'na') na++;
+  });
+  const total = rows.length;
+  const unrated = total - pass - fail - na;
+  const applicable = total - na;
+  const pct = applicable > 0 ? Math.round((pass / applicable) * 100) : 0;
+  return { pass, fail, na, unrated, total, pct };
+}
+
+function setScore(prefix, counts) {
+  document.getElementById(`score-${prefix}-total`).textContent = counts.pct + '%';
+  document.getElementById(`score-${prefix}-pass`).textContent = counts.pass;
+  document.getElementById(`score-${prefix}-fail`).textContent = counts.fail;
+  document.getElementById(`score-${prefix}-na`).textContent = counts.na;
+  document.getElementById(`score-${prefix}-unrated`).textContent = counts.unrated;
+}
+
+function updateDashboard() {
+  const spirit = countItems('spirit');
+  const ai = countItems('ai');
+  const combined = countItems(null);
+
+  setScore('spirit', spirit);
+  setScore('ai', ai);
+  setScore('combined', combined);
+}
+
+function expandAll() {
+  detailsExpanded = true;
+  DATA.forEach(sec => { sectionOpen[sec.section] = true; });
+  saveSections();
+  document.querySelectorAll('.section-items').forEach(el => el.classList.remove('collapsed'));
+  document.querySelectorAll('.chevron').forEach(el => el.classList.add('open'));
+  document.querySelectorAll('details').forEach(d => d.open = true);
+}
+function collapseAll() {
+  detailsExpanded = false;
+  DATA.forEach(sec => { sectionOpen[sec.section] = false; });
+  saveSections();
+  document.querySelectorAll('.section-items').forEach(el => el.classList.add('collapsed'));
+  document.querySelectorAll('.chevron').forEach(el => el.classList.remove('open'));
+  document.querySelectorAll('details').forEach(d => d.open = false);
+}
+
+function resetAll() {
+  if (!confirm('Reset all ratings and notes?')) return;
+  state = {};
+  saveState(); render();
+}
+
+function getExportTimestamp() {
+  const now = new Date();
+  const datePart = now.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  }).replace(/ /g, ' ');
+  const timePart = now.toLocaleTimeString('en-GB', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+  return `${datePart} ${timePart}`;
+}
+
+
+function formatRatingLabel(rating) {
+  if (rating === 'pass') return 'Addressed';
+  if (rating === 'fail') return 'Not Addressed';
+  if (rating === 'na') return 'N/A';
+  return 'Unrated';
+}
+
+
+function formatScoreSummary(label, counts) {
+  return `${label}: ${counts.pct}% Completed; ${counts.pass} Addressed, ${counts.fail} Not Addressed, ${counts.na} N/A, ${counts.unrated} Unrated`;
+}
+
+// Shared export model
+function getExportSourceUrl() {
+  return window.location.href;
+}
+
+function getExportMetadata() {
+  return {
+    paper: document.getElementById('paper-title').value.trim() || 'Not specified',
+    generated: getExportTimestamp(),
+    url: getExportSourceUrl()
+  };
+}
+
+function getExportRows() {
+  return getAllRows(null).map(row => {
+    const s = state[row.stateId] || {};
+    const source = row.itemKind === 'spirit'
+      ? 'SPIRIT 2013'
+      : 'SPIRIT-AI';
+    const statement = row.itemKind === 'spirit' ? row.spirit : row.ai;
+    return {
+      section: row.section,
+      item: row.shortId || row.displayId,
+      source,
+      statement: statement || '',
+      rating: formatRatingLabel(s.rating),
+      notes: s.notes || ''
+    };
+  });
+}
+
+function escapeCSV(value) {
+  return String(value || '').replace(/"/g, '""');
+}
+
+function getSaveFileData() {
+  return {
+    schemaVersion: 1,
+    app: 'spirit-ai-checklist',
+    savedAt: getExportTimestamp(),
+    sourceUrl: getExportSourceUrl(),
+    paperTitle: document.getElementById('paper-title').value,
+    state,
+    sectionOpen
+  };
+}
+
+function getSafeFilenamePart(value) {
+  return String(value || '')
+    .trim()
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80) || 'spirit-ai-checklist';
+}
+
+
+function getFilenameTimestamp() {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  return `${yyyy}${mm}${dd}-${hh}${min}`;
+}
+
+// Helper to generate export file names in a consistent pattern
+function getExportFilename(basePaperTitle, extension) {
+  const paperPart = String(basePaperTitle || '').trim();
+  const paperSegment = paperPart ? `-${getSafeFilenamePart(paperPart)}` : '';
+  return `spirit-ai-checklist${paperSegment}-${getFilenameTimestamp()}.${extension}`;
+}
+
+function exportSaveFile() {
+  const data = getSaveFileData();
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getExportFilename(data.paperTitle, 'review.json');
+  a.click();
+}
+
+function triggerSaveFileImport() {
+  const input = document.getElementById('save-file-input');
+  input.value = '';
+  input.click();
+}
+
+function isPlainObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function importSaveFile(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!isPlainObject(data) || data.app !== 'spirit-ai-checklist' || !isPlainObject(data.state)) {
+        alert('This does not look like a valid SPIRIT-AI checklist save file.');
+        return;
+      }
+
+      if (data.schemaVersion !== 1) {
+        alert('This save file uses an unsupported version.');
+        return;
+      }
+
+      state = data.state;
+      paperTitle = typeof data.paperTitle === 'string' ? data.paperTitle : '';
+      sectionOpen = isPlainObject(data.sectionOpen) ? data.sectionOpen : {};
+      document.getElementById('paper-title').value = paperTitle;
+      saveState();
+      savePaperTitle(paperTitle);
+      saveSections();
+      render();
+      alert('Save file imported. You can continue where you left off.');
+    } catch (err) {
+      alert('Could not import this save file. Please check that it is a valid JSON save file.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function exportCSV() {
+  const metadata = getExportMetadata();
+  const exportRows = getExportRows();
+  let csv = metadata.paper ? `"Paper:","${escapeCSV(metadata.paper)}"\n` : '';
+  csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
+  csv += 'Section,Item,Source,Statement,Rating,Notes\n';
+  exportRows.forEach(row => {
+    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.source)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
+  });
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getExportFilename(document.getElementById('paper-title').value, 'csv');
+  a.click();
+}
+
+function exportPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'landscape' });
+  doc.setFontSize(16);
+  doc.text('SPIRIT-AI Checklist Report', 14, 15);
+  doc.setFontSize(9);
+  const metadata = getExportMetadata();
+  let yPos = 21;
+  if (metadata.paper) {
+    doc.setFontSize(10);
+    doc.text(`Paper: ${metadata.paper}`, 14, yPos);
+    yPos += 6;
+    doc.setFontSize(9);
+  }
+  doc.text(`Generated from ${metadata.url} on ${metadata.generated}`, 14, yPos);
+  yPos += 6;
+
+  const spirit = countItems('spirit');
+  const ai = countItems('ai');
+  const combined = countItems(null);
+  doc.text(formatScoreSummary('SPIRIT 2013 core items only', spirit), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('SPIRIT-AI extension only', ai), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('Combined', combined), 14, yPos);
+  yPos += 6;
+
+  // Updated PDF export table format
+  const rows = getExportRows().map(row => [
+    row.section,
+    row.item,
+    row.source,
+    row.statement,
+    row.rating,
+    row.notes
+  ]);
+
+  doc.autoTable({
+    startY: yPos,
+    head: [['Section', 'Item', 'Source', 'Statement', 'Rating', 'Notes']],
+    body: rows,
+    styles: { fontSize: 7, cellPadding: 1.6, overflow: 'linebreak', valign: 'top' },
+    headStyles: { fillColor: [59,130,246] },
+    columnStyles: {
+      0: { cellWidth: 36 },
+      1: { cellWidth: 24 },
+      2: { cellWidth: 28 },
+      3: { cellWidth: 124 },
+      4: { cellWidth: 24 },
+      5: { cellWidth: 56 }
+    },
+    didParseCell: function(data) {
+      if (data.column.index === 4 && data.section === 'body') {
+        const v = data.cell.raw;
+        if (v === 'Addressed') { data.cell.styles.textColor = [34,197,94]; data.cell.styles.fontStyle = 'bold'; }
+        else if (v === 'Not Addressed') { data.cell.styles.textColor = [239,68,68]; data.cell.styles.fontStyle = 'bold'; }
+        else if (v === 'N/A') { data.cell.styles.textColor = [245,158,11]; data.cell.styles.fontStyle = 'bold'; }
+      }
+    }
+  });
+
+  doc.setFontSize(6.5);
+  const y = doc.internal.pageSize.height - 8;
+  doc.text('Checklist items derived from SPIRIT 2013 and SPIRIT-AI. Explanatory summaries independently rewritten. SPIRIT-AI: Cruz Rivera S et al., Nat Med 2020;26:1351-1363 / BMJ 2020;370:m3210, CC BY 4.0. SPIRIT 2013 E&E: Chan AW et al., BMJ 2013;346:e7586.', 14, y);
+  doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
+}
+
+loadState();
+document.getElementById('paper-title').value = paperTitle;
+render();
+</script>
+</body>
+</html>
