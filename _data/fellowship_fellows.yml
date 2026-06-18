@@ -269,8 +269,8 @@ en: &DEFAULT_EN
           placement: "University Hospitals of Leicester NHS Trust"
           lat: "52.6290"
           lng: "-1.1396"
-          joining_statement: >-
-            very excited and happy , it will open the door for my dream in IT . I will try my best to make it successful and productive .
+          joining_statement:
+
 
         - name: "Andre Ferreira"
           role: "Specialty Trainee Doctor in General Practice"
