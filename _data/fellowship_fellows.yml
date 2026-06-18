@@ -35,12 +35,14 @@ en: &DEFAULT_EN
           cohort: "5"
           region: "Scotland"
           profession: "Nursing & Midwifery"
-          project_title:
+          project_title: "Artificial Intelligence Assisted Tele-Dermatology Skin Cancer Triage"
           project_link:
           supervisor:
           placement: "NHS Tayside"
           lat: "56.4620"
           lng: "-2.9730"
+          joining_statement: >-
+            I am excited to join the fellowship's next cohort, learn from the experts and grow my skills in Clinical AI. As a Respiratory Research Nurse, I am eager to apply these skills and develop tools to give our patients better access to care in increasingly economical ways.
 
 
 
@@ -49,84 +51,98 @@ en: &DEFAULT_EN
           cohort: "5"
           region: "London"
           profession: "Optometry"
-          project_title:
+          project_title: "AI-enabled extraction of clinical referral data to identify neighbourhood-level variation in access to and quality of eyecare using a geospatial digital twin"
           project_link:
           supervisor:
           placement: "Moorfields Eye Hospital NHS Foundation Trust"
           lat: "51.5273"
           lng: "-0.0890"
+          joining_statement: >-
+            I’m looking forward to joining the NHS Fellowship in Clinical AI to better understand how AI can be applied safely and meaningfully to tackle real healthcare challenges. I hope to learn from others, share my own experience, and contribute to practical innovations that support patients and staff.
 
         - name: "Peter Arthure"
           role: "Lead Digital Pharmacist"
           cohort: "5"
           region: "South West"
           profession: "Pharmacy"
-          project_title:
+          project_title: "Ambient Scribe Deployment"
           project_link:
           supervisor:
           placement:
           lat:
           lng:
+          joining_statement: >-
+            I am excited to be part of this programme and to learn about AI and how it can be used for positive healthcare outcomes.
 
         - name: "Kiran Sharma"
           role: "Higher Specialist Pharmacist in Clinical Informatics"
           cohort: "5"
           region: "London"
           profession: "Pharmacy"
-          project_title:
+          project_title: "Evaluation of digital pathology and AI in the haematology laboratory"
           project_link:
           supervisor:
           placement: "King’s College Hospital NHS Foundation Trust"
           lat: "51.4673"
           lng: "-0.0934"
+          joining_statement: >-
+            I’m excited to join the NHS Fellowship in Clinical AI to deepen my understanding of AI in healthcare. With my background in clinical pharmacy and digital health, I look forward to collaborating with diverse clinicians and contributing to AI-driven innovations that enhance patient care and outcomes.
 
         - name: "Deen Somally"
           role: "Pharmacist"
           cohort: "5"
           region: "London"
           profession: "Pharmacy"
-          project_title:
+          project_title: "Implementing an algorithm for segmenting high-intensity users of mental health crisis services in a population health management platform (LUCI)"
           project_link:
           supervisor:
           placement: "South London and Maudsley NHS Foundation Trust"
           lat: "51.4691"
           lng: "-0.0881"
+          joining_statement: >-
+            Looking forward to getting stuck into a project, meeting like-minded individuals across the NHS and developing a deeper understanding of AI and healthcare!
 
         - name: "Darren Tilley"
           role: "Physician Associate"
           cohort: "5"
           region: "Kent Surrey Sussex"
           profession: "Physician Associate"
-          project_title:
+          project_title: "(1) Deployment and clinical use of AI CT Brain Reporting Software (2) Post-deployment monitoring of AI CXR Reporting Software (3) Retrospective evaluation of AI MRI Prostate Reporting Software"
           project_link:
           supervisor:
           placement: "University Hospitals Sussex NHS Foundation Trust"
           lat: "50.8191"
           lng: "-0.1164"
+          joining_statement: >-
+            The NHS Fellowship in Clinical AI is a defining opportunity to develop expertise in real-world AI deployment. I'm excited to combine my clinical and commercial experience to help deliver practical AI solutions that ease operational pressures, improve patient care, and benefit the wider NHS.
 
         - name: "Richard Vail"
           role: "Principal Clinical Informatician"
           cohort: "5"
           region: "Scotland"
           profession: "Physiotherapy"
-          project_title:
+          project_title: "Glasgow AI Portfolio"
           project_link:
           supervisor:
           placement: "NHS Greater Glasgow and Clyde"
           lat: "55.86224"
           lng: "-4.34070"
+          joining_statement: >-
+            I am looking forward to this fellowship developing clinical AI leadership in NHS Scotland through applied learning and collaboration with clinicians and thought leaders. As the NHS looks to integrate AI, this capability is essential for delivering safer care and meaningful, system-wide improvement.
 
         - name: "Shu Xiaoyi"
           role: "Specialist Neurophysiotherapist"
           cohort: "5"
           region: "London"
           profession: "Physiotherapy"
-          project_title:
+          project_title: "Integration of CogStack natural language technology into the UCLH Cancer Data Clinic to generate outcome-enriched datasets for haematology clinicians"
           project_link:
           supervisor:
           placement: "University College London Hospitals NHS Foundation Trust"
           lat: "51.5252"
           lng: "-0.1363"
+          joining_statement: >-
+            I’m motivated to contribute to clinical AI projects that genuinely support workflows, working with multidisciplinary teams to evaluate systems, understand their limits, and embed them safely so I can develop as a trusted clinical AI leader.
 
 
         - name: "William Hamblyn"
@@ -134,36 +150,42 @@ en: &DEFAULT_EN
           cohort: "5"
           region: "East of England"
           profession: "Healthcare Science"
-          project_title:
+          project_title: "Ambient Scribe Deployment"
           project_link:
           supervisor:
           placement:
           lat:
           lng:
+          joining_statement: >-
+            I am delighted to be joining the NHS Fellowship in Clinical AI. These models will continue to transform clinical workflows, and I am eager to develop my skills and understanding across the full AI lifecycle while meeting some brilliant people along the way.
 
         - name: "Michael Harland"
           role: "Chief Cardiac Physiologist"
           cohort: "5"
           region: "London"
           profession: "Healthcare Science"
-          project_title:
+          project_title: "Integrated AI for Cardiovascular Risk Factor Extraction and Automated Treatment Recommendations in NHS Clinical Workflows"
           project_link:
           supervisor:
           placement: "Barts Health NHS Trust"
           lat: "51.5185"
           lng: "-0.0589"
+          joining_statement: >-
+            Joining the NHS Fellowship in Clinical AI is vital for redefining clinical roles. I am excited to learn how to safely implement AI, proving that frontline clinicians are the best-placed experts to lead the NHS's digital transformation and deliver safer, more precise patient care.
 
         - name: "Benjamin Johns"
           role: "Clinical Scientist"
           cohort: "5"
           region: "South West"
           profession: "Healthcare Science"
-          project_title:
+          project_title: "Quality Assurance of Clinical AI Scribes"
           project_link:
           supervisor:
           placement: "NHSE South West Region"
           lat: "51.015025"
           lng: "-3.068936"
+          joining_statement: >-
+            I am delighted to join the Fellowship in Clinical AI to learn, collaborate and help shape the safe and ethical adoption of AI in the NHS. I hope to combine clinical experience and AI applications to improve patient outcomes, support the workforce and build trust in emerging technologies.
 
 
         - name: "Daveena Meeks"
@@ -171,504 +193,588 @@ en: &DEFAULT_EN
           cohort: "5"
           region: "London"
           profession: "Anaesthetics & Intensive Care"
-          project_title:
+          project_title: "Multimodal AI to detect undiagnosed heart disease"
           project_link:
           supervisor:
           placement: "King’s College Hospital NHS Foundation Trust"
           lat: "51.4673"
           lng: "-0.0934"
+          joining_statement: >-
+            I look forward to learning, contributing, and supporting the safe and effective use of AI to improve patient care.
 
         - name: "Janan Sakathevan"
           role: "Specialty Trainee Doctor in Anaesthetics"
           cohort: "5"
           region: "Kent Surrey Sussex"
           profession: "Anaesthetics & Intensive Care"
-          project_title:
+          project_title: "Head Abnormality Detection AI-tool Deployment (HADAD-ARRT): A Real-world Randomised Trial"
           project_link:
           supervisor:
           placement: "East Kent Hospitals NHS Foundation Trust"
           lat: "51.1396"
           lng: "0.9152"
+          joining_statement: >-
+            As an anaesthetist, I’m excited to join the NHS Clinical AI Fellowship to develop skills to safely deploy and evaluate AI in real-world care. I look forward to building an AI-ready NHS and collaborating with like-minded clinicians to drive safe, patient-centred digital transformation.
 
         - name: "Yen Ming Lin"
           role: "Specialty Trainee Dentist in Orthodontics"
           cohort: "5"
           region: "North West"
           profession: "Dentistry"
-          project_title:
+          project_title: "SMILE-AI (minimiSing long term iMpact of dentitIon and faciaL dEformations in childhood cancer survivors – utilising Artificial Intelligence for better care)"
           project_link:
           supervisor:
           placement: "The Christie NHS Foundation Trust"
           lat: "53.4213"
           lng: "-2.2299"
+          joining_statement: >-
+            I am excited to join the NHS Fellowship in Clinical AI, driven by a passion to bridge clinical practice and technology. I hope to contribute meaningfully, learn from national leaders, and help shape safe, evidence-based AI that improves patient care and outcomes.
 
         - name: "Syme Bhopal"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "Kent Surrey Sussex"
           profession: "General Practice"
-          project_title:
+          project_title: "Head Abnormality Detection AI-tool Deployment (HADAD-ARRT): A Real-world Randomised Trial"
           project_link:
           supervisor:
           placement: "East Kent Hospitals NHS Foundation Trust"
           lat: "51.1396"
           lng: "0.9152"
+          joining_statement: >-
+            I am very excited to undertake the NHS Fellowship in Clinical AI. I hope to deepen my understanding of safe, equitable AI in healthcare, collaborate with forward-thinking clinicians, and help translate innovation into real patient benefit.
 
         - name: "Mahmoud Elbahnasawi"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "Yorkshire & Humber"
           profession: "General Practice"
-          project_title:
+          project_title: "Developing a Framework for Monitoring and Audit of Clinical Machine Learning Auto-Contouring Models"
           project_link:
           supervisor:
           placement: "Leeds Teaching Hospitals NHS Trust"
           lat: "53.8025431"
           lng: "-1.5528919"
+          joining_statement: >-
+            I think it will become really important for clinicians to learn a lot about AI going into the future. I hope that this fellowship will give me insight into how clinical AI is implemented in the NHS and allow me to meet other keen clinicians. I am excited to start.
 
         - name: "Ali Fadhil"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "Midlands"
           profession: "General Practice"
-          project_title:
+          project_title: "Comprehensive real world evaluation of the use of a commercially available chest X-ray decision support tool (AnnaliseAI) at University Hospital of Leicester NHS Trust"
           project_link:
           supervisor:
           placement: "University Hospitals of Leicester NHS Trust"
           lat: "52.6290"
           lng: "-1.1396"
+          joining_statement: >-
+            very excited and happy , it will open the door for my dream in IT . I will try my best to make it successful and productive .
 
         - name: "Andre Ferreira"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "South West"
           profession: "General Practice"
-          project_title:
+          project_title: "Artificial Intelligence for the Automated Diagnosis, Triage, and Assessment of Patients with Hearing Loss and Tinnitus: A Pilot Comparative Study with Clinical Evaluation by Otolaryngologists"
           project_link:
           supervisor:
           placement: "Royal Cornwall Hospitals NHS Trust"
           lat: "50.2592"
           lng: "-5.0780"
+          joining_statement: >-
+            Healthcare is rapidly evolving, with AI reshaping how we deliver and evaluate care. I am excited to be joining the fellowship at such a pivotal time, allowing me to integrate my clinical experience with technological innovation and opportunities to collaborate with like-minded peers.
 
         - name: "Azhar Janmohamed"
           role: "General Practitioner"
           cohort: "5"
           region: "London"
           profession: "General Practice"
-          project_title:
+          project_title: "Explainable Diagnostic Reasoning AI for supporting Gynaecological cancer diagnosis in primary care"
           project_link:
           supervisor:
           placement: "Imperial College Healthcare NHS Trust"
           lat: "51.5174"
           lng: "-0.1740"
+          joining_statement: >-
+            I am proud to join the NHS Fellowship in Clinical AI at a pivotal moment for healthcare. My aim is to translate advanced AI into safe, scalable tools that improve outcomes and clinician performance. I hope to bridge frontline medicine with technology to deliver meaningful impact across the NHS.
 
         - name: "Elizabeth Le"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "North West"
           profession: "General Practice"
-          project_title:
+          project_title: "Clinical Fellowship in Chest X-ray AI"
           project_link:
           supervisor:
           placement: "The Christie NHS Foundation Trust"
           lat: "53.4213"
           lng: "-2.2299"
+          joining_statement: >-
+            I am grateful and excited to join the NHS Fellowship in Clinical AI. This is a valuable opportunity to explore how we can safely and equitably adopt AI within the NHS. I hope to develop as a clinical leader and collaborate with peers to improve patient care through digital transformation.
 
         - name: "Ibrahim Marwa"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "North West"
           profession: "General Practice"
-          project_title:
+          project_title: "Predictive analytics in intensive care"
           project_link:
           supervisor:
           placement: "Alder Hey Children's NHS Foundation Trust"
           lat: "53.4198"
           lng: "-2.8996"
+          joining_statement: >-
+            I am excited to join the NHS Clinical AI Fellowship and move from building prototypes to leading safe, equitable AI deployment that reduces clinical burden and improves patient care.
 
         - name: "Thomas Moreno-Stokoe"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "Midlands"
           profession: "General Practice"
-          project_title:
+          project_title: "Development and Implementation of Ambient AI"
           project_link:
           supervisor:
           placement: "University Hospitals Birmingham NHS Foundation Trust"
           lat: "52.4521"
           lng: "-1.9405"
+          joining_statement: >-
+            In today’s rapidly evolving digital landscape, it is more important than ever to laterally upskill clinicians to ensure optimal patient care and efficiency. This programme is rare and exciting, and I’m genuinely grateful to be a part of it.
 
         - name: "Thomas Pearson"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "London"
           profession: "General Practice"
-          project_title:
+          project_title: "Optimising antenatal blood pressure control: Deployment of an AI blood pressure virtual assistant in pregnancy"
           project_link:
           supervisor:
           placement: "Guy’s and St Thomas’ NHS Foundation Trust"
           lat: "51.4988"
           lng: "-0.1186"
+          joining_statement: >-
+            This fellowship offers me an exciting opportunity to develop my interest in clinical AI, network with like-minded professionals and gain a contextual understanding of implementing a new digital tool for the benefit of patients.
 
         - name: "Georgina Phillips"
           role: "Specialty Trainee Doctor in General Practice"
           cohort: "5"
           region: "London"
           profession: "General Practice"
-          project_title:
+          project_title: "TRICORDER-2: Implementation Re-intervention for Triple Cardiac Disease Detection Using an Artificial Intelligence Enabled Stethoscope"
           project_link:
           supervisor:
           placement: "Imperial College Healthcare NHS Trust"
           lat: "51.5174"
           lng: "-0.1740"
+          joining_statement: >-
+            I’m genuinely thrilled to join this fellowship. With an AI expansion in healthcare inevitable, I look forward to gaining the skills to shape its future in the NHS. Continuing to work clinically will keep me grounded in real-world practice, which is a unique aspect of this experience.
 
         - name: "Aswin Thampy"
           role: "General Practitioner"
           cohort: "5"
           region: "North West"
           profession: "General Practice"
-          project_title:
+          project_title: "Using natural language processing for rapid learning in oncology"
           project_link:
           supervisor:
           placement: "The Christie NHS Foundation Trust"
           lat: "53.4213"
           lng: "-2.2299"
+          joining_statement: >-
+            I am extremely excited about the opportunity to join the NHS Fellowship in Clinical AI scheme. The scheme will enhance my understanding of safe AI usage within the NHS, and allow me to take back the learnings to a primary care setting.
 
         - name: "Jacob Brubert"
           role: "Specialty Trainee Doctor in Cardiology and General Internal Medicine"
           cohort: "5"
           region: "East of England"
           profession: "Medicine"
-          project_title:
+          project_title: "EPR workflow generative AI implementation"
           project_link:
           supervisor:
           placement: "Cambridge University Hospitals NHS Foundation Trust"
           lat: "52.1750"
           lng: "0.1413"
+          joining_statement: >-
+            I'm excited to join the Fellowship programme and team working to deploy AI solutions safely and effectively in the East of England.
 
         - name: "Lewis Hughes"
           role: "Specialty Trainee Doctor in Clinical Pharmacology & Therapeutics and General Internal Medicine"
           cohort: "5"
           region: "Scotland"
           profession: "Medicine"
-          project_title:
+          project_title: "Glasgow AI Portfolio"
           project_link:
           supervisor:
           placement: "NHS Greater Glasgow and Clyde"
           lat: "55.86224"
           lng: "-4.34070"
+          joining_statement: >-
+            I am looking forward to turning an interest in AI into the skills and knowledge required to reap the benefits of this technology to patients. I can't wait to meet the Faculty and other Fellows and to learn from them.
 
         - name: "Gerald Sng Gui Ren"
           role: "Consultant Endocrinologist, Singapore 🇸🇬"
           cohort: "5"
           region: "London"
           profession: "Medicine"
-          project_title:
+          project_title: "Use and validation of AI LLM and analysis in supporting Diabetes psychology consultations and care delivery"
           project_link:
           supervisor:
           placement: "Guy’s and St Thomas’ NHS Foundation Trust"
           lat: "51.4988"
           lng: "-0.1186"
+          joining_statement: >-
+            Successful deployment of AI tools in clinical medicine has been a challenge for health systems worldwide. I greatly value the opportunity to learn from world-renowned faculty directly at the coalface of clinical transformation and look forward to growing as a clinician and AI practitioner.
 
         - name: "Jack Stanley"
           role: "Specialty Trainee Doctor in Infectious Disease and Medical Microbiology"
           cohort: "5"
           region: "South West"
           profession: "Medicine"
-          project_title:
+          project_title: "Quality Assurance of Clinical AI Scribes"
           project_link:
           supervisor:
           placement: "NHSE South West Region"
           lat: "51.015025"
           lng: "-3.068936"
+          joining_statement: >-
+            I am excited to join the NHS Fellowship in Clinical AI. AI is changing wide-ranging parts of society and I am motivated to learn how to harness this technology to improve patient outcomes and healthcare worker experience using NHS clinical systems.
 
         - name: "Vijay Shyam-Sundar"
           role: "Specialty Trainee Doctor in Cardiology"
           cohort: "5"
           region: "London"
           profession: "Medicine"
-          project_title:
+          project_title: "Multimodal AI to detect undiagnosed heart disease"
           project_link:
           supervisor:
           placement: "King’s College Hospital NHS Foundation Trust"
           lat: "51.4673"
           lng: "-0.0934"
+          joining_statement: >-
+            I'm excited to be working on an impactful project which will be a catalyst for my career in digital transformation. High-quality training, opportunities to network and foster collaborations will help to shape my future in clinical AI.
 
         - name: "Akanimoh Osutuk"
           role: "Specialty Trainee Doctor in Paediatrics"
           cohort: "5"
           region: "London"
           profession: "Paediatrics"
-          project_title:
+          project_title: "ENABLE-AI: Enhancing diagnostic precision and prognostication of mature B-lymphoid neoplasms using Artificial Intelligence"
           project_link:
           supervisor:
           placement: "The Royal Marsden NHS Foundation Trust"
           lat: "51.4896"
           lng: "-0.1708"
+          joining_statement: >-
+            Joining the NHS Fellowship in Clinical AI is an exciting opportunity to deepen my understanding of how AI can be safely integrated into clinical workflows. I hope to develop robust technical and governance skills while contributing meaningfully to improving diagnostic precision and patient care.
 
         - name: "Sharon Davidesko"
           role: "Fellow in Complex Gynaecology"
           cohort: "5"
           region: "London"
           profession: "Obstetrics & Gynaecology"
-          project_title:
+          project_title: "Utilising AI in enhancing accuracy of diagnosis of endometriosis through transvaginal ultrasound"
           project_link:
           supervisor:
           placement: "Guy’s and St Thomas’ NHS Foundation Trust"
           lat: "51.4988"
           lng: "-0.1186"
+          joining_statement: >-
+            Thrilled that I have the opportunity to join cohort 5 of the NHS Clinical Fellowship in AI. As a gynaecologist, I've seen how delayed diagnoses change lives, and I'm looking forward to seeing how AI can improve this in Women's Health.
 
         - name: "Elaine Leung"
           role: "Consultant Gynaecologist"
           cohort: "5"
           region: "Midlands"
           profession: "Obstetrics & Gynaecology"
-          project_title:
+          project_title: "AAIMC-OC NHS pilot"
           project_link:
           supervisor:
           placement: "University Hospitals Birmingham NHS Foundation Trust"
           lat: "52.4521"
           lng: "-1.9405"
+          joining_statement: >-
+            I currently lead an academic AI study outside the NHS. This fellowship will be a brilliant opportunity to see how my work could potentially be linked to my clinical work within the NHS.
 
         - name: "Tolga Guven"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "5"
           region: "Wessex"
           profession: "Ophthalmology"
-          project_title:
+          project_title: "Head Abnormality Detection AI-tool Deployment (HADAD-ARRT): A Real-world Randomised Trial"
           project_link:
           supervisor:
           placement: "University Hospital Southampton NHS Foundation Trust"
           lat: "50.9333"
           lng: "-1.4272"
+          joining_statement: >-
+            I'm delighted to be joining this fellowship. I'm looking forward to grounding the theory of clinical AI deployment in real-world projects. Using the skills and experience gained from this programme, I hope to be one of the clinicians helping to shape this exciting and rapidly developing field.
 
         - name: "James Hazelwood"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "5"
           region: "Scotland"
           profession: "Ophthalmology"
-          project_title:
+          project_title: "Evaluation of an AI-Based Pathology Tool in the Reporting of Prostate Cancer"
           project_link:
           supervisor:
           placement: "NHS Lothian"
           lat: "55.945842"
           lng: "-3.201389"
+          joining_statement: >-
+            I am delighted to join the NHS Fellowship in Clinical AI programme and excited to begin this project. I look forward to working as part of a team to deliver AI solutions to improve patient care
 
         - name: "Conor Malone"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "5"
           region: "Thames Valley"
           profession: "Ophthalmology"
-          project_title:
+          project_title: "Artificial Intelligence–Enabled Triage Using Automated Ophthalmic Imaging in Emergency Eye Care"
           project_link:
           supervisor:
           placement: "Oxford University Hospitals NHS Foundation Trust"
           lat: "51.7635"
           lng: "-1.2193"
+          joining_statement: >-
+            This is an exciting opportunity to use new technology to improve the patient experience, support clinicians, and make our systems more efficient. I look forward to learning with a diverse group of colleagues from across the world, exploring how we can implement AI responsibly at scale.
 
         - name: "Jameel Mushtaq"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "5"
           region: "London"
           profession: "Ophthalmology"
-          project_title:
+          project_title: "From transcription to transformation: standardising ambient voice data for OpenEHR and deep EPR integration in a high-volume specialty"
           project_link:
           supervisor:
           placement: "Moorfields Eye Hospital NHS Foundation Trust"
           lat: "51.5273"
           lng: "-0.0890"
+          joining_statement: >-
+            Excited to join the NHS Clinical AI Fellowship and translate AI into safe, real-world impact. Keen to advance ambient voice technology in ophthalmology and support standards-based integration that improves workflow and patient care across the NHS.
 
         - name: "Tajwar Nasir"
           role: "Specialty Trainee Doctor in Ophthalmology"
           cohort: "5"
           region: "Thames Valley"
           profession: "Ophthalmology"
-          project_title:
+          project_title: "Scalable Medical AI for Radiology Transformation – X-Ray (SMART XR)"
           project_link:
           supervisor:
           placement: "Oxford University Hospitals NHS Foundation Trust"
           lat: "51.7635"
           lng: "-1.2193"
+          joining_statement: >-
+            I’m thrilled to join the fellowship and gain real life experience in the deployment of AI technology. I’m looking forward to meeting with like-minded colleagues and experts in the field, and hope to utilise the skills and network I develop to drive digital transformation within my own field.
 
         - name: "Mubby Husain"
           role: "Consultant Virologist"
           cohort: "5"
           region: "East of England"
           profession: "Pathology"
-          project_title:
+          project_title: "AI-Enabled Early Detection of Sepsis at ESNEFT: Local Validation and Workflow Integration of an EPIC Cognitive Model"
           project_link:
           supervisor:
           placement: "East Suffolk and North Essex NHS Foundation Trust"
           lat: "51.9098567"
           lng: "0.8988999"
+          joining_statement: >-
+            I’m interested in how clinical AI can be safely evaluated and implemented within NHS care pathways. My focus is on bridging clinical practice and AI innovation to strengthen governance, support safe clinical decision-making, and deliver measurable improvements in patient safety and quality of care.
 
         - name: "Mohammed Nimir"
           role: "Specialty Trainee Doctor in Histopathology"
           cohort: "5"
           region: "Midlands"
           profession: "Pathology"
-          project_title:
+          project_title: "AI-Assisted Histological Diagnosis of Basal Cell Carcinoma"
           project_link:
           supervisor:
           placement: "Nottingham University Hospitals NHS Trust"
           lat: "52.9902946"
           lng: "-1.1569294"
+          joining_statement: >-
+            Thrilled to join the FCAI! As a histopathology registrar with an AI research background, I’m eager to bridge the implementation gap. I hope to learn about safe deployment and validation in live workflows, helping realise the NHS’s 2035 vision for digital transformation and AI-enabled healthcare
 
         - name: "Michael Louis"
           role: "Specialty Trainee Doctor in Psychiatry"
           cohort: "5"
           region: "London"
           profession: "Psychiatry"
-          project_title:
+          project_title: "Spread and scale of AI enabled technology"
           project_link:
           supervisor:
           placement: "Barts Health NHS Trust"
           lat: "51.5185"
           lng: "-0.0589"
+          joining_statement: >-
+            I am very excited to have a place on the fellowship and for the opportunity to work on a project in my local trust, Devon Partnership NHS Trust. I hope to learn about how AI can be implemented into local services in order to improve the productivity of the workforce and patient care.
 
         - name: "George Altman"
           role: "Specialty Trainee Doctor in Public Health Medicine"
           cohort: "5"
           region: "North West"
           profession: "Public Health"
-          project_title:
+          project_title: "Clinical Fellowship in Chest X-ray AI"
           project_link:
           supervisor:
           placement: "The Christie NHS Foundation Trust"
           lat: "53.4213"
           lng: "-2.2299"
+          joining_statement: >-
+            I’m excited to join the NHS Fellowship in Clinical AI and grateful for the opportunity to learn from the other fellows. I’m looking forward to contributing to the Greater Manchester Chest X-ray AI programme to help improve patient care.
 
         - name: "Paula del Rey Puech"
           role: "Specialty Trainee in Public Health Medicine"
           cohort: "5"
           region: "London"
           profession: "Public Health"
-          project_title:
+          project_title: "Implementing an algorithm for segmenting high-intensity users of mental health crisis services in a population health management platform (LUCI)"
           project_link:
           supervisor:
           placement: "South London and Maudsley NHS Foundation Trust"
           lat: "51.4691"
           lng: "-0.0881"
+          joining_statement: >-
+            I am excited about the opportunity to join this network of inspiring fellows. This Fellowship will offer valuable hands-on experience in deploying AI solutions in real-world contexts and will help me develop a deeper understanding of the implications of adopting AI in public health.
 
         - name: "Miriam Abraham"
           role: "Specialty Trainee Doctor in Clinical Oncology"
           cohort: "5"
           region: "Wessex"
           profession: "Radiology"
-          project_title:
+          project_title: "Moving in-house Oesophageal Cancer AI Medical Device Software from Clinical Validation to Full Clinical Implementation"
           project_link:
           supervisor:
           placement: "University Hospital Southampton NHS Foundation Trust"
           lat: "50.9333"
           lng: "-1.4272"
+          joining_statement: >-
+            I am delighted to be joining this fellowship and have the chance to help shape the use of AI within the NHS. AI tools have great potential to aid clinical workflow in a number of areas. I hope the fellowship will equip me with skills to implement AI in a safe and clinically effective way.
 
         - name: "Ashar Asif"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "5"
           region: "Thames Valley"
           profession: "Radiology"
-          project_title:
+          project_title: "SAMURAI-Fracture"
           project_link:
           supervisor:
           placement: "Oxford University Hospitals NHS Foundation Trust"
           lat: "51.7635"
           lng: "-1.2193"
+          joining_statement: >-
+            I am delighted to have a place on the NHS AI Clinical Fellowship! With AI making headways within radiology, I am looking forward to understanding the steps involved in developing, deploying and monitoring AI in a safe and clinically effective way.
 
         - name: "Lorraine Ochieng"
           role: "Specialty Trainee Doctor in Clinical Radiology"
           cohort: "5"
           region: "Yorkshire & Humber"
           profession: "Radiology"
-          project_title:
+          project_title: "Can AI be utilised in streamlining the prostate cancer diagnostic pathway?"
           project_link:
           supervisor:
           placement: "Leeds Teaching Hospitals NHS Trust"
           lat: "53.8025431"
           lng: "-1.5528919"
+          joining_statement: >-
+            I am really excited to start the NHS Fellowship in Clinical AI, it’s a great opportunity to learn more about the lifecycle of AI in healthcare and its potential to improve workflows, clinical practice and patient outcomes.
 
         - name: "Matthew Newman"
           role: "Specialty Trainee Doctor in Paediatric Surgery"
           cohort: "5"
           region: "Scotland"
           profession: "Surgery"
-          project_title:
+          project_title: "Glasgow AI Portfolio"
           project_link:
           supervisor:
           placement: "NHS Greater Glasgow and Clyde"
           lat: "55.86224"
           lng: "-4.34070"
+          joining_statement: >-
+            Looking forward to joining the Fellowship to learn from others and play a part in developing AI tools that are safe and genuinely helpful in the NHS
 
         - name: "Geeth Silva"
           role: "Specialty Trainee Doctor in Trauma & Orthopaedic Surgery"
           cohort: "5"
           region: "East of England"
           profession: "Surgery"
-          project_title:
+          project_title: "EPR workflow generative AI implementation"
           project_link:
           supervisor:
           placement: "Cambridge University Hospitals NHS Foundation Trust"
           lat: "52.1750"
           lng: "0.1413"
+          joining_statement: >-
+            Excited to join the team and the year ahead! As an orthopaedic trainee and East of England Digital Fellow with experience in AI research and EPMA deployment, I’m excited to advance safe, evaluated AI in MSK care and help bridge clinical practice, governance and innovation in the NHS.
 
         - name: "George Nita"
           role: "Specialty Trainee Doctor in General Surgery"
           cohort: "5"
           region: "North West"
           profession: "Surgery"
-          project_title:
+          project_title: "Predictive analytics in intensive care"
           project_link:
           supervisor:
           placement: "Alder Hey Children's NHS Foundation Trust"
           lat: "53.4198"
           lng: "-2.8996"
+          joining_statement: >-
+            Healthcare delivery will transform profoundly in this digital era. We must not be passive recipients of new technology, but active shapers of how it is developed and deployed. AI must be grounded in evidence, ethics, and equity, always serving patients first. I’m excited to be part of this journey.
 
         - name: "Shayan Shahidi"
           role: "Specialty Trainee Doctor in Otolaryngology"
           cohort: "5"
           region: "Wessex"
           profession: "Surgery"
-          project_title:
+          project_title: "Head Abnormality Detection AI-tool Deployment (HADAD-ARRT): A Real-world Randomised Trial"
           project_link:
           supervisor:
           placement: "University Hospital Southampton NHS Foundation Trust"
           lat: "50.9333"
           lng: "-1.4272"
+          joining_statement: >-
+            As an ENT trainee working across multiple trusts, I’ve seen how care improves when digital change is led by clinicians who understand frontline realities. Through the fellowship’s hands-on AI projects, I hope to gain the skills to help shape a more effective digital future for patients and the NHS.
 
         - name: "Emma Iddles"
           role: "Specialty Trainee Doctor in Paediatric Surgery"
           cohort: "5"
           region: "Scotland"
           profession: "Surgery"
-          project_title:
+          project_title: "Artificial Intelligence Assisted Tele-Dermatology Skin Cancer Triage"
           project_link:
           supervisor:
           placement: "NHS Tayside"
           lat: "56.4620"
           lng: "-2.9730"
+          joining_statement: >-
+            I am delighted to join the NHS Fellowship in Clinical AI.  Caring for children and families is both a privilege and a responsibility and I am passionate about how AI can support safer, more equitable care.  I look forward to bridging frontline practice with meaningful digital innovation.
 
         - name: "Arthur McPhee"
           role: "Consultant Urologist"
           cohort: "5"
           region: "Scotland"
           profession: "Surgery"
-          project_title:
+          project_title: "Glasgow AI Portfolio"
           project_link:
           supervisor:
           placement: "NHS Greater Glasgow and Clyde"
           lat: "55.86224"
           lng: "-4.34070"
+          joining_statement: >-
+            I am looking forward to completing the  NHS Fellowship in Clinical AI to help me develop the skills and knowledge to take a leading role in the implementation of AI tools to improve the quality of clinical care and to improve the workflows for clinical care.
 
         - name: "Parsa Hemmati"
           role: "Clinical Digital Fellow"
           cohort: "5"
           region: "East of England"
           profession:
-          project_title:
+          project_title: "Evaluating Real-world clinical impact of Imaging AI in a tertiary NHS Trust"
           project_link:
           supervisor:
           placement: "Cambridge University Hospitals NHS Foundation Trust"
           lat: "52.1750"
           lng: "0.1413"
+          joining_statement: >-
+            My hope in joining the Fellowship is to help in building a pragmatic evaluation framework across clinical systems, supporting clinical safety/regulatory needs, and turning findings into better pathways, equity and business cases.
 
         - name: "Josie Carmichael"
           role: "Optometrist"
