@@ -119,6 +119,15 @@ bodyClass: "page-basic"
       {% endif %}
 
       {% comment %}
+        Joining Statement: show only for Cohort 5 fellows where a joining_statement is present in _data/fellowship_fellows.yml.
+      {% endcomment %}
+      {% if fellow_profile and fellow_profile.cohort == "5" and fellow_profile.joining_statement and fellow_profile.joining_statement != "" %}
+      <hr>
+      <h3>Joining Statement</h3>
+      <p>{{ fellow_profile.joining_statement }}</p>
+      {% endif %}
+
+      {% comment %}
         Fellowship Publications: show any publications where the `fellow` field contains this fellow's name.
       {% endcomment %}
       {% assign fellow_publications = site.data.fellowship_publications | where_exp: "item", "item.fellow contains page.team-member-name" %}
