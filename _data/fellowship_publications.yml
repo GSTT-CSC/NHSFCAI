@@ -1,9 +1,15 @@
 # Add your resources items here by filling in the details as below.
-
+#
 #  name:
 #  description:
 #  link:
 
+
+
+
+- title: Beyond Validation: Operationalising Post-Deployment Surveillance of AI Medical Devices in Clinical Practice<br><i>Journal of Medical Systems</i> 2026;50:98
+  fellow: <a href="/fellow/jesus-perdomo-lampignano/">Jesus Perdomo Lampignano</a>
+  link: https://doi.org/10.1007/s10916-026-02426-w
 
 - title: Artificial intelligence and clinical informatics in UK ophthalmology training- a national cross-sectional survey.<br><i>BMC Medical Education</i> 2026
   fellow: <a href="/fellow/thomas-nash/">Thomas Nash</a> <a href="/fellow/rishi-ramessur/">Rishi Ramessur</a>
