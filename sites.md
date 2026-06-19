@@ -405,9 +405,15 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
                             <span class="role-text">${f.role}</span><br>
                             <span style="color: gray; font-size: 0.85em;">Project Site: ${f.placement}</span><br>
                             ${f.project_title ? `
-                            <a href="${f.project_link && f.project_link.toLowerCase().includes('.pdf') ? f.project_link + '#zoom=page-width' : f.project_link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
-                                ${f.project_title}
-                            </a><br>
+                                ${f.project_link && f.project_link !== 'null' ? `
+                                <a href="${f.project_link.toLowerCase().includes('.pdf') ? f.project_link + '#zoom=page-width' : f.project_link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
+                                    ${f.project_title}
+                                </a><br>
+                                ` : `
+                                <span style="color: #000; font-weight: bold; font-size: 0.9em;">
+                                    ${f.project_title}
+                                </span><br>
+                                `}
                             ` : ''}
                             <hr style="margin:8px 0;">
                         </div>
@@ -447,9 +453,15 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
                                 <span class="role-text">${f.role}</span>
                                 <span style="color: gray; font-size: 0.85em;">Project Site: ${f.placement}</span>
                                 ${f.project_title ? `
-                                <br><a href="${f.project_link && f.project_link.toLowerCase().includes('.pdf') ? f.project_link + '#zoom=page-width' : f.project_link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
-                                    ${f.project_title}
-                                </a>
+                                    ${f.project_link && f.project_link !== 'null' ? `
+                                    <br><a href="${f.project_link.toLowerCase().includes('.pdf') ? f.project_link + '#zoom=page-width' : f.project_link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #005EB8; font-weight: bold; font-size: 0.9em;">
+                                        ${f.project_title}
+                                    </a>
+                                    ` : `
+                                    <br><span style="color: #000; font-weight: bold; font-size: 0.9em;">
+                                        ${f.project_title}
+                                    </span>
+                                    `}
                                 ` : ''}
                             </div>
                         `;
