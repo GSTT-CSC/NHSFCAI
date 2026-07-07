@@ -1,7 +1,10 @@
 <div class="logo-wall">
   {% for item in include.items %}
-    <a href="{{ item.url }}" target="_blank" rel="noopener">
+    <a class="logo-wall__item" href="{{ item.url }}" target="_blank" rel="noopener">
       <img src="{{ item.logo }}" alt="{{ item.name }}">
+      {% if item.label %}
+        <span class="logo-wall__label">{{ item.label }}</span>
+      {% endif %}
     </a>
   {% endfor %}
 </div>
@@ -14,8 +17,24 @@
   gap: 30px;
   margin: 20px 0;
 }
+
+.logo-wall__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
 .logo-wall img {
   height: 100px;   /* keeps logos uniform height */
   object-fit: contain;
+}
+
+.logo-wall__label {
+  margin-top: 8px;
+  color: #000;
+  font-size: 0.95rem;
+  line-height: 1.3;
 }
 </style>
