@@ -4,7 +4,10 @@ permalink: /partners/
 title: Partners
 
 ---
+## International Sister Programmes
 
+{% include logo-wall.html items=site.data.sister_programmes %}
+---
 ## Educational Co-Development
 The educational materials of this fellowship have been co-developed with partners including:
 {% include logo-wall.html items=site.data.educational_codevelopers %}
@@ -14,3 +17,4 @@ The educational materials of this fellowship have been co-developed with partner
 ## Sponsors & Institutional Support
 
 {% include logo-wall.html items=site.data.sponsors %}
+
