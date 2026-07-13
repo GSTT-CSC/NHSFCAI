@@ -63,14 +63,14 @@ en: &DEFAULT_EN
         - name: "Peter Arthure"
           role: "Lead Digital Pharmacist"
           cohort: "5"
-          region: "South West"
+          region: "Midlands"
           profession: "Pharmacy"
           project_title: "Ambient Scribe Deployment"
           project_link:
           supervisor:
-          placement:
-          lat:
-          lng:
+          placement: "University Hospitals of Derby and Burton NHS Foundation Trust"
+          lat: "52.9129"
+          lng: "-1.5138"
           joining_statement: >-
             I am excited to be part of this programme and to learn about AI and how it can be used for positive healthcare outcomes.
 
@@ -148,14 +148,14 @@ en: &DEFAULT_EN
         - name: "William Hamblyn"
           role: "Clinical Scientist in Radiotherapy Physics"
           cohort: "5"
-          region: "East of England"
+          region: "Midlands"
           profession: "Healthcare Science"
           project_title: "Ambient Scribe Deployment"
           project_link:
           supervisor:
-          placement:
-          lat:
-          lng:
+          placement: "Herefordshire and Worcestershire Health and Care NHS Trust"
+          lat: "52.1979"
+          lng: "-2.2098"
           joining_statement: >-
             I am delighted to be joining the NHS Fellowship in Clinical AI. These models will continue to transform clinical workflows, and I am eager to develop my skills and understanding across the full AI lifecycle while meeting some brilliant people along the way.
 
