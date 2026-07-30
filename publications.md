@@ -66,4 +66,4 @@ Explore the fellowship-related publications of our fellows below, newest first
 </table>
 <!-- Fellows' Publications -->
 
-<i> Last updated: March 2026 </i>
+<i> Last updated: July 2026 </i>
