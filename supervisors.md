@@ -3,23 +3,31 @@ layout: page
 permalink: /supervisors/
 title: Become a Supervisor
 ---
+
+<div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
+  <p style="margin: 0; font-weight: 700; color: #212b32;">
+    Status: Project proposals open for August 2027 start (Cohort 6)<br>
+  </p>
+</div>
+
 The NHS Fellowship in Clinical AI provides practical experience to its fellows through placements in real-world deployments of AI tools in NHS host sites.
-We are currently accepting project proposals for August 2026- August 2027 to host AI fellows for 2 days a week.
+We are currently accepting project proposals for August 2027- August 2028 to host AI fellows for 2 days a week.
 
 ### Key Dates for supervisors
-* Sep 2025: Project proposal submissions open for prospective supervisors 
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Complete project proposal template](/assets/docs/FCAI_C5_Project_Template.docx)
+* 01 Aug 2026: Project proposal submissions open
+<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Complete project proposal template](/assets/docs/FCAI_C6_Project_Template.docx)
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Email to faculty](mailto:gstt.aifellowship@nhs.net)
-* Jan 2026: Remote interviews- prospective supervisors are invited to regional interview panels
-* Feb 2026: Outcomes of interviews, project matching
-* Aug 2026: Fellowship cohort 5 begins
+* 02 Oct 2026: Deadline for project proposal submissions
+* Jan 2027: Remote interviews- prospective supervisors are invited to interview panels
+* Feb 2027: Outcomes of interviews and project matching
+* Aug 2027: Cohort 6 begins
 
 
 ### Supervisor Webinar 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EI85Be1xIT4" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RGYEDRJOS3E" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
 
-The onboarding webinar for Cohort 4 AI supervisors covered the features and curriculum of the fellowship, and the expectations for project hosting and supervision.
+The onboarding webinar for Cohort 5 AI supervisors covered the features and curriculum of the fellowship, and the expectations for project hosting and supervision.
 
 
 ### Frequently Asked Questions
@@ -56,14 +64,14 @@ Projects are released to candidates for matching only after being quality assure
 
 <strong>Does the project proposal have to cover every part of the curriculum of the NHS Fellowship in Clinical AI?</strong>
 
-<p>No. The educational aims of the project need to meet most of the learning objectives of 3 of: Regulation & Standards, Validation & evaluation, Integration & systems impact, Strategy & culture.
+<p>No. The educational aims of the project need to meet most of the learning objectives of 3 of: Regulation & Standards, Validation & Evaluation, Integration & Systems Impact, Strategy & Culture.
 If a project is primarily focussed on scoping or building an AI tool (and is unlikely to reach clinical deployment in the fellowship year), it is unlikely to meet the learning objectives of a fellow and unlikely to pass quality assurance.
 
 </p>
 
 <strong>What if there's more than one project going on at my site during the fellowship year?</strong>
 
-<p>This is a good indicator of the fellow being being exposed to different parts of the AI lifecycle and is strongly encouraged.
+<p>This is a good indicator of the fellow being exposed to different parts of the AI lifecycle and is strongly encouraged.
 Document other projects in Section E, 'What useful work can the fellow contribute to other clinical AI activity in your team'.
 </p>
 
@@ -130,7 +138,7 @@ You should only submit a project as a 'directly allocated' project if this arran
 <p>
 After a fellow is matched to their project, a supervisor must organise a Letter of Access or honorary contract for their institution, and any other resources (hardware, software, IT accounts etc.) required for the fellow to work on the project.
 The supervisor must organise a suitable induction period and project orientation for the fellow upon joining the team.
-After the fellow joins the team, it is expected that there is 1hr of direct supervision per week from either the the supervisor or another senior team member.
+After the fellow joins the team, it is expected that there is 1hr of direct supervision per week from either the supervisor or another senior team member.
 Over the course of the fellowship, the fellow and the supervisor must have 3 formally documented attachment meetings and co-develop the fellow's Personal Development Plan.
 </p>
 
@@ -146,7 +154,7 @@ It is the supervisor's responsibility to arrange access to relevant local resour
 
 <strong>What is the duration and intensity of the placement?</strong>
 
-<p>The placement must align to the educational year of the NHS Fellowship in Clinical AI: August 2026- August 2027.
+<p>The placement must align to the educational year of the NHS Fellowship in Clinical AI: August to the following August.
 Fellows work for 2 days a week on their attached projects during this time, minus pro rata leave, and other fellowship-associated educational activities.</p>
 
 
