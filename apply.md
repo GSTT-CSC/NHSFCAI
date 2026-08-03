@@ -8,9 +8,8 @@ _Last updated: 30 Mar 2026_
 
 <div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
   <p style="margin: 0; font-weight: 700; color: #212b32;">
-    Applications for Cohort 5 closed on 15 Dec 2025.<br>
-    This page serves as a reference for current and future applicants.<br>
-    Cohort 6 applications are expected to open in Oct 2026.
+    Status: Applications closed for Cohort 5 on 15 Dec 2025.<br>
+    Next update: Applications will open for Cohort 6 in Oct 2026, for Aug 2027 start<br>
   </p>
 </div>
 <br><br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -159,7 +158,7 @@ Interview dates are indicative and may change during the application cycle.</p>
 
 * Successful applicants are matched to AI projects in one of the following ways:
   * A competitively matched AI project from an existing host site (see Clinical AI Project List section below) in the applicant's NHS region. This project matching is competitive (even though programme entry itself is non-competitive) with other applicants from regional pools, and is based on interview score.
-  * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work underway as part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
+  * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work underway as part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
 
 </details>
 
@@ -330,7 +329,7 @@ Where necessary, fellows will hold an honorary contract or Letter of Access with
 
 **What should I do if I only want to do a specific project in the fellowship?**
 
-For a directly allocated post, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C5_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
+For a directly allocated post, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
 <br><br>To be matched to a specific project in a nationally or regionally-funded post, an applicant should go through the normal application process. 
 There will be an opportunity to rank projects by preference. 
 The applicant should rank only projects they would want to do on the fellowship year. 
