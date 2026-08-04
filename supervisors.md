@@ -11,7 +11,7 @@ title: Become a Supervisor
 </div>
 
 The NHS Fellowship in Clinical AI provides practical experience to its fellows through placements in real-world deployments of AI tools in NHS host sites.
-We are currently accepting project proposals for August 2027- August 2028 to host AI fellows for 2 days a week.
+We are currently accepting project proposals to host AI fellows for 2d/wk for August 2027- August 2028.
 
 ### Key Dates for supervisors
 * 01 Aug 2026: Project proposal submissions open
@@ -58,7 +58,7 @@ Previous track record of successful AI deployment is especially useful is demons
 
 <strong>Are project proposals quality assured?</strong>
 
-<p>Yes. The last page of the project proposal template specifies the checklist used for quality assurance.
+<p>Yes. The quality assurance criteria are included transparently in the submission template.
 Projects are released to candidates for matching only after being quality assured.
 </p>
 
@@ -72,13 +72,13 @@ If a project is primarily focussed on scoping or building an AI tool (and is unl
 <strong>What if there's more than one project going on at my site during the fellowship year?</strong>
 
 <p>This is a good indicator of the fellow being exposed to different parts of the AI lifecycle and is strongly encouraged.
-Document other projects in Section E, 'What useful work can the fellow contribute to other clinical AI activity in your team'.
+Document other projects in the field 'Fallback work if primary project is disrupted'.
 </p>
 
 <strong>What if my project requires highly specialised baseline skills/knowledge/background as a minimum?</strong>
 
-<p>If a project is so specialised as to be undeliverable without particular Essential skills/knowledge/background, please contact the faculty (gstt.aifellowship@nhs.net) regarding the suitability.
-It is strongly recommended that skills/knowledge/background are listed as Desirable in your proposal, as the field of clinical AI is still emerging and additional requirements reduce the chances of a project being successfully matched.
+<p>If a project is so specialised as to be undeliverable without particular essential skills/knowledge/background, please <a href="mailto:gstt.aifellowship@nhs.net">contact the faculty</a> regarding the suitability.
+It is strongly recommended that skills/knowledge/background are listed as desirable in your proposal, as the field of clinical AI is still emerging and additional requirements reduce the chances of a project being successfully matched.
 </p>
 
 <strong>Can the same supervisor/site submit multiple different project proposals?</strong>
@@ -96,7 +96,7 @@ It is strongly recommended that skills/knowledge/background are listed as Desira
 <summary>Recruitment</summary>
 <strong>Do supervisors participate in the recruitment of fellows?</strong>
 
-<p>Yes. Supervisors are asked to participate in interview panels for the recruitment of fellows to their regions.
+<p>Yes. Supervisors are invited to participate in interview panels for the recruitment of fellows to their regions. This is optional but highly encouraged.
 </p>
 
 <strong>How does project matching happen?</strong>
@@ -113,16 +113,15 @@ The next highest scoring applicant is matched to their highest ranked project re
 
 <strong>What is the experience level and calibre of fellows?</strong>
 
-<p>All joining fellows meet the Essential criteria of the Person Specification, and many fellows will also meet the Desirable criteria.
-Link pending to Cohort 5 Person Specification.
+<p>All joining fellows meet the Essential criteria of the Person Specification, and many fellows will also meet the Desirable criteria..
 </p>
 
-<strong>What are 'directly allocated' fellows and projects?</strong>
+<strong>What is a nominated applicant with a sponsorship arrangement?</strong>
 
-<p>Directly allocated fellows are NHS applicants who have their own source of funding (instead of competing for posts in the regional pools).
-Directly allocated fellows interview for posts and are held to the same standard of appointability as other candidates.
-One difference with directly allocated fellows is that they may have a directly allocated project that is specifially reserved for them on the fellowship.
-You should only submit a project as a 'directly allocated' project if this arrangement has already been agreed with the applicant and the faculty.
+<p>Nominated applicants are NHS applicants who have ringfenced funding from a <a href="/nhs-sponsor/">sponsor</a> for their post.
+These applicants interview for posts and are held to the same standard of appointability as other candidates.
+These applicants may have a project that is specifically reserved for them on the fellowship.
+Document this arrangement on your project proposal only if it has already been agreed with the nominated applicant and the faculty.
 </p>
 
 </details>
