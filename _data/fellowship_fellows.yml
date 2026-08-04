@@ -19,13 +19,6 @@ en: &DEFAULT_EN
     team:
       text:
       section: team
-
-
-en: &DEFAULT_EN
-
-    team:
-      text:
-      section: team
       people:
 
 
@@ -794,7 +787,7 @@ en: &DEFAULT_EN
           region: "South West"
           profession: "Pharmacy"
           project_title: "Evaluating and deploying AI to aid outpatient clinic preparation"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20HelenaLangford.pdf"
           supervisor:
           placement: "Royal Devon University Healthcare NHS Foundation Trust"
           lat: "50.7160"
@@ -806,7 +799,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Pharmacy"
           project_title: "Leveraging Large Language Model capabilities of a Referral Management Platform to support Smart Triage of Outpatient Referrals at Moorfields Eye Hospital"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20RoyceRajan.pdf"
           supervisor:
           placement: "Moorfields Eye Hospital NHS Foundation Trust"
           lat: "51.5273"
@@ -817,8 +810,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "North East & North Cumbria"
           profession: "Healthcare Science"
-          project_title:
-          project_link:
+          project_title: "GramMorph: Comparing CNN, Vision Transformer and Hybrid Models for Positive Blood Culture Gram-Stain Classification"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20WilliamRoach.pdf"
           supervisor:
           placement: "South Tees NHS Foundation Trust"
           lat: "54.5512"
@@ -830,7 +823,7 @@ en: &DEFAULT_EN
           region: "Thames Valley"
           profession: "Anaesthetics & Intensive Care"
           project_title: "Comparative Performance of Open-Source Foundation Models for Plain Radiograph Interpretation in Real-World Data"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20KatharineWykes.pdf"
           supervisor:
           placement: "Oxford University Hospitals NHS Foundation Trust"
           lat: "51.7635"
@@ -842,7 +835,7 @@ en: &DEFAULT_EN
           region: "South West"
           profession: "Medicine"
           project_title: "A prototype ambient voice technology monitoring system"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20MatthewLowry.pdf"
           supervisor:
           placement: "NHS Primary Care Digital Laboratory"
           lat: "51.015025"
@@ -854,7 +847,7 @@ en: &DEFAULT_EN
           region: "Wessex"
           profession: "Medicine"
           project_title: "Using a Local AI Model to Quality-Check Automated Contours in Lung Radiotherapy"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20JonathanSmith.pdf"
           supervisor:
           placement: "University Hospital Southampton NHS Foundation Trust"
           lat: "50.9333"
@@ -866,7 +859,7 @@ en: &DEFAULT_EN
           region: "Midlands"
           profession: "Surgery"
           project_title: "Comprehensive real-world evaluation of the use of a commercially available chest x-ray decision support tool (Harrison.AI CXR) at University Hospitals of Leicester NHS trust"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20KarishmaChandarana.pdf"
           supervisor:
           placement: "University Hospitals of Leicester NHS Trust"
           lat: "52.6290"
@@ -877,8 +870,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "London"
           profession: "Radiology"
-          project_title:
-          project_link:
+          project_title: "Real-world clinical impact of AI-assisted fracture detection for musculoskeletal radiographs"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20GirijaAgarwal.pdf"
           supervisor:
           placement: "Imperial College Healthcare NHS Trust"
           lat: "51.5174"
@@ -901,8 +894,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "Kent Surrey Sussex"
           profession: "Radiology"
-          project_title:
-          project_link:
+          project_title: "Summative validation and usability testing of the MIDI tool - path to UKCA certification"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20MichaelKwakye.pdf"
           supervisor:
           placement: "East Kent Hospitals NHS Foundation Trust"
           lat: "51.1396"
@@ -914,7 +907,7 @@ en: &DEFAULT_EN
           region: "Midlands"
           profession: "General Practice"
           project_title: "Comprehensive real-world evaluation of the use of a commercially available chest x-ray decision support tool (Harrison.AI CXR) at University Hospitals of Leicester NHS trust"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ConnorHuggins.pdf"
           supervisor:
           placement: "University Hospitals of Leicester NHS Trust"
           lat: "52.6290"
@@ -950,7 +943,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "General Practice"
           project_title: "Evaluating the use of Ambient AI in primary care across South East London"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20PradeepRavichandran.pdf"
           supervisor:
           placement: "NHS South East London Integrated Care System"
           lat: "51.5034"
@@ -973,8 +966,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "London"
           profession: "Surgery"
-          project_title:
-          project_link:
+          project_title: "Agentic Mapping of National Transplant Registry Data to an Extended OMOP Common Data Model using LinkML"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20AdityaBorakati.pdf"
           supervisor:
           placement: "King’s College Hospital NHS Foundation Trust"
           lat: "51.4673"
@@ -997,8 +990,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "North West"
           profession: "Surgery"
-          project_title:
-          project_link:
+          project_title: "From Data-Rich to Insight-Driven Care: Embedding AI-Enabled Physiological Risk Analytics into Paediatric Intensive Care"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20HeshamMohamed.pdf"
           supervisor:
           placement: "Alder Hey Children's NHS Foundation Trust"
           lat: "53.4198"
@@ -1010,7 +1003,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Medicine"
           project_title: "Developing a System-Wide AI Framework for Safe and Scalable AI Adoption Across South East London Integrated Care System (SEL ICS)"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20EnasBinAraik.pdf"
           supervisor:
           placement: "Guy’s and St Thomas’ NHS Foundation Trust"
           lat: "51.4988"
@@ -1022,7 +1015,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Medicine"
           project_title: "ENABLE-AI: Enhancing diagnostic precision and prognostication of mature B-lymphoid neoplasms using Artificial Intelligence"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20NomathamsanqaTshuma.pdf"
           supervisor:
           placement: "The Royal Marsden NHS Foundation Trust"
           lat: "51.4896"
@@ -1034,7 +1027,7 @@ en: &DEFAULT_EN
           region: "Wessex"
           profession: "Pathology"
           project_title: "Exploring Large Language Models as an AI Tool for Retrieving and Summarising historical Cellular Pathology reports "
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20AdrianCheang.pdf"
           supervisor:
           placement: "University Hospital Southampton NHS Foundation Trust"
           lat: "50.9333"
@@ -1046,7 +1039,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Obstetrics & Gynaecology"
           project_title: "Closing the postnatal gap: AI and real-world data to improve care after a hypertensive pregnancy"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20FrancesContiRamsden.pdf"
           supervisor:
           placement: "Guy’s and St Thomas’ NHS Foundation Trust"
           lat: "51.4988"
@@ -1058,7 +1051,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Ophthalmology"
           project_title: "The Legend of Smart Triage - Leveraging LLM capabilities within an Eyecare Referral Management Platform to support Pre-triage Workflow"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20CarolineKilduff.pdf"
           supervisor:
           placement: "Moorfields Eye Hospital NHS Foundation Trust"
           lat: "51.5273"
@@ -1069,8 +1062,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "London"
           profession: "Ophthalmology"
-          project_title:
-          project_link:
+          project_title: "Deploying AI in NHS Radiology: The First Parallel-Sequence Cluster Randomised Crossover Trial of an AI Imaging Tool in the NHS"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ThomasNash.pdf"
           supervisor:
           placement: "King’s College Hospital NHS Foundation Trust"
           lat: "51.4673"
@@ -1082,7 +1075,7 @@ en: &DEFAULT_EN
           region: "South West"
           profession: "Surgery"
           project_title: "AI-assisted assessment, triage and management of hearing loss and tinnitus"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ChristianGrimes.pdf"
           supervisor:
           placement: "Royal Cornwall Hospitals NHS Trust"
           lat: "50.2592"
@@ -1094,7 +1087,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Paediatrics"
           project_title: "AI triage for JAK2 testing"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20DanielSimpson.pdf"
           supervisor:
           placement: "Barts Health NHS Trust"
           lat: "51.5185"
@@ -1106,7 +1099,7 @@ en: &DEFAULT_EN
           region: "London"
           profession: "Public Health"
           project_title: "Integrating AI safely: Post Market Surveillance for a Class I AIaMD"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20VarthaniKirupanandan.pdf"
           supervisor:
           placement: "King’s College Hospital NHS Foundation Trust"
           lat: "51.4673"
@@ -1118,7 +1111,7 @@ en: &DEFAULT_EN
           region: "Scotland"
           profession: "Public Health"
           project_title: "Deploying the EDITH trial in Scotland"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ChristopherMorrison.pdf"
           supervisor:
           placement: "NHS Grampian"
           lat: "57.1550"
@@ -1129,8 +1122,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "Kent Surrey Sussex"
           profession: "Medicine"
-          project_title:
-          project_link:
+          project_title: "Real-World Deployment of AI Assisted CT Brain Triage: A Multi-Site Performance Evaluation"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20DavidGreen.pdf"
           supervisor:
           placement: "University Hospitals Sussex NHS Foundation Trust"
           lat: "50.8191"
@@ -1142,7 +1135,7 @@ en: &DEFAULT_EN
           region: "North West"
           profession: "Medicine"
           project_title: "Enriching Clinical Registries with NLP"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20JohnHartemink.pdf"
           supervisor:
           placement: "Manchester University Hospitals NHS Foundation Trust"
           lat: "53.4608"
@@ -1154,7 +1147,7 @@ en: &DEFAULT_EN
           region: "Wessex"
           profession: "Surgery"
           project_title: "AI-assisted oesophageal cancer MDT decision support: implications for real-world deployment of a validated machine learning tool"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20RoryOrmiston.pdf"
           supervisor:
           placement: "University Hospital Southampton NHS Foundation Trust"
           lat: "50.9333"
@@ -1166,7 +1159,7 @@ en: &DEFAULT_EN
           region: "Thames Valley"
           profession: "Surgery"
           project_title: "AI-based blast cell quantification in myelodysplastic neoplasms and comparison with established methods"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ZainKasmani.pdf"
           supervisor:
           placement: "Oxford University Hospitals NHS Foundation Trust"
           lat: "51.7635"
