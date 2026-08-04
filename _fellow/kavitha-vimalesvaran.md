@@ -29,7 +29,7 @@ planning a health economic analysis.
 
 ### Fellowship Testimonial
 The fellowship provided me with
-the opportunity to lead a multi-centre randomized
+the opportunity to lead a multi-centre randomised
 controlled trial, enhance my knowledge in clinical
 AI implementation under the guidance of world
 experts, and develop a versatile professional skill set

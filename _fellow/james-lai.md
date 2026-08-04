@@ -7,7 +7,7 @@ job-role: Fellow in Clinical AI, Cohort 1
 
 ### Fellowship Bio
 James is an emergency physician and part of the
-first cohort of Clinical AI Fellows. He has an interest
+first cohort of NHS Fellows in Clinical AI. He has an interest
 in leveraging data to aid clinical decision making and
 risk stratification in emergency care.
 
@@ -21,12 +21,12 @@ intensity users of mental health care using data held
 in electronic health records (EHR) at the South London
 and Maudsley NHS Trust. The aim was to develop a
 working model to classify patients as predicted ‘high-
-intensity' users at 12 months’ after initial assessment.
+intensity’ users at 12 months after initial assessment.
 Dr Lai also worked with the team from
 the Centre for Translational Informatics to extract
 anonymised data from the Clinical Record Interactive
 Search (CRIS) system within the NIHR Maudsley
-Biomedical Research Centre
+Biomedical Research Centre.
 
 ### Fellowship Testimonial
 This fellowship has given me the

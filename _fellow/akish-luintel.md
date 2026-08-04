@@ -17,7 +17,6 @@ King’s College Hospital on using Cogstack and NLP
 in infectious diseases.
 
 
-### Fellowship Project
 <!-- FELLOWSHIP_PROJECT -->
 6% of the UK population has a label of penicillin
 allergy, but fewer than 5% of patients with
