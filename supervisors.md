@@ -17,7 +17,7 @@ We are currently accepting project proposals to host AI fellows for 2d/wk for Au
 * 01 Aug 2026: Project proposal submissions open
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Complete project proposal template](/assets/docs/FCAI_C6_Project_Template.docx)
 <br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Email to faculty](mailto:gstt.aifellowship@nhs.net)
-* 02 Oct 2026: Deadline for project proposal submissions
+* 01 Nov 2026: Deadline for project proposal submissions
 * Jan 2027: Remote interviews- prospective supervisors are invited to interview panels
 * Feb 2027: Outcomes of interviews and project matching
 * Aug 2027: Cohort 6 begins
