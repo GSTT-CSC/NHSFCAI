@@ -4,19 +4,24 @@
 - name: NICE
   url: https://www.nice.org.uk
   logo: /images/logo/NICE_logo.png
-
-- name: CERSI-AI
-  url: https://www.cersi-ai.org
-  logo: /images/logo/CERSI_logo.png
+- name: Public Digital
+  url: https://public.digital
+  logo: /images/logo/publicdigital_logo.jpeg
 - name: KHP
   url: https://www.kingshealthpartners.org
   logo: /images/logo/KHP.png
 - name: BMJ
   url: https://bmjgroup.com
   logo: /images/logo/BMJ_logo.png
-- name: Public Digital
-  url: https://public.digital
-  logo: /images/logo/publicdigital_logo.jpeg
+
+- name: CERSI-AI
+  url: https://www.cersi-ai.org
+  logo: /images/logo/CERSI_logo.png
+
+
+- name: Bright
+  url: https://bright.bham.ac.uk
+  logo: /images/logo/Bright_logo.png
 - name: OxCAIR
   url: https://www.ouh.nhs.uk/research/projects/oxcair/
   logo: /images/logo/OXCAIR_logo.png
