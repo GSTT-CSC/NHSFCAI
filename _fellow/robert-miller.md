@@ -21,12 +21,12 @@ autonomous imaging AI in clinical radiology. This
 focused on the use of machine learning techniques
 through an active learning platform to train an intracranial haemorrhage segmentation model.
 During the fellowship Rob contributed to the
-development of an intra-cranial haemorrhage
+development of an intracranial haemorrhage
 segmentation model using the MONAI label platform.
 In doing so, a model was created to facilitate
-increased rate of intra-cranial haemorrhage CT head
+increased rate of intracranial haemorrhage CT head
 images, which can be used to enhance training of
-an intra-cranial haemorrhage phenotyping model.
+an intracranial haemorrhage phenotyping model.
 Performance of the segmentation model was evaluated
 against a novice clinician regarding accuracy and
 speed of segmentations and usability of the MONAI

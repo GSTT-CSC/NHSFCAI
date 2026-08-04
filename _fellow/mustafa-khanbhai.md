@@ -15,7 +15,7 @@ Fellow in Clinical AI, he has been involved in developing clinical decision supp
 
 <!-- FELLOWSHIP_PROJECT -->
 The project’s goals were to develop a process map
-for breast cancer care pathway at GSTT; integrate
+for the breast cancer care pathway at GSTT; integrate
 breast cancer MDT data into Deontics with
 local and national guidelines; carry out manual
 validation of outputs compared to historic MDT

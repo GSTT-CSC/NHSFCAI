@@ -11,14 +11,13 @@ in oncological imaging and previous
 experience in computer science.
 
 <!-- FELLOWSHIP_PROJECT -->
-The aim for the project was to develop a
+The aim of the project was to develop a
 natural language processing algorithm
 that could perform automated extraction
-of mentions of neurodegeneration-
-relevant volumetric assessments from
+of mentions of neurodegeneration-relevant volumetric assessments from
 plain text brain MRI reports, in a large
 cohort of patients referred for imaging
-from memory clinic in the South London
+from memory clinics in the South London
 and Maudsley NHS Foundation Trust.
 Adam developed a machine learning
 algorithm to perform the above task.

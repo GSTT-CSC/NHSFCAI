@@ -8,11 +8,11 @@ job-role: Fellow in Clinical AI, Cohort 1
 Dr Amit Samani is nearing
 completion of training in medical
 oncology and aims to combine a clinical
-career with a role that recognizes the
+career with a role that recognises the
 potential for data, AI, and/or technology
 to improve patient outcomes by
 generating new treatments and
-optimizing healthcare systems. He is
+optimising healthcare systems. He is
 currently working on several projects
 that involve real-world data and AI,
 and he is committed to continuously
