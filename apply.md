@@ -3,13 +3,13 @@ layout: page
 permalink: /apply/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
 ---
-_Last updated: 30 Mar 2026_ 
+_Last updated: 10 Aug 2026_ 
 <br>
 
 <div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
   <p style="margin: 0; font-weight: 700; color: #212b32;">
     Status: Applications closed for Cohort 5 on 15 Dec 2025.<br>
-    Next update: Applications will open for Cohort 6 in Oct 2026, for Aug 2027 start<br>
+    Next update: Applications will open for Cohort 6 on 05 Oct 2026, for Aug 2027 start<br>
   </p>
 </div>
 <br><br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -33,7 +33,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
     Apply as an NHS applicant
   </a>
-  <span style="flex-basis: 100%;"><b>and</b></span>
+  and
   <a href="https://forms.office.com/e/V61XZwYe2h" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
     Obtain Approval in Principle
