@@ -10,7 +10,7 @@ title: Become a Supervisor
   </p>
 </div>
 
-The NHS Fellowship in Clinical AI provides practical experience to its fellows through placements in real-world deployments of AI tools in NHS host sites.
+The NHS Fellowship in Clinical AI provides practical experience to its [fellows](/fellows) through placements in real-world deployments of AI tools in [NHS host sites](/sites).
 We are currently accepting project proposals to host AI fellows for 2d/wk for August 2027- August 2028.
 
 ### Key Dates for supervisors
