@@ -560,6 +560,7 @@ en: &DEFAULT_EN
             I’m thrilled to join the fellowship and gain real life experience in the deployment of AI technology. I’m looking forward to meeting with like-minded colleagues and experts in the field, and hope to utilise the skills and network I develop to drive digital transformation within my own field.
 
         - name: "Mubby Husain"
+          hidden: true # deferred entry - data retained but hidden from public pages
           role: "Consultant Virologist"
           cohort: "5"
           region: "East of England"

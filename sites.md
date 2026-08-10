@@ -170,7 +170,7 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
         return "/fellows/?cohort=" + encodeURIComponent(cohortValue);
     }
 
-    var fellowsData = {{ site.data.fellowship_fellows.en.team.people | jsonify | default: '[]' }};
+    var fellowsData = {{ site.data.fellowship_fellows.en.team.people | where_exp: "person", "person.hidden != true" | jsonify | default: '[]' }};
 
     if (fellowsData && Array.isArray(fellowsData)) {
         var cohortSelect = document.getElementById('cohort-filter');
