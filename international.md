@@ -3,20 +3,19 @@ layout: page
 permalink: /international/
 title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>International Applicants
 ---
-_Last updated: 09 Feb 2026_ 
+_Last updated: 10 Aug 2026_ 
 <br>
 
 <div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
   <p style="margin: 0; font-weight: 700; color: #212b32;">
-    Applications for Cohort 5 closed on 11 Jan 2026.<br>
-    This page serves as a reference for current and future applicants.<br>
-    Cohort 6 applications are expected to open in Oct 2026.
+    Status: Applications closed for Cohort 5 on 11 Jan 2026.<br>
+    Next update: Applications will open for Cohort 6 on 05 Oct 2026, for Aug 2027 start<br>
   </p>
 </div>
 <br><br>
 This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
 <br><br>
-The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are offered jointly in an exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship
+The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are jointly delivered in the exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship
 <br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
 
 
