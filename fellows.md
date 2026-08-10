@@ -52,7 +52,8 @@ title: Fellows & Alumni
 <div class="container">
   <div class="row pt-3">
 
-    {% for person in site.data.fellowship_fellows.en.team.people %}
+    {% assign visible_fellows = site.data.fellowship_fellows.en.team.people | where_exp: "person", "person.hidden != true" %}
+    {% for person in visible_fellows %}
       {% assign url_name = person.name | slugify %}
       {% assign page_url = "/fellow/" | append: url_name %}
       {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
