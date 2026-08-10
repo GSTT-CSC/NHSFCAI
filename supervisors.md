@@ -15,8 +15,18 @@ We are currently accepting project proposals to host AI fellows for 2d/wk for Au
 
 ### Key Dates for supervisors
 * 01 Aug 2026: Project proposal submissions open
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Complete project proposal template](/assets/docs/FCAI_C6_Project_Template.docx)
-<br><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="display:inline; vertical-align:middle;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>[Email to faculty](mailto:gstt.aifellowship@nhs.net)
+
+<div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+  <a href="/assets/docs/FCAI_C6_Project_Template.docx" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+    Complete project proposal template
+  </a>
+  <a href="mailto:gstt.aifellowship@nhs.net" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+    Email to faculty
+  </a>
+</div>
+
 * 01 Nov 2026: Deadline for project proposal submissions
 * Jan 2027: Remote interviews- prospective supervisors are invited to interview panels
 * Feb 2027: Outcomes of interviews and project matching
