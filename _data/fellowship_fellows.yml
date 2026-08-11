@@ -979,8 +979,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "Scotland"
           profession: "Surgery"
-          project_title:
-          project_link:
+          project_title: "AI Assisted Specimen Mammography"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20GerardMcCabe.pdf"
           supervisor:
           placement: "NHS Tayside"
           lat: "56.4620"
