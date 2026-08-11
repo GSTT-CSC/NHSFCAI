@@ -883,8 +883,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "East of England"
           profession: "Radiology"
-          project_title:
-          project_link:
+          project_title: "Evaluating Real-world clinical impact of Imaging AI in a tertiary NHS Trust"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ShinKitaoka.pdf"
           supervisor:
           placement: "Cambridge University Hospitals NHS Foundation Trust"
           lat: "52.1750"
@@ -920,7 +920,7 @@ en: &DEFAULT_EN
           region: "Midlands"
           profession: "General Practice"
           project_title: "AI In Stroke Care, What Have We Learned Post-Deployment: A regional evaluation of a stroke AI tool deployed in the West Midlands"
-          project_link:
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20ChristianOkonkwor.pdf"
           supervisor:
           placement: "University Hospitals Birmingham NHS Foundation Trust"
           lat: "52.4521"
