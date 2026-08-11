@@ -2,14 +2,6 @@
 layout: default
 title: SPIRIT-AI Checklist
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPIRIT-AI Checklist</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 <style>
   :root {
     --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
@@ -94,6 +86,12 @@ title: SPIRIT-AI Checklist
   .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
   .btn-primary:hover { background: #2563eb; }
 
+  /* Inline component samples in the "How the item tags work" note */
+  .inline-src { display: inline-block; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 0.25rem; vertical-align: middle; }
+  .inline-src.base { color: var(--blue); background: var(--blue-bg); }
+  .inline-src.ext { color: var(--purple); background: var(--purple-bg); }
+  .attribution .item-type, .attribution .applic-tag { margin-left: 0; }
+
   .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
   .attribution a { color: var(--blue); }
 
@@ -101,10 +99,6 @@ title: SPIRIT-AI Checklist
   .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
   .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
   .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-
-  .legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
-  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
 
   /* Collapsible sections */
   .section-header { cursor: pointer; user-select: none; }
@@ -120,20 +114,18 @@ title: SPIRIT-AI Checklist
     .dashboard { flex-direction: column; }
   }
 </style>
-</head>
-<body>
 <div class="container">
   <h1>SPIRIT-AI Checklist</h1>
   <p class="subtitle">Interactive checklist for clinical trial protocols of interventions involving artificial intelligence and machine learning.</p>
 
   <div class="paper-title-field">
     <label for="paper-title">Document being assessed (optional)</label>
-    <input type="text" id="paper-title" placeholder="..." oninput="savePaperTitle(this.value)">
+    <input type="text" id="paper-title" placeholder="E.g. paper title, authors, DOI..." oninput="savePaperTitle(this.value)">
   </div>
 
   <div class="toolbar" aria-label="Checklist toolbar">
     <div class="toolbar-group">
-      <span class="toolbar-label">Generate Reports</span>
+      <span class="toolbar-label">Generate reports</span>
       <button class="btn" onclick="exportPDF()">Download PDF</button>
       <button class="btn" onclick="exportCSV()">Download CSV</button>
     </div>
@@ -155,22 +147,22 @@ title: SPIRIT-AI Checklist
 
 
   <div class="dashboard" id="dashboard">
-    <div class="score-sheet-label">SPIRIT 2013 core items only</div>
-    <div class="stat" id="stat-spirit-total"><div class="num" id="score-spirit-total">0%</div><div class="label">Items rated</div></div>
+    <div class="score-sheet-label">SPIRIT 2013 items only</div>
+    <div class="stat" id="stat-spirit-total"><div class="num" id="score-spirit-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-spirit-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-spirit-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-spirit-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-spirit-unrated">0</div><div class="label">Unrated</div></div>
 
-    <div class="score-sheet-label">SPIRIT-AI extension only</div>
-    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items rated</div></div>
+    <div class="score-sheet-label">SPIRIT-AI items only</div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-ai-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">Combined</div>
-    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
@@ -180,19 +172,24 @@ title: SPIRIT-AI Checklist
   <div class="attribution">
     <strong>About This Tool: The SPIRIT-AI Checklist</strong><br><br>
     <strong>What is it for?</strong><br>
-    This tool is a web-based checklist implementing the SPIRIT-AI (Standard Protocol Items: Recommendations for Interventional Trials–Artificial Intelligence) extension.
-    Its primary purpose is to serve as a completeness checklist for clinical trial protocols of interventions that involve artificial intelligence or machine learning. Developed by an international multi-stakeholder group, SPIRIT-AI introduces 15 AI-specific items (12 extensions and 3 elaborations) that are addressed alongside the core SPIRIT 2013 protocol items. By using this checklist, investigators, editors and reviewers can systematically evaluate whether a trial protocol transparently describes critical AI-specific elements.
+    This tool is a web-based checklist implementing the SPIRIT-AI (Standard Protocol Items: Recommendations for Interventional Trials – Artificial Intelligence) extension.
+    Its primary purpose is to serve as a completeness checklist for clinical trial protocols of interventions that involve artificial intelligence or machine learning. Developed by an international multi-stakeholder group, SPIRIT-AI introduces 15 AI-specific items (12 extensions and 3 elaborations) that are addressed alongside the core SPIRIT 2013 protocol items. By using this checklist, authors, editors and reviewers can systematically evaluate whether a trial protocol transparently describes critical AI-specific elements.
+    <br><br>
+    <strong>How the item tags work</strong><br>
+    Items shown under a <span class="inline-src base">SPIRIT 2013</span> label are core protocol items that apply to any clinical trial. Items shown under a <span class="inline-src ext">SPIRIT-AI</span> label carry one of two tags: an <span class="item-type extension">Extension item</span> is a wholly new protocol requirement that applies only to AI interventions, while an <span class="item-type elaboration">Elaboration item</span> is an existing SPIRIT 2013 requirement that needs additional detail when the intervention involves AI. Both designations are taken from the SPIRIT-AI publication and are not editorial additions.
     <br><br>
     This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
     <br><br>
     <strong>Sources and attribution</strong><br>
-    Checklist items are derived from SPIRIT 2013 and SPIRIT-AI. Explanatory summaries have been independently rewritten for educational and review purposes. <br><br>
-    1. Cruz Rivera, S., Liu, X., Chan, A.W., Denniston, A.K., Calvert, M.J., et al. Guidelines for clinical trial protocols for interventions involving artificial intelligence: the SPIRIT-AI extension. <em>Nat Med</em> 26, 1351–1363 (2020). <a href="https://doi.org/10.1038/s41591-020-1037-7" target="_blank">doi:10.1038/s41591-020-1037-7</a> (also published as <em>BMJ</em> 2020;370:m3210, <a href="https://doi.org/10.1136/bmj.m3210" target="_blank">doi:10.1136/bmj.m3210</a>). Published under CC BY 4.0.<br>
+    Checklist item wording is reproduced from SPIRIT 2013 and SPIRIT-AI. Explanations for the SPIRIT-AI items are reproduced from the SPIRIT-AI publication; explanations for the SPIRIT 2013 items were written for this tool. Licensing terms for each source are noted below. <br><br>
+    1. Cruz Rivera, S., Liu, X., Chan, A.W., Denniston, A.K., Calvert, M.J., et al. Guidelines for clinical trial protocols for interventions involving artificial intelligence: the SPIRIT-AI extension. <em>Nat Med</em> 26, 1351–1363 (2020). <a href="https://doi.org/10.1038/s41591-020-1037-7" target="_blank">doi:10.1038/s41591-020-1037-7</a> (also published as <em>BMJ</em> 2020;370:m3210, <a href="https://doi.org/10.1136/bmj.m3210" target="_blank">doi:10.1136/bmj.m3210</a>). <em>Published under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> — reproduction permitted with attribution. Checklist item wording is reproduced unaltered; explanations for the AI-specific items are reproduced from the same source; explanations for the base-guideline items were written for this tool.</em><br>
     2. Chan, A.W., Tetzlaff, J.M., Gøtzsche, P.C. et al. SPIRIT 2013 explanation and elaboration: guidance for protocols of clinical trials. <em>BMJ</em> 346, e7586 (2013). <a href="https://doi.org/10.1136/bmj.e7586" target="_blank">doi:10.1136/bmj.e7586</a>.<br>
     This checklist is not endorsed by the original authors.
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha512-/cZZTKETbsuutvNXdPji/z8N+9e+LHq9D60JhcBCigq9I5a2VDEcLzml8PdVlVqzmWlVbhZCuTx+9CTi2xb30A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 const DATA = [
   { section: "Administrative Information", items: [
@@ -269,7 +266,7 @@ const DATA = [
       spiritExpl: null,
       aiType: "Extension",
       ai: "State the inclusion and exclusion criteria at the level of the input data.",
-      explanation: "Input data refer to the data required by the AI intervention to serve its purpose (for example, for a breast cancer diagnostic system, the input data could be the unprocessed or vendor-specific post-processing mammography scan on which a diagnosis is being made; for an early warning system, the input data could be physiological measurements or laboratory results from the electronic health record). The trial protocol should pre-specify if there are minimum requirements for the input data (such as image resolution, quality metrics, or data format), which would determine pre-randomisation eligibility. It should specify when, how, and by whom this will be assessed. For example, if a participant met the eligibility criteria for lying flat for a CT scan as per item 10 (i), but the scan quality was compromised (for any given reason) to such a level that it is no longer fit for use by the AI system, this should be considered as an exclusion criterion at the input data level. Note that where input data are acquired after randomisation (addressed by SPIRIT-20c), any exclusion is considered to be from the analysis, not from enrolment (fig 1)." },
+      explanation: "Input data refer to the data required by the AI intervention to serve its purpose (for example, for a breast cancer diagnostic system, the input data could be the unprocessed or vendor-specific post-processing mammography scan on which a diagnosis is being made; for an early warning system, the input data could be physiological measurements or laboratory results from the electronic health record). The trial protocol should prespecify if there are minimum requirements for the input data (such as image resolution, quality metrics, or data format), which would determine pre-randomisation eligibility. It should specify when, how, and by whom this will be assessed. For example, if a participant met the eligibility criteria for lying flat for a CT scan as per item 10 (i), but the scan quality was compromised (for any given reason) to such a level that it is no longer fit for use by the AI system, this should be considered as an exclusion criterion at the input data level. Note that where input data are acquired after randomisation (addressed by SPIRIT-20c), any exclusion is considered to be from the analysis, not from enrolment (fig 1)." },
     { id: "11a-i", itemKind: "ai", spirit: "Interventions for each group with sufficient detail to allow replication, including how and when they will be administered",
       spiritExpl: "Each intervention should be described in sufficient detail to allow replication, including how and when interventions will be administered. For drug interventions this includes the dose, route, timing and duration; for non-drug interventions it may include the equipment, procedures, provider expertise and standardisation procedures. Where usual care is the control, its content should be described. For drugs, biologics or placebos, include the generic name, manufacturer, constituent components, route and dosing schedule (including any titration or run-in). State whether the same or different individuals will deliver the intervention across study groups, since otherwise the effect of the intervention cannot be separated from that of the person delivering it.",
       aiType: "Extension",
@@ -551,8 +548,8 @@ function render() {
       let aiBlock = '';
       if (item.ai) {
         const typeBadge = item.aiType === 'Extension'
-          ? '<span class="item-type extension">Extension</span>'
-          : '<span class="item-type elaboration">Elaboration</span>';
+          ? '<span class="item-type extension">Extension item</span>'
+          : '<span class="item-type elaboration">Elaboration item</span>';
         aiBlock = `
           <div class="ai-ext">
             <span class="ai-label">SPIRIT-AI ${typeBadge}</span>
@@ -715,9 +712,11 @@ function getExportMetadata() {
 function getExportRows() {
   return getAllRows(null).map(row => {
     const s = state[row.stateId] || {};
+    // Two genuinely distinct guidelines are interleaved here, so the source is
+    // informative; AI rows also carry the publication's extension/elaboration tag.
     const source = row.itemKind === 'spirit'
       ? 'SPIRIT 2013'
-      : 'SPIRIT-AI';
+      : `SPIRIT-AI (${(row.aiType || '').toLowerCase() || 'item'})`;
     const statement = row.itemKind === 'spirit' ? row.spirit : row.ai;
     return {
       section: row.section,
@@ -831,7 +830,10 @@ function exportCSV() {
   const exportRows = getExportRows();
   let csv = metadata.paper ? `"Document:","${escapeCSV(metadata.paper)}"\n` : '';
   csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
-  csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n`;
+  csv += `"SPIRIT 2013 items only:","${escapeCSV(formatScoreSummary('', countItems('spirit')))}"\n`;
+  csv += `"SPIRIT-AI items only:","${escapeCSV(formatScoreSummary('', countItems('ai')))}"\n`;
+  csv += `"Combined:","${escapeCSV(formatScoreSummary('', countItems(null)))}"\n\n`;
   csv += 'Section,Item,Source,Statement,Rating,Notes\n';
   exportRows.forEach(row => {
     csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.source)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
@@ -863,9 +865,9 @@ function exportPDF() {
   const spirit = countItems('spirit');
   const ai = countItems('ai');
   const combined = countItems(null);
-  doc.text(formatScoreSummary('SPIRIT 2013 core items only', spirit), 14, yPos);
+  doc.text(formatScoreSummary('SPIRIT 2013 items only', spirit), 14, yPos);
   yPos += 5;
-  doc.text(formatScoreSummary('SPIRIT-AI extension only', ai), 14, yPos);
+  doc.text(formatScoreSummary('SPIRIT-AI items only', ai), 14, yPos);
   yPos += 5;
   doc.text(formatScoreSummary('Combined', combined), 14, yPos);
   yPos += 6;
@@ -889,8 +891,8 @@ function exportPDF() {
     columnStyles: {
       0: { cellWidth: 36 },
       1: { cellWidth: 24 },
-      2: { cellWidth: 28 },
-      3: { cellWidth: 124 },
+      2: { cellWidth: 32 },
+      3: { cellWidth: 120 },
       4: { cellWidth: 24 },
       5: { cellWidth: 56 }
     },
@@ -905,8 +907,9 @@ function exportPDF() {
   });
 
   doc.setFontSize(6.5);
-  const y = doc.internal.pageSize.height - 8;
-  doc.text('Checklist items derived from SPIRIT 2013 and SPIRIT-AI. Explanatory summaries independently rewritten. SPIRIT-AI: Cruz Rivera S et al., Nat Med 2020;26:1351-1363 / BMJ 2020;370:m3210, CC BY 4.0. SPIRIT 2013 E&E: Chan AW et al., BMJ 2013;346:e7586.', 14, y);
+  const footer = 'Checklist items derived from SPIRIT 2013 and SPIRIT-AI. Explanations for AI-specific items reproduced from SPIRIT-AI; all others written for this tool. SPIRIT-AI: Cruz Rivera S et al., Nat Med 2020;26:1351-1363, doi:10.1038/s41591-020-1037-7 (also BMJ 2020;370:m3210), CC BY 4.0. SPIRIT 2013 E&E: Chan AW et al., BMJ 2013;346:e7586, doi:10.1136/bmj.e7586. Not endorsed by the original authors.';
+  const footerLines = doc.splitTextToSize(footer, doc.internal.pageSize.width - 28);
+  doc.text(footerLines, 14, doc.internal.pageSize.height - 8 - (footerLines.length - 1) * 3);
   doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
 }
 
@@ -914,5 +917,3 @@ loadState();
 document.getElementById('paper-title').value = paperTitle;
 render();
 </script>
-</body>
-</html>

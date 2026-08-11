@@ -2,14 +2,6 @@
 layout: default
 title: DECIDE-AI Checklist
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DECIDE-AI Checklist</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 <style>
   :root {
     --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
@@ -67,8 +59,8 @@ title: DECIDE-AI Checklist
   .item-theme { font-size: 0.78rem; font-weight: 700; color: #334155; margin-bottom: 0.1rem; }
 
   .item-type { font-size: 0.65rem; padding: 1px 6px; border-radius: 999px; font-weight: 600; margin-left: 0.25rem; vertical-align: middle; }
-  .item-type.extension { background: #ddd6fe; color: #5b21b6; }
-  .item-type.elaboration { background: #dbeafe; color: #1e40af; }
+  .item-type.ai { background: #ddd6fe; color: #5b21b6; }
+  .item-type.generic { background: #dbeafe; color: #1e40af; }
 
   .rag-buttons { display: flex; gap: 0.25rem; flex-wrap: wrap; }
   .rag-btn { border: 2px solid var(--gray-border); background: #fff; border-radius: 0.375rem; padding: 0.25rem 0.6rem; font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.15s; color: var(--gray); }
@@ -92,6 +84,12 @@ title: DECIDE-AI Checklist
   .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
   .btn-primary:hover { background: #2563eb; }
 
+  /* Inline component samples in the "How the item tags work" note */
+  .inline-src { display: inline-block; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 0.25rem; vertical-align: middle; }
+  .inline-src.base { color: var(--blue); background: var(--blue-bg); }
+  .inline-src.ext { color: var(--purple); background: var(--purple-bg); }
+  .attribution .item-type, .attribution .applic-tag { margin-left: 0; }
+
   .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
   .attribution a { color: var(--blue); }
 
@@ -99,10 +97,6 @@ title: DECIDE-AI Checklist
   .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
   .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
   .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-
-  .legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
-  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
 
   /* Collapsible sections */
   .section-header { cursor: pointer; user-select: none; }
@@ -118,20 +112,18 @@ title: DECIDE-AI Checklist
     .dashboard { flex-direction: column; }
   }
 </style>
-</head>
-<body>
 <div class="container">
   <h1>DECIDE-AI Checklist</h1>
   <p class="subtitle">Interactive reporting checklist for the early-stage live clinical evaluation of decision support systems driven by artificial intelligence.</p>
 
   <div class="paper-title-field">
     <label for="paper-title">Document being assessed (optional)</label>
-    <input type="text" id="paper-title" placeholder="..." oninput="savePaperTitle(this.value)">
+    <input type="text" id="paper-title" placeholder="E.g. paper title, authors, DOI..." oninput="savePaperTitle(this.value)">
   </div>
 
   <div class="toolbar" aria-label="Checklist toolbar">
     <div class="toolbar-group">
-      <span class="toolbar-label">Generate Reports</span>
+      <span class="toolbar-label">Generate reports</span>
       <button class="btn" onclick="exportPDF()">Download PDF</button>
       <button class="btn" onclick="exportCSV()">Download CSV</button>
     </div>
@@ -154,14 +146,14 @@ title: DECIDE-AI Checklist
 
   <div class="dashboard" id="dashboard" aria-label="DECIDE-AI reporting dashboard">
     <div class="score-sheet-label">Generic items only</div>
-    <div class="stat" id="stat-generic-total"><div class="num" id="score-generic-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat" id="stat-generic-total"><div class="num" id="score-generic-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-generic-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-generic-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-generic-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-generic-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">AI-specific items only</div>
-    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
@@ -170,7 +162,7 @@ title: DECIDE-AI Checklist
 
 
     <div class="score-sheet-label">Combined</div>
-    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items rated</div></div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
@@ -180,23 +172,28 @@ title: DECIDE-AI Checklist
   <div class="attribution">
     <strong>About This Tool: The DECIDE-AI Checklist</strong><br><br>
     <strong>What is it for?</strong><br>
-    This tool is a web-based checklist implementing DECIDE-AI, the reporting guideline for the Developmental and Exploratory Clinical Investigations of DEcision support systems driven by Artificial Intelligence. DECIDE-AI is a stand-alone, stage-specific guideline for reporting the early, small-scale, live clinical evaluation of AI-based decision support systems, focusing on proof of clinical utility at small scale, safety, human factors, and preparation for larger summative trials. It comprises 17 AI-specific reporting items (28 sub-items) and 10 generic reporting items. By using this checklist, reviewers can systematically evaluate whether an early-stage clinical AI study transparently reports these elements.
+    This tool is a web-based checklist implementing DECIDE-AI, the reporting guideline for the Developmental and Exploratory Clinical Investigations of DEcision support systems driven by Artificial Intelligence. DECIDE-AI is a stand-alone, stage-specific guideline for reporting the early, small-scale, live clinical evaluation of AI-based decision support systems, focusing on proof of clinical utility at small scale, safety, human factors, and preparation for larger summative trials. It comprises 17 AI-specific reporting items (28 sub-items) and 10 generic reporting items. By using this checklist, authors, editors and reviewers can systematically evaluate whether an early-stage clinical AI study transparently reports these elements.
     <br><br>
-    This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
+    <strong>How the item tags work</strong><br>
+    DECIDE-AI is stand-alone, so there is no separate base guideline to check alongside it. An <span class="item-type ai">AI-specific item</span> addresses a requirement unique to evaluating an AI-driven decision support system; a <span class="item-type generic">Generic item</span> covers reporting expected of any early-stage clinical study. The item numbering follows the guideline's own convention: AI-specific items use Arabic numerals (1–17) and generic items use Roman numerals (I–X).
+    <br><br>
+    This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. This tool is made available for non-commercial use only. Please consult the original publications for the full official guidance.
     <br><br>
     <strong>Sources and attribution</strong><br>
-    Checklist items are derived from the DECIDE-AI checklist (Table 2). Explanatory summaries have been independently rewritten and condensed from the DECIDE-AI Explanation &amp; Elaboration for educational and review purposes.<br><br>
-    1. Vasey, B., Nagendran, M., Campbell, B. et al. Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI. <em>BMJ</em> 377, e070904 (2022). <a href="https://doi.org/10.1136/bmj-2022-070904" target="_blank">doi:10.1136/bmj-2022-070904</a>. Supplementary appendix 1: <a href="https://pmc.ncbi.nlm.nih.gov/articles/instance/9116198/bin/vasb070904.ww1.pdf" target="_blank"> Explanation and Elaboration.</a><br>
+    Checklist item wording is reproduced from the DECIDE-AI checklist (Table 2). Explanatory summaries are condensed and adapted from the DECIDE-AI Explanation &amp; Elaboration for educational and review purposes. Because the source is licensed CC BY-NC 4.0, this tool is a non-commercial adaptation and may not be used commercially. Licensing terms are noted below.<br><br>
+    1. Vasey, B., Nagendran, M., Campbell, B. et al. Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI. <em>BMJ</em> 377, e070904 (2022). <a href="https://doi.org/10.1136/bmj-2022-070904" target="_blank">doi:10.1136/bmj-2022-070904</a>, including supplementary appendix 1: <a href="https://pmc.ncbi.nlm.nih.gov/articles/instance/9116198/bin/vasb070904.ww1.pdf" target="_blank">Explanation and Elaboration</a>. &copy; The authors. <em>Published under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a> — reproduction and adaptation permitted with attribution, non-commercial use only. Item wording is reproduced from Table 2; explanatory summaries are condensed and adapted from the Explanation and Elaboration appendix.</em><br>
     This checklist is not endorsed by the original authors.
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha512-/cZZTKETbsuutvNXdPji/z8N+9e+LHq9D60JhcBCigq9I5a2VDEcLzml8PdVlVqzmWlVbhZCuTx+9CTi2xb30A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 const DATA = [
   { section: "Title and Abstract", items: [
     { id: "1", theme: "Title", kind: "ai", type: "AI-specific",
       statement: `Identify the study as an early clinical evaluation of a decision support system based on AI or machine learning, specifying the problem addressed.`,
-      explanation: `Purpose is efficient retrieval during literature searches. The title (or abstract) should signal two things: (i) that the intervention uses ML/AI, and (ii) that this is early/exploratory clinical evaluation &mdash; using terms such as "early clinical evaluation", "formative clinical evaluation" (contrasted with the later, larger-scale "summative" evaluation), "phase 2" (per Park et al.'s clinical-research phases), or "stage 2" (per the IDEAL-D framework). Include both the name of the underlying algorithm (needed to curate methodologically similar approaches) and the commercial name of the AI system where one exists (absence hampers retrieval of all papers on a single system). If the algorithm name is unfamiliar to a clinical audience (e.g. "regularisation-based extreme gradient boosting"), add a generic term such as "machine learning" or "artificial intelligence". Information limited by the title's character count, and the study design, can instead be placed in the abstract.` },
+      explanation: `Purpose is efficient retrieval during literature searches. The title (or abstract) should signal two things: (i) that the intervention uses ML/AI, and (ii) that this is early/exploratory clinical evaluation — using terms such as "early clinical evaluation", "formative clinical evaluation" (contrasted with the later, larger-scale "summative" evaluation), "phase 2" (per Park et al.'s clinical-research phases), or "stage 2" (per the IDEAL-D framework). Include both the name of the underlying algorithm (needed to curate methodologically similar approaches) and the commercial name of the AI system where one exists (absence hampers retrieval of all papers on a single system). If the algorithm name is unfamiliar to a clinical audience (e.g. "regularisation-based extreme gradient boosting"), add a generic term such as "machine learning" or "artificial intelligence". Information limited by the title's character count, and the study design, can instead be placed in the abstract.` },
     { id: "I", theme: "Abstract", kind: "generic", type: "Generic",
       statement: `Provide a structured summary of the study. Consider including: intended use of the AI system, type of underlying algorithm, study setting, number of patients and users included, primary, secondary, safety and human factors outcomes measured, main results, and conclusions.`,
       explanation: `The abstract is a key screening tool for readers and systematic reviewers. Beyond the usual study elements, AI-specific points that merit inclusion are: the intended use (targeted condition(s) and problem(s); optionally the intended patient population, users and use environment); the underlying algorithm type (often a systematic-review selection criterion); the number of users involved (because user variability affects performance); the key safety endpoints (live-setting safety is essential before larger-scale evaluation); and the human factors assessment (whose results may matter as much as clinical outcomes at this stage).` },
@@ -204,7 +201,7 @@ const DATA = [
   { section: "Introduction", items: [
     { id: "2a", theme: "Intended use", kind: "ai", type: "AI-specific",
       statement: `Describe the targeted medical condition(s) and problem(s), including the current standard practice, and the intended patient population(s).`,
-      explanation: `Items 2a&ndash;b describe the intended use at scale, which must not be confused with the actual use during the study (reported under Methods); if the study's intended use differs from that in preclinical development (item 4a), state this clearly. Define the target medical condition (e.g. sepsis) and the associated clinical problem (e.g. finding the optimal balance between fluid and vasopressor dose) so the system can be compared with competitors. Because standard practice varies by geography, clearly describe the standard practice being compared against, ideally with clinical outcomes for that standard practice in the evaluation environment. Define the target population for generalisability, and report any known contraindications to use.` },
+      explanation: `Items 2a–b describe the intended use at scale, which must not be confused with the actual use during the study (reported under Methods); if the study's intended use differs from that in preclinical development (item 4a), state this clearly. Define the target medical condition (e.g. sepsis) and the associated clinical problem (e.g. finding the optimal balance between fluid and vasopressor dose) so the system can be compared with competitors. Because standard practice varies by geography, clearly describe the standard practice being compared against, ideally with clinical outcomes for that standard practice in the evaluation environment. Define the target population for generalisability, and report any known contraindications to use.` },
     { id: "2b", theme: "Intended use", kind: "ai", type: "AI-specific",
       statement: `Describe the intended users of the AI system, its planned integration in the care pathway, and the potential impact (including patient outcomes) it is intended to have.`,
       explanation: `Describe intended-user characteristics likely to influence interaction with the system: role and responsibilities, specialty, level of training, familiarity with digital technology, and any specific expertise required. Planned integration at scale may include: the use environment, ease of access to the system, the decision it supports, the level of human control, and the timing of decision support. For impact, state which patient outcomes are targeted (e.g. 30-day hospital re-admission or mortality rate) so readers can judge whether the study's performance metrics were appropriately chosen.` },
@@ -216,30 +213,30 @@ const DATA = [
     { id: "III", theme: "Research governance", kind: "generic", type: "Generic",
       statement: `Provide a reference to any study protocol, study registration number, and ethics approval.`,
       explanation: `Reference any article or repository entry where the protocol was published; a pre-collection protocol lowers the risk of selective analysis, selective outcome reporting and outcome switching. The Declaration of Helsinki states that every study involving human subjects must be registered in a publicly accessible database before recruitment of the first subject; most ethics boards require registration even for small trials, and for other study types registration is good practice. Report the ethics approval number, and state whether informed consent (and assent where relevant, e.g. in paediatrics) was obtained or a waiver was granted.` },
-    { id: "3a", theme: "Participants &mdash; patients", kind: "ai", type: "AI-specific",
+    { id: "3a", theme: "Participants — patients", kind: "ai", type: "AI-specific",
       statement: `Describe how patients were recruited, stating the inclusion and exclusion criteria at both patient and data level, and how the number of recruited patients was decided.`,
-      explanation: `Report the recruitment strategy (active, passive, or open-access community use), the sampling method (consecutive, random, etc.), and the consent procedure (or waiver; see item III) so readers can appraise selection bias. Because patients are represented by the data they generate, state inclusion/exclusion criteria at both the patient level and the data level &mdash; e.g. a participant may meet all patient-level criteria yet be excluded due to low-quality or incomplete data acquisition. Data-level criteria can include: acquisition time, acquisition technique, data quality, data completeness and data format. A formal sample-size calculation is not always required early-stage, but the sample-size decision should be explained: state the initial recruitment target (so premature termination &mdash; e.g. from lack of participant interest, funding, or safety reasons &mdash; is identifiable) and the rationale (e.g. comparable studies, logistical/time constraints, or a target number of patients with specific characteristics such as metastatic cancer), considering representativeness of the intended population.` },
-    { id: "3b", theme: "Participants &mdash; users", kind: "ai", type: "AI-specific",
+      explanation: `Report the recruitment strategy (active, passive, or open-access community use), the sampling method (consecutive, random, etc.), and the consent procedure (or waiver; see item III) so readers can appraise selection bias. Because patients are represented by the data they generate, state inclusion/exclusion criteria at both the patient level and the data level — e.g. a participant may meet all patient-level criteria yet be excluded due to low-quality or incomplete data acquisition. Data-level criteria can include: acquisition time, acquisition technique, data quality, data completeness and data format. A formal sample-size calculation is not always required early-stage, but the sample-size decision should be explained: state the initial recruitment target (so premature termination — e.g. from lack of participant interest, funding, or safety reasons — is identifiable) and the rationale (e.g. comparable studies, logistical/time constraints, or a target number of patients with specific characteristics such as metastatic cancer), considering representativeness of the intended population.` },
+    { id: "3b", theme: "Participants — users", kind: "ai", type: "AI-specific",
       statement: `Describe how users were recruited, stating the inclusion and exclusion criteria, and how the intended number of recruited users was decided.`,
-      explanation: `Because user&ndash;system interaction influences overall performance (an analogy is the IDEAL framework's emphasis on both patient and operator characteristics in surgery), users are a defined study population in their own right. Describe their recruitment in enough detail to appraise selection bias, and report the consent procedure for users too (both patients and users are participants). Unlike for patients, data-level exclusion of users is generally not recommended, because user "data quality" (difficulty in use, lack of interest, etc.) is itself informative about usability (see items 7 and 14a). There is no clear guidance on the number of users, so report the conscious choice of number and characteristics with a rationale and with reference to how representative they are of intended end users. Report any user involvement in the system's design (or research-team members acting as users), as this can bias findings. User numbers in existing studies are often low and insufficient to support authors' claims; in some cases patients may themselves be the users.` },
-    { id: "3c", theme: "Participants &mdash; familiarisation", kind: "ai", type: "AI-specific",
+      explanation: `Because user–system interaction influences overall performance (an analogy is the IDEAL framework's emphasis on both patient and operator characteristics in surgery), users are a defined study population in their own right. Describe their recruitment in enough detail to appraise selection bias, and report the consent procedure for users too (both patients and users are participants). Unlike for patients, data-level exclusion of users is generally not recommended, because user "data quality" (difficulty in use, lack of interest, etc.) is itself informative about usability (see items 7 and 14a). There is no clear guidance on the number of users, so report the conscious choice of number and characteristics with a rationale and with reference to how representative they are of intended end users. Report any user involvement in the system's design (or research-team members acting as users), as this can bias findings. User numbers in existing studies are often low and insufficient to support authors' claims; in some cases patients may themselves be the users.` },
+    { id: "3c", theme: "Participants — familiarisation", kind: "ai", type: "AI-specific",
       statement: `Describe steps taken to familiarise the users with the AI system, including any training provided prior to the study.`,
-      explanation: `This lets readers anticipate the time and effort needed before the system can be used reliably (learning curves; see item 14b) and reflects training's role in reducing performance differences arising from users' prior exposure to similar technology. Report the type and number of training and practice sessions, the details of cases presented during training, and the time allocated. Ideally make the training protocol and materials available as supplementary information or in a repository (adapted if necessary to protect developers' intellectual property). If familiarisation occurred during a "wash-in" trial period &mdash; users interacting with the system, with or without supervision, but without active data collection &mdash; describe its conditions in enough detail to allow replication; prior experience with the same or a similar system should be described in similar terms.` },
+      explanation: `This lets readers anticipate the time and effort needed before the system can be used reliably (learning curves; see item 14b) and reflects training's role in reducing performance differences arising from users' prior exposure to similar technology. Report the type and number of training and practice sessions, the details of cases presented during training, and the time allocated. Ideally make the training protocol and materials available as supplementary information or in a repository (adapted if necessary to protect developers' intellectual property). If familiarisation occurred during a "wash-in" trial period — users interacting with the system, with or without supervision, but without active data collection — describe its conditions in enough detail to allow replication; prior experience with the same or a similar system should be described in similar terms.` },
     { id: "4a", theme: "AI system", kind: "ai", type: "AI-specific",
       statement: `Briefly describe the AI system, specifying its version and the type of underlying algorithm. Describe, or provide a direct reference to, the characteristics of the patient population the algorithm was trained on and its performance in preclinical development/validation studies.`,
-      explanation: `Give a concise description: name the type of underlying algorithm (the mathematical model) and describe the supporting hardware and, if relevant, supporting software &mdash; a full description of the model itself is not expected. Ideally, references to development/validation studies should cover: the algorithm's variable components (e.g. hyperparameters, kernels, neural-network architecture), the environment and patient-population characteristics of those studies, the outcomes and performance metrics used, and the results; if unpublished, describe these in the manuscript or a repository. "AI system facts labels" (standardised descriptions of essential facts) offer a concise practical format. Clearly identify the version evaluated (or versions; see item 12) by version number or, where available, a regulatory marker such as a unique device identifier. Describe the supporting hardware's clinical benefits/limitations (e.g. size, autonomy, ease of cleaning). If specific algorithmic thresholds were used (e.g. a cut-off set so as not to exceed a 15% false-positive rate), describe them and the rationale, as they directly affect outputs and results.` },
-    { id: "4b", theme: "AI system &mdash; input data", kind: "ai", type: "AI-specific",
+      explanation: `Give a concise description: name the type of underlying algorithm (the mathematical model) and describe the supporting hardware and, if relevant, supporting software — a full description of the model itself is not expected. Ideally, references to development/validation studies should cover: the algorithm's variable components (e.g. hyperparameters, kernels, neural-network architecture), the environment and patient-population characteristics of those studies, the outcomes and performance metrics used, and the results; if unpublished, describe these in the manuscript or a repository. "AI system facts labels" (standardised descriptions of essential facts) offer a concise practical format. Clearly identify the version evaluated (or versions; see item 12) by version number or, where available, a regulatory marker such as a unique device identifier. Describe the supporting hardware's clinical benefits/limitations (e.g. size, autonomy, ease of cleaning). If specific algorithmic thresholds were used (e.g. a cut-off set so as not to exceed a 15% false-positive rate), describe them and the rationale, as they directly affect outputs and results.` },
+    { id: "4b", theme: "AI system — input data", kind: "ai", type: "AI-specific",
       statement: `Identify the data used as inputs. Describe how the data were acquired, the process needed to enter the input data, the pre-processing applied, and how missing/low-quality data were handled.`,
-      explanation: `Needed so others can evaluate transferability. Depending on context, may include: a list of the data items (with units) used as input during the study; the timeframe of data acquisition (relevant to iterative modifications and performance change over time; see item 11); the origin of the input data (e.g. already routinely collected in the electronic health record (EHR) vs newly collected); how specific items were measured / the acquisition settings (e.g. CT scanner model and slice count) &mdash; acquisition protocols and devices are important sources of variability and confounding (reference range, sensitivity, resolution, data quality, additional features), and models may learn on these differences; the method of entering data into the system (e.g. automatic EHR extraction vs manual entry &mdash; pertaining to study input, not EHR or training input &mdash; so input-error handling can be appraised); and a description of pre-processing and how missing values were defined and handled, considering clinical application, scale-up and algorithmic fairness (e.g. a lab variable considered missing if no data point exists within a 24-hour vs a 72-hour window, which carry different clinical implications).` },
-    { id: "4c", theme: "AI system &mdash; outputs", kind: "ai", type: "AI-specific",
+      explanation: `Needed so others can evaluate transferability. Depending on context, may include: a list of the data items (with units) used as input during the study; the timeframe of data acquisition (relevant to iterative modifications and performance change over time; see item 11); the origin of the input data (e.g. already routinely collected in the electronic health record (EHR) vs newly collected); how specific items were measured / the acquisition settings (e.g. CT scanner model and slice count) — acquisition protocols and devices are important sources of variability and confounding (reference range, sensitivity, resolution, data quality, additional features), and models may learn on these differences; the method of entering data into the system (e.g. automatic EHR extraction vs manual entry — pertaining to study input, not EHR or training input — so input-error handling can be appraised); and a description of pre-processing and how missing values were defined and handled, considering clinical application, scale-up and algorithmic fairness (e.g. a lab variable considered missing if no data point exists within a 24-hour vs a 72-hour window, which carry different clinical implications).` },
+    { id: "4c", theme: "AI system — outputs", kind: "ai", type: "AI-specific",
       statement: `Describe the AI system outputs and how they were presented to the users (an image may be useful).`,
-      explanation: `Describe the human-computer interface (or reference development studies) to allow appraisal of the output-specific user experience, including comprehensiveness, clarity and design &mdash; how information is displayed shapes interaction and may have regulatory consequences. Give the type and number of outputs (e.g. the system segmented and gave a probability of malignancy for each detected nodule) and the display design; one or more images/screenshots/illustrations may be the most concise description. Also describe any additional information provided, such as visualisation of attention mechanisms, quantification of output uncertainty, or contextualisation data (e.g. display of the variables most influencing the recommendation), the level of interface customisation available, and any opportunity for users to give interactive feedback to the system (e.g. on output relevance, or by manipulating input items to see their influence on the output).` },
-    { id: "5a", theme: "Implementation &mdash; settings", kind: "ai", type: "AI-specific",
+      explanation: `Describe the human-computer interface (or reference development studies) to allow appraisal of the output-specific user experience, including comprehensiveness, clarity and design — how information is displayed shapes interaction and may have regulatory consequences. Give the type and number of outputs (e.g. the system segmented and gave a probability of malignancy for each detected nodule) and the display design; one or more images/screenshots/illustrations may be the most concise description. Also describe any additional information provided, such as visualisation of attention mechanisms, quantification of output uncertainty, or contextualisation data (e.g. display of the variables most influencing the recommendation), the level of interface customisation available, and any opportunity for users to give interactive feedback to the system (e.g. on output relevance, or by manipulating input items to see their influence on the output).` },
+    { id: "5a", theme: "Implementation — settings", kind: "ai", type: "AI-specific",
       statement: `Describe the settings in which the AI system was evaluated.`,
-      explanation: `Clearly describe the evaluation environment, which can include: the type and size of healthcare centre (e.g. a major trauma centre), the location within it (e.g. the emergency department), the relevant staff and technological support available (e.g. a multidisciplinary trauma team, bedside radiography), and the physical availability of the supporting hardware (e.g. a computer in the nursing office). In a live environment, user decision-making is also influenced by factors external to the system (e.g. verbal handover from other staff, or results of related diagnostic tests), so a clear description of the setting helps readers appreciate this context and judge whether conditions are representative of the intended use (items 2a&ndash;b).` },
-    { id: "5b", theme: "Implementation &mdash; workflow", kind: "ai", type: "AI-specific",
+      explanation: `Clearly describe the evaluation environment, which can include: the type and size of healthcare centre (e.g. a major trauma centre), the location within it (e.g. the emergency department), the relevant staff and technological support available (e.g. a multidisciplinary trauma team, bedside radiography), and the physical availability of the supporting hardware (e.g. a computer in the nursing office). In a live environment, user decision-making is also influenced by factors external to the system (e.g. verbal handover from other staff, or results of related diagnostic tests), so a clear description of the setting helps readers appreciate this context and judge whether conditions are representative of the intended use (items 2a–b).` },
+    { id: "5b", theme: "Implementation — workflow", kind: "ai", type: "AI-specific",
       statement: `Describe the clinical workflow/care pathway in which the AI system was evaluated, the timing of its use, and how the final supported decision was reached and by whom.`,
-      explanation: `Explain exactly how the system was used. Integration details may include: the patients' initial situation and reason for care; the clinical decisions made using the system (and their significance: to treat or diagnose, to drive clinical management, or to inform it); any actions users were instructed to take based on specific outputs; the chronology of other relevant tests or decisions along the pathway; and the diagnostic/therapeutic options available. Because cognitive biases (e.g. anchoring) can change how recommendations are weighted, report the timing of decision support: in concurrent reading mode users see recommendations at the same time as the other information their decision is based on, whereas in second reading mode users decide first, then see the recommendation and re-evaluate. Decision-making is often shared between professionals and patients; patient autonomy may mean choices conflict with medical recommendations, and liability concerns may steer toward legally safer options &mdash; both being factors external to the system. Describe the general decision-making process: which parties were involved, at what stage, and who was responsible for the final clinical decision. For example, a system might suggest therapeutic options or further testing for prostate cancer from labs and imaging; cases are then presented to a cancer multidisciplinary meeting that may or may not endorse them; and final decisions are made between clinicians and patients in clinic, which may include a choice to forego all treatment.` },
+      explanation: `Explain exactly how the system was used. Integration details may include: the patients' initial situation and reason for care; the clinical decisions made using the system (and their significance: to treat or diagnose, to drive clinical management, or to inform it); any actions users were instructed to take based on specific outputs; the chronology of other relevant tests or decisions along the pathway; and the diagnostic/therapeutic options available. Because cognitive biases (e.g. anchoring) can change how recommendations are weighted, report the timing of decision support: in concurrent reading mode users see recommendations at the same time as the other information their decision is based on, whereas in second reading mode users decide first, then see the recommendation and re-evaluate. Decision-making is often shared between professionals and patients; patient autonomy may mean choices conflict with medical recommendations, and liability concerns may steer toward legally safer options — both being factors external to the system. Describe the general decision-making process: which parties were involved, at what stage, and who was responsible for the final clinical decision. For example, a system might suggest therapeutic options or further testing for prostate cancer from labs and imaging; cases are then presented to a cancer multidisciplinary meeting that may or may not endorse them; and final decisions are made between clinicians and patients in clinic, which may include a choice to forego all treatment.` },
     { id: "IV", theme: "Outcomes", kind: "generic", type: "Generic",
       statement: `Specify the primary and secondary outcomes measured.`,
       explanation: `Conventionally, the primary outcome is the one the study is powered to detect; clearly labelling outcomes as primary or secondary helps readers place results in context. Early-stage AI studies can follow the same distinction if powered for the primary outcome (e.g. a process measure that may need a smaller sample). In non-hypothesis-testing studies, the primary outcomes are those the authors consider most important to the objectives. Clearly identifying outcomes also enables comparison between studies and observation of performance evolution across sequential trials.` },
@@ -257,18 +254,18 @@ const DATA = [
       explanation: `Most early-stage studies are small and underpowered for significance testing, but prospective observational cohorts can still inform future trials (e.g. the most appropriate outcomes, the expected effect size, optimal inclusion/exclusion criteria for patients and users, the evolution of learning curves, and the best decision-support timing). For systems giving recommendations, describe how agreement with users (item 12) was derived. Where the system was modified, clarify how modifications were accounted for in the analyses (e.g. repeated Bayesian analysis). If statistical significance is reported, specify whether both patient and user variability were accounted for (e.g. with mixed-effects models). While some exploratory analysis is useful early-stage, the main subgroups of interest (e.g. vulnerable patient populations, specific user experience levels, or medical-condition subtypes) should be identified a priori with a rationale, partly to address algorithmic-fairness concerns.` },
     { id: "8", theme: "Ethics", kind: "ai", type: "AI-specific",
       statement: `Describe whether specific methodologies were utilised to fulfil an ethics-related goal (such as algorithmic fairness) and their rationale.`,
-      explanation: `Ethics methodologies are practices to detect, quantify and mitigate bias in algorithm outputs, including (but not limited to) algorithmic fairness &mdash; computational adjustments that attempt to correct for bias. Because such methods can affect algorithm accuracy, report whether any were used when evaluating accuracy and outcomes in the live setting, since they provide important context when comparing the system against current practice. For example, an algorithm conducting cardiac-surgery risk assessment might be adjusted because the reference standard systematically increases estimated risk in black patients; applying algorithmic fairness would then have implications for comparisons against the status quo and for outcomes as a function of patient race. Describe the rationale relative to the intended goal, and report any consultation with or involvement of ethicists, domain experts, or advisory groups.` },
+      explanation: `Ethics methodologies are practices to detect, quantify and mitigate bias in algorithm outputs, including (but not limited to) algorithmic fairness — computational adjustments that attempt to correct for bias. Because such methods can affect algorithm accuracy, report whether any were used when evaluating accuracy and outcomes in the live setting, since they provide important context when comparing the system against current practice. For example, an algorithm conducting cardiac-surgery risk assessment might be adjusted because the reference standard systematically increases estimated risk in black patients; applying algorithmic fairness would then have implications for comparisons against the status quo and for outcomes as a function of patient race. Describe the rationale relative to the intended goal, and report any consultation with or involvement of ethicists, domain experts, or advisory groups.` },
     { id: "VI", theme: "Patient involvement", kind: "generic", type: "Generic",
       statement: `State how patients were involved in any aspect of: the development of the research question, the study design, and the conduct of the study.`,
       explanation: `Patient and public involvement (PPI) is an increasing priority for funders, journals and research users, and can improve research quality, recruitment, and the relationship between the scientific community and the public. Report the roles patients played and the extent of their involvement across the development of the research question, the study design and the conduct of the study. Early PPI can help select outcomes valued by patients, clarify how AI-generated information should be communicated to them, and organise data collection so as to minimise disruption to the care pathway, increasing acceptance of the intervention in later, larger trials.` },
   ]},
   { section: "Results", items: [
-    { id: "9a", theme: "Participants &mdash; patients", kind: "ai", type: "AI-specific",
+    { id: "9a", theme: "Participants — patients", kind: "ai", type: "AI-specific",
       statement: `Describe the baseline characteristics of the patients included in the study, and report on input-data missingness.`,
       explanation: `A description of the study population allows comparison with the algorithm's training-set population and with the population of any later large-scale evaluation. Dataset shift (changes in the distribution of underlying data between an algorithm's training and test sets, or between settings) is a key concern: small differences can cause significant variation in outputs, with implications for performance and patient safety. Choose baseline characteristics informed by the intended use, by factors known to influence the outcomes, and by protected characteristics; these might include age, sex, ethnicity, socioeconomic status, geographical location, prevalence of the targeted condition(s), classification/severity of the condition(s), risk factors, key predictors included in the algorithm, and other relevant conditions. Quantitatively report how much of the patient input data (item 4b) were missing during the study, ideally broken down by data item, as missingness can affect performance and has ethical implications (e.g. if more prevalent among protected groups or patients with lower health literacy).` },
-    { id: "9b", theme: "Participants &mdash; users", kind: "ai", type: "AI-specific",
+    { id: "9b", theme: "Participants — users", kind: "ai", type: "AI-specific",
       statement: `Describe the baseline characteristics of the users included in the study.`,
-      explanation: `User characteristics shape overall performance &mdash; for instance, the system's influence on decision-making may be associated with users' level of clinical experience &mdash; so describing them is needed to appraise selection bias. Consider reporting users' medical specialty, level of training, clinical role/seniority, familiarity with the decision at hand (e.g. yearly case load, if available), and prior exposure to the tool or similar technology. In studies with few users, carefully balance reporting baseline characteristics against maintaining users' anonymity.` },
+      explanation: `User characteristics shape overall performance — for instance, the system's influence on decision-making may be associated with users' level of clinical experience — so describing them is needed to appraise selection bias. Consider reporting users' medical specialty, level of training, clinical role/seniority, familiarity with the decision at hand (e.g. yearly case load, if available), and prior exposure to the tool or similar technology. In studies with few users, carefully balance reporting baseline characteristics against maintaining users' anonymity.` },
     { id: "10a", theme: "Implementation", kind: "ai", type: "AI-specific",
       statement: `Report on the user exposure to the AI system, the number of instances the AI system was used, and the users' adherence to the intended implementation.`,
       explanation: `In implementation-science terms, report the "reach" (the proportion of potential users who actually had exposure to the tool), the "dose" (how often the tool was used by those with access), and the "fidelity" (adherence to the instructed use). Failures to adhere to instructed use (e.g. the medical indication for use, the timing of use, or the system function used) should be reported here if not captured as use errors, because such deviations can affect results and inform future implementations. A brief description of cases where the system should have been used but was not (whether intentionally or not) can shed additional light on reasons for non-adherence.` },
@@ -286,7 +283,7 @@ const DATA = [
       explanation: `Provided they are permitted by regulation, ethics approval and the protocol, changes to the algorithm (e.g. recalibration) or supporting hardware (e.g. display-interface improvement) during the study can be acceptable, especially when no overall summative conclusion about effectiveness is attempted; rapid evaluation-design cycles are encouraged in user-centred design. Such changes and their impact on the main outcomes (item IV) should be carefully registered, versioned and reported. The IDEAL framework dedicates a stage (2a) to reporting early-stage changes made by the primary researchers and their impact on key metrics, and a further stage (2b) to small modifications made by early adopters (ideally in other centres); only once a common, multicentre, stable description of the intervention is agreed should evaluation progress to larger trials. While reporting every software patch may be unrealistic, report any potentially influential change. Changes occurring outside the study (e.g. an EHR-architecture update, or a decrease in blood-culture processing time) can also influence performance and should be reported if relevant. Continuous/self-learning, long-term maintenance or updates, and auditing are outside DECIDE-AI's scope.` },
     { id: "12", theme: "Human-computer agreement", kind: "ai", type: "AI-specific",
       statement: `Report on the user agreement with the AI system. Describe any instances of and reasons for user variation from the AI system's recommendations and, if applicable, users changing their mind based on the recommendations.`,
-      explanation: `This item applies only to systems whose outputs can be considered a recommendation (e.g. a benign/malignant classification) or where a decision threshold was attributed (e.g. if the likelihood of deterioration &ge; 0.9, then escalate care). Analysing how, why and when users react to recommendations is key to appraising the system's intrinsic value and the human role, and can improve trust, usability and acceptance. Three broad situations occur: (i) no change in the decision/action; (ii) an improvement (highlighting added value); or (iii) a worsening (exposing the patient to additional risk). However, limiting reporting to changes in decision/action obscures hidden additional risks that users mitigated and missed opportunities to improve care &mdash; the paper's E&E Table 1 sets out six illustrative scenarios crossing whether the user's opinion and the system's output were correct or incorrect with whether the user followed or diverged from the recommendation, yielding outcomes such as "status quo", "additional risk mitigated by user", "potential harm to patient", "added value", and "missed opportunity to improve care". Report the overall user agreement, and the instances of and reasons for disagreement and for users changing their mind; useful detail includes the initial user decision, the system recommendation, the final user decision, the clinical situation, patient/case characteristics, user characteristics, the reasons for variation/mind-change, and its consequences.` },
+      explanation: `This item applies only to systems whose outputs can be considered a recommendation (e.g. a benign/malignant classification) or where a decision threshold was attributed (e.g. if the likelihood of deterioration &ge; 0.9, then escalate care). Analysing how, why and when users react to recommendations is key to appraising the system's intrinsic value and the human role, and can improve trust, usability and acceptance. Three broad situations occur: (i) no change in the decision/action; (ii) an improvement (highlighting added value); or (iii) a worsening (exposing the patient to additional risk). However, limiting reporting to changes in decision/action obscures hidden additional risks that users mitigated and missed opportunities to improve care — the paper's E&E Table 1 sets out six illustrative scenarios crossing whether the user's opinion and the system's output were correct or incorrect with whether the user followed or diverged from the recommendation, yielding outcomes such as "status quo", "additional risk mitigated by user", "potential harm to patient", "added value", and "missed opportunity to improve care". Report the overall user agreement, and the instances of and reasons for disagreement and for users changing their mind; useful detail includes the initial user decision, the system recommendation, the final user decision, the clinical situation, patient/case characteristics, user characteristics, the reasons for variation/mind-change, and its consequences.` },
     { id: "13a", theme: "Safety and errors", kind: "ai", type: "AI-specific",
       statement: `List any significant errors/malfunctions related to: AI system recommendations, supporting software/hardware, or users. Include details of: (i) rate of occurrence, (ii) apparent causes, (iii) whether they could be corrected, and (iv) any significant potential impacts on patient care.`,
       explanation: `Report all significant error/malfunction types defined under item 6a, ideally in a table, specifying: (i) the number of occurrences observed; (ii) their apparent causes (a full audit of each is not within scope); (iii) whether they were detected before having a negative impact and any corrective action taken; and (iv) what impact they had, or would have had, on patient care. Early-stage, the number of significant error types is expected to be low enough for a detailed failure-case analysis; numerous errors strongly suggest the system needs further refinement before repeat live evaluation. Errors/malfunctions may be broken down by relevant patient subgroups, and transparent analysis helps other teams avoid similar problems and informs design improvement before larger trials.` },
@@ -298,7 +295,7 @@ const DATA = [
       explanation: `Usability is the extent to which a product can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use. The most appropriate approach is context-dependent and should be guided by recognised standards or frameworks using appropriate methodology (item 7), with reporting guided by best practice in the chosen methodology. Specify the characteristics of the human factors evaluation participants if they differ from (or are a subset of) the user population. Some usability aspects relate to safety and may overlap with item 13b, and comparison against preclinical usability evaluation can be described if relevant.` },
     { id: "14b", theme: "Human factors", kind: "ai", type: "AI-specific",
       statement: `Report on the user learning curves evaluation.`,
-      explanation: `Learning curves have been observed in computer-assisted decision-making and are well documented in other interventions (especially surgery). They are crucial for designing subsequent trials: collecting data before users have reached a stable performance level with a new device tends to bias findings, often against the intervention. Report the evaluation using the methodology and metrics described under item 7. Summary statistics help convey practical implications (e.g. "a median of 94 cases &mdash; interquartile range 85 to 108 &mdash; was needed for users to reach a stable daily agreement rate with the system"), and a graphical representation of the learning curves provides more granular information for readers applying the findings to other contexts. (If a learning-curve evaluation was not performed, fulfilment of this item is simply to state that, with a rationale.)` },
+      explanation: `Learning curves have been observed in computer-assisted decision-making and are well documented in other interventions (especially surgery). They are crucial for designing subsequent trials: collecting data before users have reached a stable performance level with a new device tends to bias findings, often against the intervention. Report the evaluation using the methodology and metrics described under item 7. Summary statistics help convey practical implications (e.g. "a median of 94 cases — interquartile range 85 to 108 — was needed for users to reach a stable daily agreement rate with the system"), and a graphical representation of the learning curves provides more granular information for readers applying the findings to other contexts. (If a learning-curve evaluation was not performed, fulfilment of this item is simply to state that, with a rationale.)` },
   ]},
   { section: "Discussion", items: [
     { id: "15", theme: "Support for intended use", kind: "ai", type: "AI-specific",
@@ -306,7 +303,7 @@ const DATA = [
       explanation: `Describe what can realistically be expected of the system given the results, and how those results support its intended use compared with current standard practice (ideally with some numeric benchmark performance metrics) and with similar studies. Claims should be proportionate to the strength of the evidence and should account for the study's limitations (item IX), avoiding premature conclusions about the benefits of adoption. Discuss the key clinical-performance findings in the context of the human factors results, address the potential challenges to adoption in larger comparative trials, and identify what questions remain or what product improvements are needed before the next evaluation stage. Justified modifications to the indications for use, or even the intended use, can be discussed and can inform future trials or the ongoing regulatory-approval process.` },
     { id: "16", theme: "Safety and errors", kind: "ai", type: "AI-specific",
       statement: `Discuss what the results indicate about the safety profile of the AI system. Discuss any observed errors/malfunctions and instances of harm, their implications for patient care, and whether/how they can be mitigated.`,
-      explanation: `Summarise the key safety-related findings, considering errors/malfunctions, identified risks, observed adverse events, unexpected changes in care pathways, and the results of safety-related human factors evaluation. Errors are expected during early-stage evaluation, and recognising and analysing them is vital before larger trials. Possible mitigation strategies for future evaluation &mdash; e.g. algorithm retraining, further product development, or a modified study design &mdash; can be discussed, with a rationale for the chosen strategy considering the available options and the likelihood of mitigating the risk. Where possible, act at a higher level (e.g. redesigning the system to be more user-friendly) before resorting to lower-level mitigations (e.g. additional training sessions as a workaround for a system that is not user-friendly). Comprehensive, transparent reporting of safety issues and an open discussion of how to mitigate or avoid them build a robust safety culture and increase user and public trust.` },
+      explanation: `Summarise the key safety-related findings, considering errors/malfunctions, identified risks, observed adverse events, unexpected changes in care pathways, and the results of safety-related human factors evaluation. Errors are expected during early-stage evaluation, and recognising and analysing them is vital before larger trials. Possible mitigation strategies for future evaluation — e.g. algorithm retraining, further product development, or a modified study design — can be discussed, with a rationale for the chosen strategy considering the available options and the likelihood of mitigating the risk. Where possible, act at a higher level (e.g. redesigning the system to be more user-friendly) before resorting to lower-level mitigations (e.g. additional training sessions as a workaround for a system that is not user-friendly). Comprehensive, transparent reporting of safety issues and an open discussion of how to mitigate or avoid them build a robust safety culture and increase user and public trust.` },
     { id: "IX", theme: "Strengths and limitations", kind: "generic", type: "Generic",
       statement: `Discuss the strengths and limitations of the study.`,
       explanation: `Discuss the key aspects differentiating the study from previously published work and highlight design aspects considered particularly robust. Transparently state known limitations in the design, methodology or results (e.g. limited follow-up opportunities, no statistical power calculation, or lower-than-expected adherence to the instructed use). Some AI- and decision-support-specific elements merit discussion: whether it was feasible to deliver the intervention as intended, whether enough users were exposed to the system, potential biases introduced by user characteristics or the selection process, and the impact of learning curves and human factors assessments. Discuss the potential impact of limitations on the results, and any mitigating measures taken.` },
@@ -418,7 +415,7 @@ function render() {
 
       let block = '';
       if (item.kind === 'ai') {
-        const typeBadge = '<span class="item-type extension">AI-specific</span>';
+        const typeBadge = '<span class="item-type ai">AI-specific item</span>';
         block = `
           <div class="ai-ext">
             <span class="ai-label">DECIDE-AI ${typeBadge}</span>
@@ -429,7 +426,7 @@ function render() {
             <div class="explanation-text">${item.explanation}</div>
           </div>`;
       } else {
-        const typeBadge = '<span class="item-type elaboration">Generic</span>';
+        const typeBadge = '<span class="item-type generic">Generic item</span>';
         block = `
           <div class="rec-block">
             <span class="rec-label">DECIDE-AI ${typeBadge}</span>
@@ -564,8 +561,10 @@ function stripTags(html) {
   return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
 }
 
-function itemSourceLabel(row) {
-  return row.kind === 'ai' ? 'DECIDE-AI (AI-specific)' : 'DECIDE-AI (Generic)';
+// DECIDE-AI is stand-alone, so every item is a DECIDE-AI item; the useful
+// distinction is the guideline's own AI-specific vs generic split.
+function itemTypeLabel(row) {
+  return row.kind === 'ai' ? 'AI-specific' : 'Generic';
 }
 
 function getExportRows() {
@@ -574,7 +573,7 @@ function getExportRows() {
     return {
       section: row.section,
       item: row.shortId,
-      source: itemSourceLabel(row),
+      itemType: itemTypeLabel(row),
       theme: stripTags(row.theme),
       statement: stripTags(row.statement),
       rating: formatRatingLabel(s.rating),
@@ -673,10 +672,13 @@ function exportCSV() {
   const exportRows = getExportRows();
   let csv = metadata.paper ? `"Document:","${escapeCSV(metadata.paper)}"\n` : '';
   csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
-  csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
-  csv += 'Section,Item,Source,Theme,Statement,Rating,Notes\n';
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n`;
+  csv += `"Generic items only:","${escapeCSV(formatScoreSummary('', countItems('generic')))}"\n`;
+  csv += `"AI-specific items only:","${escapeCSV(formatScoreSummary('', countItems('ai')))}"\n`;
+  csv += `"Combined:","${escapeCSV(formatScoreSummary('', countItems(null)))}"\n\n`;
+  csv += 'Section,Item,Item type,Theme,Statement,Rating,Notes\n';
   exportRows.forEach(row => {
-    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.source)}","${escapeCSV(row.theme)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
+    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.itemType)}","${escapeCSV(row.theme)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
   });
   const blob = new Blob([csv], {type:'text/csv'});
   const a = document.createElement('a');
@@ -702,29 +704,29 @@ function exportPDF() {
   doc.text(`Generated from ${metadata.url} on ${metadata.generated}`, 14, yPos);
   yPos += 6;
 
-  doc.text(formatScoreSummary('AI-specific items only', countItems('ai')), 14, yPos);
-  yPos += 5;
   doc.text(formatScoreSummary('Generic items only', countItems('generic')), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('AI-specific items only', countItems('ai')), 14, yPos);
   yPos += 5;
   doc.text(formatScoreSummary('Combined', countItems(null)), 14, yPos);
   yPos += 6;
 
   const rows = getExportRows().map(row => [
-    row.section, row.item, row.source, row.theme, row.statement, row.rating, row.notes
+    row.section, row.item, row.itemType, row.theme, row.statement, row.rating, row.notes
   ]);
 
   doc.autoTable({
     startY: yPos,
-    head: [['Section', 'Item', 'Source', 'Theme', 'Statement', 'Rating', 'Notes']],
+    head: [['Section', 'Item', 'Item type', 'Theme', 'Statement', 'Rating', 'Notes']],
     body: rows,
     styles: { fontSize: 7, cellPadding: 1.6, overflow: 'linebreak', valign: 'top' },
     headStyles: { fillColor: [124,58,237] },
     columnStyles: {
       0: { cellWidth: 28 },
       1: { cellWidth: 14 },
-      2: { cellWidth: 32 },
+      2: { cellWidth: 24 },
       3: { cellWidth: 30 },
-      4: { cellWidth: 110 },
+      4: { cellWidth: 118 },
       5: { cellWidth: 22 },
       6: { cellWidth: 46 }
     },
@@ -739,8 +741,9 @@ function exportPDF() {
   });
 
   doc.setFontSize(6.5);
-  const y = doc.internal.pageSize.height - 8;
-  doc.text('Checklist items derived from the DECIDE-AI checklist; explanatory summaries independently rewritten/condensed from the DECIDE-AI E&E. Vasey B et al., BMJ 2022;377:e070904 (also Nat Med 2022;28:924-933). CC BY-NC 4.0 - non-commercial use.', 14, y);
+  const footer = 'Checklist items derived from DECIDE-AI. Explanatory summaries condensed and adapted from the DECIDE-AI Explanation & Elaboration. DECIDE-AI: Vasey B et al., BMJ 2022;377:e070904, doi:10.1136/bmj-2022-070904 (also Nat Med 2022;28:924-933), CC BY-NC 4.0 - non-commercial use. Not endorsed by the original authors.';
+  const footerLines = doc.splitTextToSize(footer, doc.internal.pageSize.width - 28);
+  doc.text(footerLines, 14, doc.internal.pageSize.height - 8 - (footerLines.length - 1) * 3);
   doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
 }
 
@@ -748,5 +751,3 @@ loadState();
 document.getElementById('paper-title').value = paperTitle;
 render();
 </script>
-</body>
-</html>
