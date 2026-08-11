@@ -2,14 +2,6 @@
 layout: default
 title: CONSORT-AI Checklist
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CONSORT-AI Checklist</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 <style>
   :root {
     --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
@@ -94,6 +86,12 @@ title: CONSORT-AI Checklist
   .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
   .btn-primary:hover { background: #2563eb; }
 
+  /* Inline component samples in the "How the item tags work" note */
+  .inline-src { display: inline-block; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 0.25rem; vertical-align: middle; }
+  .inline-src.base { color: var(--blue); background: var(--blue-bg); }
+  .inline-src.ext { color: var(--purple); background: var(--purple-bg); }
+  .attribution .item-type, .attribution .applic-tag { margin-left: 0; }
+
   .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
   .attribution a { color: var(--blue); }
 
@@ -101,10 +99,6 @@ title: CONSORT-AI Checklist
   .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
   .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
   .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-
-  .legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
-  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
 
   /* Collapsible sections */
   .section-header { cursor: pointer; user-select: none; }
@@ -120,8 +114,6 @@ title: CONSORT-AI Checklist
     .dashboard { flex-direction: column; }
   }
 </style>
-</head>
-<body>
 <div class="container">
   <h1>CONSORT-AI Checklist</h1>
   <p class="subtitle">Interactive reporting checklist for clinical trials involving artificial intelligence and machine learning.</p>
@@ -133,7 +125,7 @@ title: CONSORT-AI Checklist
 
   <div class="toolbar" aria-label="Checklist toolbar">
     <div class="toolbar-group">
-      <span class="toolbar-label">Generate Reports</span>
+      <span class="toolbar-label">Generate reports</span>
       <button class="btn" onclick="exportPDF()">Download PDF</button>
       <button class="btn" onclick="exportCSV()">Download CSV</button>
     </div>
@@ -155,22 +147,22 @@ title: CONSORT-AI Checklist
 
 
   <div class="dashboard" id="dashboard">
-    <div class="score-sheet-label">CONSORT 2010 core items only</div>
-    <div class="stat" id="stat-consort-total"><div class="num" id="score-consort-total">0%</div><div class="label">Items rated %</div></div>
+    <div class="score-sheet-label">CONSORT 2010 items only</div>
+    <div class="stat" id="stat-consort-total"><div class="num" id="score-consort-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-consort-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-consort-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-consort-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-consort-unrated">0</div><div class="label">Unrated</div></div>
 
-    <div class="score-sheet-label">CONSORT-AI extension only</div>
-    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items rated %</div></div>
+    <div class="score-sheet-label">CONSORT-AI items only</div>
+    <div class="stat" id="stat-ai-total"><div class="num" id="score-ai-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-ai-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-ai-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-ai-na">0</div><div class="label">N/A</div></div>
     <div class="stat"><div class="num" id="score-ai-unrated">0</div><div class="label">Unrated</div></div>
 
     <div class="score-sheet-label">Combined</div>
-    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items rated %</div></div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
@@ -180,19 +172,24 @@ title: CONSORT-AI Checklist
   <div class="attribution">
     <strong>About This Tool: The CONSORT-AI Checklist</strong><br><br>
     <strong>What is it for?</strong><br>
-    This tool is a web-based checklist implementing the CONSORT-AI (Consolidated Standards of Reporting Trials–Artificial Intelligence) extension.
-    Its primary purpose is to serve as a reporting completeness checklist for clinical trials evaluating interventions that involve artificial intelligence or machine learning. Developed by an international multi-stakeholder group, CONSORT-AI introduces 14 AI-specific items (11 extensions and 3 elaborations) that are used alongside the standard CONSORT 2010 core items. By using this checklist, reviewers can systematically evaluate whether a trial report transparently describes critical AI-specific elements.
+    This tool is a web-based checklist implementing the CONSORT-AI (Consolidated Standards of Reporting Trials – Artificial Intelligence) extension.
+    Its primary purpose is to serve as a reporting completeness checklist for clinical trials evaluating interventions that involve artificial intelligence or machine learning. Developed by an international multi-stakeholder group, CONSORT-AI introduces 14 AI-specific items (11 extensions and 3 elaborations) that are used alongside the standard CONSORT 2010 core items. By using this checklist, authors, editors and reviewers can systematically evaluate whether a trial report transparently describes critical AI-specific elements.
+    <br><br>
+    <strong>How the item tags work</strong><br>
+    Items shown under a <span class="inline-src base">CONSORT 2010</span> label are core trial-reporting items that apply to any randomised trial. Items shown under a <span class="inline-src ext">CONSORT-AI</span> label carry one of two tags: an <span class="item-type extension">Extension item</span> is a wholly new reporting requirement that applies only to AI interventions, while an <span class="item-type elaboration">Elaboration item</span> is an existing CONSORT 2010 requirement that needs additional detail when the intervention involves AI. Both designations are taken from the CONSORT-AI publication and are not editorial additions.
     <br><br>
     This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
     <br><br>
     <strong>Sources and attribution</strong><br>
-    Checklist items are derived from CONSORT 2010 and CONSORT-AI. Explanatory summaries have been independently rewritten for educational and review purposes. <br><br>
-    1. Liu, X., Cruz Rivera, S., Moher, D. et al. Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: the CONSORT-AI extension. <em>Nat Med</em> 26, 1364–1374 (2020). <a href="https://doi.org/10.1038/s41591-020-1034-x" target="_blank">doi:10.1038/s41591-020-1034-x</a>. Published under CC BY 4.0.<br>
+    Checklist item wording is reproduced from CONSORT 2010 and CONSORT-AI. Explanations for the CONSORT-AI items are reproduced from the CONSORT-AI publication; explanations for the CONSORT 2010 items were written for this tool. Licensing terms for each source are noted below. <br><br>
+    1. Liu, X., Cruz Rivera, S., Moher, D. et al. Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: the CONSORT-AI extension. <em>Nat Med</em> 26, 1364–1374 (2020). <a href="https://doi.org/10.1038/s41591-020-1034-x" target="_blank">doi:10.1038/s41591-020-1034-x</a>. <em>Published under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> — reproduction permitted with attribution. Checklist item wording is reproduced unaltered; explanations for the AI-specific items are reproduced from the same source; explanations for the base-guideline items were written for this tool.</em><br>
     2. Moher, D., Hopewell, S., Schulz, K.F. et al. CONSORT 2010 Explanation and Elaboration: updated guidelines for reporting parallel group randomised trials. <em>BMJ</em> 340, c869 (2010). <a href="https://doi.org/10.1136/bmj.c869" target="_blank">doi:10.1136/bmj.c869</a>. Correction: <a href="https://doi.org/10.1136/bmj.d6131" target="_blank">BMJ 343, d6131 (2011)</a>.<br>
     This checklist is not endorsed by the original authors.
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha512-/cZZTKETbsuutvNXdPji/z8N+9e+LHq9D60JhcBCigq9I5a2VDEcLzml8PdVlVqzmWlVbhZCuTx+9CTi2xb30A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 const DATA = [
   { section: "Title and Abstract", items: [
@@ -220,7 +217,7 @@ const DATA = [
       ai: "Explain the intended use of the AI intervention in the context of the clinical pathway, including its purpose and its intended users (for example, healthcare professionals, patients, public).",
       explanation: "In order to clarify how the AI intervention is intended to fit into a clinical pathway, a detailed description of its role should be included in the background of the trial report. AI interventions may be designed to interact with different users, including healthcare professionals, patients and the public, and their roles can be wide-ranging (for example, the same AI intervention could theoretically be replacing, augmenting or adjudicating components of clinical decision-making). Clarifying the intended use of the AI intervention and its intended user helps readers understand the purpose for which the AI intervention was evaluated in the trial." },
     { id: "2b", itemKind: "consort", consort: "Specific objectives or hypotheses",
-      consortExpl: "The manuscript should state the trial's specific objectives or hypotheses. Objectives are the questions the trial was designed to answer; hypotheses are usually more specific, pre-specified questions that can be tested statistically. These should make clear what question the trial was designed to answer, usually in relation to the primary outcome.",
+      consortExpl: "The manuscript should state the trial's specific objectives or hypotheses. Objectives are the questions the trial was designed to answer; hypotheses are usually more specific, prespecified questions that can be tested statistically. These should make clear what question the trial was designed to answer, usually in relation to the primary outcome.",
       ai: null },
   ]},
   { section: "Methods — Trial Design", items: [
@@ -241,7 +238,7 @@ const DATA = [
       consortExpl: null,
       aiType: "Extension",
       ai: "State the inclusion and exclusion criteria at the level of the input data.",
-      explanation: "'Input data' refers to the data required by the AI intervention to serve its purpose (for example, for a breast-cancer diagnostic system, the input data could be the unprocessed or vendor-specific post-processing mammography scan; for an early-warning system, the input data could be physiological measurements or laboratory results from the electronic health record). The trial report should pre-specify if there were minimum requirements for the input data (such as image resolution, quality metrics or data format) that determined pre-randomization eligibility. It should specify when, how and by whom this was assessed. For example, if a participant met the eligibility criteria for lying flat for a CT scan as per item 4a (i), but the scan quality was compromised to such a level that it was deemed unfit for use by the AI system, this should be reported as an exclusion criterion at the input-data level. Note that where input data are acquired after randomization, any exclusion is considered to be from the analysis, not from enrollment (CONSORT item 13b)." },
+      explanation: "'Input data' refers to the data required by the AI intervention to serve its purpose (for example, for a breast-cancer diagnostic system, the input data could be the unprocessed or vendor-specific post-processing mammography scan; for an early-warning system, the input data could be physiological measurements or laboratory results from the electronic health record). The trial report should prespecify if there were minimum requirements for the input data (such as image resolution, quality metrics or data format) that determined pre-randomisation eligibility. It should specify when, how and by whom this was assessed. For example, if a participant met the eligibility criteria for lying flat for a CT scan as per item 4a (i), but the scan quality was compromised to such a level that it was deemed unfit for use by the AI system, this should be reported as an exclusion criterion at the input-data level. Note that where input data are acquired after randomisation, any exclusion is considered to be from the analysis, not from enrollment (CONSORT item 13b)." },
     { id: "4b", consort: "Settings and locations where the data were collected",
       consortExpl: "The report should specify where and in what settings the data were collected. Include the number and type of settings, such as primary care, secondary care, tertiary care, community, hospital clinic or inpatient unit, and the geographical location, including country, city if relevant, and immediate environment. It should be clear whether the trial was single-centre or multicentre, and the care providers involved should be described where relevant. Report contextual factors that could influence applicability or results, such as organisation, experience, resources, baseline risk, social, economic or cultural setting, climate, transport problems, or delays in administering interventions.",
       aiType: "Extension",
@@ -285,7 +282,7 @@ const DATA = [
       consortExpl: "All primary and secondary outcomes should be clearly defined, including what was measured, how it was measured, who assessed it, how many assessors there were where relevant, and when it was assessed. The primary outcome and primary time point should be explicitly identified. Multiple primary outcomes should generally be avoided unless justified, because they complicate interpretation. Outcomes should be defined sufficiently for others to use the same outcomes. Validated or standardised measurement tools should be named where used, and the provenance and properties of scales should be reported where relevant.",
       ai: null },
     { id: "6b", consort: "Any changes to trial outcomes after the trial commenced, with reasons",
-      consortExpl: "Any changes to trial outcomes after the trial began should be reported and explained. This includes changes to the outcome itself, the measurement method, the timing of assessment, or whether an outcome was treated as primary or secondary. Changes may occur because of external evidence, lower than expected recruitment or event rates, or other circumstances. Changes based on unblinded accumulating data are especially problematic unless they were part of a pre-specified adaptive design and should be clearly identified and justified.",
+      consortExpl: "Any changes to trial outcomes after the trial began should be reported and explained. This includes changes to the outcome itself, the measurement method, the timing of assessment, or whether an outcome was treated as primary or secondary. Changes may occur because of external evidence, lower than expected recruitment or event rates, or other circumstances. Changes based on unblinded accumulating data are especially problematic unless they were part of a prespecified adaptive design and should be clearly identified and justified.",
       ai: null },
   ]},
   { section: "Methods — Sample Size", items: [
@@ -323,7 +320,7 @@ const DATA = [
       consortExpl: "The statistical methods used for each primary and secondary outcome should be described with enough detail to assess and reproduce the analysis. Include the model or test used, treatment effect measure, confidence interval approach, planned covariates, and handling of repeated or clustered observations where relevant. Actual P values are preferable to imprecise threshold reports such as P<0.05. Analyses should not treat multiple observations from the same participant, such as measurements from different body parts, as independent unless an appropriate statistical method accounts for this.",
       ai: null },
     { id: "12b", consort: "Methods for additional analyses, such as subgroup analyses and adjusted analyses",
-      consortExpl: "Describe any additional analyses, such as subgroup, adjusted, sensitivity or exploratory analyses, and specify whether they were pre-specified. For subgroup analyses, state the subgroup variables and whether interaction tests were used; a subgroup effect should not be inferred from one significant and one non-significant P value in separate subgroup analyses. For adjusted analyses, state the covariates, rationale, how continuous variables were handled, and whether the analysis was planned or suggested by the data. Adjustment should not be chosen merely because baseline differences are statistically significant.",
+      consortExpl: "Describe any additional analyses, such as subgroup, adjusted, sensitivity or exploratory analyses, and specify whether they were prespecified. For subgroup analyses, state the subgroup variables and whether interaction tests were used; a subgroup effect should not be inferred from one significant and one non-significant P value in separate subgroup analyses. For adjusted analyses, state the covariates, rationale, how continuous variables were handled, and whether the analysis was planned or suggested by the data. Adjustment should not be chosen merely because baseline differences are statistically significant.",
       ai: null },
   ]},
   { section: "Results — Participant Flow", items: [
@@ -342,7 +339,7 @@ const DATA = [
       consortExpl: "The report should state why the trial ended or was stopped. Make clear whether it ended as planned, reached a sample size or event target, stopped early for benefit, harm or futility, or ended because of external factors such as recruitment problems, funding, supply issues or new evidence. If stopped early, state whether stopping was independent of results or data-driven, who made the decision, whether a data monitoring committee was involved, the role of the funder, and whether interim results were available to the funder.",
       ai: null },
   ]},
-  { section: "Results — Baseline Data & Numbers Analyzed", items: [
+  { section: "Results — Baseline Data & Numbers Analysed", items: [
     { id: "15", consort: "A table showing baseline demographic and clinical characteristics for each group",
       consortExpl: "Present baseline demographic and clinical characteristics for each group, usually in a table. Include variables important to prognosis or interpretation. For continuous variables, report average values with variability, such as mean and standard deviation, or median and centile range for asymmetrical distributions. Standard errors and confidence intervals are not appropriate for describing baseline variability. Ordered categories, such as disease stage, should usually be reported as numbers and percentages for each category rather than treated as continuous variables. Avoid treating baseline significance tests as evidence of randomisation quality; any baseline differences after proper randomisation are due to chance.",
       ai: null },
@@ -360,7 +357,7 @@ const DATA = [
   ]},
   { section: "Results — Ancillary Analyses & Harms", items: [
     { id: "18", consort: "Results of any other analyses performed, including subgroup analyses and adjusted analyses, distinguishing pre-specified from exploratory",
-      consortExpl: "Report the results of any additional analyses, including subgroup and adjusted analyses, and distinguish planned analyses from exploratory ones. For subgroup analyses, state which subgroups were examined, why they were chosen, whether they were pre-specified, how many were pre-specified, and whether formal interaction tests were used. Where possible, report the estimated difference in intervention effect between subgroups with a confidence interval, not just P values. For adjusted analyses, state whether the adjustment and variables were planned, and report both unadjusted and adjusted analyses where done.",
+      consortExpl: "Report the results of any additional analyses, including subgroup and adjusted analyses, and distinguish planned analyses from exploratory ones. For subgroup analyses, state which subgroups were examined, why they were chosen, whether they were prespecified, how many were prespecified, and whether formal interaction tests were used. Where possible, report the estimated difference in intervention effect between subgroups with a confidence interval, not just P values. For adjusted analyses, state whether the adjustment and variables were planned, and report both unadjusted and adjusted analyses where done.",
       ai: null },
     { id: "19", consort: "All important harms or unintended effects in each group",
       consortExpl: "For specific guidance, see <a href=\"https://doi.org/10.7326/0003-4819-141-10-200411160-00009\" target=\"_blank\" rel=\"noopener\">CONSORT for harms</a>. Define adverse events where relevant, explain how harms were collected and attributed, and use standardised criteria where appropriate. Report the absolute risk of each adverse event by group, using suitable metrics for recurrent events where needed, and include severe adverse events, withdrawals or discontinuations due to harms, and whether events were judged related to the intervention. The discussion should balance benefits and harms.",
@@ -528,8 +525,8 @@ function render() {
       let aiBlock = '';
       if (item.ai) {
         const typeBadge = item.aiType === 'Extension'
-          ? '<span class="item-type extension">Extension</span>'
-          : '<span class="item-type elaboration">Elaboration</span>';
+          ? '<span class="item-type extension">Extension item</span>'
+          : '<span class="item-type elaboration">Elaboration item</span>';
         aiBlock = `
           <div class="ai-ext">
             <span class="ai-label">CONSORT-AI ${typeBadge}</span>
@@ -688,9 +685,11 @@ function getExportMetadata() {
 function getExportRows() {
   return getAllRows(null).map(row => {
     const s = state[row.stateId] || {};
+    // Two genuinely distinct guidelines are interleaved here, so the source is
+    // informative; AI rows also carry the publication's extension/elaboration tag.
     const source = row.itemKind === 'consort'
       ? 'CONSORT 2010'
-      : 'CONSORT-AI';
+      : `CONSORT-AI (${(row.aiType || '').toLowerCase() || 'item'})`;
     const statement = row.itemKind === 'consort' ? row.consort : row.ai;
     return {
       section: row.section,
@@ -808,8 +807,8 @@ function exportCSV() {
   let csv = metadata.paper ? `"Document:","${escapeCSV(metadata.paper)}"\n` : '';
   csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
   csv += `"URL:","${escapeCSV(metadata.url)}"\n`;
-  csv += `"CONSORT 2010 core items only:","${escapeCSV(formatScoreSummary('', consort))}"\n`;
-  csv += `"CONSORT-AI extension only:","${escapeCSV(formatScoreSummary('', ai))}"\n`;
+  csv += `"CONSORT 2010 items only:","${escapeCSV(formatScoreSummary('', consort))}"\n`;
+  csv += `"CONSORT-AI items only:","${escapeCSV(formatScoreSummary('', ai))}"\n`;
   csv += `"Combined:","${escapeCSV(formatScoreSummary('', combined))}"\n\n`;
   csv += 'Section,Item,Source,Statement,Rating,Notes\n';
   exportRows.forEach(row => {
@@ -842,9 +841,9 @@ function exportPDF() {
   const consort = countItems('consort');
   const ai = countItems('ai');
   const combined = countItems(null);
-  doc.text(formatScoreSummary('CONSORT 2010 core items only', consort), 14, yPos);
+  doc.text(formatScoreSummary('CONSORT 2010 items only', consort), 14, yPos);
   yPos += 5;
-  doc.text(formatScoreSummary('CONSORT-AI extension only', ai), 14, yPos);
+  doc.text(formatScoreSummary('CONSORT-AI items only', ai), 14, yPos);
   yPos += 5;
   doc.text(formatScoreSummary('Combined', combined), 14, yPos);
   yPos += 6;
@@ -868,8 +867,8 @@ function exportPDF() {
     columnStyles: {
       0: { cellWidth: 36 },
       1: { cellWidth: 24 },
-      2: { cellWidth: 28 },
-      3: { cellWidth: 124 },
+      2: { cellWidth: 32 },
+      3: { cellWidth: 120 },
       4: { cellWidth: 24 },
       5: { cellWidth: 56 }
     },
@@ -884,8 +883,9 @@ function exportPDF() {
   });
 
   doc.setFontSize(6.5);
-  const y = doc.internal.pageSize.height - 8;
-  doc.text('Checklist items derived from CONSORT 2010 and CONSORT-AI. Explanatory summaries independently rewritten. CONSORT-AI: Liu X et al., Nat Med 2020;26:1364-1374, CC BY 4.0. CONSORT 2010 E&E: Moher D et al., BMJ 2010;340:c869.', 14, y);
+  const footer = 'Checklist items derived from CONSORT 2010 and CONSORT-AI. Explanations for AI-specific items reproduced from CONSORT-AI; all others written for this tool. CONSORT-AI: Liu X et al., Nat Med 2020;26:1364-1374, doi:10.1038/s41591-020-1034-x, CC BY 4.0. CONSORT 2010 E&E: Moher D et al., BMJ 2010;340:c869, doi:10.1136/bmj.c869. Not endorsed by the original authors.';
+  const footerLines = doc.splitTextToSize(footer, doc.internal.pageSize.width - 28);
+  doc.text(footerLines, 14, doc.internal.pageSize.height - 8 - (footerLines.length - 1) * 3);
   doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
 }
 
@@ -893,5 +893,3 @@ loadState();
 document.getElementById('paper-title').value = paperTitle;
 render();
 </script>
-</body>
-</html>

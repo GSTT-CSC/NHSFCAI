@@ -2,14 +2,6 @@
 layout: default
 title: STARD-AI Checklist
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STARD-AI Checklist</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 <style>
   :root {
     --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
@@ -90,6 +82,12 @@ title: STARD-AI Checklist
   .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
   .btn-primary:hover { background: #2563eb; }
 
+  /* Inline component samples in the "How the item tags work" note */
+  .inline-src { display: inline-block; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 0.25rem; vertical-align: middle; }
+  .inline-src.base { color: var(--blue); background: var(--blue-bg); }
+  .inline-src.ext { color: var(--purple); background: var(--purple-bg); }
+  .attribution .item-type, .attribution .applic-tag { margin-left: 0; }
+
   .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
   .attribution a { color: var(--blue); }
 
@@ -97,10 +95,6 @@ title: STARD-AI Checklist
   .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
   .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
   .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-
-  .legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 0.35rem; }
-  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
 
   /* Collapsible sections */
   .section-header { cursor: pointer; user-select: none; }
@@ -116,8 +110,6 @@ title: STARD-AI Checklist
     .dashboard { flex-direction: column; }
   }
 </style>
-</head>
-<body>
 <div class="container">
   <h1>STARD-AI Checklist</h1>
   <p class="subtitle">Interactive reporting checklist for diagnostic accuracy studies that evaluate artificial intelligence and machine learning index tests.</p>
@@ -129,7 +121,7 @@ title: STARD-AI Checklist
 
   <div class="toolbar" aria-label="Checklist toolbar">
     <div class="toolbar-group">
-      <span class="toolbar-label">Generate Reports</span>
+      <span class="toolbar-label">Generate reports</span>
       <button class="btn" onclick="exportPDF()">Download PDF</button>
       <button class="btn" onclick="exportCSV()">Download CSV</button>
     </div>
@@ -151,8 +143,8 @@ title: STARD-AI Checklist
 
 
   <div class="dashboard" id="dashboard" aria-label="Overall STARD-AI reporting dashboard">
-    <div class="score-sheet-label">Overall STARD-AI Reporting</div>
-    <div class="stat" id="stat-overall-total"><div class="num" id="score-overall-total">0%</div><div class="label">Items rated</div></div>
+    <div class="score-sheet-label">All STARD-AI items</div>
+    <div class="stat" id="stat-overall-total"><div class="num" id="score-overall-total">0%</div><div class="label">Items Rated</div></div>
     <div class="stat green"><div class="num" id="score-overall-pass">0</div><div class="label">Reported</div></div>
     <div class="stat red"><div class="num" id="score-overall-fail">0</div><div class="label">Not Reported</div></div>
     <div class="stat amber"><div class="num" id="score-overall-na">0</div><div class="label">N/A</div></div>
@@ -162,24 +154,29 @@ title: STARD-AI Checklist
   <div class="attribution">
     <strong>About This Tool: The STARD-AI Checklist</strong><br><br>
     <strong>What is it for?</strong><br>
-    This tool is a web-based checklist implementing the STARD-AI (Standards for Reporting Diagnostic Accuracy &ndash; Artificial Intelligence) reporting guideline.
+    This tool is a web-based checklist implementing the STARD-AI (Standards for Reporting Diagnostic Accuracy – Artificial Intelligence) reporting guideline.
     Its primary purpose is to serve as a reporting completeness checklist for diagnostic test accuracy studies that evaluate an AI- or machine-learning-based index test. STARD-AI is a single integrated 40-item reporting guideline for AI diagnostic accuracy studies. It incorporates inherited STARD 2015 items, modifies selected STARD 2015 items, and introduces additional AI-specific items. By using this checklist, authors, editors and reviewers can systematically evaluate whether a study transparently reports the elements needed to appraise the bias, applicability and generalisability of an AI diagnostic test.
+    <br><br>
+    <strong>How the item tags work</strong><br>
+    Items shown under a <span class="inline-src base">STARD 2015</span> label are inherited from STARD 2015 unchanged. Items shown under a <span class="inline-src ext">STARD-AI</span> label carry one of two tags: a <span class="item-type new">New item</span> is a requirement introduced by STARD-AI for AI diagnostic accuracy studies, while a <span class="item-type modified">Modified item</span> is a STARD 2015 item that has been reworded for the AI setting. Both designations follow the new (*) and modified (&dagger;) markings in the STARD-AI publication and are not editorial additions.
     <br><br>
     This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
     <br><br>
     <strong>Sources and attribution</strong><br>
-    Checklist items are derived from the STARD-AI reporting guideline. Explanatory summaries have been independently rewritten for educational and review purposes, drawing on the STARD-AI guideline and the STARD 2015 Explanation &amp; Elaboration document for inherited diagnostic accuracy concepts. <br><br>
-    1. Sounderajah, V., Guni, A., Liu, X. et al. The STARD-AI reporting guideline for diagnostic accuracy studies using artificial intelligence. <em>Nat Med</em> 31, 3283–3289 (2025). <a href="https://doi.org/10.1038/s41591-025-03953-8" target="_blank">doi:10.1038/s41591-025-03953-8</a>.<br>
-    2. Cohen, J.F., Korevaar, D.A., Altman, D.G. et al. STARD 2015 guidelines for reporting diagnostic accuracy studies: explanation and elaboration. <em>BMJ Open</em> 6, e012799 (2016). <a href="https://doi.org/10.1136/bmjopen-2016-012799" target="_blank">doi:10.1136/bmjopen-2016-012799</a>.<br>
+    Checklist item wording is reproduced from the CC BY accepted manuscript of the STARD-AI reporting guideline, whose spelling and hyphenation it follows. Explanatory summaries have been independently rewritten for educational and review purposes, drawing on the STARD-AI guideline and the STARD 2015 Explanation &amp; Elaboration document for inherited diagnostic accuracy concepts. Licensing terms for each source are noted below. <br><br>
+    1. Sounderajah, V., Guni, A., Liu, X. et al. The STARD-AI reporting guideline for diagnostic accuracy studies using artificial intelligence. <em>Nat Med</em> 31, 3283–3289 (2025). <a href="https://doi.org/10.1038/s41591-025-03953-8" target="_blank">doi:10.1038/s41591-025-03953-8</a>. Item wording here is taken from the peer-reviewed accepted manuscript, which contains the full checklist table and is deposited under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> at the <a href="https://pure-oai.bham.ac.uk/ws/files/282528526/STARD_AI_accepted.pdf" target="_blank">University of Birmingham research portal</a> — reproduction permitted with attribution. Author Correction: <em>Nat Med</em> (2026), <a href="https://doi.org/10.1038/s41591-026-04570-9" target="_blank">doi:10.1038/s41591-026-04570-9</a> (authorship only; no change to the checklist).<br>
+    2. Cohen, J.F., Korevaar, D.A., Altman, D.G. et al. STARD 2015 guidelines for reporting diagnostic accuracy studies: explanation and elaboration. <em>BMJ Open</em> 6, e012799 (2016). <a href="https://doi.org/10.1136/bmjopen-2016-012799" target="_blank">doi:10.1136/bmjopen-2016-012799</a>. <em>Published under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>. Consulted as background for the inherited STARD 2015 concepts; no text is reproduced from it.</em><br>
     This checklist is not endorsed by the original authors.
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha512-/cZZTKETbsuutvNXdPji/z8N+9e+LHq9D60JhcBCigq9I5a2VDEcLzml8PdVlVqzmWlVbhZCuTx+9CTi2xb30A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 const DATA = [
   { section: "Title or Abstract", items: [
     { id: "1", type: "modified",
-      stard: "Identification as a study reporting AI-centered diagnostic accuracy and reporting at least one measure of accuracy within the title or abstract.",
+      stard: "Identification as a study reporting AI-centred diagnostic accuracy and reporting at least one measure of accuracy within title or abstract.",
       explanation: "STARD-AI modifies STARD item 1 so that the title or abstract makes clear the study evaluates the diagnostic accuracy of an AI- or machine-learning-based index test, and reports at least one measure of accuracy (such as sensitivity, specificity or AUC). Explicitly flagging the AI component and an accuracy estimate aids correct indexing and retrieval, and lets readers immediately recognise the study type." },
   ]},
   { section: "Abstract", items: [
@@ -193,7 +190,7 @@ const DATA = [
       explanation: "STARD-AI modifies STARD item 3 to require a clear statement of the intended use of the AI index test, whether it is novel or established, and how it fits into an existing or new workflow. Intended use may include diagnosis, screening, staging, monitoring, surveillance, prognosis or treatment selection. Clinical role should be stated where relevant, for example triage, add-on or replacement testing." },
     { id: "4", type: "standard",
       stard: "Study objectives and hypotheses.",
-      explanation: "State the specific objectives and any pre-specified hypotheses the study was designed to address, so the analysis can be interpreted against what was planned." },
+      explanation: "State the specific objectives and any prespecified hypotheses the study was designed to address, so the analysis can be interpreted against what was planned." },
   ]},
   { section: "Methods — Study Design", items: [
     { id: "5", type: "standard",
@@ -207,30 +204,30 @@ const DATA = [
   ]},
   { section: "Methods — Participants", items: [
     { id: "7", type: "modified",
-      stard: "Eligibility criteria: listing separate inclusion and exclusion criteria in the order that they are applied, at both the participant level and the data level.",
+      stard: "Eligibility criteria: listing separate inclusion and exclusion criteria in the order that they are applied at both participant level and data level.",
       explanation: "STARD-AI modifies STARD item 7 to require eligibility criteria at both the participant level and the data (input) level, listed in the order applied. AI index tests depend on input data meeting minimum requirements (for example image resolution, quality metrics or format), so data-level inclusion and exclusion must be reported distinctly from participant-level criteria." },
     { id: "8", type: "standard",
-      stard: "On what basis potentially eligible participants were identified (such as symptoms, results from previous tests, or inclusion in a registry).",
+      stard: "On what basis potentially eligible participants were identified (such as symptoms, results from previous tests, inclusion in registry).",
       explanation: "Describe how potentially eligible participants were identified — for example by symptoms, results of previous tests, or inclusion in a registry. This shapes the spectrum of disease in the sample and therefore the applicability of accuracy estimates." },
     { id: "9", type: "standard",
-      stard: "Where and when potentially eligible participants were identified (setting, location and dates).",
+      stard: "Where and when potentially eligible participants were identified (setting, location, and dates).",
       explanation: "Specify the setting, geographical location and dates over which potentially eligible participants were identified, placing the study in its clinical and temporal context." },
     { id: "10", type: "standard",
-      stard: "Whether participants formed a consecutive, random or convenience series.",
+      stard: "Whether participants formed a consecutive, random, or convenience series.",
       explanation: "State whether participants were enrolled as a consecutive, random or convenience series. Consecutive or random sampling reduces selection bias relative to convenience sampling." },
   ]},
   { section: "Methods — Dataset", items: [
     { id: "11", type: "new",
-      stard: "Source of the data and whether they were routinely collected, specifically collected for the purpose of the study, or acquired from an open-source repository.",
+      stard: "Source of the data and whether it has been routinely collected, specifically collected for the purpose of the study or acquired from an open-source repository.",
       explanation: "Report the provenance of the data: routinely collected in clinical care, prospectively collected for the study, or obtained from an open-source repository. Data source strongly affects the representativeness, quality and potential biases of an AI index test and is central to interpreting its performance." },
     { id: "12", type: "new",
-      stard: "Who undertook the annotations for the dataset (including experience levels and background) and how (within the same clinical context or in a post hoc fashion), if applicable.",
+      stard: "Who undertook the annotations for the dataset (including experience levels and background) and how (within the same clinical context or in a post-hoc fashion), if applicable.",
       explanation: "Describe who labelled or annotated the data, including their number, expertise and background, whether annotation was done within the original clinical context or post hoc, and how disagreements or multiple annotations were handled where relevant. Annotation source and process directly influence model training, reference labels and reproducibility." },
     { id: "13", type: "new",
-      stard: "Devices (manufacturer and model) used to capture data, and software (with version number) used to engineer the index test, highlighting the intended use.",
+      stard: "Devices (manufacturer, model) that were used to capture data; software (with version number) used to engineer the index test, highlighting the intended use.",
       explanation: "Report the data-capture devices (manufacturer and model) and the software, with version numbers, used to develop the index test, and highlight the intended use. Hardware and software versions can materially change AI performance and are needed for replication and for understanding the operating environment." },
     { id: "14", type: "new",
-      stard: "Data acquisition protocols (for example, contrast protocol or reconstruction method for medical images) and details of data preprocessing, in sufficient detail to allow replication.",
+      stard: "Data acquisition protocols (e.g. contrast protocol or reconstruction method for medical images) and details of data pre-processing in sufficient detail to allow replication.",
       explanation: "Describe the acquisition protocols, such as imaging contrast protocols, reconstruction methods or sampling procedures, and all preprocessing steps in enough detail to allow replication. Preprocessing may include resizing, normalisation, filtering, augmentation, segmentation, feature extraction or exclusion of poor-quality inputs." },
   ]},
   { section: "Methods — Test Methods", items: [
@@ -241,10 +238,10 @@ const DATA = [
       stard: "How the index test was developed, including any training, validation, testing and external evaluation, detailing sample sizes, when applicable.",
       explanation: "Report how the AI model was developed, covering training, validation, internal testing and any external evaluation, with sample sizes reported separately for each stage where applicable. State clearly which data were used for development and which were reserved for evaluation." },
     { id: "15c", type: "standard",
-      stard: "Definition of and rationale for test positivity cutoffs or result categories of the index test, distinguishing prespecified from exploratory.",
-      explanation: "Define the positivity thresholds or result categories of the index test and the rationale for them, distinguishing pre-specified cutoffs from those chosen after seeing the data. Thresholds may be based on prior studies, clinical practice, clinical guidelines or manufacturer recommendations." },
+      stard: "Definition of and rationale for test positivity cut-offs or result categories of the index test, distinguishing pre-specified from exploratory.",
+      explanation: "Define the positivity thresholds or result categories of the index test and the rationale for them, distinguishing prespecified cutoffs from those chosen after seeing the data. Thresholds may be based on prior studies, clinical practice, clinical guidelines or manufacturer recommendations." },
     { id: "15d", type: "new",
-      stard: "The specified end-user of the index test and the level of expertise required of users.",
+      stard: "The specified end user of the index test and the level of expertise required of users.",
       explanation: "Identify the intended end-user of the AI test (for example specialist, generalist, or patient) and the level of expertise required to operate or interpret it. Human–AI interaction affects real-world performance and the applicability of the findings." },
     { id: "16a", type: "standard",
       stard: "Reference standard, in sufficient detail to allow replication.",
@@ -253,8 +250,8 @@ const DATA = [
       stard: "Rationale for choosing the reference standard (if alternatives exist).",
       explanation: "Where alternative reference standards exist, justify the one chosen. An imperfect or poorly chosen reference standard biases the estimated accuracy of the index test." },
     { id: "16c", type: "standard",
-      stard: "Definition of and rationale for test positivity cutoffs or result categories of the reference standard, distinguishing prespecified from exploratory.",
-      explanation: "Define the positivity cutoffs or result categories of the reference standard and the rationale for them, distinguishing pre-specified from exploratory choices." },
+      stard: "Definition of and rationale for test positivity cut-offs or result categories of the reference standard, distinguishing pre-specified from exploratory.",
+      explanation: "Define the positivity cutoffs or result categories of the reference standard and the rationale for them, distinguishing prespecified from exploratory choices." },
     { id: "17a", type: "standard",
       stard: "Whether clinical information and reference standard results were available to the performers or readers of the index test.",
       explanation: "State whether those performing or reading the index test had access to clinical information and to the reference standard results. Lack of blinding can inflate apparent accuracy." },
@@ -273,13 +270,13 @@ const DATA = [
       stard: "How missing data on the index test and reference standard were handled.",
       explanation: "Describe how missing data on the index test and reference standard were handled, including whether complete-case analysis, imputation, sensitivity analysis or another defined approach was used." },
     { id: "21", type: "standard",
-      stard: "Any analyses of variability in diagnostic accuracy, distinguishing prespecified from exploratory.",
-      explanation: "Report any analyses examining how diagnostic accuracy varies (for example across subgroups, sites or conditions), distinguishing pre-specified analyses from exploratory ones." },
+      stard: "Any analyses of variability in diagnostic accuracy, distinguishing pre-specified from exploratory.",
+      explanation: "Report any analyses examining how diagnostic accuracy varies (for example across subgroups, sites or conditions), distinguishing prespecified analyses from exploratory ones." },
     { id: "22", type: "standard",
       stard: "Intended sample size and how it was determined.",
       explanation: "State the intended sample size and how it was determined, so readers can assess whether the study was adequately powered to estimate accuracy with useful precision." },
     { id: "23", type: "new",
-      stard: "Details of any performance error analysis and algorithmic bias and fairness assessments, if undertaken.",
+      stard: "Details of any performance error analysis, and algorithmic bias and fairness assessments if undertaken.",
       explanation: "Report any performance error analysis, such as review of false positives, false negatives, failure cases or uninterpretable outputs, and any assessment of algorithmic bias and fairness across demographic or clinical subgroups." },
   ]},
   { section: "Results — Participants and Dataset", items: [
@@ -287,7 +284,7 @@ const DATA = [
       stard: "Flow of participants, using a diagram.",
       explanation: "Provide a participant flow diagram showing the numbers assessed for eligibility, excluded, receiving the index test, receiving the reference standard, and included in the analysis, with reasons for exclusion where relevant. Where possible, show the numbers of true positives, false positives, true negatives and false negatives." },
     { id: "25", type: "modified",
-      stard: "Baseline demographic, clinical and technical characteristics of training, validation and test sets, if applicable.",
+      stard: "Baseline demographic, clinical and technical characteristics of training, validation and test set, if applicable.",
       explanation: "STARD-AI modifies STARD item 25 to require baseline demographic, clinical and technical characteristics for the training, validation and test sets. Technical characteristics may include acquisition device, site, protocol, software version, data source and dataset partitioning details." },
     { id: "26a", type: "standard",
       stard: "Distribution of severity of disease in those with the target condition.",
@@ -296,7 +293,7 @@ const DATA = [
       stard: "Distribution of alternative diagnoses in those without the target condition.",
       explanation: "Report the distribution of alternative diagnoses among participants without the target condition, as this affects specificity and the generalisability of the findings." },
     { id: "27", type: "standard",
-      stard: "Time interval and any clinical interventions between the index test and the reference standard.",
+      stard: "Time interval and any clinical interventions between index test and reference standard.",
       explanation: "Report the time interval and any clinical interventions occurring between the index test and the reference standard, since a long or variable interval can cause disease progression or misclassification bias." },
     { id: "28", type: "new",
       stard: "Whether the datasets represent the distribution of the target condition that one would expect from the intended use population.",
@@ -307,7 +304,7 @@ const DATA = [
   ]},
   { section: "Results — Test Results", items: [
     { id: "30", type: "standard",
-      stard: "Cross-tabulation of the index test results (or their distribution) by the results of the reference standard.",
+      stard: "Cross tabulation of the index test results (or their distribution) by the results of the reference standard.",
       explanation: "Provide the cross-tabulation of index test results against the reference standard, for example a 2x2 table, or the distribution of results. Use raw numbers rather than percentages alone so diagnostic accuracy measures can be recalculated." },
     { id: "31", type: "standard",
       stard: "Estimates of diagnostic accuracy and their precision (such as 95% confidence intervals).",
@@ -318,13 +315,13 @@ const DATA = [
   ]},
   { section: "Discussion", items: [
     { id: "33", type: "standard",
-      stard: "Study limitations, including sources of potential bias, statistical uncertainty and generalisability.",
+      stard: "Study limitations, including sources of potential bias, statistical uncertainty, and generalisability.",
       explanation: "Discuss the study's limitations, including sources of potential bias, statistical uncertainty and the generalisability of the findings to other settings and populations." },
     { id: "34", type: "standard",
       stard: "Implications for practice, including the intended use and clinical role of the index test.",
       explanation: "Discuss the implications of the results for practice, including the intended use and the clinical role the AI index test is expected to play in the diagnostic pathway." },
     { id: "35", type: "new",
-      stard: "Ethical considerations and adherence to ethical standards associated with the use of the index test, and issues of fairness.",
+      stard: "Ethical considerations and adherence to ethical standards associated with the use of the index test and issues of fairness.",
       explanation: "Discuss ethical considerations and fairness associated with use of the AI index test, including whether performance is equitable across relevant demographic, socioeconomic or clinical groups, and how the study adhered to ethical standards." },
   ]},
   { section: "Other Information", items: [
@@ -341,7 +338,7 @@ const DATA = [
       stard: "Commercial interests, if applicable.",
       explanation: "Disclose any commercial interests, including involvement of a developer or vendor of the AI system. Given the commercial nature of many AI products, transparent disclosure helps readers assess potential conflicts of interest." },
     { id: "40a", type: "new",
-      stard: "Availability of datasets and code, detailing any restrictions on their reuse and repurposing.",
+      stard: "Availability of datasets and code; detailing any restrictions on their reuse and repurposing.",
       explanation: "State whether the datasets and code are available and describe any restrictions on their reuse or repurposing, such as privacy, licensing, commercial restrictions or controlled-access repository requirements." },
     { id: "40b", type: "new",
       stard: "Whether outputs are stored, auditable and available for evaluation, if necessary.",
@@ -585,10 +582,12 @@ function getExportMetadata() {
   };
 }
 
-function itemSourceLabel(row) {
-  if (row.type === 'new') return 'STARD-AI (new)';
-  if (row.type === 'modified') return 'STARD-AI (modified)';
-  return 'STARD 2015';
+// STARD-AI is a single integrated guideline, so every item is a STARD-AI item;
+// the useful distinction is each item's relationship to STARD 2015.
+function itemTypeLabel(row) {
+  if (row.type === 'new') return 'New';
+  if (row.type === 'modified') return 'Modified';
+  return 'Carried over';
 }
 
 function getExportRows() {
@@ -597,7 +596,7 @@ function getExportRows() {
     return {
       section: row.section,
       item: row.shortId,
-      source: itemSourceLabel(row),
+      itemType: itemTypeLabel(row),
       statement: row.stard || '',
       rating: formatRatingLabel(s.rating),
       notes: s.notes || ''
@@ -705,10 +704,11 @@ function exportCSV() {
   const exportRows = getExportRows();
   let csv = metadata.paper ? `"Document:","${escapeCSV(metadata.paper)}"\n` : '';
   csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
-  csv += `"URL:","${escapeCSV(metadata.url)}"\n\n`;
-  csv += 'Section,Item,Source,Statement,Rating,Notes\n';
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n`;
+  csv += `"All STARD-AI items:","${escapeCSV(formatScoreSummary('', countItems()))}"\n\n`;
+  csv += 'Section,Item,Item type,Statement,Rating,Notes\n';
   exportRows.forEach(row => {
-    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.source)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
+    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.itemType)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
   });
   const blob = new Blob([csv], {type:'text/csv'});
   const a = document.createElement('a');
@@ -735,13 +735,13 @@ function exportPDF() {
   yPos += 6;
 
   const overall = countItems();
-  doc.text(formatScoreSummary('STARD-AI', overall), 14, yPos);
+  doc.text(formatScoreSummary('All STARD-AI items', overall), 14, yPos);
   yPos += 6;
 
   const rows = getExportRows().map(row => [
     row.section,
     row.item,
-    row.source,
+    row.itemType,
     row.statement,
     row.rating,
     row.notes
@@ -749,15 +749,15 @@ function exportPDF() {
 
   doc.autoTable({
     startY: yPos,
-    head: [['Section', 'Item', 'Source', 'Statement', 'Rating', 'Notes']],
+    head: [['Section', 'Item', 'Item type', 'Statement', 'Rating', 'Notes']],
     body: rows,
     styles: { fontSize: 7, cellPadding: 1.6, overflow: 'linebreak', valign: 'top' },
     headStyles: { fillColor: [59,130,246] },
     columnStyles: {
       0: { cellWidth: 34 },
       1: { cellWidth: 16 },
-      2: { cellWidth: 32 },
-      3: { cellWidth: 124 },
+      2: { cellWidth: 24 },
+      3: { cellWidth: 132 },
       4: { cellWidth: 24 },
       5: { cellWidth: 56 }
     },
@@ -772,8 +772,9 @@ function exportPDF() {
   });
 
   doc.setFontSize(6.5);
-  const y = doc.internal.pageSize.height - 8;
-  doc.text('This report assesses overall compliance with the integrated STARD-AI checklist. Explanatory summaries independently rewritten. Sources: STARD-AI, Sounderajah V et al., Nat Med 2025;31:3283-3289, doi:10.1038/s41591-025-03953-8; STARD 2015 Explanation & Elaboration, Cohen JF et al., BMJ Open 2016;6:e012799, doi:10.1136/bmjopen-2016-012799.', 14, y);
+  const footer = 'Checklist items derived from STARD 2015 and STARD-AI. Explanatory summaries written for this tool. STARD-AI: Sounderajah V et al., Nat Med 2025;31:3283-3289, doi:10.1038/s41591-025-03953-8, CC BY 4.0 (accepted manuscript). STARD 2015 E&E: Cohen JF et al., BMJ Open 2016;6:e012799, doi:10.1136/bmjopen-2016-012799. Not endorsed by the original authors.';
+  const footerLines = doc.splitTextToSize(footer, doc.internal.pageSize.width - 28);
+  doc.text(footerLines, 14, doc.internal.pageSize.height - 8 - (footerLines.length - 1) * 3);
   doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
 }
 
@@ -781,5 +782,3 @@ loadState();
 document.getElementById('paper-title').value = paperTitle;
 render();
 </script>
-</body>
-</html>

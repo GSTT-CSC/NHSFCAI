@@ -1,0 +1,867 @@
+---
+layout: default
+title: TRIPOD+AI Checklist
+---
+<style>
+  :root {
+    --green: #22c55e; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+    --amber: #f59e0b; --amber-bg: #fffbeb; --amber-border: #fde68a;
+    --red: #ef4444; --red-bg: #fef2f2; --red-border: #fecaca;
+    --gray: #6b7280; --gray-bg: #f9fafb; --gray-border: #e5e7eb;
+    --purple: #7c3aed; --purple-bg: #f5f3ff;
+    --blue: #3b82f6; --blue-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  .subtitle { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .subtitle a { color: var(--blue); text-decoration: none; }
+
+  .dashboard { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; padding: 1rem; background: #fff; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .stat { flex: 1; min-width: 120px; text-align: center; padding: 0.75rem; border-radius: 0.5rem; background: var(--gray-bg); }
+  .stat .num { font-size: 1.75rem; font-weight: 700; }
+  .stat .label { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; }
+  .stat.green { background: var(--green-bg); } .stat.green .num { color: var(--green); }
+  .stat.amber { background: var(--amber-bg); } .stat.amber .num { color: var(--amber); }
+  .stat.red { background: var(--red-bg); } .stat.red .num { color: var(--red); }
+  .score-sheet-label { width: 100%; font-size: 0.72rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+  .section { margin-bottom: 1.5rem; }
+  .section-header { font-size: 1.1rem; font-weight: 600; padding: 0.5rem 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+  .section-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 999px; font-weight: 600; color: #fff; }
+
+  .item { background: #fff; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.5rem; border-left: 4px solid var(--gray-border); transition: border-color 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .item.green { border-left-color: var(--green); }
+  .item.amber { border-left-color: var(--amber); }
+  .item.red { border-left-color: var(--red); }
+  .item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .item-main { flex: 1; min-width: 0; }
+  .item-controls { flex: 0 0 220px; display: flex; flex-direction: column; gap: 0.45rem; }
+  .item-id { font-weight: 700; font-size: 0.85rem; color: var(--gray); white-space: nowrap; min-width: 2.5rem; }
+  .item-text { width: 100%; }
+
+  /* Items carried over unchanged from TRIPOD 2015 */
+  .tripod-block { color: var(--blue); font-size: 0.9rem; margin-top: 0.35rem; padding: 0.5rem 0.75rem; background: var(--blue-bg); border-radius: 0.375rem; }
+  .tripod-block .tripod-label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.15rem; }
+  .tripod-block .tripod-body { font-weight: 600; color: #1e293b; }
+  .tripod-explanation { font-size: 0.85rem; color: #475569; margin-top: 0.35rem; }
+  .tripod-explanation .explanation-text { margin-top: 0.25rem; line-height: 1.5; padding: 0.5rem 0.75rem; background: var(--blue-bg); border-radius: 0.375rem; }
+
+  /* New or modified items */
+  .ai-ext { color: var(--purple); font-size: 0.9rem; margin-top: 0.35rem; padding: 0.5rem 0.75rem; background: var(--purple-bg); border-radius: 0.375rem; }
+  .ai-ext .ai-label { font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 0.15rem; }
+  .ai-ext .ai-body { font-weight: 600; color: #1e293b; }
+  .ai-explanation { font-size: 0.85rem; color: #475569; margin-top: 0.35rem; }
+  .ai-explanation .explanation-text { margin-top: 0.25rem; line-height: 1.5; padding: 0.5rem 0.75rem; background: var(--purple-bg); border-radius: 0.375rem; }
+
+  .origin-note { display: block; margin-top: 0.3rem; font-size: 0.72rem; font-weight: 600; color: var(--gray); text-transform: none; letter-spacing: 0; }
+
+  .item-type { font-size: 0.65rem; padding: 1px 6px; border-radius: 999px; font-weight: 600; margin-left: 0.25rem; vertical-align: middle; }
+  .item-type.new { background: #ddd6fe; color: #5b21b6; }
+  .item-type.modified { background: #e0e7ff; color: #3730a3; }
+  .item-type.carried { background: #e2e8f0; color: #475569; }
+
+  .applic-tag { font-size: 0.62rem; padding: 1px 6px; border-radius: 999px; font-weight: 600; margin-left: 0.25rem; vertical-align: middle; background: #e2e8f0; color: #475569; text-transform: none; letter-spacing: 0; }
+
+  .rag-buttons { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+  .rag-btn { border: 2px solid var(--gray-border); background: #fff; border-radius: 0.375rem; padding: 0.25rem 0.6rem; font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.15s; color: var(--gray); }
+  .rag-btn:hover { transform: scale(1.05); }
+  .rag-btn.pass { border-color: var(--green-border); }
+  .rag-btn.pass.active { background: var(--green); color: #fff; border-color: var(--green); }
+  .rag-btn.fail { border-color: var(--red-border); }
+  .rag-btn.fail.active { background: var(--red); color: #fff; border-color: var(--red); }
+  .rag-btn.na { border-color: var(--amber-border); }
+  .rag-btn.na.active { background: var(--amber); color: #fff; border-color: var(--amber); }
+
+  .item-notes { width: 100%; }
+  .item-notes textarea { width: 100%; border: 1px solid var(--gray-border); border-radius: 0.375rem; padding: 0.5rem; font-size: 0.8rem; resize: vertical; min-height: 4.25rem; font-family: inherit; }
+
+  .toolbar { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; padding: 0.75rem; background: #fff; border: 1px solid var(--gray-border); border-radius: 0.75rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .toolbar-group { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; width: 100%; padding-bottom: 0.5rem; }
+  .toolbar-group:not(:last-child) { border-bottom: 1px solid var(--gray-border); margin-bottom: 0.5rem; }
+  .toolbar-label { font-size: 0.7rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.1rem; }
+  .btn { padding: 0.4rem 0.75rem; border-radius: 0.45rem; border: 1px solid var(--gray-border); background: #fff; font-size: 0.8rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+  .btn:hover { background: #f1f5f9; }
+  .btn-primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .btn-primary:hover { background: #2563eb; }
+
+  /* Inline component samples in the "How the item tags work" note */
+  .inline-src { display: inline-block; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 6px; border-radius: 0.25rem; vertical-align: middle; }
+  .inline-src.base { color: var(--blue); background: var(--blue-bg); }
+  .inline-src.ext { color: var(--purple); background: var(--purple-bg); }
+  .attribution .item-type, .attribution .applic-tag { margin-left: 0; }
+
+  .attribution { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 0.5rem; font-size: 0.8rem; color: var(--gray); border: 1px solid var(--gray-border); }
+  .attribution a { color: var(--blue); }
+
+  .paper-title-field { margin-bottom: 1.5rem; }
+  .paper-title-field label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.25rem; color: var(--gray); }
+  .paper-title-field input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--gray-border); border-radius: 0.5rem; font-size: 0.95rem; font-family: inherit; background: #fff; }
+  .paper-title-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+
+  /* Collapsible sections */
+  .section-header { cursor: pointer; user-select: none; }
+  .section-header .chevron { transition: transform 0.2s; display: inline-block; font-size: 0.8rem; color: var(--gray); }
+  .section-header .chevron.open { transform: rotate(90deg); }
+  .section-items { overflow: hidden; transition: max-height 0.3s ease; }
+  .section-items.collapsed { max-height: 0 !important; }
+
+  @media (max-width: 640px) {
+    .item-header { flex-direction: column; }
+    .item-main, .item-controls { width: 100%; flex: 1 1 auto; }
+    .rag-buttons { align-self: flex-start; }
+    .dashboard { flex-direction: column; }
+  }
+</style>
+<div class="container">
+  <h1>TRIPOD+AI Checklist</h1>
+  <p class="subtitle">Interactive reporting checklist for studies developing or evaluating a clinical prediction model using regression or machine learning (AI) methods.</p>
+
+  <div class="paper-title-field">
+    <label for="paper-title">Prediction model study being assessed (optional)</label>
+    <input type="text" id="paper-title" placeholder="E.g. paper title, authors, DOI..." oninput="savePaperTitle(this.value)">
+  </div>
+
+  <div class="toolbar" aria-label="Checklist toolbar">
+    <div class="toolbar-group">
+      <span class="toolbar-label">Generate reports</span>
+      <button class="btn" onclick="exportPDF()">Download PDF</button>
+      <button class="btn" onclick="exportCSV()">Download CSV</button>
+    </div>
+    <div class="toolbar-group">
+      <span class="toolbar-label">Save progress</span>
+      <button class="btn" onclick="exportSaveFile()">Export save file</button>
+      <button class="btn" onclick="triggerSaveFileImport()">Import save file</button>
+      <input type="file" id="save-file-input" accept="application/json,.json" style="display:none" onchange="importSaveFile(event)">
+    </div>
+    <div class="toolbar-group">
+      <span class="toolbar-label">Checklist controls</span>
+      <button class="btn" onclick="expandAll()">Expand all</button>
+      <button class="btn" onclick="collapseAll()">Collapse all</button>
+      <button class="btn" onclick="resetAll()">Reset all</button>
+    </div>
+  </div>
+
+  <div id="checklist"></div>
+
+  <div class="dashboard" id="dashboard" aria-label="TRIPOD+AI reporting dashboard">
+    <div class="score-sheet-label">TRIPOD 2015 items only</div>
+    <div class="stat" id="stat-carried-total"><div class="num" id="score-carried-total">0%</div><div class="label">Items Rated</div></div>
+    <div class="stat green"><div class="num" id="score-carried-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-carried-fail">0</div><div class="label">Not Reported</div></div>
+    <div class="stat amber"><div class="num" id="score-carried-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-carried-unrated">0</div><div class="label">Unrated</div></div>
+
+    <div class="score-sheet-label">New or modified items only</div>
+    <div class="stat" id="stat-updated-total"><div class="num" id="score-updated-total">0%</div><div class="label">Items Rated</div></div>
+    <div class="stat green"><div class="num" id="score-updated-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-updated-fail">0</div><div class="label">Not Reported</div></div>
+    <div class="stat amber"><div class="num" id="score-updated-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-updated-unrated">0</div><div class="label">Unrated</div></div>
+
+    <div class="score-sheet-label">Combined</div>
+    <div class="stat" id="stat-combined-total"><div class="num" id="score-combined-total">0%</div><div class="label">Items Rated</div></div>
+    <div class="stat green"><div class="num" id="score-combined-pass">0</div><div class="label">Reported</div></div>
+    <div class="stat red"><div class="num" id="score-combined-fail">0</div><div class="label">Not Reported</div></div>
+    <div class="stat amber"><div class="num" id="score-combined-na">0</div><div class="label">N/A</div></div>
+    <div class="stat"><div class="num" id="score-combined-unrated">0</div><div class="label">Unrated</div></div>
+  </div>
+
+  <div class="attribution">
+    <strong>About This Tool: The TRIPOD+AI Checklist</strong><br><br>
+    <strong>What is it for?</strong><br>
+    This tool is a web-based checklist implementing the TRIPOD+AI (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis – Artificial Intelligence) reporting guideline. Its purpose is to support the complete, accurate and transparent reporting of studies that develop or evaluate (validate) a clinical prediction model using any statistical or machine learning method. TRIPOD+AI is a single 27-item checklist (52 sub-items) that supersedes the TRIPOD 2015 statement, which should no longer be used. By using this checklist, authors, editors and reviewers can systematically evaluate whether a study transparently reports the elements needed to appraise a clinical prediction model.
+    <br><br>
+    <strong>How the item tags work</strong><br>
+    TRIPOD+AI is standalone, so there is no separate base guideline to check alongside it. Each item carries two tags. The first records its relationship to TRIPOD 2015: a <span class="item-type new">New item</span> was introduced by TRIPOD+AI, a <span class="item-type modified">Modified item</span> existed in TRIPOD 2015 but has been reworded, and a <span class="item-type carried">Carried-over item</span> is unchanged. The second records applicability: <span class="applic-tag">Development</span> marks an item that applies when a model is developed, and <span class="applic-tag">Evaluation</span> marks one that applies when a model is evaluated. Items that apply in both situations carry both tags. For studies that both develop and evaluate a model, all items apply. The new/modified/carried-over tags, and the dashboard breakdown built on them, are an editorial interpretation added here to aid navigation; they are not part of the official statement. Because TRIPOD+AI is a single harmonised checklist, the two groups are not standards to be met independently — the combined score is the one that reflects compliance, and the breakdown only shows whether gaps lie in long-standing expectations or in those introduced by the 2024 update.
+    <br><br>
+    This web tool is provided for educational and review purposes only and does not constitute formal editorial, regulatory, methodological, clinical, or legal advice. Please consult the original publications for the full official guidance.
+    <br><br>
+    <strong>Sources and attribution</strong><br>
+    Checklist item wording is reproduced from the TRIPOD+AI statement. Explanatory summaries have been independently rewritten and condensed for educational and review purposes, drawing on the TRIPOD+AI statement and the TRIPOD 2015 Explanation &amp; Elaboration document for inherited items. Licensing terms for each source are noted below.<br><br>
+    1. Collins, G.S., Moons, K.G.M., Dhiman, P. et al. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. <em>BMJ</em> 385, e078378 (2024). <a href="https://doi.org/10.1136/bmj-2023-078378" target="_blank">doi:10.1136/bmj-2023-078378</a>. <em>Published under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a> — reproduction permitted with attribution. Checklist item wording is reproduced unaltered; explanatory summaries were written for this tool.</em><br>
+    2. Moons, K.G.M., Altman, D.G., Reitsma, J.B. et al. Transparent Reporting of a multivariable prediction model for Individual Prognosis or Diagnosis (TRIPOD): explanation and elaboration. <em>Ann Intern Med</em> 162, W1–W73 (2015). <a href="https://doi.org/10.7326/M14-0698" target="_blank">doi:10.7326/M14-0698</a>. <em>Superseded by TRIPOD+AI. Used here as background for the rewritten explanatory summaries. Items that TRIPOD+AI carried over from TRIPOD 2015 are reproduced from the TRIPOD+AI statement, not from this document, and so share its wording in places.</em><br>
+    This checklist is not endorsed by the original authors.
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js" integrity="sha512-/cZZTKETbsuutvNXdPji/z8N+9e+LHq9D60JhcBCigq9I5a2VDEcLzml8PdVlVqzmWlVbhZCuTx+9CTi2xb30A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+const DATA = [
+  { section: "Title", items: [
+    { id: "1", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 1",
+      tripod: "Identify the study as developing or evaluating the performance of a multivariable prediction model, the target population, and the outcome to be predicted.",
+      explanation: "Make the title (and abstract) identify the study as a prediction-model study, state the purpose of prediction (diagnostic or prognostic), the target population, and the outcome predicted. Explicit identification supports correct indexing and retrieval and lets readers immediately recognise the study type." },
+  ]},
+  { section: "Abstract", items: [
+    { id: "2", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 2 — now points to TRIPOD+AI for Abstracts",
+      tripod: "See TRIPOD+AI for Abstracts checklist.",
+      explanation: "Provide a structured abstract following the 13-item TRIPOD+AI for Abstracts checklist, covering: study identification; healthcare context and rationale; objectives (development, evaluation or both); data sources; eligibility criteria and setting; outcome and (for prognosis) the time horizon; model type, summary of model-building steps and internal validation method; performance measures used (e.g. discrimination, calibration, clinical utility); number of participants and outcome events; a summary of the predictors in the final model; performance estimates with confidence intervals; an overall interpretation; and the registration number and registry/repository." },
+  ]},
+  { section: "Introduction", items: [
+    { id: "3a", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 3a",
+      tripod: "Explain the healthcare context (including whether diagnostic or prognostic) and rationale for developing or evaluating the prediction model, including references to existing models.",
+      explanation: "Describe the specific clinical context and the decision the model informs — for example whether to order more invasive or costly tests, refer to secondary care, safely rule a condition out, or estimate future risk to guide preventive or therapeutic action. Cite related existing models for the same or similar use, population or outcome; for evaluation studies, name the model being evaluated, cite it, restate its intended use, and explain why it (rather than competing models) was chosen. Note that over-expansive outcome definitions risk labelling too many people as high risk and can lead to overdiagnosis and overtreatment." },
+    { id: "3b", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 3a (expanded)",
+      tripod: "Describe the target population and the intended purpose of the prediction model in the context of the care pathway, including its intended users (eg, healthcare professionals, patients, public).",
+      explanation: "State where the model sits in the care pathway, who is intended to use it (healthcare professionals, patients, the public), and what clinical decision it supports. This determines which predictors would realistically be available in that setting and to whom the predictions can be generalised." },
+    { id: "3c", type: "new", applic: "DE", origin: "New in TRIPOD+AI (fairness)",
+      tripod: "Describe any known health inequalities between sociodemographic groups.",
+      explanation: "Describe any known differences or inequalities, between sociodemographic groups (e.g. by age, sex/gender, race/ethnicity or socioeconomic status), in the condition itself, its management, or its outcomes that are relevant to the model and its fairness." },
+    { id: "4", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 3b",
+      tripod: "Specify the study objectives, including whether the study describes the development or validation of a prediction model (or both).",
+      explanation: "State the specific objectives: the purpose of prediction (diagnostic or prognostic), the outcome or type of outcome, the setting and intended population, the type of predictors considered, and whether the study develops a new model, evaluates an existing one, or both." },
+  ]},
+  { section: "Methods — Data", items: [
+    { id: "5a", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 4a (expanded)",
+      tripod: "Describe the sources of data separately for the development and evaluation datasets (eg, randomised trial, cohort, routine care or registry data), the rationale for using these data, and representativeness of the data.",
+      explanation: "Describe the design or source of each dataset and the rationale for using it. Diagnostic data are typically cross-sectional, with predictors and reference standard measured close together and no intervening treatment; prognostic data are longitudinal cohorts, with a prospective design preferred because it gives fuller control over predictor and outcome measurement and reduces missing data and loss to follow-up. For trial data, state how the intervention effect was handled and note generalisability limits from restrictive eligibility. Report any patient sampling (e.g. case-cohort, nested case-control) and whether data from multiple centres/cohorts are clustered. Indicate representativeness, including whether consecutive participants were included." },
+    { id: "5b", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 4b",
+      tripod: "Specify the dates of the collected participant data, including start and end of participant accrual; and, if applicable, end of follow-up.",
+      explanation: "Report start and end of accrual and, for prognostic studies, end of follow-up. Dates place the study in its historical context (available tests, treatments and measurement technologies) and, with the number of participants, indicate how selective enrolment was; reporting the number enrolled per period (e.g. per year) is helpful." },
+  ]},
+  { section: "Methods — Participants", items: [
+    { id: "6a", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 5a",
+      tripod: "Specify key elements of the study setting (eg, primary care, secondary care, general population) including the number and location of centres.",
+      explanation: "Specify the setting (e.g. primary care, secondary care, general population) and the number and location of centres. Setting drives case mix — the distribution of predictors and the outcome prevalence/incidence — which affects performance; models developed in secondary care typically perform worse in primary care, and adult models may not transport to paediatric care." },
+    { id: "6b", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 5b",
+      tripod: "Describe the eligibility criteria for study participants.",
+      explanation: "List the inclusion and exclusion criteria, which determine to whom the model can be generalised. For evaluation studies, report whether these criteria matched the original development study. If otherwise-eligible participants were excluded because of missing data, state this clearly, as it can introduce bias." },
+    { id: "6c", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 5c (expanded)",
+      tripod: "Give details of any treatments received, and how they were handled during model development or evaluation, if relevant.",
+      explanation: "Report treatments received (especially before or at the start of follow-up) that could modify outcome probability, and how they were handled: included as a predictor, modelled separately by treatment group, or omitted. In non-randomised data, note that treatment may have been driven by the same predictors in the model (confounding by indication); treatment is sometimes used as a proxy for an underlying predictor (e.g. antihypertensive use for hypertension)." },
+  ]},
+  { section: "Methods — Data Preparation", items: [
+    { id: "7", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "Describe any data pre-processing and quality checking, including whether this was similar across relevant sociodemographic groups.",
+      explanation: "Describe data cleaning and quality checking and any pre-processing such as handling of errors and implausible values/outliers, transformations, normalisation/standardisation and feature engineering, and state whether these steps were applied consistently across relevant sociodemographic groups." },
+  ]},
+  { section: "Methods — Outcome", items: [
+    { id: "8a", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 6a (expanded)",
+      tripod: "Clearly define the outcome that is being predicted and the time horizon, including how and when assessed, the rationale for choosing this outcome, and whether the method of outcome assessment is consistent across sociodemographic groups.",
+      explanation: "Define the outcome, the time horizon and the rationale for choosing it. For diagnostic outcomes, describe the reference standard (best available method — a single test, combination, or consensus/expert committee), any cut-offs and composite rules, reasons for non-standard definitions, and how disagreements were resolved (e.g. majority vote). For prognostic outcomes, common choices include all-cause or cause-specific death, non-fatal events (MI, recurrence, progression), patient-centred outcomes (symptoms, function, quality of life) and composites (e.g. disease-free survival); report the time points and frequency of assessment, the data sources used (death/cancer registries, hospital records, scans, labs) and how cause of death was adjudicated. Use and reference standard definitions (e.g. ICD codes), and state whether outcome assessment was consistent across sociodemographic groups." },
+    { id: "8b", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "If outcome assessment requires subjective interpretation, describe the qualifications and demographic characteristics of the outcome assessors.",
+      explanation: "When the outcome requires subjective interpretation, report the number, qualifications/expertise and demographic characteristics of the assessors (for example, the composition of an outcome or adjudication committee)." },
+    { id: "8c", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 6b",
+      tripod: "Report any actions to blind assessment of the outcome to be predicted.",
+      explanation: "Report whether the outcome was assessed blind to the predictors, and any actions taken to ensure this. Blinding matters most for outcomes requiring interpretation (e.g. cause-specific death) rather than objective outcomes (e.g. all-cause death), and becomes more important when assessing a predictor's incremental value or comparing competing models." },
+  ]},
+  { section: "Methods — Predictors", items: [
+    { id: "9a", type: "modified", applic: "D", origin: "TRIPOD 2015 item 7a (expanded)",
+      tripod: "Describe the choice of initial predictors (eg, literature, previous models, all available predictors) and any pre-selection of predictors before model building.",
+      explanation: "State how candidate predictors were chosen (clinical reasoning, literature or systematic review, previous models, all available predictors, or cost/availability constraints) and any pre-selection before modelling that does not use the predictor–outcome association (e.g. removing predictors for excessive missingness, or for redundancy/overlap using principal components or clustering). Give reasons for omitting any available predictors; fewer predictors reduce overfitting and ease clinical use." },
+    { id: "9b", type: "modified", applic: "DE", origin: "TRIPOD 2015 items 7a + 7b (merged)",
+      tripod: "Clearly define all predictors, including how and when they were measured (and any actions to blind assessment of predictors for the outcome and other predictors).",
+      explanation: "Define every predictor with units for continuous variables and all categories for categorical ones (including any combined categories), and report assay/laboratory/imaging methods, cut-offs and any rules used to combine predictors. All predictors should be measured at or before the time origin and known when the model is used. Report blinding: assessment of predictors should always be blind to the outcome (a particular risk in case-control and cross-sectional/diagnostic studies); blinding to other predictors depends on the aim — mutual blinding is needed when testing whether one test can replace another." },
+    { id: "9c", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "If predictor measurement requires subjective interpretation, describe the qualifications and demographic characteristics of the predictor assessors.",
+      explanation: "For predictors requiring subjective interpretation (e.g. imaging, electrophysiology, pathology), report the qualifications/expertise and demographic characteristics of the assessors. This is unnecessary for predictors largely independent of observer interpretation, such as age, sex or quantitative laboratory values." },
+  ]},
+  { section: "Methods — Sample Size", items: [
+    { id: "10", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 8 (expanded)",
+      tripod: "Explain how the study size was arrived at (separately for development and evaluation), and justify that the study size was sufficient to answer the research question. Include details of any sample size calculation.",
+      explanation: "Explain how the sample size was determined for development and for evaluation. The effective sample size is driven by the number of outcome events (the smaller of the two frequencies for binary or time-to-event outcomes), not the number of participants. The old &ldquo;10 events per variable&rdquo; rule of thumb is now regarded as too strict or too lax; prefer formal calculations targeting the precision of performance measures (e.g. c-index, R&sup2;, Brier score, sensitivity/specificity). If an entire available dataset was used, say so rather than offering a post-hoc justification. For evaluation, a minimum of about 100 events (and 100 non-events) has been suggested, with more than 250 events preferable." },
+  ]},
+  { section: "Methods — Missing Data", items: [
+    { id: "11", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 9 (expanded)",
+      tripod: "Describe how missing data were handled. Provide reasons for omitting any data.",
+      explanation: "Describe how missing data were handled and give reasons for omitting any data. Complete-case analysis is common but inefficient and biased unless data are missing completely at random; a separate &lsquo;missing&rsquo; category should be avoided as it biases results. Multiple imputation is preferred (it gives more correct standard errors than single imputation). Report the software/routine (e.g. MICE, ICE, PROC MI, Amelia, aregImpute), the variables in the imputation model (including the outcome), how continuous, binary and categorical predictors and any interactions were handled, and the number of imputations; estimates are combined using Rubin's rules." },
+  ]},
+  { section: "Methods — Analytical Methods", items: [
+    { id: "12a", type: "modified", applic: "D", origin: "TRIPOD 2015 item 10a (expanded)",
+      tripod: "Describe how the data were used (eg, for development and evaluation of model performance) in the analysis, including whether the data were partitioned, considering any sample size requirements.",
+      explanation: "Describe how the data were used in the analysis — in particular whether and how they were partitioned (e.g. train/test split, cross-validation, bootstrapping) — and which data were used for development versus evaluation of performance, considering sample-size requirements." },
+    { id: "12b", type: "modified", applic: "D", origin: "TRIPOD 2015 item 10a (expanded)",
+      tripod: "Depending on the type of model, describe how predictors were handled in the analyses (functional form, rescaling, transformation, or any standardisation).",
+      explanation: "Report how each predictor was handled. Categorising continuous predictors loses information and choosing &lsquo;optimal&rsquo; data-driven cut points (e.g. minimising a p-value) produces overoptimistic, spurious associations and should be avoided; prefer keeping predictors continuous, checking linearity and modelling non-linearity with fractional polynomials or restricted cubic splines (reporting knot locations). Report any transformations (e.g. log), handling of outliers/implausible values, and, for machine learning, any rescaling or standardisation." },
+    { id: "12c", type: "modified", applic: "D", origin: "TRIPOD 2015 item 10b (expanded)",
+      tripod: "Specify the type of model, rationale, all model building steps, including any hyperparameter tuning, and method for internal validation.",
+      explanation: "Identify the model type and give its rationale — e.g. logistic regression for binary/short-term outcomes, Cox for time-to-event outcomes, or machine learning methods such as trees, random forests, support vector machines, neural networks or deep learning (motivate any non-regression choice). Report all model-building steps, including predictor selection (and avoid reporting only the best-performing model), any hyperparameter tuning, and the method of internal validation (e.g. cross-validation, bootstrapping). Provide enough detail for a knowledgeable reader with the data to reproduce the results." },
+    { id: "12d", type: "new", applic: "DE", origin: "New in TRIPOD+AI (clustering)",
+      tripod: "Describe if and how any heterogeneity in estimates of model parameter values and model performance was handled and quantified across clusters (eg, hospitals, countries). See TRIPOD-Cluster for additional considerations.",
+      explanation: "If the data are clustered (e.g. multiple hospitals, datasets or countries), describe whether and how heterogeneity in parameter estimates and performance was quantified and handled, for example using random intercepts or random predictor effects. Refer to TRIPOD-Cluster for additional reporting considerations." },
+    { id: "12e", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 10d (expanded)",
+      tripod: "Specify all measures and plots used (and their rationale) to evaluate model performance (eg, discrimination, calibration, clinical utility) and, if relevant, to compare multiple models.",
+      explanation: "Specify every performance measure and plot used, and why. Calibration (agreement between predicted and observed risk) is best shown graphically with a smoothed/flexible curve and quantified by the calibration slope (ideal 1) and intercept (ideal 0); avoid relying on the Hosmer–Lemeshow test alone. Discrimination is usually the c-index/AUC — state which version. Overall measures include R&sup2; (reference the version used) and the Brier score. Clinical utility is assessed with decision-curve analysis (net benefit). For reclassification, the NRI should be reported with the underlying classification table as it is sensitive to thresholds; the IDI may also be used. To compare models on the same data use tests such as DeLong (not valid for nested models)." },
+    { id: "12f", type: "modified", applic: "E", origin: "TRIPOD 2015 item 10e (expanded)",
+      tripod: "Describe any model updating (eg, recalibration) arising from the model evaluation, either overall or for particular sociodemographic groups or settings.",
+      explanation: "Describe any updating arising from evaluation and the method used. Updating methods vary by extensiveness: adjusting only the intercept/baseline (corrects for prevalence/incidence differences); adjusting all coefficients by a single factor (the calibration slope); adjusting individual coefficients; adding a new predictor; or re-estimating all coefficients (appropriate when the evaluation set is large). Simple updating improves calibration only, whereas more extensive updating can improve discrimination; state whether recalibration was done overall or per sociodemographic group or setting." },
+    { id: "12g", type: "carried", applic: "E", origin: "TRIPOD 2015 item 10c",
+      tripod: "For model evaluation, describe how the model predictions were calculated (eg, formula, code, object, application programming interface).",
+      explanation: "For evaluation studies, describe exactly how predictions were generated from the existing model — for example the regression formula, analytical code, a model object, or an application programming interface." },
+  ]},
+  { section: "Methods — Class Imbalance", items: [
+    { id: "13", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "If class imbalance methods were used, state why and how this was done, and any subsequent methods to recalibrate the model or the model predictions.",
+      explanation: "Class imbalance is when the numbers of individuals with and without the outcome are very unequal. If methods were used to address it (e.g. resampling, reweighting), state why and how, and describe any subsequent steps taken to recalibrate the model or its predictions, since such methods can distort predicted probabilities." },
+  ]},
+  { section: "Methods — Fairness", items: [
+    { id: "14", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "Describe any approaches that were used to address model fairness and their rationale.",
+      explanation: "Describe any approaches used to address fairness and their rationale. Fairness means the model does not adversely discriminate against individuals or groups defined by attributes such as age, race/ethnicity, sex/gender or socioeconomic status; using representative and diverse data is one key element, but adequate representation alone does not guarantee fairness." },
+  ]},
+  { section: "Methods — Model Output", items: [
+    { id: "15", type: "new", applic: "D", origin: "New in TRIPOD+AI",
+      tripod: "Specify the output of the prediction model (eg, probabilities, classification). Provide details and rationale for any classification and how the thresholds were identified.",
+      explanation: "State what the model outputs — estimated probabilities or a classification. If it classifies, report the thresholds, the rationale, and how they were identified (e.g. clinically acceptable false-positive and false-negative rates, prior studies, or guidelines). Any risk grouping should be based on the model's predicted probabilities rather than on categorising the predictors." },
+  ]},
+  { section: "Methods — Training vs Evaluation", items: [
+    { id: "16", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 12",
+      tripod: "Identify any differences between the development and evaluation data in healthcare setting, eligibility criteria, outcome, and predictors.",
+      explanation: "Identify any differences — intended or not — between the development and evaluation datasets in healthcare setting, eligibility criteria, and the definition or measurement of the outcome and predictors, since these affect interpretation of performance in the evaluation data." },
+  ]},
+  { section: "Methods — Ethical Approval", items: [
+    { id: "17", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "Name the institutional research board or ethics committee that approved the study and describe the participant informed consent or the ethics committee waiver of informed consent.",
+      explanation: "Name the institutional review board or ethics committee that approved the study, and describe how participant informed consent was obtained or, where applicable, the committee's waiver of informed consent." },
+  ]},
+  { section: "Open Science", items: [
+    { id: "18a", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 22",
+      tripod: "Give the source of funding and the role of the funders for the present study.",
+      explanation: "Disclose all sources of funding and the funders' role in the design, conduct, analysis, interpretation and reporting of the study; if the funder had no role, or there was no external funding, state so explicitly." },
+    { id: "18b", type: "new", applic: "DE", origin: "New as a distinct item in TRIPOD+AI",
+      tripod: "Declare any conflicts of interest and financial disclosures for all authors.",
+      explanation: "Declare conflicts of interest and financial disclosures for all authors. For models incorporated into guidelines, disclose the conflicts of all guideline-development members, not only those who developed the model." },
+    { id: "18c", type: "new", applic: "DE", origin: "New in TRIPOD+AI (open science)",
+      tripod: "Indicate where the study protocol can be accessed or state that a protocol was not prepared.",
+      explanation: "State where the protocol can be accessed, or that none was prepared. A protocol should cover the research aim, design, predictors, outcome and statistical analysis plan, allowing readers to compare what was planned with what was done." },
+    { id: "18d", type: "new", applic: "DE", origin: "New in TRIPOD+AI (open science)",
+      tripod: "Provide registration information for the study, including register name and registration number, or state that the study was not registered.",
+      explanation: "Provide the registration details (register name and registration number), or state that the study was not registered." },
+    { id: "18e", type: "new", applic: "DE", origin: "New in TRIPOD+AI (open science)",
+      tripod: "Provide details of the availability of the study data.",
+      explanation: "Describe the availability of the study data and how it can be accessed. Sharing data enables verification of findings, evaluation in new data, and pooling for individual-participant-data meta-analysis." },
+    { id: "18f", type: "new", applic: "DE", origin: "New in TRIPOD+AI (open science)",
+      tripod: "Provide details of the availability of the analytical code.",
+      explanation: "Describe the availability of the analytical code — for example the code used for data cleaning, feature engineering, model building and evaluation — to support reproducibility." },
+  ]},
+  { section: "Patient and Public Involvement", items: [
+    { id: "19", type: "new", applic: "DE", origin: "New in TRIPOD+AI",
+      tripod: "Provide details of any patient and public involvement during the design, conduct, reporting, interpretation, or dissemination of the study or state no involvement.",
+      explanation: "Describe any patient and public involvement across the design, conduct, reporting, interpretation and dissemination of the study, or state explicitly that there was none." },
+  ]},
+  { section: "Results — Participants", items: [
+    { id: "20a", type: "carried", applic: "DE", origin: "TRIPOD 2015 item 13a",
+      tripod: "Describe the flow of participants through the study, including the number of participants with and without the outcome and, if applicable, a summary of the follow-up time. A diagram may be helpful.",
+      explanation: "Describe participant flow from the source population through eligibility and data availability to the analysis, ideally with a diagram, showing numbers with missing data and numbers with and without the outcome. For prognostic studies, summarise follow-up time (e.g. median, calculated by the reverse Kaplan–Meier method) and report how many were observed up to any time point of interest." },
+    { id: "20b", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 13b (expanded)",
+      tripod: "Report the characteristics overall and, where applicable, for each data source or setting, including the key dates, key predictors (including demographics), treatments received, sample size, number of outcome events, follow-up time, and amount of missing data. A table may be helpful. Report any differences across key demographic groups.",
+      explanation: "Report participant characteristics overall and, where relevant, by data source or setting, giving distributions (prevalence, or mean/median with SD or IQR) for all predictors — especially those in the final model — together with the ranges of continuous predictors, key dates, treatments received, sample size, number of events, follow-up time and the number/percentage of missing values per variable. Report differences across key demographic groups." },
+    { id: "20c", type: "carried", applic: "E", origin: "TRIPOD 2015 item 13c",
+      tripod: "For model evaluation, show a comparison with the development data of the distribution of important predictors (demographics, predictors, and outcome).",
+      explanation: "For evaluation studies, present the demographics, predictors and outcome of the evaluation participants alongside those of the development data, so readers can judge how similar the two populations are." },
+  ]},
+  { section: "Results — Model Development", items: [
+    { id: "21", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 14a (expanded)",
+      tripod: "Specify the number of participants and outcome events in each analysis (eg, for model development, hyperparameter tuning, model evaluation).",
+      explanation: "Report the number of participants and outcome events in each analysis — development, hyperparameter tuning and evaluation. Numbers often vary across analyses when data are missing; if univariable associations are reported, give the number without missing values for each predictor and the corresponding events, and report the numbers used for each model when several are derived or compared." },
+  ]},
+  { section: "Results — Model Specification", items: [
+    { id: "22", type: "modified", applic: "D", origin: "TRIPOD 2015 items 15a/15b (expanded)",
+      tripod: "Provide details of the full prediction model (eg, formula, code, object, application programming interface) to allow predictions in new individuals and to enable third party evaluation and implementation, including any restrictions to access or reuse (eg, freely available, proprietary).",
+      explanation: "Provide the full model so predictions can be made in new individuals and the model can be independently evaluated and implemented. For regression models this means all regression coefficients and the intercept (logistic) or the baseline survival/hazard at clinically relevant time points such as 5 or 10 years (Cox), plus the coding, measurement units, category cut points and ranges of all predictors. A model whose details remain unpublished can never be validated. State any restrictions on access or reuse (e.g. freely available or proprietary)." },
+  ]},
+  { section: "Results — Model Performance", items: [
+    { id: "23a", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 16 (expanded)",
+      tripod: "Report model performance estimates with confidence intervals, including for any key subgroups (eg, sociodemographic). Consider plots to aid presentation.",
+      explanation: "Report all performance measures specified in the methods, with confidence intervals, and consider plots (e.g. calibration plots, ROC curves) to aid presentation. For development studies, report internal-validation/optimism-corrected estimates (e.g. both the apparent and corrected c-index). Report performance for key subgroups, including sociodemographic ones, to surface differential performance." },
+    { id: "23b", type: "new", applic: "DE", origin: "New in TRIPOD+AI (clustering)",
+      tripod: "If examined, report results of any heterogeneity in model performance across clusters. See TRIPOD-Cluster for additional details.",
+      explanation: "If heterogeneity in performance across clusters (e.g. hospitals, settings, countries) was examined, report the results. Refer to TRIPOD-Cluster for additional details." },
+  ]},
+  { section: "Results — Model Updating", items: [
+    { id: "24", type: "carried", applic: "E", origin: "TRIPOD 2015 item 17",
+      tripod: "Report the results from any model updating, including the updated model and subsequent performance.",
+      explanation: "If the model was updated, report all updated elements — the re-estimated intercept, updated coefficients (e.g. via the calibration slope) and any new predictors. The updated model is effectively a new model, so report it in enough detail to allow predictions for individuals, and report its performance." },
+  ]},
+  { section: "Discussion", items: [
+    { id: "25", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 19b (expanded)",
+      tripod: "Give an overall interpretation of the main results, including issues of fairness in the context of the objectives and previous studies.",
+      explanation: "Give an overall interpretation against the study objectives, previous studies and other evidence, and address fairness. Place performance in the context of the development performance and any other validation studies, and compare the model against existing models, ideally drawing on a systematic review. For evaluation studies, discuss reasons for any differing (usually poorer) performance, such as differences in case mix, predictor or outcome definition/measurement, or follow-up time." },
+    { id: "26", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 18 (expanded)",
+      tripod: "Discuss any limitations of the study (such as a non-representative sample, sample size, overfitting, missing data) and their effects on any biases, statistical uncertainty, and generalisability.",
+      explanation: "Discuss limitations and their likely effect on bias, statistical uncertainty and generalisability. Relevant aspects include the study population and participant selection/representativeness, predictor selection, robustness of definitions and procedures, sample size relative to model complexity, length and ascertainment of follow-up, multiplicity of analyses, missing data, overfitting, the internal-validation approach, and differences between development and evaluation data. Explicitly catalogue any well-known predictors that were omitted, and treat development of a model without external validation as a major limitation by default." },
+  ]},
+  { section: "Discussion — Usability in Current Care", items: [
+    { id: "27a", type: "new", applic: "D", origin: "New in TRIPOD+AI",
+      tripod: "Describe how poor quality or unavailable input data (eg, predictor values) should be assessed and handled when implementing the prediction model.",
+      explanation: "Describe how poor-quality or unavailable input data (e.g. missing or unreliable predictor values) should be assessed and handled when the model is implemented at the point of use." },
+    { id: "27b", type: "new", applic: "D", origin: "New in TRIPOD+AI",
+      tripod: "Specify whether users will be required to interact in the handling of the input data or use of the model, and what level of expertise is required of users.",
+      explanation: "Specify whether users must interact in handling the input data or operating the model, and what level of expertise is required, since human–model interaction affects real-world performance and applicability." },
+    { id: "27c", type: "modified", applic: "DE", origin: "TRIPOD 2015 item 20 (expanded)",
+      tripod: "Discuss any next steps for future research, with a specific view to applicability and generalisability of the model.",
+      explanation: "Discuss next steps for research with a view to applicability and generalisability. Note that the effect of a model on decisions, clinician behaviour and patient outcomes can only be established in comparative (ideally randomised) impact studies, not single-cohort development or validation studies; suggested next steps may include validation in other settings, selection of decision thresholds, and assessment of additional predictors." },
+  ]},
+];
+
+let state = {};
+let paperTitle = '';
+let sectionOpen = {};
+
+function getRowsForSection(sec) {
+  return sec.items.map(item => ({
+    source: item,
+    stateId: `tripod-${item.id}`,
+    displayId: item.id,
+    shortId: item.id,
+    type: item.type,           // 'new' | 'modified' | 'carried'
+    applic: item.applic,       // 'D' | 'E' | 'DE'
+    origin: item.origin,
+    tripod: item.tripod,
+    explanation: item.explanation
+  }));
+}
+
+// kind: 'carried' = items carried over unchanged from TRIPOD 2015;
+//       'updated' = items new or modified in TRIPOD+AI; null = all items.
+function getAllRows(kind) {
+  const rows = [];
+  DATA.forEach(sec => {
+    getRowsForSection(sec).forEach(row => {
+      if (kind === 'carried' && row.type !== 'carried') return;
+      if (kind === 'updated' && row.type === 'carried') return;
+      rows.push({ ...row, section: sec.section });
+    });
+  });
+  return rows;
+}
+
+const totalItems = getAllRows().length;
+
+function loadState() {
+  try { const saved = localStorage.getItem('tripod-ai-state-v1'); if (saved) state = JSON.parse(saved); } catch(e) {}
+  try { paperTitle = localStorage.getItem('tripod-ai-paper-title') || ''; } catch(e) {}
+  try { const so = localStorage.getItem('tripod-ai-sections'); if (so) sectionOpen = JSON.parse(so); } catch(e) {}
+}
+function saveState() {
+  try { localStorage.setItem('tripod-ai-state-v1', JSON.stringify(state)); } catch(e) {}
+}
+function savePaperTitle(val) {
+  paperTitle = val;
+  try { localStorage.setItem('tripod-ai-paper-title', val); } catch(e) {}
+}
+function saveSections() {
+  try { localStorage.setItem('tripod-ai-sections', JSON.stringify(sectionOpen)); } catch(e) {}
+}
+function toggleSection(secName) {
+  sectionOpen[secName] = !sectionOpen[secName];
+  saveSections();
+  const items = document.getElementById('sec-items-' + secName.replace(/[^a-zA-Z0-9]/g,''));
+  const chevron = document.getElementById('sec-chev-' + secName.replace(/[^a-zA-Z0-9]/g,''));
+  if (sectionOpen[secName]) {
+    items.classList.remove('collapsed');
+    chevron.classList.add('open');
+  } else {
+    items.classList.add('collapsed');
+    chevron.classList.remove('open');
+  }
+}
+
+function applicLabels(a) {
+  if (a === 'D') return ['Development'];
+  if (a === 'E') return ['Evaluation'];
+  return ['Development', 'Evaluation'];
+}
+function applicLabel(a) {
+  return applicLabels(a).join('; ');
+}
+function applicTags(a) {
+  return applicLabels(a).map(l => `<span class="applic-tag">${l}</span>`).join('');
+}
+function typeBadge(t) {
+  if (t === 'new') return '<span class="item-type new">New item</span>';
+  if (t === 'modified') return '<span class="item-type modified">Modified item</span>';
+  return '<span class="item-type carried">Carried-over item</span>';
+}
+
+function render() {
+  const el = document.getElementById('checklist');
+  el.innerHTML = '';
+  DATA.forEach(sec => {
+    const rows = getRowsForSection(sec);
+    const div = document.createElement('div');
+    div.className = 'section';
+    const secRatings = rows.map(row => (state[row.stateId] || {}).rating || null);
+    const secPass = secRatings.filter(r => r === 'pass').length;
+    const secFail = secRatings.filter(r => r === 'fail').length;
+    const secNa = secRatings.filter(r => r === 'na').length;
+    const secNone = secRatings.filter(r => !r).length;
+    let badgeColor = '#d1d5db';
+    if (secNone === 0 && secFail === 0) badgeColor = 'var(--green)';
+    else if (secFail > 0) badgeColor = 'var(--red)';
+    else if (secPass > 0 || secNa > 0) badgeColor = 'var(--amber)';
+
+    const secKey = sec.section.replace(/[^a-zA-Z0-9]/g,'');
+    const isOpen = !!sectionOpen[sec.section];
+    div.innerHTML = `<div class="section-header" onclick="toggleSection('${sec.section}')"><span class="chevron ${isOpen?'open':''}" id="sec-chev-${secKey}">&#9654;</span><span>${sec.section}</span><span class="section-badge" style="background:${badgeColor}">${secPass + secNa}/${rows.length}</span></div>`;
+    const itemsContainer = document.createElement('div');
+    itemsContainer.className = 'section-items' + (isOpen ? '' : ' collapsed');
+    itemsContainer.id = 'sec-items-' + secKey;
+    rows.forEach(item => {
+      const s = state[item.stateId] || {};
+      const cls = s.rating === 'pass' ? 'green' : s.rating === 'fail' ? 'red' : s.rating === 'na' ? 'amber' : '';
+      const itemDiv = document.createElement('div');
+      itemDiv.className = `item ${cls}`;
+
+      let statementBlock = '';
+      if (item.type === 'carried') {
+        statementBlock = `
+          <div class="tripod-block">
+            <span class="tripod-label">TRIPOD+AI ${typeBadge(item.type)} ${applicTags(item.applic)}</span>
+            <span class="tripod-body">${item.tripod}</span>
+            <span class="origin-note">${item.origin}</span>
+          </div>
+          <div class="tripod-explanation">
+            <div class="explanation-text">${item.explanation}</div>
+          </div>`;
+      } else {
+        statementBlock = `
+          <div class="ai-ext">
+            <span class="ai-label">TRIPOD+AI ${typeBadge(item.type)} ${applicTags(item.applic)}</span>
+            <span class="ai-body">${item.tripod}</span>
+            <span class="origin-note">${item.origin}</span>
+          </div>
+          <div class="ai-explanation">
+            <div class="explanation-text">${item.explanation}</div>
+          </div>`;
+      }
+
+      itemDiv.innerHTML = `
+        <div class="item-header">
+          <span class="item-id">${item.shortId}</span>
+          <div class="item-main">
+            <div class="item-text">
+              ${statementBlock}
+            </div>
+          </div>
+          <div class="item-controls">
+            <div class="rag-buttons">
+              <button class="rag-btn pass ${s.rating === 'pass' ? 'active' : ''}" onclick="rate('${item.stateId}','pass')">Reported</button>
+              <button class="rag-btn fail ${s.rating === 'fail' ? 'active' : ''}" onclick="rate('${item.stateId}','fail')">Not Reported</button>
+              <button class="rag-btn na ${s.rating === 'na' ? 'active' : ''}" onclick="rate('${item.stateId}','na')">N/A</button>
+            </div>
+            <div class="item-notes">
+              <textarea id="note-${item.stateId}" placeholder="Page ref / notes..." oninput="note('${item.stateId}', this.value)">${s.notes || ''}</textarea>
+            </div>
+          </div>
+        </div>`;
+      itemsContainer.appendChild(itemDiv);
+    });
+    div.appendChild(itemsContainer);
+    el.appendChild(div);
+  });
+  updateDashboard();
+}
+
+function rate(id, rating) {
+  const scrollY = window.scrollY;
+  if (!state[id]) state[id] = {};
+  state[id].rating = state[id].rating === rating ? null : rating;
+  saveState();
+  render();
+  requestAnimationFrame(() => window.scrollTo(0, scrollY));
+}
+
+function note(id, text) {
+  if (!state[id]) state[id] = {};
+  state[id].notes = text;
+  saveState();
+}
+
+function countItems(kind) {
+  const rows = getAllRows(kind);
+  let pass = 0, fail = 0, na = 0;
+  rows.forEach(row => {
+    const r = (state[row.stateId] || {}).rating;
+    if (r === 'pass') pass++; else if (r === 'fail') fail++; else if (r === 'na') na++;
+  });
+  const total = rows.length;
+  const unrated = total - pass - fail - na;
+  const rated = pass + fail + na;
+  const pct = total > 0 ? Math.round((rated / total) * 100) : 0;
+  return { pass, fail, na, unrated, total, rated, pct };
+}
+
+function setScore(prefix, counts) {
+  document.getElementById(`score-${prefix}-total`).textContent = counts.pct + '%';
+  document.getElementById(`score-${prefix}-pass`).textContent = counts.pass;
+  document.getElementById(`score-${prefix}-fail`).textContent = counts.fail;
+  document.getElementById(`score-${prefix}-na`).textContent = counts.na;
+  document.getElementById(`score-${prefix}-unrated`).textContent = counts.unrated;
+}
+
+function updateDashboard() {
+  setScore('carried', countItems('carried'));
+  setScore('updated', countItems('updated'));
+  setScore('combined', countItems(null));
+}
+
+function expandAll() {
+  DATA.forEach(sec => { sectionOpen[sec.section] = true; });
+  saveSections();
+  document.querySelectorAll('.section-items').forEach(el => el.classList.remove('collapsed'));
+  document.querySelectorAll('.chevron').forEach(el => el.classList.add('open'));
+}
+function collapseAll() {
+  DATA.forEach(sec => { sectionOpen[sec.section] = false; });
+  saveSections();
+  document.querySelectorAll('.section-items').forEach(el => el.classList.add('collapsed'));
+  document.querySelectorAll('.chevron').forEach(el => el.classList.remove('open'));
+}
+
+function resetAll() {
+  if (!confirm('Reset all ratings and notes?')) return;
+  state = {};
+  saveState(); render();
+}
+
+function getExportTimestamp() {
+  const now = new Date();
+  const datePart = now.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  }).replace(/ /g, ' ');
+  const timePart = now.toLocaleTimeString('en-GB', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+  return `${datePart} ${timePart}`;
+}
+
+function formatRatingLabel(rating) {
+  if (rating === 'pass') return 'Reported';
+  if (rating === 'fail') return 'Not Reported';
+  if (rating === 'na') return 'N/A';
+  return 'Unrated';
+}
+
+function formatScoreSummary(label, counts) {
+  const prefix = label ? `${label}: ` : '';
+  return `${prefix}${counts.pct}% (${counts.rated} of ${counts.total}) items rated; ${counts.pass} Reported, ${counts.fail} Not Reported, ${counts.na} N/A, ${counts.unrated} Unrated`;
+}
+
+function getExportSourceUrl() {
+  return window.location.href;
+}
+
+function getExportMetadata() {
+  return {
+    paper: document.getElementById('paper-title').value.trim() || 'Not specified',
+    generated: getExportTimestamp(),
+    url: getExportSourceUrl()
+  };
+}
+
+// Every item in this tool comes from TRIPOD+AI, so the only useful distinction
+// is each item's relationship to TRIPOD 2015 — matching the on-screen tags.
+function itemTypeLabel(row) {
+  if (row.type === 'new') return 'New';
+  if (row.type === 'modified') return 'Modified';
+  return 'Carried over';
+}
+
+function getExportRows() {
+  return getAllRows().map(row => {
+    const s = state[row.stateId] || {};
+    return {
+      section: row.section,
+      item: row.shortId,
+      applic: applicLabel(row.applic),
+      itemType: itemTypeLabel(row),
+      statement: row.tripod || '',
+      rating: formatRatingLabel(s.rating),
+      notes: s.notes || ''
+    };
+  });
+}
+
+function escapeCSV(value) {
+  return String(value || '').replace(/"/g, '""');
+}
+
+function getSaveFileData() {
+  return {
+    schemaVersion: 1,
+    app: 'tripod-ai-checklist',
+    savedAt: getExportTimestamp(),
+    sourceUrl: getExportSourceUrl(),
+    paperTitle: document.getElementById('paper-title').value,
+    state,
+    sectionOpen
+  };
+}
+
+function getSafeFilenamePart(value) {
+  return String(value || '')
+    .trim()
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80) || 'tripod-ai-checklist';
+}
+
+function getFilenameTimestamp() {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  return `${yyyy}${mm}${dd}-${hh}${min}`;
+}
+
+function getExportFilename(basePaperTitle, extension) {
+  const paperPart = String(basePaperTitle || '').trim();
+  const paperSegment = paperPart ? `-${getSafeFilenamePart(paperPart)}` : '';
+  return `tripod-ai-checklist${paperSegment}-${getFilenameTimestamp()}.${extension}`;
+}
+
+function exportSaveFile() {
+  const data = getSaveFileData();
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getExportFilename(data.paperTitle, 'review.json');
+  a.click();
+}
+
+function triggerSaveFileImport() {
+  const input = document.getElementById('save-file-input');
+  input.value = '';
+  input.click();
+}
+
+function isPlainObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function importSaveFile(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!isPlainObject(data) || data.app !== 'tripod-ai-checklist' || !isPlainObject(data.state)) {
+        alert('This does not look like a valid TRIPOD+AI checklist save file.');
+        return;
+      }
+
+      if (data.schemaVersion !== 1) {
+        alert('This save file uses an unsupported version.');
+        return;
+      }
+
+      state = data.state;
+      paperTitle = typeof data.paperTitle === 'string' ? data.paperTitle : '';
+      sectionOpen = isPlainObject(data.sectionOpen) ? data.sectionOpen : {};
+      document.getElementById('paper-title').value = paperTitle;
+      saveState();
+      savePaperTitle(paperTitle);
+      saveSections();
+      render();
+      alert('Save file imported. You can continue where you left off.');
+    } catch (err) {
+      alert('Could not import this save file. Please check that it is a valid JSON save file.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function exportCSV() {
+  const metadata = getExportMetadata();
+  const exportRows = getExportRows();
+  let csv = metadata.paper ? `"Document:","${escapeCSV(metadata.paper)}"\n` : '';
+  csv += `"Generated:","${escapeCSV(metadata.generated)}"\n`;
+  csv += `"URL:","${escapeCSV(metadata.url)}"\n`;
+  csv += `"TRIPOD 2015 items only:","${escapeCSV(formatScoreSummary('', countItems('carried')))}"\n`;
+  csv += `"New or modified items only:","${escapeCSV(formatScoreSummary('', countItems('updated')))}"\n`;
+  csv += `"Combined:","${escapeCSV(formatScoreSummary('', countItems(null)))}"\n\n`;
+  csv += 'Section,Item,Applies to,Item type,Statement,Rating,Notes\n';
+  exportRows.forEach(row => {
+    csv += `"${escapeCSV(row.section)}","${escapeCSV(row.item)}","${escapeCSV(row.applic)}","${escapeCSV(row.itemType)}","${escapeCSV(row.statement)}","${escapeCSV(row.rating)}","${escapeCSV(row.notes)}"\n`;
+  });
+  const blob = new Blob([csv], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = getExportFilename(document.getElementById('paper-title').value, 'csv');
+  a.click();
+}
+
+function exportPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: 'landscape' });
+  doc.setFontSize(16);
+  doc.text('TRIPOD+AI Checklist Report', 14, 15);
+  doc.setFontSize(9);
+  const metadata = getExportMetadata();
+  let yPos = 21;
+  if (metadata.paper) {
+    doc.setFontSize(10);
+    doc.text(`Paper: ${metadata.paper}`, 14, yPos);
+    yPos += 6;
+    doc.setFontSize(9);
+  }
+  doc.text(`Generated from ${metadata.url} on ${metadata.generated}`, 14, yPos);
+  yPos += 6;
+
+  doc.text(formatScoreSummary('TRIPOD 2015 items only', countItems('carried')), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('New or modified items only', countItems('updated')), 14, yPos);
+  yPos += 5;
+  doc.text(formatScoreSummary('Combined', countItems(null)), 14, yPos);
+  yPos += 6;
+
+  const rows = getExportRows().map(row => [
+    row.section,
+    row.item,
+    row.applic,
+    row.itemType,
+    row.statement,
+    row.rating,
+    row.notes
+  ]);
+
+  doc.autoTable({
+    startY: yPos,
+    head: [['Section', 'Item', 'Applies to', 'Item type', 'Statement', 'Rating', 'Notes']],
+    body: rows,
+    styles: { fontSize: 7, cellPadding: 1.6, overflow: 'linebreak', valign: 'top' },
+    headStyles: { fillColor: [59,130,246] },
+    columnStyles: {
+      0: { cellWidth: 30 },
+      1: { cellWidth: 12 },
+      2: { cellWidth: 26 },
+      3: { cellWidth: 24 },
+      4: { cellWidth: 112 },
+      5: { cellWidth: 22 },
+      6: { cellWidth: 48 }
+    },
+    didParseCell: function(data) {
+      if (data.column.index === 5 && data.section === 'body') {
+        const v = data.cell.raw;
+        if (v === 'Reported') { data.cell.styles.textColor = [34,197,94]; data.cell.styles.fontStyle = 'bold'; }
+        else if (v === 'Not Reported') { data.cell.styles.textColor = [239,68,68]; data.cell.styles.fontStyle = 'bold'; }
+        else if (v === 'N/A') { data.cell.styles.textColor = [245,158,11]; data.cell.styles.fontStyle = 'bold'; }
+      }
+    }
+  });
+
+  doc.setFontSize(6.5);
+  const footer = 'Checklist items derived from TRIPOD 2015 and TRIPOD+AI. Explanatory summaries written for this tool. TRIPOD+AI: Collins GS et al., BMJ 2024;385:e078378, doi:10.1136/bmj-2023-078378, CC BY 4.0. TRIPOD 2015 E&E: Moons KGM et al., Ann Intern Med 2015;162:W1-73, doi:10.7326/M14-0698. Not endorsed by the original authors.';
+  const footerLines = doc.splitTextToSize(footer, doc.internal.pageSize.width - 28);
+  doc.text(footerLines, 14, doc.internal.pageSize.height - 8 - (footerLines.length - 1) * 3);
+  doc.save(getExportFilename(document.getElementById('paper-title').value, 'pdf'));
+}
+
+loadState();
+document.getElementById('paper-title').value = paperTitle;
+render();
+</script>
