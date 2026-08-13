@@ -1171,8 +1171,8 @@ en: &DEFAULT_EN
           cohort: "4"
           region: "East of England"
           profession: "Surgery"
-          project_title:
-          project_link:
+          project_title: "Quality, consistency and clinical safety of AI-generated versus clinician-written clinical notes"
+          project_link: "/assets/docs/posters/FCAI%20C4%20Grad%20Poster%20HenryBergman.pdf"
           supervisor:
           placement: "Cambridge University Hospitals NHS Foundation Trust"
           lat: "52.1750"
