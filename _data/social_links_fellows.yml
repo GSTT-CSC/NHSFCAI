@@ -213,7 +213,7 @@ bharadwaj-chada:
   - url: https://www.linkedin.com/in/bharadwajchada/
     icon: fab fa-linkedin-in
 
-will-hughes:
+william-hughes:
   - url: https://www.linkedin.com/in/drwillhughes/
     icon: fab fa-linkedin-in
 
@@ -452,11 +452,12 @@ akanimoh-osutuk:
     icon: fab fa-github
 
 matthew-newman:
+  - url: https://www.linkedin.com/in/matt-newman-medical/
+    icon: fab fa-linkedin-in
 
 vijay-shyam-sundar:
   - url: https://orcid.org/0000-0002-4331-1496
     icon: fas fa-book
-
 
 thomas-pearson:
   - url: https://www.linkedin.com/in/thomas-pearson-520338104/
@@ -608,10 +609,10 @@ sharon-davidesko:
 
 
 michael-louis:
-
+  - url: https://www.linkedin.com/in/michael-jason-louis/
+    icon: fab fa-linkedin-in
 
 janan-sakathevan:
-
   - url: https://www.linkedin.com/in/dr-janan-sakathevan-4545b22a3/
     icon: fab fa-linkedin-in
 
@@ -643,6 +644,9 @@ sejal-mistry:
 
 
 james-hazelwood:
+  - url: https://www.linkedin.com/in/james-hazelwood-3a1a811b3
+    icon: fab fa-linkedin-in
+
 
 
 elaine-leung:
