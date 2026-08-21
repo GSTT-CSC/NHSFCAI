@@ -458,6 +458,8 @@ matthew-newman:
 vijay-shyam-sundar:
   - url: https://orcid.org/0000-0002-4331-1496
     icon: fas fa-book
+  - url: https://www.linkedin.com/in/vijay-shyam-sundar-b7a0053b2/
+    icon: fab fa-linkedin-in
 
 thomas-pearson:
   - url: https://www.linkedin.com/in/thomas-pearson-520338104/
@@ -466,7 +468,7 @@ thomas-pearson:
 yen-ming-lin:
   - url: https://www.researchgate.net/profile/Yen-Lin-11?ev=hdr_xprf
     icon: fas fa-book
-  - url: https://www.linkedin.com/in/dr-yen-ming-lin-865b08247?utm_source=share_via&utm_content=profile&utm_medium=member_ios
+  - url: https://www.linkedin.com/in/dr-yen-ming-lin-865b08247
     icon: fab fa-linkedin-in
 
 
@@ -604,7 +606,7 @@ benjamin-johns:
 sharon-davidesko:
   - url: https://scholar.google.com/citations?hl=en&user=7ZDrWW7cAAAAJ&view_op=list_works&sortby=pubdate
     icon: fas fa-book
-  - url: https://www.linkedin.com/in/sharon-davidesko-250a2799?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+  - url: https://www.linkedin.com/in/sharon-davidesko-250a2799
     icon: fab fa-linkedin-in
 
 
