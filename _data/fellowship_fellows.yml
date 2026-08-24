@@ -476,7 +476,7 @@ en: &DEFAULT_EN
             Thrilled that I have the opportunity to join cohort 5 of the NHS Fellowship in Clinical AI. As a gynaecologist, I've seen how delayed diagnoses change lives, and I'm looking forward to seeing how AI can improve this in Women's Health.
 
         - name: "Elaine Leung"
-          role: "Consultant Gynaecologist"
+          role: "Surgical Gynaecological Oncologist"
           cohort: "5"
           region: "Midlands"
           profession: "Obstetrics & Gynaecology"
