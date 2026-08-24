@@ -33,9 +33,9 @@ title: Fellows & Alumni
   </div>
 
   <div class="filter-group">
-    <label for="region-filter">Region</label>
+    <label for="region-filter">Project Region</label>
     <select id="region-filter">
-      <option value="all">All Regions</option>
+      <option value="all">All Project Regions</option>
     </select>
   </div>
 
