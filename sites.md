@@ -92,8 +92,8 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
         <select id="cohort-filter"><option value="all">All Cohorts</option></select>
     </div>
     <div class="filter-group">
-        <label for="region-filter">Region</label>
-        <select id="region-filter"><option value="all">All Regions</option></select>
+        <label for="region-filter">Project Region</label>
+        <select id="region-filter"><option value="all">All Project Regions</option></select>
     </div>
     <div class="filter-group">
         <label for="profession-filter">Profession</label>
