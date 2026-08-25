@@ -32,13 +32,16 @@ bodyClass: "page-basic"
     <div class="col-12 col-lg-4 text-center">
       <div style="position: relative; display: inline-block;">
         <img class="mx-auto p-1" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;" src="{{ image_path }}" alt="">
-        {% if socials %}
+        {% if fellow_profile.flag or socials %}
         <div class="social-button-cluster">
           {% for network in socials %}
           <a href="{{ network.url }}">
             <i class="{{ network.icon }}"></i>
           </a>
           {% endfor %}
+          {% if fellow_profile.flag %}
+          <span class="fellow-flag" title="{{ page.team-member-name }}">{{ fellow_profile.flag }}</span>
+          {% endif %}
         </div>
         {% endif %}
       </div>

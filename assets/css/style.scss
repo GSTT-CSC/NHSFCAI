@@ -152,3 +152,17 @@ body {
   text-align: center;
   font-size: 17px;
 }
+
+/* Country flag for internationally based fellows: sits in the cluster but is not a link */
+.social-button-cluster .fellow-flag {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 33px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid $nhsuk-button-color;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 17px;
+}
