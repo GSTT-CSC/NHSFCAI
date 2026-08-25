@@ -92,8 +92,8 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
         <select id="cohort-filter"><option value="all">All Cohorts</option></select>
     </div>
     <div class="filter-group">
-        <label for="region-filter">Project Region</label>
-        <select id="region-filter"><option value="all">All Project Regions</option></select>
+        <label for="project-region-filter">Project Region</label>
+        <select id="project-region-filter"><option value="all">All Project Regions</option></select>
     </div>
     <div class="filter-group">
         <label for="profession-filter">Profession</label>
@@ -174,11 +174,11 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
 
     if (fellowsData && Array.isArray(fellowsData)) {
         var cohortSelect = document.getElementById('cohort-filter');
-        var regionSelect = document.getElementById('region-filter');
+        var regionSelect = document.getElementById('project-region-filter');
         var professionSelect = document.getElementById('profession-filter');
 
         var cohorts = [...new Set(fellowsData.map(i => i.cohort))].filter(Boolean);
-        var regions = [...new Set(fellowsData.map(i => i.region))].filter(Boolean).sort();
+        var regions = [...new Set(fellowsData.map(i => i.project_region))].filter(Boolean).sort();
         var professions = [...new Set(fellowsData.map(i => i.profession))].filter(Boolean).sort();
 
         function getCurrentPriorityCohort() {
@@ -316,7 +316,7 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
                 if (isNaN(lat) || isNaN(lng)) return;
 
                 if (selC !== 'all' && f.cohort !== selC) return;
-                if (selR !== 'all' && f.region !== selR) return;
+                if (selR !== 'all' && f.project_region !== selR) return;
                 if (selP !== 'all' && f.profession !== selP) return;
 
                 // Group by snapped grid so pins aggregate at low zooms...

@@ -33,9 +33,9 @@ title: Fellows & Alumni
   </div>
 
   <div class="filter-group">
-    <label for="region-filter">Project Region</label>
-    <select id="region-filter">
-      <option value="all">All Project Regions</option>
+    <label for="fellow-region-filter">Fellow Region</label>
+    <select id="fellow-region-filter">
+      <option value="all">All Fellow Regions</option>
     </select>
   </div>
 
@@ -61,7 +61,7 @@ title: Fellows & Alumni
 
       <div class="col-md-6 col-lg-3 text-center text-lg-left team-member"
            data-cohort="{{ person.cohort }}"
-           data-region="{{ person.region }}"
+           data-fellow-region="{{ person.fellow_region }}"
            data-profession="{{ person.profession }}"
            style="position: relative;">
 
@@ -86,7 +86,7 @@ title: Fellows & Alumni
         <h4>{{ person.name }}</h4>
         <p class="text-muted">{{ person.role }}</p>
 
-        {% if socials and socials.size > 0 %}
+        {% if person.flag or socials.size > 0 %}
           <div class="social-button-cluster">
             {% for social in socials limit:3 %}
               {% if social %}
@@ -95,6 +95,9 @@ title: Fellows & Alumni
                 </a>
               {% endif %}
             {% endfor %}
+            {% if person.flag %}
+              <span class="fellow-flag" title="{{ person.name }}">{{ person.flag }}</span>
+            {% endif %}
           </div>
         {% endif %}
       </div>
@@ -106,7 +109,7 @@ title: Fellows & Alumni
 <script>
 function initializeFilters() {
   const cohortFilter = document.getElementById('cohort-filter');
-  const regionFilter = document.getElementById('region-filter');
+  const regionFilter = document.getElementById('fellow-region-filter');
   const professionFilter = document.getElementById('profession-filter');
   const members = document.querySelectorAll('.team-member');
 
@@ -128,7 +131,7 @@ function initializeFilters() {
 
     members.forEach(member => {
       if (member.dataset.cohort) cohorts.add(member.dataset.cohort);
-      if (member.dataset.region) regions.add(member.dataset.region);
+      if (member.dataset.fellowRegion) regions.add(member.dataset.fellowRegion);
       if (member.dataset.profession) professions.add(member.dataset.profession);
     });
 
@@ -142,7 +145,14 @@ function initializeFilters() {
       }
     });
 
-    [...regions].sort().forEach(value => {
+    // International sits at the bottom of the list, after the alphabetised UK regions.
+    const sortedRegions = [...regions].sort();
+    const orderedRegions = [
+      ...sortedRegions.filter(value => value !== 'International'),
+      ...sortedRegions.filter(value => value === 'International')
+    ];
+
+    orderedRegions.forEach(value => {
       const option = document.createElement('option');
       option.value = value;
       option.textContent = value;
@@ -185,7 +195,7 @@ function initializeFilters() {
 
     members.forEach(member => {
       const matchCohort = cohort === 'all' || member.dataset.cohort === cohort;
-      const matchRegion = region === 'all' || member.dataset.region === region;
+      const matchRegion = region === 'all' || member.dataset.fellowRegion === region;
       const matchProfession = profession === 'all' || member.dataset.profession === profession;
 
       member.style.display = (matchCohort && matchRegion && matchProfession) ? '' : 'none';
