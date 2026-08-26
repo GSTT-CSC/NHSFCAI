@@ -279,7 +279,8 @@ en: &DEFAULT_EN
           placement: "University Hospitals of Leicester NHS Trust"
           lat: "52.6290"
           lng: "-1.1396"
-          joining_statement:
+          joining_statement: >-
+            Being part of this fellowship represents an exciting opportunity to pursue my long-standing interest in IT and its potential to transform healthcare. I’m thrilled to be starting this journey and look forward to working alongside colleagues who share the same curiosity and enthusiasm for exploring how future technologies can be meaningfully applied to clinical care. I hope to learn, contribute, and develop ideas that can make a real difference for patients and clinicians.
 
 
         - name: "Andre Ferreira"
