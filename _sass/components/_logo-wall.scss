@@ -1,0 +1,134 @@
+// The partner, co-developer and sponsor logos on /partners.
+//
+// This was the last component on the site still carrying its own <style> block
+// inside the include - pasted into the page three times over - and the last
+// content anywhere on the site that floated bare on the page background rather
+// than sitting in the white card used by the feature cards on the home page,
+// the people tiles on /fellows and the tables on /apply.
+//
+// Two things were wrong with it beyond the missing card.
+//
+// It was a centred flex-wrap, so every row held a different number of logos
+// and each row was centred on its own: nothing lined up vertically, and a
+// section whose count did not divide evenly ended on a single orphan logo
+// stranded in the middle of the page. It is a grid now, so the columns are
+// columns.
+//
+// And it sized logos by height alone - `height: 100px` with the width left to
+// follow. Wordmarks are far wider than they are tall, so that made a wide one
+// four times the area of a square one: HEIW rendered 376px across while Public
+// Digital rendered 100px, from the same rule. Each logo now fits inside a box
+// that is bounded on both axes, so a wide mark shrinks to fit rather than
+// dominating its neighbours.
+
+$logo-blue: #005eb8;
+$logo-border: #d8dde0;
+$logo-muted: #425563;
+$logo-shadow: 0 1px 2px rgba(33, 43, 50, 0.06), 0 6px 16px rgba(33, 43, 50, 0.05);
+
+.logo-wall {
+  display: grid;
+  // Counted columns rather than auto-fill. auto-fill sizes itself from the
+  // container, and the content column is wider on a desktop than the 770px it
+  // measures at the md breakpoint - so the wall silently became five columns
+  // of 171px on a full-width browser, which is smaller than a logo wants to be
+  // read at. Two, three and four, decided here rather than by arithmetic.
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  margin: 1.25rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+// Nested inside .logo-wall on purpose. The wall sits inside the page layout's
+// .content wrapper, whose `.content a` and `.content img` rules are more
+// specific than a lone block class and would otherwise win.
+.logo-wall .logo-wall__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  // Every card in a row matches the tallest, so a section that mixes labelled
+  // and unlabelled entries still reads as a grid.
+  height: 100%;
+  padding: 20px 14px;
+  background-color: #fff;
+  border: 1px solid $logo-border;
+  border-radius: 12px;
+  box-shadow: $logo-shadow;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $logo-blue;
+    box-shadow: 0 2px 4px rgba(33, 43, 50, 0.08), 0 10px 24px rgba(33, 43, 50, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}
+
+// The fixed box that gives every logo the same optical weight. The height is
+// held whether or not the image has loaded, so the grid does not reflow as the
+// logos arrive.
+//
+// The logo files themselves were trimmed to their marks at the same time this
+// was written. Several carried a third to three quarters of their canvas as
+// empty margin - Hardian Health and Scripps were around 70% padding - so the
+// frame was being filled by whitespace and the mark inside it came out half
+// the size of its neighbours'.
+//
+// Logos drawn on a coloured tile - public digital, Bright, Microsoft AI, the
+// AI Incubator, Meridian, PSD Scotland, HEIW - were deliberately left alone.
+// The tile is part of the mark and the space inside it is the brand's own
+// clear space, so trimming to the ink makes the wordmark look like it is
+// bleeding off its own logo. If you add a tile-backed logo, do not crop it.
+.logo-wall .logo-wall__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+
+  @include media-breakpoint-up(md) {
+    height: 76px;
+  }
+}
+
+.logo-wall .logo-wall__item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+.logo-wall .logo-wall__label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: $logo-muted;
+}
+
+// The lift is decoration; the border and shadow carry the hover state.
+@media (prefers-reduced-motion: reduce) {
+  .logo-wall .logo-wall__item {
+    transition: none;
+
+    &:hover,
+    &:focus-visible {
+      transform: none;
+    }
+  }
+}

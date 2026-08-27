@@ -27,12 +27,34 @@
     margin-top: 30px;
     margin-bottom: 20px;
   }
+  // Top-level sections are separated by the same hairline the data tables and
+  // the disclosure accordions use. Without it the only thing marking a section
+  // boundary was the heading's own margin, so a page like /apply read as one
+  // continuous column while the accordions inside it were visibly ruled off.
   h2 {
     font-family: $font-family-base;
     font-size: 26px;
     font-weight: normal;
     line-height: 1.4;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid #d8dde0;
+  }
+
+  // A rule separates a section from the one before it, so the first section on
+  // a page has nothing to be separated from.
+  > h2:first-of-type {
     margin-top: 30px;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  // A run of disclosures already closes with its own rule. Where a section ends
+  // in one, that rule is the boundary - drawing the heading's as well would put
+  // two lines within 40px of each other.
+  details + h2 {
+    padding-top: 0;
+    border-top: 0;
   }
   h3 {
     font-family: $font-family-base;
@@ -85,9 +107,12 @@
       border-top: 1px solid $white-offset;
     }
   }
+  // Markdown blockquotes. The site's own quotes use .pull-quote in
+  // components/quote; this is the fallback for a bare `>` in a page's
+  // markdown, kept on-palette rather than the old salmon rule.
   blockquote {
-    padding: 0 1em;
+    padding: 2px 0 2px 18px;
     color: $steel;
-    border-left: .25em solid $secondary;
+    border-left: 3px solid #d8dde0;
   }
 }

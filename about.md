@@ -23,11 +23,25 @@ The fellowship is delivered by the [Clinical Scientific Computing team](https://
 ## Testimonials
 
 {% for t in site.data.testimonials %}
-<div style="display: flex; align-items: center; margin-bottom: 2rem;">
-  <img class="mx-auto p-1" style="width: 150px; border-radius: 50%; flex-shrink: 0; margin-right: 1rem;" src="{{ t.image }}" alt="{{ t.name }} headshot">
-  <p>
-    <em>{{ t.text }}</em><br/><br/>
-    <a href="{{ t.link }}">{{ t.name }}</a> ({{ t.year }}), {{ t.role }}
-  </p>
-</div>
+<figure class="testimonial">
+  <img class="testimonial__photo"
+       src="{{ t.image }}"
+       alt=""
+       width="96"
+       height="96"
+       loading="lazy"
+       decoding="async"
+       onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';">
+  <blockquote class="pull-quote">
+    <p>{{ t.text | strip }}</p>
+  </blockquote>
+  <figcaption class="testimonial__source">
+    {%- if t.link %}
+    <a class="testimonial__name" href="{{ t.link }}">{{ t.name }}</a>
+    {%- else %}
+    <span class="testimonial__name">{{ t.name }}</span>
+    {%- endif %}
+    <span class="testimonial__role">{{ t.role }} &middot; {{ t.year }}</span>
+  </figcaption>
+</figure>
 {% endfor %}

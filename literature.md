@@ -9,30 +9,20 @@ Find below the supporting literature which describes the benefits and outputs of
 
 <!-- Supporting Literature -->
 <div class="data-table-wrap">
-<table class="data-table">
-  <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Authors</th>
-      <th scope="col">Description</th>
+<table class="data-table data-table--literature" role="table">
+  <thead role="rowgroup">
+    <tr role="row">
+      <th scope="col" role="columnheader">Title</th>
+      <th scope="col" role="columnheader">Authors</th>
+      <th scope="col" role="columnheader">Description</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody role="rowgroup">
   {% for item in site.data.literature %}
-  <tr>
-    <td>
-      {% if item.link %}
-        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
-      {% else %}
-        {{ item.title }}
-      {% endif %}
-    </td>
-    <td>
-      {{ item.authors }}
-    </td>
-    <td>
-      {{ item.description }}
-    </td>
+  <tr role="row">
+    <td role="cell">{% include data-title.html title=item.title link=item.link external=true %}</td>
+    <td role="cell" class="dt-desc" data-label="Authors">{{ item.authors }}</td>
+    <td role="cell" class="dt-desc" data-label="Description">{{ item.description }}</td>
   </tr>
   {% endfor %}
   </tbody>

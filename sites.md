@@ -17,6 +17,28 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
         z-index: 1;
     }
     
+    /* .content img gives every image 20px vertical margins. Leaflet builds its
+       tiles and pin faces as <img>s, so that rule pushes the whole tile layer
+       20px down the container and offsets each pin inside its own marker. */
+    .leaflet-container .leaflet-tile,
+    .leaflet-container .leaflet-marker-icon img {
+        margin: 0;
+    }
+
+    /* Leaflet 1.9 blends tiles with `mix-blend-mode: plus-lighter` so they can
+       fade in without seams. The map sits in a centred Bootstrap container, so
+       tiles almost never land on whole device pixels; every tile edge is then
+       antialiased, and plus-lighter *adds* the two edges where they meet,
+       drawing a bright line down each tile boundary. Blend normally instead,
+       and give tiles half a pixel of overlap so those antialiased edges cover
+       one another rather than letting the grey container background through.
+       Leaflet still positions tiles on the 256px grid, so nothing shifts. */
+    .leaflet-container img.leaflet-tile {
+        mix-blend-mode: normal;
+        width: 256.5px !important;
+        height: 256.5px !important;
+    }
+
     /* MODIFIED FACE PIN STYLING */
     /* Fixed 70px dimensions removed so JS can handle dynamic scaling */
     .map-pin-face {

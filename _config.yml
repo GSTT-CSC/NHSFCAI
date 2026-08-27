@@ -11,9 +11,6 @@ logo:
   desktop_height: "32px"
   desktop_width: "90px"
 
-home:
-  limit_services: 7
-
 collections:
   team:
     output: true

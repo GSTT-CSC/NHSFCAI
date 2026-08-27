@@ -41,47 +41,50 @@ description: The fellows and alumni of the NHS Fellowship in Clinical AI, filter
       {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
       {% assign socials = site.data.social_links_fellows[url_name] %}
 
-      <div class="col-md-6 col-lg-3 text-center text-lg-left team-member"
+      <div class="col-6 col-md-4 col-lg-3 team-member"
            data-cohort="{{ person.cohort }}"
            data-fellow-region="{{ person.fellow_region }}"
-           data-profession="{{ person.profession }}"
-           style="position: relative;">
-
-        <a href="{{ page_url }}">
-          <img
-            class="mx-auto p-1"
-            style="width: 250px; border-radius: 50%;"
-            src="{{ image_path }}"
-            onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
-            alt="{{ person.name }}"
-            width="250"
-            height="250"
-            decoding="async"
-            {% if forloop.index <= 4 %}
-              loading="eager" fetchpriority="high"
-            {% else %}
-              loading="lazy" fetchpriority="low"
-            {% endif %}
-          />
-        </a>
-
-        <h2 class="team-member__name">{{ person.name }}</h2>
-        <p class="text-muted">{{ person.role }}</p>
-
-        {% if person.flag or socials.size > 0 %}
-          <div class="social-button-cluster">
-            {% for social in socials limit:3 %}
-              {% if social %}
-                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
-                  <i class="{{ social.icon }}"></i>
-                </a>
+           data-profession="{{ person.profession }}">
+        <div class="people-card">
+          <div class="people-card__photo">
+            <img
+              src="{{ image_path }}"
+              onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
+              alt=""
+              width="170"
+              height="170"
+              decoding="async"
+              {% if forloop.index <= 4 %}
+                loading="eager" fetchpriority="high"
+              {% else %}
+                loading="lazy" fetchpriority="low"
               {% endif %}
-            {% endfor %}
+            />
             {% if person.flag %}
-              <span class="fellow-flag" title="{{ person.name }}">{{ person.flag }}</span>
+              <span class="people-card__flag" aria-hidden="true">{{ person.flag }}</span>
+            {% endif %}
+            {% if socials.size > 0 %}
+              <div class="people-card__social">
+                {% for social in socials limit:3 %}
+                  {% if social %}
+                    <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
+                      <i class="{{ social.icon }}" aria-hidden="true"></i>
+                      <span class="visually-hidden">{{ person.name }} on {{ social.name | default: "social media" }}</span>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
             {% endif %}
           </div>
-        {% endif %}
+
+          {% comment %}
+            The name carries the link, and stretched-link makes the whole card
+            clickable. The portrait is decorative once the name is the link
+            text, so it takes an empty alt rather than repeating the name.
+          {% endcomment %}
+          <h2 class="people-card__name"><a class="stretched-link" href="{{ page_url }}">{{ person.name }}</a></h2>
+          <p class="people-card__role">{{ person.role }}</p>
+        </div>
       </div>
     {% endfor %}
 

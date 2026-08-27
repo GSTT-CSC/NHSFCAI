@@ -19,31 +19,35 @@ Contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
         {% assign image_path = "/images/faculty/" | append: url_name | append: ".jpg" %}
         {% assign socials = site.data.social_links_faculty[url_name] %}
 
-        <div class="col-md-6 col-lg-3 text-center text-lg-left team-member"
+        <div class="col-6 col-md-4 col-lg-3 team-member"
              data-role="{{ person.role }}"
              data-background="{{ person.background }}">
-          <div style="position: relative; display: inline-block;">
-            <a href="{{ page_url }}">
-              <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path }}" onerror="this.onerror=null;this.src='/images/faculty/default.jpg';" alt="{{ person.name }}">
-            </a>
-            {% if socials.size > 0 %}
-              <div class="social-button-cluster">
-                {% for social in socials limit:2 %}
-                  <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
-                    <i class="{{ social.icon }}" aria-hidden="true"></i>
-                    <span class="visually-hidden">{{ person.name }} on {{ social.name | default: "social media" }}</span>
-                  </a>
-                {% endfor %}
-              </div>
+          <div class="people-card people-card--faculty">
+            <div class="people-card__photo">
+              <img src="{{ image_path }}"
+                   onerror="this.onerror=null;this.src='/images/faculty/default.jpg';"
+                   alt=""
+                   width="170"
+                   height="170"
+                   decoding="async">
+              {% if socials.size > 0 %}
+                <div class="people-card__social">
+                  {% for social in socials limit:2 %}
+                    <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
+                      <i class="{{ social.icon }}" aria-hidden="true"></i>
+                      <span class="visually-hidden">{{ person.name }} on {{ social.name | default: "social media" }}</span>
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+
+            <h2 class="people-card__name"><a class="stretched-link" href="{{ page_url }}">{{ person.name }}</a></h2>
+            <p class="people-card__role">{{ person.role }}</p>
+            {% if person.background %}
+            <p class="people-card__role">{{ person.background }}</p>
             {% endif %}
           </div>
-
-          <h2 class="team-member__name">{{ person.name }}</h2>
-          <p class="text-muted">{{ person.role }}</p>
-          {% if person.background %}
-          <p class="text-muted">{{ person.background }}</p>
-          {% endif %}
-
         </div>
       {% endif %}
     {% endfor %}

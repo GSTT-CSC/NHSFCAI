@@ -2,93 +2,58 @@
 layout: default
 bodyClass: "page-home"
 ---
+{%- comment -%}
+  The home page arrangement: a blue banner with the heading, the button and the
+  photographs, then a grey strip with the introduction and the cards.
+
+  None of the words are here. The heading, tagline, button, photographs and
+  cards all come from the front matter of index.md, and the introduction under
+  the banner is that file's body text - so editing the home page means editing
+  index.md and nothing else. Change this file only to move things around.
+{%- endcomment -%}
 
 <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        {{ content }}
-        {% if page.show_call_box %}
-          {% include call.html show_button=true %}
-        {% endif %}
+      <div class="col-12 col-md-7 col-lg-6">
+        <h1>{{ page.title }}</h1>
+        {%- if page.tagline %}
+        <p>{{ page.tagline }}</p>
+        {%- endif %}
 
-        <div style="margin-top: 2rem;">
-          <a href="/apply" style="display: inline-flex; align-items: center; background-color: #ffffff; color: #005eb8; padding: 0.9rem 2rem; font-weight: 700; font-size: 1.25rem; border-radius: 12px; text-decoration: none; line-height: 1; border: 2px solid #005eb8;">
-            Apply
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="margin-left: 0.5rem; flex-shrink: 0;">
-              <path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm-.3 5.8a1 1 0 1 0-1.5 1.4l2.9 2.8-2.9 2.8a1 1 0 0 0 1.5 1.4l3.5-3.5c.4-.4.4-1 0-1.4Z" />
-            </svg>
-          </a>
-        </div>
+        {%- if page.cta %}
+        <a class="hero-cta" href="{{ page.cta.url }}">
+          {{ page.cta.text }}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm-.3 5.8a1 1 0 1 0-1.5 1.4l2.9 2.8-2.9 2.8a1 1 0 0 0 1.5 1.4l3.5-3.5c.4-.4.4-1 0-1.4Z" />
+          </svg>
+        </a>
+        {%- endif %}
       </div>
-      {% if page.intro_image %}
 
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <div class="intro-gallery">
-          <img src="images/homepage_gallery/homepage_image_cohort1.jpg" alt="A fellow presenting their clinical AI post at graduation" class="gallery-slide active" />
-          <img src="images/homepage_gallery/homepage_image_c5_discussion.jpg" alt="A fellow asking a question during a workshop" class="gallery-slide" />
-          <img src="images/homepage_gallery/homepage_image_c5_bootcamp.jpg" alt="Cohort 5 fellows at the bootcamp working through a demonstration of an AI model on hand radiographs" class="gallery-slide" />
-          <img src="images/homepage_gallery/homepage_image_c5_problemsolving.jpg" alt="Fellows discussing a clinical AI problem around a table during a workshop" class="gallery-slide" />
-        </div>
+      {%- if page.gallery %}
+      <div class="col-12 col-md-5 col-lg-6 position-relative">
+        {% include hero-gallery.html slides=page.gallery %}
       </div>
-      {% endif %}
+      {%- endif %}
     </div>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const slides = document.querySelectorAll('.gallery-slide');
-      let currentIndex = 0;
-
-      function showNextSlide() {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add('active');
-      }
-
-      setInterval(showNextSlide, 10000); // Change every 10 seconds
-    });
-  </script>
 </div>
 
 <div class="strip strip-grey">
   <div class="container pt-3 pb-6 pt-md-4 pb-md-10">
     <div class="row justify-content-center">
       <div class="col-12">
-        <p class="home-subtext h5 mb-4">
-          The <i>NHS Fellowship in Clinical AI</i> is a 12-month programme integrated part-time alongside clinical work <a href="assets/docs/FCAI_Benefits_Realisation_August2025v2.pdf" target="_blank" rel="noopener noreferrer">
-    to realise the benefit of AI in healthcare.
-  </a>
-          Fellows are recruited from a diverse clinical workforce, and gain experience deploying and evaluating AI in clinical workflows under expert supervision in multidisciplinary NHS teams.
-          <br><br> Our fellows are smart and energetic healthcare leaders who are helping to make
-          <a href="https://assets.publishing.service.gov.uk/media/6888a0b1a11f859994409147/fit-for-the-future-10-year-health-plan-for-england.pdf#page=100" target="_blank" rel="noopener noreferrer">
-    the NHS the most AI-enabled workforce in the world by 2035.
-  </a>
-        </p>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          <div class="feature-image"><img alt="Real-World AI Projects logo" src="/images/features/noun-hand-7896364.svg" width="100" height="100" /></div>
-          <h2 class="feature-title"><a href="/sites">Real-world AI Projects</a></h2>
-          <div class="feature-content">Hands-on experience on NHS clinical AI projects under expert supervision</div>
+        <div class="home-intro mb-4">
+          {{ content }}
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          <div class="feature-image"><img alt="Cutting-Edge Curriculum logo" src="/images/features/noun-book-and-lightbulb-7963226.svg" width="100" height="100" /></div>
-          <h2 class="feature-title"><a href="/curriculum">Cutting-Edge Curriculum</a></h2>
-          <div class="feature-content">Bespoke workshops from UK and international experts in clinical AI</div>
-        </div>
+      {%- for feature in page.features %}
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        {% include feature-card.html feature=feature %}
       </div>
-
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          <div class="feature-image"><img alt="Network of Expertise logo" src="/images/features/noun-networking-7857539.svg" width="100" height="100" /></div>
-          <h2 class="feature-title"><a href="/fellows">Network of Expertise</a></h2>
-          <div class="feature-content">An active and enduring community of clinical AI leaders</div>
-        </div>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </div>

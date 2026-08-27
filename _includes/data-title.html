@@ -1,0 +1,24 @@
+{%- comment -%}
+  Renders a listing entry's headline. Titles in _data/ carry their source and
+  date after a <br>:
+
+    Beyond Validation- ...<br><i>Journal of Medical Systems</i> 2026;50:98
+
+  Splitting on the break gives a linked title and a quiet meta line, and keeps
+  the journal reference out of the link text. The same .entry-* classes are
+  used by profile-link.html, so a publication looks the same on /publications
+  as it does on the fellow's own page.
+
+    {% include data-title.html title=item.title link=item.link %}
+    {% include data-title.html title=item.title link=item.link external=true %}
+{%- endcomment -%}
+{%- assign title_parts = include.title | replace: '<br />', '<br>' | replace: '<br/>', '<br>' | split: '<br>' -%}
+{%- assign headline = title_parts[0] | strip -%}
+{%- if include.link -%}
+<a class="entry-title" href="{{ include.link }}"{% if include.external %} target="_blank"{% endif %}>{{ headline }}</a>
+{%- else -%}
+<span class="entry-title">{{ headline }}</span>
+{%- endif -%}
+{%- if title_parts.size > 1 -%}
+<span class="entry-meta">{{ title_parts | slice: 1, 8 | join: ' ' | strip }}</span>
+{%- endif -%}

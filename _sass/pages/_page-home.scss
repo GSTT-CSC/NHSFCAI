@@ -1,2 +1,40 @@
 .page-home {
 }
+
+// The paragraph under the banner introducing the fellowship.
+//
+// This was a <p class="home-subtext h5"> - a Bootstrap heading class used to
+// size body copy, which also brought a 1.2 line-height, so the longest passage
+// of text on the site was also the most tightly leaded. Its two paragraphs were
+// separated by <br><br> rather than being two paragraphs. Now real paragraphs,
+// set at reading size and measure, in the same ink as the card copy beneath it.
+
+.home-intro {
+  max-width: 62rem;
+  margin-inline: auto;
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #425563;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Links in a run of body copy need to be underlined to be found; the site's
+  // default is underline-on-hover, which is fine for navigation and not for
+  // prose.
+  a {
+    color: #005eb8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover,
+    &:focus {
+      color: #003087;
+    }
+  }
+}

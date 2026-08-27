@@ -1,40 +1,24 @@
+{%- comment -%}
+  A wall of partner logos on /partners. Takes a list from _data/ - each entry
+  needs a `name`, a `url` and a `logo`, and may carry a `label` shown as a
+  quiet caption under the mark.
+
+    {% include logo-wall.html items=site.data.sponsors %}
+
+  The logo is the link text, so its alt is the organisation's name rather than
+  empty - a reader who cannot see the mark still knows where the link goes.
+  Styling lives in components/logo-wall; this used to carry its own <style>
+  block, which the page then repeated once per section.
+{%- endcomment -%}
 <div class="logo-wall">
-  {% for item in include.items %}
-    <a class="logo-wall__item" href="{{ item.url }}" target="_blank" rel="noopener">
-      <img src="{{ item.logo }}" alt="{{ item.name }}">
-      {% if item.label %}
-        <span class="logo-wall__label">{{ item.label }}</span>
-      {% endif %}
-    </a>
-  {% endfor %}
+  {%- for item in include.items %}
+  <a class="logo-wall__item" href="{{ item.url }}" target="_blank" rel="noopener">
+    <span class="logo-wall__frame">
+      <img src="{{ item.logo }}" alt="{{ item.name }}" loading="lazy" decoding="async">
+    </span>
+    {%- if item.label %}
+    <span class="logo-wall__label">{{ item.label }}</span>
+    {%- endif %}
+  </a>
+  {%- endfor %}
 </div>
-
-<style>
-.logo-wall {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 20px 0;
-}
-
-.logo-wall__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-}
-
-.logo-wall img {
-  height: 100px;   /* keeps logos uniform height */
-  object-fit: contain;
-}
-
-.logo-wall__label {
-  margin-top: 8px;
-  color: #000;
-  font-size: 0.95rem;
-  line-height: 1.3;
-}
-</style>

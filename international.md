@@ -22,7 +22,7 @@ Dual fellows have an integrated programme of two parallel placements in world-cl
 * **5 Oct 2026**: Applications open
 * **Early Oct 2026**: Applicant webinar with Q&A
 * **TBC**: *International Application Form* deadline — confirmed when applications open
-* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
+* **TBC**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: Remote interviews
 * **Feb 2027**: Outcomes of interviews, project matching
 * **Aug 2027**: Fellowship Cohort 6 begins
@@ -44,25 +44,37 @@ notice. A final list will be provided to applicants upon reaching the stage of r
 preferences.
 
 ## Person specification
-<details markdown="1">
-<summary>Essential criteria</summary>
 
-* Communicates effectively with key stakeholders in clinical AI including: hospital
-management, patients, clinicians, regulatory bodies, and software developers
-* Works energetically as a vital member of an agile multidisciplinary team including data
-scientists, medical physicists, IT, health economists, and clinicians
-* Has advanced ICT proficiency (e.g. using advanced functions in Office applications), and the
-ability to rapidly learn new skills and solve technical problems
-</details>
-
-<details markdown="1">
-<summary>Desirable criteria</summary>
-
-* Experience in quality improvement projects, clinical trials
-* Experience in digital transformation, clinical informatics (DICOM, HL7, etc)
-* Experience in programming, mathematics, statistical analysis
-</details>
-
+<table class="person-spec">
+  <thead>
+    <tr>
+      <th scope="col">Requirement</th>
+      <th scope="col">Criterion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Essential</th>
+      <td>Communicates effectively with key stakeholders in clinical AI including: hospital management, patients, clinicians, regulatory bodies, and software developers</td>
+    </tr>
+    <tr>
+      <td>Works energetically as a vital member of an agile multidisciplinary team including data scientists, medical physicists, IT, health economists, and clinicians</td>
+    </tr>
+    <tr>
+      <td>Has advanced ICT proficiency (e.g. using advanced functions in Office applications), and the ability to rapidly learn new skills and solve technical problems</td>
+    </tr>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Desirable</th>
+      <td>Experience in quality improvement projects, clinical trials</td>
+    </tr>
+    <tr>
+      <td>Experience in digital transformation, clinical informatics (DICOM, HL7, etc)</td>
+    </tr>
+    <tr>
+      <td>Experience in programming, mathematics, statistical analysis</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Resources for applicants
 * [Fellowship curriculum](/curriculum)

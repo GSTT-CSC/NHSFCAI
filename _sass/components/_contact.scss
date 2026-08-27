@@ -24,11 +24,16 @@
     border: 1px solid #d8dde0;
     padding: 1.25rem;
 
+    // _content.scss rules every h2 off from the section above it. Inside a
+    // card the heading is the top of its own box, so that rule reads as a
+    // stray line under the border rather than a section boundary.
     h2 {
       font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.35;
       margin: 0 0 0.5rem;
+      padding-top: 0;
+      border-top: 0;
       color: #005eb8;
     }
 

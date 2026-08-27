@@ -49,3 +49,64 @@
   padding-top: 100px;
   padding-bottom: 30px;
 }
+
+// ---------------------------------------------------------------------------
+// The Apply button in the hero
+// ---------------------------------------------------------------------------
+// The site's main call to action, previously ~380 characters of inline style
+// pasted onto the anchor - with a 2px #005eb8 border sitting on the #005eb8
+// banner, so the border did nothing, and no hover or focus state at all on the
+// one link the page is built around. Same move as .btn-action in
+// components/buttons, reversed for the blue banner.
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.9rem 2rem;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  color: $primary;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    background-color: #e8f1f8;
+    border-color: #e8f1f8;
+    color: #003087;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  // NHS.UK focus state - black on yellow, which reads on the blue banner as a
+  // white ring never would.
+  &:focus-visible {
+    outline: 3px solid transparent;
+    background-color: #ffeb3b;
+    border-color: #ffeb3b;
+    box-shadow: 0 -2px #ffeb3b, 0 4px #212b32;
+    color: #212b32;
+    text-decoration: none;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
