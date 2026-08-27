@@ -1,6 +1,9 @@
 .main-menu {
   display: none;
-  @include media-breakpoint-up(md) {
+  // Appears from lg up. Below that the hamburger is used, which handles the
+  // two levels properly. This used to switch at md (768px), where the seven
+  // top-level items overflowed the header by ~270px.
+  @include media-breakpoint-up(lg) {
     display: block;
   }
   > ul {
@@ -10,12 +13,19 @@
     > li {
       position: relative;
       list-style: none;
-      font-size: 1.3rem;
+      // Tighter between lg and xl so seven items fit a laptop viewport.
+      font-size: 1.05rem;
+      @include media-breakpoint-up(xl) {
+        font-size: 1.3rem;
+      }
       // Parents with a submenu render as a <button>, so it is not announced
       // as a link to somewhere. Both share the same appearance.
       > a,
       > .main-menu__parent {
-        padding: 10px 12px 10px 12px;
+        padding: 10px 8px;
+        @include media-breakpoint-up(xl) {
+          padding: 10px 12px;
+        }
         display: inline-block;
         font-weight: normal;
         font-size: inherit;

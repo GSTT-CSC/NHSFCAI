@@ -45,14 +45,15 @@
 }
 
 .footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem 2.5rem;
-  flex: 2 1 28rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  align-items: start;
+  gap: 2rem 2rem;
+  flex: 2 1 30rem;
 }
 
 .footer-nav__group {
-  min-width: 8rem;
+  min-width: 0;
 
   ul {
     list-style: none;

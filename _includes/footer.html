@@ -10,24 +10,34 @@
 
       <nav class="footer-nav" aria-label="Footer">
         {% assign mainmenu = site.data.menus.main | sort: 'weight' %}
-        {% for item in mainmenu %}
+        {% assign parents = mainmenu | where_exp: "i", "i.children" %}
+        {% assign singles = mainmenu | where_exp: "i", "i.children == nil" %}
+        {% for item in parents %}
           <div class="footer-nav__group">
-            <h3 class="footer-nav__heading">
-              {% if item.url %}
-                <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-              {% else %}
-                {{ item.name }}
-              {% endif %}
-            </h3>
-            {% if item.children %}
-              <ul>
-                {% for child in item.children %}
-                  <li><a href="{{ child.url | relative_url }}">{{ child.name }}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
+            <h3 class="footer-nav__heading">{{ item.name }}</h3>
+            <ul>
+              {% for child in item.children %}
+                <li><a href="{{ child.url | relative_url }}">{{ child.name }}</a></li>
+              {% endfor %}
+            </ul>
           </div>
         {% endfor %}
+
+        {% comment %}
+          Top-level items with no children have no column to title, so they
+          share one untitled column rather than each becoming a heading with
+          nothing underneath it.
+        {% endcomment %}
+        {% if singles.size > 0 %}
+          <div class="footer-nav__group">
+            <h3 class="footer-nav__heading">More</h3>
+            <ul>
+              {% for item in singles %}
+                <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
       </nav>
     </div>
   </div>
