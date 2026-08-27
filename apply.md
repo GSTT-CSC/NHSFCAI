@@ -1,14 +1,14 @@
 ---
 layout: page
 permalink: /apply/
-title: Apply for Cohort 6 (Aug 2027 - Aug 2028) <br>NHS Applicants
+title: "Apply: NHS applicants"
 description: How NHS clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting August 2027.
 ---
 
 <div class="status-box" markdown="1">
 Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
 
-Applications close at 23:45 GMT on 6 November 2026.
+Applications close at 23:45 GMT on 16 November 2026.
 </div>
 
 This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
@@ -30,28 +30,13 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **5 Oct 2026**: Applications open
 * **Early Oct 2026**: Applicant webinar with Q&A
 * **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
-* **11 Dec 2026**: Sponsorship confirmation deadline for nominated applicants (non-competitive recruitment) — the sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) by this date
+* **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for nominated applicants (non-competitive recruitment)
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent (competitive applicants)
 * **13-29 Jan 2027**: Remote interviews (specific dates listed below in 'Eligibility')
 * **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
 * **Aug 2027**: Fellowship Cohort 6 begins
 
 All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from August 2027 to August 2028. Applicants <b>will not be interviewed</b> without this.
-
-<details markdown="1">
-<summary>Cohort 5 timeline (closed)</summary>
-
-Applications for Cohort 5, starting August 2026, closed on 15 Dec 2025. The cycle ran as follows:
-
-* 10 Nov 2025: Recruitment opens
-* 24 Nov 2025: [Applicant webinar with Q&A](https://www.youtube.com/watch?v=SsONx1jAGxE)
-* 15 Dec 2025, 23:45 GMT: Application and Approval in Principle deadline
-* 13-14 Jan 2026: Shortlisting outcomes and remote interviews offered
-* 20-29 Jan 2026: Remote interviews
-* Feb 2026: Outcomes of interviews and matching of fellows to AI projects
-* Aug 2026: Fellowship Cohort 5 begins
-
-</details>
 
 ## Applicant webinar
 
