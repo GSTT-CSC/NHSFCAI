@@ -27,15 +27,21 @@ Dual fellows have an integrated programme of two parallel placements in world-cl
 * **Feb 2027**: Outcomes of interviews, project matching
 * **Aug 2027**: Fellowship Cohort 6 begins
 
-<div class="action-buttons">
-  <span class="btn-action btn-action--disabled">Application form opens 5 Oct 2026</span>
-</div>
 
 ## Applicant webinar
 
-The Cohort 6 applicant webinar takes place in early October 2026. The sign-up link is published here when applications open.
+The applicant webinar covers the features and curriculum of the fellowship, addresses frequently asked questions, and invites Q&A from applicants.
 
-The webinar covers the features and curriculum of the fellowship, addresses frequently asked questions, and invites Q&A from applicants.
+The Cohort 6 webinar takes place in early October 2026. The sign-up link is published here when applications open.
+
+<details markdown="1">
+<summary>Cohort 5 webinar (closed)</summary>
+
+[Cohort 5 applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) — 24 Nov 2025, 12:00-13:00 GMT.
+
+This was a live event and registration is closed. It is listed for reference only; it does not register you for the Cohort 6 webinar.
+
+</details>
 
 
 ## Clinical AI project list
