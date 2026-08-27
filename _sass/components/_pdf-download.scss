@@ -1,0 +1,71 @@
+// PDF viewer plus a download card. The embedded viewer is hidden on small
+// screens (mobile browsers render PDF iframes poorly or not at all); the card
+// below it is always shown, so the page still says something useful on a phone.
+
+.pdf-embed {
+  width: 100%;
+  aspect-ratio: 1 / 1.414;
+  border: 1px solid #d8dde0;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.pdf-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #d8dde0;
+  border-left: 8px solid #005eb8;
+  background: #fff;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+
+  &__icon {
+    color: #005eb8;
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    flex: 1 1 14rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: #212b32;
+    margin: 0 0 0.15rem;
+  }
+
+  &__meta {
+    color: #4c6272;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  &__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #005eb8;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 2px solid #005eb8;
+    flex-shrink: 0;
+
+    &:hover,
+    &:focus {
+      background: #003d78;
+      border-color: #003d78;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

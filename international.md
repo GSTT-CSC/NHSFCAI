@@ -1,54 +1,66 @@
 ---
 layout: page
 permalink: /international/
-title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>International Applicants
+title: Apply for Cohort 6 (Aug 2027 - Aug 2028) <br>International Applicants
+description: How international clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting August 2027.
 ---
-_Last updated: 10 Aug 2026_ 
-<br>
 
-<div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
-  <p style="margin: 0; font-weight: 700; color: #212b32;">
-    Status: Applications closed for Cohort 5 on 11 Jan 2026.<br>
-    Next update: Applications will open for Cohort 6 on 05 Oct 2026, for Aug 2027 start<br>
-  </p>
+<div class="status-box" markdown="1">
+Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
+
+Applications close on 6 November 2026.
 </div>
-<br><br>
+
 This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
-<br><br>
-The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are jointly delivered in the exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship
-<br>Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.<br>
 
+The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are jointly delivered in the exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship.
 
-### Key Dates and How to Apply
-* 31 Oct 2025: Applications open
-<div style="margin: 0.5rem 0 1rem 0;">
-  <a href="https://forms.office.com/e/mx5mikXjH2" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
-    Apply as an International Applicant
-  </a>
+Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.
+
+## Key dates and how to apply
+
+* **5 Oct 2026**: Applications open
+* **Early Oct 2026**: Applicant webinar with Q&A
+* **6 Nov 2026**: *International Application Form* deadline
+* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
+* **13-29 Jan 2027**: Remote interviews
+* **Feb 2027**: Outcomes of interviews, project matching
+* **Aug 2027**: Fellowship Cohort 6 begins
+
+<div class="action-buttons">
+  <span class="btn-action btn-action--disabled">Application form opens 5 Oct 2026</span>
 </div>
-* 24 Nov 2025: [Applicant webinar with Q&A](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3)
+
+<details markdown="1">
+<summary>Cohort 5 timeline (closed)</summary>
+
+Applications for Cohort 5, starting August 2026, closed on 11 Jan 2026. The cycle ran as follows:
+
+* 31 Oct 2025: Applications open
+* 24 Nov 2025: Applicant webinar with Q&A
 * 11 Jan 2026: *International Application Form* deadline
 * 13 Jan 2026: Shortlisting outcomes communicated
 * 20-29 Jan 2026: Remote interviews
 * Feb 2026: Outcomes of interviews, project matching
-* Aug 2026: Fellowship cohort 5 begins
+* Aug 2026: Fellowship Cohort 5 begins
+
+</details>
+
+## Applicant webinar
+
+The Cohort 6 applicant webinar takes place in early October 2026. The sign-up link is published here when applications open.
+
+The webinar covers the features and curriculum of the fellowship, addresses frequently asked questions, and invites Q&A from applicants.
 
 
-### Applicant Webinar 
-
-[Sign up to the applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) 24 Nov 2025, 12:00-13:00 GMT
-<br>This applicant webinar will cover the features and curriculum of the fellowship, address frequently asked questions, and invite Q&A from applicants.
-
-
-### Clinical AI Project List
+## Clinical AI project list
 
 AI project proposals will be released to applicants during the recruitment cycle.
 Project proposal lists are illustrative and not final. Projects may be added, removed, or modified without
 notice. A final list will be provided to applicants upon reaching the stage of ranking their project
 preferences.
 
-### Person Specification
+## Person specification
 <details markdown="1">
 <summary>Essential criteria</summary>
 
@@ -69,13 +81,12 @@ ability to rapidly learn new skills and solve technical problems
 </details>
 
 
-### Resources for applicants:
+## Resources for applicants
 * [Fellowship curriculum](/curriculum)
 * [Links to other educational resources](/resources)
 
 
-### Frequently Asked Questions
-_Last updated: 31 October 2025_
+## Frequently asked questions
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details markdown="1">
@@ -154,10 +165,10 @@ The experience from any project will involve significant amounts of transferable
 
 <summary>Working pattern, leave, and deferred entry</summary>
 
-**Can I do the fellowship at a lower time commitment than 0.4FTE (2 days a week)?**
+**Can I do the fellowship at a lower time commitment than 0.4 FTE (2 days a week)?**
 No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
 The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
-International applicants are able to do this placement at a higher time commitment than 0.4FTE, your preference is asked for during your application.
+International applicants are able to do this placement at a higher time commitment than 0.4 FTE, your preference is asked for during your application.
 
 **Can I compress the fellowship into a shorter and more intensive placement?**
 

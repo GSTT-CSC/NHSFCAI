@@ -2,7 +2,7 @@
 layout: page
 permalink: /partners/
 title: Partners
-
+description: International sister programmes, educational co-development partners and sponsors of the NHS Fellowship in Clinical AI.
 ---
 ## International Sister Programmes
 

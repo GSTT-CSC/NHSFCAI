@@ -11,15 +11,28 @@
       position: relative;
       list-style: none;
       font-size: 1.3rem;
-      > a {
+      // Parents with a submenu render as a <button>, so it is not announced
+      // as a link to somewhere. Both share the same appearance.
+      > a,
+      > .main-menu__parent {
         padding: 10px 12px 10px 12px;
         display: inline-block;
         font-weight: normal;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
         text-decoration: none;
         color: $primary;
+        background: none;
+        border: 0;
+        cursor: pointer;
         &:hover {
           text-decoration: underline;
           background-color: lighten($primary, 50%);
+        }
+        &:focus-visible {
+          outline: 2px solid $primary;
+          outline-offset: -2px;
         }
       }
 
@@ -63,7 +76,8 @@
         display: block;
       }
       &.active {
-        > a {
+        > a,
+        > .main-menu__parent {
           font-weight: normal;
           text-decoration: none;
           color: $white;
@@ -74,7 +88,9 @@
 
       // Highlight parent when a child submenu item is active (CSS :has)
       &:has(> ul > li.active) > a,
-      &:has(> ul.submenu > li.active) > a {
+      &:has(> ul > li.active) > .main-menu__parent,
+      &:has(> ul.submenu > li.active) > a,
+      &:has(> ul.submenu > li.active) > .main-menu__parent {
         font-weight: normal;
         text-decoration: none;
         color: $white;

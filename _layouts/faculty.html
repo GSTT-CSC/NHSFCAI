@@ -18,12 +18,13 @@ bodyClass: "page-basic"
   <div class="row">
     <div class="col-12 col-lg-4 text-center">
       <div style="position: relative; display: inline-block;">
-        <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src={{ image_path }} alt="">
+        <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path }}" onerror="this.onerror=null;this.src='/images/faculty/default.jpg';" alt="{{ page.team-member-name }}">
         {% if socials %}
         <div class="social-button-cluster">
           {% for network in socials %}
-          <a href="{{ network.url }}">
-            <i class="{{ network.icon }}"></i>
+          <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer">
+            <i class="{{ network.icon }}" aria-hidden="true"></i>
+            <span class="visually-hidden">{{ page.team-member-name }} on {{ network.name | default: "social media" }}</span>
           </a>
           {% endfor %}
         </div>

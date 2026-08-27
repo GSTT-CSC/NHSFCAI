@@ -2,46 +2,47 @@
 layout: page
 permalink: /supervisors/
 title: Become a Supervisor
+description: How NHS teams propose a clinical AI project and host a fellow on the NHS Fellowship in Clinical AI.
 ---
 
-<div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
-  <p style="margin: 0; font-weight: 700; color: #212b32;">
-    Status: Project proposals open for August 2027 start (Cohort 6)<br>
-  </p>
+<div class="status-box" markdown="1">
+Status: Project proposals are open for an August 2027 start (Cohort 6).
+
+Submissions close on 1 November 2026.
 </div>
 
 The NHS Fellowship in Clinical AI provides practical experience to its [fellows](/fellows) through placements in real-world deployments of AI tools in [NHS host sites](/sites).
-We are currently accepting project proposals to host AI fellows for 2d/wk for August 2027- August 2028.
+We are currently accepting project proposals to host AI fellows for 2 days a week from August 2027 to August 2028.
 
-### Key Dates for supervisors
+## Key dates for supervisors
 * 01 Aug 2026: Project proposal submissions open
 
-<div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-  <a href="/assets/docs/FCAI_C6_Project_Template.docx" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+<div class="action-buttons">
+  <a class="btn-action btn-action--primary" href="/assets/docs/FCAI_C6_Project_Template.docx" download>
+    <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
     Complete project proposal template
-  </a> and
-  <a href="mailto:gstt.aifellowship@nhs.net" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
+  </a>
+  <a class="btn-action btn-action--secondary" href="mailto:gstt.aifellowship@nhs.net">
+    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
     Email to faculty
   </a>
 </div>
 
 * 01 Nov 2026: Deadline for project proposal submissions
-* Jan 2027: Remote interviews- prospective supervisors are invited to interview panels
+* Jan 2027: Remote interviews — prospective supervisors are invited to interview panels
 * Feb 2027: Outcomes of interviews and project matching
 * Aug 2027: Cohort 6 begins
 
 
-### Supervisor Webinar 
+## Supervisor webinar
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RGYEDRJOS3E" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
 
 The onboarding webinar for Cohort 5 AI supervisors covered the features and curriculum of the fellowship, and the expectations for project hosting and supervision.
 
 
-### Frequently Asked Questions
-<details>
+## Frequently asked questions
+<details markdown="1">
 <summary>Project Proposals</summary>
 
 <strong>What features of good placements are you looking for in project proposals?</strong>
@@ -49,8 +50,8 @@ The onboarding webinar for Cohort 5 AI supervisors covered the features and curr
 <p>Features of good AI project placements include: 
 appropriate composition and skills-mix of the hosting team and supervisor,
 concrete and credible timelines,
-opportunities to acquire of skills and knowledge highly relevant to the clinical AI curriculum, 
-embedding the fellow deeply in team, and
+opportunities to acquire skills and knowledge highly relevant to the clinical AI curriculum, 
+embedding the fellow deeply in the team, and
 opportunities for publication and presentation.
 </p>
 
@@ -63,7 +64,7 @@ opportunities for publication and presentation.
 <strong>What are the requirements for the composition of the hosting team?</strong>
 
 <p>The hosting team must be multidisciplinary in composition, with dedicated capacity for the deployment and/or evaluation of clinical AI tools in the NHS.
-Previous track record of successful AI deployment is especially useful is demonstrating the suitability of the team.</p>
+Previous track record of successful AI deployment is especially useful in demonstrating the suitability of the team.</p>
 
 
 <strong>Are project proposals quality assured?</strong>
@@ -102,7 +103,7 @@ It is strongly recommended that skills/knowledge/background are listed as desira
 </p>
 </details>
 
-<details>
+<details markdown="1">
 <summary>Recruitment</summary>
 <strong>Do supervisors participate in the recruitment of fellows?</strong>
 
@@ -123,7 +124,7 @@ The next highest scoring applicant is matched to their highest ranked project re
 
 <strong>What is the experience level and calibre of fellows?</strong>
 
-<p>All joining fellows meet the Essential criteria of the Person Specification, and many fellows will also meet the Desirable criteria..
+<p>All joining fellows meet the Essential criteria of the Person Specification, and many fellows will also meet the Desirable criteria.
 </p>
 
 <strong>What is a nominated applicant with a sponsorship arrangement?</strong>
@@ -138,11 +139,11 @@ Document this arrangement on your project proposal only if it has already been a
 
 
 
-<details>
+<details markdown="1">
 <summary>Hosting</summary>
 
 
-<strong>What are the responsibilities the time commitment for a supervisor?</strong>
+<strong>What are the responsibilities and the time commitment for a supervisor?</strong>
 
 <p>
 After a fellow is matched to their project, a supervisor must organise a Letter of Access or honorary contract for their institution, and any other resources (hardware, software, IT accounts etc.) required for the fellow to work on the project.
@@ -153,10 +154,10 @@ Over the course of the fellowship, the fellow and the supervisor must have 3 for
 
 <strong>What are the finances associated with hosting a fellow?</strong>
 
-<p>The hosted fellow continues to be salaried by their existing Employer. 
+<p>The hosted fellow continues to be salaried by their existing employer. 
 The addition of a skilled clinical team member with training in clinical AI is the benefit realised by the hosting team. 
 
-The fellow's time is released for 0.4FTE for the duration of the attachment for fellowship activities, which includes their AI project.
+The fellow's time is released for 0.4 FTE for the duration of the attachment for fellowship activities, which includes their AI project.
 There is no financial transaction to the host team.
 It is the supervisor's responsibility to arrange access to relevant local resources (hardware, software, IT accounts etc.) for the fellow to successfully complete the project.
 </p>

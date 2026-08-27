@@ -1,100 +1,87 @@
 ---
 layout: page
 permalink: /apply/
-title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
+title: Apply for Cohort 6 (Aug 2027 - Aug 2028) <br>NHS Applicants
+description: How NHS clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting August 2027.
 ---
-_Last updated: 10 Aug 2026_ 
-<br>
 
-<div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
-  <p style="margin: 0; font-weight: 700; color: #212b32;">
-    Status: Applications closed for Cohort 5 on 15 Dec 2025.<br>
-    Next update: Applications will open for Cohort 6 on 05 Oct 2026, for Aug 2027 start<br>
-  </p>
+<div class="status-box" markdown="1">
+Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
+
+Applications close at 23:45 GMT on 6 November 2026.
 </div>
-<br><br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
-We invite applications for Cohort 5 of the NHS Fellowship in Clinical AI. We seek
-energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship at 2 days per week for 12 months, alongside their work or training. 
+This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
+
+We invite applications for Cohort 6 of the NHS Fellowship in Clinical AI. We seek
+energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship 2 days a week for 12 months, alongside their work or training.
 Salary cover for the role is provided in nationally- and regionally-funded posts.
 They are matched to existing clinical AI projects [in the NHS](/sites) to learn the safe
-deployment and evaluation of AI in clinical workflows under a clinical AI supervisor as part of a multidisciplinary team. 
-<br><br>Fellows are
+deployment and evaluation of AI in clinical workflows under a clinical AI supervisor as part of a multidisciplinary team.
+
+Fellows are
 supported to present and [publish their work](/publications), which may include clinical trials
 and quality improvement projects in the deployment of AI. They gain skills and knowledge relevant to the life cycle of healthcare AI from a programme of
 teaching aligned with the [clinical AI curriculum](/curriculum), including bespoke live
-[masterclass workshops](/partners) in centres of AI excellence across the NHS. Our fellows and alumni form an active and enduring [expert network of clinical AI leaders](/fellows). 
+[masterclass workshops](/partners) in centres of AI excellence across the NHS. Our fellows and alumni form an active and enduring [expert network of clinical AI leaders](/fellows).
 
-### Key Dates and How To Apply
-* 10 Nov 2025: Recruitment opens
+## Key dates and how to apply
 
-<div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-  <a href="https://forms.office.com/e/Z2ph0MAF4L" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
-    Apply as an NHS applicant
-  </a>
-  and
-  <a href="https://forms.office.com/e/V61XZwYe2h" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
-    Obtain Approval in Principle
-  </a>
+* **5 Oct 2026**: Applications open
+* **Early Oct 2026**: Applicant webinar with Q&A
+* **6 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
+  <br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
+* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
+* **13-29 Jan 2027**: Remote interviews (specific dates listed below in 'Eligibility')
+* **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
+* **Aug 2027**: Fellowship Cohort 6 begins
+
+<div class="action-buttons">
+  <span class="btn-action btn-action--disabled">Application form opens 5 Oct 2026</span>
 </div>
 
-Obtain *Approval in Principle* from a responsible person with decision-making power over training/employment pattern from August 2026 - August 2027. Applicants <b>will not be interviewed</b> without this.
-* 24 Nov 2025: [Applicant webinar with Q&A](https://www.youtube.com/embed/SsONx1jAGxE)
-* 15 Dec 2025 23:45 GMT: 
-<br>Application **and** Approval In Principle deadline (all applications)
-<br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
+All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from August 2027 to August 2028. Applicants <b>will not be interviewed</b> without this.
+
+<details markdown="1">
+<summary>Cohort 5 timeline (closed)</summary>
+
+Applications for Cohort 5, starting August 2026, closed on 15 Dec 2025. The cycle ran as follows:
+
+* 10 Nov 2025: Recruitment opens
+* 24 Nov 2025: [Applicant webinar with Q&A](https://www.youtube.com/watch?v=SsONx1jAGxE)
+* 15 Dec 2025, 23:45 GMT: Application and Approval in Principle deadline
 * 13-14 Jan 2026: Shortlisting outcomes and remote interviews offered
-* 20-29 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
+* 20-29 Jan 2026: Remote interviews
 * Feb 2026: Outcomes of interviews and matching of fellows to AI projects
 * Aug 2026: Fellowship Cohort 5 begins
 
+</details>
 
-### Applicant Webinar 
+## Applicant webinar
 
-This applicant webinar covered the features and curriculum of the fellowship, address frequently asked questions, and invited question from applicants.
+The Cohort 6 applicant webinar takes place in early October 2026. Details are published here when applications open.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SsONx1jAGxE" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+The recording below is from the Cohort 5 webinar. It covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited questions from applicants — most of which apply equally to Cohort 6.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SsONx1jAGxE" title="NHS Fellowship in Clinical AI: Cohort 5 applicant webinar" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
 
 
 
-### Eligibility
+## Eligibility
 
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #d8dde0;
-    padding: 6px 10px;
-    text-align: left !important;
-    vertical-align: top;
-  }
-  th {
-    background-color: #005eb8; /* NHS blue */
-    color: white;
-  }
-  tr:nth-child(even) td {
-    background-color: #e8f1f8; /* slightly darker pale NHS blue */
-  }
-  tr:nth-child(odd) td {
-    background-color: #ffffff;
-  }
-  tr:hover td {
-    background-color: #d4e2f0; /* hover highlight */
-  }
-</style>
 There are 3 entry routes to this fellowship for NHS clinicians.
-All 3 routes use the same application form. 
+All 3 routes use the same application form.
 Applicants are entered into appropriate national and regional applicant pools automatically based on application details.
+
+<div class="status-box" markdown="1">
+The eligibility detail below — funding sponsors, regional post numbers and per-region interview dates — reflects the Cohort 5 cycle. Cohort 6 detail is published when applications open on 5 October 2026.
+</div>
 
 | Entry Route              | Description                                                                                                                                             | Competition                                                                                      | Eligibility                                                                                                                                                                                                |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nationally-funded posts  | Applicants can be from anywhere in the NHS <br><br>Salary cover provided                                                                                | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
 | Regionally-funded posts  | Applicants must be from a specific region of the NHS <br><br>Salary cover provided                                                                      | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                              |
-| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant | Non-competitive entry: must meet the Essential crtieria of the Person Specification at interview | Any clinician providing NHS services                                                                                  |
+| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant | Non-competitive entry: must meet the Essential criteria of the Person Specification at interview | Any clinician providing NHS services                                                                                  |
 
 
 
@@ -144,15 +131,15 @@ Interview dates are indicative and may change during the application cycle.</p>
 **Entry requirements**
 
 * This entry route is open to any clinician providing NHS services (typically from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC- please [email the faculty](mailto:gstt.aifellowship@nhs.net) regarding other workforce groups)
-* The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The course fee is the same for either route at £7500. The fellow must release 0.4FTE of their time for the duration of their fellowship. There is no salary cover unless agreed with Sponsor by applicant. 
-* * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 15 Dec 2025. Interview is contingent on receipt of sponsor funding confirmation.
+* The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The course fee is the same for either route at £7500. The fellow must release 0.4 FTE of their time for the duration of their fellowship. There is no salary cover unless agreed with Sponsor by applicant. 
+* * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 6 Nov 2026. Interview is contingent on receipt of sponsor funding confirmation.
 * * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards)
 * * Self-funded: this is declared in the application form (no email to faculty necessary). Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.
 
 **Interview**
 
 * The applicant must meet Essential criteria of the Person Specification (see section below) at interview
-* Indicative interview dates are: 28-29 Jan 2026 (TBC according to applicant volume)
+* Indicative interview dates fall within 13-29 Jan 2027 (TBC according to applicant volume)
 
 **Project matching**
 
@@ -163,14 +150,14 @@ Interview dates are indicative and may change during the application cycle.</p>
 </details>
 
 
-### Clinical AI Project List
+## Clinical AI project list
 
 AI project proposals will be released to applicants during the recruitment cycle.
 Project proposal lists are illustrative and not final. Projects may be added, removed, or modified without
 notice. A final list will be provided to applicants upon reaching the stage of ranking their project
 preferences.
 
-### Person Specification
+## Person specification
 <details markdown="1">
 <summary>Essential criteria</summary>
 
@@ -190,11 +177,11 @@ ability to rapidly learn new skills and solve technical problems
 </details>
 
 
-### Resources for applicants:
+## Resources for applicants
 * [Fellowship curriculum](/curriculum)
 * [Links to other educational resources](/resources)
 
-### Frequently Asked Questions
+## Frequently asked questions
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details markdown="1">
@@ -211,7 +198,7 @@ Regional eligibility is set at the discretion of regional funding bodies (not th
 If you have a specific question or concern, please [contact the faculty](mailto:gstt.aifellowship@nhs.net) so that we can identify priority areas for recruitment in future cohorts.
 
 
-**Why are there restrictions for eligibility based certain career stage?**
+**Why are there restrictions for eligibility based on certain career stages?**
 
 Where there are restrictions, the eligible career stages have been agreed by consensus with our funding bodies and the national CXIO leads for relevant professions.
 Career stages are selected in which this fellowship is expected to be a developmental inflection point or step change, maximising the benefit to NHS workforce transformation.
@@ -220,7 +207,7 @@ For later career stages, the programme impact is less likely to be additive due 
 
 
 
-**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2026 - Aug 2027), post-CCT,  not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 
 These applicants are eligible only for directly allocated posts. For nationally and regionally-funded posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
 
@@ -351,13 +338,13 @@ The experience from any project will involve significant amounts of transferable
 
 **Is the fellowship free?**
 
-Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4FTE salary is reimbursed to the fellow's Employer.
+Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4 FTE salary is reimbursed to the fellow's Employer.
 Self-funding for directly allocated posts have costs described [here](/nhs-sponsor).
 
 **Does the fellowship pay my salary directly?**
 
 No. The fellowship is not your Employer. 
-<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
+<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
 <br>In directly allocated posts, your salary arrangements are at the discretion of your Sponsor.
 
 **Is there travel/subsistence expenses to support attendance at in-person workshops?**
@@ -377,7 +364,7 @@ Where salary is reimbursed, this is transferred to your new employer where relev
 0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week. This fellowship is intended to integrate alongside clinical work or
 training. Partial remote working and flexible hours may be possible depending on project following conversations with supervisors.
 
-**Can I do the fellowship at a lower time commitment than 0.4FTE?**
+**Can I do the fellowship at a lower time commitment than 0.4 FTE?**
 
 No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
 The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
@@ -440,7 +427,7 @@ Fellows receive a certificate of completion of the fellowship issued by the facu
 
 
 [T-Pro](https://info.tpro.io) is an industry supplier with partners in the NHS, and has products that focus on AI-powered voice solutions for clinical workflows.
-T-Pro is sponsoring 2 posts for Cohort 5, and the appointees will be designated T-Pro Fellows in Clinical AI.
+T-Pro sponsored 2 posts in Cohort 5, and the appointees were designated T-Pro Fellows in Clinical AI. Sponsorship arrangements for Cohort 6 are confirmed when applications open.
 These posts are offered with priority for NHS employees lacking eligibility for regionally-funded posts (other career-stage and workforce criteria still apply).
 
 
@@ -463,8 +450,8 @@ The next highest scoring applicant is matched to their highest ranked T-Pro-badg
 **What is a BSH Fellow in Clinical AI?**
 
 
-The British Society for Haematology (BSH) is sponsoring posts for BSH members (full or associate members) in Cohort 5 of the Fellowship in Clinical AI. 
-There are 2 sponsored posts in Cohort 5, and the appointees will be designated BSH Fellows in Clinical AI. 
+The British Society for Haematology (BSH) sponsored posts for BSH members (full or associate members) in Cohort 5 of the Fellowship in Clinical AI.
+There were 2 sponsored posts in Cohort 5, and the appointees were designated BSH Fellows in Clinical AI. Sponsorship arrangements for Cohort 6 are confirmed when applications open. 
 These posts are reserved exclusively for applicants who are BSH members, and will link to projects relating to Haematology. 
 
 **Are there Haematology themed AI projects available?**
@@ -522,7 +509,7 @@ Yes, this is the route for directly allocated posts. Your Sponsor should read th
 **Can I sponsor myself?**
 
 
-Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
+Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4 FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
 
 
 **Can the faculty help me to identify a suitable sponsor?**

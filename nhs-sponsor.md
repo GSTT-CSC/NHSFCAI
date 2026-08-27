@@ -2,22 +2,14 @@
 layout: page
 permalink: /nhs-sponsor/
 title: Sponsor an NHS Applicant
+description: How NHS organisations can sponsor a post on the NHS Fellowship in Clinical AI.
 ---
 
-<style>
-@media (max-width: 768px) {
-  iframe {
-    display:none;
-  }
-}
-</style>
+Sponsored posts can be organised for NHS applicants. Bespoke arrangements can be made in addition to the documentation below.
 
-Sponsored posts can be organised for NHS applicants. Bespoke arrangements can be arranged in addition to the documentation below.
-<br> Prospective sponsors should directly [contact the faculty](mailto:gstt.aifellowship@nhs.net).
+Prospective sponsors should [contact the faculty](mailto:gstt.aifellowship@nhs.net) directly.
 
-<iframe src="/assets/docs/FCAI_C6_NHS_Sponsor_Flyer.pdf#page=1&zoom=page-width"
-        style="width:100%; aspect-ratio: 1/1.414; border:none;"
-        loading="lazy">
-</iframe>
-
-[Download the information leaflet](/assets/docs/FCAI_C6_NHS_Sponsor_Flyer.pdf)
+{% include pdf-document.html
+     file="/assets/docs/FCAI_C6_NHS_Sponsor_Flyer.pdf"
+     title="Information for NHS sponsors"
+     meta="PDF · information leaflet" %}

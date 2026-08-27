@@ -2,12 +2,13 @@
 layout: page
 title: Faculty
 permalink: /faculty/
+description: The faculty of the NHS Fellowship in Clinical AI, based in Clinical Scientific Computing at Guy's and St Thomas'.
 ---
 We created this fellowship to address the workforce gap of expert healthcare leaders to adopt clinical AI tools.
-The faculty is based in the [Clinical Scientific Computing department](https://gstt-csc.github.io) of Guy's and St Thomas's NHS Foundation Trust.
+The faculty is based in the [Clinical Scientific Computing department](https://gstt-csc.github.io) of Guy's and St Thomas' NHS Foundation Trust.
 Contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
 
-<h5>Click on each faculty member to find out more</h5>
+<p class="section-hint">Click on each faculty member to find out more.</p>
 <div class="container">
   <div class="row pt-3">
 
@@ -23,25 +24,21 @@ Contact the faculty [here](mailto:gstt.aifellowship@nhs.net).
              data-background="{{ person.background }}">
           <div style="position: relative; display: inline-block;">
             <a href="{{ page_url }}">
-              <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path | default: '/images/faculty/default.jpg' }}" alt="{{ person.name }}">
+              <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src="{{ image_path }}" onerror="this.onerror=null;this.src='/images/faculty/default.jpg';" alt="{{ person.name }}">
             </a>
             {% if socials.size > 0 %}
               <div class="social-button-cluster">
-                {% if socials[0] %}
-                  <a href="{{ socials[0].url }}">
-                    <i class="{{ socials[0].icon }}"></i>
+                {% for social in socials limit:2 %}
+                  <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
+                    <i class="{{ social.icon }}" aria-hidden="true"></i>
+                    <span class="visually-hidden">{{ person.name }} on {{ social.name | default: "social media" }}</span>
                   </a>
-                {% endif %}
-                {% if socials[1] %}
-                  <a href="{{ socials[1].url }}">
-                    <i class="{{ socials[1].icon }}"></i>
-                  </a>
-                {% endif %}
+                {% endfor %}
               </div>
             {% endif %}
           </div>
 
-          <h4>{{ person.name }}</h4>
+          <h2 class="team-member__name">{{ person.name }}</h2>
           <p class="text-muted">{{ person.role }}</p>
           {% if person.background %}
           <p class="text-muted">{{ person.background }}</p>

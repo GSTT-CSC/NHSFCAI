@@ -1,0 +1,74 @@
+// The contact page previously rendered a single email address inside the
+// default .call component, which is pale pink and reads as unfinished on an
+// otherwise NHS-blue site.
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid #d8dde0;
+  border-top: 4px solid #005eb8;
+  padding: 1.25rem;
+
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: #212b32;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4c6272;
+  }
+}
+
+.contact-primary {
+  background: #005eb8;
+  color: #fff;
+  padding: 1.75rem;
+  margin-top: 2rem;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  }
+
+  &__label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    word-break: break-word;
+  }
+
+  &__meta {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}

@@ -31,12 +31,16 @@ bodyClass: "page-basic"
   <div class="row">
     <div class="col-12 col-lg-4 text-center">
       <div style="position: relative; display: inline-block;">
-        <img class="mx-auto p-1" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;" src="{{ image_path }}" alt="">
+        <img class="mx-auto p-1" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;"
+             src="{{ image_path }}"
+             onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
+             alt="{{ page.team-member-name }}">
         {% if fellow_profile.flag or socials %}
         <div class="social-button-cluster">
           {% for network in socials %}
-          <a href="{{ network.url }}">
-            <i class="{{ network.icon }}"></i>
+          <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer">
+            <i class="{{ network.icon }}" aria-hidden="true"></i>
+            <span class="visually-hidden">{{ page.team-member-name }} on {{ network.name | default: "social media" }}</span>
           </a>
           {% endfor %}
           {% if fellow_profile.flag %}
@@ -77,8 +81,10 @@ bodyClass: "page-basic"
       {% endcomment %}
 
       {% assign has_project = false %}
-      {% if fellow_profile and (fellow_profile.project_title or fellow_profile.project_link or fellow_profile.placement) %}
-        {% assign has_project = true %}
+      {% if fellow_profile %}
+        {% if fellow_profile.project_title or fellow_profile.project_link or fellow_profile.placement %}
+          {% assign has_project = true %}
+        {% endif %}
       {% endif %}
 
       {% assign content_parts = content | split: "<!-- FELLOWSHIP_PROJECT -->" %}
@@ -122,9 +128,11 @@ bodyClass: "page-basic"
       {% endif %}
 
       {% comment %}
-        Joining Statement: show only for Cohort 5 fellows where a joining_statement is present in _data/fellowship_fellows.yml.
+        Joining Statement: shown for any fellow with a joining_statement in
+        _data/fellowship_fellows.yml. This was previously pinned to cohort "5",
+        which would have silently hidden it for every later cohort.
       {% endcomment %}
-      {% if fellow_profile and fellow_profile.cohort == "5" and fellow_profile.joining_statement and fellow_profile.joining_statement != "" %}
+      {% if fellow_profile.joining_statement and fellow_profile.joining_statement != "" %}
       <hr>
       <h3>Joining Statement</h3>
       <p>{{ fellow_profile.joining_statement }}</p>

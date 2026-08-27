@@ -18,6 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          # Full history so the step below can read each file's last commit date.
+          fetch-depth: 0
+
+      - name: Restore data file modification times from git
+        # A fresh checkout stamps every file with the clone time. The
+        # "Last updated" dates on /resources, /literature, /publications and
+        # /media come from these mtimes, so set them back to the last commit
+        # that touched each file.
+        run: |
+          for file in $(git ls-files _data); do
+            commit_date=$(git log -1 --format=%cI -- "$file")
+            [ -n "$commit_date" ] && touch -d "$commit_date" "$file"
+          done
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

@@ -1,5 +1,9 @@
+# Parent items have no url: they open a submenu rather than navigating.
+# See _includes/main-menu.html - parents without a url render as a button.
+# Order in this file matches the rendered order.
 main:
   - name: "About"
+    weight: 1
     children:
       - name: "Background"
         url: "/about/"
@@ -9,8 +13,8 @@ main:
         url: "/literature/"
       - name: "Partners"
         url: "/partners/"
-    weight: 1
   - name: "Apply"
+    weight: 2
     children:
       - name: "NHS"
         url: "/apply/"
@@ -18,8 +22,8 @@ main:
         url: "/international/"
       - name: "Supervisors"
         url: "/supervisors/"
-    weight: 2
   - name: "Fellows"
+    weight: 3
     children:
       - name: "Fellows & Alumni"
         url: "/fellows/"
@@ -27,29 +31,26 @@ main:
         url: "/publications/"
       - name: "Media"
         url: "/media/"
-    weight: 3
-  - name: "Sponsors"
-    children:
-      - name: "NHS"
-        url: "/nhs-sponsor/"
-      - name: "International"
-        url: "/international-sponsor/"
-    weight: 6
   - name: "Education"
+    weight: 4
     children:
       - name: "Curriculum"
         url: "/curriculum/"
       - name: "Resources"
         url: "/resources/"
-    weight: 4
-  - name: "Faculty"
-    children:
-      - name: "Faculty Members"
-        url: "/faculty/"
-      - name: "Contact Us"
-        url: "/contact/"
+  - name: "Sponsors"
     weight: 5
-
+    children:
+      - name: "NHS"
+        url: "/nhs-sponsor/"
+      - name: "International"
+        url: "/international-sponsor/"
+  - name: "Faculty"
+    url: "/faculty/"
+    weight: 6
+  - name: "Contact"
+    url: "/contact/"
+    weight: 7
 
 footer:
   - name: "Home"

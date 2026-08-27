@@ -1,0 +1,25 @@
+{% comment %}
+  Embeds a PDF with a download card beneath it. The embed is hidden below
+  768px by CSS, so the card is what mobile visitors get.
+
+    {% include pdf-document.html
+         file="/assets/docs/FCAI_Curriculum_v3.2.pdf"
+         title="Clinical AI Curriculum"
+         meta="PDF · version 3.2" %}
+{% endcomment %}
+<iframe class="pdf-embed"
+        src="{{ include.file }}#page=1&zoom=page-width"
+        title="{{ include.title }}"
+        loading="lazy"></iframe>
+
+<div class="pdf-card">
+  <span class="pdf-card__icon" aria-hidden="true"><i class="fa-regular fa-file-pdf"></i></span>
+  <div class="pdf-card__body">
+    <p class="pdf-card__title">{{ include.title }}</p>
+    <p class="pdf-card__meta">{{ include.meta }}</p>
+  </div>
+  <a class="pdf-card__action" href="{{ include.file }}" download>
+    Download
+    <i class="fa-solid fa-download" aria-hidden="true"></i>
+  </a>
+</div>

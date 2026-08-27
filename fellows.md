@@ -2,27 +2,8 @@
 layout: page
 permalink: /fellows/
 title: Fellows & Alumni
+description: The fellows and alumni of the NHS Fellowship in Clinical AI, filterable by cohort, region and profession.
 ---
-
-<style>
-    #filter-container {
-        background-color: #f0f4f5;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 1px solid #d8dde0;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .filter-group { display: flex; flex-direction: column; }
-    .filter-group label { font-size: 0.85em; font-weight: bold; margin-bottom: 5px; }
-    .filter-group select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; min-width: 160px; background-color: white; }
-</style>
 
 <div id="filter-container" class="mb-3">
   <div class="filter-group">
@@ -48,7 +29,8 @@ title: Fellows & Alumni
 </div>
 
 <!-- Team -->
-<h5>Click on each fellow to find out more. You can also explore their <a href="/sites/">AI project placements</a>.</h5>
+<p class="section-hint">Click on each fellow to find out more. You can also explore their <a href="/sites/">AI project placements</a>.</p>
+<p class="filter-count" id="fellow-count" role="status"></p>
 <div class="container">
   <div class="row pt-3">
 
@@ -83,7 +65,7 @@ title: Fellows & Alumni
           />
         </a>
 
-        <h4>{{ person.name }}</h4>
+        <h2 class="team-member__name">{{ person.name }}</h2>
         <p class="text-muted">{{ person.role }}</p>
 
         {% if person.flag or socials.size > 0 %}
@@ -104,6 +86,7 @@ title: Fellows & Alumni
     {% endfor %}
 
   </div>
+  <p class="filter-empty" id="fellow-empty" hidden>No fellows match these filters. Try widening your selection.</p>
 </div>
 
 <script>
@@ -121,12 +104,13 @@ function initializeFilters() {
     const cohorts = new Set();
     const regions = new Set();
     const professions = new Set();
-    const cohortLabels = {
-      "5": "Cohort 5 (2026-27)",
-      "4": "Cohort 4 (2025-26)",
-      "3": "Cohort 3 (2024-25)",
-      "2": "Cohort 2 (2023-24)",
-      "1": "Cohort 1 (2022-23)"
+    // Cohort 1 ran 2022-23; each later cohort starts a year after the last.
+    const FIRST_COHORT_START_YEAR = 2022;
+    const cohortLabel = (cohort) => {
+      const n = Number(cohort);
+      if (!Number.isFinite(n)) return `Cohort ${cohort}`;
+      const start = FIRST_COHORT_START_YEAR + (n - 1);
+      return `Cohort ${n} (${start}-${String(start + 1).slice(-2)})`;
     };
 
     members.forEach(member => {
@@ -135,15 +119,16 @@ function initializeFilters() {
       if (member.dataset.profession) professions.add(member.dataset.profession);
     });
 
-    [5, 4, 3, 2, 1].forEach(v => {
-      const key = String(v);
-      if (cohorts.has(key)) {
+    // Newest cohort first, and built from whatever is actually present so a
+    // new cohort appears in the filter without a code change.
+    [...cohorts]
+      .sort((a, b) => Number(b) - Number(a))
+      .forEach(key => {
         const option = document.createElement('option');
         option.value = key;
-        option.textContent = cohortLabels[key];
+        option.textContent = cohortLabel(key);
         cohortFilter.appendChild(option);
-      }
-    });
+      });
 
     // International sits at the bottom of the list, after the alphabetised UK regions.
     const sortedRegions = [...regions].sort();
@@ -193,13 +178,26 @@ function initializeFilters() {
     const region = regionFilter.value;
     const profession = professionFilter.value;
 
+    let visible = 0;
     members.forEach(member => {
       const matchCohort = cohort === 'all' || member.dataset.cohort === cohort;
       const matchRegion = region === 'all' || member.dataset.fellowRegion === region;
       const matchProfession = profession === 'all' || member.dataset.profession === profession;
+      const show = matchCohort && matchRegion && matchProfession;
 
-      member.style.display = (matchCohort && matchRegion && matchProfession) ? '' : 'none';
+      member.style.display = show ? '' : 'none';
+      if (show) visible += 1;
     });
+
+    const emptyState = document.getElementById('fellow-empty');
+    if (emptyState) emptyState.hidden = visible > 0;
+
+    const countLabel = document.getElementById('fellow-count');
+    if (countLabel) {
+      countLabel.textContent = visible === members.length
+        ? `Showing all ${members.length} fellows and alumni`
+        : `Showing ${visible} of ${members.length} fellows and alumni`;
+    }
 
     const params = new URLSearchParams();
     if (cohort && cohort !== 'all') params.set('cohort', cohort);

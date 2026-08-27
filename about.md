@@ -2,13 +2,13 @@
 layout: page
 permalink: /about/
 title: About the fellowship
-
+description: Background to the NHS Fellowship in Clinical AI, the first systematic UK route to clinical AI deployment skills, and testimonials from fellows.
 ---
-<h3 style>Background</h3>
+## Background
 
 Clinical leaders with expertise in Artificial Intelligence are essential to the integration and rollout of AI software in NHS trusts. 
 To deliver the UK government's plan of making [the NHS the most AI-enabled workforce in the world by 2035](https://assets.publishing.service.gov.uk/media/6888a0b1a11f859994409147/fit-for-the-future-10-year-health-plan-for-england.pdf#page=100), the NHS must provide dedicated training for clinicians in cutting-edge skills required for clinical AI deployment.
-This fellowship is the first systematic route in the UK to acquire the relevant skills in clinical AI deployment. Fellows  gain expertise in clinical AI alongside their existing roles and implement state-of-the-art AI software in live hospital environments.
+This fellowship is the first systematic route in the UK to acquire the relevant skills in clinical AI deployment. Fellows gain expertise in clinical AI alongside their existing roles and implement state-of-the-art AI software in live hospital environments.
 
 Fellows are matched with an expert AI supervisor and team to gain experience in real-world applications of clinical AI. Fellows gain skills and knowledge relevant to the full life cycle of healthcare AI from a bespoke programme of teaching aligned with the Clinical AI Curriculum developed by the faculty.
 As a lasting legacy of the fellowship, fellows become part of a uniquely networked community of interest within the healthcare AI community.
@@ -20,7 +20,7 @@ The fellowship is delivered by the [Clinical Scientific Computing team](https://
 
 
 
-<h3 style>Testimonials</h3>
+## Testimonials
 
 {% for t in site.data.testimonials %}
 <div style="display: flex; align-items: center; margin-bottom: 2rem;">

@@ -2,6 +2,7 @@
 layout: page
 permalink: /sites/
 title: NHS AI Project Host Sites
+description: The NHS teams and trusts hosting clinical AI project placements for fellows on the NHS Fellowship in Clinical AI.
 
 ---
 Our [fellows](/fellows) are hosted in clinical AI project placements in teams across the NHS. Click on each fellow to find out more.
@@ -9,26 +10,8 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
-    #filter-container {
-        background-color: #f0f4f5;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 1px solid #d8dde0;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .filter-group { display: flex; flex-direction: column; }
-    .filter-group label { font-size: 0.85em; font-weight: bold; margin-bottom: 5px; }
-    .filter-group select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; min-width: 160px; background-color: white; }
-
     #map {
-        height: 1000px;
+        height: min(1000px, 75vh);
         width: 100%;
         border-radius: 8px;
         z-index: 1;
@@ -74,7 +57,7 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
 
     
     .custom-face-icon { background: none !important; border: none !important; }
-    .popup-content { text-align: center; font-family: Arial, sans-serif; max-width: 240px; }
+    .popup-content { text-align: center; max-width: 240px; }
     
     .role-text {
         font-size: 0.85em;

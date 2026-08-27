@@ -1,0 +1,47 @@
+// Filter controls on /fellows and /sites. Previously duplicated verbatim in
+// the <style> block of both pages, including an Arial override that broke out
+// of the site typeface.
+
+#filter-container {
+  background-color: #f0f4f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #d8dde0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 160px;
+    background-color: #fff;
+  }
+}
+
+.filter-empty {
+  padding: 2rem 0;
+  color: #4c6272;
+  font-size: 1.05rem;
+}
+
+.filter-count {
+  color: #4c6272;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
