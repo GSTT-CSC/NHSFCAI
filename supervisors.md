@@ -129,8 +129,9 @@ The next highest scoring applicant is matched to their highest ranked project re
 
 <strong>What is a nominated applicant with a sponsorship arrangement?</strong>
 
-<p>Nominated applicants are NHS applicants who have ringfenced funding from a <a href="/nhs-sponsor/">sponsor</a> for their post.
-These applicants interview for posts and are held to the same standard of appointability as other candidates.
+<p>Nominated applicants are NHS applicants who have ringfenced funding from a <a href="/nhs-sponsor/">sponsor</a> for their post, so their entry to the programme is non-competitive — unlike competitive applicants, who are shortlisted and ranked for nationally- and regionally-funded posts.
+These applicants still interview for posts and are held to the same standard of appointability as other candidates.
+Their sponsor must confirm funding to the faculty by 11 Dec 2026.
 These applicants may have a project that is specifically reserved for them on the fellowship.
 Document this arrangement on your project proposal only if it has already been agreed with the nominated applicant and the faculty.
 </p>

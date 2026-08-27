@@ -29,16 +29,12 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 * **5 Oct 2026**: Applications open
 * **Early Oct 2026**: Applicant webinar with Q&A
-* **6 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
-  <br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
-* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
+* **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
+* **11 Dec 2026**: Sponsorship confirmation deadline for nominated applicants (non-competitive recruitment) — the sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) by this date
+* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent (competitive applicants)
 * **13-29 Jan 2027**: Remote interviews (specific dates listed below in 'Eligibility')
 * **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
 * **Aug 2027**: Fellowship Cohort 6 begins
-
-<div class="action-buttons">
-  <span class="btn-action btn-action--disabled">Application form opens 5 Oct 2026</span>
-</div>
 
 All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from August 2027 to August 2028. Applicants <b>will not be interviewed</b> without this.
 
@@ -69,7 +65,12 @@ The recording below is from the Cohort 5 webinar. It covered the features and cu
 
 ## Eligibility
 
-There are 3 entry routes to this fellowship for NHS clinicians.
+There are 3 entry routes to this fellowship for NHS clinicians, and they divide into two kinds of applicant.
+
+**Competitive applicants** apply for a nationally-funded or regionally-funded post. Salary cover is provided, and entry to the programme is competitive: applicants are shortlisted, then interviewed, and posts are awarded on interview score.
+
+**Nominated applicants** are nominated for a post with ringfenced funding, either from a [sponsor](/nhs-sponsor) or self-funded. Entry to the programme is non-competitive — a nominated applicant is not competing with others for a place — but they must still meet the Essential criteria of the Person Specification at interview. Their sponsor must confirm funding by 11 Dec 2026.
+
 All 3 routes use the same application form.
 Applicants are entered into appropriate national and regional applicant pools automatically based on application details.
 
@@ -79,9 +80,9 @@ The eligibility detail below — funding sponsors, regional post numbers and per
 
 | Entry Route              | Description                                                                                                                                             | Competition                                                                                      | Eligibility                                                                                                                                                                                                |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nationally-funded posts  | Applicants can be from anywhere in the NHS <br><br>Salary cover provided                                                                                | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
-| Regionally-funded posts  | Applicants must be from a specific region of the NHS <br><br>Salary cover provided                                                                      | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                              |
-| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant | Non-competitive entry: must meet the Essential criteria of the Person Specification at interview | Any clinician providing NHS services                                                                                  |
+| Nationally-funded posts  | Applicants can be from anywhere in the NHS <br><br>Salary cover provided                                                                                | **Competitive** entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
+| Regionally-funded posts  | Applicants must be from a specific region of the NHS <br><br>Salary cover provided                                                                      | **Competitive** entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                              |
+| Nominated applicant posts | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant | **Non-competitive** entry: must meet the Essential criteria of the Person Specification at interview | Any clinician providing NHS services                                                                                  |
 
 
 
@@ -126,13 +127,13 @@ Interview dates are indicative and may change during the application cycle.</p>
 </details>
 
 <details markdown="1">
-<summary>Directly allocated posts</summary>
+<summary>Nominated applicant posts</summary>
 
 **Entry requirements**
 
 * This entry route is open to any clinician providing NHS services (typically from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC- please [email the faculty](mailto:gstt.aifellowship@nhs.net) regarding other workforce groups)
 * The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The course fee is the same for either route at £7500. The fellow must release 0.4 FTE of their time for the duration of their fellowship. There is no salary cover unless agreed with Sponsor by applicant. 
-* * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 6 Nov 2026. Interview is contingent on receipt of sponsor funding confirmation.
+* * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 11 Dec 2026. Interview is contingent on receipt of sponsor funding confirmation.
 * * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards)
 * * Self-funded: this is declared in the application form (no email to faculty necessary). Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.
 
@@ -209,7 +210,7 @@ For later career stages, the programme impact is less likely to be additive due 
 
 **Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 
-These applicants are eligible only for directly allocated posts. For nationally and regionally-funded posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
+These applicants are eligible only as nominated applicants. For nationally and regionally-funded posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
 
 **Is eligibility affected by a doctor/dentist being out of programme during the fellowship dates while still holding a valid National Training Number for a specialty training programme leading to CCT in its own right for the duration of the post?**
 
@@ -247,9 +248,9 @@ In the shortlisting stage, eligible applicants are scored according to responses
 The highest scoring applicants from the shortlisting stage are then invited to a remote interview. 
 The scores from interview are used to competitively match successful applicants to their choice of project. 
 
-**If I am unsuccessful in recruitment for a nationally or regionally-funded post, can I change my mind and go for a directly allocated post?**
+**If I am unsuccessful in recruitment for a nationally or regionally-funded post, can I change my mind and apply as a nominated applicant?**
 
-No. An applicant must apply for a directly allocated post from the start, because AI project placements and matching depend on confirmed numbers of incoming fellows.
+No. An applicant must apply as a nominated applicant from the start, because AI project placements and matching depend on confirmed numbers of incoming fellows.
 
 **What is the format of the interview?**
 
@@ -316,7 +317,7 @@ Where necessary, fellows will hold an honorary contract or Letter of Access with
 
 **What should I do if I only want to do a specific project in the fellowship?**
 
-For a directly allocated post, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
+As a nominated applicant, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
 <br><br>To be matched to a specific project in a nationally or regionally-funded post, an applicant should go through the normal application process. 
 There will be an opportunity to rank projects by preference. 
 The applicant should rank only projects they would want to do on the fellowship year. 
@@ -339,13 +340,13 @@ The experience from any project will involve significant amounts of transferable
 **Is the fellowship free?**
 
 Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4 FTE salary is reimbursed to the fellow's Employer.
-Self-funding for directly allocated posts have costs described [here](/nhs-sponsor).
+Self-funding as a nominated applicant has costs described [here](/nhs-sponsor).
 
 **Does the fellowship pay my salary directly?**
 
 No. The fellowship is not your Employer. 
 <br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
-<br>In directly allocated posts, your salary arrangements are at the discretion of your Sponsor.
+<br>As a nominated applicant, your salary arrangements are at the discretion of your Sponsor.
 
 **Is there travel/subsistence expenses to support attendance at in-person workshops?**
 
@@ -504,7 +505,7 @@ It is possible to be matched to a BSH-badged project through this route, dependi
 **Am I eligible if I have a sponsor who will directly fund a post for me as an NHS applicant?**
 
 
-Yes, this is the route for directly allocated posts. Your Sponsor should read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
+Yes, this is the nominated applicant route. Your Sponsor should read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
 
 **Can I sponsor myself?**
 

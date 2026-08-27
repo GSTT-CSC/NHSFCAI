@@ -16,7 +16,7 @@ One inbox covers everything below — say which of these you're writing about an
   </div>
   <div class="contact-card">
     <h2>Sponsoring a post</h2>
-    <p>Funding a directly allocated post for an <a href="/nhs-sponsor/">NHS</a> or <a href="/international-sponsor/">international</a> applicant, including bespoke arrangements.</p>
+    <p>Nominating an applicant and funding their post, for an <a href="/nhs-sponsor/">NHS</a> or <a href="/international-sponsor/">international</a> applicant, including bespoke arrangements.</p>
   </div>
   <div class="contact-card">
     <h2>Hosting a project</h2>
