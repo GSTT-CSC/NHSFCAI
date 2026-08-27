@@ -3,162 +3,175 @@ layout: default
 bodyClass: "page-basic"
 ---
 
-{% comment %}
-  Convert team member's name into a slug to match keys in _data/social_links_fellows.yml
-{% endcomment %}
-{% assign url_name = page.team-member-name | slugify %}
-{% assign socials = site.data.social_links_fellows[url_name] %}
-{% comment %}
-      Construct the image path using the slug
-      e.g., /images/fellow/forename-surname.jpg
-{% endcomment %}
-{% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
+{%- comment -%}
+  The fellow's name is the key for everything: their photo, their social links
+  and their row in _data/fellowship_fellows.yml.
+{%- endcomment -%}
+{%- assign url_name = page.team-member-name | slugify -%}
+{%- assign socials = site.data.social_links_fellows[url_name] -%}
+{%- assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" -%}
 
-{% comment %}
-  Pull structured fellow metadata from _data/fellowship_fellows.yml using a stable key.
-  We use the slugified name (url_name) to match a `slug` field if present;
-  otherwise we fall back to matching `name`.
-{% endcomment %}
-{% assign fellows_data_root = site.data.fellowship_fellows.en | default: site.data.fellowship_fellows %}
-{% assign fellows_people = fellows_data_root.team.people | default: fellows_data_root.team | default: fellows_data_root.people %}
+{%- comment -%}
+  Find this fellow in the data file. Prefer an explicit `slug`, then an exact
+  `name`, then a slugified name - the last of which catches the entries whose
+  punctuation differs from the page front matter.
+{%- endcomment -%}
+{%- assign fellows_data_root = site.data.fellowship_fellows.en | default: site.data.fellowship_fellows -%}
+{%- assign fellows_people = fellows_data_root.team.people | default: fellows_data_root.team | default: fellows_data_root.people -%}
 
-{% assign fellow_profile = fellows_people | where: "slug", url_name | first %}
-{% unless fellow_profile %}
-  {% assign fellow_profile = fellows_people | where: "name", page.team-member-name | first %}
-{% endunless %}
+{%- assign fellow_profile = fellows_people | where: "slug", url_name | first -%}
+{%- unless fellow_profile -%}
+  {%- assign fellow_profile = fellows_people | where: "name", page.team-member-name | first -%}
+{%- endunless -%}
+{%- unless fellow_profile -%}
+  {%- for person in fellows_people -%}
+    {%- assign person_slug = person.name | slugify -%}
+    {%- if person_slug == url_name -%}
+      {%- assign fellow_profile = person -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}
 
-<div class="container" id="pagecontainer">
-  <div class="row">
-    <div class="col-12 col-lg-4 text-center">
-      <div style="position: relative; display: inline-block;">
-        <img class="mx-auto p-1" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;" src="{{ image_path }}" alt="">
-        {% if fellow_profile.flag or socials %}
-        <div class="social-button-cluster">
-          {% for network in socials %}
-          <a href="{{ network.url }}">
-            <i class="{{ network.icon }}"></i>
-          </a>
-          {% endfor %}
-          {% if fellow_profile.flag %}
-          <span class="fellow-flag" title="{{ page.team-member-name }}">{{ fellow_profile.flag }}</span>
-          {% endif %}
-        </div>
-        {% endif %}
-      </div>
-      <h4 class="pt-2 text-center">{{ page.team-member-name }}</h4>
-      {%- assign _target_slug = page.team-member-name | default: page.title | slugify -%}
-{%- assign _people = site.data.fellowship_fellows.en.team.people -%}
-{%- assign _person = nil -%}
+{%- comment -%}
+  The project block is placed either at the <!-- FELLOWSHIP_PROJECT --> marker
+  in the markdown or, if there is no marker, above the content. Capturing it
+  once keeps the two branches from drifting apart.
 
-{%- for p in _people -%}
-  {%- assign _p_slug = p.name | slugify -%}
-  {%- if _p_slug == _target_slug -%}
-    {%- assign _person = p -%}
-    {%- break -%}
+  It opens a section rather than closing a box: nearly every fellow follows the
+  marker with unheaded prose about the project, so a self-contained panel left
+  that prose looking like a continuation of the bio above it. The heading and
+  its blue rule match "Fellowship Bio" and "Fellowship Testimonial", and the
+  tinted strip below it carries the project title and placement.
+{%- endcomment -%}
+{%- assign has_project = false -%}
+{%- if fellow_profile.project_title or fellow_profile.project_link or fellow_profile.placement -%}
+  {%- assign has_project = true -%}
+{%- endif -%}
+
+{%- capture project_block -%}
+<h2 class="profile-section-title">Fellowship Project</h2>
+{%- if fellow_profile.project_title or fellow_profile.placement -%}
+<div class="profile-project">
+  {%- if fellow_profile.project_title -%}
+  <p class="profile-project__title">
+    {%- if fellow_profile.project_link and fellow_profile.project_link != "" -%}
+    <a href="{{ fellow_profile.project_link }}#zoom=page-width" target="_blank" rel="noopener">{{ fellow_profile.project_title }}</a>
+    {%- else -%}
+    {{ fellow_profile.project_title }}
+    {%- endif -%}
+  </p>
   {%- endif -%}
-{%- endfor -%}
-
-{%- if _person and _person.role -%}
-  <p class="text-center text-muted">{{ _person.role }}</p>
+  {%- if fellow_profile.placement and fellow_profile.placement != "" -%}
+  <p class="profile-project__placement">
+    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+    <span>{{ fellow_profile.placement }}</span>
+  </p>
+  {%- endif -%}
+</div>
 {%- endif -%}
+{%- endcapture -%}
 
-{%- if _person and _person.cohort -%}
-  <p class="text-center text-muted">NHS Fellow in Clinical AI, Cohort {{ _person.cohort }}</p>
-{%- else -%}
-  <p class="text-center text-muted">NHS Fellow in Clinical AI</p>
-{%- endif -%}
-    </div>
+<div class="content-wrapper">
+  <div class="container profile" id="pagecontainer">
+    <p class="profile-back">
+      <a href="/fellows/"><span aria-hidden="true">&larr;</span> All fellows &amp; alumni</a>
+    </p>
 
-    <div class="col-12 col-lg-8">
-      {% comment %}
-        Insert Fellowship Project at a specific point in the markdown content if the page contains the marker:
-        <!-- FELLOWSHIP_PROJECT -->
-        If the marker is absent, render the project block above the content (previous behaviour).
-      {% endcomment %}
+    <div class="row g-4">
+      <div class="col-12 col-lg-4">
+        <div class="profile-card">
+          <div class="profile-card__photo">
+            <img src="{{ image_path }}"
+                 width="180"
+                 height="180"
+                 onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
+                 alt="{{ page.team-member-name }}">
+            {%- if fellow_profile.flag %}
+            <span class="profile-flag" aria-hidden="true">{{ fellow_profile.flag }}</span>
+            {%- endif %}
+          </div>
 
-      {% assign has_project = false %}
-      {% if fellow_profile and (fellow_profile.project_title or fellow_profile.project_link or fellow_profile.placement) %}
-        {% assign has_project = true %}
-      {% endif %}
+          <h1 class="profile-card__name">{{ page.team-member-name }}</h1>
 
-      {% assign content_parts = content | split: "<!-- FELLOWSHIP_PROJECT -->" %}
+          {%- if fellow_profile.role %}
+          <p class="profile-card__role">{{ fellow_profile.role }}</p>
+          {%- endif %}
 
-      {% if content_parts.size > 1 %}
-        {{ content_parts[0] }}
-        {% if has_project %}
-        <div class="mb-4">
-          <h3>Fellowship Project</h3>
-          {% if fellow_profile.project_title %}
-            {% if fellow_profile.project_link and fellow_profile.project_link != "" %}
-              <p class="mb-1"><a href="{{ fellow_profile.project_link }}#zoom=page-width" target="_blank" rel="noopener"><strong>{{ fellow_profile.project_title }}</strong></a></p>
-            {% else %}
-              <p class="mb-1"><strong>{{ fellow_profile.project_title }}</strong></p>
-            {% endif %}
-          {% endif %}
-          {% if fellow_profile.placement and fellow_profile.placement != "" %}
-            <p class="text-muted mb-0">{{ fellow_profile.placement }}</p>
-          {% endif %}
+          <p class="profile-card__programme">NHS Fellow in Clinical AI</p>
+
+          {%- if fellow_profile.cohort or fellow_profile.profession or fellow_profile.fellow_region %}
+          <ul class="profile-meta">
+            {%- if fellow_profile.cohort %}
+            <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Cohort {{ fellow_profile.cohort }}</li>
+            {%- endif %}
+            {%- if fellow_profile.profession %}
+            <li><i class="fa-solid fa-user-doctor" aria-hidden="true"></i> {{ fellow_profile.profession }}</li>
+            {%- endif %}
+            {%- if fellow_profile.fellow_region %}
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ fellow_profile.fellow_region }}</li>
+            {%- endif %}
+          </ul>
+          {%- endif %}
+
+          {%- if socials.size > 0 %}
+          <div class="profile-social">
+            {%- for network in socials %}
+            <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer">
+              <i class="{{ network.icon }}" aria-hidden="true"></i>
+              <span class="visually-hidden">{{ page.team-member-name }} on {{ network.name | default: "social media" }}</span>
+            </a>
+            {%- endfor %}
+          </div>
+          {%- endif %}
         </div>
-        {% endif %}
-        {{ content_parts[1] }}
-      {% else %}
-        {% if has_project %}
-        <div class="mb-4">
-          <h3>Fellowship Project</h3>
-          {% if fellow_profile.project_title %}
-            {% if fellow_profile.project_link and fellow_profile.project_link != "" %}
-              <p class="mb-1"><a href="{{ fellow_profile.project_link }}#zoom=page-width" target="_blank" rel="noopener"><strong>{{ fellow_profile.project_title }}</strong></a></p>
-            {% else %}
-              <p class="mb-1"><strong>{{ fellow_profile.project_title }}</strong></p>
-            {% endif %}
-          {% endif %}
-          {% if fellow_profile.placement and fellow_profile.placement != "" %}
-            <p class="text-muted mb-0">{{ fellow_profile.placement }}</p>
-          {% endif %}
+      </div>
+
+      <div class="col-12 col-lg-8">
+        <div class="profile-panel">
+          <div class="profile-body">
+            {%- assign content_parts = content | split: "<!-- FELLOWSHIP_PROJECT -->" -%}
+            {%- if content_parts.size > 1 -%}
+              {{ content_parts[0] }}
+              {%- if has_project %}{{ project_block }}{% endif -%}
+              {{ content_parts[1] }}
+            {%- else -%}
+              {%- if has_project %}{{ project_block }}{% endif -%}
+              {{ content }}
+            {%- endif -%}
+
+            {%- comment -%}
+              Shown for any fellow with a joining_statement in the data file.
+              This was previously pinned to cohort "5", which would have
+              silently hidden it for every later cohort.
+            {%- endcomment -%}
+            {%- if fellow_profile.joining_statement and fellow_profile.joining_statement != "" %}
+            <h2 class="profile-section-title">Joining Statement</h2>
+            <blockquote class="pull-quote">{{ fellow_profile.joining_statement }}</blockquote>
+            {%- endif %}
+
+            {%- assign fellow_publications = site.data.fellowship_publications | where_exp: "item", "item.fellow contains page.team-member-name" %}
+            {%- if fellow_publications.size > 0 %}
+            <h2 class="profile-section-title">Fellowship Publications</h2>
+            <ul class="profile-links">
+              {%- for item in fellow_publications %}
+              <li>{% include profile-link.html title=item.title link=item.link %}</li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+
+            {%- assign fellow_media = site.data.media | where_exp: "item", "item.fellow contains page.team-member-name" %}
+            {%- if fellow_media.size > 0 %}
+            <h2 class="profile-section-title">Fellowship Media</h2>
+            <ul class="profile-links">
+              {%- for item in fellow_media %}
+              <li>{% include profile-link.html title=item.title link=item.link %}</li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+          </div>
         </div>
-        {% endif %}
-
-        {{ content }}
-      {% endif %}
-
-      {% comment %}
-        Joining Statement: show only for Cohort 5 fellows where a joining_statement is present in _data/fellowship_fellows.yml.
-      {% endcomment %}
-      {% if fellow_profile and fellow_profile.cohort == "5" and fellow_profile.joining_statement and fellow_profile.joining_statement != "" %}
-      <hr>
-      <h3>Joining Statement</h3>
-      <p>{{ fellow_profile.joining_statement }}</p>
-      {% endif %}
-
-      {% comment %}
-        Fellowship Publications: show any publications where the `fellow` field contains this fellow's name.
-      {% endcomment %}
-      {% assign fellow_publications = site.data.fellowship_publications | where_exp: "item", "item.fellow contains page.team-member-name" %}
-
-      {% if fellow_publications and fellow_publications.size > 0 %}
-      <hr>
-      <h3>Fellowship Publications</h3>
-      <ul>
-        {% for item in fellow_publications %}
-          <li><a href="{{ item.link }}">{{ item.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-
-      {% comment %}
-        Fellowship Media: show any media where the `fellow` field contains this fellow's name.
-      {% endcomment %}
-      {% assign fellow_media = site.data.media | where_exp: "item", "item.fellow contains page.team-member-name" %}
-
-      {% if fellow_media and fellow_media.size > 0 %}
-      <hr>
-      <h3>Fellowship Media</h3>
-      <ul>
-        {% for item in fellow_media %}
-          <li><a href="{{ item.link }}">{{ item.title | replace: '<br />', ' ' | replace: '<br/>', ' ' | replace: '<br>', ' ' }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endif %}
+      </div>
     </div>
   </div>
 </div>

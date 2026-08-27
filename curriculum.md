@@ -2,22 +2,12 @@
 layout: page
 permalink: /curriculum/
 title: Curriculum
-
+description: The bespoke clinical AI curriculum of the NHS Fellowship in Clinical AI, designed by the faculty.
 ---
-
-<style>
-@media (max-width: 768px) {
-  iframe {
-    display:none;
-  }
-}
-</style>
 
 The bespoke curriculum of the fellowship was designed by the faculty, and aligns to educational frameworks from Health Education England.
 
-<iframe src="/assets/docs/FCAI_Curriculum_v3.2.pdf#page=1&zoom=page-width"
-        style="width:100%; aspect-ratio: 1/1.414; border:none;"
-        loading="lazy">
-</iframe>
-
-[Download the curriculum](/assets/docs/FCAI_Curriculum_v3.2.pdf)
+{% include pdf-document.html
+     file="/assets/docs/FCAI_Curriculum_v3.2.pdf"
+     title="Clinical AI Curriculum"
+     meta="PDF · version 3.2" %}

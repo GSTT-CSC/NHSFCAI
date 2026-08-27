@@ -1,0 +1,16 @@
+{%- comment -%}
+  One of the cards below the banner on the home page. Title, link, icon and
+  text all come from the `features` list in index.md.
+
+    {% include feature-card.html feature=feature %}
+
+  The icon is decorative - the card's title says the same thing - so its alt
+  is deliberately empty.
+{%- endcomment -%}
+<div class="feature">
+  {%- if include.feature.icon %}
+  <div class="feature-image"><img src="{{ include.feature.icon }}" alt="" width="100" height="100" /></div>
+  {%- endif %}
+  <h2 class="feature-title"><a class="stretched-link" href="{{ include.feature.url }}">{{ include.feature.title }}</a></h2>
+  <div class="feature-content">{{ include.feature.text }}</div>
+</div>

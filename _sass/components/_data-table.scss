@@ -1,0 +1,434 @@
+// Shared styling for the data-driven tables on /resources, /literature,
+// /publications, /media and /apply. Previously this block was pasted into the
+// top of each of those markdown files.
+//
+// The tables sit on the pale grey page background, so they are presented as a
+// white card: one outer border and rounded corners, horizontal rules between
+// rows, and no internal grid. The heavy cell-by-cell borders and blue zebra
+// striping they used to carry made short factual rows read as a spreadsheet.
+
+$nhs-blue: #005eb8;
+$nhs-dark-blue: #003087;
+$nhs-pale-blue: #e8f1f8;
+$nhs-border: #d8dde0;
+$nhs-rule: #e8edee;
+$nhs-pale-grey: #f0f4f5;
+$nhs-ink: #212b32;
+$nhs-muted: #425563;
+
+.data-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  border: 1px solid $nhs-border;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(33, 43, 50, 0.06), 0 6px 16px rgba(33, 43, 50, 0.05);
+}
+
+.data-table,
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: $nhs-ink;
+
+  th,
+  td {
+    border: 0;
+    padding: 14px 20px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  // A small-caps label bar rather than a second row of body text.
+  thead th {
+    background-color: $nhs-blue;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  tbody td {
+    background-color: #fff;
+    transition: background-color 0.15s ease;
+  }
+
+  tbody tr + tr td {
+    border-top: 1px solid $nhs-rule;
+  }
+
+  // Row hover reads as a whole row: tint plus a blue marker in the gutter.
+  tbody tr:hover td {
+    background-color: $nhs-pale-grey;
+  }
+
+  tbody tr td:first-child {
+    box-shadow: inset 3px 0 0 transparent;
+  }
+
+  tbody tr:hover td:first-child {
+    box-shadow: inset 3px 0 0 $nhs-blue;
+  }
+}
+
+// Markdown (pipe-syntax) tables get the same treatment. They have no
+// .data-table-wrap around them, so they carry the card themselves and scroll
+// inside the content column instead of widening the page. Excluding
+// .data-table matters: `display: block` would take a wrapped table out of
+// table layout, and the margins would float it inside its own wrapper.
+.content table:not(.data-table) {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: normal;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid $nhs-border;
+  border-radius: 8px;
+}
+
+// Row-level typography. These live under `.data-table` so they outrank the
+// blanket `.content a { text-decoration: underline }` rule that the page
+// layout applies to everything in the content column.
+.data-table {
+  // Row headlines and their meta lines live in components/entry, shared with
+  // the publication and media lists on individual fellow pages.
+
+  .dt-desc,
+  td.dt-desc {
+    color: $nhs-muted;
+  }
+
+  // Fellow attribution. Each fellow is a pill of avatar + name that stays on
+  // one line, instead of a fixed two-column grid that broke names over three.
+  .fellow-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .fellow-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+    padding: 4px 14px 4px 4px;
+    border: 1px solid $nhs-border;
+    border-radius: 999px;
+    background-color: #fff;
+    color: $nhs-ink;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.25;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+
+    img {
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: $nhs-pale-grey;
+      display: block;
+      margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $nhs-pale-blue;
+      border-color: $nhs-blue;
+      color: $nhs-dark-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+// Column proportions. Without these the browser sizes columns by content, so
+// the short first column stole width from the prose it was labelling. They are
+// scoped to md and up: below that the rows stack, and a percentage width on a
+// stacked cell would wrap the title one word per line.
+@include media-breakpoint-up(md) {
+  .data-table--people {
+    th:first-child,
+    td:first-child {
+      width: 32%;
+      min-width: 200px;
+    }
+  }
+
+  .data-table--literature {
+    th:first-child,
+    td:first-child {
+      width: 34%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 24%;
+    }
+  }
+
+  .data-table--resources {
+    th:first-child,
+    td:first-child {
+      width: 36%;
+    }
+  }
+
+  // The /apply eligibility matrix. The three workforce columns hold route
+  // labels rather than prose, so the region names get the width.
+  .eligibility-matrix {
+    th:first-child,
+    td:first-child {
+      width: 28%;
+    }
+  }
+}
+
+// The two markdown tables in the /apply eligibility section. Their headers are
+// long enough that the blanket `white-space: nowrap` on thead cells pushed the
+// region names into four-line stacks, and the route labels must never break
+// across lines.
+// Nested under `.content` to outrank the blanket `.content table thead th`
+// nowrap above, which would otherwise keep these headings on one line.
+.content table.eligibility-matrix,
+.content table.route-legend {
+  thead th {
+    white-space: normal;
+  }
+}
+
+.eligibility-matrix {
+  th:first-child,
+  td:first-child {
+    min-width: 190px;
+  }
+
+  // Markdown tables are laid out at max-content width and scroll, so without a
+  // cap the three long workforce headings alone push the matrix wider than the
+  // content column and hide the last one off-screen. Capping them lets the
+  // headings wrap and the whole matrix fit.
+  thead th:not(:first-child) {
+    max-width: 11rem;
+  }
+
+  tbody td:not(:first-child) {
+    white-space: nowrap;
+  }
+}
+
+.route-legend {
+  th:first-child,
+  td:first-child {
+    width: 1%;
+    white-space: nowrap;
+  }
+}
+
+// The interview timetable. One row per applicant pool, ordered by date, so the
+// date and count columns take only the width they need and the pool names get
+// the rest.
+.interview-timetable {
+  th:first-child,
+  td:first-child,
+  th:last-child,
+  td:last-child {
+    width: 1%;
+    white-space: nowrap;
+  }
+}
+
+// The entry route table above the matrix. Its first column holds two short
+// route names, which the default content-based sizing squeezed to one word
+// per line.
+.entry-routes {
+  th:first-child,
+  td:first-child {
+    min-width: 160px;
+  }
+}
+
+// The funding route and project matching tables inside the nominated applicant
+// section. Same shape as the entry route table: two short route names in the
+// first column, prose in the rest.
+.funding-routes,
+.project-routes {
+  th:first-child,
+  td:first-child {
+    width: 1%;
+    white-space: nowrap;
+  }
+}
+
+// The person specification on /apply and /international. Written as HTML rather
+// than a markdown table because the requirement column is merged: one Essential
+// cell spanning its three criteria, one Desirable cell spanning the rest.
+.person-spec {
+  // The merged label is one word; the criteria prose takes the width.
+  thead th:first-child,
+  tbody th {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  tbody th {
+    // Centred on the group it spans, so the label reads as covering all of it
+    // rather than belonging to the first row.
+    vertical-align: middle;
+    font-weight: 600;
+    color: $nhs-ink;
+  }
+
+  // `tbody tr + tr td` above rules between rows, but it only matches td, so a
+  // row that opens a group would get a rule across the criteria column and
+  // nothing across the merged one. This carries the line the rest of the way.
+  tbody tr + tr th {
+    border-top: 1px solid $nhs-rule;
+  }
+
+  // No row hover. The gutter marker and tint are keyed to a single row, and
+  // half of each row here belongs to a cell shared with its neighbours - the
+  // merged label would stay untinted while the row beside it lit up.
+  tbody tr:hover td {
+    background-color: #fff;
+  }
+
+  tbody tr:hover td:first-child {
+    box-shadow: none;
+  }
+}
+
+.last-updated {
+  font-style: italic;
+  color: #4c6272;
+  margin-top: 1rem;
+}
+
+// ---------------------------------------------------------------------------
+// Small screens
+// ---------------------------------------------------------------------------
+// Two or three columns of prose in 340px means every cell is a word wide. Below
+// md each row becomes its own stacked card: the column headings move into small
+// blue labels above each field (via data-label), and the header bar is dropped.
+//
+// Changing the display of rows and cells takes a table out of the accessibility
+// tree, so the markup carries explicit role="table"/"row"/"cell" attributes to
+// put it back. Markdown tables are excluded - they are genuine matrices, and
+// they keep scrolling sideways instead. The `.content table.data-table`
+// selector is there only to match the specificity of the `.content table`
+// rules the base styles above generate - without it those rules win.
+@include media-breakpoint-down(md) {
+  .data-table,
+  .content table.data-table {
+    thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    tbody tr {
+      display: block;
+      padding: 16px 18px;
+    }
+
+    tbody tr + tr {
+      border-top: 1px solid $nhs-rule;
+    }
+
+    tbody tr:hover {
+      background-color: $nhs-pale-grey;
+    }
+
+    tbody td {
+      display: block;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    tbody tr + tr td {
+      border-top: 0;
+    }
+
+    tbody td + td {
+      margin-top: 0.75rem;
+    }
+
+    tbody tr td:first-child,
+    tbody tr:hover td:first-child {
+      box-shadow: none;
+    }
+
+    td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $nhs-blue;
+    }
+  }
+}
+
+// Route labels in the /apply eligibility matrix. Each cell of that table lists
+// which funded posts a region/workforce combination can apply to, so the routes
+// have to read as a set of small tags rather than as a sentence. Same pill
+// geometry as .fellow-chip above; colour carries the funding route. Defined at
+// the top level because the matrix is a markdown table, not a .data-table.
+// Regional takes NHS dark green; the two sponsored routes take the colours
+// sampled from their own logos, so the labels match the badges applicants
+// already recognise.
+$route-green: #006747;
+$route-bsh-red: #e20613;
+$route-bsh-ink: #b61f34;
+$route-bsh-tint: #fdeaec;
+$route-tpro-cyan: #12c3f4;
+$route-tpro-edge: #0f9ec6;
+$route-tpro-ink: #16252e;
+
+.route-chip {
+  display: inline-flex;
+  align-items: center;
+  margin: 1px 0;
+  padding: 2px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+
+  &.is-regional {
+    background-color: $route-green;
+    border-color: $route-green;
+    color: #fff;
+  }
+
+  &.is-bsh {
+    background-color: $route-bsh-tint;
+    border-color: $route-bsh-red;
+    color: $route-bsh-ink;
+  }
+
+  &.is-tpro {
+    background-color: $route-tpro-cyan;
+    border-color: $route-tpro-edge;
+    color: $route-tpro-ink;
+  }
+}

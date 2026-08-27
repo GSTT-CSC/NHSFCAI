@@ -2,6 +2,7 @@
 layout: page
 permalink: /sites/
 title: NHS AI Project Host Sites
+description: The NHS teams and trusts hosting clinical AI project placements for fellows on the NHS Fellowship in Clinical AI.
 
 ---
 Our [fellows](/fellows) are hosted in clinical AI project placements in teams across the NHS. Click on each fellow to find out more.
@@ -9,31 +10,35 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
-    #filter-container {
-        background-color: #f0f4f5;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 1px solid #d8dde0;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .filter-group { display: flex; flex-direction: column; }
-    .filter-group label { font-size: 0.85em; font-weight: bold; margin-bottom: 5px; }
-    .filter-group select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; min-width: 160px; background-color: white; }
-
     #map {
-        height: 1000px;
+        height: min(1000px, 75vh);
         width: 100%;
         border-radius: 8px;
         z-index: 1;
     }
     
+    /* .content img gives every image 20px vertical margins. Leaflet builds its
+       tiles and pin faces as <img>s, so that rule pushes the whole tile layer
+       20px down the container and offsets each pin inside its own marker. */
+    .leaflet-container .leaflet-tile,
+    .leaflet-container .leaflet-marker-icon img {
+        margin: 0;
+    }
+
+    /* Leaflet 1.9 blends tiles with `mix-blend-mode: plus-lighter` so they can
+       fade in without seams. The map sits in a centred Bootstrap container, so
+       tiles almost never land on whole device pixels; every tile edge is then
+       antialiased, and plus-lighter *adds* the two edges where they meet,
+       drawing a bright line down each tile boundary. Blend normally instead,
+       and give tiles half a pixel of overlap so those antialiased edges cover
+       one another rather than letting the grey container background through.
+       Leaflet still positions tiles on the 256px grid, so nothing shifts. */
+    .leaflet-container img.leaflet-tile {
+        mix-blend-mode: normal;
+        width: 256.5px !important;
+        height: 256.5px !important;
+    }
+
     /* MODIFIED FACE PIN STYLING */
     /* Fixed 70px dimensions removed so JS can handle dynamic scaling */
     .map-pin-face {
@@ -74,7 +79,7 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
 
     
     .custom-face-icon { background: none !important; border: none !important; }
-    .popup-content { text-align: center; font-family: Arial, sans-serif; max-width: 240px; }
+    .popup-content { text-align: center; max-width: 240px; }
     
     .role-text {
         font-size: 0.85em;

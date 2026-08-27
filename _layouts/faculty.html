@@ -3,38 +3,76 @@ layout: default
 bodyClass: "page-basic"
 ---
 
-{% comment %}
-  Convert team member's name into a slug to match keys in _data/social_links_faculty.yml
-{% endcomment %}
-{% assign url_name = page.team-member-name | slugify %}
-{% assign socials = site.data.social_links_faculty[url_name] %}
-{% comment %}
-      Construct the image path using the slug
-      e.g., /images/faculty/forename-surname.jpg
-{% endcomment %}
-{% assign image_path = "/images/faculty/" | append: url_name | append: ".jpg" %}
+{%- comment -%}
+  The faculty member's name is the key for their photo, their social links and
+  their row in _data/faculty.yml.
+{%- endcomment -%}
+{%- assign url_name = page.team-member-name | slugify -%}
+{%- assign socials = site.data.social_links_faculty[url_name] -%}
+{%- assign image_path = "/images/faculty/" | append: url_name | append: ".jpg" -%}
 
-<div class="container" id="pagecontainer">
-  <div class="row">
-    <div class="col-12 col-lg-4 text-center">
-      <div style="position: relative; display: inline-block;">
-        <img class="mx-auto p-1" style="width: 250px; border-radius: 40px;" src={{ image_path }} alt="">
-        {% if socials %}
-        <div class="social-button-cluster">
-          {% for network in socials %}
-          <a href="{{ network.url }}">
-            <i class="{{ network.icon }}"></i>
-          </a>
-          {% endfor %}
+{%- assign faculty_people = site.data.faculty.en.team.people -%}
+{%- assign faculty_profile = nil -%}
+{%- for person in faculty_people -%}
+  {%- assign person_slug = person.name | slugify -%}
+  {%- if person_slug == url_name -%}
+    {%- assign faculty_profile = person -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="content-wrapper">
+  <div class="container profile" id="pagecontainer">
+    <p class="profile-back">
+      <a href="/faculty/"><span aria-hidden="true">&larr;</span> All faculty</a>
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-4">
+        <div class="profile-card profile-card--faculty">
+          <div class="profile-card__photo">
+            <img src="{{ image_path }}"
+                 width="180"
+                 height="180"
+                 onerror="this.onerror=null;this.src='/images/faculty/default.jpg';"
+                 alt="{{ page.team-member-name }}">
+          </div>
+
+          <h1 class="profile-card__name">{{ page.team-member-name }}</h1>
+          <p class="profile-card__programme">NHS Fellowship in Clinical AI</p>
+
+          {%- assign faculty_role = page.job-role | default: faculty_profile.role %}
+          {%- if faculty_role or faculty_profile.background %}
+          <ul class="profile-meta">
+            {%- if faculty_role %}
+            <li><i class="fa-solid fa-people-group" aria-hidden="true"></i> {{ faculty_role }}</li>
+            {%- endif %}
+            {%- if faculty_profile.background %}
+            <li><i class="fa-solid fa-user-doctor" aria-hidden="true"></i> {{ faculty_profile.background }}</li>
+            {%- endif %}
+          </ul>
+          {%- endif %}
+
+          {%- if socials.size > 0 %}
+          <div class="profile-social">
+            {%- for network in socials %}
+            <a href="{{ network.url }}" target="_blank" rel="noopener noreferrer">
+              <i class="{{ network.icon }}" aria-hidden="true"></i>
+              <span class="visually-hidden">{{ page.team-member-name }} on {{ network.name | default: "social media" }}</span>
+            </a>
+            {%- endfor %}
+          </div>
+          {%- endif %}
         </div>
-        {% endif %}
       </div>
-      <h4 class="pt-2 text-center">{{ page.team-member-name }}</h4>
-      <p class="text-center text-muted">{{ page.job-role }}</p>
-    </div>
 
-    <div class="col-12 col-lg-8">
-      {{ content }}
+      <div class="col-12 col-lg-8">
+        <div class="profile-panel">
+          <div class="profile-body">
+            {{ content }}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

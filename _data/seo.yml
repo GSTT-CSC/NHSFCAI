@@ -1,2 +1,4 @@
 google_analytics_id: ""
-copyright_text: '© 2025 NHS Fellowship in Clinical AI</a>'
+description: 'The NHS Fellowship in Clinical AI is a 12-month programme equipping NHS clinicians to deploy and evaluate AI in live clinical workflows, alongside their existing roles.'
+default_image: '/images/homepage_gallery/homepage_image_cohort1.jpg'
+copyright_text: 'NHS Fellowship in Clinical AI'

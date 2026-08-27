@@ -1,0 +1,13 @@
+{% comment %}
+  Renders the last-modified date of a file in _data/, so it never needs editing
+  by hand. Pass the data file's basename:
+
+    {% include last-updated.html source="resources" %}
+{% endcomment %}
+{% assign stamp = site.data.timestamps[include.source] %}
+{% if stamp %}
+<p class="last-updated">
+  Last updated
+  <time datetime="{{ stamp | date_to_xmlschema }}">{{ stamp | date: "%B %Y" }}</time>
+</p>
+{% endif %}

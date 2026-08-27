@@ -1,29 +1,104 @@
+// The three selling points on the home page: real-world projects, curriculum,
+// network.
+//
+// These were the last boxes on the site still in the original template's
+// treatment - a 3px radius and a 1px #fff6f8 border, a pink so pale it read as
+// no border at all, so the cards came across as sharp-edged blocks floating on
+// the grey strip. They now use the same card language as the people tiles on
+// /fellows and the testimonials on /about: white, 12px radius, a hairline grey
+// border and the shared soft shadow, lifting to a blue border on hover.
+//
+// Each card is a link to the page it describes, so the whole card is the target
+// (Bootstrap's .stretched-link on the title, as on the people tiles) rather
+// than just the few words of the heading.
+
+$feature-blue: #005eb8;
+$feature-dark-blue: #003087;
+$feature-pale-blue: #e8f1f8;
+$feature-border: #d8dde0;
+$feature-ink: #212b32;
+$feature-muted: #425563;
+$feature-shadow: 0 1px 2px rgba(33, 43, 50, 0.06), 0 6px 16px rgba(33, 43, 50, 0.05);
+
 .feature {
+  position: relative;
   height: 100%;
-  border: 1px solid $white-offset;
-  border-radius: 3px;
-  padding: 20px;
-  background-color: #ffffff;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  padding: 28px 24px 24px;
+  background-color: #fff;
+  border: 1px solid $feature-border;
+  border-radius: 12px;
+  box-shadow: $feature-shadow;
   text-align: center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+  // :focus-within so keyboard users get the same affordance as the mouse.
+  &:hover,
+  &:focus-within {
+    border-color: $feature-blue;
+    box-shadow: 0 2px 4px rgba(33, 43, 50, 0.08), 0 10px 24px rgba(33, 43, 50, 0.1);
+    transform: translateY(-2px);
+  }
+
+  // The icon sits in a pale blue disc, the same fill the meta chips and project
+  // strip use on a profile, so the three line drawings read as one set rather
+  // than three loose illustrations.
   .feature-image {
     flex: 0 0 auto;
-    width: 80px;
-    height: 80px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
     margin-bottom: 20px;
-    text-align: center;
+    border-radius: 50%;
+    background-color: $feature-pale-blue;
   }
+
   img {
-    width: 100%;
+    width: 52px;
     height: auto;
+    margin: 0;
   }
+
   .feature-title {
+    margin: 0 0 0.6rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: $feature-ink;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $feature-dark-blue;
+        text-decoration: underline;
+      }
+    }
   }
+
   .feature-content {
     margin-bottom: 0;
-    margin-top: auto;
+    margin-top: 0;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: $feature-muted;
+  }
+}
+
+// The lift is decoration; the border and shadow carry the hover state.
+@media (prefers-reduced-motion: reduce) {
+  .feature {
+    transition: none;
+
+    &:hover,
+    &:focus-within {
+      transform: none;
+    }
   }
 }

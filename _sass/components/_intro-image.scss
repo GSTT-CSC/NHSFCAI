@@ -19,24 +19,117 @@
   }
 }
 
+// ---------------------------------------------------------------------------
+// The rotating cohort photographs in the hero
+// ---------------------------------------------------------------------------
+// A fixed 16:9 frame, so the banner does not resize as slides swap and the
+// space is reserved before the first photograph loads. Rounded and shadowed to
+// match the cards the rest of the site is built from.
+
 .intro-gallery {
   position: relative;
   width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  // Stacked under the heading and the Apply button on a phone, so it needs its
+  // own air; on md and up it sits alongside them.
+  @include media-breakpoint-down(md) {
+    margin-top: 2.5rem;
+  }
 }
 
 .gallery-slide {
-  display: none;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  transition: opacity 1s ease-in-out;
   opacity: 0;
+  // Kept in the layer stack rather than display:none, so the cross-fade has
+  // something to fade to.
+  transition: opacity 1s ease-in-out;
 }
 
 .gallery-slide.active {
-  display: block;
-  position: relative;
   opacity: 1;
+}
+
+// Pause / play. WCAG 2.2.2 asks for a way to stop anything that moves on its
+// own for more than five seconds, and an auto-advancing carousel is the
+// textbook case - but a control permanently parked on the photograph is a lot
+// of chrome for something almost nobody presses. It fades in when the pointer
+// is over the gallery or a key press moves focus into it, and stays put in the
+// two cases where hover cannot reveal it: touch screens, and a gallery that is
+// already paused (where it is the only way to start the photographs again).
+.gallery-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: $primary;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #ffeb3b;
+    outline-offset: 2px;
+  }
+}
+
+.intro-gallery:hover .gallery-toggle,
+.intro-gallery:focus-within .gallery-toggle,
+.intro-gallery.is-paused .gallery-toggle {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .gallery-toggle {
+    opacity: 1;
+  }
+}
+
+// Two bars for pause, a triangle for play - drawn in CSS so the button carries
+// no image weight.
+.gallery-toggle__icon {
+  width: 12px;
+  height: 12px;
+  border-left: 4px solid currentColor;
+  border-right: 4px solid currentColor;
+}
+
+.intro-gallery.is-paused .gallery-toggle__icon {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-left: 11px solid currentColor;
+  border-right: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-slide {
+    transition: none;
+  }
+
+  .gallery-toggle {
+    transition: none;
+  }
 }

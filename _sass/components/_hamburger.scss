@@ -3,7 +3,8 @@
   outline: none;
   z-index: 30;
   cursor: pointer;
-  @include media-breakpoint-up(md) {
+  // Hidden only once the desktop menu takes over (see _main-menu.scss).
+  @include media-breakpoint-up(lg) {
     display: none;
   }
   &:focus {

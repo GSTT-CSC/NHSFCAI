@@ -1,0 +1,49 @@
+// One listing entry - a publication, a media appearance, a paper, a resource -
+// wherever it appears: the tables on /publications, /media, /literature and
+// /resources, and the lists on an individual fellow's page.
+//
+// These used to be two separate treatments (blue 600 in the tables, ink 500 in
+// the fellow-page tiles), so the same publication looked like two different
+// things depending on where you met it. The container still differs by
+// necessity - a table row in one place, a tappable tile in the other - but the
+// entry inside it is now identical.
+//
+// The title keeps its link colour in both. On /publications it is the only
+// clickable thing in its cell and has to carry the affordance on its own; in a
+// fellow-page tile the whole tile is the link, but colouring the title costs
+// nothing there and is what makes the two read as the same object.
+
+$entry-blue: #005eb8;
+$entry-dark-blue: #003087;
+$entry-muted: #425563;
+
+.entry-title {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: $entry-blue;
+}
+
+// `a.entry-title` rather than `.entry-title`, so it outranks the blanket
+// `.content a { text-decoration: underline }` the page layout applies.
+a.entry-title {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $entry-dark-blue;
+    text-decoration: underline;
+  }
+}
+
+// Journal, publisher and date, split off the title so it is not part of the
+// link text.
+.entry-meta {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $entry-muted;
+}

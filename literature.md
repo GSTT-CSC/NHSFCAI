@@ -2,66 +2,33 @@
 layout: page
 permalink: /literature/
 title: Supporting Literature
-
+description: Supporting literature describing the benefits and outputs of the NHS Fellowship in Clinical AI.
 ---
 
 Find below the supporting literature which describes the benefits and outputs of the programme, newest first:
 
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #d8dde0;
-    padding: 6px 10px;
-    text-align: left !important;
-    vertical-align: top;
-  }
-  th {
-    background-color: #005eb8; /* NHS blue */
-    color: white;
-  }
-  tr:nth-child(even) td {
-    background-color: #e8f1f8; /* slightly darker pale NHS blue */
-  }
-  tr:nth-child(odd) td {
-    background-color: #ffffff;
-  }
-  tr:hover td {
-    background-color: #d4e2f0; /* hover highlight */
-  }
-</style>
 <!-- Supporting Literature -->
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Authors</th>
-      <th scope="col">Description</th>
+<div class="data-table-wrap">
+<table class="data-table data-table--literature" role="table">
+  <thead role="rowgroup">
+    <tr role="row">
+      <th scope="col" role="columnheader">Title</th>
+      <th scope="col" role="columnheader">Authors</th>
+      <th scope="col" role="columnheader">Description</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody role="rowgroup">
   {% for item in site.data.literature %}
-  <tr>
-    <td style="width: 30%; vertical-align: top;">
-      {% if item.link %}
-        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
-      {% else %}
-        {{ item.title }}
-      {% endif %}
-    </td>
-    <td style="width: 20%; vertical-align: top;">
-      {{ item.authors }}
-    </td>
-    <td style="width: 50%; vertical-align: top;">
-      {{ item.description }}
-    </td>
+  <tr role="row">
+    <td role="cell">{% include data-title.html title=item.title link=item.link external=true %}</td>
+    <td role="cell" class="dt-desc" data-label="Authors">{{ item.authors }}</td>
+    <td role="cell" class="dt-desc" data-label="Description">{{ item.description }}</td>
   </tr>
   {% endfor %}
   </tbody>
 </table>
+</div>
 <!-- Supporting Literature -->
 
-<i> Last updated: April 2026</i>
+{% include last-updated.html source="literature" %}
 <br>To suggest an addition, please [contact the faculty](mailto:gstt.aifellowship@nhs.net)

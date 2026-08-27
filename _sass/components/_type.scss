@@ -41,3 +41,24 @@ ol {
     margin: 0;
   }
 }
+
+// Instruction line under a page title. Previously an <h5>, which put a heading
+// in the middle of the hierarchy purely to size a sentence of body copy.
+.section-hint {
+  font-size: 1.05rem;
+  color: #4c6272;
+  margin-bottom: 1rem;
+}
+
+// Available to screen readers, not shown on screen.
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

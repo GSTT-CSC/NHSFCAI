@@ -2,27 +2,8 @@
 layout: page
 permalink: /fellows/
 title: Fellows & Alumni
+description: The fellows and alumni of the NHS Fellowship in Clinical AI, filterable by cohort, region and profession.
 ---
-
-<style>
-    #filter-container {
-        background-color: #f0f4f5;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-wrap: wrap;
-        border: 1px solid #d8dde0;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .filter-group { display: flex; flex-direction: column; }
-    .filter-group label { font-size: 0.85em; font-weight: bold; margin-bottom: 5px; }
-    .filter-group select { padding: 8px; border-radius: 6px; border: 1px solid #ccc; min-width: 160px; background-color: white; }
-</style>
 
 <div id="filter-container" class="mb-3">
   <div class="filter-group">
@@ -48,7 +29,8 @@ title: Fellows & Alumni
 </div>
 
 <!-- Team -->
-<h5>Click on each fellow to find out more. You can also explore their <a href="/sites/">AI project placements</a>.</h5>
+<p class="section-hint">Click on each fellow to find out more. You can also explore their <a href="/sites/">AI project placements</a>.</p>
+<p class="filter-count" id="fellow-count" role="status"></p>
 <div class="container">
   <div class="row pt-3">
 
@@ -59,51 +41,55 @@ title: Fellows & Alumni
       {% assign image_path = "/images/fellow/" | append: url_name | append: ".jpg" %}
       {% assign socials = site.data.social_links_fellows[url_name] %}
 
-      <div class="col-md-6 col-lg-3 text-center text-lg-left team-member"
+      <div class="col-6 col-md-4 col-lg-3 team-member"
            data-cohort="{{ person.cohort }}"
            data-fellow-region="{{ person.fellow_region }}"
-           data-profession="{{ person.profession }}"
-           style="position: relative;">
-
-        <a href="{{ page_url }}">
-          <img
-            class="mx-auto p-1"
-            style="width: 250px; border-radius: 50%;"
-            src="{{ image_path }}"
-            onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
-            alt="{{ person.name }}"
-            width="250"
-            height="250"
-            decoding="async"
-            {% if forloop.index <= 4 %}
-              loading="eager" fetchpriority="high"
-            {% else %}
-              loading="lazy" fetchpriority="low"
-            {% endif %}
-          />
-        </a>
-
-        <h4>{{ person.name }}</h4>
-        <p class="text-muted">{{ person.role }}</p>
-
-        {% if person.flag or socials.size > 0 %}
-          <div class="social-button-cluster">
-            {% for social in socials limit:3 %}
-              {% if social %}
-                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
-                  <i class="{{ social.icon }}"></i>
-                </a>
+           data-profession="{{ person.profession }}">
+        <div class="people-card">
+          <div class="people-card__photo">
+            <img
+              src="{{ image_path }}"
+              onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';"
+              alt=""
+              width="170"
+              height="170"
+              decoding="async"
+              {% if forloop.index <= 4 %}
+                loading="eager" fetchpriority="high"
+              {% else %}
+                loading="lazy" fetchpriority="low"
               {% endif %}
-            {% endfor %}
+            />
             {% if person.flag %}
-              <span class="fellow-flag" title="{{ person.name }}">{{ person.flag }}</span>
+              <span class="people-card__flag" aria-hidden="true">{{ person.flag }}</span>
+            {% endif %}
+            {% if socials.size > 0 %}
+              <div class="people-card__social">
+                {% for social in socials limit:3 %}
+                  {% if social %}
+                    <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">
+                      <i class="{{ social.icon }}" aria-hidden="true"></i>
+                      <span class="visually-hidden">{{ person.name }} on {{ social.name | default: "social media" }}</span>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
             {% endif %}
           </div>
-        {% endif %}
+
+          {% comment %}
+            The name carries the link, and stretched-link makes the whole card
+            clickable. The portrait is decorative once the name is the link
+            text, so it takes an empty alt rather than repeating the name.
+          {% endcomment %}
+          <h2 class="people-card__name"><a class="stretched-link" href="{{ page_url }}">{{ person.name }}</a></h2>
+          <p class="people-card__role">{{ person.role }}</p>
+        </div>
       </div>
     {% endfor %}
 
   </div>
+  <p class="filter-empty" id="fellow-empty" hidden>No fellows match these filters. Try widening your selection.</p>
 </div>
 
 <script>
@@ -121,12 +107,13 @@ function initializeFilters() {
     const cohorts = new Set();
     const regions = new Set();
     const professions = new Set();
-    const cohortLabels = {
-      "5": "Cohort 5 (2026-27)",
-      "4": "Cohort 4 (2025-26)",
-      "3": "Cohort 3 (2024-25)",
-      "2": "Cohort 2 (2023-24)",
-      "1": "Cohort 1 (2022-23)"
+    // Cohort 1 ran 2022-23; each later cohort starts a year after the last.
+    const FIRST_COHORT_START_YEAR = 2022;
+    const cohortLabel = (cohort) => {
+      const n = Number(cohort);
+      if (!Number.isFinite(n)) return `Cohort ${cohort}`;
+      const start = FIRST_COHORT_START_YEAR + (n - 1);
+      return `Cohort ${n} (${start}-${String(start + 1).slice(-2)})`;
     };
 
     members.forEach(member => {
@@ -135,15 +122,16 @@ function initializeFilters() {
       if (member.dataset.profession) professions.add(member.dataset.profession);
     });
 
-    [5, 4, 3, 2, 1].forEach(v => {
-      const key = String(v);
-      if (cohorts.has(key)) {
+    // Newest cohort first, and built from whatever is actually present so a
+    // new cohort appears in the filter without a code change.
+    [...cohorts]
+      .sort((a, b) => Number(b) - Number(a))
+      .forEach(key => {
         const option = document.createElement('option');
         option.value = key;
-        option.textContent = cohortLabels[key];
+        option.textContent = cohortLabel(key);
         cohortFilter.appendChild(option);
-      }
-    });
+      });
 
     // International sits at the bottom of the list, after the alphabetised UK regions.
     const sortedRegions = [...regions].sort();
@@ -193,13 +181,26 @@ function initializeFilters() {
     const region = regionFilter.value;
     const profession = professionFilter.value;
 
+    let visible = 0;
     members.forEach(member => {
       const matchCohort = cohort === 'all' || member.dataset.cohort === cohort;
       const matchRegion = region === 'all' || member.dataset.fellowRegion === region;
       const matchProfession = profession === 'all' || member.dataset.profession === profession;
+      const show = matchCohort && matchRegion && matchProfession;
 
-      member.style.display = (matchCohort && matchRegion && matchProfession) ? '' : 'none';
+      member.style.display = show ? '' : 'none';
+      if (show) visible += 1;
     });
+
+    const emptyState = document.getElementById('fellow-empty');
+    if (emptyState) emptyState.hidden = visible > 0;
+
+    const countLabel = document.getElementById('fellow-count');
+    if (countLabel) {
+      countLabel.textContent = visible === members.length
+        ? `Showing all ${members.length} fellows and alumni`
+        : `Showing ${visible} of ${members.length} fellows and alumni`;
+    }
 
     const params = new URLSearchParams();
     if (cohort && cohort !== 'all') params.set('cohort', cohort);

@@ -2,62 +2,37 @@
 layout: page
 permalink: /resources/
 title: Links to educational resources
+description: A curated list of educational resources for AI in the NHS, maintained by the fellowship faculty.
 ---
 
 A list of curated educational resources for AI in the NHS
 
-
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #d8dde0;
-    padding: 6px 10px;
-    text-align: left !important;
-    vertical-align: top;
-  }
-  th {
-    background-color: #005eb8; /* NHS blue */
-    color: white;
-  }
-  tr:nth-child(even) td {
-    background-color: #e8f1f8; /* slightly darker pale NHS blue */
-  }
-  tr:nth-child(odd) td {
-    background-color: #ffffff;
-  }
-  tr:hover td {
-    background-color: #d4e2f0; /* hover highlight */
-  }
-</style>
 <!-- Educational Resources -->
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Resource</th>
-      <th scope="col">Description</th>
+<div class="data-table-wrap">
+<table class="data-table data-table--resources" role="table">
+  <thead role="rowgroup">
+    <tr role="row">
+      <th scope="col" role="columnheader">Resource</th>
+      <th scope="col" role="columnheader">Description</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody role="rowgroup">
   {% for resource in site.data.resources %}
-  <tr>
-    <td style="width: 25%; vertical-align: top;">
-      {% if resource.link %}
-        <a href="{{ resource.link }}" target="_blank">{{ resource.name }}</a>
-      {% else %}
-        {{ resource.name }}
-      {% endif %}
+  <tr role="row">
+    <td role="cell">
+      {%- if resource.link -%}
+        <a class="entry-title" href="{{ resource.link }}" target="_blank">{{ resource.name }}</a>
+      {%- else -%}
+        <span class="entry-title">{{ resource.name }}</span>
+      {%- endif -%}
     </td>
-    <td style="width: 55%; vertical-align: top;">
-      {{ resource.description }}
-    </td>
+    <td role="cell" class="dt-desc" data-label="Description">{{ resource.description }}</td>
   </tr>
-{% endfor %}
+  {% endfor %}
   </tbody>
 </table>
+</div>
 <!-- Educational Resources -->
 
-<i> Last updated: Nov 2025 </i>
+{% include last-updated.html source="resources" %}
 <br>To suggest a link for inclusion, please [contact the faculty](mailto:gstt.aifellowship@nhs.net)

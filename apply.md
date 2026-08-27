@@ -1,200 +1,211 @@
 ---
 layout: page
 permalink: /apply/
-title: Apply for Cohort 5 (Aug 2026 - Aug 2027) <br>NHS Applicants
+title: "Apply: NHS applicants"
+description: How NHS clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting August 2027.
 ---
-_Last updated: 10 Aug 2026_ 
-<br>
 
-<div style="margin-top: 1rem; margin-bottom: 1rem; background-color: #ffffff; color: #212b32; padding: 1.5rem; border: 1px solid #d8dde0; border-left: 8px solid #005eb8;">
-  <p style="margin: 0; font-weight: 700; color: #212b32;">
-    Status: Applications closed for Cohort 5 on 15 Dec 2025.<br>
-    Next update: Applications will open for Cohort 6 on 05 Oct 2026, for Aug 2027 start<br>
-  </p>
+<div class="status-box" markdown="1">
+Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
+
+Applications close at 23:45 GMT on 16 November 2026.
 </div>
-<br><br>This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
-We invite applications for Cohort 5 of the NHS Fellowship in Clinical AI. We seek
-energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship at 2 days per week for 12 months, alongside their work or training. 
-Salary cover for the role is provided in nationally- and regionally-funded posts.
+This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
+
+We invite applications for Cohort 6 of the NHS Fellowship in Clinical AI. We seek
+energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship 2 days a week for 12 months, alongside their work or training.
+Salary cover for the role is provided in the funded posts available to competitive applicants.
 They are matched to existing clinical AI projects [in the NHS](/sites) to learn the safe
-deployment and evaluation of AI in clinical workflows under a clinical AI supervisor as part of a multidisciplinary team. 
-<br><br>Fellows are
+deployment and evaluation of AI in clinical workflows under a clinical AI supervisor as part of a multidisciplinary team.
+
+Fellows are
 supported to present and [publish their work](/publications), which may include clinical trials
 and quality improvement projects in the deployment of AI. They gain skills and knowledge relevant to the life cycle of healthcare AI from a programme of
 teaching aligned with the [clinical AI curriculum](/curriculum), including bespoke live
-[masterclass workshops](/partners) in centres of AI excellence across the NHS. Our fellows and alumni form an active and enduring [expert network of clinical AI leaders](/fellows). 
+[masterclass workshops](/partners) in centres of AI excellence across the NHS. Our fellows and alumni form an active and enduring [expert network of clinical AI leaders](/fellows).
 
-### Key Dates and How To Apply
-* 10 Nov 2025: Recruitment opens
+## Key dates and how to apply
 
-<div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-  <a href="https://forms.office.com/e/Z2ph0MAF4L" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
-    Apply as an NHS applicant
-  </a>
-  and
-  <a href="https://forms.office.com/e/V61XZwYe2h" style="display: inline-flex; align-items: center; background-color: #198754; color: #ffffff; padding: 0.55rem 1rem; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; line-height: 1; border: 2px solid #198754;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display:inline; vertical-align:-0.125em; margin-right:0.35em;"><path d="M12 2a10 10 0 0 0-10 9h11.7l-4-4a1 1 0 0 1 1.5-1.4l5.6 5.7a1 1 0 0 1 0 1.4l-5.6 5.7a1 1 0 0 1-1.5 0 1 1 0 0 1 0-1.4l4-4H2A10 10 0 1 0 12 2z"/></svg>
-    Obtain Approval in Principle
-  </a>
+* **5 Oct 2026**: Applications open
+* **Early Oct 2026**: Applicant webinar with Q&A
+* **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
+* **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for nominated applicants (non-competitive recruitment)
+* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent (competitive applicants)
+* **13-29 Jan 2027**: Remote interviews (specific dates listed below in 'Eligibility')
+* **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
+* **Aug 2027**: Fellowship Cohort 6 begins
+
+All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from August 2027 to August 2028. Applicants <b>will not be interviewed</b> without this.
+
+## Applicant webinar
+
+The Cohort 6 applicant webinar takes place in early October 2026. Details are published here when applications open.
+
+The recording below is from the Cohort 5 webinar. It covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited questions from applicants — most of which apply equally to Cohort 6.
+
+{% include video-embed.html id="SsONx1jAGxE" title="NHS Fellowship in Clinical AI: Cohort 5 applicant webinar" %}
+
+
+
+## Eligibility
+<div class="status-box" markdown="1">
+The eligibility detail below reflects the Cohort 5 cycle only. This is kept as reference material until information for Cohort 6 is published when applications open on 5 October 2026. Funding and eligibility is subject to change between cohorts without notice.
 </div>
-
-Obtain *Approval in Principle* from a responsible person with decision-making power over training/employment pattern from August 2026 - August 2027. Applicants <b>will not be interviewed</b> without this.
-* 24 Nov 2025: [Applicant webinar with Q&A](https://www.youtube.com/embed/SsONx1jAGxE)
-* 15 Dec 2025 23:45 GMT: 
-<br>Application **and** Approval In Principle deadline (all applications)
-<br>[Sponsor](/nhs-sponsor) funding confirmation deadline (sponsor-funded directly allocated posts only)
-* 13-14 Jan 2026: Shortlisting outcomes and remote interviews offered
-* 20-29 Jan 2026: Remote interviews (specific dates listed below in 'Eligibility')
-* Feb 2026: Outcomes of interviews and matching of fellows to AI projects
-* Aug 2026: Fellowship Cohort 5 begins
-
-
-### Applicant Webinar 
-
-This applicant webinar covered the features and curriculum of the fellowship, address frequently asked questions, and invited question from applicants.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SsONx1jAGxE" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+There are 2 kinds of applicant for this fellowship, and they are mutually exclusive. Both use the same application form, and applicants are entered into applicant pools automatically based on application details.
 
 
 
-### Eligibility
-
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #d8dde0;
-    padding: 6px 10px;
-    text-align: left !important;
-    vertical-align: top;
-  }
-  th {
-    background-color: #005eb8; /* NHS blue */
-    color: white;
-  }
-  tr:nth-child(even) td {
-    background-color: #e8f1f8; /* slightly darker pale NHS blue */
-  }
-  tr:nth-child(odd) td {
-    background-color: #ffffff;
-  }
-  tr:hover td {
-    background-color: #d4e2f0; /* hover highlight */
-  }
-</style>
-There are 3 entry routes to this fellowship for NHS clinicians.
-All 3 routes use the same application form. 
-Applicants are entered into appropriate national and regional applicant pools automatically based on application details.
-
-| Entry Route              | Description                                                                                                                                             | Competition                                                                                      | Eligibility                                                                                                                                                                                                |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nationally-funded posts  | Applicants can be from anywhere in the NHS <br><br>Salary cover provided                                                                                | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding<br><br>Some posts require membership of the funding organisation |
-| Regionally-funded posts  | Applicants must be from a specific region of the NHS <br><br>Salary cover provided                                                                      | Competitive entry: shortlist and interview                                                       | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with restrictions on training/banding, and variation according to region                              |
-| Directly allocated posts | Applicant must identify a [Sponsor for their post](/nhs-sponsor) or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant | Non-competitive entry: must meet the Essential crtieria of the Person Specification at interview | Any clinician providing NHS services                                                                                  |
+| Entry Route             | Description                                                                                                                                                                                                                                                       | Competition                                                                                          | Eligibility                                                                                                                                         |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Competitive applicant | Applicant applies for a competitive post that is already attached to funding, if they meet the eligibility criteria <br><br>Salary cover provided                                                                                                                 | **Competitive** entry: shortlist and interview, with posts awarded on interview score                | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with specific restrictions on training/banding |
+| Nominated applicant | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the Person Specification at interview | Any clinician providing NHS services                                                                                                                |
+{: .entry-routes}
 
 
 
 <details markdown="1">
-<summary>Nationally-funded posts</summary>
+<summary>Competitive applicants</summary>
 
-| Sponsor                                        | Eligible workforce                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Additional requirements                                                                                                                                     | # National Posts | Interview date |
-|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------|
-| [T-Pro](https://info.tpro.io)                           | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><i>or</i><br>Hold a substantive post at band 7, band 8a, or band 8b with an NHS Employer <i>and</i> valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC <br><br> Priority for applicants without options for regionally-funded posts | Able to travel for 4 funded site vists to T-Pro base in Dublin (Ireland) during fellowship year, and other site visits within UK                            | 2                | 21 Jan 2026    |
-| [British Society for Haematology](https://b-s-h.org.uk) | Doctor or Dentist with National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship<br><i>or</i><br>Hold a substantive post at band 7, band 8a, or band 8b with an NHS Employer <i>and</i> valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC                                                                                       | [Membership of the BSH](https://b-s-h.org.uk/membership/membership-faqs)<br><br>Must have feasible commute to the BSH-badged AI project they are matched to | 2                | 20 Jan 2026    |
+### Routes to competitive entry
 
-AI project matching for nationally-funded posts differs from regionally-funded posts. See FAQ sections below.<br>
+| Route                                                | Description                                                                                                                                      | Requirements                                                                                                                                                                                          | AI project matching                                                                                                                    |
+|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| <span class="route-chip is-regional">Regional</span> | A post funded by the applicant's own NHS region. Open only to the workforce groups that region has opened, so eligibility varies geographically. | Workforce criteria<sup>†</sup><sup>‡</sup> <br><br>Training<sup>†</sup> or employment<sup>‡</sup> in the relevant region                                                                              | Matched to AI projects **in their own region only**, competitively on interview score from their ranked preferences                    |
+| <span class="route-chip is-bsh">BSH</span>           | A post funded by the [British Society for Haematology](https://b-s-h.org.uk).                                                                    | Workforce criteria<sup>†</sup><sup>‡</sup> <br><br>[Membership of the BSH](https://b-s-h.org.uk/membership/membership-faqs)<br><br>Must have a feasible commute to the AI project they are matched to | Matched to AI projects in **haematology** only, which may be in any region, competitively on interview score from their ranked preferences |
+| <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Workforce criteria<sup>†</sup><sup>‡</sup>  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK     | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, competitively on interview score from their ranked preferences                                                    |
+{: .route-legend}
+<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
+<br><sup>‡</sup> Must hold a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
+
+### Competitive applicant eligibility table
+
+Find your NHS region, then your workforce group. The labels in that cell are the competitive posts you can apply to.
+
+| NHS Region | Specialty Trainee Doctor<sup>†</sup> | Specialty Trainee Dentist<sup>†</sup> | Other Registered Clinician<sup>‡</sup> |
+|------------|--------------------------------------|---------------------------------------|----------------------------------------|
+| [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | <span class="route-chip is-regional">Regional*</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> |
+| [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): North East &amp; North Cumbria | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| Northern Ireland | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> |
+| South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+| Scotland | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> |
+| Wales | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
+{: .eligibility-matrix}
+
+<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
+<br><sup>‡</sup> Must hold a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
+<br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).
+
+### Interview dates and number of posts
+
+Pools with no post in this cycle hold no interview.
+
+| Interview date | Applicant pool | # Posts |
+|----------------|----------------|---------|
+| 20 Jan 2026 | <span class="route-chip is-bsh">BSH</span> [British Society for Haematology](https://b-s-h.org.uk) | 2 |
+| 20 Jan 2026 | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 2 |
+| 20 Jan 2026 | <span class="route-chip is-regional">Regional</span> South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | 2 |
+| 21 Jan 2026 | <span class="route-chip is-tpro">T-Pro</span> [T-Pro-sponsored posts](https://info.tpro.io) | 2 |
+| 21 Jan 2026 | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 2 |
+| 21 Jan 2026 | <span class="route-chip is-regional">Regional</span> South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | 2 |
+| 22 Jan 2026 | <span class="route-chip is-regional">Regional</span> [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/) | 2 |
+| 22 Jan 2026 | <span class="route-chip is-regional">Regional</span> South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | 3 |
+| 23 Jan 2026 | <span class="route-chip is-regional">Regional</span> [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/) | 4 |
+| 23 Jan 2026 | <span class="route-chip is-regional">Regional</span> [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | 2 |
+| 26 Jan 2026 | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 5 |
+| 27 Jan 2026 | <span class="route-chip is-regional">Regional</span> Scotland | 6 |
+{: .interview-timetable}
+
+The T-Pro and BSH FAQ sections below cover project matching for those posts in full.<br>
 The number of posts listed is illustrative and not final.<br>
 Interview dates are indicative and may change during the application cycle.
 </details>
 
 <details markdown="1">
-<summary>Regionally-funded posts</summary>
+<summary>Nominated applicants</summary>
 
-| NHS Region                                                                                                                                                             | Eligibility:<br>Specialty Trainee Doctor<sup>†</sup> | Eligibility:<br>Specialty Trainee Dentist<sup>†</sup> | Eligibility:<br>Other Registered Clinician<sup>‡</sup> | # Regional Posts | Interview date |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|------------------|----------------|
-| [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/)                                             | ✅<sup>*</sup>                                        |                                                       |                                                       | 2                | 21 Jan 2026    |
-| [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/)                                                               | ✅                                                    | ✅                                                     | ✅                                                   | 5                | 26 Jan 2026    |
-| [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/)                                                           | ✅                                                  |                                                    |                                                       | 2                | 22 Jan 2026    |
-| [North East & Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): North East & North Cumbria |                                                      |                                                       |                                                       | 0                | N/A            |
-| [North East & Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire & Humber         | ✅                                                    |                                                       |                                                       | 2                | 20 Jan 2026    |
-| Northern Ireland                                                                                                                                                       |                                                   |                                                       |                                                       | 0                | N/A            |
-| [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/)                                                       | ✅                                                    | ✅                                                     |                                                       | 4                | 23 Jan 2026    |
-| South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/)                                                                                          | ✅                                                    | ✅                                                     | ✅                                                   | 2                | 21 Jan 2026    |
-| South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map)                                                                                       | ✅                                                    |                                                       |                                                       | 2                | 20 Jan 2026    |
-| South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/)                                                                                               | ✅                                                    |                                                       |                                                       | 3                | 22 Jan 2026    |
-| [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/)                                                       | ✅                                                    |                                                       |                                                       | 2                | 23 Jan 2026    |
-| Scotland                                                                                                                                                               | ✅                                                    |                                                       | ✅                                      | 6                | 27 Jan 2026    |
-| Wales                                                                                                                                                                  |                                                   |                                                       |                                                       | 0                | N/A            |
+### Entry requirements
 
-<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
-<br><sup>‡</sup> Must hold a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
-<br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only)
+* Open to any member of the health or social care workforce providing NHS services with a professional registration (HCPC, NMC, GPhC, GOC, GDC, GMC, social care registers, or PSA-maintained voluntary registers). [Email the faculty](mailto:gstt.aifellowship@nhs.net) about other workforce groups.
+* The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post.
+* The course fee is £8000. There is no salary cover unless agreed with the Sponsor by the applicant.
+* The fellow must release 2 days a week of their time for the 12 months duration of the fellowship.
 
-<p>The number of posts listed is illustrative and not final.<br>
-Interview dates are indicative and may change during the application cycle.</p>
-</details>
+### Funding the post
 
-<details markdown="1">
-<summary>Directly allocated posts</summary>
+| Funding route | How the post is funded                                                                                                                                                                   | Confirming the funding |
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| Sponsor-funded | A [Sponsor](/nhs-sponsor) meets the course fee. Example sources include NHS Trusts and departments, a PhD personal development budget, and existing academic funding (e.g. NIHR awards). | The Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 11 Dec 2026. Interview is contingent on receipt of that confirmation. |
+| Self-funded | The applicant meets the course fee themselves. This is declared in the application form, with no email to the faculty necessary.                                                         | After a successful interview, a secure payment link is sent to confirm the post. Project matching and entry to the fellowship are contingent on receipt of the course fee. |
+{: .funding-routes}
 
-**Entry requirements**
+### Interview
 
-* This entry route is open to any clinician providing NHS services (typically from a statutorily regulated professional register: HCPC, NMC, GPhC, GOC, GDC, or GMC- please [email the faculty](mailto:gstt.aifellowship@nhs.net) regarding other workforce groups)
-* The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post. The course fee is the same for either route at £7500. The fellow must release 0.4FTE of their time for the duration of their fellowship. There is no salary cover unless agreed with Sponsor by applicant. 
-* * Sponsor-funded: the Sponsor must [email the faculty](mailto:gstt.aifellowship@nhs.net) to confirm funding by 15 Dec 2025. Interview is contingent on receipt of sponsor funding confirmation.
-* * * Example sources of sponsorship include: NHS Trusts/departments, Higher Specialist Scientist Training personal development budget, existing academic funding (e.g. NIHR awards)
-* * Self-funded: this is declared in the application form (no email to faculty necessary). Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.
+* The applicant must meet the Essential criteria of the Person Specification (see section below) at interview
+* Indicative interview dates fall within 13-29 Jan 2027 (TBC according to applicant volume)
 
-**Interview**
+### Project matching
 
-* The applicant must meet Essential criteria of the Person Specification (see section below) at interview
-* Indicative interview dates are: 28-29 Jan 2026 (TBC according to applicant volume)
+Nominated applicants are matched to AI projects in one of two ways.
 
-**Project matching**
-
-* Successful applicants are matched to AI projects in one of the following ways:
-  * A competitively matched AI project from an existing host site (see Clinical AI Project List section below) in the applicant's NHS region. This project matching is competitive (even though programme entry itself is non-competitive) with other applicants from regional pools, and is based on interview score.
-  * A non-competitively pre-allocated AI project with a named [supervisor](/supervisors), specifically aligning to the interests of the fellow (e.g. work underway as part of their PhD). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required. [Contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
+| Project match                | What it means                                                                                                                                                                                                                                                                                         | Competition                                                                             |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Competitive project matching | An AI project from an existing host site, typically in the applicant's NHS region (bespoke arrangements are possible).                                                                                                                                                                                | **Competitive**: ranked against other applicants from regional pools on interview score |
+| Pre-allocated project        | An AI project with a named [supervisor](/supervisors), specifically pitched for the fellow (e.g. work underway as part of their PhD). A [submission of a project proposal](/supervisors) is required, and the applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying. | **Non-competitive**: the project is ringfenced for the applicant                        |
+{: .project-matching}
 
 </details>
 
 
-### Clinical AI Project List
+## Clinical AI project list
 
 AI project proposals will be released to applicants during the recruitment cycle.
 Project proposal lists are illustrative and not final. Projects may be added, removed, or modified without
 notice. A final list will be provided to applicants upon reaching the stage of ranking their project
 preferences.
 
-### Person Specification
-<details markdown="1">
-<summary>Essential criteria</summary>
+## Person specification
 
-* Communicates effectively with key stakeholders in clinical AI including: hospital
-management, patients, clinicians, regulatory bodies, and software developers
-* Works energetically as a vital member of an agile multidisciplinary team including data
-scientists, medical physicists, IT, health economists, and clinicians
-* Has advanced ICT proficiency (e.g. using advanced functions in Office applications), and the
-ability to rapidly learn new skills and solve technical problems
-</details>
+<table class="person-spec">
+  <thead>
+    <tr>
+      <th scope="col">Requirement</th>
+      <th scope="col">Criterion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Essential</th>
+      <td>Communicates effectively with key stakeholders in clinical AI including: hospital management, patients, clinicians, regulatory bodies, and software developers</td>
+    </tr>
+    <tr>
+      <td>Works energetically as a vital member of an agile multidisciplinary team including data scientists, medical physicists, IT, health economists, and clinicians</td>
+    </tr>
+    <tr>
+      <td>Has advanced ICT proficiency (e.g. using advanced functions in Office applications), and the ability to rapidly learn new skills and solve technical problems</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">Desirable</th>
+      <td>Experience in quality improvement projects, clinical trials, digital transformation</td>
+    </tr>
+    <tr>
+      <td>Experience in programming, statistical analysis, clinical informatics (DICOM, HL7 etc.)</td>
+    </tr>
+  </tbody>
+</table>
 
-<details markdown="1">
-<summary>Desirable criteria</summary>
-
-* Experience in quality improvement projects, clinical trials, digital transformation
-* Experience in programming, statistical analysis, clinical informatics (DICOM, HL7 etc.)
-</details>
-
-
-### Resources for applicants:
+## Resources for applicants
 * [Fellowship curriculum](/curriculum)
 * [Links to other educational resources](/resources)
 
-### Frequently Asked Questions
+## Frequently asked questions
 <br>
 If your question is not answered below, please [contact the faculty](mailto:gstt.aifellowship@nhs.net).
 <details markdown="1">
@@ -205,13 +216,13 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 No. Prior experience of coding, programming, or AI is not part of the essential criteria of the Person Specification. Previous fellows have been recruited without such experience. 
 
 
-**For regionally-funded posts, why is my NHS region, workforce group, or region/workforce group combination not eligible?**
+**As a competitive applicant, why is my NHS region, workforce group, or region/workforce group combination not eligible for a regionally-funded post?**
 
 Regional eligibility is set at the discretion of regional funding bodies (not the faculty), and this is not a uniform process across the NHS.
 If you have a specific question or concern, please [contact the faculty](mailto:gstt.aifellowship@nhs.net) so that we can identify priority areas for recruitment in future cohorts.
 
 
-**Why are there restrictions for eligibility based certain career stage?**
+**Why are there restrictions for eligibility based on certain career stages?**
 
 Where there are restrictions, the eligible career stages have been agreed by consensus with our funding bodies and the national CXIO leads for relevant professions.
 Career stages are selected in which this fellowship is expected to be a developmental inflection point or step change, maximising the benefit to NHS workforce transformation.
@@ -220,9 +231,9 @@ For later career stages, the programme impact is less likely to be additive due 
 
 
 
-**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2026 - Aug 2027), post-CCT,  not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 
-These applicants are eligible only for directly allocated posts. For nationally and regionally-funded posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
+These applicants are eligible only as nominated applicants. For competitive applicant posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
 
 **Is eligibility affected by a doctor/dentist being out of programme during the fellowship dates while still holding a valid National Training Number for a specialty training programme leading to CCT in its own right for the duration of the post?**
 
@@ -248,7 +259,7 @@ No. Current fellows and alumni are not eligible.
 
 **How competitive is recruitment?**
 
-In Cohort 4, there were 235 eligible applicants for 32 competitively allocated posts. The global competition ratio for posts was therefore roughly 7.3:1.
+In Cohort 5, there were 310 eligible applicants for 34 competitively allocated posts. The global competition ratio for posts was therefore >9:1.
 Regional competition ratios differed from this figure.
 At the interview stage, the competition ratio is 2:1, i.e. 2 eligible applicants are interviewed for each competitively allocated post.
 
@@ -260,9 +271,9 @@ In the shortlisting stage, eligible applicants are scored according to responses
 The highest scoring applicants from the shortlisting stage are then invited to a remote interview. 
 The scores from interview are used to competitively match successful applicants to their choice of project. 
 
-**If I am unsuccessful in recruitment for a nationally or regionally-funded post, can I change my mind and go for a directly allocated post?**
+**If I am unsuccessful in recruitment as a competitive applicant, can I change my mind and apply as a nominated applicant?**
 
-No. An applicant must apply for a directly allocated post from the start, because AI project placements and matching depend on confirmed numbers of incoming fellows.
+No. An applicant must apply as a nominated applicant from the start, because AI project placements and matching depend on confirmed numbers of incoming fellows.
 
 **What is the format of the interview?**
 
@@ -329,8 +340,8 @@ Where necessary, fellows will hold an honorary contract or Letter of Access with
 
 **What should I do if I only want to do a specific project in the fellowship?**
 
-For a directly allocated post, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
-<br><br>To be matched to a specific project in a nationally or regionally-funded post, an applicant should go through the normal application process. 
+As a nominated applicant, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
+<br><br>To be matched to a specific project in a competitive applicant post, an applicant should go through the normal application process. 
 There will be an opportunity to rank projects by preference. 
 The applicant should rank only projects they would want to do on the fellowship year. 
 If the applicant scores highly enough in the interview stage, they will be matched to such a project. 
@@ -351,14 +362,14 @@ The experience from any project will involve significant amounts of transferable
 
 **Is the fellowship free?**
 
-Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4FTE salary is reimbursed to the fellow's Employer.
-Self-funding for directly allocated posts have costs described [here](/nhs-sponsor).
+Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4 FTE salary is reimbursed to the fellow's Employer.
+Self-funding as a nominated applicant has costs described [here](/nhs-sponsor).
 
 **Does the fellowship pay my salary directly?**
 
 No. The fellowship is not your Employer. 
-<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
-<br>In directly allocated posts, your salary arrangements are at the discretion of your Sponsor.
+<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
+<br>As a nominated applicant, your salary arrangements are at the discretion of your Sponsor.
 
 **Is there travel/subsistence expenses to support attendance at in-person workshops?**
 
@@ -377,7 +388,7 @@ Where salary is reimbursed, this is transferred to your new employer where relev
 0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week. This fellowship is intended to integrate alongside clinical work or
 training. Partial remote working and flexible hours may be possible depending on project following conversations with supervisors.
 
-**Can I do the fellowship at a lower time commitment than 0.4FTE?**
+**Can I do the fellowship at a lower time commitment than 0.4 FTE?**
 
 No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
 The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
@@ -427,7 +438,7 @@ No. The offer for a fellowship post must be accepted for that cohort’s recruit
 
 **What certification do fellows receive at the end of the fellowship year?**
 
-Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for [DCB0129](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems/) and [DCB0160](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0160-clinical-risk-management-its-application-in-the-deployment-and-use-of-health-it-systems/.
+Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for [DCB0129](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems/) and [DCB0160](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0160-clinical-risk-management-its-application-in-the-deployment-and-use-of-health-it-systems/).
 
 
 </details>
@@ -440,13 +451,13 @@ Fellows receive a certificate of completion of the fellowship issued by the facu
 
 
 [T-Pro](https://info.tpro.io) is an industry supplier with partners in the NHS, and has products that focus on AI-powered voice solutions for clinical workflows.
-T-Pro is sponsoring 2 posts for Cohort 5, and the appointees will be designated T-Pro Fellows in Clinical AI.
-These posts are offered with priority for NHS employees lacking eligibility for regionally-funded posts (other career-stage and workforce criteria still apply).
+T-Pro sponsored 2 posts in Cohort 5, and the appointees were designated T-Pro Fellows in Clinical AI. Sponsorship arrangements for Cohort 6 are confirmed when applications open.
+These posts cover the gaps in the regional footprint: they are open only to applicants whose NHS region and workforce group combination has no regionally-funded post (other career-stage and workforce criteria still apply). See the Eligibility matrix above.
 
 
 **What AI projects are available for these posts?**
  
-Fellows will only be matched to “T-Pro-badged projects”. These can be matched to applicants from any region of the NHS as the workload is primarily remote.
+Fellows will only be matched to “T-Pro-badged projects”. These can be matched to applicants from any region of the NHS in which they are eligible for a T-Pro post, as the workload is primarily remote.
 These projects are available only to T-Pro Fellows in Clinical AI.
 
 **How does project matching for T-Pro Fellows in Clinical AI happen?**
@@ -463,8 +474,8 @@ The next highest scoring applicant is matched to their highest ranked T-Pro-badg
 **What is a BSH Fellow in Clinical AI?**
 
 
-The British Society for Haematology (BSH) is sponsoring posts for BSH members (full or associate members) in Cohort 5 of the Fellowship in Clinical AI. 
-There are 2 sponsored posts in Cohort 5, and the appointees will be designated BSH Fellows in Clinical AI. 
+The British Society for Haematology (BSH) sponsored posts for BSH members (full or associate members) in Cohort 5 of the Fellowship in Clinical AI.
+There were 2 sponsored posts in Cohort 5, and the appointees were designated BSH Fellows in Clinical AI. Sponsorship arrangements for Cohort 6 are confirmed when applications open. 
 These posts are reserved exclusively for applicants who are BSH members, and will link to projects relating to Haematology. 
 
 **Are there Haematology themed AI projects available?**
@@ -517,12 +528,12 @@ It is possible to be matched to a BSH-badged project through this route, dependi
 **Am I eligible if I have a sponsor who will directly fund a post for me as an NHS applicant?**
 
 
-Yes, this is the route for directly allocated posts. Your Sponsor should read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
+Yes, this is the nominated applicant route. Your Sponsor should read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
 
 **Can I sponsor myself?**
 
 
-Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
+Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4 FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
 
 
 **Can the faculty help me to identify a suitable sponsor?**
