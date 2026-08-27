@@ -30,9 +30,9 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **5 Oct 2026**: Applications open
 * **Early Oct 2026**: Applicant webinar with Q&A
 * **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
-* **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for nominated applicants (non-competitive recruitment)
-* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent (competitive applicants)
-* **13-29 Jan 2027**: Remote interviews (specific dates listed below in 'Eligibility')
+* **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
+* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
+* **13-29 Jan 2027**: Remote interviews (planned dates listed below in 'Eligibility')
 * **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
 * **Aug 2027**: Fellowship Cohort 6 begins
 
