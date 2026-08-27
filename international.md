@@ -8,7 +8,7 @@ description: How international clinicians apply for Cohort 6 of the NHS Fellowsh
 <div class="status-box" markdown="1">
 Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
 
-Applications close on 6 November 2026.
+The application deadline is confirmed when applications open.
 </div>
 
 This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
@@ -21,7 +21,7 @@ Dual fellows have an integrated programme of two parallel placements in world-cl
 
 * **5 Oct 2026**: Applications open
 * **Early Oct 2026**: Applicant webinar with Q&A
-* **6 Nov 2026**: *International Application Form* deadline
+* **TBC**: *International Application Form* deadline — confirmed when applications open
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: Remote interviews
 * **Feb 2027**: Outcomes of interviews, project matching
@@ -30,21 +30,6 @@ Dual fellows have an integrated programme of two parallel placements in world-cl
 <div class="action-buttons">
   <span class="btn-action btn-action--disabled">Application form opens 5 Oct 2026</span>
 </div>
-
-<details markdown="1">
-<summary>Cohort 5 timeline (closed)</summary>
-
-Applications for Cohort 5, starting August 2026, closed on 11 Jan 2026. The cycle ran as follows:
-
-* 31 Oct 2025: Applications open
-* 24 Nov 2025: Applicant webinar with Q&A
-* 11 Jan 2026: *International Application Form* deadline
-* 13 Jan 2026: Shortlisting outcomes communicated
-* 20-29 Jan 2026: Remote interviews
-* Feb 2026: Outcomes of interviews, project matching
-* Aug 2026: Fellowship Cohort 5 begins
-
-</details>
 
 ## Applicant webinar
 
