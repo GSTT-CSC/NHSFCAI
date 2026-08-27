@@ -44,7 +44,7 @@ The Cohort 6 applicant webinar takes place in early October 2026. Details are pu
 
 The recording below is from the Cohort 5 webinar. It covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited questions from applicants — most of which apply equally to Cohort 6.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SsONx1jAGxE" title="NHS Fellowship in Clinical AI: Cohort 5 applicant webinar" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+{% include video-embed.html id="SsONx1jAGxE" title="NHS Fellowship in Clinical AI: Cohort 5 applicant webinar" %}
 
 
 

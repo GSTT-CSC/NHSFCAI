@@ -36,7 +36,7 @@ We are currently accepting project proposals to host AI fellows for 2 days a wee
 
 ## Supervisor webinar
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RGYEDRJOS3E" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+{% include video-embed.html id="RGYEDRJOS3E" title="NHS Fellowship in Clinical AI: Cohort 5 supervisor onboarding webinar" %}
 
 The onboarding webinar for Cohort 5 AI supervisors covered the features and curriculum of the fellowship, and the expectations for project hosting and supervision.
 

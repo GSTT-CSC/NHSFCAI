@@ -30,19 +30,11 @@ Dual fellows have an integrated programme of two parallel placements in world-cl
 
 ## Applicant webinar
 
-The applicant webinar covers the features and curriculum of the fellowship, addresses frequently asked questions, and invites Q&A from applicants.
+The Cohort 6 applicant webinar takes place in early October 2026. The sign-up link is published here when applications open.
 
-The Cohort 6 webinar takes place in early October 2026. The sign-up link is published here when applications open.
+The recording below is from the Cohort 5 webinar. It covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited questions from applicants — most of which apply equally to Cohort 6.
 
-<details markdown="1">
-<summary>Cohort 5 webinar (closed)</summary>
-
-[Cohort 5 applicant webinar](https://events.teams.microsoft.com/event/2558d430-e6fa-434a-a4cc-488d2ddf51dc@37c354b2-85b0-47f5-b222-07b48d774ee3) — 24 Nov 2025, 12:00-13:00 GMT.
-
-This was a live event and registration is closed. It is listed for reference only; it does not register you for the Cohort 6 webinar.
-
-</details>
-
+{% include video-embed.html id="SsONx1jAGxE" title="NHS Fellowship in Clinical AI: Cohort 5 applicant webinar" %}
 
 ## Clinical AI project list
 
