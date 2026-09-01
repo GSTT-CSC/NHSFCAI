@@ -58,7 +58,7 @@ There are 2 kinds of applicant for this fellowship, and they are mutually exclus
 
 | Entry Route             | Description                                                                                                                                                                                                                                                       | Competition                                                                                          | Eligibility                                                                                                                                         | AI project                                                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Competitive applicant | Applicant applies for a competitive post that is already attached to funding, if they meet the eligibility criteria <br><br>Salary cover provided                                                                                                                 | **Competitive** entry: shortlist and interview, with posts awarded on interview score                | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with specific restrictions on training/banding | Competitive matching to existing project pool: matched on interview score from their ranked preferences                     |
+| Competitive applicant | Applicant applies competitively for a post that is already attached to funding, if they meet the eligibility criteria <br><br>Salary cover provided                                                                                                               | **Competitive** entry: shortlist and interview, with posts awarded on interview score                | NHS employees from statutorily regulated professional registers (HCPC, NMC, GPhC, GOC, GDC, or GMC), with specific restrictions on training/banding | Competitive matching to existing project pool: matched on interview score from their ranked preferences                     |
 | Nominated applicant | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the Person Specification at interview | Any health or social care professional providing NHS services                                                                            | Either competitive matching to existing project pool, or a pre-allocated project (non-competitive, ringfenced for the applicant) |
 {: .entry-routes}
 
@@ -112,7 +112,7 @@ Pools with no post in this cycle hold no interview.
 | 20 Jan 2026 | <span class="route-chip is-bsh">BSH</span> [British Society for Haematology](https://b-s-h.org.uk) | 2 |
 | 20 Jan 2026 | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 2 |
 | 20 Jan 2026 | <span class="route-chip is-regional">Regional</span> South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | 2 |
-| 21 Jan 2026 | <span class="route-chip is-tpro">T-Pro</span> [T-Pro-sponsored posts](https://info.tpro.io) | 2 |
+| 21 Jan 2026 | <span class="route-chip is-tpro">T-Pro</span> [T-Pro-funded posts](https://info.tpro.io) | 2 |
 | 21 Jan 2026 | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 2 |
 | 21 Jan 2026 | <span class="route-chip is-regional">Regional</span> South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | 2 |
 | 22 Jan 2026 | <span class="route-chip is-regional">Regional</span> [Midlands](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/midlands-region/) | 2 |
@@ -216,7 +216,7 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 No. Prior experience of coding, programming, or AI is not part of the essential criteria of the Person Specification. Previous fellows have been recruited without such experience. 
 
 
-**As a competitive applicant, why is my NHS region, workforce group, or region/workforce group combination not eligible for a regionally-funded post?**
+**As a competitive applicant, why is my NHS region, workforce group, or region/workforce group combination not eligible for a regional post?**
 
 Regional eligibility is set at the discretion of regional funding bodies (not the faculty), and this is not a uniform process across the NHS.
 If you have a specific question or concern, please [contact the faculty](mailto:gstt.aifellowship@nhs.net) so that we can identify priority areas for recruitment in future cohorts.
@@ -226,14 +226,12 @@ If you have a specific question or concern, please [contact the faculty](mailto:
 
 Where there are restrictions, the eligible career stages have been agreed by consensus with our funding bodies and the national CXIO leads for relevant professions.
 Career stages are selected in which this fellowship is expected to be a developmental inflection point or step change, maximising the benefit to NHS workforce transformation.
-For earlier career stages, there are limited opportunities to apply the experience in transformational AI projects in the NHS. 
-For later career stages, the programme impact is less likely to be additive due to pre-existing experience and knowledge.
-
+For earlier career stages, there are limited opportunities to apply the experience in transformational AI projects in the NHS.
 
 
 **Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 
-These applicants are eligible only as nominated applicants. For competitive applicant posts, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
+These applicants are eligible only as nominated applicants. For competitive applicants, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
 
 **Is eligibility affected by a doctor/dentist being out of programme during the fellowship dates while still holding a valid National Training Number for a specialty training programme leading to CCT in its own right for the duration of the post?**
 
@@ -329,7 +327,7 @@ Applicants will rank the projects they are eligible to be matched to.
 The highest scoring applicant from the interview stage in each pool will be matched to their highest ranked project. 
 The next highest scoring applicant is matched to their highest ranked project remaining, etc. until all posts are filled. 
 
-**For regionally-funded posts, can I be matched to a project in a different region?**
+**As a competitive applicant in a Regional post, can I be matched to a project in a different region?**
 
 No. Each region’s fellows are eligible to be matched to projects within their own region only.
 
@@ -341,7 +339,7 @@ Where necessary, fellows will hold an honorary contract or Letter of Access with
 **What should I do if I only want to do a specific project in the fellowship?**
 
 As a nominated applicant, an applicant may arrange a pre-allocated AI project with a named [supervisor](/supervisors). A [submission of a project proposal](/assets/docs/FCAI_C6_Project_Template.docx) is required and the supervisor and applicant should [contact the faculty](mailto:gstt.aifellowship@nhs.net) when applying in this case.
-<br><br>To be matched to a specific project in a competitive applicant post, an applicant should go through the normal application process. 
+<br><br>To be matched to a specific project in a competitive post, an applicant should go through the normal application process. 
 There will be an opportunity to rank projects by preference. 
 The applicant should rank only projects they would want to do on the fellowship year. 
 If the applicant scores highly enough in the interview stage, they will be matched to such a project. 
@@ -362,23 +360,23 @@ The experience from any project will involve significant amounts of transferable
 
 **Is the fellowship free?**
 
-Regionally-funded and nationally-funded posts are fully funded for eligible NHS staff: 0.4 FTE salary is reimbursed to the fellow's Employer.
-Self-funding as a nominated applicant has costs described [here](/nhs-sponsor).
+Posts for competitive applicants are fully funded for eligible groups: 0.4 FTE salary is reimbursed to the fellow's Employer, and course fee covered.
+Nominated applicants cover these elements through either a Sponsor or self-funding.
 
 **Does the fellowship pay my salary directly?**
 
 No. The fellowship is not your Employer. 
-<br>In regionally-funded and nationally-funded posts, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
-<br>As a nominated applicant, your salary arrangements are at the discretion of your Sponsor.
+<br>For successful competitive applicants, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
+<br>For successful nominated applicants, your salary arrangements are at the discretion of your Sponsor.
 
 **Is there travel/subsistence expenses to support attendance at in-person workshops?**
 
-Yes. This is paid up front and then reclaimed from your Employer or Sponsor.
-
+Yes for competitive applicants. This is paid up front and then reclaimed through mechanisms specified by the funder.
+There is no automatic cover for such expenses for nominated applicants.
 
 **What happens if I move to a new employer (e.g. rotating through training) during the fellowship?**
 
-Where salary is reimbursed, this is transferred to your new employer where relevant.
+Where salary is reimbursed, this is transferred to your new Employer where relevant.
 
 </details>
 <details markdown="1">
@@ -451,9 +449,7 @@ Fellows receive a certificate of completion of the fellowship issued by the facu
 
 
 [T-Pro](https://info.tpro.io) is an industry supplier with partners in the NHS, and has products that focus on AI-powered voice solutions for clinical workflows.
-T-Pro sponsored 2 posts in Cohort 5, and the appointees were designated T-Pro Fellows in Clinical AI. Sponsorship arrangements for Cohort 6 are confirmed when applications open.
-These posts cover the gaps in the regional footprint: they are open only to applicants whose NHS region and workforce group combination has no regionally-funded post (other career-stage and workforce criteria still apply). See the Eligibility matrix above.
-
+T-Pro funded 2 posts in Cohort 5, and the appointees were designated T-Pro Fellows in Clinical AI. Funding arrangements for Cohort 6 are confirmed when applications open.
 
 **What AI projects are available for these posts?**
  
@@ -464,7 +460,7 @@ These projects are available only to T-Pro Fellows in Clinical AI.
 
 Applicants will rank the T-Pro-badged projects. 
 The highest scoring applicant from the interview stage will be matched to their highest ranked T-Pro-badged project. 
-The next highest scoring applicant is matched to their highest ranked T-Pro-badged project remaining, etc. until all T-Pro-sponsored posts are filled. 
+The next highest scoring applicant is matched to their highest ranked T-Pro-badged project remaining, etc. until all T-Pro-funded posts are filled. 
 
 
 </details>
@@ -474,8 +470,8 @@ The next highest scoring applicant is matched to their highest ranked T-Pro-badg
 **What is a BSH Fellow in Clinical AI?**
 
 
-The British Society for Haematology (BSH) sponsored posts for BSH members (full or associate members) in Cohort 5 of the Fellowship in Clinical AI.
-There were 2 sponsored posts in Cohort 5, and the appointees were designated BSH Fellows in Clinical AI. Sponsorship arrangements for Cohort 6 are confirmed when applications open. 
+The British Society for Haematology (BSH) funded posts for BSH members (full or associate members) in Cohort 5 of the Fellowship in Clinical AI.
+There were 2 BSH-funded posts in Cohort 5, and the appointees were designated BSH Fellows in Clinical AI. Funding arrangements for Cohort 6 are confirmed when applications open. 
 These posts are reserved exclusively for applicants who are BSH members, and will link to projects relating to Haematology. 
 
 **Are there Haematology themed AI projects available?**
@@ -501,21 +497,21 @@ BSH applicants enter their BSH membership number in the application form, which 
 
 Applicants will rank the projects they are eligible to be matched to. 
 The highest scoring BSH applicant from the interview stage will be matched to their highest ranked BSH-badged project. 
-The next highest scoring BSH applicant is matched to their highest ranked BSH-badged project remaining, etc. until all BSH-sponsored posts are filled. 
+The next highest scoring BSH applicant is matched to their highest ranked BSH-badged project remaining, etc. until all BSH-funded posts are filled. 
 
 **Can BSH applicants only get matched to BSH-badged projects?**
 
 BSH applicants who are appointed as BSH Fellows in Clinical AI will exclusively be matched to BSH-badged projects.
-BSH applicants who also meet regional criteria can be matched to projects in that region (whether BSH-badged or not) if they miss out on a sponsored post (they are automatically re-entered into the applicant pool of that region).
+BSH applicants who also meet regional criteria can be matched to projects in that region (whether BSH-badged or not) if they miss out on a BSH-funded post (they are automatically re-entered into the applicant pool of that region).
 BSH applicants who do not meet regional criteria for any of the participating regions are only eligible to be matched to BSH-badged projects as BSH Fellows in Clinical AI. 
 
 **Can a non-BSH applicant be matched to BSH-badged projects?**
 
 Yes. If there are BSH-badged projects that are still available after the BSH Fellows in Clinical AI have been appointed, these can be matched to either BSH applicants or non-BSH applicants as part of the regional matching process. 
 
-**What happens if a BSH applicant does not obtain a sponsored post as a BSH Fellow in Clinical AI?**
+**What happens if a BSH applicant does not obtain a BSH-funded post as a BSH Fellow in Clinical AI?**
 
-BSH applicants who do not obtain one of the sponsored posts in this cohort are automatically considered in the applicant pool associated with their region.
+BSH applicants who do not obtain one of the BSH-funded posts in this cohort are automatically considered in the applicant pool associated with their region.
 The applicant could be matched to a project in that region depending on their interview score.
 Entering the fellowship through this route will not carry the designation of BSH Fellow in Clinical AI, but will still be an NHS Fellow in Clinical AI.
 It is possible to be matched to a BSH-badged project through this route, depending on regional availability. 
