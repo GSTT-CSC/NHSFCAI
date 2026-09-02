@@ -32,7 +32,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
 * **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
-* **13-29 Jan 2027**: Remote interviews (planned dates listed below in 'Eligibility')
+* **13-29 Jan 2027**: Remote interviews (dates per applicant pool TBC for this cycle)
 * **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
 * **Aug 2027**: Fellowship Cohort 6 begins
 
@@ -52,8 +52,8 @@ The recording below is from the Cohort 5 webinar. It covered the features and cu
 <div class="status-box" markdown="1">
 The eligibility detail below reflects the Cohort 5 cycle only. This is kept as reference material until information for Cohort 6 is published when applications open on 5 October 2026. Funding and eligibility is subject to change between cohorts without notice.
 </div>
-There are 2 kinds of applicant for this fellowship, and they are mutually exclusive. Both use the same application form, and applicants are entered into applicant pools automatically based on application details.
 
+There are 2 kinds of applicant for this fellowship, and they are mutually exclusive. Both use the same application form, and applicants are entered into applicant pools automatically based on application details.
 
 
 | Entry Route             | Description                                                                                                                                                                                                                                                       | Competition                                                                                          | Eligibility                                                                                                                                         | AI project                                                                                                                      |
@@ -67,7 +67,11 @@ There are 2 kinds of applicant for this fellowship, and they are mutually exclus
 <details markdown="1">
 <summary>Competitive applicants</summary>
 
+
 ### Routes to competitive entry
+<div class="status-box" markdown="1">
+The eligibility detail below reflects the Cohort 5 cycle only. This is kept as reference material until information for Cohort 6 is published when applications open on 5 October 2026. Funding and eligibility is subject to change between cohorts without notice.
+</div>
 
 | Route                                                | Description                                                                                                                                      | Requirements                                                                                                                                                                                          | AI project matching                                                                                                                    |
 |------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -79,6 +83,9 @@ There are 2 kinds of applicant for this fellowship, and they are mutually exclus
 <br><sup>‡</sup> Must hold a substantive post with an NHS Employer at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
 
 ### Competitive applicant eligibility table
+<div class="status-box" markdown="1">
+The eligibility detail below reflects the Cohort 5 cycle only. This is kept as reference material until information for Cohort 6 is published when applications open on 5 October 2026. Funding and eligibility is subject to change between cohorts without notice.
+</div>
 
 Find your NHS region, then your workforce group. The labels in that cell are the competitive posts you can apply to.
 
@@ -105,6 +112,11 @@ Find your NHS region, then your workforce group. The labels in that cell are the
 
 ### Interview dates and number of posts
 
+Interview dates and the number of posts in each applicant pool are to be confirmed for this cycle.
+
+{% comment %}
+Hidden pending confirmation of Cohort 6 interview dates and post numbers. Restore this table (and the two notes below it) once confirmed.
+
 Pools with no post in this cycle hold no interview.
 
 | Interview date | Applicant pool | # Posts |
@@ -122,10 +134,16 @@ Pools with no post in this cycle hold no interview.
 | 26 Jan 2026 | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 5 |
 | 27 Jan 2026 | <span class="route-chip is-regional">Regional</span> Scotland | 6 |
 {: .interview-timetable}
+{% endcomment %}
 
-The T-Pro and BSH FAQ sections below cover project matching for those posts in full.<br>
+The T-Pro and BSH FAQ sections below cover project matching for those posts in full.
+
+{% comment %}
+Restore alongside the timetable table above.
+
 The number of posts listed is illustrative and not final.<br>
 Interview dates are indicative and may change during the application cycle.
+{% endcomment %}
 </details>
 
 <details markdown="1">
