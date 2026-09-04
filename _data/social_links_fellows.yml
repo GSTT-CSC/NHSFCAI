@@ -534,7 +534,8 @@ george-nita:
 jack-stanley:
   - url: https://orcid.org/0009-0002-1551-9406
     icon: fas fa-book
-
+  - url: https://www.linkedin.com/in/jack-stanley-39bb38346/
+    icon: fab fa-linkedin-in
 
 elizabeth-le:
   - url: https://www.researchgate.net/profile/Elizabeth-Le-2
