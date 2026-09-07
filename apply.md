@@ -27,8 +27,8 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 ## Key dates and how to apply
 
-* **5 Oct 2026**: Applications open
-* **Early Oct 2026**: Applicant webinar with Q&A
+* **05 Oct 2026**: Applications open
+* **05 Oct 2026** 1230-1330: Applicant webinar with Q&A - [Register](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
 * **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
 * **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
@@ -40,7 +40,7 @@ All applicants must obtain *Approval in Principle* from a responsible person wit
 
 ## Applicant webinar
 
-The Cohort 6 applicant webinar takes place in early October 2026. Details are published here when applications open.
+The Cohort 6 applicant webinar takes place on 05 October 2026, 1230-1330. [Register here.](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
 
 The recording below is from the Cohort 5 webinar. It covered the features and curriculum of the fellowship, addressed frequently asked questions, and invited questions from applicants — most of which apply equally to Cohort 6.
 
