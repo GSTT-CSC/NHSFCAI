@@ -80,7 +80,7 @@ The eligibility detail below reflects the Cohort 5 cycle only. This is kept as r
 | <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Workforce criteria<sup>†</sup><sup>‡</sup>  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK     | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, competitively on interview score from their ranked preferences                                                    |
 {: .route-legend}
 <br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
-<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers)at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
+<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
 
 ### Competitive applicant eligibility table
 <div class="status-box" markdown="1">
@@ -107,7 +107,7 @@ Find your NHS region, then your workforce group. The labels in that cell are the
 {: .eligibility-matrix}
 
 <br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
-<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
+<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, or GMC  
 <br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).
 
 ### Interview dates and number of posts
