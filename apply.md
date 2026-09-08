@@ -28,7 +28,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 ## Key dates and how to apply
 
 * **05 Oct 2026**: Applications open
-* **05 Oct 2026** 12:30-13:30 GMT: Applicant webinar with Q&A - [Register](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
+* **05 Oct 2026** 12:30-13:30 BST: Applicant webinar with Q&A - [Register](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
 * **16 Nov 2026, 23:45 GMT**: Application **and** Approval in Principle deadline (all applications)
 * **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
