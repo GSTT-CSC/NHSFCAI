@@ -155,6 +155,7 @@ Interview dates are indicative and may change during the application cycle.
 * The applicant must identify a [Sponsor for their post](/nhs-sponsor), or fund their own post.
 * The course fee is £8000. There is no salary cover unless agreed with the Sponsor by the applicant.
 * The fellow must release 2 days a week of their time for the 12 months duration of the fellowship.
+* The applicant must meet the Essential criteria of the Person Specification (see section below) at interview
 
 ### Funding the post
 
