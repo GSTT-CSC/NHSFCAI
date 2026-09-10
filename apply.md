@@ -404,6 +404,9 @@ Where salary is reimbursed, this is transferred to your new Employer where relev
 
 0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week. This fellowship is intended to integrate alongside clinical work or
 training. Partial remote working and flexible hours may be possible depending on project following conversations with supervisors.
+Workshops and other educational activities, e.g. e-learning modules, are expected to be done within this 0.4 FTE alongside AI project work.
+Fellowship time is not allocated to non-fellowship activity, which includes but is not limited to exam preparation, dissertation-writing, and other projects outside the scope of the fellowship.
+
 
 **Can I do the fellowship at a lower time commitment than 0.4 FTE?**
 
@@ -418,6 +421,13 @@ No. For the same reasons as above.
 **Can I do the fellowship without reducing my training/working pattern, i.e. do it on top of normal working hours?**
 
 No. Due to the time commitments of this programme, a fellow must not have a total working pattern >1.0FTE in total.
+
+**Are the workshops compulsory, and when do they take place?**
+
+Yes. Attendance at masterclass workshops is a compulsory part of the fellowship, and a register of attendance is kept. 
+Recurring workshops are scheduled on Mondays through the fellowship year: indicatively, the third Monday of each month, excluding national holidays. 
+Multiple workshop days are delivered together in a residential 'bootcamp' at the start of the fellowship, to front-load foundational knowledge in clinical AI. 
+Workshops are delivered in a mix of in-person, hybrid and remote settings.
 
 **If I'm in specialty medical or dental training, will my time spent on the fellowship count towards my training?**
 
