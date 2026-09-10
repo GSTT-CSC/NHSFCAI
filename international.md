@@ -7,22 +7,23 @@ description: How international clinicians apply for Cohort 6 of the NHS Fellowsh
 
 <div class="status-box" markdown="1">
 Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
-
-The application deadline is confirmed when applications open.
+<br>International applicants should apply to the [GSTT International Clinical Fellowship Programme (ICFP)](https://www.guysandstthomasevents.co.uk/vpp/icfp/) to assess their eligibility before applying to the NHS Fellowship in Clinical AI.
 </div>
 
 This application page is for international applicants only. NHS applicants should visit the [NHS applicant page](/apply).
 
-The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship](https://www.guysandstthomasevents.co.uk/vpp/icfp) are jointly delivered in the exclusive [Dual International Clinical AI Fellowship](/assets/docs/FCAI_C5_International_Flyer.pdf) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship.
+The NHS Fellowship in Clinical AI and the [GSTT International Clinical Fellowship Programme](https://www.guysandstthomasevents.co.uk/vpp/icfp) are jointly delivered in the exclusive [Dual International Clinical AI Fellowship](/international-sponsor) in London, UK. Note that dual fellows need to meet the [eligibility criteria](https://www.guysandstthomasevents.co.uk/vpp/icfp/#entry-requirements) for the GSTT International Clinical Fellowship Programme.
 
 Dual fellows have an integrated programme of two parallel placements in world-class London hospitals, which includes the full programme of the NHS Fellowship in Clinical AI plus a clinical attachment to hone complementary clinical skills and knowledge.
+Note that the ICFP requires applicants to have an [institutional sponsor](https://www.guysandstthomasevents.co.uk/vpp/icfp/#please-note). See [information for international sponsors](/international-sponsor).
 
 ## Key dates and how to apply
 
-* **05 Oct 2026**: Applications open
-* **05 Oct 2026** 1230-1330: Applicant webinar with Q&A - [Register](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
+* **Precondition**: Before applying to the NHS Fellowship in Clinical AI, apply to the [GSTT International Clinical Fellowship Programme](https://www.guysandstthomasevents.co.uk/vpp/icfp/) and confirm your eligibility (ICFP recruitment runs year-round)
+* **05 Oct 2026**: Applications open for the NHS Fellowship in Clinical AI
+* **05 Oct 2026** 1230-1330 BST: Applicant webinar with Q&A - [Register](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
 * **TBC**: *International Application Form* deadline — confirmed when applications open
-* **TBC**: Shortlisting outcomes and interview invitations sent
+* **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: Remote interviews
 * **Feb 2027**: Outcomes of interviews, project matching
 * **Aug 2027**: Fellowship Cohort 6 begins
@@ -92,6 +93,10 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 
 No. Prior experience of coding, programming, or AI is not an essential criterion of the Person Specification. Previous fellows have been recruited without such experience. 
 
+**Do I apply to the GSTT International Clinical Fellowship Programme or to the NHS Fellowship in Clinical AI first?**
+
+You must have made application to the GSTT International Clinical Fellowship Programme before you apply to this fellowship. The ICFP considers applications throughout the year with no fixed deadline or start date, so apply as early as you can — see [how to apply to the ICFP](https://www.guysandstthomasevents.co.uk/vpp/icfp/#how-to-apply).
+
 </details>
 
 <details markdown="1">
@@ -100,7 +105,7 @@ No. Prior experience of coding, programming, or AI is not an essential criterion
 
 **How competitive is recruitment?**
 
-Recruitment for sponsored applicants is not competitive. If an applicant meets the Essential criteria of the Person Specification at interview, they can join the programme.
+Recruitment for sponsored international applicants is not competitive. If an applicant meets the Essential criteria of the Person Specification at interview, they can join the programme.
 
 
 **What is the format of the interview?**
@@ -116,7 +121,7 @@ Consider how to show evidence of meeting these criteria with real-world examples
 
 **When will the interviews happen?**
 
-The interviews are planned for 20-29 January 2026. 
+The interviews are planned for 13-29 January 2027. 
 Applicants proceeding to interview will be sent a link to book their interview slot. 
 
 
