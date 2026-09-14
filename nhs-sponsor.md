@@ -2,7 +2,7 @@
 layout: page
 permalink: /nhs-sponsor/
 title: Sponsor an NHS Applicant
-description: How NHS organisations can sponsor a post on the NHS Fellowship in Clinical AI.
+description: How an organisation can sponsor a post on the NHS Fellowship in Clinical AI.
 ---
 
 The NHS Fellowship in Clinical AI is an [established NHS programme](/about) that trains clinicians to deploy and evaluate AI safely, through [real-world NHS AI projects](/sites) under expert supervision and [masterclass workshops](/partners) aligned to the [clinical AI curriculum](/curriculum).
