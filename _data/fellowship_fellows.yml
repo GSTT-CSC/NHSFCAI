@@ -555,7 +555,7 @@ en: &DEFAULT_EN
             I am delighted to join the NHS Fellowship in Clinical AI programme and excited to begin this project. I look forward to working as part of a team to deliver AI solutions to improve patient care
 
         - name: "Conor Malone"
-          role: "Specialty Trainee Doctor in Ophthalmology"
+          role: "Senior Fellow in Ophthalmology"
           cohort: "5"
           project_region: "Thames Valley"
           fellow_region: "Thames Valley"
