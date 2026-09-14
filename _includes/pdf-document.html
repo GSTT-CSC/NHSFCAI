@@ -6,11 +6,15 @@
          file="/assets/docs/FCAI_Curriculum_v3.2.pdf"
          title="Clinical AI Curriculum"
          meta="PDF · version 3.2" %}
+
+  Pass card_only="true" to show the download card without the embed.
 {% endcomment %}
+{% unless include.card_only %}
 <iframe class="pdf-embed"
         src="{{ include.file }}#page=1&zoom=page-width"
         title="{{ include.title }}"
         loading="lazy"></iframe>
+{% endunless %}
 
 <div class="pdf-card">
   <span class="pdf-card__icon" aria-hidden="true"><i class="fa-regular fa-file-pdf"></i></span>

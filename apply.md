@@ -64,7 +64,7 @@ There are 2 kinds of applicant for this fellowship, and they are mutually exclus
 
 
 
-<details markdown="1">
+<details markdown="1" id="competitive-applicants">
 <summary>Competitive applicants</summary>
 
 
@@ -146,7 +146,7 @@ Interview dates are indicative and may change during the application cycle.
 {% endcomment %}
 </details>
 
-<details markdown="1">
+<details markdown="1" id="nominated-applicants">
 <summary>Nominated applicants</summary>
 
 ### Entry requirements

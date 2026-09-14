@@ -269,6 +269,144 @@ $nhs-muted: #425563;
   }
 }
 
+// The sponsorship models matrix on /nhs-sponsor. Its column headings are full
+// sentences, so the blanket thead nowrap made the table far wider than the
+// content column and it scrolled in its box. It is laid back out as a real
+// table filling the column at every width, with the headings free to wrap.
+// Nested under `.content` to outrank `.content table:not(.data-table)`.
+.content table.sponsor-models {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  // `collapse` ignores border-radius, which would square off the card.
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th:first-child,
+  td:first-child {
+    width: 24%;
+  }
+
+  // Sentence-length headings read badly as a small-caps label bar, so they
+  // drop the uppercase and tracking and sit at body-text size.
+  thead th {
+    white-space: normal;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 0.875rem;
+    line-height: 1.4;
+
+    // The default link blue disappears against the blue header bar.
+    a {
+      color: #fff;
+    }
+  }
+
+  // Cell fills match the sponsor flyer: pale blue row labels, and one tint per
+  // model. Nested selectors outrank the row hover tint, so the colours hold.
+  tbody td:first-child {
+    background-color: #dce3ef;
+  }
+
+  tbody tr:nth-child(1) td:nth-child(2) {
+    background-color: #fcf0cf; // Model 1
+  }
+
+  tbody tr:nth-child(1) td:nth-child(3) {
+    background-color: #e2efd9; // Model 2
+  }
+
+  tbody tr:nth-child(2) td:nth-child(2) {
+    background-color: #eae9f4; // Model 3
+  }
+
+  tbody tr:nth-child(2) td:nth-child(3) {
+    background-color: #f9e2d5; // Model 4
+  }
+
+  // No row hover marker: the fills already separate the cells.
+  tbody tr:hover td:first-child {
+    box-shadow: none;
+  }
+
+  thead th:first-child {
+    border-top-left-radius: 7px;
+  }
+
+  thead th:last-child {
+    border-top-right-radius: 7px;
+  }
+}
+
+// Three prose columns on a phone leave each cell a few words wide, so the
+// default 20px gutters shrink and long words may break rather than overflow.
+@include media-breakpoint-down(md) {
+  .content table.sponsor-models {
+    font-size: 0.8125rem;
+
+    // Wide enough for "competitively" in the row labels to stay whole.
+    th:first-child,
+    td:first-child {
+      width: 31%;
+    }
+
+    th,
+    td {
+      padding: 10px 8px;
+      overflow-wrap: anywhere;
+    }
+
+    thead th {
+      font-size: 0.8125rem;
+    }
+  }
+}
+
+// The benefits summary at the top of /nhs-sponsor. Two columns fit a phone, so
+// it fills the content column at every width instead of scrolling; the row
+// labels take only the width they need and the prose gets the rest.
+.content table.sponsor-benefits {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th:first-child,
+  td:first-child {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  // Let "What sponsorship delivers" wrap, or it pushes the table past a phone.
+  thead th:last-child {
+    white-space: normal;
+  }
+
+  thead th:first-child {
+    border-top-left-radius: 7px;
+  }
+
+  thead th:last-child {
+    border-top-right-radius: 7px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .content table.sponsor-benefits {
+    font-size: 0.875rem;
+
+    th,
+    td {
+      padding: 10px 12px;
+    }
+
+    td:first-child {
+      white-space: normal;
+      width: 30%;
+    }
+  }
+}
+
 // The person specification on /apply and /international. Written as HTML rather
 // than a markdown table because the requirement column is merged: one Essential
 // cell spanning its three criteria, one Desirable cell spanning the rest.
