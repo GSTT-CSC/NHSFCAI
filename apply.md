@@ -2,11 +2,11 @@
 layout: page
 permalink: /apply/
 title: "Apply: NHS applicants"
-description: How NHS clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting August 2027.
+description: How NHS clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting 11 August 2027.
 ---
 
 <div class="status-box" markdown="1">
-Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
+Status: Applications for Cohort 6 open on 5 October 2026, for an 11 August 2027 start.
 
 Applications close at 23:45 GMT on 16 November 2026.
 </div>
@@ -34,9 +34,9 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: Remote interviews (dates per applicant pool TBC for this cycle)
 * **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
-* **Aug 2027**: Fellowship Cohort 6 begins
+* **11 Aug 2027**: Fellowship Cohort 6 begins
 
-All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from August 2027 to August 2028. Applicants <b>will not be interviewed</b> without this.
+All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from 11 August 2027 to August 2028. You cannot be your own Approver. Applicants <b>will not be interviewed</b> without this.
 
 ## Applicant webinar
 
@@ -248,7 +248,7 @@ Career stages are selected in which this fellowship is expected to be a developm
 For earlier career stages, there are limited opportunities to apply the experience in transformational AI projects in the NHS.
 
 
-**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (11 Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 
 These applicants are eligible only as nominated applicants. For competitive applicants, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
 
@@ -328,6 +328,14 @@ The submission portal closes automatically and late submissions are not accepted
 **Can a different person to the named Approver I listed in my application form submit my *Approval In Principle Form*?**
 
 No. Approval in principle must come from the named Approver listed in the applicant's application form. 
+
+**Can I be my own Approver?**
+
+No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern for the fellowship year. There are no exceptions to this, including for self-funded applicants.
+
+This is because the fellowship involves NHS-facing activity at NHS deployments of AI. Fellows join real-world clinical AI projects at NHS host sites, usually under an honorary contract or Letter of Access. Host sites rely on your Approver to confirm independently that you are an employee in good standing, and that your time can be released for the fellowship. Self-approval removes that independent assurance, which is an unacceptable governance risk.
+
+If you do not have a suitable Approver for the fellowship start date of 11 August 2027, unfortunately your application will not be eligible.
 
 </details>
 
@@ -559,6 +567,8 @@ Yes, this is the nominated applicant route. Your Sponsor should read the [inform
 
 
 Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4 FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
+
+Self-funding does not replace *Approval In Principle*. You must still obtain it from a third-party Approver at your employer, and cannot be your own Approver. If you do not have a known employer for the fellowship start date of 11 August 2027, we cannot accept your application.
 
 
 **Can the faculty help me to identify a suitable sponsor?**
