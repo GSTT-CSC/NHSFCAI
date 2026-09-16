@@ -6,13 +6,13 @@ description: How NHS teams propose a clinical AI project and host a fellow on th
 ---
 
 <div class="status-box" markdown="1">
-Status: Project proposals are open for an August 2027 start (Cohort 6).
+Status: Project proposals are open for an 11 August 2027 start (Cohort 6).
 
 Submissions close on 1 November 2026.
 </div>
 
 The NHS Fellowship in Clinical AI provides practical experience to its [fellows](/fellows) through placements in real-world deployments of AI tools in [NHS host sites](/sites).
-We are currently accepting project proposals to host AI fellows for 2 days a week from August 2027 to August 2028.
+We are currently accepting project proposals to host AI fellows for 2 days a week from 11 August 2027 to August 2028.
 
 Hosting a fellow provides the host team with a skilled clinical team member at no additional cost.
 Fellows have been through a rigorous selection process and receive training in clinical AI, including being briefed on current best practice in the field.
@@ -36,7 +36,7 @@ Supervisors are also invited to attend the AI workshops run by the fellowship te
 * 01 Nov 2026: Deadline for project proposal submissions
 * Jan 2027: Remote interviews — prospective supervisors are invited to interview panels
 * Feb 2027: Outcomes of interviews and project matching
-* Aug 2027: Cohort 6 begins
+* 11 Aug 2027: Cohort 6 begins
 
 
 ## Supervisor webinar

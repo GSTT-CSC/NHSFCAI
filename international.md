@@ -2,11 +2,11 @@
 layout: page
 permalink: /international/
 title: "Apply: International applicants"
-description: How international clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting August 2027.
+description: How international clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting 11 August 2027.
 ---
 
 <div class="status-box" markdown="1">
-Status: Applications for Cohort 6 open on 5 October 2026, for an August 2027 start.
+Status: Applications for Cohort 6 open on 5 October 2026, for an 11 August 2027 start.
 <br>International applicants should apply to the [GSTT International Clinical Fellowship Programme (ICFP)](https://www.guysandstthomasevents.co.uk/vpp/icfp/) to assess their eligibility before applying to the NHS Fellowship in Clinical AI.
 </div>
 
@@ -26,7 +26,7 @@ Note that the ICFP requires applicants to have an [institutional sponsor](https:
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: Remote interviews
 * **Feb 2027**: Outcomes of interviews, project matching
-* **Aug 2027**: Fellowship Cohort 6 begins
+* **11 Aug 2027**: Fellowship Cohort 6 begins
 
 
 ## Applicant webinar

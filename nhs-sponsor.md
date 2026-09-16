@@ -37,7 +37,7 @@ We accept sponsorship for clinicians providing NHS services from any organisatio
 
 * **21 Sep 2026**: Expression of interest deadline for sponsoring competitive applicant posts
 * **11 Dec 2026**: Expression of interest deadline for sponsors nominated applicant (non-competitive) posts
-* **Aug 2027**: Fellowship Cohort 6 begins
+* **11 Aug 2027**: Fellowship Cohort 6 begins
 
 ## Sponsor webinar
 
