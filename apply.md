@@ -255,7 +255,7 @@ These applicants are eligible only as nominated applicants. For competitive appl
 
 Yes. Recalculate your projected CCT date assuming you undertake the fellowship at 0.4 FTE from 11 August 2027 to 10 August 2028. For a full-time trainee, this adds about 4.8 months. The recalculated CCT date must be after 10 August 2028.
 
-For example, a full-time trainee whose current projected CCT date is on or after 18 March 2028 would typically be eligible. If you are already training less than full time or out of programme, the extension depends on your working pattern. In all cases, eligibility is based on the recalculated CCT date confirmed by your Training Programme Director.
+For example, a full-time trainee whose current projected CCT date is on or after 18 March 2028 would typically be eligible. If you are already training less than full time or out of programme, the extension depends on your working pattern. In all cases, eligibility is based on your recalculated CCT date as confirmed by your Training Programme Director on the *Approval In Principle Form*.
 
 
 **Is eligibility affected by a doctor/dentist being out of programme during the fellowship dates while still holding a valid National Training Number for a specialty training programme leading to CCT in its own right for the duration of the post?**
