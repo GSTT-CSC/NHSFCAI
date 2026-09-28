@@ -77,7 +77,7 @@ The eligibility detail below reflects the Cohort 5 cycle only. This is kept as r
 | <span class="route-chip is-bsh">BSH</span>           | A post funded by the [British Society for Haematology](https://b-s-h.org.uk).                                                                    | Workforce criteria<sup>†</sup><sup>‡</sup> <br><br>[Full or associate membership of the BSH](https://b-s-h.org.uk/membership)<br><br>Must have a feasible commute to the AI project they are matched to | Matched to AI projects in **haematology** only, which may be in any region, competitively on interview score from their ranked preferences |
 | <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Workforce criteria<sup>†</sup><sup>‡</sup>  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK       | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, competitively on interview score from their ranked preferences                                                    |
 {: .route-legend}
-<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
+<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).   
 <br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI  
 
 ### Competitive applicant eligibility table
@@ -104,7 +104,7 @@ Find your NHS region, then your workforce group. The labels in that cell are the
 | Wales | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> |
 {: .eligibility-matrix}
 
-<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT) for the duration of the fellowship  
+<br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).  
 <br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI  
 <br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).
 
@@ -246,9 +246,17 @@ Career stages are selected in which this fellowship is expected to be a developm
 For earlier career stages, there are limited opportunities to apply the experience in transformational AI projects in the NHS.
 
 
-**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT during the fellowship (11 Aug 2027 - Aug 2028), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT on or before 10 Aug 2028 (after accounting for the extension from the fellowship), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 
-These applicants are eligible only as nominated applicants. For competitive applicants, medical and dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
+These applicants are eligible only as nominated applicants. For competitive applicants, medical/dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
+
+**When calculating a CCT date for eligibility criteria, should a specialty trainee take into account the extension to training from doing the fellowship itself?**
+{: #cct-extension}
+
+Yes. Recalculate your projected CCT date assuming you undertake the fellowship at 0.4 FTE from 11 August 2027 to 10 August 2028. For a full-time trainee, this adds about 4.8 months. The recalculated CCT date must be after 10 August 2028.
+
+For example, a full-time trainee whose current projected CCT date is on or after 18 March 2028 would typically be eligible. If you are already training less than full time or out of programme, the extension depends on your working pattern. In all cases, eligibility is based on the recalculated CCT date confirmed by your Training Programme Director.
+
 
 **Is eligibility affected by a doctor/dentist being out of programme during the fellowship dates while still holding a valid National Training Number for a specialty training programme leading to CCT in its own right for the duration of the post?**
 
