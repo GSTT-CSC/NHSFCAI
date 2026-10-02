@@ -11,6 +11,6 @@ Bespoke arrangements can be made in addition to the documentation below.
 
 
 {% include pdf-document.html
-     file="/assets/docs/FCAI_C5_International_Flyer.pdf"
+     file="/assets/docs/FCAI_C6_International_Sponsor_Flyer.pdf"
      title="Information for international sponsors"
      meta="PDF · information leaflet" %}
