@@ -36,7 +36,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **Feb 2027**: Outcomes of interviews and matching of fellows to AI projects
 * **11 Aug 2027**: Fellowship Cohort 6 begins
 
-All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern from 11 August 2027 to August 2028. You cannot be your own Approver. Applicants <b>will not be interviewed</b> without this.
+All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern as of the fellowship start date, 11 August 2027. You cannot be your own Approver. Applicants <b>will not be interviewed</b> without this.
 
 ## Applicant webinar
 
@@ -351,7 +351,7 @@ No. Approval in principle must come from the named Approver listed in the applic
 
 **Can I be my own Approver?**
 
-No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern for the fellowship year. There are no exceptions to this, including for self-funded applicants.
+No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern as of the fellowship start date, 11 August 2027. There are no exceptions to this, including for self-funded applicants.
 
 This is because the fellowship involves NHS-facing activity at NHS deployments of AI. Fellows join real-world clinical AI projects at NHS host sites, usually under an honorary contract or Letter of Access. Host sites rely on your Approver to confirm independently that you are an employee in good standing, and that your time can be released for the fellowship. Self-approval removes that independent assurance, which is an unacceptable governance risk.
 
