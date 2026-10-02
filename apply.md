@@ -78,7 +78,7 @@ The eligibility detail below reflects the Cohort 5 cycle only. This is kept as r
 | <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Workforce criteria<sup>†</sup><sup>‡</sup>  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK       | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, competitively on interview score from their ranked preferences                                                    |
 {: .route-legend}
 <br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).   
-<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI  
+<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI  
 
 ### Competitive applicant eligibility table
 <div class="status-box" markdown="1">
@@ -105,7 +105,7 @@ Find your NHS region, then your workforce group. The labels in that cell are the
 {: .eligibility-matrix}
 
 <br><sup>†</sup> Must hold a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).  
-<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI  
+<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with one of the following: HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI  
 <br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).
 
 ### Interview dates and number of posts
@@ -231,6 +231,20 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 **Do I have to know coding, programming, or AI to be eligible?**
 
 No. Prior experience of coding, programming, or AI is not part of the essential criteria of the Person Specification. Previous fellows have been recruited without such experience. 
+
+
+**What counts as an NHS Employer?**
+{: #nhs-employer}
+
+For the eligibility criteria, an NHS Employer means one of the organisations listed in [Annex 1 of the NHS Terms and Conditions of Service Handbook](https://www.nhsemployers.org/publications/tchandbook#annex-1---nhs-employers). The list differs for each UK nation.
+
+In England, NHS Employers are NHS trusts (including Foundation Trusts), special health authorities, Integrated Care Boards, NHS England (incorporating NHS Improvement, NHS Digital and Health Education England), the National Institute for Health and Care Excellence, the Health Research Authority, NHS Blood and Transplant, the NHS Business Service Authority, the NHS Counter Fraud Authority, NHS Resolution, and the Health Services Safety Investigations Body.
+
+In Northern Ireland, NHS Employers are the HSC Board, HSC Trusts, the Public Health Agency, the Business Services Organisation, the Patient and Client Council, and HSC Special Agencies.
+
+In Scotland, NHS Employers are health boards and special health boards.
+
+In Wales, NHS Employers are NHS trusts, local health boards, and Special Health Authorities.
 
 
 **As a competitive applicant, why is my NHS region, workforce group, or region/workforce group combination not eligible for a regional post?**
