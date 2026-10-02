@@ -184,7 +184,7 @@ $nhs-muted: #425563;
     }
   }
 
-  // The /apply eligibility matrix. The three workforce columns hold route
+  // The /apply eligibility matrix. The five workforce columns hold route
   // labels rather than prose, so the region names get the width.
   .eligibility-matrix {
     th:first-child,
@@ -210,19 +210,40 @@ $nhs-muted: #425563;
 .eligibility-matrix {
   th:first-child,
   td:first-child {
-    min-width: 190px;
+    min-width: 140px;
   }
 
   // Markdown tables are laid out at max-content width and scroll, so without a
-  // cap the three long workforce headings alone push the matrix wider than the
+  // cap the five long workforce headings alone push the matrix wider than the
   // content column and hide the last one off-screen. Capping them lets the
-  // headings wrap and the whole matrix fit.
+  // headings wrap and the whole matrix fit. The route chips are nowrap
+  // themselves, so a cell that runs out of room stacks its chips instead.
   thead th:not(:first-child) {
-    max-width: 11rem;
+    max-width: 8rem;
   }
 
-  tbody td:not(:first-child) {
-    white-space: nowrap;
+  // One chip per line in every cell. Left to wrap naturally, "T-Pro BSH" fit
+  // on one line but "Regional BSH" did not, so rows stacked inconsistently.
+  .route-chip {
+    display: flex;
+    width: fit-content;
+    margin: 0 0 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Six columns of the default 20px side padding took 240px of the content
+// column, leaving the matrix only ~15px of slack: enough for wider fonts or
+// browser zoom to tip it into a few pixels of horizontal scroll. Nested under
+// `.content` to outrank the default cell padding above.
+.content table.eligibility-matrix {
+  th,
+  td {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 

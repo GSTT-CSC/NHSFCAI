@@ -1,13 +1,20 @@
 {% comment %}
-  Renders the last-modified date of a file in _data/, so it never needs editing
-  by hand. Pass the data file's basename:
+  Renders a last-modified date, so it never needs editing by hand. Pass a data
+  file's basename to date the page by that file, or nothing to date it by the
+  page's own source file. `format` overrides the default month-and-year date:
 
     {% include last-updated.html source="resources" %}
+    {% include last-updated.html format="%-d %B %Y" %}
 {% endcomment %}
-{% assign stamp = site.data.timestamps[include.source] %}
+{% if include.source %}
+  {% assign stamp = site.data.timestamps[include.source] %}
+{% else %}
+  {% assign stamp = page.last_modified %}
+{% endif %}
+{% assign stamp_format = include.format | default: "%B %Y" %}
 {% if stamp %}
 <p class="last-updated">
   Last updated
-  <time datetime="{{ stamp | date_to_xmlschema }}">{{ stamp | date: "%B %Y" }}</time>
+  <time datetime="{{ stamp | date_to_xmlschema }}">{{ stamp | date: stamp_format }}</time>
 </p>
 {% endif %}
