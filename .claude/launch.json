@@ -4,8 +4,60 @@
     {
       "name": "jekyll",
       "runtimeExecutable": "bundle",
-      "runtimeArgs": ["exec", "jekyll", "serve", "--port", "4010", "--quiet"],
+      "runtimeArgs": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--port",
+        "4010",
+        "--quiet"
+      ],
       "port": 4010
+    },
+    {
+      "name": "jekyll-alt",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--port",
+        "4011",
+        "--quiet",
+        "--destination",
+        "/private/tmp/claude-502/-Users-alexdeng-Documents-GitHub-NHSFCAI/4639b70c-1a77-4b5e-90cd-6b9731ab4911/scratchpad/_site"
+      ],
+      "port": 4011
+    },
+    {
+      "name": "jekyll-c",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--port",
+        "4012",
+        "--quiet",
+        "--destination",
+        "/private/tmp/claude-502/-Users-alexdeng-Documents-GitHub-NHSFCAI/a151cbac-83b3-4f86-a6ab-94fcf89addc1/scratchpad/_site"
+      ],
+      "port": 4012
+    },
+    {
+      "name": "jekyll-d",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": [
+        "exec",
+        "jekyll",
+        "serve",
+        "--port",
+        "4013",
+        "--quiet",
+        "--destination",
+        "/private/tmp/claude-502/-Users-alexdeng-Documents-GitHub-NHSFCAI/50b1d14f-f31c-420f-8dcd-1e689d727c62/scratchpad/_site"
+      ],
+      "port": 4013
     }
   ]
 }

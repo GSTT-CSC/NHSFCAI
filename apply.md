@@ -38,7 +38,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
 * **11 Aug 2027**: [Fellowship Cohort 6 begins](#faq-leave-and-deferred-entry)
 
-All applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern as of the fellowship start date, 11 August 2027. [You cannot be your own Approver](#faq-own-approver). Applicants <b>will not be interviewed</b> without this.
+All applicants must obtain [*Approval in Principle*](#faq-own-approver) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. Applicants <b>will not be interviewed</b> without this.
 
 ## Applicant webinar
 
@@ -56,35 +56,61 @@ There are 2 kinds of applicant for this fellowship, and they are [mutually exclu
 
 | Entry Route             | Description                                                                                                                                                                                                                                                       | Competition                                                                                          | Eligibility                                                                                                                                                                                        | AI project                                                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Competitive applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant applies competitively for a post that is already attached to funding, if they [meet the eligibility criteria](#faq-borderline-eligibility) <br><br>Salary cover provided                                                                                                               | **Competitive** entry: [shortlist and interview](#faq-recruitment-and-interview), with posts awarded on interview score                | Professionally registered health and social care workforce with an [NHS Employer](#nhs-employer), with [restrictions on training/banding](#faq-career-stage-restrictions) <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT | [Competitive matching](#faq-project-matching) to existing project pool: matched on interview score from their ranked preferences                     |
-| Nominated applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor) <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the Person Specification at interview | Health and social care workforce providing NHS services <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT                                                                | Either competitive matching to existing project pool, or a [pre-allocated project](#faq-specific-project) (non-competitive, ringfenced for the applicant) |
+| Competitive applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant applies competitively for a post that is already attached to funding, if they [meet the eligibility criteria](#faq-borderline-eligibility) <br><br>Salary cover provided                                                                                                               | **Competitive** entry: [shortlist and interview](#faq-recruitment-and-interview), with posts awarded on interview score                | Registered health and social care professionals with an [NHS Employer](#nhs-employer), with [restrictions on training/banding](#faq-career-stage-restrictions) <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT | [Competitive matching](#faq-project-matching) to existing project pool: matched on interview score from their ranked preferences                     |
+| Nominated applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor) <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the Person Specification at interview | Health and social care staff providing NHS services <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT                                                                | Either competitive matching to existing project pool, or a [pre-allocated project](#faq-specific-project) (non-competitive, ringfenced for the applicant) |
 {: .entry-routes}
 
+### Check your eligibility
+
+This tool lists the posts open to you in the Cohort 6 cycle, based on the criteria set out in the Competitive and Nominated applicant sections below. Funding is occasionally subject to change, and will be updated in the checker accordingly.
+
+<div class="eligibility-checker">
+  <div class="eligibility-checker__controls">
+    <div class="eligibility-checker__field">
+      <label for="ec-profession">Profession</label>
+      <select id="ec-profession">
+        <option value="">Select your profession&hellip;</option>
+      </select>
+    </div>
+    <div class="eligibility-checker__field">
+      <label for="ec-stage">Career stage (as of 11 Aug 2027)</label>
+      <select id="ec-stage" disabled>
+        <option value="">Select a profession first</option>
+      </select>
+    </div>
+    <div class="eligibility-checker__field">
+      <label for="ec-region">Region</label>
+      <select id="ec-region" disabled>
+        <option value="">Select a profession first</option>
+      </select>
+    </div>
+  </div>
+  <p class="visually-hidden" id="ec-announce" role="status" aria-live="polite"></p>
+  <div class="eligibility-checker__result" id="ec-result"></div>
+</div>
+<script src="{{ '/assets/js/eligibility-checker.js' | relative_url }}" defer></script>
 
 
 <details markdown="1" id="competitive-applicants">
 <summary>Competitive applicants</summary>
 
-<div class="status-box" markdown="1">
-The eligibility detail below applies to the Cohort 6 cycle. Funding and eligibility are subject to change without notice.
-</div>
-
-All competitive applicants must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern as of the fellowship start date, 11 August 2027, submitted by the deadline: 16 Nov 2026, 23:45 GMT. [You cannot be your own Approver](#faq-own-approver). Applicants <b>will not be interviewed</b> without this.
 
 ### Routes to competitive entry
+Funding is occasionally subject to change, and will be updated in the table accordingly.
+All competitive applicants must obtain [*Approval in Principle*](#faq-own-approver) from their Approver (either their training programme director or line manager), who will confirm that their training stage or banding is eligible, and sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 16 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 | Route                                                | Description                                                                                                                                      | Requirements                                                                                                                                                                                            | AI project matching                                                                                                                    |
 |------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| <span class="route-chip is-regional">Regional</span> | A post funded by the applicant's own NHS region. Open only to the workforce groups that region has opened, so [eligibility varies geographically](#faq-regional-eligibility). | Workforce criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>Training or employment in the relevant region                                                                                | Matched to AI projects **in their own region only**, [competitively on interview score](#faq-project-matching) from their ranked preferences                    |
-| <span class="route-chip is-bsh">BSH</span>           | A post funded by the [British Society for Haematology](https://b-s-h.org.uk).                                                                    | Workforce criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>[Full or associate membership of the BSH](https://b-s-h.org.uk/membership)<br><br>Must have a [feasible commute](#faq-bsh-any-region) to the AI project they are matched to | Matched to AI projects in **haematology** only, which may be in any region, [competitively on interview score](#faq-bsh-matching) from their ranked preferences |
-| <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Workforce criteria (see [eligibility table](#competitive-applicant-eligibility-table))  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK       | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, [competitively on interview score](#faq-tpro-matching) from their ranked preferences                                                    |
+| <span class="route-chip is-regional">Regional</span> | A post funded by the applicant's own NHS region. Open only to the professions that region funds, so [eligibility varies geographically](#faq-regional-eligibility). | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>Training or employment in the relevant region                                                                                | Matched to AI projects **in their own region only**, [competitively on interview score](#faq-project-matching) from their ranked preferences                    |
+| <span class="route-chip is-bsh">BSH</span>           | A post funded by the [British Society for Haematology](https://b-s-h.org.uk).                                                                    | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>[Full or associate membership of the BSH](https://b-s-h.org.uk/membership)<br><br>Must have a [feasible commute](#faq-bsh-any-region) to the AI project they are matched to | Matched to AI projects in **haematology** only, which may be in any region, [competitively on interview score](#faq-bsh-matching) from their ranked preferences |
+| <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table))  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK       | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, [competitively on interview score](#faq-tpro-matching) from their ranked preferences                                                    |
 {: .route-legend}
 
 ### Competitive applicant eligibility table
 
-Find your NHS region, then your workforce group. The labels in that cell are the competitive posts you can apply to.
+Find your NHS region, then your profession. The labels in that cell are the competitive posts you can apply to.
 
-| NHS Region | Doctors<sup>†</sup> | Dentists<sup>†</sup> | Other statutorily registered clinical professions<sup>‡</sup> | Voluntarily registered clinical professions<sup>§</sup> | Statutorily registered social care professions<sup>¶</sup> |
+| NHS Region | Doctor<sup>†</sup> | Dentist<sup>†</sup> | Statutory clinical register (non-doctor/dentist): HCPC, NMC, GPhC, GOC, GDC, GMC, PSNI<sup>‡</sup> | Voluntary clinical register: [PSA Accredited Register](https://www.professionalstandards.org.uk/practitioners)<sup>‡</sup> | Social care register: SWE, SSSC, SCW, NISCC<sup>‡</sup> |
 |------------|--------------------|----------------------|---------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------------------------------|
 | [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | <span class="route-chip is-regional">Regional*</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
 | [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
@@ -102,9 +128,7 @@ Find your NHS region, then your workforce group. The labels in that cell are the
 {: .eligibility-matrix}
 
 <br><sup>†</sup> Must hold a [National Training Number in a UK specialty training post](#faq-trainee-eligibility) leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).  
-<br><sup>‡</sup> Must hold a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with the HCPC, NMC, GPhC, GOC, GDC, GMC, or PSNI, excluding doctors and dentists  
-<br><sup>§</sup> Must hold a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b, <i>and</i> a valid registration with a [PSA Accredited Register](https://www.professionalstandards.org.uk/practitioners)  
-<br><sup>¶</sup> Must hold a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b, <i>and</i> a valid professional registration with SWE, SSSC, SCW, or NISCC  
+<br><sup>‡</sup> Must hold valid registration and a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b.  
 <br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).
 
 ### Interview dates and number of posts
@@ -113,18 +137,18 @@ Interview dates for each applicant pool are to be confirmed, within 13-29 Jan 20
 
 | Interview date | Applicant pool | # Posts |
 |----------------|----------------|---------|
-| TBC | <span class="route-chip is-bsh">BSH</span> [British Society for Haematology](https://b-s-h.org.uk) | 1 |
-| TBC | <span class="route-chip is-tpro">T-Pro</span> [T-Pro-funded posts](https://info.tpro.io) | 1 |
-| TBC | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1 |
-| TBC | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4 |
-| TBC | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1 |
-| TBC | <span class="route-chip is-regional">Regional</span> [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/) | 3 |
-| TBC | <span class="route-chip is-regional">Regional</span> South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | 3 |
-| TBC | <span class="route-chip is-regional">Regional</span> South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | 3 |
-| TBC | <span class="route-chip is-regional">Regional</span> South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | 2 |
-| TBC | <span class="route-chip is-regional">Regional</span> [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | 3 |
-| TBC | <span class="route-chip is-regional">Regional</span> Northern Ireland | 1 |
-| TBC | <span class="route-chip is-regional">Regional</span> Scotland | 8 |
+| TBC | <span class="route-chip is-bsh">BSH</span> | 1       |
+| TBC | <span class="route-chip is-tpro">T-Pro</span> | 2       |
+| TBC | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1       |
+| TBC | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4       |
+| TBC | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1       |
+| TBC | <span class="route-chip is-regional">Regional</span> [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/) | 3       |
+| TBC | <span class="route-chip is-regional">Regional</span> South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | 3       |
+| TBC | <span class="route-chip is-regional">Regional</span> South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | 3       |
+| TBC | <span class="route-chip is-regional">Regional</span> South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | 2       |
+| TBC | <span class="route-chip is-regional">Regional</span> [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | 3       |
+| TBC | <span class="route-chip is-regional">Regional</span> Northern Ireland | 1       |
+| TBC | <span class="route-chip is-regional">Regional</span> Scotland | 8       |
 {: .interview-timetable}
 
 The number of posts listed is illustrative and not final.<br>
@@ -138,12 +162,12 @@ The [T-Pro](#faq-tpro-fellows) and [BSH](#faq-bsh-fellows) FAQ sections below co
 
 ### Entry requirements
 
-* Open to the health and social care workforce providing NHS services.
+* Open to health and social care staff providing NHS services.
 * The applicant must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor).
 * The course fee is £8000. There is no salary cover unless agreed with the Sponsor by the applicant.
 * The fellow must release [2 days a week](#faq-working-pattern) of their time for the 12 months duration of the fellowship.
 * The applicant must meet the Essential criteria of the Person Specification (see section below) at interview
-* The applicant must obtain *Approval in Principle* from a responsible person with decision-making power over their training or employment pattern as of the fellowship start date, 11 August 2027, submitted by the deadline: 16 Nov 2026, 23:45 GMT. [You cannot be your own Approver](#faq-own-approver). Applicants <b>will not be interviewed</b> without this.
+* The applicant must obtain [*Approval in Principle*](#faq-own-approver) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 16 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 ### Funding the post
 
@@ -224,6 +248,12 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 No. Prior experience of coding, programming, or AI is not part of the essential criteria of the Person Specification. Previous fellows have been recruited without such experience. 
 
 
+**Do I need to have an idea for a clinical AI project when I apply to this fellowship?**
+
+No. AI projects and hosting teams in the NHS are proposed to the faculty by AI supervisors. 
+Successful applicants are matched to these projects competitively following the interview stage. 
+
+
 **What counts as an NHS Employer?**
 {: #nhs-employer}
 
@@ -238,7 +268,7 @@ In Scotland, NHS Employers are health boards and special health boards.
 In Wales, NHS Employers are NHS trusts, local health boards, and Special Health Authorities.
 
 
-**As a competitive applicant, why is my NHS region, workforce group, or region/workforce group combination not eligible for a regional post?**
+**As a competitive applicant, why is my combination of profession, career stage, and region not eligible for a regional post?**
 {: #faq-regional-eligibility}
 
 Regional eligibility is set at the discretion of regional funding bodies (not the faculty), and this is not a uniform process across the NHS.
@@ -276,11 +306,144 @@ No. The status of being in or out of programme does not affect eligibility, only
 {: #faq-borderline-eligibility}
 
 
-Applicants who believe they are borderline eligible should [contact the faculty](mailto:gstt.aifellowship@nhs.net) to clarify before applying to avoid disappointment. 
+Applicants who believe they are borderline eligible should [contact the faculty](mailto:gstt.aifellowship@nhs.net) to clarify before applying. 
 
 **Can I do this fellowship more than once?**
 
 No. Current fellows and alumni are not eligible. 
+
+</details>
+
+
+<details markdown="1">
+<summary>Sponsorship</summary>
+
+**Am I eligible if I have a sponsor who will directly fund a post for me as an NHS applicant?**
+
+
+Yes, this is the nominated applicant route. Your Sponsor should read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
+
+**Can I sponsor myself?**
+{: #faq-self-sponsor}
+
+
+Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4 FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
+
+Self-funding does not replace *Approval In Principle*. You must still obtain it from a third-party Approver at your employer, and cannot be your own Approver. If you do not have a known employer for the fellowship start date of 11 August 2027, we cannot accept your application.
+
+
+**Can the faculty help me to identify a suitable sponsor?**
+
+
+No. Due to the high volume of applicants, the faculty cannot help with such requests.
+
+**Can you accommodate a bespoke arrangement through sponsorship?**
+{: #faq-bespoke-arrangement}
+
+
+Potentially yes. Please [contact the faculty](mailto:gstt.aifellowship@nhs.net) if you require a bespoke arrangement through sponsorship. 
+Note that last minute requests for bespoke arrangements are difficult to accommodate due to logistics.
+
+**I represent the sponsor for a prospective NHS applicant, how do I proceed?**
+
+
+Please read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss potential arrangements as early as possible.
+
+</details>
+
+
+<details markdown="1" id="faq-working-pattern">
+<summary>Working pattern</summary>
+
+**What's the specific time commitment?**
+
+0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week. This fellowship is intended to integrate alongside clinical work or
+training. Partial remote working and flexible hours may be possible depending on project following conversations with supervisors.
+Workshops and other educational activities, e.g. e-learning modules, are expected to be done within this 0.4 FTE alongside AI project work.
+Fellowship time is not allocated to non-fellowship activity, which includes but is not limited to exam preparation, dissertation-writing, and other projects outside the scope of the fellowship.
+
+
+**Can I do the fellowship at a lower time commitment than 0.4 FTE?**
+
+No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
+The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
+For this reason, your Approver must confirm that this time can be released as part of your Approval In Principle.
+
+**Can I compress the fellowship into a shorter and more intensive placement?**
+
+No. For the same reasons as above.
+
+**Can I do the fellowship without reducing my training/working pattern, i.e. do it on top of normal working hours?**
+
+No. Due to the time commitments of this programme, a fellow must not have a total working pattern >1.0FTE in total.
+
+**Are the workshops compulsory, and when do they take place?**
+
+Yes. Attendance at masterclass workshops is a compulsory part of the fellowship, and a register of attendance is kept. 
+Recurring workshops are scheduled on Mondays through the fellowship year: indicatively, the third Monday of each month, excluding national holidays. 
+Multiple workshop days are delivered together in a residential 'bootcamp' at the start of the fellowship, to front-load foundational knowledge in clinical AI. 
+Workshops are delivered in a mix of in-person, hybrid and remote settings.
+
+**If I'm in specialty medical or dental training, will my time spent on the fellowship count towards my training?**
+
+No. Fellows typically agree with their Training Programme Director to enter Less Than Full Time training for the duration of this fellowship.
+The time spent on the fellowship is then added on to extend the expected duration of training.
+The educational content of the fellowship is not expected to align sufficiently with current medical/dental curricula to count towards competencies.
+
+
+</details>
+
+
+<details markdown="1" id="faq-pay-and-expenses">
+<summary>Pay and expenses</summary>
+
+**Is the fellowship free?**
+
+Posts for competitive applicants are fully funded for eligible applicants: 0.4 FTE salary is reimbursed to the fellow's Employer, and course fee covered.
+Nominated applicants cover these elements through either a Sponsor or self-funding.
+
+**Does the fellowship pay my salary directly?**
+
+No. The fellowship is not your Employer. 
+<br>For successful competitive applicants, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
+<br>For successful nominated applicants, your salary arrangements are at the discretion of your Sponsor.
+
+**Is there travel/subsistence expenses to support attendance at in-person workshops?**
+
+Yes for competitive applicants. This is paid up front and then reclaimed through mechanisms specified by the funder.
+There is no automatic cover for such expenses for nominated applicants.
+
+**What happens if I move to a new employer (e.g. rotating through training) during the fellowship?**
+
+Where salary is reimbursed, this is transferred to your new Employer where relevant.
+
+</details>
+
+
+<details markdown="1">
+<summary>Approval In Principle</summary>
+
+**Does the *Approval In Principle Form* submission from my Approver have the same deadline as my application?**
+
+Yes. The deadline is the same as listed in the Key Dates above. 
+
+**What happens if I cannot get the appropriate person to submit my *Approval In Principle Form*?**
+
+You will not be interviewed, and therefore cannot join the programme. This is because we can only make offers to applicants who have evidence of being able to take up the post. 
+The submission portal closes automatically and late submissions are not accepted. It is the applicant's responsibility to ensure this has happened.
+
+**Can a different person to the named Approver I listed in my application form submit my *Approval In Principle Form*?**
+
+No. Approval in principle must come from the named Approver listed in the applicant's application form. 
+
+**Can I be my own Approver?**
+{: #faq-own-approver}
+
+No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern as of the fellowship start date, 11 August 2027. There are no exceptions to this, including for self-funded applicants.
+
+This is because the fellowship involves NHS-facing activity at NHS deployments of AI. Fellows join real-world clinical AI projects at NHS host sites, usually under an honorary contract or Letter of Access. Host sites rely on your Approver to confirm independently that you are an employee in good standing, and that your time can be released for the fellowship. Self-approval removes that independent assurance, which is an unacceptable governance risk.
+
+If you do not have a suitable Approver for the fellowship start date of 11 August 2027, unfortunately your application will not be eligible.
 
 </details>
 
@@ -330,40 +493,10 @@ No. Due to the high volume of applicants, the faculty cannot help with such requ
 No. Recruitment is coordinated nationally in an annual cycle according to the timelines above.
 
 </details>
-<details markdown="1">
-<summary>Approval In Principle</summary>
 
-**Does the *Approval In Principle Form* submission from my Approver have the same deadline as my application?**
-
-Yes. The deadline is the same as listed in the Key Dates above. 
-
-**What happens if I cannot get the appropriate person to submit my *Approval In Principle Form*?**
-
-You will not be interviewed, and therefore cannot join the programme. This is because we can only make offers to applicants who have evidence of being able to take up the post. 
-The submission portal closes automatically and late submissions are not accepted. It is the applicant's responsibility to ensure this has happened.
-
-**Can a different person to the named Approver I listed in my application form submit my *Approval In Principle Form*?**
-
-No. Approval in principle must come from the named Approver listed in the applicant's application form. 
-
-**Can I be my own Approver?**
-{: #faq-own-approver}
-
-No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern as of the fellowship start date, 11 August 2027. There are no exceptions to this, including for self-funded applicants.
-
-This is because the fellowship involves NHS-facing activity at NHS deployments of AI. Fellows join real-world clinical AI projects at NHS host sites, usually under an honorary contract or Letter of Access. Host sites rely on your Approver to confirm independently that you are an employee in good standing, and that your time can be released for the fellowship. Self-approval removes that independent assurance, which is an unacceptable governance risk.
-
-If you do not have a suitable Approver for the fellowship start date of 11 August 2027, unfortunately your application will not be eligible.
-
-</details>
 
 <details markdown="1" id="faq-projects-and-matching">
 <summary>Projects and matching</summary>
-
-**Do I need to have an idea for a clinical AI project when I apply to this fellowship?**
-
-No. AI projects and hosting teams in the NHS are proposed to the faculty by AI supervisors. 
-Successful applicants are matched to these projects competitively following the interview stage. 
 
 **How does project matching happen?**
 {: #faq-project-matching}
@@ -402,70 +535,77 @@ The experience from any project will involve significant amounts of transferable
 </details>
 
 
-<details markdown="1" id="faq-pay-and-expenses">
-<summary>Pay and expenses</summary>
+<details markdown="1" id="faq-tpro-fellows">
 
-**Is the fellowship free?**
+<summary>T-Pro posts</summary>
 
-Posts for competitive applicants are fully funded for eligible groups: 0.4 FTE salary is reimbursed to the fellow's Employer, and course fee covered.
-Nominated applicants cover these elements through either a Sponsor or self-funding.
-
-**Does the fellowship pay my salary directly?**
-
-No. The fellowship is not your Employer. 
-<br>For successful competitive applicants, your existing Employer is reimbursed for your salary (0.4 FTE for 12 months) to release your time for the fellowship post. The salary that the Employer is reimbursed is determined by the Employer’s quote at the start of the fellowship.  
-<br>For successful nominated applicants, your salary arrangements are at the discretion of your Sponsor.
-
-**Is there travel/subsistence expenses to support attendance at in-person workshops?**
-
-Yes for competitive applicants. This is paid up front and then reclaimed through mechanisms specified by the funder.
-There is no automatic cover for such expenses for nominated applicants.
-
-**What happens if I move to a new employer (e.g. rotating through training) during the fellowship?**
-
-Where salary is reimbursed, this is transferred to your new Employer where relevant.
-
-</details>
-<details markdown="1" id="faq-working-pattern">
-<summary>Working pattern</summary>
-
-**What's the specific time commitment?**
-
-0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week. This fellowship is intended to integrate alongside clinical work or
-training. Partial remote working and flexible hours may be possible depending on project following conversations with supervisors.
-Workshops and other educational activities, e.g. e-learning modules, are expected to be done within this 0.4 FTE alongside AI project work.
-Fellowship time is not allocated to non-fellowship activity, which includes but is not limited to exam preparation, dissertation-writing, and other projects outside the scope of the fellowship.
+**What is T-Pro?**
 
 
-**Can I do the fellowship at a lower time commitment than 0.4 FTE?**
+[T-Pro](https://info.tpro.io) is an industry supplier with partners in the NHS, and has products that focus on AI-powered voice solutions for clinical workflows.
+T-Pro funds posts on the NHS Fellowship in Clinical AI, in projects relating to the deployment of T-Pro technology in the NHS.
 
-No. Having a lower time commitment is not suitable for the learning objectives of the programme. 
-The educational activities and project placements are structured to deliver the learning objectives of the fellowship curriculum based on a 0.4 FTE unbanded working pattern.
-For this reason, your Approver must confirm that this time can be released as part of your Approval In Principle.
+**What AI projects are available for T-Pro posts?**
+ 
+Successful applicants will only be matched to “T-Pro-badged projects”. These can be matched to applicants from any region of the NHS in which they are eligible for a T-Pro post, as the workload is primarily remote.
+These projects are available only to fellows through T-Pro posts.
 
-**Can I compress the fellowship into a shorter and more intensive placement?**
+**How does project matching for T-Pro posts happen?**
+{: #faq-tpro-matching}
 
-No. For the same reasons as above.
-
-**Can I do the fellowship without reducing my training/working pattern, i.e. do it on top of normal working hours?**
-
-No. Due to the time commitments of this programme, a fellow must not have a total working pattern >1.0FTE in total.
-
-**Are the workshops compulsory, and when do they take place?**
-
-Yes. Attendance at masterclass workshops is a compulsory part of the fellowship, and a register of attendance is kept. 
-Recurring workshops are scheduled on Mondays through the fellowship year: indicatively, the third Monday of each month, excluding national holidays. 
-Multiple workshop days are delivered together in a residential 'bootcamp' at the start of the fellowship, to front-load foundational knowledge in clinical AI. 
-Workshops are delivered in a mix of in-person, hybrid and remote settings.
-
-**If I'm in specialty medical or dental training, will my time spent on the fellowship count towards my training?**
-
-No. Fellows typically agree with their Training Programme Director to enter Less Than Full Time training for the duration of this fellowship.
-The time spent on the fellowship is then added on to extend the expected duration of training.
-The educational content of the fellowship is not expected to align sufficiently with current medical/dental curricula to count towards competencies.
+Applicants will rank the T-Pro-badged projects. 
+The highest scoring applicant from the interview stage will be matched to their highest ranked T-Pro-badged project. 
+The next highest scoring applicant is matched to their highest ranked T-Pro-badged project remaining, etc. until all T-Pro-funded posts are filled. 
 
 
 </details>
+
+
+<details markdown="1" id="faq-bsh-fellows">
+<summary>BSH posts</summary>
+
+**What is BSH?**
+
+The British Society for Haematology (BSH) funds posts for BSH members (full or associate members) in the NHS Fellowship in Clinical AI.
+These posts are reserved exclusively for applicants who are BSH members, and will link to projects relating to Haematology. 
+
+**Are there Haematology themed AI projects available?**
+
+Yes. The BSH and fellowship faculty have identified projects relevant to the specialty theme of AI in Haematology and details will be released during the recruitment cycle.  
+These are “BSH-badged projects”, and first priority for them is reserved exclusively for BSH posts.
+
+**Can any member of the BSH apply?**
+
+No. BSH applicants also need to meet the profession and career stage eligibility criteria specified in the Eligibility section.
+
+**Can BSH applicants from any region apply for BSH-badged projects in any other region?**
+{: #faq-bsh-any-region}
+
+Yes. BSH applicants can apply from any NHS region. 
+However, in practice, it is the applicant's responsibility to ensure that they are able to commute to their project location through the fellowship year, and this is not resourced by the BSH or by the fellowship itself. The offer for a fellowship post may be withdrawn if the applicant is unable to demonstrate a feasible plan for commuting to their project location.
+Please contact the faculty (gstt.aifellowship@nhs.net) for more specific information on geographical availability of such projects.
+
+**How will BSH membership be checked?**
+
+BSH applicants enter their BSH membership number in the application form, which will be checked against the membership registry of the BSH. 
+
+**How does project matching work for BSH posts?**
+{: #faq-bsh-matching}
+
+Applicants will rank the BSH-badged projects according to their preference.
+The highest scoring BSH applicant from the interview stage will be matched to their highest ranked BSH-badged project. 
+The next highest scoring BSH applicant is matched to their highest ranked BSH-badged project remaining, etc. until all BSH posts are filled.
+If there are BSH-badged projects that are still available after the BSH posts have been appointed, these become available projects in the regional matching process.
+
+**What happens if a BSH applicant does not obtain a BSH post?**
+
+BSH applicants who do not obtain one of the BSH posts after interview are automatically considered in the applicant pool associated with their region.
+The applicant could be matched to a project in that region depending on their interview score.
+It is possible to be matched to a BSH-badged project through this route, depending on regional availability. 
+
+</details>
+
+
 <details markdown="1" id="faq-leave-and-deferred-entry">
 <summary>Leave and deferred entry</summary>
 
@@ -489,127 +629,13 @@ No. The offer for a fellowship post must be accepted for that cohort’s recruit
 
 </details>
 
+
 <details markdown="1">
 <summary>Certification</summary>
 
 **What certification do fellows receive at the end of the fellowship year?**
 
-Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive certification as Clinical Safety Officers for [DCB0129](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems/) and [DCB0160](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0160-clinical-risk-management-its-application-in-the-deployment-and-use-of-health-it-systems/).
+Fellows receive a certificate of completion of the fellowship issued by the faculty. During the course of the year, fellows will also receive clinical safety training at the level of the Digital Clinical Safety Practitioner course, for those looking to become a Clinical Safety Officer. This covers the clinical risk management activities and documentation required by [DCB0129](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems/) and [DCB0160](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dcb0160-clinical-risk-management-its-application-in-the-deployment-and-use-of-health-it-systems/).
 
-
-</details>
-
-<details markdown="1" id="faq-tpro-fellows">
-
-<summary>T-Pro Fellows in Clinical AI</summary>
-
-**What is a T-Pro Fellow in Clinical AI?**
-
-
-[T-Pro](https://info.tpro.io) is an industry supplier with partners in the NHS, and has products that focus on AI-powered voice solutions for clinical workflows.
-T-Pro funds posts on the fellowship, and the appointees are designated T-Pro Fellows in Clinical AI.
-
-**What AI projects are available for these posts?**
- 
-Fellows will only be matched to “T-Pro-badged projects”. These can be matched to applicants from any region of the NHS in which they are eligible for a T-Pro post, as the workload is primarily remote.
-These projects are available only to T-Pro Fellows in Clinical AI.
-
-**How does project matching for T-Pro Fellows in Clinical AI happen?**
-{: #faq-tpro-matching}
-
-Applicants will rank the T-Pro-badged projects. 
-The highest scoring applicant from the interview stage will be matched to their highest ranked T-Pro-badged project. 
-The next highest scoring applicant is matched to their highest ranked T-Pro-badged project remaining, etc. until all T-Pro-funded posts are filled. 
-
-
-</details>
-<details markdown="1" id="faq-bsh-fellows">
-<summary>BSH Fellows in Clinical AI</summary>
-
-**What is a BSH Fellow in Clinical AI?**
-
-
-The British Society for Haematology (BSH) funds posts on the fellowship for BSH members (full or associate members), and the appointees are designated BSH Fellows in Clinical AI.
-These posts are reserved exclusively for applicants who are BSH members, and will link to projects relating to Haematology. 
-
-**Are there Haematology themed AI projects available?**
-
-Yes. The BSH and fellowship faculty have identified projects relevant to the specialty theme of AI in Haematology and details will be released during the recruitment cycle.  
-These are “BSH-badged projects”, and first priority for them is reserved exclusively for BSH Fellows in Clinical AI. 
-
-**Can any member of the BSH apply?**
-
-No. BSH applicants also need to meet the professional eligibility criteria for workforce groups as specified in the Eligibility table. 
-
-**Can BSH applicants from any region apply for BSH-badged projects in any other region?**
-{: #faq-bsh-any-region}
-
-Yes. BSH applicants can apply from any NHS region. 
-However, in practice, it is the applicant's responsibility to ensure that they are able to commute to their project location through the fellowship year, and this is not resourced by the BSH or by the fellowship itself. The offer for a fellowship post may be withdrawn if the potential BSH Fellow in Clinical AI is unable to demonstrate a feasible plan for commuting to their project location. 
-Please contact the faculty (gstt.aifellowship@nhs.net) for more specific information on geographical availability of such projects.
-
-**How will BSH membership be checked?**
-
-BSH applicants enter their BSH membership number in the application form, which will be checked against the membership registry of the BSH. 
-
-**How does project matching for BSH Fellows in Clinical AI happen?**
-{: #faq-bsh-matching}
-
-Applicants will rank the projects they are eligible to be matched to. 
-The highest scoring BSH applicant from the interview stage will be matched to their highest ranked BSH-badged project. 
-The next highest scoring BSH applicant is matched to their highest ranked BSH-badged project remaining, etc. until all BSH-funded posts are filled. 
-
-**Can BSH applicants only get matched to BSH-badged projects?**
-
-BSH applicants who are appointed as BSH Fellows in Clinical AI will exclusively be matched to BSH-badged projects.
-BSH applicants who also meet regional criteria can be matched to projects in that region (whether BSH-badged or not) if they miss out on a BSH-funded post (they are automatically re-entered into the applicant pool of that region).
-BSH applicants who do not meet regional criteria for any of the participating regions are only eligible to be matched to BSH-badged projects as BSH Fellows in Clinical AI. 
-
-**Can a non-BSH applicant be matched to BSH-badged projects?**
-
-Yes. If there are BSH-badged projects that are still available after the BSH Fellows in Clinical AI have been appointed, these can be matched to either BSH applicants or non-BSH applicants as part of the regional matching process. 
-
-**What happens if a BSH applicant does not obtain a BSH-funded post as a BSH Fellow in Clinical AI?**
-
-BSH applicants who do not obtain one of the BSH-funded posts in this cohort are automatically considered in the applicant pool associated with their region.
-The applicant could be matched to a project in that region depending on their interview score.
-Entering the fellowship through this route will not carry the designation of BSH Fellow in Clinical AI, but will still be an NHS Fellow in Clinical AI.
-It is possible to be matched to a BSH-badged project through this route, depending on regional availability. 
-
-</details>
-
-<details markdown="1">
-<summary>Sponsorship </summary>
-
-**Am I eligible if I have a sponsor who will directly fund a post for me as an NHS applicant?**
-
-
-Yes, this is the nominated applicant route. Your Sponsor should read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss arrangements as early as possible.
-
-**Can I sponsor myself?**
-{: #faq-self-sponsor}
-
-
-Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4 FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
-
-Self-funding does not replace *Approval In Principle*. You must still obtain it from a third-party Approver at your employer, and cannot be your own Approver. If you do not have a known employer for the fellowship start date of 11 August 2027, we cannot accept your application.
-
-
-**Can the faculty help me to identify a suitable sponsor?**
-
-
-No. Due to the high volume of applicants, the faculty cannot help with such requests.
-
-**Can you accommodate a bespoke arrangement through sponsorship?**
-{: #faq-bespoke-arrangement}
-
-
-Potentially yes. Please [contact the faculty](mailto:gstt.aifellowship@nhs.net) if you require a bespoke arrangement through sponsorship. 
-Note that last minute requests for bespoke arrangements are difficult to accommodate due to logistics.
-
-**I represent the sponsor for a prospective NHS applicant, how do I proceed?**
-
-
-Please read the [information for NHS Sponsors](/nhs-sponsor) then [contact the faculty](mailto:gstt.aifellowship@nhs.net) to discuss potential arrangements as early as possible.
 
 </details>

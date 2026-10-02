@@ -1,0 +1,372 @@
+// The eligibility checker on /apply.
+//
+// The eligibility section answers the question "which posts can I apply to?"
+// with two prose tables, a 13x5 matrix and its footnotes - correct, but a
+// reader has to cross-reference four places to get their own answer, and the
+// faculty gets the email instead. This component asks for the three facts the
+// matrix is keyed on (region, profession, career stage) and reads the answer
+// out.
+//
+// It is a convenience layer over the tables below it, not a replacement: every
+// string it prints is the wording from the competitive and nominated applicant
+// sections, and the tables stay on the page as the authoritative reference.
+//
+// Presented as a white card on the pale page background, matching the
+// .data-table treatment, with the same NHS.UK vocabulary: blue section labels,
+// hairline rules, black-on-yellow focus.
+
+$ec-blue: #005eb8;
+$ec-dark-blue: #003087;
+$ec-pale-blue: #e8f1f8;
+$ec-border: #d8dde0;
+$ec-rule: #e8edee;
+$ec-pale-grey: #f0f4f5;
+$ec-ink: #212b32;
+$ec-muted: #425563;
+$ec-green: #007f3b;
+$ec-grey-edge: #aeb7bd;
+$ec-focus-yellow: #ffeb3b;
+
+.eligibility-checker {
+  margin: 1rem 0 2rem;
+  background-color: #fff;
+  border: 1px solid $ec-border;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(33, 43, 50, 0.06), 0 6px 16px rgba(33, 43, 50, 0.05);
+  overflow: hidden;
+}
+
+// ---------------------------------------------------------------------------
+// Controls
+// ---------------------------------------------------------------------------
+// The three selects sit on the pale grey band at the top of the card, so the
+// inputs read as distinct from the answer they produce.
+//
+// One question to a row, at every width. A third of the content column leaves
+// room for 180-230px, which cuts the register options off partway.
+
+.eligibility-checker__controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background-color: $ec-pale-grey;
+  border-bottom: 1px solid $ec-border;
+}
+
+.eligibility-checker__field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  label {
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $ec-blue;
+  }
+
+  // Wide enough for the longest option, not the whole card, so a short answer
+  // like "London" does not sit at the end of a bar the width of the page.
+  select {
+    width: 100%;
+    max-width: 32rem;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    color: $ec-ink;
+    background-color: #fff;
+    border: 2px solid $ec-ink;
+    border-radius: 4px;
+
+    &:focus-visible {
+      outline: 3px solid transparent;
+      border-color: $ec-ink;
+      box-shadow: 0 0 0 4px $ec-focus-yellow, inset 0 0 0 2px $ec-ink;
+    }
+
+    &:disabled {
+      color: $ec-muted;
+      background-color: $ec-pale-grey;
+      border-color: $ec-grey-edge;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Result
+// ---------------------------------------------------------------------------
+
+.eligibility-checker__result {
+  padding: 1.5rem;
+
+  // Empty until all three fields are answered.
+  &:empty {
+    display: none;
+  }
+}
+
+.ec-section + .ec-section {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $ec-rule;
+}
+
+.ec-section__title {
+  margin: 0 0 0.25rem;
+  font-family: $font-family-heading;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $ec-ink;
+}
+
+.ec-section__lede {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: $ec-muted;
+}
+
+// The headline answer for the competitive section: how many posts, or none.
+.ec-verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  &--yes {
+    background-color: #e6f2ec;
+    color: #00612c;
+    box-shadow: inset 3px 0 0 $ec-green;
+  }
+
+  &--no {
+    background-color: $ec-pale-grey;
+    color: $ec-muted;
+    box-shadow: inset 3px 0 0 $ec-grey-edge;
+  }
+}
+
+// The pointer to the nominated route that closes a "no competitive posts"
+// answer. The question that follows a no is "what else can I do?", so the
+// result never ends on the refusal.
+.ec-followon {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: $ec-muted;
+}
+
+// ---------------------------------------------------------------------------
+// Route cards
+// ---------------------------------------------------------------------------
+// One card per funded post that is open to the applicant. A card is the answer,
+// so only an answer gets one - the routes that are closed are listed compactly
+// below them instead.
+
+.ec-route {
+  padding: 1rem 1.25rem;
+  border: 1px solid $ec-border;
+  border-left: 4px solid $ec-green;
+  border-radius: 6px;
+  background-color: #fff;
+
+  & + & {
+    margin-top: 0.75rem;
+  }
+
+  &--nominated {
+    border-left-color: $ec-blue;
+  }
+}
+
+.ec-route__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+// Label/value rows: Sponsor, what the post is, extra conditions, matching.
+.ec-route__detail {
+  margin: 0.75rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem 1rem;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 9.5rem 1fr;
+    gap: 0.5rem 1rem;
+  }
+
+  dt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $ec-blue;
+    line-height: 1.6;
+  }
+
+  dd {
+    margin: 0 0 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $ec-ink;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  li + li {
+    margin-top: 0.2rem;
+  }
+}
+
+// A condition the applicant still has to satisfy themselves - BSH membership,
+// travel to Dublin - as opposed to something the checker has confirmed. Flagged
+// so nobody reads an available card as an unconditional yes.
+.ec-condition {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background-color: #fff8e6;
+  border-left: 4px solid #ffb81c;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: $ec-ink;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 0.35rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Closed routes
+// ---------------------------------------------------------------------------
+// The routes that are not open, as a list under the cards that are. "Why can't
+// I apply for X?" is the other half of the question and the reason has to be on
+// the page - but it is a footnote to the answer, so it gets a row and not a
+// card. A blocked applicant sees one row carrying all three chips, because
+// there is one reason for all three.
+
+.ec-closed {
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  background-color: $ec-pale-grey;
+  border: 1px solid $ec-border;
+  border-radius: 6px;
+}
+
+// The status is carried as text, not by the grey alone.
+.ec-closed__title {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $ec-muted;
+}
+
+.ec-closed__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    // The chips are a fixed, narrow column once there is room for one, so the
+    // reasons line up and the list can be scanned by route.
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      align-items: baseline;
+      gap: 0.85rem;
+    }
+  }
+
+  li + li {
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid $ec-border;
+  }
+}
+
+.ec-closed__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+
+  @include media-breakpoint-up(md) {
+    flex: 0 0 8.5rem;
+  }
+}
+
+.ec-closed__reason {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: $ec-muted;
+}
+
+// The answer is read off the tables further down the page, which are inside a
+// closed disclosure. This is the way back to them, so the working can be
+// checked rather than taken on trust.
+.ec-source {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+// ---------------------------------------------------------------------------
+// Closing notes
+// ---------------------------------------------------------------------------
+// The conditions that apply to every result regardless of the selection.
+
+.ec-notes {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $ec-rule;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: $ec-muted;
+
+  p {
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+    color: $ec-ink;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  li + li {
+    margin-top: 0.35rem;
+  }
+}

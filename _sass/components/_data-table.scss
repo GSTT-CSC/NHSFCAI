@@ -245,6 +245,13 @@ $nhs-muted: #425563;
     padding-left: 12px;
     padding-right: 12px;
   }
+
+  // The PSA heading links to the register list. Link blue disappears on the
+  // blue header row, so links there take the heading's own colour.
+  thead a {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
 
 .route-legend {
