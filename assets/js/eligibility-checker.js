@@ -488,7 +488,7 @@
   function nominatedSection() {
     return '<div class="ec-section">' +
       '<h4 class="ec-section__title">Nominated applicant</h4>' +
-      '<p class="ec-section__lede">Applicant is nominated for a post with ringfenced funding. <strong>Non-competitive</strong> entry: must meet the Essential criteria of the Person Specification at interview.</p>' +
+      '<p class="ec-section__lede">Applicant is nominated for a post with ringfenced funding. <strong>Non-competitive</strong> entry: must meet the Essential criteria of the <a href="#person-specification">Person Specification</a> at interview.</p>' +
       // The same verdict chip the competitive section uses, in the same place,
       // so the two routes are read off the page the same way. This one is a
       // constant: the nominated route is open to every applicant.

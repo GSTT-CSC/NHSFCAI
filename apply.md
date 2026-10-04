@@ -61,7 +61,7 @@ There are 2 kinds of applicant for this fellowship, and they are [mutually exclu
 | Entry Route             | Description                                                                                                                                                                                                                                                       | Competition                                                                                          | Eligibility                                                                                                                                                                                          | AI project                                                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Competitive applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant applies competitively for a post that is already attached to funding, if they meet the eligibility criteria <br><br>Salary cover provided                                                                                                               | **Competitive** entry: shortlist and interview, with posts awarded on interview score                | Registered health and social care professionals with an [NHS Employer](#nhs-employer), with criteria on training/banding <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT | Competitive matching to existing project pool: matched on interview score from their ranked preferences                    |
-| Nominated applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor) <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the Person Specification at interview | Health and social care staff providing NHS services <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT                                                                      | Either competitive matching to existing project pool, or a pre-allocated project (non-competitive, ringfenced for the applicant) |
+| Nominated applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor) <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the [Person Specification](#person-specification) at interview | Health and social care staff providing NHS services <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT                                                                      | Either competitive matching to existing project pool, or a pre-allocated project (non-competitive, ringfenced for the applicant) |
 {: .entry-routes}
 
 ### Check your eligibility
@@ -170,7 +170,7 @@ The [T-Pro](#faq-tpro-fellows) and [BSH](#faq-bsh-fellows) FAQ sections below co
 * The applicant must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor).
 * The course fee is £8000. There is no salary cover unless agreed with the Sponsor by the applicant.
 * The fellow must release [2 days a week](#faq-working-pattern) of their time for the 12 months duration of the fellowship.
-* The applicant must meet the Essential criteria of the Person Specification (see section below) at interview
+* The applicant must meet the Essential criteria of the [Person Specification](#person-specification) at interview
 * The applicant must obtain *Approval in Principle* from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 16 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 ### Funding the post
@@ -183,7 +183,7 @@ The [T-Pro](#faq-tpro-fellows) and [BSH](#faq-bsh-fellows) FAQ sections below co
 
 ### Interview
 
-* The applicant must meet the Essential criteria of the Person Specification (see section below) [at interview](#faq-interview-preparation)
+* The applicant must meet the Essential criteria of the [Person Specification](#person-specification) [at interview](#faq-interview-preparation)
 * Indicative interview dates fall within 13-29 Jan 2027 (TBC according to applicant volume)
 
 ### Project matching
@@ -249,13 +249,14 @@ If your question is not answered below, please [contact the faculty](mailto:gstt
 **Do I have to know coding, programming, or AI to be eligible?**
 {: #faq-coding-experience}
 
-No. Prior experience of coding, programming, or AI is not part of the essential criteria of the Person Specification. Previous fellows have been recruited without such experience. 
+No. Prior experience of coding, programming, or AI is not part of the essential criteria of the [Person Specification](#person-specification). Previous fellows have been recruited without such experience. 
 
 
 **Do I need to have an idea for a clinical AI project when I apply to this fellowship?**
 
-No. AI projects and hosting teams in the NHS are proposed to the faculty by AI supervisors. 
-Successful applicants are matched to these projects competitively following the interview stage. 
+No, but you can apply with one as a nominated applicant.
+AI projects and hosting teams in the NHS are proposed to the faculty by AI supervisors. Successful **competitive** applicants are [matched to these projects](#faq-project-matching) on interview score following the interview stage, as are nominated applicants without a pre-allocated project.
+If you already have an idea for a project, the [nominated applicant](#nominated-applicants) route lets you arrange a [pre-allocated project](#faq-specific-project) with a named [supervisor](/supervisors), ringfenced for you. This pathway is not available to competitive applicants.
 
 
 **What counts as an NHS Employer?**
@@ -477,14 +478,14 @@ No. An applicant must apply as a nominated applicant from the start, because AI 
 **What is the format of the interview?**
 
 Interviews are conducted remotely.
-The interview consists of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship based on the Person Specification. 
+The interview consists of questions and problem-solving tasks designed to assess an applicant’s suitability for the fellowship based on the [Person Specification](#person-specification). 
 The interview panel consists of fellowship faculty, AI supervisors, and regional education leads. 
 
 
 **How should I prepare for the interview?**
 {: #faq-interview-preparation}
 
-Interviewees are assessed according to the Essential and Desirable criteria of Person Specification.
+Interviewees are assessed according to the Essential and Desirable criteria of the [Person Specification](#person-specification).
 Consider how to show evidence of meeting these criteria with real-world examples, particularly through participation in digital transformation projects in healthcare.
 
 **Can the faculty review my CV or provide any specific further advice on my application?**
