@@ -24,7 +24,7 @@ Note that the ICFP requires applicants to have an [institutional sponsor](https:
 * **Precondition**: Before applying to the NHS Fellowship in Clinical AI, apply to the [GSTT International Clinical Fellowship Programme](https://www.guysandstthomasevents.co.uk/vpp/icfp/) and confirm your eligibility ([ICFP recruitment runs year-round](#faq-icfp-first))
 * **05 Oct 2026**: Applications open for the NHS Fellowship in Clinical AI
 * **05 Oct 2026** 12:30-13:30 BST: Applicant webinar with Q&A - [Register](https://events.teams.microsoft.com/event/28716a1d-8e54-4c8e-98dc-0ea2145b0605@37c354b2-85b0-47f5-b222-07b48d774ee3)
-* **TBC**: *International Application Form* deadline — confirmed when applications open
+* **10 Dec 2026, 23:45 GMT**: *International Application Form* deadline
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview)
 * **Feb 2027**: Outcomes of interviews, [project matching](#faq-projects-and-matching)
@@ -69,7 +69,7 @@ preferences.
       <td>Experience in quality improvement projects, clinical trials, digital transformation</td>
     </tr>
     <tr>
-      <td>Experience in <a href="#faq-coding-experience">programming</a>, statistical analysis, clinical informatics (DICOM, HL7 etc.)</td>
+      <td>Experience in <a href="#faq-coding-experience">programming</a>, statistical analysis, clinical informatics</td>
     </tr>
   </tbody>
 </table>
