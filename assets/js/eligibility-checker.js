@@ -441,7 +441,7 @@
   function notes() {
     var items = [
       'Competitive and nominated applications are <a href="#faq-switch-to-nominated">mutually exclusive</a>. You cannot switch to nominated after an unsuccessful competitive application.',
-      'Your Approver (training programme director or line manager) must submit <a href="#faq-own-approver"><em>Approval in Principle</em></a> by 16 Nov 2026, 23:45 GMT, confirming your eligibility and your working pattern from 11 August 2027. You will not be interviewed without it.',
+      'Your Approver (training programme director or line manager) must submit <a href="#faq-approval-in-principle"><em>Approval in Principle</em></a> by 16 Nov 2026, 23:45 GMT, confirming your eligibility and your working pattern from 11 August 2027. You will not be interviewed without it.',
       'If you think you are borderline eligible, <a href="mailto:gstt.aifellowship@nhs.net">contact the faculty</a> before applying.'
     ];
 
