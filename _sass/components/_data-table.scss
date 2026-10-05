@@ -598,3 +598,51 @@ $route-tpro-ink: #16252e;
     color: $route-tpro-ink;
   }
 }
+
+// Source-type tags on /literature, so a reader can tell a parliamentary answer
+// from a journal paper or a press profile before reading the title. Same pill
+// geometry as .route-chip, but tinted rather than solid: they label a row
+// rather than carry a decision, so they sit quieter than the title beside them.
+.lit-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 1px 9px;
+  border: 1px solid $nhs-border;
+  border-radius: 999px;
+  background-color: $nhs-pale-grey;
+  color: $nhs-muted;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  // Commons green, from the House of Commons' own identity.
+  &.is-parliament {
+    background-color: #e3f1ec;
+    border-color: #006548;
+    color: #00492f;
+  }
+
+  &.is-policy {
+    background-color: $nhs-pale-blue;
+    border-color: $nhs-blue;
+    color: $nhs-dark-blue;
+  }
+
+  &.is-peer-reviewed {
+    background-color: #efe8f5;
+    border-color: #6c3d97;
+    color: #330072;
+  }
+
+  &.is-evaluation {
+    background-color: #fff4d6;
+    border-color: #c98a00;
+    color: #593d00;
+  }
+
+  // Press keeps the neutral default.
+}
