@@ -20,7 +20,10 @@ Find below the supporting literature which describes the benefits and outputs of
   <tbody role="rowgroup">
   {% for item in site.data.literature %}
   <tr role="row">
-    <td role="cell">{% include data-title.html title=item.title link=item.link external=true %}</td>
+    <td role="cell">
+      {%- if item.tag %}<span class="lit-tag is-{{ item.tag | slugify }}">{{ item.tag }}</span>{% endif -%}
+      {% include data-title.html title=item.title link=item.link external=true %}
+    </td>
     <td role="cell" class="dt-desc" data-label="Authors">{{ item.authors }}</td>
     <td role="cell" class="dt-desc" data-label="Description">{{ item.description }}</td>
   </tr>

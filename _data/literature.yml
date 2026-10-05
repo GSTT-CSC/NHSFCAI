@@ -1,59 +1,77 @@
 - title: "Recommendations for a future regulatory framework<br><i>National Commission into the Regulation of AI in Healthcare</i> September 2026"
+  tag: Policy
   authors: National Commission into the Regulation of AI in Healthcare & Medicines and Healthcare products Regulatory Agency
   description: Welcomed the NHS Fellowship in Clinical AI, calling for continued investment to scale it so all healthcare professionals can use and oversee AI competently and confidently.
   link: /assets/docs/MHRA_National_Commission_AI_Healthcare_2026.pdf#page=73
 
-- title: "The mandate for clinical artificial intelligence education in primary care<br><i>The Lancet Primary Care</i> 2026"
+- title: "The mandate for clinical artificial intelligence education in primary care<br><i>The Lancet Primary Care</i> March 2026"
+  tag: Peer-reviewed
   authors: <a href="/faculty/alexander-deng/">Deng</a>, Freed, and <a href="/faculty/haris-shuaib/">Shuaib</a>
   description: Described the mandate for clinical AI education in primary care, highlighting the flagship role of the fellowship in the clinical AI education landscape of the UK.
   link: https://doi.org/10.1016/j.lanprc.2026.100146
 
 - title: "NHS Fellowship in Clinical AI: Benefits Realisation Paper<br><i>NHS Fellowship in Clinical AI</i> August 2025"
+  tag: Evaluation
   authors: NHS Fellowship in Clinical AI <a href="/faculty/">Faculty</a>
   description: A systematic summary of the benefits realised by this fellowship for the NHS.
   link: /assets/docs/FCAI_Benefits_Realisation_August2025v2.pdf
 
-- title: "Artificial Intelligence Education and Skills within NHS Wales: Landscape Review<br><i>Health Education and Improvement Wales</i> 2025"
-  authors: Health Education and Improvement Wales
-  description: Endorsed the fellowship as a programme to meet the education and skills ambitions of the Welsh AI Commission for Health and Social Care.
-  link: /assets/docs/HEIW_AI_Landscape_Review.pdf#page=18
-
-- title: "Scaling up a Clinical AI Fellowship<br><i>Innovation in Applied Nursing Informatics</i> 2024"
-  authors: Beatrix Fletcher
-  description: Insights from the scaling-up of this programme from a local to national scope.
-  link: /assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf
-
-- title: "A Framework for the safe, efficient and effective implementation, use and maintenance of AI in health and care in London<br><i>NHS OneLondon</i> 2025"
+- title: "A Framework for the safe, efficient and effective implementation, use and maintenance of AI in health and care in London<br><i>NHS OneLondon</i> March 2025"
+  tag: Policy
   authors: NHS OneLondon
   description: Showcased the fellowship as an opportunity to acquire skills to implement and adopt AI safely and effectively.
   link: /assets/docs/ONELondonFramework2025.pdf#page=41
 
-- title: "AI OK? How doctors are already using artificial intelligence<br><i>The Doctor</i>, British Medical Association, November 2024"
+- title: "Artificial Intelligence Education and Skills within NHS Wales: Landscape Review<br><i>Health Education and Improvement Wales</i> January 2025"
+  tag: Policy
+  authors: Health Education and Improvement Wales
+  description: Endorsed the fellowship as a programme to meet the education and skills ambitions of the Welsh AI Commission for Health and Social Care.
+  link: /assets/docs/HEIW_AI_Landscape_Review.pdf#page=18
+
+- title: "AI OK? How doctors are already using artificial intelligence<br><i>The Doctor</i> November 2024"
+  tag: Press
   authors: British Medical Association
   description: The fellowship and its fellows were profiled.
   link: /assets/docs/BMA_TheDoctor_Nov2024.pdf#page=16
 
-- title: "How should we train clinicians for artificial intelligence in healthcare?<br><i>Future Healthcare Journal</i> 2024"
+- title: "How should we train clinicians for artificial intelligence in healthcare?<br><i>Future Healthcare Journal</i> September 2024"
+  tag: Peer-reviewed
   authors: Misra, Keane, and Hogg
   description: Described the fellowship's role in creating 'clinical champions' in 'AI-powered care'.
   link: /assets/docs/j.fhj.2024.100162.pdf#page=3
 
-- title: "Digital Fellowships: Inspiring use of contemporary technologies in applied healthcare<br><i>npj Digital Medicine</i> 2023"
-  authors: "Salisbury, <a href=\"/faculty/alexander-deng/\">Deng</a>, Birch, and Godfrey"
-  description: Described how fellows learn how to safely deploy, maintain, and evaluate AI software in real clinical workflows.
-  link: /assets/docs/s41746-023-00922-8.pdf#page=2
+- title: "Scaling up a Clinical AI Fellowship<br><i>Innovation in Applied Nursing Informatics</i> July 2024"
+  tag: Peer-reviewed
+  authors: Beatrix Fletcher
+  description: Insights from the scaling-up of this programme from a local to national scope.
+  link: /assets/docs/Fletcher2024DOI10.3233SHTI240254.pdf
 
-- title: "Fellowship in Clinical AI: Cohort 1 Evaluation<br><i>Health Innovation Network South London</i> 2023"
+- title: "NHS: Artificial Intelligence<br><i>House of Commons written question 17600</i> March 2024"
+  tag: Parliament
+  authors: Department of Health and Social Care, in answer to Chi Onwurah MP
+  description: Cited the fellowship as the government's targeted upskilling and training for clinical staff, when asked how the NHS attracts and retains workers with AI skills.
+  link: https://questions-statements.parliament.uk/written-questions/detail/2024-03-07/17600
+
+- title: "Fellowship in Clinical AI: Cohort 1 Evaluation<br><i>Health Innovation Network South London</i> November 2023"
+  tag: Evaluation
   authors: Health Innovation Network South London
   description: Formally evaluated the fellowship pilot.
   link: /assets/docs/FCAI_HIN_EvaluationReport2023.pdf
 
-- title: "NHS Long Term Workforce Plan<br><i>NHS England</i> 2023"
+- title: "Digital Fellowships: Inspiring use of contemporary technologies in applied healthcare<br><i>npj Digital Medicine</i> September 2023"
+  tag: Peer-reviewed
+  authors: "Salisbury, <a href=\"/faculty/alexander-deng/\">Deng</a>, Birch, and Godfrey"
+  description: Described how fellows learn how to safely deploy, maintain, and evaluate AI software in real clinical workflows.
+  link: /assets/docs/s41746-023-00922-8.pdf#page=2
+
+- title: "NHS Long Term Workforce Plan<br><i>NHS England</i> June 2023"
+  tag: Policy
   authors: NHS England
   description: Referenced the fellowship as an exemplar programme in upskilling and training staff to maximise AI technologies.
   link: /assets/docs/nhs-long-term-workforce-plan-v1.2.pdf#page=74
 
-- title: "Developing healthcare workers' confidence in AI<br><i>NHS Transformation Directorate</i> 2022"
+- title: "Developing healthcare workers' confidence in AI<br><i>NHS Transformation Directorate</i> October 2022"
+  tag: Policy
   authors: NHS Transformation Directorate
   description: Describes the fellowship's role in training digital and AI specialist clinicians.
   link: /assets/docs/developingconfidenceinai-oct2022.pdf#page=68
