@@ -142,7 +142,7 @@ Interview dates for each applicant pool are to be confirmed, within 13-29 Jan 20
 | Interview date | Applicant pool | # Posts |
 |----------------|----------------|---------|
 | TBC | <span class="route-chip is-bsh">BSH</span> | 1       |
-| TBC | <span class="route-chip is-tpro">T-Pro</span> | 2       |
+| TBC | <span class="route-chip is-tpro">T-Pro</span> | 1       |
 | TBC | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1       |
 | TBC | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4       |
 | TBC | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1       |

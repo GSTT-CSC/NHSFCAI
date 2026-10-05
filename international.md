@@ -210,7 +210,7 @@ Please read the [information for international sponsors](/international-sponsor)
 
 **How competitive is recruitment?**
 
-Recruitment for sponsored international applicants is not competitive. If an applicant meets the Essential criteria of the [Person Specification](#person-specification) [at interview](#faq-interview-preparation), they can join the programme.
+Recruitment for sponsored international applicants is not competitive. If an applicant meets the Essential criteria of the [Person Specification](#person-specification) at interview, they can join the programme.
 
 
 **What is the format of the interview?**
