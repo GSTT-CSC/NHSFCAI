@@ -2,12 +2,17 @@
   Responsive YouTube embed. The raw <iframe width="560"> overflowed on any
   screen narrower than 560px.
 
+  Uses youtube-nocookie.com so YouTube sets no cookies until the video is
+  played. The explicit referrerpolicy keeps the Referer header YouTube needs
+  to verify embeds (without it the player shows "Error 153").
+
     {% include video-embed.html id="SsONx1jAGxE" title="..." %}
 {% endcomment %}
 <div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/{{ include.id }}"
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
           title="{{ include.title }}"
           loading="lazy"
-          allow="picture-in-picture"
+          allow="encrypted-media; picture-in-picture; fullscreen"
+          referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen></iframe>
 </div>
