@@ -9,6 +9,34 @@
   fellow: <a href="/fellow/thomas-moreno-stokoe/">Thomas Moreno-Stokoe</a>
   link: https://doi.org/10.1136/bmj-2026-100947
 
+- title: "Developing an AI assistant for GP registrars: Lessons learnt<br><i>InnovAiT</i> 2026"
+  fellow: <a href="/fellow/thomas-moreno-stokoe/">Thomas Moreno-Stokoe</a>
+  link: https://doi.org/10.1177/17557380261481717
+
+- title: "Clinical evaluation of AI-assisted quantitative marrow fibrosis assessment using Continuous Indexing of Fibrosis (CIF)<br><i>Leukemia</i> 2026"
+  fellow: <a href="/fellow/timothy-ebsworth/">Timothy Ebsworth</a>
+  link: https://doi.org/10.1038/s41375-026-03126-7
+
+- title: "Artificial intelligence in paediatrics: navigating current guidance for safe clinical use<br><i>Archives of Disease in Childhood – Education & Practice Edition</i> 2026"
+  fellow: <a href="/fellow/aoife-fox/">Aoife Fox</a>
+  link: https://doi.org/10.1136/archdischild-2026-330759
+
+- title: "Automated CEAP Classification of Venous Duplex Reports Using Multimodal Artificial Intelligence<br><i>Journal of Vascular Surgery: Venous and Lymphatic Disorders</i> 2026"
+  fellow: <a href="/fellow/henry-bergman/">Henry Bergman</a>
+  link: https://doi.org/10.1016/j.jvsv.2026.102613
+
+- title: "Systematic assessment of the medical utility of radiology and diagnostic Artificial Intelligence in fracture detection (SAMURAI-fracture): a protocol for a multicentre cluster-randomised controlled trial<br><i>BMJ Open</i> 2026;16:e120631"
+  fellow: <a href="/fellow/james-vaz/">James Vaz</a> <a href="/fellow/ashar-asif/">Ashar Asif</a>
+  link: https://doi.org/10.1136/bmjopen-2026-120631
+
+- title: "Current patient attitudes to artificial intelligence applications in radiology<br><i>British Journal of Radiology</i> 2026;99:1149-1155"
+  fellow: <a href="/fellow/rory-maclean/">Rory Maclean</a>
+  link: https://doi.org/10.1093/bjr/tqag077
+
+- title: "Automated opportunistic cardiovascular risk assessment in non-small cell lung cancer patients on routine chest CT using an optimised nnU-net framework<br><i>BMC Medical Imaging</i> 2026;26:179"
+  fellow: <a href="/fellow/girija-agarwal/">Girija Agarwal</a>
+  link: https://doi.org/10.1186/s12880-026-02252-z
+
 - title: "Beyond protected characteristics: rethinking AI fairness through the lens of structural and social determinants of health<br><i>BMJ Digital Health & AI</i> 2026;2:e000087"
   fellow: <a href="/fellow/karol-basta/">Karol Basta</a>
   link: https://doi.org/10.1136/bmjdh-2026-000087
@@ -36,6 +64,10 @@
 - title: "Unlocking the potential of Artificial Intelligence: A Guideline for Deployment<br><i>Physiotherapy</i> Volume 0, Issue 0, 101885, January 10, 2026"
   fellow: <a href="/fellow/charlie-winward/">Charlie Winward</a> <a href="/fellow/james-vaz/">James Vaz</a> <a href="/fellow/iblal-rakha/">Iblal Rakha</a> <a href="/fellow/christopher-efford/">Christopher Efford</a>
   link: https://doi.org/10.1016/j.physio.2026.101885
+
+- title: "Reference standard methodology in the clinical evaluation of AI chest X-ray algorithms for lung cancer detection: A systematic review<br><i>European Journal of Radiology</i> 2025;192:112409"
+  fellow: <a href="/fellow/jesus-perdomo-lampignano/">Jesus Perdomo Lampignano</a>
+  link: https://doi.org/10.1016/j.ejrad.2025.112409
 
 - title: "An investigation of race bias in deep learning-based segmentation of prostate MRI images<br><i>Scientific  Reports</i> 15, 43427, 2025"
   fellow: <a href="/fellow/luis-ribeiro/">Luis Ribeiro</a>
@@ -86,6 +118,10 @@
   fellow: <a href="/fellow/girija-agarwal/"> Girija Agarwal</a> <a href="/fellow/dilan-sanli/"> Dilan Sanli</a>
   link: https://doi.org/10.1093/bjro/tzaf026
 
+- title: "AI-assisted detection for chest X-rays (AID-CXR): a multi-reader multi-case study protocol<br><i>BMJ Open</i> 2024;14:e080554"
+  fellow: <a href="/fellow/ruchir-shah/">Ruchir Shah</a>
+  link: https://doi.org/10.1136/bmjopen-2023-080554
+
 - title: "Guidance on auto-contouring in radiotherapy<br><i>Royal College of Radiologists</i> November 2024"
   fellow: <a href="/fellow/katherine-mackay/">Katherine Mackay</a>
   link: https://www.rcr.ac.uk/media/rqjlnlny/rcr-auto-contouring-in-radiotherapy-2024.pdf
@@ -125,6 +161,10 @@
 - title: "AI assisted reader evaluation in acute CT head interpretation (AI-REACT): protocol for a multireader multicase study<br><i>BMJ Open</i> 2024;14:e079824"
   fellow: <a href="/fellow/kavitha-vimalesvaran/">Kavitha Vimalesvaran</a>
   link: https://doi.org/10.1136/bmjopen-2023-079824
+
+- title: "Efficient labelling for efficient deep learning: the benefit of a multiple-image-ranking method to generate high volume training data applied to ventricular slice level classification in cardiac MRI<br><i>Journal of Medical Artificial Intelligence</i> 2023;6:4"
+  fellow: <a href="/fellow/kavitha-vimalesvaran/">Kavitha Vimalesvaran</a>
+  link: https://doi.org/10.21037/jmai-22-55
 
 - title: "A surgical perspective on large language models<br><i>Annals of Surgery</i>. 2023; 278(2); e24-e26"
   fellow: <a href="/fellow/robert-miller/">Robert Miller</a>
