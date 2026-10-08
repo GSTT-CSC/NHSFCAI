@@ -1582,7 +1582,7 @@ en: &DEFAULT_EN
           lng: "-0.1186"
 
         - name: "Natalie Davison"
-          role: "Specialty Trainee in Public Health"
+          role: "Specialty Trainee in Public Health Medicine"
           social:
           cohort: "3"
           project_region: "Midlands"
