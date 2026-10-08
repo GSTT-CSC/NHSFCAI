@@ -14,7 +14,7 @@ Submissions close on 1 November 2026.
 The NHS Fellowship in Clinical AI provides practical experience to its [fellows](/fellows) through placements in real-world deployments of AI tools in [NHS host sites](/sites).
 We are currently accepting project proposals to host AI fellows for 2 days a week from 11 August 2027 to August 2028.
 
-Hosting a fellow provides the host team with a skilled clinical team member at no additional cost.
+Hosting a fellow provides the host team with a skilled clinical team member at no salary cost for 2 days a week over 12 months.
 Fellows have been through a rigorous selection process and receive training in clinical AI, including being briefed on current best practice in the field.
 Through their fellow, hosting teams will be plugged into a broader network of AI leaders, providing opportunities to share learning and expertise.
 Supervisors are also invited to attend the AI workshops run by the fellowship team throughout the year, should they wish to do so.
