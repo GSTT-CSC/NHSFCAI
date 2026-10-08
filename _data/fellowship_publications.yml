@@ -13,6 +13,10 @@
   fellow: <a href="/fellow/thomas-moreno-stokoe/">Thomas Moreno-Stokoe</a>
   link: https://doi.org/10.1177/17557380261481717
 
+- title: "Federated artificial intelligence monitoring service (FAMOS): an in silico feasibility study<br><i>BJR|Artificial Intelligence</i> 2026;3:ubag016"
+  fellow: <a href="/fellow/jesus-perdomo-lampignano/">Jesus Perdomo Lampignano</a>
+  link: https://europepmc.org/article/MED/42818595
+
 - title: "Clinical evaluation of AI-assisted quantitative marrow fibrosis assessment using Continuous Indexing of Fibrosis (CIF)<br><i>Leukemia</i> 2026"
   fellow: <a href="/fellow/timothy-ebsworth/">Timothy Ebsworth</a>
   link: https://doi.org/10.1038/s41375-026-03126-7
@@ -68,6 +72,14 @@
 - title: "Reference standard methodology in the clinical evaluation of AI chest X-ray algorithms for lung cancer detection: A systematic review<br><i>European Journal of Radiology</i> 2025;192:112409"
   fellow: <a href="/fellow/jesus-perdomo-lampignano/">Jesus Perdomo Lampignano</a>
   link: https://doi.org/10.1016/j.ejrad.2025.112409
+
+- title: "Diversity and Inclusion Within Datasets in Heart Failure: A Systematic Review<br><i>JACC: Advances</i> 2025;4(3):101610"
+  fellow: <a href="/fellow/sonam-vadera/">Sonam Vadera</a>
+  link: https://doi.org/10.1016/j.jacadv.2025.101610
+
+- title: "Neuradicon: Operational representation learning of neuroimaging reports<br><i>Computer Methods and Programs in Biomedicine</i> 2025;262:108638"
+  fellow: <a href="/fellow/adam-julius/">Adam Julius</a>
+  link: https://doi.org/10.1016/j.cmpb.2025.108638
 
 - title: "An investigation of race bias in deep learning-based segmentation of prostate MRI images<br><i>Scientific  Reports</i> 15, 43427, 2025"
   fellow: <a href="/fellow/luis-ribeiro/">Luis Ribeiro</a>
