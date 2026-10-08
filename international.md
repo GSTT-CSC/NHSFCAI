@@ -3,7 +3,7 @@ layout: page
 permalink: /international/
 title: "Apply: International applicants"
 description: How international clinicians apply for Cohort 6 of the NHS Fellowship in Clinical AI, starting 11 August 2027.
-application_form: https://forms.cloud.microsoft/e/9iQUvJGMsb
+application_form: https://forms.cloud.microsoft/e/2WBFyXzfyY
 ---
 
 {% include last-updated.html format="%-d %B %Y" %}
