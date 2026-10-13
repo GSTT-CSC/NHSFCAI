@@ -53,11 +53,11 @@
   // Read a row across against the table and the two should match chip for
   // chip.
   //
-  // `doctorStRule` carries the asterisk on the East of England doctor cell:
-  // "Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of
-  // England only)."
+  // `doctorStRule` carries the footnote on a doctor cell that sets a minimum
+  // training grade: the asterisk in East of England and the section mark in
+  // Northern Ireland. It names an entry in DOCTOR_ST_CONDITIONS.
   var REGIONS = [
-    { id: 'east-of-england', name: 'East of England', doctorStRule: true,
+    { id: 'east-of-england', name: 'East of England', doctorStRule: 'eoe',
       doctor: ['regional', 'bsh'], dentist: ['tpro', 'bsh'], statutory: ['tpro', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
     { id: 'london', name: 'London',
       doctor: ['regional', 'bsh'], dentist: ['regional', 'bsh'], statutory: ['regional', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
@@ -77,8 +77,8 @@
       doctor: ['regional', 'bsh'], dentist: ['regional', 'bsh'], statutory: ['regional', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
     { id: 'south-west', name: 'South West',
       doctor: ['regional', 'bsh'], dentist: ['tpro', 'bsh'], statutory: ['tpro', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
-    { id: 'northern-ireland', name: 'Northern Ireland',
-      doctor: ['regional', 'bsh'], dentist: ['tpro', 'bsh'], statutory: ['tpro', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
+    { id: 'northern-ireland', name: 'Northern Ireland', doctorStRule: 'ni',
+      doctor: ['regional', 'bsh'], dentist: ['regional', 'bsh'], statutory: ['tpro', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
     { id: 'scotland', name: 'Scotland',
       doctor: ['regional', 'bsh'], dentist: ['regional', 'bsh'], statutory: ['regional', 'bsh'], voluntary: ['regional'], socialCare: ['tpro'] },
     { id: 'wales', name: 'Wales',
@@ -173,11 +173,16 @@
     band: 'Competitive posts for this profession require a substantive post with an <a href="#nhs-employer">NHS Employer</a> at band 7, band 8a, or band 8b. Without one, these applicants are eligible only as nominated applicants.'
   };
 
-  // East of England is the only region that qualifies a post by training grade:
+  // The footnotes that qualify a regional doctor post by training grade:
   // "Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of
-  // England only)." It sits with the other conditions the checker cannot verify
-  // for the applicant, on the card it applies to.
-  var EOE_ST_CONDITION = 'East of England only: you must be at least <strong>ST3, or GPVTS ST2</strong>, at the start date of the fellowship.';
+  // England only)." and "Must be at least ST4 at start date of fellowship,
+  // except GP trainees (Northern Ireland only)." Each sits with the other
+  // conditions the checker cannot verify for the applicant, on the card it
+  // applies to.
+  var DOCTOR_ST_CONDITIONS = {
+    eoe: 'East of England only: you must be at least <strong>ST3, or GPVTS ST2</strong>, at the start date of the fellowship.',
+    ni: 'Northern Ireland only: you must be at least <strong>ST4</strong> at the start date of the fellowship, unless you are a GP trainee.'
+  };
 
   // The funded posts. `sponsor`, `matching` and `conditions` are the wording of
   // the routes to competitive entry table. There is no card title and no
@@ -562,10 +567,11 @@
       html += blockedResult('There are no competitive posts open to your combination of profession, career stage, and region.');
     } else {
       var regional = open.indexOf('regional') !== -1;
-      // East of England's regional post is open to specialty trainee doctors
-      // from ST3 (GPVTS ST2) only. It qualifies the post rather than excluding
-      // the applicant, so it rides on the card as a condition.
-      var stCondition = regional && region.doctorStRule && column === 'doctor';
+      // East of England's and Northern Ireland's regional posts are open to
+      // doctors from a minimum training grade only. It qualifies the post
+      // rather than excluding the applicant, so it rides on the card as a
+      // condition.
+      var stCondition = regional && column === 'doctor' && DOCTOR_ST_CONDITIONS[region.doctorStRule];
 
       // "match your answers", not "are open to you". The checker has tested
       // profession, career stage and region, and nothing else: BSH in
@@ -577,7 +583,7 @@
       open.forEach(function (routeId) {
         var options = {};
         if (routeId === 'regional' && stCondition) {
-          options.extraConditions = [EOE_ST_CONDITION];
+          options.extraConditions = [stCondition];
         }
         // A BSH applicant who is not appointed to a BSH-funded post falls back
         // into their regional pool, which is worth saying only where there is a
