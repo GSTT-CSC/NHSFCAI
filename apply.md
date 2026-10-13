@@ -428,9 +428,13 @@ Where salary is reimbursed, this is transferred to your new Employer where relev
 <details markdown="1" id="faq-approval-in-principle">
 <summary>Approval In Principle</summary>
 
-**Does the *Approval In Principle Form* submission from my Approver have the same deadline as my application?**
+**Does the *Approval In Principle Form* submission from my Approver have the same deadline as the application form?**
 
 Yes. The deadline is the same as listed in the Key Dates above. 
+
+**Must I submit the application form before I seek an *Approval In Principle Form* submission from my Approver?**
+
+No. The order of submissions has no effect on the application.
 
 **What happens if I cannot get the appropriate person to submit my *Approval In Principle Form*?**
 
