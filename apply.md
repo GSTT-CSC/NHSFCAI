@@ -646,7 +646,6 @@ The next highest scoring SWHS applicant is matched to their highest ranked proje
 
 </details>
 
-
 <details markdown="1" id="faq-leave-and-deferred-entry">
 <summary>Leave and deferred entry</summary>
 
