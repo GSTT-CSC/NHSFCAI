@@ -103,11 +103,12 @@ This tool lists the posts open to you in the Cohort 6 cycle, based on the criter
 Funding is occasionally subject to change, and will be updated in the table accordingly.
 All competitive applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will confirm that their training stage or banding is eligible, and sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 16 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
-| Route                                                | Description                                                                                                                                      | Requirements                                                                                                                                                                                            | AI project matching                                                                                                                    |
-|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Route                                                | Description                                                                                                                                                         | Requirements                                                                                                                                                                                            | AI project matching                                                                                                                    |
+|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | <span class="route-chip is-regional">Regional</span> | A post funded by the applicant's own NHS region. Open only to the professions that region funds, so [eligibility varies geographically](#faq-regional-eligibility). | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>Training or employment in the relevant region                                                                                | Matched to AI projects **in their own region only**, [competitively on interview score](#faq-project-matching) from their ranked preferences                    |
-| <span class="route-chip is-bsh">BSH</span>           | A post funded by the [British Society for Haematology](https://b-s-h.org.uk).                                                                    | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>[Full or associate membership of the BSH](https://b-s-h.org.uk/membership)<br><br>Must have a [feasible commute](#faq-bsh-any-region) to the AI project they are matched to | Matched to AI projects in **haematology** only, which may be in any region, [competitively on interview score](#faq-bsh-matching) from their ranked preferences |
-| <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                  | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table))  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK       | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, [competitively on interview score](#faq-tpro-matching) from their ranked preferences                                                    |
+| <span class="route-chip is-bsh">BSH</span>           | A post funded by the [British Society for Haematology](https://b-s-h.org.uk).                                                                                       | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>[Full or associate membership of the BSH](https://b-s-h.org.uk/membership)<br><br>Must have a [feasible commute](#faq-bsh-any-region) to the AI project they are matched to | Matched to AI projects in **haematology** only, which may be in any region, [competitively on interview score](#faq-bsh-matching) from their ranked preferences |
+| <span class="route-chip is-tpro">T-Pro</span>        | A post funded by [T-Pro](https://info.tpro.io).                                                                                                                     | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table))  <br><br>Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK       | Matched to AI projects involving **T-Pro tools** only, where the work is primarily remote, [competitively on interview score](#faq-tpro-matching) from their ranked preferences                                                    |
+| <span class="route-chip is-swhs">SWHS</span>         | A South West Healthcare Science post funded by the South West Physiological Science Network, in collaboration with the [South West Healthcare Centre of Digital Excellence](https://www.healthcarecode.co.uk). | Profession criteria (see [eligibility table](#competitive-applicant-eligibility-table)) <br><br>HCPC registered Clinical Scientist, or AHCS or RCT registered scientist<br><br>Not on the Higher Specialist Scientist Training (HSST) programme<br><br>Employment in the [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/)<br><br>Must be able to travel to the South West Healthcare Centre of Digital Excellence based at UWE Bristol at least 1 day a week for project work | Matched to AI projects in the pool at the **[South West Healthcare Centre of Digital Excellence](https://www.healthcarecode.co.uk)** only, [competitively on interview score](#faq-swhs-matching) from their ranked preferences |
 {: .route-legend}
 
 ### Competitive applicant eligibility table
@@ -125,7 +126,7 @@ Find your NHS region, then your profession. The labels in that cell are the comp
 | South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
 | South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
 | South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
-| [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
+| [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> <span class="route-chip is-swhs">SWHS\*\*</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-swhs">SWHS\*\*</span> | <span class="route-chip is-tpro">T-Pro</span> |
 | Northern Ireland | <span class="route-chip is-regional">Regional§</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
 | Scotland | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-regional">Regional</span> | <span class="route-chip is-tpro">T-Pro</span> |
 | Wales | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
@@ -134,7 +135,8 @@ Find your NHS region, then your profession. The labels in that cell are the comp
 <br><sup>†</sup> Must hold a [National Training Number in a UK specialty training post](#faq-trainee-eligibility) leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).  
 <br><sup>‡</sup> Must hold valid registration and a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b.  
 <br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).  
-<br><sup>§</sup> Must be at least ST4 at start date of fellowship, except GP trainees (Northern Ireland only).
+<br><sup>§</sup> Must be at least ST4 at start date of fellowship, except GP trainees (Northern Ireland only).  
+<br><sup>\*\*</sup> Must be an HCPC registered Clinical Scientist, or an AHCS or RCT registered scientist, and not on the Higher Specialist Scientist Training (HSST) programme.
 
 ### Interview dates and number of posts
 
@@ -144,6 +146,7 @@ Interview dates for each applicant pool are to be confirmed, within 13-29 Jan 20
 |----------------|----------------|---------|
 | TBC | <span class="route-chip is-bsh">BSH</span> | 1       |
 | TBC | <span class="route-chip is-tpro">T-Pro</span> | 1       |
+| TBC | <span class="route-chip is-swhs">SWHS</span> | 1       |
 | TBC | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1       |
 | TBC | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4       |
 | TBC | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1       |
@@ -159,7 +162,7 @@ Interview dates for each applicant pool are to be confirmed, within 13-29 Jan 20
 The number of posts listed is illustrative and not final.<br>
 Interview dates are indicative and may change during the application cycle.
 
-The [T-Pro](#faq-tpro-fellows) and [BSH](#faq-bsh-fellows) FAQ sections below cover project matching for those posts in full.
+The [T-Pro](#faq-tpro-fellows), [BSH](#faq-bsh-fellows) and [SWHS](#faq-swhs-fellows) FAQ sections below cover project matching for those posts in full.
 </details>
 
 <details markdown="1" id="nominated-applicants">
@@ -611,6 +614,35 @@ If there are BSH-badged projects that are still available after the BSH posts ha
 BSH applicants who do not obtain one of the BSH posts after interview are automatically considered in the applicant pool associated with their region.
 The applicant could be matched to a project in that region depending on their interview score.
 It is possible to be matched to a BSH-badged project through this route, depending on regional availability. 
+
+</details>
+
+
+<details markdown="1" id="faq-swhs-fellows">
+<summary>SWHS posts</summary>
+
+**What is SWHS?**
+
+South West Healthcare Science (SWHS) posts on the NHS Fellowship in Clinical AI are funded by the South West Physiological Science Network, in collaboration with the [South West Healthcare Centre of Digital Excellence](https://www.healthcarecode.co.uk), for healthcare scientists in the South West.
+These posts link to AI projects at the South West Healthcare Centre of Digital Excellence.
+
+**Who can apply for an SWHS post?**
+
+Applicants must be an HCPC registered Clinical Scientist, or a scientist registered with the [Academy for Healthcare Science](https://ahcs.ac.uk) (AHCS) or the [Register of Clinical Technologists](https://www.therct.org.uk) (RCT).
+Applicants on the Higher Specialist Scientist Training (HSST) programme are not eligible for SWHS posts.
+Applicants must be able to travel to the South West Healthcare Centre of Digital Excellence based at UWE Bristol at least 1 day a week for project work.
+SWHS applicants also need to meet the profession and career stage eligibility criteria specified in the Eligibility section, including having an NHS Employer in the South West.
+
+**What AI projects are available for SWHS posts?**
+
+Successful applicants will only be matched to AI projects in the pool at the South West Healthcare Centre of Digital Excellence.
+
+**How does project matching for SWHS posts happen?**
+{: #faq-swhs-matching}
+
+Applicants will rank the projects in the South West Healthcare Centre of Digital Excellence pool.
+The highest scoring SWHS applicant from the interview stage will be matched to their highest ranked project.
+The next highest scoring SWHS applicant is matched to their highest ranked project remaining, etc. until all SWHS posts are filled.
 
 </details>
 

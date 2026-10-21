@@ -27,9 +27,9 @@
 // their NHS Employer.
 //
 // Nothing here is authoritative: it cannot check the conditions that are on the
-// applicant (BSH membership, ability to travel to Dublin, whether a post is
-// genuinely substantive). Those are surfaced as conditions on the card rather
-// than silently assumed.
+// applicant (BSH membership, ability to travel to Dublin or Bristol, healthcare
+// science registration, whether a post is genuinely substantive). Those are
+// surfaced as conditions on the card rather than silently assumed.
 //
 // This reflects the Cohort 6 cycle, matching the status box on the page.
 
@@ -76,7 +76,7 @@
     { id: 'wessex', name: 'South East: Wessex',
       doctor: ['regional', 'bsh'], dentist: ['regional', 'bsh'], statutory: ['regional', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
     { id: 'south-west', name: 'South West',
-      doctor: ['regional', 'bsh'], dentist: ['tpro', 'bsh'], statutory: ['tpro', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
+      doctor: ['regional', 'bsh'], dentist: ['tpro', 'bsh'], statutory: ['tpro', 'bsh', 'swhs'], voluntary: ['tpro', 'swhs'], socialCare: ['tpro'] },
     { id: 'northern-ireland', name: 'Northern Ireland', doctorStRule: 'ni',
       doctor: ['regional', 'bsh'], dentist: ['regional', 'bsh'], statutory: ['tpro', 'bsh'], voluntary: ['tpro'], socialCare: ['tpro'] },
     { id: 'scotland', name: 'Scotland',
@@ -86,8 +86,8 @@
   ];
 
   // The order open routes are listed in, which is the order of the chips in a
-  // cell: the regionally or T-Pro funded post first, then BSH.
-  var ROUTE_ORDER = ['regional', 'tpro', 'bsh'];
+  // cell: the regionally or T-Pro funded post first, then BSH, then SWHS.
+  var ROUTE_ORDER = ['regional', 'tpro', 'bsh', 'swhs'];
 
   // --------------------------------------------------------------------------
   // Professions
@@ -217,6 +217,17 @@
       conditions: [
         'Able to travel for 4 funded site visits to the T-Pro base in Dublin (Ireland) during the fellowship year, and other site visits within the UK.'
       ]
+    },
+    swhs: {
+      chip: '<span class="route-chip is-swhs">SWHS</span>',
+      sponsor: function () { return 'The South West Physiological Science Network, in collaboration with the <a href="https://www.healthcarecode.co.uk">South West Healthcare Centre of Digital Excellence</a>'; },
+      matching: function () {
+        return 'Matched to AI projects in the pool at the <strong><a href="https://www.healthcarecode.co.uk">South West Healthcare Centre of Digital Excellence</a></strong> only, competitively on interview score from your ranked preferences.';
+      },
+      conditions: [
+        'Must be an HCPC registered Clinical Scientist, or an AHCS or RCT registered scientist, and not on the Higher Specialist Scientist Training (HSST) programme.',
+        'Must be able to travel to the South West Healthcare Centre of Digital Excellence based at UWE Bristol at least 1 day a week for project work.'
+      ]
     }
   };
 
@@ -333,8 +344,8 @@
 
   // "Posts for competitive applicants are fully funded for eligible groups:
   // 0.4 FTE salary is reimbursed to the fellow's Employer, and course fee
-  // covered." This is true of all three competitive posts whoever funds them,
-  // so it is one string printed on each card rather than three to maintain.
+  // covered." This is true of every competitive post whoever funds it, so it
+  // is one string printed on each card rather than one per route to maintain.
   var COMPETITIVE_COST = 'Fully funded. 0.4 FTE salary is reimbursed to your Employer for the 12 months of the fellowship, and the course fee is covered. Travel and subsistence for in-person workshops is paid up front and reclaimed through mechanisms specified by the funder.';
 
   // A route the applicant can apply to. Only open routes get a card: the card
@@ -366,6 +377,9 @@
     if (routeId === 'tpro') {
       return 'T-Pro posts are not open to your combination of profession, career stage, and region.';
     }
+    if (routeId === 'swhs') {
+      return 'SWHS posts are not open to your combination of profession, career stage, and region.';
+    }
     return 'BSH posts are not open to your combination of profession, career stage, and region.';
   }
 
@@ -373,7 +387,7 @@
   // "Why can't I apply for X?" is the other half of the question and the reason
   // has to be on the page, but it is a footnote to the answer, not a rival to
   // it. `rows` is a list of { chips, reason }; a blocked applicant is one row
-  // carrying all three chips, because there is one reason for all three.
+  // carrying every chip, because there is one reason for all of them.
   function closedBlock(rows) {
     if (!rows.length) return '';
     return '<div class="ec-closed">' +

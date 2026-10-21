@@ -267,8 +267,8 @@ $ec-focus-yellow: #ffeb3b;
 // The routes that are not open, as a list under the cards that are. "Why can't
 // I apply for X?" is the other half of the question and the reason has to be on
 // the page - but it is a footnote to the answer, so it gets a row and not a
-// card. A blocked applicant sees one row carrying all three chips, because
-// there is one reason for all three.
+// card. A blocked applicant sees one row carrying every chip, because there
+// is one reason for all of them.
 
 .ec-closed {
   margin-top: 1rem;
