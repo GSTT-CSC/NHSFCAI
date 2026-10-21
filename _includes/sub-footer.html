@@ -7,7 +7,7 @@
             {% include social.html %}
           {% endif %}
           <div class="copyright">
-            {% if site.data.seo.copyright_text %}&copy; {{ 'now' | date: "%Y" }} {{ site.data.seo.copyright_text }} · {% endif %}<a href="{{ '/privacy-notice/' | relative_url }}">Privacy notice</a>
+            {% if site.data.seo.copyright_text %}&copy; {{ 'now' | date: "%Y" }} {{ site.data.seo.copyright_text }} | {% endif %}<a href="{{ '/privacy-notice/' | relative_url }}">Privacy notice</a>
           </div>
         </div>
       </div>
