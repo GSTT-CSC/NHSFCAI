@@ -126,7 +126,7 @@ Email: [gstt.aifellowship@nhs.net](mailto:gstt.aifellowship@nhs.net)
 This website sets no cookies of its own. We use no analytics, no advertising or tracking pixels, and no social media tracking. Everything the site needs to display a page is served from this domain, except two features which are served through third parties:
 
 - The map on our [NHS sites page](/sites/) loads images from OpenStreetMap. Viewing or moving that map requests images from `tile.openstreetmap.org` and reveals your IP address to that service. This is unavoidable for a working map. No cookie is set, and the map appears on that page only. See the [OpenStreetMap privacy policy](https://osmfoundation.org/wiki/Privacy_Policy).
-- Embedded videos load from YouTube if you choose to play them. If you press play, the video loads from YouTube's privacy-enhanced mode (`youtube-nocookie.com`), which reveals your IP address to Google and may set cookies or store similar information in your browser while the video plays. Each video also has a link to watch it on YouTube directly. See [Google's privacy policy](https://policies.google.com/privacy).
+- Some pages include embedded YouTube videos, such as our recorded webinars. When you view one of these pages, your browser loads the video player from YouTube's privacy-enhanced mode (`youtube-nocookie.com`), even if you do not play the video. This reveals your IP address to Google, and Google may set cookies or store similar information in your browser, especially if you play the video. See [Google's privacy policy](https://policies.google.com/privacy).
 
 <h3 style>Links to other websites</h3>
 
