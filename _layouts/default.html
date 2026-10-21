@@ -8,10 +8,8 @@
   <link rel="icon" type="image/png" href="{{ '/images/logo/NHSfavicon.png' | relative_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 
-  <!-- Google Fonts CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  <!-- Self-hosted Work Sans: no third-party font CDN, so no visitor data leaves this site -->
+  <link rel="preload" href="{{ '/assets/fonts/work-sans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/fontawesome/css/all.min.css' | relative_url }}">
@@ -45,6 +43,5 @@
   {% include footer.html %}
   {% include sub-footer.html %}
   <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
-  {% include google-analytics.html %}
 </body>
 </html>

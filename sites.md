@@ -7,7 +7,7 @@ description: The NHS teams and trusts hosting clinical AI project placements for
 ---
 Our [fellows](/fellows) are hosted in clinical AI project placements in teams across the NHS. Click on each fellow to find out more.
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="{{ '/assets/js/vendor/leaflet/leaflet.css' | relative_url }}" />
 
 <style>
     #map {
@@ -109,7 +109,7 @@ Our [fellows](/fellows) are hosted in clinical AI project placements in teams ac
 <div id="map"></div>
 
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ '/assets/js/vendor/leaflet/leaflet.js' | relative_url }}"></script>
 
 <script>
     // Restrict the map to a useful UK frame so users cannot pan into empty space

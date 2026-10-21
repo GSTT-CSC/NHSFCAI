@@ -1,18 +1,14 @@
-{% comment %}
-  Responsive YouTube embed. The raw <iframe width="560"> overflowed on any
-  screen narrower than 560px.
-
-  Uses youtube-nocookie.com so YouTube sets no cookies until the video is
-  played. The explicit referrerpolicy keeps the Referer header YouTube needs
-  to verify embeds (without it the player shows "Error 153").
-
-    {% include video-embed.html id="SsONx1jAGxE" title="..." %}
-{% endcomment %}
-<div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}"
-          title="{{ include.title }}"
-          loading="lazy"
-          allow="encrypted-media; picture-in-picture; fullscreen"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+{%- comment -%}
+Click-to-load YouTube embed. Nothing is requested from YouTube until the viewer
+presses play; the video then loads from youtube-nocookie.com (see privacy-notice.md).
+Usage: {% include video-embed.html id="VIDEO_ID" title="Video title" %}
+{%- endcomment -%}
+<div class="video-embed" data-youtube-id="{{ include.id }}" data-youtube-title="{{ include.title | escape }}">
+  <div class="video-embed-frame">
+    <button type="button" class="video-embed-play">
+      <span class="video-embed-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="video-embed-label">Play video: {{ include.title }}</span>
+    </button>
+  </div>
+  <p class="video-embed-note">Playing this video loads it from YouTube, a Google service. <a href="{{ '/privacy-notice/' | relative_url }}">Privacy notice</a> · <a href="https://www.youtube.com/watch?v={{ include.id }}">Watch on YouTube</a></p>
 </div>
