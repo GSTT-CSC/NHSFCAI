@@ -106,7 +106,8 @@ $sub-footer-text-color: $white;
 @import "components/strip";
 @import "components/feature";
 @import "components/social";
-// @import "components/fonts"; // Uncomment this line to self host font
+@import "components/video";
+@import "components/fonts"; // Self-hosted Work Sans — no third-party font CDN
 
 // Pages
 @import "pages/page-home";

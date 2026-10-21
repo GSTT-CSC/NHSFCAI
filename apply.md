@@ -55,7 +55,7 @@ Obtain *Approval in Principle* from a responsible person with decision-making po
 
 This applicant webinar covered the features and curriculum of the fellowship, address frequently asked questions, and invited question from applicants.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SsONx1jAGxE" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="SsONx1jAGxE" title="Applicant webinar" %}
 
 
 

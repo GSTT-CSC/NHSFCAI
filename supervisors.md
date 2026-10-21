@@ -35,7 +35,7 @@ We are currently accepting project proposals to host AI fellows for 2d/wk for Au
 
 ### Supervisor Webinar 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RGYEDRJOS3E" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
+{% include youtube.html id="RGYEDRJOS3E" title="Supervisor webinar" %}
 
 The onboarding webinar for Cohort 5 AI supervisors covered the features and curriculum of the fellowship, and the expectations for project hosting and supervision.
 

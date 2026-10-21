@@ -58,3 +58,6 @@ footer:
   - name: "Contact"
     url: "/contact/"
     weight: 2
+  - name: "Privacy Notice"
+    url: "/privacy-notice/"
+    weight: 3
