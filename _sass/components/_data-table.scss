@@ -557,9 +557,10 @@ $nhs-muted: #425563;
 // have to read as a set of small tags rather than as a sentence. Same pill
 // geometry as .fellow-chip above; colour carries the funding route. Defined at
 // the top level because the matrix is a markdown table, not a .data-table.
-// Regional takes NHS dark green; the two sponsored routes take the colours
+// Regional takes NHS dark green; the sponsored routes take the colours
 // sampled from their own logos, so the labels match the badges applicants
-// already recognise.
+// already recognise. SWHS takes the yellow and navy of the South West
+// Healthcare Centre of Digital Excellence, where its projects are.
 $route-green: #006747;
 $route-bsh-red: #e20613;
 $route-bsh-ink: #b61f34;
@@ -567,6 +568,9 @@ $route-bsh-tint: #fdeaec;
 $route-tpro-cyan: #12c3f4;
 $route-tpro-edge: #0f9ec6;
 $route-tpro-ink: #16252e;
+$route-swhs-yellow: #ffea24;
+$route-swhs-edge: #c9b600;
+$route-swhs-ink: #17262f;
 
 .route-chip {
   display: inline-flex;
@@ -596,6 +600,12 @@ $route-tpro-ink: #16252e;
     background-color: $route-tpro-cyan;
     border-color: $route-tpro-edge;
     color: $route-tpro-ink;
+  }
+
+  &.is-swhs {
+    background-color: $route-swhs-yellow;
+    border-color: $route-swhs-edge;
+    color: $route-swhs-ink;
   }
 }
 
