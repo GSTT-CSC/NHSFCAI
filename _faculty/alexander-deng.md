@@ -5,9 +5,8 @@ job-role: Director
 ---
 
 ### Bio
-Dr Alexander T Deng a medical Consultant in Genomic AI.
-He has developed [auditable standards for AI in healthcare](https://standardsdevelopment.bsigroup.com/projects/2021-00605) with the British Standards Institution as an editorial panel chair. 
-Alexander is the Director of the [NHS Genomic AI Network](https://genomicainetwork.nhs.uk), and the genomic AI theme lead in the [Alan Turing Institute Clinical AI Interest Group](https://www.turing.ac.uk/research/interest-groups/clinical-ai). 
+Dr Alexander T Deng a medical Consultant in Genomic AI in [NHS South East Genomics](https://southeastgenomics.nhs.uk).
+He has developed [auditable standards for AI in healthcare](https://standardsdevelopment.bsigroup.com/projects/2021-00605) with the British Standards Institution as an editorial panel chair, and is the genomic AI theme lead in the [Alan Turing Institute Clinical AI Interest Group](https://www.turing.ac.uk/research/interest-groups/clinical-ai). 
 
 
 ### Team Role
