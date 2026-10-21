@@ -1,0 +1,14 @@
+{%- comment -%}
+Click-to-load YouTube embed. Nothing is requested from YouTube until the viewer
+presses play; the video then loads from youtube-nocookie.com (see privacy-notice.md).
+Usage: {% include video-embed.html id="VIDEO_ID" title="Video title" %}
+{%- endcomment -%}
+<div class="video-embed" data-youtube-id="{{ include.id }}" data-youtube-title="{{ include.title | escape }}">
+  <div class="video-embed-frame">
+    <button type="button" class="video-embed-play">
+      <span class="video-embed-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="video-embed-label">Play video: {{ include.title }}</span>
+    </button>
+  </div>
+  <p class="video-embed-note">Playing this video loads it from YouTube, a Google service. <a href="{{ '/privacy-notice/' | relative_url }}">Privacy notice</a> · <a href="https://www.youtube.com/watch?v={{ include.id }}">Watch on YouTube</a></p>
+</div>

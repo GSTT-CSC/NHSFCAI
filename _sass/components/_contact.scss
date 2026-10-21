@@ -1,0 +1,87 @@
+// Contact page.
+//
+// Selectors are scoped under .content because _content.scss sets
+// `.content p { color: $steel }` and `.content h2 { font-size: 26px }`,
+// which are more specific than a bare component class and would otherwise
+// win. Keeping the nesting here is cheaper than raising specificity by hand
+// in half a dozen places.
+//
+// The page reuses the callout vocabulary already established by .status-box
+// (Apply, Supervisors) and .pdf-card (Curriculum): white ground, hairline
+// border, NHS-blue left rule. It deliberately does not introduce a third
+// idiom of its own.
+
+.content {
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin: 1.75rem 0;
+  }
+
+  .contact-card {
+    background: #fff;
+    border: 1px solid #d8dde0;
+    padding: 1.25rem;
+
+    // _content.scss rules every h2 off from the section above it. Inside a
+    // card the heading is the top of its own box, so that rule reads as a
+    // stray line under the border rather than a section boundary.
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0 0 0.5rem;
+      padding-top: 0;
+      border-top: 0;
+      color: #005eb8;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #4c6272;
+    }
+  }
+
+  .contact-primary {
+    background: #fff;
+    border: 1px solid #d8dde0;
+    border-left: 8px solid #005eb8;
+    padding: 1.5rem;
+    margin-top: 2rem;
+
+    &__label {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+      color: #4c6272;
+    }
+
+    &__value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 0.75rem;
+      word-break: break-word;
+
+      a {
+        color: #005eb8;
+
+        &:hover,
+        &:focus {
+          color: #003d78;
+        }
+      }
+    }
+
+    &__meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #4c6272;
+    }
+  }
+}

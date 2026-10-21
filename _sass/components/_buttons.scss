@@ -23,3 +23,88 @@
     text-decoration: none;
   }
 }
+
+// Action buttons used on the Apply, International and Supervisors pages.
+// Replaces the ~200 characters of inline style that were pasted onto each of
+// these links, and moves them off Bootstrap green onto the NHS palette.
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+
+  // NHS green, for the primary "do the thing" action.
+  &--primary {
+    background-color: #007f3b;
+    border-color: #007f3b;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #00602c;
+      border-color: #00602c;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  // NHS blue, for secondary actions alongside a primary one.
+  &--secondary {
+    background-color: #005eb8;
+    border-color: #005eb8;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #003d78;
+      border-color: #003d78;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  // Shown when an action is not available yet (e.g. applications not open).
+  &--disabled {
+    background-color: #f0f4f5;
+    border-color: #aeb7bd;
+    color: #4c6272;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+// Status banner at the top of the Apply / International / Supervisors pages.
+.status-box {
+  margin: 1rem 0 1.5rem;
+  background-color: #fff;
+  color: #212b32;
+  padding: 1.5rem;
+  border: 1px solid #d8dde0;
+  border-left: 8px solid #005eb8;
+
+  p {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  p + p {
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: #4c6272;
+  }
+}

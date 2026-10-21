@@ -1,0 +1,31 @@
+{%- comment -%}
+  Renders the `fellow` field of a _data/media.yml or
+  _data/fellowship_publications.yml entry as a row of avatar + name pills.
+
+  The stored value is a run of anchors:
+    <a href="/fellow/karol-basta/">Karol Basta</a> <a ...>...</a>
+
+  We take the name out of each anchor and rebuild the link ourselves, so the
+  markup is ours rather than whatever the data file happens to contain.
+
+    {% include fellow-chips.html value=resource.fellow %}
+{%- endcomment -%}
+{%- assign fellow_fragments = include.value | split: '</a>' -%}
+<div class="fellow-chips">
+  {%- for fragment in fellow_fragments -%}
+    {%- assign fellow_name = fragment | split: '>' | last | strip -%}
+    {%- if fellow_name != '' -%}
+      {%- assign fellow_slug = fellow_name | slugify -%}
+  <a class="fellow-chip" href="/fellow/{{ fellow_slug }}/">
+    <img src="/images/fellow/{{ fellow_slug }}.jpg"
+         alt=""
+         width="32"
+         height="32"
+         loading="lazy"
+         decoding="async"
+         onerror="this.onerror=null;this.src='/images/fellow/placeholderfellow.jpg';">
+    <span>{{ fellow_name }}</span>
+  </a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

@@ -105,7 +105,19 @@ $sub-footer-text-color: $white;
 @import "components/intro-image";
 @import "components/strip";
 @import "components/feature";
+@import "components/logo-wall";
 @import "components/social";
+@import "components/data-table";
+@import "components/disclosure";
+@import "components/eligibility-checker";
+@import "components/entry";
+@import "components/quote";
+@import "components/profile";
+@import "components/filter-bar";
+@import "components/skip-link";
+@import "components/pdf-download";
+@import "components/contact";
+@import "components/dual-fellowship";
 @import "components/video";
 @import "components/fonts"; // Self-hosted Work Sans — no third-party font CDN
 
@@ -122,34 +134,4 @@ body {
     font-size: 16px;
     line-height: 1.3;
   }
-}
-
-.content-wrapper {
-  background-color: $primary;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-/* Container that positions the social buttons */
-.social-button-cluster {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 0;
-}
-
-/* Individual button style */
-.social-button-cluster a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  border-radius: 50%;
-  background-color: $nhsuk-button-color;
-  color: $white;
-  text-align: center;
-  font-size: 17px;
 }

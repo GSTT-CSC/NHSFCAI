@@ -4,5 +4,22 @@
   flex-direction: column;
   .wrapper {
     flex: 1 0 0;
+    // Lets .content-wrapper below stretch to fill the remaining height.
+    display: flex;
+    flex-direction: column;
   }
+  main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// The page background used to be set inline on .container, so it was capped at
+// container width and stopped exactly where the content ended - leaving a white
+// void above the footer on short pages. It belongs on the full-bleed wrapper.
+.content-wrapper {
+  background-color: #f0f4f5;
+  flex: 1 0 auto;
+  padding-bottom: 3rem;
 }

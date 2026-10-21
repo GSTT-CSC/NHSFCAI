@@ -1,0 +1,94 @@
+{%- comment -%}
+  The rotating photographs in the home page banner. Everything about them -
+  which photographs, in what order, with what alt text - comes from the
+  `gallery` list in index.md; this file is only the markup and the rotation.
+
+    {% include hero-gallery.html slides=page.gallery %}
+
+  With a single slide the rotation and its pause button are left out entirely.
+{%- endcomment -%}
+{%- assign slides = include.slides -%}
+{%- if slides.size > 0 -%}
+<div class="intro-gallery" role="group" aria-label="Photographs from the fellowship">
+  {%- for slide in slides %}
+  <img src="{{ slide.image }}"
+       alt="{{ slide.alt }}"
+       width="1280"
+       height="720"
+       {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}
+       decoding="async"
+       class="gallery-slide{% if forloop.first %} active{% endif %}" />
+  {%- endfor %}
+  {%- if slides.size > 1 %}
+  {%- comment -%}
+    Content that moves on its own for more than five seconds needs a way to
+    stop it (WCAG 2.2.2). The button stays out of sight until the pointer or
+    keyboard focus reaches the gallery - see components/intro-image.
+  {%- endcomment -%}
+  <button type="button" class="gallery-toggle" aria-pressed="false">
+    <span class="visually-hidden">Pause the photographs</span>
+    <span class="gallery-toggle__icon" aria-hidden="true"></span>
+  </button>
+  {%- endif %}
+</div>
+
+{%- if slides.size > 1 %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.querySelector('.intro-gallery');
+    if (!gallery) return;
+
+    const slides = gallery.querySelectorAll('.gallery-slide');
+    const toggle = gallery.querySelector('.gallery-toggle');
+    const label = toggle ? toggle.querySelector('.visually-hidden') : null;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const interval = 10000;
+    let currentIndex = 0;
+    let timer = null;
+
+    function showNextSlide() {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }
+
+    function start() {
+      if (timer) return;
+      timer = setInterval(showNextSlide, interval);
+      gallery.classList.remove('is-paused');
+      if (toggle) toggle.setAttribute('aria-pressed', 'false');
+      if (label) label.textContent = 'Pause the photographs';
+    }
+
+    function pause() {
+      clearInterval(timer);
+      timer = null;
+      gallery.classList.add('is-paused');
+      if (toggle) toggle.setAttribute('aria-pressed', 'true');
+      if (label) label.textContent = 'Play the photographs';
+    }
+
+    if (toggle) {
+      // An explicit press wins over the reduced-motion default, in both
+      // directions.
+      toggle.addEventListener('click', function () {
+        if (timer) { pause(); } else { start(); }
+      });
+    }
+
+    // Nothing to see while the tab is in the background, and a rotation that
+    // ran on regardless would jump several slides on return.
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) {
+        clearInterval(timer);
+        timer = null;
+      } else if (!gallery.classList.contains('is-paused')) {
+        start();
+      }
+    });
+
+    if (reduceMotion.matches) { pause(); } else { start(); }
+  });
+</script>
+{%- endif -%}
+{%- endif -%}

@@ -1,0 +1,14 @@
+{%- comment -%}
+  One row in a fellow's publications or media list. Uses the same .entry-*
+  classes as the tables on /publications and /media - only the container
+  differs, a tappable tile here and a table row there.
+
+    {% include profile-link.html title=item.title link=item.link %}
+{%- endcomment -%}
+{%- assign title_parts = include.title | replace: '<br />', '<br>' | replace: '<br/>', '<br>' | split: '<br>' -%}
+<a href="{{ include.link }}">
+  <span class="entry-title">{{ title_parts[0] | strip }}</span>
+  {%- if title_parts.size > 1 %}
+  <span class="entry-meta">{{ title_parts | slice: 1, 8 | join: ' ' | strip }}</span>
+  {%- endif %}
+</a>

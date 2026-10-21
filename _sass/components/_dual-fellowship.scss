@@ -1,0 +1,125 @@
+// The dual fellowship overview on /international: the two programmes side by
+// side as cards, then the facts that apply to the whole dual fellowship.
+// It carries the Key Information table from the international sponsor flyer.
+// White cards with a hairline border follow .status-box and .contact-card.
+// The two programmes keep one accent colour each on the card rule and label.
+
+$df-ai: #005eb8;
+$df-clinical: #006747;
+$df-border: #d8dde0;
+$df-rule: #e8edee;
+$df-ink: #212b32;
+$df-muted: #4c6272;
+
+.content .dual-fellowship {
+  margin: 1.75rem 0 2rem;
+
+  &__programmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+  }
+}
+
+.content .dual-programme {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid $df-border;
+  border-top: 6px solid $df-ai;
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 1rem;
+
+  &--clinical {
+    border-top-color: $df-clinical;
+  }
+
+  // `p.` so it outranks the card's own paragraph colour below.
+  p.dual-programme__domain {
+    margin: 0 0 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $df-ai;
+  }
+
+  &--clinical p.dual-programme__domain {
+    color: $df-clinical;
+  }
+
+  h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: $df-ink;
+  }
+
+  p {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: $df-muted;
+  }
+
+  // Pinned to the bottom so the two contacts line up across the cards.
+  p.dual-programme__contact {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid $df-rule;
+    word-break: break-word;
+  }
+}
+
+// Label and value rows, as in the flyer's table, but stacked under one
+// another on narrow screens instead of squeezing two columns.
+.content .dual-facts {
+  margin: 1rem 0 0;
+  background: #fff;
+  border: 1px solid $df-border;
+  border-radius: 8px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem 1.5rem;
+    padding: 1rem 1.25rem;
+
+    + .dual-facts__row {
+      border-top: 1px solid $df-rule;
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 10rem 1fr;
+    }
+  }
+
+  dt {
+    font-weight: 700;
+    color: $df-ink;
+    line-height: 1.55;
+  }
+
+  dd {
+    margin: 0;
+    color: $df-muted;
+    line-height: 1.55;
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 0.4rem;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// Collapsible sections in page content: the eligibility and FAQ blocks on
+// /apply and /international, and the guidance blocks on /supervisors.
+//
+// These carried no styling at all, so a summary rendered at body size in body
+// ink behind the browser's default triangle - the section headings a reader
+// scans for were the least prominent text on the page, and sat below the h3
+// headings nested inside them. They now follow the NHS.UK accordion pattern:
+// blue semibold labels with a chevron, separated by the same hairline rules the
+// data tables use. Sized between h2 and h3 so the hierarchy runs
+// section > disclosure > sub-heading.
+//
+// Scoped to .content so the mobile menu's own details/summary, which has its
+// own chevron and colours in components/main-menu-mobile, is untouched.
+
+$disclosure-blue: #005eb8;
+$disclosure-dark-blue: #003087;
+$disclosure-rule: #d8dde0;
+$disclosure-ink: #212b32;
+
+.content {
+  details {
+    border-top: 1px solid $disclosure-rule;
+    border-bottom: 1px solid $disclosure-rule;
+  }
+
+  // Consecutive disclosures share one rule rather than stacking two. Dropping
+  // the top border of each follower - rather than the bottom border of each
+  // leader - is what makes a run close itself off: the last item in a run keeps
+  // its bottom rule wherever the run happens to end, and a heading between two
+  // runs breaks the adjacency so the next run opens with its own rule.
+  details + details {
+    border-top: 0;
+  }
+
+  // A run starting straight after a heading needs air above its first rule.
+  // Spacing below a run comes from the margin-top of the heading that follows
+  // it; only a run ending the page has nothing after it to provide that.
+  h2 + details,
+  h3 + details {
+    margin-top: 1rem;
+  }
+
+  details:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  details[open] {
+    padding-bottom: 1rem;
+  }
+
+  details > summary {
+    position: relative;
+    padding: 14px 0 14px 34px;
+    font-family: $font-family-heading;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: $disclosure-blue;
+    cursor: pointer;
+
+    // The native marker is replaced by the chevron below.
+    list-style: none;
+
+    @include media-breakpoint-up(md) {
+      font-size: 22px;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      color: $disclosure-dark-blue;
+      text-decoration: underline;
+    }
+
+    // NHS.UK focus state - black on yellow, not a faint ring.
+    &:focus-visible {
+      outline: 3px solid transparent;
+      background-color: #ffeb3b;
+      box-shadow: 0 -2px #ffeb3b, 0 4px $disclosure-ink;
+      color: $disclosure-ink;
+      text-decoration: none;
+    }
+
+    // Chevron: a square with two borders, rotated. Points right when closed,
+    // down when open. Offset to sit on the centre line of the summary's first
+    // line of text.
+    &::before {
+      content: "";
+      position: absolute;
+      // Centred on the first line of the summary at either font size:
+      // padding-top + half the line box - half the chevron.
+      top: calc(14px + 0.65em - 5px);
+      left: 8px;
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease;
+    }
+  }
+
+  details[open] > summary::before {
+    transform: rotate(45deg);
+  }
+}
+
+// Motion is decoration here - the chevron's end state carries the meaning.
+@media (prefers-reduced-motion: reduce) {
+  .content details > summary::before {
+    transition: none;
+  }
+}
