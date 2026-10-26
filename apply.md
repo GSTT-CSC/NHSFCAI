@@ -292,7 +292,7 @@ Career stages are selected in which this fellowship is expected to be a developm
 For earlier career stages, there are limited opportunities to apply the experience in transformational AI projects in the NHS.
 
 
-**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training), will CCT on or before 10 Aug 2028 (after accounting for the extension from the fellowship), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training and Broad Based Training), will CCT on or before 10 Aug 2028 (after accounting for the extension from the fellowship), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 {: #faq-trainee-eligibility}
 
 These applicants are eligible only as nominated applicants. For competitive applicants, medical/dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
