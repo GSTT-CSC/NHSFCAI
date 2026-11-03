@@ -8,7 +8,7 @@ description: How NHS teams propose a clinical AI project and host a fellow on th
 <div class="status-box" markdown="1">
 Status: Project proposals are open for an 11 August 2027 start (Cohort 6).
 
-Submissions close on 1 November 2026.
+Submissions for competitively allocated projects closed on 1 November 2026. Submissions for [pre-allocated](/nhs-sponsor/#sponsorship-models) projects close on 11 December 2026.
 </div>
 
 The NHS Fellowship in Clinical AI provides practical experience to its [fellows](/fellows) through placements in real-world deployments of AI tools in [NHS host sites](/sites).
@@ -21,7 +21,7 @@ Supervisors are invited to attend the fellowship AI workshops throughout the yea
 
 
 ## Key dates for supervisors
-* 01 Aug 2026: Project proposal submissions open
+* **01 Aug 2026**: Project proposal submissions open
 
 <div class="action-buttons">
   <a class="btn-action btn-action--primary" href="/assets/docs/FCAI_C6_Project_Template.docx" download>
@@ -34,10 +34,11 @@ Supervisors are invited to attend the fellowship AI workshops throughout the yea
   </a>
 </div>
 
-* 01 Nov 2026: Deadline for project proposal submissions
-* Jan 2027: Remote interviews — prospective supervisors are invited to interview panels
-* Feb 2027: Outcomes of interviews and project matching
-* 11 Aug 2027: Cohort 6 begins
+* **01 Nov 2026**: Deadline for project proposals for competitive allocation
+* **11 Dec 2026**: Deadline for project proposals that are [pre-allocated](/nhs-sponsor/#sponsorship-models) for [nominated applicants](/apply/#nominated-applicants)
+* **Jan 2027**: Remote interviews (prospective supervisors are invited to interview panels)
+* **Feb 2027**: Outcomes of interviews and project matching
+* **11 Aug 2027**: Cohort 6 begins
 
 
 ## Supervisor webinar
