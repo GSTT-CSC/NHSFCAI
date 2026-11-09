@@ -38,7 +38,7 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **16 Nov 2026** 23:45 GMT: [Application]({{ page.application_form }}) **and** [Approval in Principle]({{ page.aip_form }}) deadline (all applications)
 * **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
-* **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview) (dates per applicant pool TBC for this cycle)
+* **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview) (dates per applicant pool listed under [Eligibility](#eligibility))
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
 * **11 Aug 2027**: Fellowship Cohort 6 begins
 
@@ -140,23 +140,23 @@ Find your NHS region, then your profession. The labels in that cell are the comp
 
 ### Interview dates and number of posts
 
-Interview dates for each applicant pool are to be confirmed, within 13-29 Jan 2027. Pools with no post in this cycle hold no interview.
+Pools with no post in this cycle hold no interview.
 
 | Interview date | Applicant pool | # Posts |
 |----------------|----------------|---------|
-| TBC | <span class="route-chip is-bsh">BSH</span> | 1       |
-| TBC | <span class="route-chip is-tpro">T-Pro</span> | 1       |
-| TBC | <span class="route-chip is-swhs">SWHS</span> | 1       |
-| TBC | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1       |
-| TBC | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4       |
-| TBC | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1       |
-| TBC | <span class="route-chip is-regional">Regional</span> [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/) | 3       |
-| TBC | <span class="route-chip is-regional">Regional</span> South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | 3       |
-| TBC | <span class="route-chip is-regional">Regional</span> South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | 3       |
-| TBC | <span class="route-chip is-regional">Regional</span> South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | 2       |
-| TBC | <span class="route-chip is-regional">Regional</span> [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | 3       |
-| TBC | <span class="route-chip is-regional">Regional</span> Northern Ireland | 1       |
-| TBC | <span class="route-chip is-regional">Regional</span> Scotland | 8       |
+| 13 Jan 2027 | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1       |
+| 13-14 Jan 2027 | <span class="route-chip is-regional">Regional</span> Scotland | 8       |
+| 14 Jan 2027 | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1       |
+| 15 Jan 2027 | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4       |
+| 19 Jan 2027 | <span class="route-chip is-swhs">SWHS</span> | 1       |
+| 19 Jan 2027 | <span class="route-chip is-regional">Regional</span> [South West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/south-west-region/) | 3       |
+| 25 Jan 2027 | <span class="route-chip is-regional">Regional</span> South East: [Kent Surrey Sussex](https://kss.hee.nhs.uk/about-us/our-trusts/) | 3       |
+| 25 Jan 2027 | <span class="route-chip is-regional">Regional</span> South East: [Thames Valley](https://thamesvalley.hee.nhs.uk/about-us/region-map) | 3       |
+| 26 Jan 2027 | <span class="route-chip is-regional">Regional</span> South East: [Wessex](https://wessex.hee.nhs.uk/about/wessex-region-map/) | 2       |
+| 27 Jan 2027 | <span class="route-chip is-regional">Regional</span> Northern Ireland | 1       |
+| 28 Jan 2027 | <span class="route-chip is-regional">Regional</span> [North West](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-west-region/) | 3       |
+| TBC, within<br>26-29 Jan 2027 | <span class="route-chip is-bsh">BSH</span> | 1       |
+| TBC, within<br>26-29 Jan 2027 | <span class="route-chip is-tpro">T-Pro</span> | 1       |
 {: .interview-timetable}
 
 The number of posts listed is illustrative and not final.<br>
@@ -188,7 +188,7 @@ The [T-Pro](#faq-tpro-fellows), [BSH](#faq-bsh-fellows) and [SWHS](#faq-swhs-fel
 ### Interview
 
 * The applicant must meet the Essential criteria of the [Person Specification](#person-specification) [at interview](#faq-interview-preparation)
-* Indicative interview dates fall within 13-29 Jan 2027 (TBC according to applicant volume)
+* Indicative interview dates: 20-22 Jan 2027
 
 ### Project matching
 

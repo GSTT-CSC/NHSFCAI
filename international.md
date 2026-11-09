@@ -38,7 +38,7 @@ All applicants require the support of an [institutional sponsor](https://www.guy
 * **05 Oct 2026**: Applicant webinar with Q&A - [Watch the recording](#applicant-webinar)
 * **10 Dec 2026** 23:45 GMT: [International Application Form]({{ page.application_form }}) deadline
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
-* **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview)
+* **20-22 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview)
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
 * **11 Aug 2027**: Fellowship Cohort 6 begins
 
@@ -227,7 +227,7 @@ Consider how to show evidence of meeting these criteria with real-world examples
 
 **When will the interviews happen?**
 
-The interviews are planned for 13-29 January 2027. 
+The interviews are planned for 20-22 January 2027. 
 Applicants proceeding to interview will be sent a link to book their interview slot. 
 
 
