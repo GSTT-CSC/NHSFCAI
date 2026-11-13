@@ -386,6 +386,16 @@ No. For the same reasons as above.
 
 No. Due to the time commitments of this programme, a fellow must not have a total working pattern >1.0FTE in total.
 
+**I already work less than full time. Do the fellowship's 2 days come out of my existing days, or are they extra?**
+{: #faq-less-than-full-time}
+
+Either, as long as your total working pattern, including the fellowship, is no more than 1.0 FTE. The fellowship takes 0.4 FTE (2 days a week). For example:
+
+* If you work 0.6 FTE, you can add the fellowship as 2 extra days (1.0 FTE in total), or take it from your existing days (0.2 FTE other work plus 0.4 FTE fellowship).
+* If you work 0.8 FTE, you must reduce your other work to 0.6 FTE or less.
+
+You must agree the arrangement with your Approver, who confirms it as part of your *Approval In Principle*.
+
 **Are the workshops compulsory, and when do they take place?**
 
 Yes. Attendance at masterclass workshops is a compulsory part of the fellowship, and a register of attendance is kept. 
@@ -442,7 +452,8 @@ No. The order of submissions has no effect on the application.
 
 **What happens if I cannot get the appropriate person to submit my *Approval In Principle Form*?**
 
-You will not be interviewed, and therefore cannot join the programme. This is because we can only make offers to applicants who have evidence of being able to take up the post. 
+You will not be interviewed, and therefore cannot join the programme. *Approval In Principle* is essential for governance as the programme involves real-world deployments of AI at NHS host sites. Your Approver confirms independently that you are an employee in good standing, and that your time can be released for the fellowship. Without that independent assurance, we cannot place you in a project.
+
 The submission portal closes automatically and late submissions are not accepted. It is the applicant's responsibility to ensure this has happened.
 
 **Can a different person to the named Approver I listed in my application form submit my *Approval In Principle Form*?**
@@ -451,11 +462,11 @@ No. Approval in principle must come from the named Approver listed in the applic
 
 **Can I be my own Approver?**
 
-No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern as of the fellowship start date, 11 August 2027. There are no exceptions to this, including for self-funded applicants.
+No. Self-approval is not possible. Your *Approval In Principle* must come from a third party: a responsible person at your employer (or your training programme, where relevant) with decision-making power over your working pattern as of the fellowship start date. There are no exceptions to this, including for self-funded applicants.
 
-This is because the fellowship involves NHS-facing activity at NHS deployments of AI. Fellows join real-world clinical AI projects at NHS host sites, usually under an honorary contract or Letter of Access. Host sites rely on your Approver to confirm independently that you are an employee in good standing, and that your time can be released for the fellowship. Self-approval removes that independent assurance, which is an unacceptable governance risk.
+*Approval In Principle* is essential for governance as the programme involves real-world deployments of AI at NHS host sites. Your Approver confirms independently that you are an employee in good standing, and that your time can be released for the fellowship. Self-approval removes that independent assurance, which is an unacceptable governance risk.
 
-If you do not have a suitable Approver for the fellowship start date of 11 August 2027, unfortunately your application will not be eligible.
+If your only role is as a self-employed locum, then no responsible third party holds decision-making power over your working pattern. Unfortunately this means you will not have a suitable Approver and cannot be interviewed. If your arrangement is less clear-cut, [contact the faculty](mailto:gstt.aifellowship@nhs.net) before applying.
 
 </details>
 
