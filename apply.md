@@ -10,14 +10,16 @@ aip_form: https://forms.cloud.microsoft/e/4RCNvJikBa
 {% include last-updated.html format="%-d %B %Y" %}
 
 <div class="status-box" markdown="1">
-Status: Applications for Cohort 6 closed at 23:45 GMT on 16 November 2026.
+Status: Applications for Cohort 6 open on 5 October 2026, for an 11 August 2027 start.
 
-Shortlisting outcomes and interview invitations will be sent on 11 December 2026.
+Applications close at 23:45 GMT on 30 November 2026. The deadline has been extended from 16 November because of the global Microsoft outage.
+
+[Apply using the application form]({{ page.application_form }}). Your Approver submits the [Approval in Principle form]({{ page.aip_form }}).
 </div>
 
 This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
-The NHS Fellowship in Clinical AI is for
+We invite applications for Cohort 6 of the NHS Fellowship in Clinical AI. We seek
 energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship [2 days a week for 12 months, alongside their work or training](#faq-working-pattern).
 [Salary cover](#faq-pay-and-expenses) for the role is provided in the funded posts available to competitive applicants.
 They are [matched](#faq-projects-and-matching) to existing clinical AI projects [in the NHS](/sites) to learn the safe
@@ -31,16 +33,16 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 ## Key dates and how to apply
 
-* ~~**05 Oct 2026**: Applications open~~
-* ~~**05 Oct 2026**: Applicant webinar with Q&A~~ - [Watch the recording](#applicant-webinar)
-* ~~**16 Nov 2026** 23:45 GMT: Application **and** Approval in Principle deadline (all applications)~~
+* **05 Oct 2026**: Applications open
+* **05 Oct 2026**: Applicant webinar with Q&A - [Watch the recording](#applicant-webinar)
+* **30 Nov 2026** 23:45 GMT (extended from 16 Nov): [Application]({{ page.application_form }}) **and** [Approval in Principle]({{ page.aip_form }}) deadline (all applications)
 * **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview) (dates per applicant pool listed under [Eligibility](#eligibility))
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
 * **11 Aug 2027**: Fellowship Cohort 6 begins
 
-All applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. Your Approver submits it using the Approval in Principle form. Applicants <b>will not be interviewed</b> without this.
+All applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. Your Approver submits it using the [Approval in Principle form]({{ page.aip_form }}). Applicants <b>will not be interviewed</b> without this.
 
 ## Applicant webinar
 
@@ -58,8 +60,8 @@ There are 2 kinds of applicant for this fellowship, and they are [mutually exclu
 
 | Entry Route             | Description                                                                                                                                                                                                                                                       | Competition                                                                                          | Eligibility                                                                                                                                                                                          | AI project                                                                                                                      |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Competitive applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant applies competitively for a post that is already attached to funding, if they meet the eligibility criteria <br><br>Salary cover provided                                                                                                               | **Competitive** entry: shortlist and interview, with posts awarded on interview score                | Registered health and social care professionals with an [NHS Employer](#nhs-employer), with criteria on training/banding <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT | Competitive matching to existing project pool: matched on interview score from their ranked preferences                    |
-| Nominated applicant <br><br>Application deadline: 16 Nov 2026, 23:45 GMT | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor) <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the [Person Specification](#person-specification) at interview | Health and social care staff providing NHS services <br><br>Approval in Principle submitted by deadline: 16 Nov 2026, 23:45 GMT                                                                      | Either competitive matching to existing project pool, or a pre-allocated project (non-competitive, ringfenced for the applicant) |
+| Competitive applicant <br><br>Application deadline: 30 Nov 2026, 23:45 GMT | Applicant applies competitively for a post that is already attached to funding, if they meet the eligibility criteria <br><br>Salary cover provided                                                                                                               | **Competitive** entry: shortlist and interview, with posts awarded on interview score                | Registered health and social care professionals with an [NHS Employer](#nhs-employer), with criteria on training/banding <br><br>Approval in Principle submitted by deadline: 30 Nov 2026, 23:45 GMT | Competitive matching to existing project pool: matched on interview score from their ranked preferences                    |
+| Nominated applicant <br><br>Application deadline: 30 Nov 2026, 23:45 GMT | Applicant is nominated for a post with ringfenced funding: they must identify a [Sponsor for their post](/nhs-sponsor), or [fund their own post](#faq-self-sponsor) <br><br>No salary cover unless agreed with Sponsor by applicant<br><br>Sponsor must confirm funding by 11 Dec 2026 | **Non-competitive** entry: must meet the Essential criteria of the [Person Specification](#person-specification) at interview | Health and social care staff providing NHS services <br><br>Approval in Principle submitted by deadline: 30 Nov 2026, 23:45 GMT                                                                      | Either competitive matching to existing project pool, or a pre-allocated project (non-competitive, ringfenced for the applicant) |
 {: .entry-routes}
 
 ### Check your eligibility
@@ -99,7 +101,7 @@ This tool lists the posts open to you in the Cohort 6 cycle, based on the criter
 
 ### Routes to competitive entry
 Funding is occasionally subject to change, and will be updated in the table accordingly.
-All competitive applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will confirm that their training stage or banding is eligible, and sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 16 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
+All competitive applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will confirm that their training stage or banding is eligible, and sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 30 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 | Route                                                | Description                                                                                                                                                         | Requirements                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | AI project matching                                                                                                                    |
 |------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -173,7 +175,7 @@ The [T-Pro](#faq-tpro-fellows), [BSH](#faq-bsh-fellows) and [SWHS](#faq-swhs-fel
 * The course fee is £8000. There is no salary cover unless agreed with the Sponsor by the applicant.
 * The fellow must release [2 days a week](#faq-working-pattern) of their time for the 12 months duration of the fellowship.
 * The applicant must meet the Essential criteria of the [Person Specification](#person-specification) at interview
-* The applicant must obtain *Approval in Principle* from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 16 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
+* The applicant must obtain *Approval in Principle* from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 30 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 ### Funding the post
 
