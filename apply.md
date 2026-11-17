@@ -10,16 +10,14 @@ aip_form: https://forms.cloud.microsoft/e/4RCNvJikBa
 {% include last-updated.html format="%-d %B %Y" %}
 
 <div class="status-box" markdown="1">
-Status: Applications for Cohort 6 open on 5 October 2026, for an 11 August 2027 start.
+Status: Applications for Cohort 6 closed at 23:45 GMT on 16 November 2026.
 
-Applications close at 23:45 GMT on 16 November 2026.
-
-[Apply using the application form]({{ page.application_form }}). Your Approver submits the [Approval in Principle form]({{ page.aip_form }}).
+Shortlisting outcomes and interview invitations will be sent on 11 December 2026.
 </div>
 
 This application page is for NHS applicants only. International applicants should visit the [international applicant page](/international).
 
-We invite applications for Cohort 6 of the NHS Fellowship in Clinical AI. We seek
+The NHS Fellowship in Clinical AI is for
 energetic and smart clinicians who want to develop real-world expertise in clinical AI. Fellows undertake this fellowship [2 days a week for 12 months, alongside their work or training](#faq-working-pattern).
 [Salary cover](#faq-pay-and-expenses) for the role is provided in the funded posts available to competitive applicants.
 They are [matched](#faq-projects-and-matching) to existing clinical AI projects [in the NHS](/sites) to learn the safe
@@ -33,16 +31,16 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 
 ## Key dates and how to apply
 
-* **05 Oct 2026**: Applications open
-* **05 Oct 2026**: Applicant webinar with Q&A - [Watch the recording](#applicant-webinar)
-* **16 Nov 2026** 23:45 GMT: [Application]({{ page.application_form }}) **and** [Approval in Principle]({{ page.aip_form }}) deadline (all applications)
+* ~~**05 Oct 2026**: Applications open~~
+* ~~**05 Oct 2026**: Applicant webinar with Q&A~~ - [Watch the recording](#applicant-webinar)
+* ~~**16 Nov 2026** 23:45 GMT: Application **and** Approval in Principle deadline (all applications)~~
 * **11 Dec 2026**: Sponsorship [email confirmation](mailto:gstt.aifellowship@nhs.net) deadline for sponsor-funded nominated applicants
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview) (dates per applicant pool listed under [Eligibility](#eligibility))
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
 * **11 Aug 2027**: Fellowship Cohort 6 begins
 
-All applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. Your Approver submits it using the [Approval in Principle form]({{ page.aip_form }}). Applicants <b>will not be interviewed</b> without this.
+All applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. Your Approver submits it using the Approval in Principle form. Applicants <b>will not be interviewed</b> without this.
 
 ## Applicant webinar
 
