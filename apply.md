@@ -450,6 +450,10 @@ Yes. The deadline is the same as listed in the Key Dates above.
 
 No. The order of submissions has no effect on the application.
 
+**Is my Approver automatically prompted to submit the *Approval In Principle Form*?**
+
+No. It is the responsibility of the applicant to send the link to the [*Approval In Principle Form*]({{ page.aip_form }}) to their Approver, after discussing the application with them.
+
 **What happens if I cannot get the appropriate person to submit my *Approval In Principle Form*?**
 
 You will not be interviewed, and therefore cannot join the programme. *Approval In Principle* is essential for governance as the programme involves real-world deployments of AI at NHS host sites. Your Approver confirms independently that you are an employee in good standing, and that your time can be released for the fellowship. Without that independent assurance, we cannot place you in a project.
