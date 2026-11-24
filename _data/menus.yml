@@ -7,8 +7,6 @@ main:
     children:
       - name: "Background"
         url: "/about/"
-      - name: "NHS Sites"
-        url: "/sites/"
       - name: "Literature"
         url: "/literature/"
       - name: "Partners"
@@ -27,6 +25,8 @@ main:
     children:
       - name: "Fellows & Alumni"
         url: "/fellows/"
+      - name: "Placement sites"
+        url: "/sites/"
       - name: "Publications"
         url: "/publications/"
       - name: "Media"
