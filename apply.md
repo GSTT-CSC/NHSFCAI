@@ -145,7 +145,7 @@ Pools with no post in this cycle hold no interview.
 | Interview date | Applicant pool | # Posts |
 |----------------|----------------|---------|
 | 13 Jan 2027 | <span class="route-chip is-regional">Regional</span> [North East &amp; Yorkshire](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/north-east-and-yorkshire-region/): Yorkshire &amp; Humber | 1       |
-| 13-14 Jan 2027 | <span class="route-chip is-regional">Regional</span> Scotland | 8       |
+| 13-14 Jan 2027 | <span class="route-chip is-regional">Regional</span> Scotland | 6       |
 | 14 Jan 2027 | <span class="route-chip is-regional">Regional</span> [East of England](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/east-of-england-region/) | 1       |
 | 15 Jan 2027 | <span class="route-chip is-regional">Regional</span> [London](https://www.england.nhs.uk/system-and-organisational-oversight/system-directory/london-region/) | 4       |
 | 19 Jan 2027 | <span class="route-chip is-swhs">SWHS</span> | 1       |
