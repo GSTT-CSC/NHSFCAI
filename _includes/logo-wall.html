@@ -1,7 +1,8 @@
 {%- comment -%}
   A wall of partner logos on /partners. Takes a list from _data/ - each entry
   needs a `name`, a `url` and a `logo`, and may carry a `label` shown as a
-  quiet caption under the mark.
+  quiet caption under the mark. `wide: true` lets a very wide lockup span two
+  columns instead of shrinking past legibility.
 
     {% include logo-wall.html items=site.data.sponsors %}
 
@@ -12,7 +13,7 @@
 {%- endcomment -%}
 <div class="logo-wall">
   {%- for item in include.items %}
-  <a class="logo-wall__item" href="{{ item.url }}" target="_blank" rel="noopener">
+  <a class="logo-wall__item{% if item.wide %} logo-wall__item--wide{% endif %}" href="{{ item.url }}" target="_blank" rel="noopener">
     <span class="logo-wall__frame">
       <img src="{{ item.logo }}" alt="{{ item.name }}" loading="lazy" decoding="async">
     </span>
