@@ -9,7 +9,7 @@ application_form: https://forms.cloud.microsoft/e/2WBFyXzfyY
 {% include last-updated.html format="%-d %B %Y" %}
 
 <div class="status-box" markdown="1">
-Status: Applications for Cohort 6 open on 5 October 2026, for an 11 August 2027 start.
+Status: Applications for Cohort 6 open on 5 October 2026, for an {{ site.fellowship_start }} start.
 
 Applications close at 23:45 GMT on 10 December 2026.
 
@@ -40,7 +40,7 @@ All applicants require the support of an [institutional sponsor](https://www.guy
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **20-22 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview)
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
-* **11 Aug 2027**: Fellowship Cohort 6 begins
+* **{{ site.fellowship_start | date: "%-d %b %Y" }}**: Fellowship Cohort 6 begins
 
 ## The dual fellowship
 
@@ -63,7 +63,7 @@ All applicants require the support of an [institutional sponsor](https://www.guy
   <dl class="dual-facts">
     <div class="dual-facts__row">
       <dt>Dates</dt>
-      <dd>12 months, from 11 August 2027 to 10 August 2028 (Cohort 6).</dd>
+      <dd>12 months, from {{ site.fellowship_start }} to {{ site.fellowship_end }} (Cohort 6).</dd>
     </div>
     <div class="dual-facts__row">
       <dt>Time commitment</dt>
@@ -275,7 +275,7 @@ The experience from any project will involve significant amounts of transferable
 
 **What's the specific time commitment?**
 
-A minimum of 0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week, on the NHS Fellowship in Clinical AI for 12 months, from 11 August 2027 to 10 August 2028.
+A minimum of 0.4 Full Time Equivalent unbanded, i.e. 2 days (15hrs) per week, on the NHS Fellowship in Clinical AI for 12 months, from {{ site.fellowship_start }} to {{ site.fellowship_end }}.
 Dual fellows spend the rest of the week on their clinical attachment through the ICFP. The weekly split is 4 weekdays clinical, and 1 weekday plus 1 weekend day on AI. This is tailored to each fellow with the faculty.
 Workshops and other educational activities, e.g. e-learning modules, are expected to be done within this 0.4 FTE alongside AI project work.
 Fellowship time is not allocated to non-fellowship activity, which includes but is not limited to exam preparation, dissertation-writing, and other projects outside the scope of the fellowship.
