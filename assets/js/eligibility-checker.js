@@ -132,7 +132,7 @@
   //
   // `qualifies` means the applicant meets their bin's test and so reaches its
   // matrix column; otherwise `blocker` names the explanation to print.
-  // Everything the FAQ lists as ineligible - foundation trainee, core trainee,
+  // Everything the FAQ lists as ineligible - foundation trainee, non-run-through core programme,
   // will CCT on or before the fellowship end date, post-CCT, not in training, no confirmed
   // NTN - is one bin, because it is one answer.
   //
