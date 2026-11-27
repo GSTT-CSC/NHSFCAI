@@ -1,3 +1,6 @@
+---
+# Front matter so Jekyll fills in the cohort dates from _config.yml.
+---
 // The eligibility checker on /apply.
 //
 // The eligibility section states the rules in four places: the entry route
@@ -12,7 +15,7 @@
 //   1. It asks only for the distinctions the published criteria actually make.
 //      The criteria recognise five professions, one per matrix column, and
 //      two tests - hold a National Training Number with a projected CCT date
-//      after 10 August 2028 once training is extended for the fellowship, or
+//      after the fellowship end date once training is extended for the fellowship, or
 //      hold a substantive NHS Employer post at band 7, 8a or 8b - so band 7 and
 //      band 8a are one answer here, not two. Splitting a bin the criteria do
 //      not split creates a second place to update when the criteria change.
@@ -122,15 +125,15 @@
   // Career stages
   // --------------------------------------------------------------------------
   // One test per profession bin, which is all the published criteria set: hold
-  // a National Training Number with a projected CCT date after 10 August 2028
-  // once training is extended for the fellowship, or hold a substantive NHS
+  // a National Training Number with a projected CCT date after the fellowship
+  // end date once training is extended for the fellowship, or hold a substantive NHS
   // Employer post at band 7, 8a or 8b. Which register a banded applicant is on
   // has already been answered by their profession.
   //
   // `qualifies` means the applicant meets their bin's test and so reaches its
   // matrix column; otherwise `blocker` names the explanation to print.
   // Everything the FAQ lists as ineligible - foundation trainee, core trainee,
-  // will CCT on or before 10 Aug 2028, post-CCT, not in training, no confirmed
+  // will CCT on or before the fellowship end date, post-CCT, not in training, no confirmed
   // NTN - is one bin, because it is one answer.
   //
   // East of England's minimum training grade is not asked about here. It
@@ -141,7 +144,7 @@
   // sit directly above it, and a shared link refills them.
   var STAGES = {
     trainee: [
-      { id: 'ntn', label: 'Hold a specialty NTN, with projected CCT after 10 Aug 2028', qualifies: true },
+      { id: 'ntn', label: 'Hold a specialty NTN, with projected CCT after {{ site.fellowship_end | date: "%-d %b %Y" }}', qualifies: true },
       { id: 'none', label: 'None of the above', qualifies: false, blocker: 'trainee' }
     ],
     // The whole banded criterion is asked here, employer included, so "None of
@@ -169,7 +172,7 @@
   // above" and still be eligible.
   var BLOCKERS = {
     profession: 'Competitive posts require one of the professions listed above. Otherwise, applicants are eligible only as nominated applicants.',
-    trainee: 'Competitive posts for this profession require a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for the fellowship (see <a href="#cct-extension">FAQ</a>). Otherwise, these applicants are eligible only as nominated applicants.',
+    trainee: 'Competitive posts for this profession require a National Training Number in a UK specialty training post leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after {{ site.fellowship_end }} once training is extended to account for the fellowship (see <a href="#cct-extension">FAQ</a>). Otherwise, these applicants are eligible only as nominated applicants.',
     band: 'Competitive posts for this profession require a substantive post with an <a href="#nhs-employer">NHS Employer</a> at band 7, band 8a, or band 8b. Without one, these applicants are eligible only as nominated applicants.'
   };
 
@@ -460,7 +463,7 @@
   function notes() {
     var items = [
       'Competitive and nominated applications are <a href="#faq-switch-to-nominated">mutually exclusive</a>. You cannot switch to nominated after an unsuccessful competitive application.',
-      'Your Approver (training programme director or line manager) must submit <a href="#faq-approval-in-principle"><em>Approval in Principle</em></a> by 30 Nov 2026, 23:45 GMT, confirming your eligibility and your working pattern from 11 August 2027. You will not be interviewed without it.',
+      'Your Approver (training programme director or line manager) must submit <a href="#faq-approval-in-principle"><em>Approval in Principle</em></a> by 30 Nov 2026, 23:45 GMT, confirming your eligibility and your working pattern from {{ site.fellowship_start }}. You will not be interviewed without it.',
       'If you think you are borderline eligible, <a href="mailto:gstt.aifellowship@nhs.net">contact the faculty</a> before applying.'
     ];
 

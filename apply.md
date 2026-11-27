@@ -10,7 +10,7 @@ aip_form: https://forms.cloud.microsoft/e/4RCNvJikBa
 {% include last-updated.html format="%-d %B %Y" %}
 
 <div class="status-box" markdown="1">
-Status: Applications for Cohort 6 open on 5 October 2026, for an 11 August 2027 start.
+Status: Applications for Cohort 6 open on 5 October 2026, for an {{ site.fellowship_start }} start.
 
 Applications close at 23:45 GMT on 30 November 2026. The deadline has been extended from 16 November because of the global Microsoft outage.
 
@@ -40,9 +40,9 @@ teaching aligned with the [clinical AI curriculum](/curriculum), including bespo
 * **11 Dec 2026**: Shortlisting outcomes and interview invitations sent
 * **13-29 Jan 2027**: [Remote interviews](#faq-recruitment-and-interview) (dates per applicant pool listed under [Eligibility](#eligibility))
 * **Feb 2027**: Outcomes of interviews and [matching of fellows to AI projects](#faq-projects-and-matching)
-* **11 Aug 2027**: Fellowship Cohort 6 begins
+* **{{ site.fellowship_start | date: "%-d %b %Y" }}**: Fellowship Cohort 6 begins
 
-All applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. Your Approver submits it using the [Approval in Principle form]({{ page.aip_form }}). Applicants <b>will not be interviewed</b> without this.
+All applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, {{ site.fellowship_start }}. Your Approver submits it using the [Approval in Principle form]({{ page.aip_form }}). Applicants <b>will not be interviewed</b> without this.
 
 ## Applicant webinar
 
@@ -77,7 +77,7 @@ This tool lists the posts open to you in the Cohort 6 cycle, based on the criter
       </select>
     </div>
     <div class="eligibility-checker__field">
-      <label for="ec-stage">Career stage (as of 11 Aug 2027)</label>
+      <label for="ec-stage">Career stage (as of {{ site.fellowship_start | date: "%-d %b %Y" }})</label>
       <select id="ec-stage" disabled>
         <option value="">Select a profession first</option>
       </select>
@@ -101,7 +101,7 @@ This tool lists the posts open to you in the Cohort 6 cycle, based on the criter
 
 ### Routes to competitive entry
 Funding is occasionally subject to change, and will be updated in the table accordingly.
-All competitive applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will confirm that their training stage or banding is eligible, and sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 30 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
+All competitive applicants must obtain [*Approval in Principle*](#faq-approval-in-principle) from their Approver (either their training programme director or line manager), who will confirm that their training stage or banding is eligible, and sign off their working pattern from the fellowship start date, {{ site.fellowship_start }}. It must be submitted by the deadline: 30 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 | Route                                                | Description                                                                                                                                                         | Requirements                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | AI project matching                                                                                                                    |
 |------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -132,7 +132,7 @@ Find your NHS region, then your profession. The labels in that cell are the comp
 | Wales | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> <span class="route-chip is-bsh">BSH</span> | <span class="route-chip is-tpro">T-Pro</span> | <span class="route-chip is-tpro">T-Pro</span> |
 {: .eligibility-matrix}
 
-<br><sup>†</sup> Must hold a [National Training Number in a UK specialty training post](#faq-trainee-eligibility) leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after 10 August 2028 once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).  
+<br><sup>†</sup> Must hold a [National Training Number in a UK specialty training post](#faq-trainee-eligibility) leading directly to Certificate of Completion of Training (CCT), with a projected CCT date after {{ site.fellowship_end }} once training is extended to account for undertaking the fellowship at 0.4 FTE for 12 months (see [FAQ](#cct-extension)).  
 <br><sup>‡</sup> Must hold valid registration and a substantive post with an [NHS Employer](#nhs-employer) at band 7, band 8a, or band 8b.  
 <br><sup>*</sup> Must be at least ST3 or GPVTS ST2 at start date of fellowship (East of England only).  
 <br><sup>§</sup> Must be at least ST4 at start date of fellowship, except GP trainees (Northern Ireland only).  
@@ -175,7 +175,7 @@ The [T-Pro](#faq-tpro-fellows), [BSH](#faq-bsh-fellows) and [SWHS](#faq-swhs-fel
 * The course fee is £8000. There is no salary cover unless agreed with the Sponsor by the applicant.
 * The fellow must release [2 days a week](#faq-working-pattern) of their time for the 12 months duration of the fellowship.
 * The applicant must meet the Essential criteria of the [Person Specification](#person-specification) at interview
-* The applicant must obtain *Approval in Principle* from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, 11 August 2027. It must be submitted by the deadline: 30 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
+* The applicant must obtain *Approval in Principle* from their Approver (either their training programme director or line manager), who will sign off their working pattern from the fellowship start date, {{ site.fellowship_start }}. It must be submitted by the deadline: 30 Nov 2026, 23:45 GMT. Applicants <b>will not be interviewed</b> without this.
 
 ### Funding the post
 
@@ -292,7 +292,7 @@ Career stages are selected in which this fellowship is expected to be a developm
 For earlier career stages, there are limited opportunities to apply the experience in transformational AI projects in the NHS.
 
 
-**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training and Broad Based Training), will CCT on or before 10 Aug 2028 (after accounting for the extension from the fellowship), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
+**Is a doctor/dentist eligible if they are: a foundation trainee, a core trainee (e.g. including Internal Medicine Training and Broad Based Training), will CCT on or before {{ site.fellowship_end | date: "%-d %b %Y" }} (after accounting for the extension from the fellowship), post-CCT, not in training, or not allocated a confirmed NTN at the time of application?**
 {: #faq-trainee-eligibility}
 
 These applicants are eligible only as nominated applicants. For competitive applicants, medical/dental trainees must hold a confirmed National Training Number on a specialty training programme leading to Certificate of Completion of Training (CCT) in its own right for the duration of the post.
@@ -300,7 +300,7 @@ These applicants are eligible only as nominated applicants. For competitive appl
 **When calculating a CCT date for eligibility criteria, should a specialty trainee take into account the extension to training from doing the fellowship itself?**
 {: #cct-extension}
 
-Yes. Recalculate your projected CCT date assuming you undertake the fellowship at 0.4 FTE from 11 August 2027 to 10 August 2028. For a full-time trainee, this adds about 4.8 months. The recalculated CCT date must be after 10 August 2028.
+Yes. Recalculate your projected CCT date assuming you undertake the fellowship at 0.4 FTE from {{ site.fellowship_start }} to {{ site.fellowship_end }}. For a full-time trainee, this adds about 4.8 months. The recalculated CCT date must be after {{ site.fellowship_end }}.
 
 For example, a full-time trainee whose current projected CCT date is on or after 18 March 2028 would typically be eligible. If you are already training less than full time or out of programme, the extension depends on your working pattern. In all cases, eligibility is based on your recalculated CCT date as confirmed by your Training Programme Director on the *Approval In Principle Form*.
 
@@ -338,7 +338,7 @@ Yes, this is the nominated applicant route. Your Sponsor should read the [inform
 
 Yes. Read the [information for NHS Sponsors](/nhs-sponsor) then declare yourself as self-sponsoring on the application form. Upon successful interview, self-funded applicants receive a secure payment link to confirm their post. Project matching and entry to the fellowship are contingent on receipt of the funds for the course fee.  You must release 0.4 FTE for the duration of the fellowship. There is no salary cover for self-funded fellows.
 
-Self-funding does not replace *Approval In Principle*. You must still obtain it from a third-party Approver at your employer, and cannot be your own Approver. If you do not have a known employer for the fellowship start date of 11 August 2027, we cannot accept your application.
+Self-funding does not replace *Approval In Principle*. You must still obtain it from a third-party Approver at your employer, and cannot be your own Approver. If you do not have a known employer for the fellowship start date of {{ site.fellowship_start }}, we cannot accept your application.
 
 
 **Can the faculty help me to identify a suitable sponsor?**
@@ -441,6 +441,11 @@ Where salary is reimbursed, this is transferred to your new Employer where relev
 
 <details markdown="1" id="faq-approval-in-principle">
 <summary>Approval In Principle</summary>
+
+**Who can be my Approver?**
+{: #faq-who-can-be-approver}
+
+Your Approver must be a responsible person with decision-making power over your working pattern from the fellowship start date, {{ site.fellowship_start }}. For applicants in training, this is your training programme director. For all other applicants, this is your line manager.
 
 **Does the *Approval In Principle Form* submission from my Approver have the same deadline as the application form?**
 
